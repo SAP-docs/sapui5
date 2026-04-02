@@ -2,6 +2,8 @@
 
 # Configuring the List Area
 
+You can add values and navigation properties to the list area.
+
 
 
 1.  Define `DataField` property to display values \(text\) for the list. For example:
@@ -226,7 +228,7 @@
 
     For configuring navigation information:
 
-    -   Use com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation to define intent based navigation to SAP Fiori application.
+    -   Use com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation to define intent-based navigation to SAP Fiori application.
 
     -   Use com.sap.vocabularies.UI.v1.DataFieldWithUrl term to configure navigation to external apps and websites.
 
@@ -239,4 +241,11 @@
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V2, see [Configuring the List Area](configuring-the-list-area-4e71809.md).
+
+**Related Information**  
+
+
+[List Cards](list-cards-56f39e0.md "List cards display lists of records according to the configuration in the com.sap.vocabularies.UI.v1.LineItem term. List cards display up to six fields of data in each list item.")
+
+[Configuring the List Card Header Area](configuring-the-list-card-header-area-9f95bdc.md "You can configure various properties of a list card header.")
 

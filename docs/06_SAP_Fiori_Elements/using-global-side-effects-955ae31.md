@@ -2,12 +2,12 @@
 
 # Using Global Side Effects
 
-Global side effects are those side effects that are defined without any source properties or source entities.
+You can configure global side effects.
 
 > ### Note:  
 > Global side effects are only applicable to draft-enabled applications.
 
-Global side effects can be annotated under each entity separately. When you press [Enter\] on any input field, the global side effect defined under the corresponding entity is triggered.
+Global side effects are those side effects that are defined without any source properties or source entities. Global side effects can be annotated under each entity separately. When you press [Enter\] on any input field, the global side effect defined under the corresponding entity is triggered.
 
 The following sample code shows the global side effect with target fields and the `TriggerAction`:
 
@@ -60,5 +60,5 @@ The following CAP CDS sample code shows the global side effect with target field
 **Related Information**  
 
 
-[Draft Handling](draft-handling-ed9aa41.md "A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements supports the creation of apps using draft handling.")
+[Draft Handling](draft-handling-ed9aa41.md "You can configure how your SAP Fiori elements app handles drafts.")
 

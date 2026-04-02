@@ -2,7 +2,7 @@
 
 # Building Blocks
 
-SAP Fiori elements for OData V4 provides building blocks that allow you to create a visual representation of your data in a convenient way.
+You can use the SAP Fiori elements for OData V4 building blocks to create a visual representation of your data in a convenient way.
 
 Building blocks are reusable artifacts that are consistently orchestrated by SAP Fiori elements and are the basis for every OData V4 application. They contain standardized layout patterns or interaction behaviors which benefit from an annotation-driven UI. Building blocks support UI consistency, boost developer efficiency, and ensure enterprise readiness, for example, through personalization, key user support, and internationalization.
 

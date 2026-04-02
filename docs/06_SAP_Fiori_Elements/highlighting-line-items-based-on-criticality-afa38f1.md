@@ -4,6 +4,9 @@
 
 You can add semantic highlights to line items in tables, based on their criticality.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Highlighting Line Items Based on Criticality](highlighting-line-items-based-on-criticality-0d501b1.md).
+
 The figure below shows an example of this:
 
 ![](images/Semantic_Highlighting_of_Rows_cb0f238.png)
@@ -21,9 +24,9 @@ The property containing the criticality can have the following values \(derived 
 -   5 - New Item \(blue\): Used to highlight new items which were created outside of the app \(for example, through an API in the back-end, or as a side effect\), and need the user's attention
 
     > ### Note:  
-    > -   By default, SAP Fiori elements assumes that the `DataField` is also marked with "CriticalityRepresentationType/WithIcon" and sets the icon of the `ObjectStatus` appropriately \(for example, for fields marked with "com.sap.vocabularies.UI.v1.CriticalityType/Negative", SAP Fiori elements sets the 'sap-icon://status-negative'\).
+    > -   By default, SAP Fiori elements assumes that the `DataField` is also marked with `CriticalityRepresentationType/WithIcon` and sets the icon of the `ObjectStatus` appropriately \(for example, for fields marked with `com.sap.vocabularies.UI.v1.CriticalityType/Negative`, it sets the `sap-icon://status-negative`\).
     > 
-    > -   If the field is marked with "CriticalityRepresentationType/WithoutIcon", then it is rendered without the icon.
+    > -   If the field is marked with `CriticalityRepresentationType/WithoutIcon`, then it is rendered without the icon.
 
 
 

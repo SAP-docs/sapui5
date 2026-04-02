@@ -2,9 +2,12 @@
 
 # Handling Semantic Key Fields
 
-Semantic key fields in tables are displayed with a special logic.
+You can add semantic keys to a table.
 
-You can add the semantic key in the list report tables as shown in the following sample code:
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Handling Semantic Key Fields](handling-semantic-key-fields-aa2793c.md).
+
+Semantic key fields in tables are displayed with a special logic. You can add a semantic key to a list report page as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -47,7 +50,7 @@ You can add the semantic key in the list report tables as shown in the following
 > ### Note:  
 > This setting is only available for the default `DataField`.
 
-In list reports, semantic key fields are displayed in tables using the following logic:
+On list report pages, semantic key fields are displayed in tables using the following logic:
 
 -   For responsive tables, SAP Fiori elements uses `ObjectIdentifier`. The content in bold is the text followed by the ID in the next line. If there is no text, the ID is shown in bold in the first line. In this case, there will be no second line. The following screenshot shows the use case for both a text and an ID in a responsive table:
 
@@ -66,5 +69,5 @@ In list reports, semantic key fields are displayed in tables using the following
 **Related Information**  
 
 
-[Settings for List Report Tables](settings-for-list-report-tables-8f51fcd.md "You can configure various aspects of the list report table through annotations and in the manifest.json file.")
+[Settings for List Report Page Tables](settings-for-list-report-page-tables-4c2d17a.md "You can configure various aspects of the list report page table through annotations and in the manifest.json file.")
 

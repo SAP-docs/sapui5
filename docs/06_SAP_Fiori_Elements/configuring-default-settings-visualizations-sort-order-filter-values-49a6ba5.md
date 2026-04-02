@@ -2,7 +2,14 @@
 
 # Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)
 
-SAP Fiori elements allows you to specify a `UI.SelectionPresentationVariant`.
+You can configure several settings of the main content area, such as sort order or filter values, with `UI.SelectionPresentationVariant`.
+
+> ### Note:  
+> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> 
+> -   Properties or methods exposed by the building block
+> 
+> -   Custom code using extensions
 
 You use the `UI.SelectionPresentationVariant` to configure the default visualizations, grouping, and filter values of the main content area when an application is launched using the *Standard* variant. The `UI.SelectionPresentationVariant` must contain references to the `UI.SelectionVariant` and the `UI.PresentationVariant`. You use the `UI.SelectionVariant` to define default filter values, and the `UI.PresentationVariant` can contain the configurations for tables and charts, including, for example, the sort order or grouping.
 
@@ -16,13 +23,13 @@ SAP Fiori elements uses the `UI.LineItem` annotation and the `UI.Chart` annotati
 
 ### Descriptor Settings
 
-For more information, see the V2 and V4 specific sections.
+For more information, see further in this topic.
 
 
 
 ### Annotation: `SelectionPresentationVariant` with `Qualifier="DefaultVariant"`
 
-**Configuration Sample:**
+**Configuration sample:**
 
 > ### Sample Code:  
 > XML Annotation
@@ -148,21 +155,7 @@ For more information, see the V2 and V4 specific sections.
 ### Annotation: `PresentationVariant`
 
 > ### Sample Code:  
-> XML Annotation for SAP Fiori elements for OData V2
-> 
-> ```xml
-> "component": {
->      "name": "sap.suite.ui.generic.template.ListReport",
->      "list": true,
->      "settings": {
->           "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#DefaultSPV" // This can also point to PresentationVariant/SelectionVariant instead of SelectionPresentationVariant
->      }
-> }
-> 
-> ```
-
-> ### Sample Code:  
-> XML Annotation for SAP Fiori elements for OData V4
+> XML Annotation
 > 
 > ```xml
 > <Annotations Target="self.BookingType">
@@ -480,9 +473,9 @@ For more information, see the V2 and V4 specific sections.
 
 The `UI.Chart` annotation is applicable for the following:
 
--   The main chart in the analytical list page \(ALP\). For more information about the descriptor configuration in SAP Fiori elements for OData V4, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
+-   The main chart in the analytical list page \(ALP\). For more information about the descriptor configuration, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
 
--   Usage within multiple views for the list report tables. For more information, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
+-   Usage within multiple views for the list report page tables. For more information, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
 
 
 
@@ -491,13 +484,13 @@ The `UI.Chart` annotation is applicable for the following:
 ## Configuring the Default Visualization
 
 > ### Note:  
-> -   The information provided in the section isn't applicable to object pages in SAP Fiori elements for OData V2.
+> -   The information provided in the section isn't applicable to object pages.
 > 
 > -   When defining a `PresentationVariant`, the `Visualizations` annotation should be provided and point to a valid visualization.
 > 
-> -   In a multiple view scenario, the following logic is used to fetch the `UI.PresentationVariant` annotation only if it is undefined. For more information about the multiple view configuration, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
+> -   In a multiple view scenario, the following logic is used to fetch the `UI.PresentationVariant` annotation only if it is undefined. For more information about the multiple view configuration, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
 > 
-> -   In SAP Fiori elements for OData V4, the information provided in the section isn't applicable to the analytical list page \(ALP\) flavor. For more information about the configuration in ALP, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
+> -   The information provided in the section isn't applicable to the analytical list page \(ALP\) flavor. For more information about the configuration in ALP, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
 > 
 >     However, SAP Fiori elements for OData V4 supports rendering of tables using the `PresentationVariant` or `SelectionPresentationVariant` annotation in an object page facet. For more information, see [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md).
 
@@ -612,7 +605,30 @@ Application developers can also specify the `SelectionVariant` or `PresentationV
 >     }
 > ```
 
-For more information about the `UI.SelectionPresentationVariant`, see the version-specific sections in this topic.
+Make the following settings in the `manifest.json` file to specify the `SelectionPresentationVariant`:
+
+> ### Sample Code:  
+> ```
+> "targets": {
+>     "SalesOrderManageList": {
+>         "type": "Component",
+>         "id": "SalesOrderManageList",
+>         "name": "sap.fe.templates.ListReport",
+>         "options": {
+>             "settings": {
+>                 "contextPath": "/SalesOrderManage",
+>                 "defaultTemplateAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#SPVPath", 
+>                  .....
+>                  .....
+>             }
+>         }
+>     }
+> }
+> 
+> ```
+
+> ### Note:  
+> In this case, the `"defaultTemplateAnnotationPath"` must be a reference to the `SelectionPresentationVariant` and **not** to the `PresentationVariant` or `SelectionVariant`.
 
 
 
@@ -682,9 +698,6 @@ You can request additional properties for tables and charts even if these proper
 >   }
 > );
 > ```
-
-> ### Note:  
-> The `RequestAtLeast` property is also supported for tables on the object page in SAP Fiori elements for OData V2.
 
 
 
@@ -838,68 +851,6 @@ For more information, see [Configuring Default Filter Values](configuring-defaul
 
 
 
-<a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_nyl_ts1_bqb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-Make the following setting in the `manifest.json` to specify the `SelectionPresentationVariant`, the `PresentationVariant` or, the `SelectionVariant`:
-
-> ### Sample Code:  
-> ```
-> "component": {
->      "name": "sap.suite.ui.generic.template.ListReport",
->      "list": true,
->      "settings": {
->           "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#DefaultSPV" // This can also point to PresentationVariant/SelectionVariant instead of SelectionPresentationVariant
->      }
-> }
-> 
-> ```
-
-
-
-### Using the `annotationPath` Pointing to the `PresentationVariant` or `SelectionVariant`
-
-The following behavior applies:
-
--   If the `"annotationPath"` has a reference to the `"PresentationVariant"`, the `SelectionVariant` has no default filter values. The specified `PresentationVariant` is handled in the same way as when the `SelectionPresentationVariant` is specified.
-
--   If the `"annotationPath"` has a reference to the `"SelectionVariant"`, only the default filter values are applied. The visualization is defined in the default `PresentationVariant` \(unqualified\). The fallback option is defined in the `UI.LineItem` and `UI.Chart` annotations. This is described in the handling of the `UI.SelectionPresentationVariant`.
-
-
-
-
-<a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_nyc_3qd_jsb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-Make the following settings in the `manifest.json` to specify the `SelectionPresentationVariant`:
-
-> ### Sample Code:  
-> ```
-> "targets": {
->     "SalesOrderManageList": {
->         "type": "Component",
->         "id": "SalesOrderManageList",
->         "name": "sap.fe.templates.ListReport",
->         "options": {
->             "settings": {
->                 "contextPath": "/SalesOrderManage",
->                 "defaultTemplateAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#SPVPath", 
->                  .....
->                  .....
->             }
->         }
->     }
-> }
-> 
-> ```
-
-> ### Note:  
-> In this case, the `"defaultTemplateAnnotationPath"` must be a reference to the `SelectionPresentationVariant` and **not** to the `PresentationVariant` or `SelectionVariant`.
-
-
-
 > ### Note:  
 > For information about SAP Fiori elements for OData V2, see [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-22e32b7.md).
 
@@ -908,9 +859,7 @@ Make the following settings in the `manifest.json` to specify the `SelectionPres
 
 [Configuring Tables](configuring-tables-f4eb70f.md "You can use the annotations and entries in the manifest.json file to control various aspects of tables.")
 
-[Configuring Charts](configuring-charts-653ed0f.md "You can add a chart facet to a content section within the list report and object page.")
+[Configuring Charts](configuring-charts-653ed0f.md "You can add a chart facet to a content section within the list report page and the object page.")
 
-[Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md "Several factors affect the loading behavior of data on initial launch of the application.")
-
-[Initial Expansion Level for Tables in List Reports & Analytical List Pages](initial-expansion-level-for-tables-in-list-reports-analytical-list-pages-bc05d35.md "You can set the number of expanded levels for tables in List Reports and Analytical List Pages using the initialExpansionLevel property of the PresentationVariant annotation.")
+[Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md "You can configure the loading behavior of SAP Fiori apps.")
 

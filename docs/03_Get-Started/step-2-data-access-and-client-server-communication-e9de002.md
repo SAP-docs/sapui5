@@ -33,39 +33,39 @@ You can view and download all files at [OData V4 - Step 2](https://ui5.sap.com/#
 
 ```js
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
-	"sap/m/MessageToast",
-	"sap/m/MessageBox",
-	"sap/ui/model/json/JSONModel"
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageToast",
+    "sap/m/MessageBox",
+    "sap/ui/model/json/JSONModel"
 ], function (Controller, MessageToast, MessageBox, JSONModel) {
-	"use strict";
+    "use strict";
 
-	return Controller.extend("sap.ui.core.tutorial.odatav4.controller.App", {
+    return Controller.extend("sap.ui.core.tutorial.odatav4.controller.App", {
 
-		onInit : function () {
-			var oJSONData = {
-				busy : false
-			};
-			var oModel = new JSONModel(oJSONData);
-			this.getView().setModel(oModel, "appView");
-		},
+        onInit : function () {
+            var oJSONData = {
+                busy : false
+            };
+            var oModel = new JSONModel(oJSONData);
+            this.getView().setModel(oModel, "appView");
+        },
 
-		onRefresh : function () {
-			var oBinding = this.byId("peopleList").getBinding("items");
+        onRefresh : function () {
+            var oBinding = this.byId("peopleList").getBinding("items");
 
-			if (oBinding.hasPendingChanges()) {
-				MessageBox.error(this._getText("refreshNotPossibleMessage"));
-				return;
-			}
-			oBinding.refresh();
-			MessageToast.show(this._getText("refreshSuccessMessage"));
-		},
+            if (oBinding.hasPendingChanges()) {
+                MessageBox.error(this._getText("refreshNotPossibleMessage"));
+                return;
+            }
+            oBinding.refresh();
+            MessageToast.show(this._getText("refreshSuccessMessage"));
+        },
 
-		_getText : function (sTextId, aArgs) {
-			return this.getOwnerComponent().getModel("i18n").getResourceBundle().getText(sTextId, aArgs);
+        _getText : function (sTextId, aArgs) {
+            return this.getOwnerComponent().getModel("i18n").getResourceBundle().getText(sTextId, aArgs);
 
-		}
-	});
+        }
+    });
 });
 ```
 
@@ -85,28 +85,28 @@ We also add the private method `_getText` to retrieve translatable texts from th
 ```xml
 ...
 <Page title="{i18n>peoplePageTitle}">
-	<content>
-		<Table
-			id="peopleList"
-			growing="true"
-			growingThreshold="10"
-			items="{
-				path: '/People'
-			}">
-			<headerToolbar>
-				<OverflowToolbar>
-					<content>
-						<ToolbarSpacer/>
-						<Button
-							id="refreshUsersButton"
-							icon="sap-icon://refresh"
-							tooltip="{i18n>refreshButtonText}"
-							press=".onRefresh"/>
-						</content>
-					</OverflowToolbar>
-				</headerToolbar>
+    <content>
+        <Table
+            id="peopleList"
+            growing="true"
+            growingThreshold="10"
+            items="{
+                path: '/People'
+            }">
+            <headerToolbar>
+                <OverflowToolbar>
+                    <content>
+                        <ToolbarSpacer/>
+                        <Button
+                            id="refreshUsersButton"
+                            icon="sap-icon://refresh"
+                            tooltip="{i18n>refreshButtonText}"
+                            press=".onRefresh"/>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
 
-				<columns>
+                <columns>
 ...
 ```
 
@@ -160,7 +160,7 @@ To get more insight into the client-server communication, we open the *Console* 
 
 We search for the following mock server requests:
 
--   [https://services.odata.org/TripPinRESTierService/\(S\(id\)\)/$metadata](https://services.odata.org/TripPinRESTierService/(S(id))/$metadata)
+-   [https://services.odata.org/TripPinRESTierService/\(S\(id\)\)/$metadata?sap-language=](https://services.odata.org/TripPinRESTierService/(S(id))/$metadata?sap-language=)`<your-language>`
 
     This first request fetches the metadata that describes the entities of the service \(see also [OData Common Schema Definition Language \(CSDL\) XML Representation Version 4.01](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html)\).
 
@@ -169,9 +169,15 @@ We search for the following mock server requests:
     > ### Note:  
     > The URL contains the session ID `(S(id))`. Since the public *TripPin* service can be used by multiple persons at the same time, the session ID separates read and write requests from different sources. You could use a different ID or request the service without a specified session ID. In the latter case, you will get a response with a new, random session ID.
 
--   [https://services.odata.org/TripPinRESTierService/\(S\(id\)\)/People?$select=Age,FirstName,LastName,UserName&$skip=0&$top=10](https://services.odata.org/TripPinRESTierService/(S(id))/People?$select=Age,FirstName,LastName,UserName&$skip=0&$top=10).
+-   [https://services.odata.org/TripPinRESTierService/\(S\(id\)\)/](https://services.odata.org/TripPinRESTierService/(S(id))/)
 
-    The second request fetches the first 10 entities from the OData service. The `growingThreshold="10"` setting in the implementation of the `Table` control in the `App.view.xml` file defines that only 10 entities are fetched at the same time from the `'/people'` path. Further data is only loaded when requested from the user interface \(`growing="true"`\). Therefore, there are only 10 entities requested at the same time by using `$skip=0&$top=10` \(see [System Query Option $top and $skip](http://www.odata.org/getting-started/basic-tutorial/#topskip) in the Basic Tutorial on the OData home page.\)
+    The second request is a HEAD request to the service document to fetch the X-CSRF token.
+
+-   [https://services.odata.org/TripPinRESTierService/\(S\(id\)\)/$batch](https://services.odata.org/TripPinRESTierService/(S(id))/$batch).
+
+    The third request is a batch request that contains a request to fetch the first 10 entities from the OData service, which is `GET People?$select=Age,FirstName,LastName,UserName&$skip=0&$top=10`.
+
+    The `growingThreshold="10"` setting in the implementation of the `Table` control in the `App.view.xml` file defines that only 10 entities are fetched at the same time from the `'/people'` path. Further data is only loaded when requested from the user interface \(`growing="true"`\). Therefore, there are only 10 entities requested at the same time by using `$skip=0&$top=10` \(see [System Query Option $top and $skip](http://www.odata.org/getting-started/basic-tutorial/#topskip) in the Basic Tutorial on the OData home page.\)
 
     This request explicitly lists the fields that should be included in the response by using the `$select` query option. Although the *TripPin* service has more fields in its `People` entity set, only those four are included in the response. This is a feature of the OData V4 Model called "automatic determination of `$select`", or "auto-`$select`". It helps restricting the size of responses to what is really needed. The `ODataModel` computes the required fields from binding paths specified for controls. This feature is not active by default. In our case, this is activated by setting the `autoExpandSelect` property to `true` when instantiating the model in the `manifest.json` descriptor file .
 

@@ -5,7 +5,7 @@
 The `sap.ui.mdc` library contains composite, metadata-driven controls that assemble UI elements with predefined user experience and various functionalities. The controls can be used as a basis for scalable application development and can be implemented for use with any SAPUI5 model and data protocol.
 
 > ### Note:  
-> For SAPUI5 applications for OData V4, SAP Fiori elements provides a flexible programming model based on the `sap.ui.mdc` library. It offers building blocks that can be used without additional integration effort. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md). 
+> For SAPUI5 applications for OData V4, SAP Fiori elements provides the SAP Fiori development portal based on the `sap.ui.mdc` library. It offers building blocks that can be used without additional integration effort. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md) and [SAP Fiori Development Portal](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/introduction).
 
 > ### Note:  
 > The following sections only provide additional information for some of the controls. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
@@ -96,5 +96,5 @@ The following graphic illustrates this behavior:
 
 [Supported Library Combinations](../02_Read-Me-First/supported-library-combinations-363cd16.md "SAPUI5 provides a set of JavaScript and CSS libraries, which can be combined in an application using the combinations that are supported.")
 
-[Browser and Platform Support](../02_Read-Me-First/browser-and-platform-support-74b59ef.md "Here you can find information on the browser and platform support for the SAPUI5 libraries on iOS, Android, macOS, and Windows platforms.")
+[Browser and Platform Support](../02_Read-Me-First/browser-and-platform-support-74b59ef.md "Supported browsers and platforms for the SAPUI5 libraries.")
 

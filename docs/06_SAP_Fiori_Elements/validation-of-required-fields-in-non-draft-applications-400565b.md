@@ -2,23 +2,26 @@
 
 # Validation of Required Fields in Non-draft Applications
 
+You can enable the validation of required fields in non-draft applications.
+
 During object creation, before a request is sent to back end, the fields annotated with `RequiredProperties` under `InsertRestrictions` are validated to ensure that they are not empty. If these fields are empty, an error message is displayed in the message popover of the corresponding page with a link that navigates to the error field.
 
 The following annotation needs to be configured individually for each entity set.
 
 > ### Sample Code:  
 > ```
+> 
 > <Annotations Target="STTA_SALES_ORDER_ND_SRV_01.STTA_SALES_ORDER_ND_SRV_01_Entities/STTA_C_SO_SalesOrder_ND">
->        <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
->                 <Record Type="Org.OData.Capabilities.V1.InsertRestrictionsType">
->                         <PropertyValue Property="RequiredProperties">
->                              <Collection>
->                                  <PropertyPath> BusinessPartnerID </PropertyPath>
->                                  <PropertyPath> CurrencyCode </PropertyPath>
->                              </Collection>
->                         </PropertyValue>
->                 </Record>
->         </Annotation>
+>     <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
+>         <Record Type="Org.OData.Capabilities.V1.InsertRestrictionsType">
+>             <PropertyValue Property="RequiredProperties">
+>                 <Collection>
+>                     <PropertyPath>BusinessPartnerID</PropertyPath>
+>                     <PropertyPath>CurrencyCode</PropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
 > </Annotations>
 > 
 > ```

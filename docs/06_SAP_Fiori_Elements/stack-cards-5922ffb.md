@@ -6,6 +6,11 @@ Stack cards aggregate a set of cards of the same type, which are based on a comm
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Stack Cards](stack-cards-756c49c.md).
+
+
+
 The left-hand side of the card contains the application title \(which is also the title of the object stream\) and stack description \(optional\). Click this section of the card or *View All* to open the application.
 
 

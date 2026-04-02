@@ -4,6 +4,9 @@
 
 You can configure the mode in which the state of the object page is stored/restored using `iAppState`.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling Persistence Mode](enabling-persistence-mode-7c62084.md).
+
 There are two different modes that you can use for configuring object pages. Both modes deal with the response by the object page to the personalization changes made by the user. Examples of such personalization changes are applying filters on a chart or table, displaying hidden columns, or selecting a specific tab.
 
 -   Discovery mode: This is the default mode for applications that don't use the flexible column layout. In this mode, the changes made to the underlying controls affect only the current object. They don't affect the objects at the same level when you navigate to another object using a paginator button, for example. Instead, the default settings of the control, either from an annotation or the manifest, apply to the object.
@@ -38,14 +41,16 @@ You can modify the default mode by using the `statePreservationMode` manifest pr
 > ```
 > 
 > "sap.ui.generic.app": {
->         "_version": "1.3.0",
->         "settings": {
+>     "settings": {
+>         "objectPageDynamicHeaderTitleWithVM": true,
+>         "statePreservationMode": "persistence"
+>     },
+>     "pages": {
+>         "ListReport|C_STTA_SalesOrder_WD_20": {
 >             
->             "objectPageDynamicHeaderTitleWithVM": true,
->             "statePreservationMode": "persistence"/"discovery"
->         },
->         "pages": {
->             "ListReport|C_STTA_SalesOrder_WD_20": {
+>         }
+>     }
+> }
 > 
 > ```
 

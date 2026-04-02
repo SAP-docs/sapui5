@@ -13,12 +13,17 @@ The transformation happens if a preprocessor for XML is called when the view is 
 
 If the view is loaded asynchronously, fragments and required modules are loaded asynchronously, too.
 
+> ### Note:  
+> To avoid the usage of global variables, we recommend requiring modules using `core:require` or `template:require`, depending on your use case.
+> 
+> Use `core:require` if the module is needed at runtime and `template:require` if it's needed during template processing. For details, see [Best Practices for Developers](../03_Get-Started/best-practices-for-developers-28fcd55.md) and [XML Fragments](xml-fragments-65da02b.md).
+
 > ### Restriction:  
 > XML templating is not directly supported with routing, that is, there is no way to declare that the XML Preprocessor should run on the target view of a route. Instead, you should define a [typed view](typed-view-e6bb33d.md) as the route's target and use that view's `createContent` method to create an XML view with templating.
 > 
 > In case you need access to models \(which are not yet available in that hook\), you should return some dummy content first \(for instance sap.m.HBox\), register to the view's modelContextChange event and create the inner view in that event's handler, finally adding it to the dummy content.
 > 
-> **Target Typed View For Routing**
+> **Target Typed View For Routing** 
 > 
 > ```
 > sap.ui.define(["sap/ui/core/mvc/View", "sap/ui/core/mvc/XMLView"], function (View, XMLView) {
@@ -216,7 +221,7 @@ See the [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.
 3       xmlns:core="sap.ui.core"
 4       xmlns:form="sap.ui.layout.form"
 5       xmlns:mvc="sap.ui.core.mvc"
-6       xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+6       xmlns:template="https://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
 7       template:require="{AH: 'sap/ui/model/odata/AnnotationHelper'}">
 8       <!-- "meta" model's binding context MUST point to an entity type -->
 9          <template:with path="meta>com.sap.vocabularies.UI.v1.Badge" var="badge">
@@ -246,21 +251,22 @@ See the [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.
 
 ```xml
 1   <core:FragmentDefinition
-2       xmlns="sap.m"
-3       xmlns:core="sap.ui.core"
-4       xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
-5    
-6       <!-- "field" MUST point to a com.sap.vocabularies.Communication.v1.DataField -->
-7       <HBox>
-8           <template:with path="field>Value" helper="AH.resolvePath" var="target">
-9               <!-- go to entity type's property and check SAP Annotations for OData Version 2.0 -->
-10              <template:if test="{= ${target>sap:semantics} === 'tel'}" >
-11                  <core:Icon src="sap-icon://phone" width="2em"/>
-12              </template:if>
-13          </template:with>
-14          <Text text="{path: 'field>Value', formatter: 'AH.format'}"/>
-15      </HBox>
-16  </core:FragmentDefinition>
+2       template:require="{AH: 'sap/ui/model/odata/AnnotationHelper'}"
+3       xmlns="sap.m"
+4       xmlns:core="sap.ui.core"
+5       xmlns:template="https://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+6
+7       <!-- "field" MUST point to a com.sap.vocabularies.Communication.v1.DataField -->
+8       <HBox>
+9           <template:with path="field>Value" helper="AH.resolvePath" var="target">
+10              <!-- go to entity type's property and check SAP Annotations for OData Version 2.0 -->
+11              <template:if test="{= ${target>sap:semantics} === 'tel'}" >
+12                  <core:Icon src="sap-icon://phone" width="2em"/>
+13              </template:if>
+14          </template:with>
+15          <Text text="{path: 'field>Value', formatter: 'AH.format'}"/>
+16      </HBox>
+17  </core:FragmentDefinition>
 ```
 
 The result is equivalent to the following handwritten XML view. Any references to the meta model are gone. Type information has been inserted into the bindings and an `"odata.concat"` expression for `badge>MainInfo/Value` has been processed by `sap.ui.model.odata.AnnotationHelper.format`, concatenating the company name and legal form.

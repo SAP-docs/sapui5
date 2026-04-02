@@ -52,7 +52,7 @@ You can define view switch with a single entity set or with multiple entity sets
 > ```
 > "card009": {
 >   "model": "salesOrder",
->   "template": "sap.ovp.cards.list",
+>   "template": "sap.ovp.cards.v4.list",
 >   "settings": {
 >     "title": "Contract Monitoring",
 >     "subTitle": "Per Supplier",

@@ -2,9 +2,16 @@
 
 # Overview Page Card
 
-A card is a smart component that uses UI annotation to render its content. It contains a header area and a footer area.
+You can use the card smart component, which uses a UI annotation to render its content.
 
 
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Overview Page Card](overview-page-card-74332d5.md).
+
+
+
+The card contains a header area and a footer area.
 
 Each card is bound to a single entity set in a data source, and its configuration is provided in the `"sap.ovp"..."cards"` object. The cards object contains the list of cards to display in the application.
 
@@ -29,11 +36,10 @@ The `title` property is mandatory. The `subTitle` is only mandatory if the card 
 > `manifest.json`
 > 
 > ```
+> 
 > "sap.ovp": {
->     "_version": "1.1.0",
 >     "globalFilterModel": "ZCD204_EPM_DEMO_SRV",
->     "globalFilterEntityType": "SalesOrder", // Deprecated since SAPUI5 1.54.
->     "globalFilterEntitySet": "SalesOrder", // Available from SAPUI5 1.54 onwards.
+>     "globalFilterEntitySet": "SalesOrder",
 >     "cards": {
 >         "card00": {
 >             "model": "ZCD204_EPM_DEMO_SRV",

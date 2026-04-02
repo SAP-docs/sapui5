@@ -2,7 +2,7 @@
 
 # Example: Adding Columns to a Responsive Table on the Object Page
 
-You have to implement two extension points to add a custom column to a table.
+You can add custom columns to your object page responsive table by implementing two extension points for column definitions and cell content.
 
 
 
@@ -83,13 +83,4 @@ The table containing additional columns can look like this:
     > 
     > ```
 
-
-<a name="concept_okz_ywp_c3c"/>
-
-<!-- concept\_okz\_ywp\_c3c -->
-
-## 
-
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see  <?sap-ot O2O class="- topic/xref " href="ad2c1be9bb124df8a9282abe7a8bca66.xml" text="" desc="" xtrc="xref:2" xtrf="file:/home/builder/src/dita-all/lgp1768808003240/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/c174923c270049c4b73d646cc688b8d9.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> .
 

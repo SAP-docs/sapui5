@@ -2,11 +2,14 @@
 
 # Enabling Object Creation Using the Dialog on the List Report Page
 
-You can enable the creation of objects that have a maximum of 8 data fields using a dialog in the list report page.
+You can enable the creation of objects with a dialog.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling Object Creation Using the Dialog on the List Report Page](enabling-object-creation-using-the-dialog-on-the-list-report-page-ceb9284.md).
 
 ![](images/Create_Object_Dialog_in_List_Report_ac4a875.png)
 
-You can enable this feature in the list report or worklist applications. To do this, configure the `manifest.json` file by adding the property `createWithParameterDialog` and passing the properties of the related entity set, as shown in the following sample code:
+You can enable the creation of objects that have a maximum of eight data fields using a dialog on the list report page. You can enable this feature in list report page or worklist applications. To do this, configure the `manifest.json` file by adding the property `createWithParameterDialog` and passing the properties of the related entity set, as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -14,20 +17,20 @@ You can enable this feature in the list report or worklist applications. To do t
 > ```
 > 
 > "createWithParameterDialog" : {
->                "fields" : {
->                   "<fieldName>" : {"path":"<fieldname>"},
->                   "<fieldName>" : {"path":"<fieldname>"}
->              }
+>     "fields" : {
+>         "<fieldName>" : {"path":"<fieldname>"},
+>         "<fieldName>" : {"path":"<fieldname>"}
+>     }
+> }
 > 
 > ```
 
-The option to create objects using a dialog now appears in the list report application.
+The option to create objects using a dialog now appears in the list report page application.
 
 > ### Sample Code:  
 > ```
 > 
 > "sap.ui.generic.app": {
->     "_version": "1.3.0",
 >     "pages": {
 >         "ListReport|STTA_C_SO_SalesOrder_ND": {
 >             "entitySet": "STTA_C_SO_SalesOrder_ND",
@@ -60,7 +63,7 @@ The option to create objects using a dialog now appears in the list report appli
 > ```
 
 > ### Sample Code:  
-> Enabling `createWithParameterDialog` in list reports or worklists in multi-view mode in the `manifest.json` file
+> Enabling `createWithParameterDialog` on the list report page or the worklist in multi-view mode in the `manifest.json` file
 > 
 > ```
 > "sap.ui.generic.app": {
@@ -110,7 +113,7 @@ The draft state is not maintained when an object is created using the dialog.
 > 
 > -   Ensure that all the mandatory fields of the entities are part of the create dialog.
 > 
-> -   Only list report pages support object creation using the dialog. On list report pages, this feature is available in both single view and multiple views scenarios. For more information, see [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0f6901e.md) and [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-97dfeea.md).
+> -   Only the list report page supports object creation using the dialog. On the list report page, this feature is available in both single view and multiple views scenarios. For more information, see [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-page-table-single-table-mode-0f6901e.md) and [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md).
 > 
 > -   You can also create objects using a dialog by prefilling fields from the filter values that you entered. For more information, see [Prefilling Fields When Creating a New Entity Using an Extension Point](prefilling-fields-when-creating-a-new-entity-using-an-extension-point-189e2d8.md).
 > 

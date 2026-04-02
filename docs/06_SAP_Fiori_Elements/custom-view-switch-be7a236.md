@@ -6,6 +6,11 @@ Extend view switch so it reacts based on filter conditions or custom configurati
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Extending Custom View Switch](extending-custom-view-switch-ecd9f10.md).
+
+
+
 <a name="loiobe7a23670d7d499094030ad1c1b1c915__section_hfm_rss_dhc"/>
 
 ## Procedure

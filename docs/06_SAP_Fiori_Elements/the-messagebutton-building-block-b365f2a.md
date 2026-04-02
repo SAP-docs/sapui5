@@ -2,7 +2,7 @@
 
 # The `MessageButton` Building Block
 
-
+You can use the `MessageButton` building block to show bound messages.
 
 The `MessageButton` building block allows you to collect and display all relevant bound messages using a `MessageButton` control. This behavior is similar to how messages are handled in the footer of the object page.
 
@@ -21,9 +21,9 @@ When the message model detects a change, such as new messages being added or exi
     > ### Note:  
     > Bound messages must appear only in the message popover when the page is in edit mode. To ensure this behavior, applications can determine, within the `beforeShowMessageButton()` hook, whether the page is in edit mode. If it is not, applications can filter all messages and display them in a message dialog, thereby preventing them from appearing in the message popover.
 
--   Group messages: Group the messages to provide an organized view for end users. By default, all messages are linked to the *General* section.
+-   Group messages: Group the messages to provide an organized view for users. By default, all messages are linked to the *General* section.
 
--   Customize message link behavior: Override the default action when an end user clicks the message displayed as a link. By default, the building block focuses on the field set as the target for the message.
+-   Customize message link behavior: Override the default action when a user clicks the message displayed as a link. By default, the building block focuses on the field set as the target for the message.
 
 
 If any bound messages remain after hook processing, the `MessageButton` control becomes visible, handling message count and criticality. If a hook is defined using the `visibilityChange` property, it is invoked before the control is displayed. This hook allows the application to control the visibility of the parent container that holds the `MessageButton` control, such as the footer toolbar.

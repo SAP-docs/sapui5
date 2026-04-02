@@ -6,7 +6,7 @@ You can define status colors and icons.
 
 
 
-The UI annotations in CDS for `LineItem`, `Identification` and `FieldGroup` have an attribute in the corresponding fields that indicates how critical the field is using colors and icons. This attribute has to refer to another property, which contains the value of the criticality.
+The UI annotations for `LineItem`, `Identification` and `FieldGroup` have an attribute in the corresponding fields that indicates how critical the field is using colors and icons. This attribute has to refer to another property, which contains the value of the criticality.
 
 > ### Sample Code:  
 > XML Annotation
@@ -70,7 +70,7 @@ The property containing the criticality can have the following values \(derived 
     > -   If the field is marked with "CriticalityRepresentationType/WithoutIcon", then the `ObjectStatus` is rendered without the icon.
 
 
-The texts are not static, so you can change them to suit your needs by defining them in the criticality path. The following image shows examples of using these values in stock availability of products both in the list report and the object page:
+The texts are not static, so you can change them to suit your needs by defining them in the criticality path. The following image shows examples of using these values in stock availability of products both on the list report oage and the object page:
 
 ![](images/LROP_Status_Colors_and_Icons_75aa307.png)
 

@@ -2,7 +2,7 @@
 
 # Refresh Entity Sets in `sap-keep-alive` Mode
 
-`sap-keep-alive` is an SAP Fiori launchpad feature that ensures that the application stays loaded in a suspended state when navigating away from the application.
+You can use the `sap-keep-alive` feature to ensure that a view persists in the view cache when navigating away from the application.
 
 The feature ensures improved performance when you reload the same view again once you navigate back to the application. For more information, see [Keeping SAPUI5 Apps Alive](https://help.sap.com/viewer/a7b390faab1140c087b8926571e942b7/202009.002/en-US/921e7e2e45494f9a87ae70624155fd7c.html).
 
@@ -59,19 +59,19 @@ Refresh <EntitySet2\> along with all its dependents \(navigation property\)
 
 ### External Create Navigation
 
-Refresh occurs for the entity set of the table that gets triggered from the navigation, while moving back to the source application. You can't override this behavior in SAP Fiori elements for OData V2.
+Refresh occurs for the entity set of the table that gets triggered from the navigation, while moving back to the source application.
 
 
 
 ### External Chevron Navigation
 
-Refresh occurs for the entity set of the table that gets triggered from the navigation, while moving back to the source application. However, you can switch it off or override it by configuring the `manifest.json` file. For more information about the sample code, see the version-specific sections.
+Refresh occurs for the entity set of the table that gets triggered from the navigation, while moving back to the source application. However, you can switch it off or override it by configuring the `manifest.json` file.
 
 
 
 ### Other External Navigation Including Navigation Using Extension APIs
 
-Refresh is not performed by default. You can override the default behavior and refresh specific entity sets using the manifest configuration. You can configure the refresh strategies defined for specific outbound navigation by configuring the `manifest.json` file. For more information, see the version-specific sections.
+Refresh is not performed by default. You can override the default behavior and refresh specific entity sets using the manifest configuration. You can configure the refresh strategies defined for specific outbound navigation by configuring the `manifest.json` file.
 
 
 
@@ -81,226 +81,9 @@ While navigating back to the source application, if an external navigation is tr
 
 
 
-<a name="loio3c65f2cc630c472da8328a6f3c193683__section_nfx_4gn_5tb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Source Application Behavior
-
-**Configure the Default Refresh Behavior During Chevron Navigation**
-
-You can either **switch off** or override the default refresh behavior settings in the `manifest.json` file. To **switch off**, the `entitySets` parameter must be empty. Otherwise, you can override it with your refresh requirements.
-
-> ### Sample Code:  
-> manifest.json
-> 
-> ```
-> "sap.app": {
-> 	...
-> 	"crossNavigation": {
-> 		"outbounds": {
-> 			"<OutboundTarget>": {
-> 				"semanticObject": "<SemanticObject>",
-> 				"action": "<Action>"
-> 			}
-> 		}
-> 	}
-> }
-> 
-> ....
-> ....
-> 
-> "sap.ui.generic.app": {
-> 	...
-> 	"pages": {
-> 			"ListReport|<ListReportEntitySet>": {
-> 				...
-> 				"pages": {
-> 					"ObjectPage|<ObjectPageEntitySet>": {
-> 						...
-> 						"navigation": {
-> 							"display": {
-> 								"path": "sap.apps.crossNavigation.outbounds",
-> 								"target": "<OutboundTarget>",
-> 								"refreshStrategyOnAppRestore": {
-> 									"entitySets": {			
-> 										"<EntitySetToRefresh>": "<self/includingDependents>",
-> 										"<AnotherEntitySetToRefresh>": "<self/includingDependents>"
-> 									}
-> 								}
-> 							}
-> 						}
-> 					}
-> 				}
-> 			}
-> 		}
-> }
-> ```
-
-**Other External Navigation Including Navigation Using Extension APIs**
-
-The following sample code shows you how to configure `manifest.json` to define refresh strategies for specific outbound navigation. You can also define the default refresh strategies for external navigation for cases wherein an outbound navigation doesn't have specific refresh strategies.
-
-> ### Sample Code:  
-> manifest.json
-> 
-> ```
-> "sap.app": {
->    ...
->    "crossNavigation": {
->       "outbounds": {
->          "<OutboundTarget1>": {
->             "semanticObject": "<SemanticObject1>",
->             "action": "<Action1>"
->          },
->          "<OutboundTarget2>": {
->             "semanticObject": "<SemanticObject2>",
->             "action": "<Action2>"
->          }
->       }
->    }
-> }
-> 
-> ....
-> ....
-> ```
-> 
-> ```
-> 
-> 
-> "sap.ui.generic.app": {
->       "_version": "1.3.0",
->       "settings": {
->          "externalNavigationSettings": {
->             "defaultOutboundSettings": {
->                "refreshStrategyOnAppRestore": {
->                   "entitySets": {
->                      "<EntitySetToRefresh>": "<self/includingDependents>",
->                      "<AnotherEntitySetToRefresh>": "<self/includingDependents>"
->                   }
->                }
->             },
->             "outbounds": {
->                "<OutboundTarget1>": {
->                   "refreshStrategyOnAppRestore": {
->                      "entitySets": {
->                         "<EntitySetToRefresh>": "<self/includingDependents>",
->                         "<AnotherEntitySetToRefresh>": "<self/includingDependents>"
->                      }
->                   }
->                },
->                "<OutboundTarget2>": {
->                   "refreshStrategyOnAppRestore": {
->                      "entitySets": {
->                         "<EntitySetToRefresh>": "<self/includingDependents>",
->                         "<AnotherEntitySetToRefresh>": "<self/includingDependents>"
->                      }
->                   }
->                }
->             }
->          }
->       }
->       ...
->       ...
->    }
-> 
-> ```
-
-**Navigation Using Extensions**
-
-The following sample code shows you how to use extensions to navigate back to the souce application:
-
-> ### Sample Code:  
-> Extension Class
-> 
-> ```
-> onListNavigationExtension: function (oEvent) {
-> 	var oNavigationController = this.extensionAPI.getNavigationController();
-> 	oNavigationController.navigateExternal("<OutboundTarget>");
-> 	return true;
-> }
-> ```
-
-> ### Sample Code:  
-> manifest.json
-> 
-> ```
-> 
-> 
-> 
-> "sap.app": {
->    ...
->    "crossNavigation": {
->       "outbounds": {
->          "<OutboundTarget>": {
->             "semanticObject": "<SemanticObject>",
->             "action": "<Action>"
->          }
->       }
->    }
-> }
-> 
-> ....
-> ....
-> 
-> "sap.ui.generic.app": {
->       "settings": {
->          "externalNavigationSettings": {
->             "outbounds": {
->                "<OutboundTarget>": {
->                   "refreshStrategyOnAppRestore": {
->                      "entitySets": {
->                         "<EntitySetToRefresh>": "<self/includingDependents>",
->                         "<AnotherEntitySetToRefresh>": "<self/includingDependents>"
->                      }
->                   }
->                }
->             }
->          }
->     }
->       ...
->       ...
->    }
-> 
-> ```
-
-> ### Note:  
-> If the back-end service isn't ETag enabled, and the table in List Report is configured to be refreshed in Flexible Column Layout mode, the refresh is triggered for all of the table's entity set dependents. To avoid this, enable ETag for your back-end service.
-
-**Refresh in Scenarios Involving Navigation from Reuse Component or Extension View**
-
-Applications can also configure refresh on back navigation when the navigation was triggered using smart link from the reuse component or an extension view.
-
-The following sample code shows you a `stStart` function of a reuse component where extension API `setRefreshBehaviour` is used to refresh an entity set:
-
-> ### Sample Code:  
-> ```
-> stStart: function(oModel, oBindingContext, oExtensionAPI) {
->             var oComponentModel = this.getComponentModel();
->             var oBinding = oComponentModel.bindProperty("/state");
->             oBinding.attachChange(function(){
->                 oExtensionAPI.onCustomStateChange();
->                 this.setMessage();
->             }.bind(this));
->             this.adaptToBindingContext(oBindingContext);
->             var oNavPopOverLink = this.getRootControl().getContent()[0].getContent()[7];
->             var oNavigationController = oExtensionAPI.getNavigationController();
->             oNavPopOverLink.setBeforeNavigationCallback(oNavigationController.setRefreshBehaviour.bind(null,"EPMSalesOrder"));
->         },
-> 
-> ```
-
-
-
 <a name="loio3c65f2cc630c472da8328a6f3c193683__section_sb4_tsp_brb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Overriding the Default Refresh Mechanism
+## Overriding the Default Refresh Mechanism
 
 The configuration is specified for each page and the most specific configuration, based on the external navigation that is performed, is considered. The following logic is applied:
 
@@ -364,7 +147,7 @@ Examples of the applied logic are shown in the following sample code:
 
 
 
-### Switching Off the Default Refresh Behavior During Chevron Navigation
+## Switching Off the Default Refresh Behavior During Chevron Navigation
 
 Applications can choose to switch off the default refresh behavior that happens when an external chevron navigation is triggered. To achieve this, keep an empty block within the manifest configuration as shown in the following sample code:
 
@@ -401,5 +184,5 @@ This does **not** affect the default refresh behavior of the table entity set wh
 **Related Information**  
 
 
-[Refresh Dataset for Back Navigation when `sap-keep-alive` is Set to True](refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md "When sap-keep-alive is set to true, and the user navigates from one application to another, modifies some common data and navigates back to the source app, the data isn't refreshed automatically. You can add a custom code to perform a refresh of specific data.")
+[Refresh Dataset for Back Navigation when `sap-keep-alive` is Set to `True`](refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md "You can add a custom code to perform a refresh of specific data.")
 

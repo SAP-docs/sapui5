@@ -2,9 +2,9 @@
 
 # Disabling the Editing Status Filter
 
-Application developers have an option to disable the *Editing Status* filter.
+You can disable the *Editing Status* filter.
 
-The *Editing Status* filter is enabled by default in the list report page of draft-enabled applications.
+The *Editing Status* filter is enabled by default on the list report page of draft-enabled applications.
 
   
   

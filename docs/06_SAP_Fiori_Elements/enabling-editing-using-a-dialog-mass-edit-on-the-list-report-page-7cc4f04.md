@@ -2,34 +2,41 @@
 
 # Enabling Editing Using a Dialog \(Mass Edit\) on the List Report Page
 
-You can edit a single object or multiple objects using a dialog in the list report page.
+You can edit a single object or multiple objects using a dialog on the list report page.
 
 > ### Note:  
-> For general information about enabling **Mass Edit**, see [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md).
+> For general information about enabling **Mass Edit**, see [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-e67782c.md).
 > 
-> In SAP Fiori elements for OData V2, using the mass edit dialog is only available in the list report.
+> Using the mass edit dialog is only available on the list report page.
 
 When you select multiple objects and use the mass edit dialog, the values entered are applied to all objects.
 
 When `multiEdit` is enabled, by default the dialog displays editable fields corresponding to columns that are currently displayed in the table. You can change the columns with table personalization. To enable the editing of multiple objects, set the `multiEdit` property to `true` in the `manifest.json` file.
 
 > ### Sample Code:  
-> ```
-> "sap.ui.generic.app": {
->         "_version": "1.1.0",
->         "pages": [
->             {
->                 "entitySet": "STTA_C_SO_SalesOrder_ND",
->                 "component": {
->                     "name": "sap.suite.ui.generic.template.ListReport",
->                     "list": true,
->                     "settings": {
->                            "tableSettings": {
->                                   "multiEdit": {
->                                          "enabled" : true
->                                    }
+> `manifest.json`
 > 
+> ```
+> 
+> "sap.ui.generic.app": {
+>     "pages": [
+>         {
+>             "entitySet": "STTA_C_SO_SalesOrder_ND",
+>             "component": {
+>                 "name": "sap.suite.ui.generic.template.ListReport",
+>                 "list": true,
+>                 "settings": {
+>                     "tableSettings": {
+>                         "multiEdit": {
+>                             "enabled": true
+>                         }
 >                     }
+>                 }
+>             }
+>         }
+>     ]
+> }
+> 
 > ```
 
 When `MultiEdit` is enabled for an application, the option to edit appears in the table toolbar. You can select multiple records from the table and click *Edit* to launch the mass edit dialog, as shown in the following screenshot:
@@ -41,44 +48,52 @@ You can also provide a `FieldGroup` annotation with a specific qualifier in the 
 To use `FieldGroup`, add its annotation path in the `manifest.json` file:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
+> 
 > "sap.ui.generic.app": {
->         "_version": "1.1.0",
->         "pages": [
->             {
->                 "entitySet": "STTA_C_SO_SalesOrder_ND",
->                 "component": {
->                     "name": "sap.suite.ui.generic.template.ListReport",
->                     "list": true,
->                     "settings": {
->                            "tableSettings": {
->                                   "multiEdit": {
->                                          "enabled" : true,
->                                          "annotationPath" : "com.sap.vocabularies.UI.v1.FieldGroup#MultiEdit"
->                                    }
+>     "pages": [
+>         {
+>             "entitySet": "STTA_C_SO_SalesOrder_ND",
+>             "component": {
+>                 "name": "sap.suite.ui.generic.template.ListReport",
+>                 "list": true,
+>                 "settings": {
+>                     "tableSettings": {
+>                         "multiEdit": {
+>                             "enabled": true,
+>                             "annotationPath": "com.sap.vocabularies.UI.v1.FieldGroup#MultiEdit"
+>                         }
 >                     }
+>                 }
+>             }
+>         }
+>     ]
+> }
 > ```
 
 > ### Sample Code:  
 > Annotation for the `FieldGroup` :
 > 
 > ```
+> 
 > <Annotation Term="UI.FieldGroup" Qualifier="MultiEdit">
->           <Record>
->               <PropertyValue Property="Data">
->                      <Collection>
->                           <Record Type="UI.DataField">
->                                 <PropertyValue Property="Value" Path="NetAmount"/>
->                           </Record>
->                           <Record Type="UI.DataField">
->                                 <PropertyValue Property="Value" Path="TaxAmount"/>
->                           </Record>
->                           <Record Type="UI.DataField">
->                            <PropertyValue Property="Value" Path="LifecycleStatus"/>
->                           </Record>
->                       </Collection>
->             	 </PropertyValue>
->           </Record>
+>     <Record>
+>         <PropertyValue Property="Data">
+>             <Collection>
+>                 <Record Type="UI.DataField">
+>                     <PropertyValue Property="Value" Path="NetAmount"/>
+>                 </Record>
+>                 <Record Type="UI.DataField">
+>                     <PropertyValue Property="Value" Path="TaxAmount"/>
+>                 </Record>
+>                 <Record Type="UI.DataField">
+>                     <PropertyValue Property="Value" Path="LifecycleStatus"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
 > </Annotation>
 > ```
 
@@ -89,7 +104,7 @@ To use `FieldGroup`, add its annotation path in the `manifest.json` file:
 > 
 > -   Only the properties of the entity sets are supported for mass edit.
 > 
-> -   The request for each selected instance is sent in a separate changeset within a single batch. If an error occurs for one or more selected instances when the update is executed, the other selected instances are still executed.
+> -   The request for each selected instance is sent in a separate change set within a single batch. If an error occurs for one or more selected instances when the update is executed, the other selected instances are still executed.
 
 
 
@@ -97,19 +112,19 @@ To use `FieldGroup`, add its annotation path in the `manifest.json` file:
 
 ## Option to Ignore Certain Fields from the Mass Edit Dialog
 
-For key user adaptation, you can choose to hide certain fields from being displayed. You can do this to restrict the fields from being added to the mass edit dialog. You can restrict the fields by adding an `ignoredFields` list in the manifest, as shown in the following example:
+For key user adaptation, you can choose to hide certain fields from being displayed. You can do this to restrict the fields from being added to the mass edit dialog. You can restrict the fields by adding an `ignoredFields` list in the manifest. Separate the values for the `ignoredFields` key with a comma as shown in the following example:
 
 > ### Sample Code:  
-> Input for `ignoredFields` key must have comma separated values
+> `manifest.json`
 > 
 > ```
-> manifest.json:
+> 
 > "tableSettings": {
->                             "multiEdit": {
->                                 "enabled": true,
->                                 "annotationPath": "com.sap.vocabularies.UI.v1.FieldGroup#MultiEdit",
->                                 "ignoredFields":"NetAmount,TaxAmount" // comma separated values
->                             }
+>     "multiEdit": {
+>         "enabled": true,
+>         "annotationPath": "com.sap.vocabularies.UI.v1.FieldGroup#MultiEdit",
+>         "ignoredFields": "NetAmount,TaxAmount" // comma separated values
+>     }
 > }
 > 
 > ```
@@ -120,21 +135,5 @@ For key user adaptation, you can choose to hide certain fields from being displa
 
 ## Changing the Default Title
 
-The default title for the edit dialog is `Edit(X)`. You can override the default title of the `MultiEdit` dialog by adding the `MULTI_EDIT_DIALOG_TITLE` key in the i18n file of the list report.
-
-
-
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Enabling Editing Using a Dialog \(Mass Edit\) on the List Report Page](enabling-editing-using-a-dialog-mass-edit-on-the-list-report-page-c7be740.md).
-
-**Related Information**  
-
-
-[Replacing the Standard Save Functionality in Mass Edit Dialog](replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md "You can enable custom save functionality for the mass edit dialog.")
-
-[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "Mass editing allows end users to simultaneously change multiple objects that share the same editable properties.")
-
-[Adding a Custom ViewExtension in the Mass Edit Dialog](adding-custom-input-fields-to-the-mass-edit-dialog-fd26fee.md "You can add custom input fields to the mass edit dialog by defining them in the manifest.")
-
-[Localization of UI Texts](localization-of-ui-texts-b8cb649.md "If necessary, you can replace standard UI texts for apps that you have created with SAP Fiori elements.")
+The default title for the edit dialog is `Edit(X)`. You can override the default title of the `MultiEdit` dialog by adding the `MULTI_EDIT_DIALOG_TITLE` key in the i18n file of the list report page.
 

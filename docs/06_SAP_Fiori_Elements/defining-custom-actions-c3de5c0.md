@@ -2,11 +2,11 @@
 
 # Defining Custom Actions
 
-Define custom actions by using the extensions in the `manifest.json` file. You can also define these custom actions so that they appear on charts, tables, or header toolbars based on the filter property value \(chart/table/global\).
+You can define custom actions by using extensions in the `manifest.json` file.
 
 
 
-
+You can also define custom actions so that they appear on charts, tables, or header toolbars based on the filter property value \(chart/table/global\).
 
 > ### Note:  
 > To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).
@@ -162,7 +162,6 @@ Represents the command mapped to a keyboard shortcut defined under `sap.ui.comma
 
 ```
 "sap.ui5": {
-    "_version": "1.1.0",
         "extends": {
         "extensions": {
             "sap.ui.commands": {
@@ -296,7 +295,7 @@ onClickActionSTTA_C_SO_SalesOrder_ND1: function(oEvent) {
 **Related Information**  
 
 
-[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "This section provides some of the advance configurations and extensions for your application.")
+[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your app.")
 
-[Smart Table Extensions](smart-table-extensions-4117ef9.md "Define custom actions for tables by configuring the annotation and manifest.json files.")
+[Smart Table Extensions](smart-table-extensions-4117ef9.md "You can define custom actions for tables by configuring the annotation and manifest.json files.")
 

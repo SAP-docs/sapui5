@@ -2,14 +2,13 @@
 
 # Comparison Micro Chart
 
-A single measure value is shown against a maximum value. Only the first three values as received from the back end are shown.
+You can render the micro chart as a comparison micro chart.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
+In the following screenshot, the values on the left \(10, 40 and 70\) represent the dimension values, which are the IDs of the sales order items.
 
 ![](images/Comparison_Micro_Chart_0df709f.png)
 
-In the chart, the values on the left \(10, 40 and 70\) represent the dimension values, which are the IDs of the sales order items. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.ComparisonMicroChart).
+In the comparison micro chart, a single measure value is shown against a maximum value. Only the first three values received from the back end are shown. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.ComparisonMicroChart).
 
 > ### Note:  
 > The chart dimensions and measures cannot be of the same entity; they must be from a 1:n navigation entity.

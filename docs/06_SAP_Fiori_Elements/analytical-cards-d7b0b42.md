@@ -2,17 +2,19 @@
 
 # Analytical Cards
 
-Analytical cards let you view data in a variety of chart formats. The card is divided into two areas \(header and chart\).
+You can use the analytical cards to view data in a variety of chart formats.
 
 
 
 > ### Note:  
 > Analytical cards don't have a fixed height. The height is adjusted automatically to accommodate the data points and legends. Legends are created automatically based on the defined measures and dimensions.
 
-In the header area, you can view the aggregated value of a key performance indicator \(KPI\), the trend, and percentage of change. In the chart area, you can view a graphical representation of the data.
+The card is divided into the header and chart areas .In the header area, you can view the aggregated value of a key performance indicator \(KPI\), the trend, and percentage of change. In the chart area, you can view a graphical representation of the data.
 
 > ### Note:  
-> If you configure the chart title, chart descriptions \(x- and y-axis\) are not displayed in the card \(except for bubble charts\). For example, the chart title *Net Sales by Days Payable*, already conveys that the y-axis is *Net Sales* and the x-axis represents *Days Payable*.
+> If you configure the chart title, chart descriptions \(x- and y-axis\) are not displayed in the card \(except for bubble charts\).
+
+
 
 
 
@@ -110,7 +112,7 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
 
 -   `DataScope`
 
-    The scale adjusment property displays data in the respective chart format based on the available data range. It determines the automatic scaling. Minimum and maximum values for the axes are determined from the entire dataset.
+    The scale adjustment property displays data in the respective chart format based on the available data range. It determines the automatic scaling. Minimum and maximum values for the axes are determined from the entire dataset.
 
     Set the following property in the `UI.Chart` annotation:
 
@@ -144,7 +146,7 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
 
 -   `FixedScale`
 
-    Scale behaviour set to `FixedScale` allows you to define the minimum and maximum data range to display in the respective chart format. It applies fixed minimum and maximum values that are derived from the `@UI.MeasureAttributes.DataPoint/MinimumValue` and `@UI.MeasureAttributes.DataPoint/MaximumValue` annotation by default.
+    Scale behavior set to `FixedScale` allows you to define the minimum and maximum data range to display in the respective chart format. It applies fixed minimum and maximum values that are derived from the `@UI.MeasureAttributes.DataPoint/MinimumValue` and `@UI.MeasureAttributes.DataPoint/MaximumValue` annotation by default.
 
     Set the following property in the `UI.Chart` annotation:
 
@@ -228,8 +230,7 @@ The following sample code is a snippet of a sample `manifest.json` file:
 > 
 > ```
 > {
->   "sap.app": {
->     "_version": "1.1.0",
+>   "sap.app": {    
 >     "id": "sap.ovp.demo",
 >     "type": "application",
 >     "i18n": "i18n/i18n.properties",
@@ -258,8 +259,7 @@ The following sample code is a snippet of a sample `manifest.json` file:
 >   },
 >   "sap.ovp": {
 >     "globalFilterModel": "salesShare",
->     "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
->     "globalFilterEntitySet": "GlobalFilters",  //Available from SAPUI5 1.54.                  
+>     "globalFilterEntitySet": "GlobalFilters",                   
 >     "cards": {
 >       "cardBubble": {
 >         "model": "salesShare",

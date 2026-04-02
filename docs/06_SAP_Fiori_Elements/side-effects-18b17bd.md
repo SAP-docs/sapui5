@@ -2,9 +2,9 @@
 
 # Side Effects
 
-If an end user changes the content of a field or performs another activity, this change can potentially influence other fields on the UI. This system behavior is called a side effect.
+You can annotate side effects to prevent UI showing outdated data.
 
-Side effects are performed in the back end. However, you need to annotate the side effects implemented in the back end using side effect annotations to "inform" the front end which fields on the UI are influenced by a change, so that the front end can request new data for these fields. Otherwise, the UI may still display outdated data.
+If a user changes the content of a field or performs another activity, this change can potentially influence other fields on the UI. This system behavior is called a side effect. Side effects are performed in the back end. However, you need to annotate the side effects implemented in the back end using side effect annotations to "inform" the front end which fields on the UI are influenced by a change, so that the front end can request new data for these fields. Otherwise, the UI may still display outdated data.
 
 > ### Note:  
 > Default side effects are relevant for most apps. You do not need to annotate these side effects. They are available by default and cannot be switched off.
@@ -34,7 +34,7 @@ Side Effect
 <tr>
 <td valign="top">
 
-Creating a new entity or draft version, either in the list report or on the object page
+Creating a new entity or draft version on the list report page or the object page
 
 </td>
 <td valign="top">
@@ -46,7 +46,7 @@ List binding of the parent page is refreshed to show the newly created entity.
 <tr>
 <td valign="top">
 
-Deleting an entity, either in the list report or on the object page
+Deleting an entity on the list report page or the object page
 
 </td>
 <td valign="top">
@@ -173,7 +173,7 @@ The following side effect annotations are supported:
 
     If a trigger action is defined but the `TargetProperties` or `TargetEntities` are not defined, then only the trigger action is called.
 
-    You can also specify absolute paths, that is, paths starting with the entity container. They can be defined as `TargetEntities` to refresh complete entity sets in the list report.
+    You can also specify absolute paths, that is, paths starting with the entity container. They can be defined as `TargetEntities` to refresh complete entity sets on the list report page.
 
     > ### Example:  
     > `<NavigationPropertyPath>/namespace.to.EntityContainer/EntityType</NavigationPropertyPath>`
@@ -411,7 +411,7 @@ You can explore and work with the coding yourself. For more information about si
 **Related Information**  
 
 
-[Side Effect Annotations: Examples](side-effect-annotations-examples-61cf21d.md "This topic provides some examples for annotating side effects.")
+[Side Effect Annotations: Examples](side-effect-annotations-examples-61cf21d.md "See some examples about annotating side effects.")
 
-[Using Global Side Effects](using-global-side-effects-955ae31.md "Global side effects are those side effects that are defined without any source properties or source entities.")
+[Using Global Side Effects](using-global-side-effects-955ae31.md "You can configure global side effects.")
 

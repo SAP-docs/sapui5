@@ -40,16 +40,7 @@ Now we create a production-ready version of our SAPUI5 application that can be d
       "start": "ui5 serve -o test/mockServer.html",
       "build": "ui5 build --all --clean-dest"
   },
-  "devDependencies": {
-    "@types/openui5": "^1.120.0",
-    "@ui5/cli": "^3.7.1",
-    "@ui5/ts-interface-generator": "^0.8.1",
-    "typescript": "^5.2.2",
-    "ui5-middleware-livereload": "^3.0.2",
-    "ui5-middleware-serveframework": "3.0.0",
-    "ui5-middleware-simpleproxy": "^3.2.8",
-    "ui5-tooling-transpile": "^3.2.7"
-  }
+  ...
 }
 ```
 
@@ -87,16 +78,7 @@ To actually use the newly added web server, we have to add a new script to our `
       "build": "ui5 build --all --clean-dest",
       "serve-dist": "ws --compress -d dist --open"
   },
-  "devDependencies": {
-    "@types/openui5": "^1.120.0",
-    "@ui5/cli": "^3.7.1",
-    "@ui5/ts-interface-generator": "^0.8.1",
-    "typescript": "^5.2.2",
-    "ui5-middleware-livereload": "^3.0.2",
-    "ui5-middleware-serveframework": "3.0.0",
-    "ui5-middleware-simpleproxy": "^3.2.8",
-    "ui5-tooling-transpile": "^3.2.7"
-  }
+  ...
 }
 ```
 

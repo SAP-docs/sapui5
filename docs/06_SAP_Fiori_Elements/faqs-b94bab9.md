@@ -2,7 +2,12 @@
 
 # FAQs
 
-You can get answers to the most frequently asked questions we receive from our users, get to know more about SAP Fiori elements features, and troubleshoot common issues.
+Get answers to the most frequently asked questions.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [FAQs](faqs-f4817b7.md).
+
+The following sections contain the most frequently asked questions about the SAP Fiori elements features and troubleshooting suggestions for common issues.
 
 
 
@@ -17,10 +22,6 @@ You can get answers to the most frequently asked questions we receive from our u
 -   **Is there a glossary where I can look up terms like annotations and extensions?**
 
     Yes, we do have a glossary that lists various terms used in SAP Fiori elements. For more information, see [Glossary](../glossary-9ef211e.md).
-
--   **Is there a sample that showcases SAP Fiori elements?**
-
-    Yes, SAP Fiori elements features two samples that are based on CAP and RAP. You can find them at [Feature Showcase Apps and Samples](feature-showcase-apps-and-samples-ebe44ec.md).
 
 -   **Which features are available in SAP Fiori elements?**
 
@@ -66,7 +67,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     By using the `CreateHidden`/`UpdateHidden`/`DeleteHidden` annotations, you control the visibility of the standard *Create*/*Edit*/*Delete* buttons. For more information, see [Adding Actions to Tables](adding-actions-to-tables-c909f6b.md) and [Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-87566a3.md).
 
-    By using the `OperationAvailable` annotation, you control the enablement of an action button. For more information, see [Actions in the List Report Page](actions-in-the-list-report-page-43ff607.md).
+    By using the `OperationAvailable` annotation, you control the enablement of an action button. For more information, see [Actions on the List Report Page](actions-on-the-list-report-page-43ff607.md).
 
 -   **How can I refresh data on the UI?**
 
@@ -153,7 +154,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **How do I control the visibility/enablement of the standard *Create* button in a list report page table?**
 
-    You can control the visibility or enablement of the standard *Create* button in a list report page table by using the `OperationAvailable` annotation. For more information, see the *Standard Action: Create* subsection in [Actions in the List Report Page](actions-in-the-list-report-page-43ff607.md).
+    You can control the visibility or enablement of the standard *Create* button in a list report page table by using the `OperationAvailable` annotation. For more information, see the *Standard Action: Create* subsection in [Actions on the List Report Page](actions-on-the-list-report-page-43ff607.md).
 
 -   **Can I define app-level critical actions that are shown emphasized rather than the default emphasized buttons such as *Edit* and *Save* of SAP Fiori elements?** 
 
@@ -300,6 +301,6 @@ You can get answers to the most frequently asked questions we receive from our u
 
     You can look at the possibility of using app extensions. In addition, you can also explore the use of building blocks to build your own custom section \(or even a free-style app\) that still allows you to get most of the standard behavior out-of-the-box.
 
-    You can use app extensions to extend your app to suit your requirements. For more information, see [Extending List Reports and Object Pages Using App Extensions](extending-list-reports-and-object-pages-using-app-extensions-a892eb8.md).
+    You can use app extensions to extend your app to suit your requirements. For more information, see [Extending List Report Pages and Object Pages Using App Extensions](extending-list-report-pages-and-object-pages-using-app-extensions-a892eb8.md).
 
 

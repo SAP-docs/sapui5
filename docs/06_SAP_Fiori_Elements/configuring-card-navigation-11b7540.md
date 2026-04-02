@@ -6,6 +6,11 @@ All cards support navigation, both to a different SAP Fiori application using in
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Card Navigation](configuring-card-navigation-530f9e6.md).
+
+
+
 Navigation information is taken from the `com.sap.vocabularies.UI.v1.Identification`
 
 -   `com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation` should be used to define intent-based navigation to SAP Fiori application.

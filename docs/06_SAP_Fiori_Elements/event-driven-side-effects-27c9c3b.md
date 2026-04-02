@@ -2,10 +2,9 @@
 
 # Event-Driven Side Effects
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
+You can annotate side effect events.
 
-In SAP Fiori elements for OData V4, you can annotate side effect events. In contrast to side effects with source properties or entities that are triggered by user interactions, side effect events are triggered by the application server. The server triggers the event by sending a message to the client through the `WebSocket` connection. The message contains the event name and the entity key of the entity type that should be refreshed. The client then checks if this entity is currently shown to the user, fetches the entity from the server, and updates the properties accordingly.
+In contrast to side effects with source properties or entities that are triggered by user interactions, side effect events are triggered by the application server. The server triggers the event by sending a message to the client through the `WebSocket` connection. The message contains the event name and the entity key of the entity type that should be refreshed. The client then checks if this entity is currently shown to the user, fetches the entity from the server, and updates the properties accordingly.
 
 See the following example of how to annotate a side effect event:
 
@@ -34,7 +33,7 @@ See the following example of how to annotate a side effect event:
 
 Whenever the  `MyEventName` event  is triggered on the server, the client is notified to refresh `Property1` and `Property2` that belong to  `MyEntityType`.
 
-In the list report, a typical use case requires refreshing the entire table. To do that, use an absolute path for the `TargetEntities` property in the side effect definition.
+On the list report page, a typical use case requires refreshing the entire table. To do that, use an absolute path for the `TargetEntities` property in the side effect definition.
 
 > ### Sample Code:  
 > XML Annotation

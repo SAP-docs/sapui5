@@ -2,7 +2,12 @@
 
 # Creating a List Report Page Without Variant Management
 
-The applications generated using the SAP Fiori elements includes the variant management option by default. However, you can also choose to create one without variant management.
+You can create a list report page app without variant management.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-094fe8c.md).
+
+SAP Fiori elements-based applications include the variant management option by default. However, you can also choose to create one without variant management.
 
 
 
@@ -34,7 +39,7 @@ For more information, see [Managing Variants](managing-variants-b82d987.md).
 
 ## Procedure
 
-1.  Include the `variantManagementHidden` flag in the settings of the list report component in the `manifest.json` file of your application.
+1.  Include the `variantManagementHidden` flag in the settings of the list report page component in the `manifest.json` file of your application.
 
     -   If you set the flag to `true`, then the standard variant management isn't available in the application. The application name is displayed instead.
 
@@ -42,11 +47,10 @@ For more information, see [Managing Variants](managing-variants-b82d987.md).
 
 
     > ### Sample Code:  
-    > List Report without Variant Management
+    > List Report Page Without Variant Management
     > 
     > ```
     > "sap.ui.generic.app": {
-    >         "_version":"1.1.0",
     >         "pages": [
     >             {
     >                 "entitySet": "XXXXXX_Product",
@@ -75,7 +79,6 @@ For more information, see [Managing Variants](managing-variants-b82d987.md).
     > ### Sample Code:  
     > ```
     > "sap.ui.generic.app": {
-    >         "_version":"1.1.0",
     >         "pages": [
     >             {
     >                 "entitySet": "XXXXXX_Product",
@@ -99,5 +102,5 @@ For more information, see [Managing Variants](managing-variants-b82d987.md).
 **Related Information**  
 
 
-[Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-ca0eb16.md "You can enable and disable variant management on the object page.")
+[Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-ca0eb16.md "You can enable and disable variant management for tables, charts, objects, and subobjects on the object page.")
 

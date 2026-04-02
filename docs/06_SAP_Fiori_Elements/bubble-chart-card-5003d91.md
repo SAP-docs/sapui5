@@ -6,6 +6,11 @@ Bubble charts display up to three measures and two dimensions of data.
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Bubble Chart](bubble-chart-8412307.md).
+
+
+
   
   
 **Example of a Bubble Chart Card**

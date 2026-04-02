@@ -2,9 +2,14 @@
 
 # Store/Restore the Application State
 
-SAP Fiori elements uses the `iAppState` mechanism for storing or restoring the application state. This mechanism enables a smooth user experience when navigating back and forth between apps developed using SAP Fiori elements and other apps.
+SAP Fiori elements uses the `iAppState` mechanism for storing or restoring the application state.
 
-The state of the application is preserved when users refresh or navigate away from an application created using SAP Fiori elements \(either a list report or an object page\) and then navigate back to this page. The application state is also preserved when the URL of the application is shared with another user who then opens the link. For more information, see [The Share Functionality](the-share-functionality-2a20b31.md).
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Store/Restore the Application State](store-restore-the-application-state-46bf248.md).
+
+This mechanism enables a smooth user experience when navigating back and forth between apps developed using SAP Fiori elements and other apps.
+
+The state of the application is preserved when users refresh or navigate away from an application created using SAP Fiori elements \(either a list report page or an object page\) and then navigate back to this page. The application state is also preserved when the URL of the application is shared with another user who then opens the link. For more information, see [The Share Functionality](the-share-functionality-2a20b31.md).
 
 
 
@@ -12,7 +17,7 @@ The state of the application is preserved when users refresh or navigate away fr
 
 ## What Is Stored/Restored
 
--   Any filter field values in the list report filter bar. The *Go* button state, when available, is also considered.
+-   Any filter field values in the list report page filter bar. The *Go* button state, when available, is also considered.
 
 -   Any change in a chosen variant.
 

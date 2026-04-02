@@ -97,7 +97,7 @@ As of manifest version `1.21.0` the `sap.app/i18n` section can hold an object co
 
 ```json
 {
-	"_version": "1.21.0",
+	...
 	"sap.app": {
 		"id": "sap.ui.demo.todo",
 		"type": "application",

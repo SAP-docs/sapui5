@@ -2,9 +2,12 @@
 
 # Area Micro Chart
 
-An area micro chart is a trend chart.
+You can render the micro chart as an area micro chart.
 
-It provides information for actual and target values for a specific time range.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Area Micro Chart](area-micro-chart-1467f2b.md).
+
+The area micro chart is a trend chart, which displays the actual and target values for a specific time range.
 
 ![](images/Area_Micro_Chart_01fe21f.png)
 

@@ -2,7 +2,7 @@
 
 # Configuring the Table Area
 
-The `LineItem` annotation lets you configure the table header title \(`label` property\) and the corresponding values \(`value` property\) for the column items.
+You can configure the table header title \(`label` property\) and the corresponding values \(`value` property\) for the column items with the `LineItem` annotation.
 
 
 

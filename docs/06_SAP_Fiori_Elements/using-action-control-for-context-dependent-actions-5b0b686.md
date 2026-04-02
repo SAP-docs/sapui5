@@ -2,9 +2,9 @@
 
 # Using Action Control for Context-Dependent Actions
 
-Action control refers to the ability of applications to be able to configure app-specific actions so that they are only enabled for certain instances of the object, but not others.
-
 You can use action control to display actions by adding the `sap:action-for` and `sap:applicable-path` terms to your action or function import.
+
+Action control refers to the ability of applications to be able to configure app-specific actions so that they are only enabled for certain instances of the object, but not others.
 
 Actions that you've defined using these annotations are context-dependent. This means that users have to select an item or a line in a list. Only then are the actions enabled.
 
@@ -17,21 +17,22 @@ If the condition, as defined by the applicable-path variable, is not fulfilled, 
 -   The action is disabled for header buttons in a table
 
     > ### Note:  
-    > In addition to `sap:applicable-path`, it is not recommended to use `UI.Hidden` for `DataFieldForAction` within page header. If `UI.Hidden` is defined, it takes the precedence and may result in a deviation from the UX recommended behavior for button visibility.
+    > In addition to `sap:applicable-path`, it's not recommended to use `UI.Hidden` for `DataFieldForAction` within page header. If `UI.Hidden` is defined, it takes the precedence and may result in a deviation from the UX recommended behavior for button visibility.
 
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
-> <FunctionImport Name="SEPMRA_C_PD_ProductCopy" 
->                 ReturnType="SEPMRA_PROD_MAN.SEPMRA_C_PD_ProductType" 
->                 EntitySet="SEPMRA_C_PD_Product" m:HttpMethod="POST"
->                 sap:action-for="SEPMRA_PROD_MAN.SEPMRA_C_PD_ProductType" 
->                 sap:applicable-path="IsActiveEntity">
+> 
+> <FunctionImport Name="SEPMRA_C_PD_ProductCopy" ReturnType="SEPMRA_PROD_MAN.SEPMRA_C_PD_ProductType" EntitySet="SEPMRA_C_PD_Product" m:HttpMethod="POST" sap:action-for="SEPMRA_PROD_MAN.SEPMRA_C_PD_ProductType" sap:applicable-path="IsActiveEntity">
 >     <Parameter Name="ProductDraftUUID" Type="Edm.Guid" Mode="In"/>
 >     <Parameter Name="ActiveProduct" Type="Edm.String" Mode="In" MaxLength="10"/>
 > </FunctionImport>
 > 
 > ```
+> 
+> <
 
 > ### Note:  
 > -   If the function import action parameters are dynamic, and if for a selected instance no parameter is required, then the parameter dialog is not displayed. This behavior is applicable only for single-context select actions.

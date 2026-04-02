@@ -2,7 +2,7 @@
 
 # Configuring External Navigation
 
-This section describes the configuration options for navigating from an app \(outbound\) and navigating to an app \(inbound\).
+You can make use of configuration options for navigating from an app \(outbound\) and navigating to an app \(inbound\).
 
 -   [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md)
 

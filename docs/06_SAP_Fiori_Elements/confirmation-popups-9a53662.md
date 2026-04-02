@@ -2,7 +2,7 @@
 
 # Confirmation Popups
 
-You can configure confirmation popups for various use cases in list reports and object pages.
+You can configure confirmation popups for various use cases on the list report page and the object page.
 
 
 
@@ -33,7 +33,27 @@ When end users create or edit an object page in a draft-enabled application and 
 ![](images/Confirmation_Popup_for_Discard_Draft_-_Edit_Mode_b43cd41.png "Edit Mode")
 
 > ### Tip:  
-> The popup is enabled by default. You can disable it for external navigation by configuring specific settings in the `manifest.json` file. For more information, see the version-specific sections in this topic.
+> The popup is enabled by default. You can disable it for external navigation by configuring specific settings in the `manifest.json` file.
+
+
+
+<a name="loio9a536627a6a94de084b0605eb164d2c8__section_nky_zzn_vsb"/>
+
+## Turn Off *Draft Activation* Confirmation Popup for External Navigation
+
+You can turn off the confirmation popup for draft activation in the case of external navigation by configuring the `silentlyKeepDraftOnForwardNavigation` setting in the `manifest.json` file as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.fe": {
+>      "app": {
+>           "silentlyKeepDraftOnForwardNavigation": true
+>      }
+> }
+> 
+> ```
 
 
 
@@ -45,7 +65,7 @@ You can configure a confirmation popup for the following actions by sending an H
 
 -   Standard SAP Fiori elements actions, such as *Save*, *Activate*, and *Create*.
 
--   Application-specific actions \(function import actions in SAP Fiori elements for OData V2\).
+-   Application-specific actions
 
 
 The flow is as follows:
@@ -65,7 +85,7 @@ The flow is as follows:
 
 -   If end users choose *Confirm*, the application sends the request again, this time **without** `Prefer:handling=strict` in the header.
 
--   The back end executes the action and responds with either a success or a failure message. If it sends the same message again, it is suppressed and not shown on the UI. For more information, see the version-specific sections.
+-   The back end executes the action and responds with either a success or a failure message. If it sends the same message again, it is suppressed and not shown on the UI.
 
 -   If end users choose *Cancel*, the operation is terminated.
 
@@ -73,137 +93,6 @@ The flow is as follows:
 The following image shows an example of such a popup:
 
 ![](images/Confirmation_Popup_412_Warning_03381d1.png)
-
-
-
-<a name="loio9a536627a6a94de084b0605eb164d2c8__section_glf_hy4_wpb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-Once the 412 warnings are confirmed, any repeated messages from the back end are suppressed and not displayed in the UI. This suppression is applied only if the subsequent messages match the original in all of the following message attributes:
-
--   `code`
-
--   `message`
-
--   `severity`
-
--   `target`: The targets are considered equal if they resolve to the same model element.
-
--   `transition` flag : If this flag is absent, it is considered as `true`.
-
-
-
-
-### Turn Off *Draft Activation* Confirmation Popup for External Navigation
-
-You can turn off the confirmation popup for draft activation in the case of external navigation by configuring the `draftDiscardConfirmationSettings` setting in the `manifest.json` file, as shown in the following sample code:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "sap.ui.generic.app": {
->               "_version": "1.3.0",
->               "settings": {
->                              "draftDiscardConfirmationSettings": {
->                                            "enabled": "restricted"
->                              }
->               }
-> }
-> .
-> .
-> .
-> ```
-
-
-
-### Handling of 412 Messages
-
-The following additional scenarios are supported:
-
--   Create, update or delete actions in non-draft applications
-
--   Deletion of an object
-
-
-> ### Note:  
-> -   You can configure a `state` message or transition from the back end for the 412 handling during `activation`.
-> 
-> -   You must configure a `transition` message from the back end for the 412 handling during `save`, `delete`, and `function import` actions.
-
-> ### Restriction:  
-> You can't configure 412 confirmation popups for a deletion triggered from a table in an object page.
-
-If an end user wants to perform an action on multiple selected items, some of the selected items can result in a warning message. In such cases, the action processing fails and the end user is asked to perform the action on individual objects.
-
-
-
-### Configuring an Additional Confirmation Popup for Save/Activation on Object Pages
-
-> ### Note:  
-> This is a legacy feature and it is recommended to use the 412 confirmation popup instead.
-
-In draft scenarios, you can configure a UI confirmation popup before proceeding with activation, if there are any warnings available at the front end.
-
-To enable this popup, in the `manifest.json` file, under the object page settings, set the `showConfirmationOnDraftActivate` indicator to `true` as shown in the following sample code:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "pages": {
->               "ObjectPage|STTA_C_MP_Product": {
->                              "entitySet": "STTA_C_MP_Product",
->                              "component": {
->                                            "name": "sap.suite.ui.generic.template.ObjectPage",
->                                            "settings": {
->                                                           "showRelatedApps": true,
->                                                           "tableType": "ResponsiveTable",
->                                                           "editableHeaderContent": true,
->                                                           "showConfirmationOnDraftActivate": true,
->                                                           "sections": {
->                                                                         "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
->                                                                                       "navigationProperty": "to_ProductText",
->                                                                                       "entitySet": "STTA_C_MP_ProductText",
->                                                                                       "multiSelect": true,
->                                                                                       "createMode": "inline",
->                                                                                       "tableType": "ResponsiveTable"
->                                                                         }
->                                                           }
->                                            }
->                              }
->               }
-> }
-> 
-> ```
-
-
-
-### Customizing Title Text for the Confirmation Popups
-
-You can override the title text and provide application-specific dialog title using the following keys in the `i18n` files:
-
--   For the title text of a dialog:
-
-    -   `"ST_KEEP_DRAFT_MESSAGE_CREATE"` in the create scenario
-
-    -   `"ST_KEEP_DRAFT_MESSAGE_EDIT"` in the edit scenario
-
-
--   For saving and creating text:
-
-    -   `"CREATE"` in the create mode
-
-    -   `"SAVE"` in the save mode
-
-
-
-
-
-<a name="loio9a536627a6a94de084b0605eb164d2c8__section_nky_zzn_vsb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
 
 Once the 412 warnings are confirmed, any repeated messages from the back end are suppressed and not displayed in the UI. This suppression is applied only if the subsequent messages match the original in all of the following message attributes:
 
@@ -222,25 +111,19 @@ Once the 412 warnings are confirmed, any repeated messages from the back end are
 
 
 
-### Turn Off *Draft Activation* Confirmation Popup for External Navigation
+## Handling of 412 Messages
 
-You can turn off the confirmation popup for draft activation in the case of external navigation by configuring the `silentlyKeepDraftOnForwardNavigation` setting in the `manifest.json` file as shown in the following sample code:
+> ### Note:  
+> You must configure 412 messages from the back end as `transition` messages, not as `state` messages.
 
-> ### Sample Code:  
-> `manifest.json`
+> ### Restriction:  
+> -   For back ends based on CAP, the handling of 412 "Precondition Failed" messages don't work correctly if the action is executed by setting the `InvocationGrouping` annotation property to `UI.OperationGroupingType/Isolated`. Here, the action invoked for the selected contexts are triggered within the same change set. So, either the action is executed successfully or not executed for any of the selected context.
 > 
-> ```
-> "sap.fe": {
->      "app": {
->           "silentlyKeepDraftOnForwardNavigation": true
->      }
-> }
-> 
-> ```
+> -   The handling of 412 messages \("Precondition Failed" messages\) is not applied when a record is deleted.
 
 
 
-### Turn Off 412 Confirmation Popups
+## Turn Off 412 Confirmation Popups
 
 To turn off 412 confirmation popups, you need to disable strict handling. You can disable strict handling for a specific action or the entire application by specifying the `disableStrictHandling` setting in the `manifest.json` file.
 
@@ -302,17 +185,28 @@ You can also disable strict handling at the action level using the `invokeAction
 > });
 > ```
 
+You can disable strict handling for actions defined in the `Table` building block using `ActionOverride`. The `key` must match the action defined in the `UI.LineItem` annotation. To disable strict handling for actions defined in the `Table` building block, use `ActionOverride`, as shown in the following sample code:
 
-
-### Handling of 412 Messages
-
-> ### Note:  
-> You must configure 412 messages from the back end as `transition` messages, not as `state` messages.
-
-> ### Restriction:  
-> -   For back ends based on CAP, the handling of 412 "Precondition Failed" messages don't work correctly if the action is executed by setting the `InvocationGrouping` annotation property to `UI.OperationGroupingType/Isolated`. Here, the action invoked for the selected contexts are triggered within the same changeset. So, either the action is executed successfully or not executed for any of the selected context.
+> ### Sample Code:  
+> XML Fragment
 > 
-> -   The handling of 412 messages \("Precondition Failed" messages\) is not applied when a record is deleted.
+> ```
+> <core:FragmentDefinition  
+>     xmlns:core="sap.ui.core"  
+>     xmlns="sap.m"  
+>     xmlns:macros="sap.fe.macros"  
+>     xmlns:macrosTable="sap.fe.macros.table"> 
+>     <macros:Table id="testing123" metaPath="@com.sap.vocabularies.UI.v1.LineItem"> 
+>         <macros:actions> 
+>             <macrosTable:ActionOverride 
+>                 key="DataFieldForAction:: <service.namespace>.<ActionName> " 
+>                 disableStrictHandling="true" 
+>                 enabled="true" 
+>             /> 
+>         </macros:actions> 
+>     </macros:Table> 
+> </core:FragmentDefinition>
+> ```
 
 
 

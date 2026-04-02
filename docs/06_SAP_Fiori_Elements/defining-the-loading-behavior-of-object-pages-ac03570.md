@@ -2,7 +2,7 @@
 
 # Defining the Loading Behavior of Object Pages
 
-Object pages make use of request groups and lazy loading.
+You can configure the loading behavior of object pages using request groups and lazy loading.
 
 
 

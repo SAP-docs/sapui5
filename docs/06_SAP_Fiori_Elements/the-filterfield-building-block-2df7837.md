@@ -2,10 +2,13 @@
 
 # The `FilterField` Building Block
 
-The `FilterField` building block allows you to add custom XML fragments as filter fields to a `FilterBar` building block in the following way:
+You can use the `FilterField` building block to add custom XML fragments as filter fields.
+
+You can add XML fragments as filter fields to the `FilterBar` building block as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
+> 
 > <macros:FilterBar
 >     metaPath="@com.sap.vocabularies.UI.v1.SelectionFields#SF1"
 >     id="FilterBar"

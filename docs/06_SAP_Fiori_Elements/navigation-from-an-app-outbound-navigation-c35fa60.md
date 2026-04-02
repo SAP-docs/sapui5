@@ -2,7 +2,12 @@
 
 # Navigation from an App \(Outbound Navigation\)
 
-You can either specify a URL or associate a semantic object \(intent-based navigation\) for external navigation targets.
+You can configure navigation to an outside target.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 
 
@@ -82,7 +87,7 @@ Example 2: `DataFieldWithURL` with absolute URL:
 > ```
 
 > ### Note:  
-> A link control is rendered for the property on the list report or object page in display mode only.
+> A link control is rendered for the property on the list report page or on the object page in display mode only.
 
 
 
@@ -545,5 +550,5 @@ In this example, when `<Key>-<Value1>` is passed as an additional parameter in t
 > ### Note:  
 > -   In case of a conflict, the `creationEntitySet` settings take priority over the configuration defined in the target app's `manifest.json` file.
 > 
-> -   If the navigation context from the source app doesn't provide enough information to identify a record on the desired object page, then the list report is opened with the first tab selected.
+> -   If the navigation context from the source app doesn't provide enough information to identify a record on the desired object page, then the list report page is opened with the first tab selected.
 

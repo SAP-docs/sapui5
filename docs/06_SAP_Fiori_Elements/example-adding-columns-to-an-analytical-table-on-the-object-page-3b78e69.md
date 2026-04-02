@@ -2,7 +2,7 @@
 
 # Example: Adding Columns to an Analytical Table on the Object Page
 
-To add custom columns to an analytical table on the object page, follow the steps described below.
+You can add custom columns to your object page analytical table using view extensions.
 
 
 

@@ -2,7 +2,10 @@
 
 # Setting the Table Type
 
-You can control which table type is rendered in the list report and on the object page by configuring the `manifest.json` file and by using annotations.
+You can control which table type is rendered on the list report page and on the object page by configuring the `manifest.json` file and by using annotations.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Setting the Table Type](setting-the-table-type-7f844f1.md).
 
 The following `type` properties are available within `tableSettings`:
 
@@ -11,7 +14,7 @@ The following `type` properties are available within `tableSettings`:
 -   `AnalyticalTable`
 -   `TreeTable`
 
-The following logic is used to determine the table type of an analytical list page \(ALP\) and a list report:
+The following logic is used to determine the table type of an analytical list page \(ALP\) and a list report page:
 
 -   If the table type is specified in the `manifest.json` file and set to analytical, but the `entitySet` doesn't have analytical capabilities, a grid table is used as the fallback option. Otherwise, the table is created with the specified table type.
 
@@ -31,10 +34,10 @@ The following logic is used to determine the table type of an analytical list pa
 > ### Tip:  
 > For more information about the guidelines and restrictions that apply to grid tables, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/grid-table/).
 
-In addition to using the `manifest.json` file, you can also use annotations to control which table type is rendered in the list report and on the object page.
+In addition to using the `manifest.json` file, you can also use annotations to control which table type is rendered on the list report page and on the object page.
 
 > ### Note:  
-> -   List report only: If the `type` property within `tableSettings` is `AnalyticalTable`, set the `sap:semantics` annotation to `aggregate` for the specified entity type. Note that `sap:semantics` is a back-end entity type definition and can't be changed in the SAP Web IDE.
+> -   List report page only: If the `type` property within `tableSettings` is `AnalyticalTable`, set the `sap:semantics` annotation to `aggregate` for the specified entity type. Note that `sap:semantics` is a back-end entity type definition and can't be changed in the SAP Web IDE.
 > 
 > -   If you don't maintain the `type` property within `tableSettings` and if `sap:semantics` has been set to `aggregate` in the back end, an analytical table is rendered.
 
@@ -46,7 +49,7 @@ In addition to using the `manifest.json` file, you can also use annotations to c
 
 Set the `type` property within `tableSettings` to the required value in the `sap.ui.generic.app` section of the `manifest.json` file:
 
-Example for the list report:
+Example for the list report page:
 
 ```js
 "sap.ui.generic.app": {
@@ -144,9 +147,9 @@ Defining `tableTypes` under the settings is supported for backward compatibility
 
 For a description of the available table types, see [Tables](tables-f242a02.md).
 
-For information about setting up tables in the list report through annotations, see [Settings for List Report Tables](settings-for-list-report-tables-8f51fcd.md).
+For information about setting up tables on the list report page through annotations, see [Settings for List Report Page Tables](settings-for-list-report-page-tables-4c2d17a.md).
 
-For information about setting up a standard list or object list in the list report, see [Enabling Standard List Items and Object List Items](enabling-standard-list-items-and-object-list-items-4ed47aa.md).
+For information about setting up a standard list or object list on the list report page, see [Enabling Standard List Items and Object List Items](enabling-standard-list-items-and-object-list-items-4ed47aa.md).
 
 For information about setting up tables in the object page, see [Settings for Object Page Tables](settings-for-object-page-tables-47425bb.md).
 

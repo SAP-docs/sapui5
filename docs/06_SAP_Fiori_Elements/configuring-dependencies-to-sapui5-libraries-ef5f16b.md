@@ -2,7 +2,7 @@
 
 # Configuring Dependencies to SAPUI5 Libraries
 
-To improve loading time, you can define dependencies to SAPUI5 libraries required by your application.
+You can define dependencies to SAPUI5 libraries required by your app to improve the loading time.
 
 
 
@@ -13,7 +13,7 @@ Overview page application instances are dependent on the `sap.ovp` SAPUI5 librar
 > "sap.ui5": {
 >     ...
 >     "dependencies": {
->         "minUI5Version": "1.32.0",
+>         "minUI5Version": "1.146.0",
 >         "libs": {
 >             "sap.ovp": {
 >                 "minVersion": "1.32.0"

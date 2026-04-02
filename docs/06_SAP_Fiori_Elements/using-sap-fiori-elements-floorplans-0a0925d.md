@@ -2,19 +2,22 @@
 
 # Using SAP Fiori Elements Floorplans
 
-Our floorplans provide you with predefined templates for common application use cases.
+You can create apps using SAP Fiori elements floorplans: predefined templates for common application use cases.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Standard Floorplans](standard-floorplans-797c323.md).
 
 You can create apps using the following SAP Fiori elements floorplans:
 
 -   [List Report Page and Object Page](list-report-page-and-object-page-c0eec49.md)
 
-    SAP Fiori elements contains predefined templates for list reports and object pages. A list report lets users filter, view, and work with items \(objects\) organized in list \(table\) format. The list report is typically used in conjunction with an object page. This object page lets users work with objects, providing functions for viewing, editing, and creating objects.
+    SAP Fiori elements contains predefined templates for list report pages and object pages. A list report page lets users filter, view, and work with items \(objects\) organized in list \(table\) format. The list report page is typically used in conjunction with an object page. This object page lets users work with objects, providing functions for viewing, editing, and creating objects.
 
       
       
-    **List Report**
+    **List Report Page**
 
-    ![](images/Using_SAP_Fiori_Elements_Floorplans_List_Report_3e93d0e.png "List Report")
+    ![](images/Using_SAP_Fiori_Elements_Floorplans_List_Report_3e93d0e.png "List Report Page")
 
       
       
@@ -32,7 +35,7 @@ You can create apps using the following SAP Fiori elements floorplans:
 
     ![](images/Using_SAP_Fiori_Elements_Floorplans_Analytical_List_Page_897c8d0.png "Analytical List Page")
 
--   [Overview Pages](overview-pages-8a069ff.md)
+-   [Overview Page](overview-page-8a069ff.md)
 
     An overview page is a data-driven SAP Fiori app for organizing large amounts of information. Information is visualized in a card format in an attractive and efficient way. Different cards are used for different types of content. The user-friendly experience makes viewing, filtering, and acting on data quick and easy. While presenting the big picture, business users can focus on the most important tasks enabling faster decision making as well as immediate action.
 
@@ -42,7 +45,7 @@ You can create apps using the following SAP Fiori elements floorplans:
 
     ![](images/Using_SAP_Fiori_Elements_Floorplans_Overview_Page_e83a616.png "Overview Page")
 
--   [Worklist](worklist-f412dea.md)
+-   [Worklist Page](worklist-page-f412dea.md)
 
     A worklist displays a collection of items to be processed by the user. There is no need for sophisticated filtering. Working through the item list usually involves reviewing details of the list items and taking action. In most cases, the user has to either complete a work item or delegate it.
 

@@ -145,11 +145,9 @@ You can annotate a micro chart and use it as a facet, as shown in the following 
 
 To add a micro chart facet, in the local annotations file, you must add a `UI.HeaderFacets` term along with the complex type `UI.ReferenceFacet`, and reference the `UI.Chart` as shown in the following sample code:
 
-
-
-### `UI.HeaderFacets` and `UI.ReferenceFacet`
-
 > ### Sample Code:  
+> `UI.HeaderFacets` and `UI.ReferenceFacet`
+> 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProductType">
 >     <Annotation Term="UI.HeaderFacets">
@@ -198,15 +196,20 @@ To add a micro chart facet, in the local annotations file, you must add a `UI.He
 > 
 > ```
 
+> ### Restriction:  
+> Micro charts require data that is aggregated by the back end, as the client-side doesn't support aggregating the entity sets.
+> 
+> For example, there is an entity that is linked with a micro chart that has multiple records with the values 'Purchase' and 'Sales'. In this case, the back end must aggregate the 'Sales' value and ensure that the entity has only one record for each 'Purchase' value. This behavior is unlike the behavior of regular charts or analytical tables, where SAP Fiori elements for OData V4 initiates an aggregation call to the back end for the aggregated 'Sales' value.
 
 
-### `UI.Chart` Annotations
+
+## `UI.Chart` Annotations
 
 The `UI.Chart Title` property is used for the title. The `UI.Chart Description` property is used for the subtitle.
 
 
 
-### `UI.DataPoint` Annotation
+## `UI.DataPoint` Annotation
 
 The `DataPoint` property of `MeasureAttributes` in the `Chart` annotation must point to the `UI.DataPoint` annotation.
 
@@ -216,7 +219,7 @@ For more information about how to use the `CriticalityCalculation` property, see
 
 
 
-### Unit of Measure Annotations
+## Unit of Measure Annotations
 
 The unit of measure is displayed in the footer of the micro chart. The following sample code provides an annotation for specifying the unit of measure. The sample code uses the `Measures.ISOCurrency` term, which is applied to the entity type property that serves as the value property of `UI.DataPoint`.
 
@@ -252,28 +255,11 @@ The unit of measure is displayed in the footer of the micro chart. The following
 
 
 
-<a name="loioe219fd0c85b842c69ac3a514e712ece5__section_l5h_1qp_btb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-> ### Note:  
-> The template doesn't support the use of navigation properties in the `UI.Chart` term for the micro chart, as shown in the following sample code:
-> 
->   
->   
-> **Navigation Property**
-> 
-> ![](images/Chart_Limitation_02debb6.png "Navigation Property")
-
-
-
 <a name="loioe219fd0c85b842c69ac3a514e712ece5__section_nhk_hqp_btb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
+## Navigation
 
 You can enable both in-page and external navigation from the micro chart title. For more information, see [Navigation from Header Facet Title](navigation-from-header-facet-title-fa0ca22.md).
-
-We also support the comparison micro chart.
 
 > ### Note:  
 > We don't support the use of navigation properties, such as the one highlighted in the following sample code:
@@ -284,14 +270,9 @@ We also support the comparison micro chart.
 > 
 > ![](images/Navigation_Property_d2168a4.png "Navigation Property ")
 
-> ### Restriction:  
-> Micro charts require data that is aggregated by the back end, as the client-side doesn't support aggregating the entity sets.
-> 
-> For example, there is an entity that is linked with a micro chart that has multiple records with the values 'Purchase' and 'Sales'. In this case, the back end must aggregate the 'Sales' value and ensure that the entity has only one record for each 'Purchase' value. This behavior is unlike the behavior of regular charts or analytical tables, where SAP Fiori elements for OData V4 initiates an aggregation call to the back end for the aggregated 'Sales' value.
 
 
-
-### Applying Sort Order to Micro Charts
+## Applying Sort Order to Micro Charts
 
 You can apply a sort order to the micro chart data using the `UI.PresentationVariant`, choosing either ascending or descending order. The sorting option is available for area micro charts, line micro charts, column micro charts, comparison micro charts, and stacked bar micro charts.
 
@@ -468,21 +449,21 @@ You can apply a sort order to the micro chart data using the `UI.PresentationVar
 **Related Information**  
 
 
-[Area Micro Chart](area-micro-chart-1467f2b.md "An area micro chart is a trend chart.")
+[Area Micro Chart](area-micro-chart-1467f2b.md "You can render the micro chart as an area micro chart.")
 
-[Bullet Micro Chart](bullet-micro-chart-b915166.md "The bullet chart features a single, primary measure (for example, current year-to-date revenue).")
+[Bullet Micro Chart](bullet-micro-chart-b915166.md "You can render the micro chart as a bullet micro chart.")
 
-[Radial Micro Chart](radial-micro-chart-51eb569.md "Radial micro charts displays a single percentage value.")
+[Radial Micro Chart](radial-micro-chart-51eb569.md "You can render the micro chart as a radial micro chart.")
 
-[Line Micro Chart](line-micro-chart-e5cb2af.md "A line chart is a basic type of chart used in many fields.")
+[Line Micro Chart](line-micro-chart-e5cb2af.md "You can render the micro chart as a line micro chart.")
 
-[Column Micro Chart](column-micro-chart-1a4ecb8.md "A column chart uses vertical bars to compare multiple values across categories.")
+[Column Micro Chart](column-micro-chart-1a4ecb8.md "You can render the micro chart as a column micro chart")
 
-[Harvey Micro Chart](harvey-micro-chart-de4f8bf.md "")
+[Harvey Micro Chart](harvey-micro-chart-de4f8bf.md "You can render the micro chart as a Harvey Ball micro chart.")
 
-[Stacked Bar Micro Chart](stacked-bar-micro-chart-9c93837.md "A stacked bar micro chart displays all the values from the back end for the configured measure as a percentage of the total measure value.")
+[Stacked Bar Micro Chart](stacked-bar-micro-chart-9c93837.md "You can render the micro chart as a stacked bar micro chart.")
 
-[Comparison Micro Chart](comparison-micro-chart-9d126f1.md "A single measure value is shown against a maximum value. Only the first three values as received from the back end are shown.")
+[Comparison Micro Chart](comparison-micro-chart-9d126f1.md "You can render the micro chart as a comparison micro chart.")
 
 [Header Facets](header-facets-17dbd5b.md "You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.")
 

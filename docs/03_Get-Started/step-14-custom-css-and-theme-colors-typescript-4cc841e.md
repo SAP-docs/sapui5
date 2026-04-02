@@ -32,26 +32,27 @@ You can view all files at [OpenUI5 TypeScript Walkthrough - Step 14: Custom CSS 
 
 ## webapp/css/style.css \(New\)
 
-We create a folder `css` which will contain our CSS files. In a new style definition file inside the `css` folder we create our custom classes combined with a custom namespace class. This makes sure that the styles will only be applied on controls that are used within our app.
+We create a folder `css`, which will contain our CSS files. In a new style definition file inside the `css` folder, we create our custom classes combined with a custom namespace class. This makes sure that the styles will only be applied on controls that are used within our app.
 
 A button has a default margin of `0` that we want to override: We add a custom margin of `2px` \(or `0.125rem` calculated relatively to the default font size of `16px`\) to the button with the style class `myCustomButton`. We add the CSS class `sapMBtn` to make our selector more specific: in CSS, the rule with the most specific selector "wins".
 
-For right-to-left \(rtl\) languages, like Arabic, you set the left margin and reset the right margin as the app display is inverted. If you only use standard SAPUI5 controls, you don't need to care about this, in this case where we use custom CSS, you have to add this information.
+For right-to-left \(rtl\) languages, like Arabic, you set the left margin and reset the right margin as the app display is inverted. If you only use standard SAPUI5 controls, you don't need to take care of this, but wherever we use custom CSS, you have to add this information.
 
-In an additional class `myCustomText` we define a bold text and set the display to `inline-block`. This time we just define our custom class without any additional selectors. We do not set a color value here yet, we will do this in the view.
+In an additional class `myCustomText`, we define a bold text and set the display to `inline-block`. This time we just define our custom class without any additional selectors. We do not set a color value here yet, we will do this in the view.
 
 ```
 html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
-   margin-right: 0.125rem
+    margin-right: 0.125rem
 }
 
 html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
-   margin-left: 0.125rem
+    margin-left: 0.125rem
 }
 
 .myAppDemoWT .myCustomText {
-   display: inline-block;
-   font-weight: bold;
+    display: inline-block;
+    font-weight: bold;
+    color: var(--sapHighlightColor)
 }
 
 ```
@@ -63,20 +64,14 @@ html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
 We configure the CSS file to our app descriptor: In the `resources` section of the `sap.ui5` namespace, additional resources for the app can be loaded. We load the CSS styles by defining a URI relative to the component. SAPUI5 then adds this file to the header of the HTML page as a `<link>` tag, just like in plain Web pages, and the browser loads it automatically.
 
 ```
-...
-  "sap.ui5": {
-	...	
-	"rootView": {
-	  ...
-	},
-	"resources": {
-	  "css": [
-		{
-		  "uri": "css/style.css"
-		}
-	  ]
-	}
-  }
+
+"sap.ui5": {
+    "resources": {
+        "css": [
+            {
+                "uri": "css/style.css"
+            }
+        ]
 ```
 
 
@@ -87,52 +82,54 @@ The app control is configured with our custom namespace class `myAppDemoWT`. Thi
 
 We add our custom CSS class to the button to precisely define the space between the button and the input field. Now we have a pixel-perfect design for the panel content.
 
-To highlight the output text, we use a `FormattedText` control which can be styled individually, either by using custom CSS or with HTML code. We add our custom CSS class \(`myCustomText`\) and add a theme-dependent CSS class to set the highlight color that is defined in the theme.
+To highlight the output text, we use a `FormattedText` control, which can be styled individually, either by using custom CSS or with HTML code. As a color value, we use the custom CSS properties provided by the theming base content to set the highlight color that is defined in the theme.
+
+The actual color now depends on the selected theme, which ensures that the color always fits the theme and is semantically clear.
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true">
-	<Shell>
-		<App class="myAppDemoWT">
-			<pages>
-				<Page title="{i18n>homePageTitle}">
-					<content>
-						<Panel
-							headerText="{i18n>helloPanelTitle}"
-							class="sapUiResponsiveMargin"
-							width="auto">
-							<content>
-								<Button
-									text="{i18n>showHelloButtonText}"
-									press=".onShowHello"
-									class="myCustomButton"/>
-								<Input
-									value="{/recipient/name}"
-									valueLiveUpdate="true"
-									width="60%"/>
-								<FormattedText
-									htmlText="Hello {/recipient/name}"
-									class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
-							</content>
-						</Panel>
-					</content>
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Shell>
+        <App class="myAppDemoWT">
+            <pages>
+                <Page title="{i18n>homePageTitle}">
+                    <content>
+                        <Panel
+                            headerText="{i18n>helloPanelTitle}"
+                            class="sapUiResponsiveMargin"
+                            width="auto">
+                            <content>
+                                <Button
+                                    text="{i18n>showHelloButtonText}"
+                                    press=".onShowHello"
+                                    class="myCustomButton"/>
+                                <Input
+                                    value="{/recipient/name}"
+                                    valueLiveUpdate="true"
+                                    width="60%"/>
+                                <FormattedText
+                                    htmlText="Hello {/recipient/name}"
+                                    class="sapUiSmallMarginmyCustomText"/>
+                            </content>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
 ```
 
-The actual color now depends on the selected theme which ensures that the color always fits to the theme and is semantically clear. For a complete list of the available CSS class names, see [CSS Classes for Theme Parameters](../04_Essentials/css-classes-for-theme-parameters-ea08f53.md).
+To highlight the output text, we use a `FormattedText` control, which can be styled individually, either by using custom CSS or with HTML code. We also add our custom CSS class \(`myCustomText`\).
 
 
 
 ## Conventions
 
--   Do not specify colors in custom CSS but use the standard theme-dependent classes instead.
+-   Do not use any hard-coded colors in custom CSS but use the custom CSS properties to provide a theme-dependent behavior instead.
 
 
 **Related Information**  
@@ -140,7 +137,7 @@ The actual color now depends on the selected theme which ensures that the color 
 
 [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md "The manifest (also known as descriptor for applications, components, and libraries, in short: app descriptor) is inspired by the WebApplication Manifest concept introduced by the W3C. The manifest provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.")
 
-[CSS Classes for Theme Parameters](../04_Essentials/css-classes-for-theme-parameters-ea08f53.md "SAPUI5 provides a set of essential adjustable colors behind the generic predefined CSS rules that enable custom content to use the respective CSS classes for the required colors.")
+[Theme Parameter Toolbox](https://ui5.sap.com/test-resources/sap/m/demokit/theming/webapp/index.html)
 
 [Creating Themable User Interfaces](../04_Essentials/creating-themable-user-interfaces-a2c67ac.md "There are several things you should keep in mind to ensure that an application can actually be themed.")
 

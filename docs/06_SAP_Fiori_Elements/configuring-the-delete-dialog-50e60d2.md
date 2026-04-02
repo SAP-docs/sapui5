@@ -2,11 +2,14 @@
 
 # Configuring the Delete Dialog
 
-You can adapt the text in the delete dialog to match your requirements when deleting an object or item from the tables in the list report or object page.
+You can adapt the text in the delete dialog to match your requirements when deleting an object or item from the tables on the list report page or the object page.
 
-The delete dialog derives its text from the `Title` and `Description` properties of the `UI.HeaderInfo` annotation, which is defined in the entity set bound to the table. The table can be in the list report, object page, and subobject page.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring the Delete Dialog](configuring-the-delete-dialog-84e4f89.md).
 
--   In fullscreen mode, the delete option is available in the list report, object page header, and subobject page header.
+The delete dialog derives its text from the `Title` and `Description` properties of the `UI.HeaderInfo` annotation, which is defined in the entity set bound to the table. The table can be on the list report page, the object page, and the subobject page.
+
+-   In fullscreen mode, the delete option is available in the list report page header, the object page header, and subobject page header.
 
     When a user deletes an item from the table, the delete confirmation message appears in three different formats, based on the properties defined in the `UI.HeaderInfo` annotation.
 
@@ -71,7 +74,7 @@ The delete dialog derives its text from the `Title` and `Description` properties
 
 
 
--   In flexible column layout mode, the delete option is available in the list report, object page table, and subobject page table.
+-   In flexible column layout mode, the delete option is available in the list report page table, object page table, and subobject page table.
 
     When a user deletes an item from the table, the delete confirmation message appears in three different formats, based on the properties defined in the `UI.HeaderInfo` annotation.
 

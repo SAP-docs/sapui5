@@ -2,7 +2,12 @@
 
 # Elements of the Object Page
 
-The object page allows end users to create, edit, and display objects, as well as save drafts. It is suitable for both simple objects and more complex, multi-faceted objects. The object page view gives you optimal support for multiple devices.
+Get to know the UI elements of the object page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Object Page](object-page-645e27a.md).
+
+The object page allows users to create, edit, and display objects, as well as save drafts. It is suitable for both simple objects and more complex, multi-faceted objects. The object page view gives you optimal support for multiple devices.
 
 
 
@@ -63,21 +68,21 @@ The object page is made up of the following elements:
         -   Graphical elements such as a chart for credit limits or a rating indicator.
 
 
-    -   Anchor navigation area that allows end users navigate to the individual content area sections.
+    -   Anchor navigation area that allows users navigate to the individual content area sections.
 
     -   Content area where data is organized into sections containing field groups or a table.
 
         > ### Note:  
         > SAP Fiori elements for OData V2 doesn't support adding an image in the content area.
 
-    -   Paginator buttons in the layout action area enable end users to navigate between subitems without returning to the original list.
+    -   Paginator buttons in the layout action area enable users to navigate between subitems without returning to the original list.
 
         > ### Note:  
         > The paginator buttons are visible if the following conditions are fulfilled:
         > 
-        > -   The end user is on a subobject page.
+        > -   The user is on a subobject page.
         > 
-        > -   The end user navigates from a list to the current page.
+        > -   The user navigates from a list to the current page.
         > 
         > -   This list contains at least two entries.
 
@@ -86,9 +91,9 @@ The object page is made up of the following elements:
 
 -   Footer bar in which actions and the *Show Messages* button are available, if applicable.
 
-    In draft applications, the footer bar of subitem object pages can also include the *Apply* button in create and edit mode. This action concludes the current create or edit action, saves the draft, and navigates one step up in the object hierarchy. A toast message is displayed when an action is successful. For more information, see [Draft Handling](draft-handling-b0eb3cc.md).
+    In draft applications, the footer bar of subitem object pages can also include the *Apply* button in create and edit mode. This action concludes the current create or edit action, saves the draft, and navigates one step up in the object hierarchy. A message toast is displayed when an action is successful. For more information, see [Draft Handling](draft-handling-b0eb3cc.md).
 
-    In a draft application with flexible column layout, the subobject closes and returns to the main object if an end user clicks the *Apply* button.
+    In a draft application with flexible column layout, the subobject closes and returns to the main object if an end clicks the *Apply* button.
 
 
 

@@ -2,6 +2,8 @@
 
 # Migrating from `registerControllerExtensions` API
 
+You can migrate the deprecated `registerControllerExtensions` API.
+
 As of SAPUI5 1.120 release, the [`registerControllerExtensions`](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.extensionAPI.extensionAPI%23methods/sap.suite.ui.generic.template.extensionAPI.extensionAPI.registerControllerExtensions)API is getting deprecated. It is planned to be removed from the SAPUI5 version 2.0.
 
 Following are the requirements that describe why the API is getting deprecated:
@@ -17,11 +19,11 @@ Following are the requirements that describe why the API is getting deprecated:
 
 ## Steps to Migrate
 
-The current setup has the following three controller extension files for the object page.
+The current setup has the following three controller extension files for the object page:
 
 -   `DetailsExtension.controller.js`
 
-    The parent controller that invokes extensionAPI.`registerControllerExtensions` and registers the remaining two child controllers.
+    The parent controller that invokes extension API `registerControllerExtensions` and registers the remaining two child controllers.
 
 -   `SalesOrderExtension.controller.js`
 
@@ -36,9 +38,11 @@ From SAPUI5 version 2.0, only the two child controller files are going to be req
 
 **Step 1: Changes Required in the `manifest.json`**
 
-1.  Register all the child controllers under `sap.ui.controllerExtensions` section of `manifest.json`. The registered entry must be in `<FLOOR_PLAN_NAME>#<STABLE_ID_OF_VIEW>` format. For example, the `SalesOrderExtension.controller.js` is to be registered as the following.
+1.  Register all the child controllers under `sap.ui.controllerExtensions` section of `manifest.json`. The registered entry must be in `<FLOOR_PLAN_NAME>#<STABLE_ID_OF_VIEW>` format. For example, the `SalesOrderExtension.controller.js` is to be registered as the following:
 
     > ### Sample Code:  
+    > `manifest.json`
+    > 
     > ```
     > "sap.ui.controllerExtensions": { 
     >     ... 
@@ -96,7 +100,7 @@ From SAPUI5 version 2.0, only the two child controller files are going to be req
     -   All the methods of [`ObjectPage controllerFrameworkExtensions`](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ObjectPage.controllerFrameworkExtensions) \(for e.g: `adaptNavigationParameterExtension`, `beforeSaveExtension`\)
 
 
-4.  All the custom methods are to be added after the `override` section.
+4.  All the custom methods are to be added after the `override` section:
 
     > ### Sample Code:  
     > ```

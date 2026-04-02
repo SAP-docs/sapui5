@@ -4,9 +4,9 @@
 
 You can toggle between draft and saved values.
 
-Draft-enabled applications have an additional entry, *All \(Hiding Drafts\)*, in the *Editing Status* filter field in the list report.
+Draft-enabled applications have an additional entry, *All \(Hiding Drafts\)*, in the *Editing Status* filter field on the list report page.
 
-The following table shows the system behavior for the list report and object page:
+The following table shows the system behavior for the list report page and the object page:
 
 ****
 
@@ -15,44 +15,60 @@ The following table shows the system behavior for the list report and object pag
 <tr>
 <th valign="top">
 
-Editing Status Filter in List Report
+Conditions
 
 </th>
 <th valign="top">
 
-In a List Report
-
-</th>
-<th valign="top">
-
-While Navigating to an Object Page
-
-</th>
-<th valign="top">
-
-Navigating back to a List Report
+Behavior
 
 </th>
 </tr>
 <tr>
 <td valign="top">
 
+*Editing Status* filter on a list report page
+
+</td>
+<td valign="top">
+
 *All \(Hiding Drafts\)* 
 
 </td>
+</tr>
+<tr>
 <td valign="top">
 
-Only the saved objects with their respective data are displayed in the list report table
+On a list report page
 
 </td>
 <td valign="top">
 
-Saved object is displayed with a *Return to Draft* button if a draft exists for this object
+Only the saved objects with their respective data are displayed in the list report page table.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Navigating to an object page
 
 </td>
 <td valign="top">
 
-Only the saved objects with their respective data are displayed in the list report table
+The saved object is displayed with a *Saved Version*/*Draft* button that lets users toggle between the saved version and draft if it exists.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Navigating back to a list report page
+
+</td>
+<td valign="top">
+
+Only the saved objects with their respective data are displayed in the list report page table.
 
 </td>
 </tr>
@@ -78,5 +94,5 @@ In the following screenshot, the object page displays the *Saved Version*:
 **Related Information**  
 
 
-[Draft Handling](draft-handling-ed9aa41.md "A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements supports the creation of apps using draft handling.")
+[Draft Handling](draft-handling-ed9aa41.md "You can configure how your SAP Fiori elements app handles drafts.")
 

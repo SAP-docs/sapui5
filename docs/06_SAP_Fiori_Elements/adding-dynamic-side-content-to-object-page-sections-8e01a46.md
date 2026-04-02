@@ -2,20 +2,20 @@
 
 # Adding Dynamic Side Content to Object Page Sections
 
-Sometimes it might be necessary to add additional information that is not available with annotations to object page sections or subsections.
-
 You can use extension points to add additional content to sections.
 
+Sometimes it might be necessary to add additional information that is not available with annotations to object page sections or subsections.
+
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
 You can add additional content in a flexible manner. When the side content is triggered, the main content is narrowed. The side content always comes from the right side of the app and provides the following features:
 
--   adding arbitrary sections with an `xmlfragment` definition
+-   Adding arbitrary sections with an `xmlfragment` definition
 
--   adding side content to sections as defined in the manifest for custom sections or facet-based sections
+-   Adding side content to sections as defined in the manifest for custom sections or facet-based sections
 
 -   API for toggling the display of the side content \(show/hide\)
 
@@ -28,12 +28,14 @@ You can add additional content in a flexible manner. When the side content is tr
 
 You define the side content in the manifest as follows:
 
--   for custom sections: add `"sideContent"` with the `"template"` property pointing towards the content `xmlfragment` definition
+-   For custom sections: add `"sideContent"` with the `"template"` property pointing towards the content `xmlfragment` definition
 
--   for facet-based sections: add it in the same manner under *subSections* \> *sub-Section-key* \> *sideContent*, or under the section where there are no subsections as under *Sections* \> *section-key* \> *sideContent*
+-   For facet-based sections: add it in the same manner under *subSections* \> *sub-Section-key* \> *sideContent*, or under the section where there are no subsections as under *Sections* \> *section-key* \> *sideContent*
 
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > {
 >    "sap.ui5": {
@@ -190,7 +192,7 @@ If no value for the parameter is provided, the API toggles the display.
 For more information about defining an action, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
 > ### Sample Code:  
-> webapp/ext/customSectionSideContent.js
+> `webapp/ext/customSectionSideContent.js`
 > 
 > ```
 > sap.ui.define([], function() {

@@ -85,17 +85,17 @@ Now only the back button is missing on the detail page. We do this by telling th
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.Detail"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Page
-		title="{i18n>detailPageTitle}"
-		showNavButton="true"
-		navButtonPress=".onNavBack">
-		<ObjectHeader
-			intro="{invoice>ShipperName}"
-			title="{invoice>ProductName}"/>
-	</Page>
+    controllerName="ui5.walkthrough.controller.Detail"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page
+        title="{i18n>detailPageTitle}"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+        <ObjectHeader
+            intro="{invoice>ShipperName}"
+            title="{invoice>ProductName}"/>
+    </Page>
 </mvc:View>
 ```
 

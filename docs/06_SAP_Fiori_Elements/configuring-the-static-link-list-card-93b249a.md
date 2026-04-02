@@ -6,6 +6,11 @@ Allows you to display static data such as static links, images, and icons in the
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring the Static Link List Card](configuring-the-static-link-list-card-4e81b77.md).
+
+
+
 To display information in the link list card as either standard or carousal type, you must configure the `listFlavor` property in the card settings.
 
 

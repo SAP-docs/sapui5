@@ -2,15 +2,24 @@
 
 # Visual Filters
 
-An intuitive way of choosing filter values from an associated measure value.
+You can configure visual filters by enhancing the `ValueList` annotation associated with the filter field.
 
 
 
-You can configure visual filters by enhancing the `ValueList` annotation associated with the filter field. For more information, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md). This setup supports line and bar charts.
+> ### Note:  
+> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> 
+> -   Properties or methods exposed by the building block
+> 
+> -   Custom code using extensions
+
+
+
+Visual filters offer an intuitive way of choosing filter values from an associated measure value. Line and bar charts are supported. For more information, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md).
 
 You must ensure that the records available through the value help entity set associated with the visual filter are the same as the records available through the value help entity set associated with the regular filter field. This is required for a smooth sync of the selected values across the different filter modes.
 
-You must ensure there is a manifest property for each visual filter that is to be rendered. For more information, see the [Additional Features in SAP Fiori Elements for OData V4](configuring-the-visual-filter-bar-33f3d80.md#loio33f3d807c10b47d9a8141692d2619dc2__section_my4_mgz_jqb) section in [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md).
+You must ensure there is a manifest property for each visual filter that is to be rendered. For more information, see [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md).
 
 The visual filter includes only the first measure and dimension from the first chart annotation within the specified `PresentationVariantQualifier`. Ensure that the dimension specified in the chart matches the `ValueListProperty` of the `OUT` parameter. To control the sort order, define a `SortOrder` property in the `PresentationVariant` annotation.
 
@@ -982,17 +991,11 @@ Don't
 
 
 
-<a name="loio1714720cae984ad8b9d9111937e7cd38__section_qsw_sts_cqb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
 > ### Note:  
 > For information about SAP Fiori elements for OData V2, see [Visual Filters](visual-filters-5ea9bb1.md).
 
 **Related Information**  
 
 
-[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "The visual filter bar enables end users to select filter values based on measure values in addition to the filters and filter values already selected in the regular filter bar.")
+[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page.")
 

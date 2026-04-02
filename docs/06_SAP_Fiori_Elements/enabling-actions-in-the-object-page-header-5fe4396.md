@@ -14,9 +14,13 @@ All `com.sap.vocabularies.UI.v1.DataFieldForAction` within the unqualified `UI.I
 
 ![](images/Object_Page_Enable_Actions_in_Header_b506b5c.png "Object Page: Enable Actions in Header")
 
+The object page context is only passed for bound header actions. For unbound actions, no context is passed.
 
 
-Annotations for the *Copy with new supplier* Button:
+
+<a name="loio5fe439613f9c4e259015951594c423dc__section_l4n_yjw_4pb"/>
+
+## Annotations for the *Copy with new supplier* Button
 
 > ### Sample Code:  
 > XML Annotation
@@ -69,13 +73,9 @@ Annotations for the *Copy with new supplier* Button:
 > 
 > ```
 
-In SAP Fiori elements for OData V2, the object page context is always passed when a header action is invoked.
-
-In SAP Fiori elements for OData V4, the object page context is only passed for bound header actions. For unbound actions, no context is passed.
 
 
-
-### Edit Action on Subobject Page
+## Edit Action on Subobject Page
 
 The edit action is also available on the subobject page. Its behavior depends on the annotations on both levels:
 
@@ -89,7 +89,7 @@ The edit action is also available on the subobject page. Its behavior depends on
 
 
 
-### Copy Action
+## Copy Action
 
 The *Copy* button is not available by default. However, applications can define a standard copy action by annotating a `dataFieldForAction` with `isCopyAction`.
 
@@ -132,64 +132,9 @@ Applications can define a label for this button. If a label is not provided, the
 
 
 
-<a name="loio5fe439613f9c4e259015951594c423dc__section_k41_bwx_qmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Edit and Delete Buttons
-
-The *Edit* and *Delete* buttons are displayed as shown above, if the following conditions are met:
-
--   *Edit* button: `sap:updatable` is not set to `false`
-
--   *Delete* button: `sap:deletable` is not set to `false`
-
-> ### Note:  
-> If you want to specify conditions for deletion or updates \(using the `deletable-path` or `updatable path` annotation\), you need to ensure that you have not made the `sap:deletable` or `sap:updatable` setting in your annotations.
-
-For more information about the *Delete* button, see the [Enable or Disable *Delete* Button \(Using `deletable-path` Annotations\)](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__deletebutton) section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
-
-
-
-### Show or Hide the Edit Button \(Using `updatable-path` Annotation\)
-
-You can choose to display or hide the *Edit* button on the object page based on certain conditions in your back-end system. For example, you may want to disable editing for a sales order that has already been paid.
-
-In your annotation, set the `updatable-path` for the *Edit* button to point to a particular property of an object \(entity\) in the back-end system that is either `true` or `false`. If the value of this property is `true`, the *Edit* button is displayed; if it is `false`, it is hidden.
-
-> ### Note:  
-> If you want to specify conditions for the `updatable-path` annotation, you need to ensure that you have not made the `sap:updatable` setting in your annotations.
-
-
-
-### Code Samples for `updatable-path`
-
-The code sample below shows you how to set up your annotation to display or hide the *Edit* button, based on the value of the `Updatable_mc` property in the back-end system.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotations Target="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_Product">
->     <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
->         <Record>
->             <PropertyValue Property="Updatable" Path="Updatable_mc"/>
->         </Record>
->     </Annotation>
-> </Annotations>
-> ```
-
-
-
 <a name="loio5fe439613f9c4e259015951594c423dc__section_aj2_5wx_qmb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Edit and Delete Buttons
+## Edit and Delete Buttons
 
 The *Edit* button allows users to edit the instance of the object page.
 
@@ -206,7 +151,7 @@ The *Delete* button allows users to delete the instance of the object page.
 >     </Annotation>
 >     ```
 > 
->     For more information, see the [Edit Enablement](enabling-actions-in-the-object-page-header-5fe4396.md#loio5fe439613f9c4e259015951594c423dc__edit_enablement) subsection in this topic.
+>     For more information, see the [Edit Enablement](enabling-actions-in-the-object-page-header-5fe4396.md#loio5fe439613f9c4e259015951594c423dc__edit_enablement) section in this topic.
 > 
 > 2.  The visibility of the *Edit* button can be controlled by the `updateHidden` annotation under the entity set \(it can be path-based if the apps need to hide the *Edit* button, for example for specific instances only\).
 > 
@@ -254,7 +199,9 @@ The *Delete* button allows users to delete the instance of the object page.
 
 
 
-### Edit Enablement
+<a name="loio5fe439613f9c4e259015951594c423dc__edit_enablement"/>
+
+## Edit Enablement
 
 As shown in the sample annotation above, the `UpdateRestrictions` are completely ignored. Instead, `OperationAvailable` determines the enablement of the button. For more information about `OperationAvailable`, see the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) section in [Actions](actions-cbf16c5.md).
 
@@ -267,7 +214,7 @@ As shown in the sample annotation above, the `UpdateRestrictions` are completely
 
 
 
-### Custom Global Actions
+## Custom Global Actions
 
 Applications can define their own global actions. The actions defined under the unqualified `UI.Identification`, that are not set to `determining=true`, are considered global actions and rendered next to the standard actions in the header. The object page context is passed to the action if the action is configured as a bound action or as a `DataFieldForIBN`. For an unbound action, no context is passed. For information about custom annotation actions, see [Setting the Criticality for Actions](setting-the-criticality-for-actions-12f2ba2.md) and [Actions](actions-cbf16c5.md).
 
@@ -361,7 +308,7 @@ The `UI.DataFieldForAction` can be bound or unbound actions. For more informatio
 **Related Information**  
 
 
-[Displaying Actions on the Object Page](displaying-actions-on-the-object-page-f65e8b1.md)
+[Displaying Actions on the Object Page](displaying-actions-on-the-object-page-f65e8b1.md "Specific rules apply when displaying actions on the object page.")
 
 [Actions](actions-cbf16c5.md "You can use generic actions provided by SAP Fiori elements and implement application-specific actions using annotations or extension points.")
 

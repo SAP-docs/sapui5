@@ -2,6 +2,8 @@
 
 # The `TreeTable` Building Block
 
+You can use the `TreeTable` building block to create tables with hierarchical data.
+
 You can use the `TreeTable` building block to avoid exposing parameters that are specific to tree tables in the main `Table` building block.
 
 > ### Sample Code:  

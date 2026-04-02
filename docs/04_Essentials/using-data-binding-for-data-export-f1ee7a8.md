@@ -123,7 +123,7 @@ oExport.saveFile().always(function() {
 
 ## Export Types
 
-You can use the CSV export type out of the box, or define other export types. The concept is similar to custom notepad controls, see [Developing Controls](../09_Developing_Controls/developing-controls-8dcab00.md). The generate method is called and should return the created file as a string.
+You can use the CSV export type out of the box, or define other export types. The concept is similar to custom controls, see [Developing Controls](../09_Developing_Controls/developing-controls-8dcab00.md). The generate method is called and should return the created file as a string.
 
 > ### Note:  
 > Make sure that all values are encoded or escaped properly.

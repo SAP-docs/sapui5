@@ -2,7 +2,12 @@
 
 # Confirmation Popups
 
-You can configure confirmation popups for various use cases in list reports and object pages.
+You can configure confirmation popups for various list report page and object page use cases.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Confirmation Popups](confirmation-popups-9a53662.md).
 
 
 
@@ -33,7 +38,7 @@ When end users create or edit an object page in a draft-enabled application and 
 ![](images/Confirmation_Popup_for_Discard_Draft_-_Edit_Mode_b43cd41.png "Edit Mode")
 
 > ### Tip:  
-> The popup is enabled by default. You can disable it for external navigation by configuring specific settings in the `manifest.json` file. For more information, see the version-specific sections in this topic.
+> The popup is enabled by default. You can disable it for external navigation by configuring specific settings in the `manifest.json` file.
 
 
 
@@ -79,7 +84,7 @@ The flow is as follows:
 
 -   If end users choose *Confirm*, the application sends the request again, this time **without** `Prefer:handling=strict` in the header.
 
--   The back end executes the action and responds with either a success or a failure message. If it sends the same message again, it is suppressed and not shown on the UI. For more information, see the version-specific sections.
+-   The back end executes the action and responds with either a success or a failure message. If it sends the same message again, it is suppressed and not shown on the UI.
 
 -   If end users choose *Cancel*, the operation is terminated.
 
@@ -113,17 +118,15 @@ You can turn off the confirmation popup for draft activation in the case of exte
 > `manifest.json`
 > 
 > ```
+> 
 > "sap.ui.generic.app": {
->               "_version": "1.3.0",
->               "settings": {
->                              "draftDiscardConfirmationSettings": {
->                                            "enabled": "restricted"
->                              }
->               }
+>     "settings": {
+>         "draftDiscardConfirmationSettings": {
+>             "enabled": "restricted"
+>         }
+>     }
 > }
-> .
-> .
-> .
+> 
 > ```
 
 
@@ -143,28 +146,29 @@ To enable this popup, in the `manifest.json` file, under the object page setting
 > `manifest.json`
 > 
 > ```
+> 
 > "pages": {
->               "ObjectPage|STTA_C_MP_Product": {
->                              "entitySet": "STTA_C_MP_Product",
->                              "component": {
->                                            "name": "sap.suite.ui.generic.template.ObjectPage",
->                                            "settings": {
->                                                           "showRelatedApps": true,
->                                                           "tableType": "ResponsiveTable",
->                                                           "editableHeaderContent": true,
->                                                           "showConfirmationOnDraftActivate": true,
->                                                           "sections": {
->                                                                         "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
->                                                                                       "navigationProperty": "to_ProductText",
->                                                                                       "entitySet": "STTA_C_MP_ProductText",
->                                                                                       "multiSelect": true,
->                                                                                       "createMode": "inline",
->                                                                                       "tableType": "ResponsiveTable"
->                                                                         }
->                                                           }
->                                            }
->                              }
->               }
+>     "ObjectPage|STTA_C_MP_Product": {
+>         "entitySet": "STTA_C_MP_Product",
+>         "component": {
+>             "name": "sap.suite.ui.generic.template.ObjectPage",
+>             "settings": {
+>                 "showRelatedApps": true,
+>                 "tableType": "ResponsiveTable",
+>                 "editableHeaderContent": true,
+>                 "showConfirmationOnDraftActivate": true,
+>                 "sections": {
+>                     "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
+>                         "navigationProperty": "to_ProductText",
+>                         "entitySet": "STTA_C_MP_ProductText",
+>                         "multiSelect": true,
+>                         "createMode": "inline",
+>                         "tableType": "ResponsiveTable"
+>                     }
+>                 }
+>             }
+>         }
+>     }
 > }
 > 
 > ```

@@ -6,6 +6,11 @@ You can configure various properties of a list card header.
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring the List Card Header Area](configuring-the-list-card-header-area-9f95bdc.md).
+
+
+
 <a name="loio72b532348c234e56aab5e15c0c074fc6__section_y32_pmc_mfc"/>
 
 ## Card Title and Subtitle
@@ -17,25 +22,24 @@ You can configure the title and subtitle of a list card in the `manifest.json` f
 > 
 > ```
 > "sap.ovp": {
-> 		"globalFilterModel": "salesOrder",
-> 		"globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
->                 "globalFilterEntitySet": "GlobalFilters",  //Available from SAPUI5 1.54.
->               ...
->               ...
-> 		"cards": {
->           "sap.ovp.test_card.card002": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntitySet": "GlobalFilters",
+>     ...
+>     ...
+>     "cards": {
+>         "sap.ovp.test_card.card002": {
 >             "model": "salesOrder",
 >             "template": "sap.ovp.cards.list",
 >             "settings": {
->               "title": "Purchase History",
->               "subTitle": "SubTitle",
->               "entitySet": "SalesOrderSet",
->               ...
->               ...
->                 }
->               ]
+>                 "title": "Purchase History",
+>                 "subTitle": "SubTitle",
+>                 "entitySet": "SalesOrderSet",
+>                 ...
+>                 ...
 >             }
 >         }
+>     }
+> }
 > ```
 
 

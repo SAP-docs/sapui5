@@ -2,7 +2,10 @@
 
 # Refresh Entity Sets in `sap-keep-alive` Mode
 
-`sap-keep-alive` is an SAP Fiori launchpad feature that ensures that a view is not destroyed in the view cache when navigating away from the application.
+You can use the `sap-keep-alive` feature to ensure that a view persists in the view cache when navigating away from the application.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Refresh Entity Sets in sap-keep-alive Mode](refresh-entity-sets-in-sap-keep-alive-mode-3c65f2c.md).
 
 The feature ensures improved performance when you reload the same view again once you navigate back to the application. For more information, see [Keeping SAPUI5 Apps Alive](https://help.sap.com/viewer/a7b390faab1140c087b8926571e942b7/202009.002/en-US/921e7e2e45494f9a87ae70624155fd7c.html).
 
@@ -73,46 +76,40 @@ To switch the refresh off, the `entitySets` parameter must be empty. Otherwise, 
 > `manifest.json`
 > 
 > ```
+> 
 > "sap.app": {
-> 	...
-> 	"crossNavigation": {
-> 		"outbounds": {
-> 			"<OutboundTarget>": {
-> 				"semanticObject": "<SemanticObject>",
-> 				"action": "<Action>"
-> 			}
-> 		}
-> 	}
-> }
-> 
-> ....
-> ....
-> 
+>     "crossNavigation": {
+>         "outbounds": {
+>             "<OutboundTarget>": {
+>                 "semanticObject": "<SemanticObject>",
+>                 "action": "<Action>"
+>             }
+>         }
+>     }
+> },
 > "sap.ui.generic.app": {
-> 	...
-> 	"pages": {
-> 			"ListReport|<ListReportEntitySet>": {
-> 				...
-> 				"pages": {
-> 					"ObjectPage|<ObjectPageEntitySet>": {
-> 						...
-> 						"navigation": {
-> 							"display": {
-> 								"path": "sap.apps.crossNavigation.outbounds",
-> 								"target": "<OutboundTarget>",
-> 								"refreshStrategyOnAppRestore": {
-> 									"entitySets": {			
-> 										"<EntitySetToRefresh>": "<self/includingDependents>",
-> 										"<AnotherEntitySetToRefresh>": "<self/includingDependents>"
-> 									}
-> 								}
-> 							}
-> 						}
-> 					}
-> 				}
-> 			}
-> 		}
+>     "pages": {
+>         "ListReport|<ListReportEntitySet>": {
+>             "pages": {
+>                 "ObjectPage|<ObjectPageEntitySet>": {
+>                     "navigation": {
+>                         "display": {
+>                             "path": "sap.apps.crossNavigation.outbounds",
+>                             "target": "<OutboundTarget>",
+>                             "refreshStrategyOnAppRestore": {
+>                                 "entitySets": {
+>                                     "<EntitySetToRefresh>": "<self/includingDependents>",
+>                                     "<AnotherEntitySetToRefresh>": "<self/includingDependents>"
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
 > }
+> 
 > ```
 
 
@@ -127,64 +124,58 @@ The following sample code shows you how to configure `manifest.json` to define r
 > `manifest.json`
 > 
 > ```
-> "sap.app": {
->    ...
->    "crossNavigation": {
->       "outbounds": {
->          "<OutboundTarget1>": {
->             "semanticObject": "<SemanticObject1>",
->             "action": "<Action1>"
->          },
->          "<OutboundTarget2>": {
->             "semanticObject": "<SemanticObject2>",
->             "action": "<Action2>"
->          }
->       }
->    }
-> }
 > 
-> ....
-> ....
+> "sap.app": {
+>     "crossNavigation": {
+>         "outbounds": {
+>             "<OutboundTarget1>": {
+>                 "semanticObject": "<SemanticObject1>",
+>                 "action": "<Action1>"
+>             },
+>             "<OutboundTarget2>": {
+>                 "semanticObject": "<SemanticObject2>",
+>                 "action": "<Action2>"
+>             }
+>         }
+>     }
+> }
 > ```
 > 
 > ```
 > 
 > 
 > "sap.ui.generic.app": {
->       "_version": "1.3.0",
->       "settings": {
->          "externalNavigationSettings": {
+>     "settings": {
+>         "externalNavigationSettings": {
 >             "defaultOutboundSettings": {
->                "refreshStrategyOnAppRestore": {
->                   "entitySets": {
->                      "<EntitySetToRefresh>": "<self/includingDependents>",
->                      "<AnotherEntitySetToRefresh>": "<self/includingDependents>"
->                   }
->                }
+>                 "refreshStrategyOnAppRestore": {
+>                     "entitySets": {
+>                         "<EntitySetToRefresh>": "<self/includingDependents>",
+>                         "<AnotherEntitySetToRefresh>": "<self/includingDependents>"
+>                     }
+>                 }
 >             },
 >             "outbounds": {
->                "<OutboundTarget1>": {
->                   "refreshStrategyOnAppRestore": {
->                      "entitySets": {
->                         "<EntitySetToRefresh>": "<self/includingDependents>",
->                         "<AnotherEntitySetToRefresh>": "<self/includingDependents>"
->                      }
->                   }
->                },
->                "<OutboundTarget2>": {
->                   "refreshStrategyOnAppRestore": {
->                      "entitySets": {
->                         "<EntitySetToRefresh>": "<self/includingDependents>",
->                         "<AnotherEntitySetToRefresh>": "<self/includingDependents>"
->                      }
->                   }
->                }
+>                 "<OutboundTarget1>": {
+>                     "refreshStrategyOnAppRestore": {
+>                         "entitySets": {
+>                             "<EntitySetToRefresh>": "<self/includingDependents>",
+>                             "<AnotherEntitySetToRefresh>": "<self/includingDependents>"
+>                         }
+>                     }
+>                 },
+>                 "<OutboundTarget2>": {
+>                     "refreshStrategyOnAppRestore": {
+>                         "entitySets": {
+>                             "<EntitySetToRefresh>": "<self/includingDependents>",
+>                             "<AnotherEntitySetToRefresh>": "<self/includingDependents>"
+>                         }
+>                     }
+>                 }
 >             }
->          }
->       }
->       ...
->       ...
->    }
+>         }
+>     }
+> }
 > 
 > ```
 
@@ -251,7 +242,7 @@ The following sample code shows you how to use extensions to navigate back to th
 > ```
 
 > ### Note:  
-> If the back-end service isn't ETag enabled, and the table in List Report is configured to be refreshed in Flexible Column Layout mode, the refresh is triggered for all of the table's entity set dependents. To avoid this, enable ETag for your back-end service.
+> If the back-end service isn't ETag enabled, and the table on the list report page is configured to be refreshed in Flexible Column Layout mode, the refresh is triggered for all of the table's entity set dependents. To avoid this, enable ETag for your back-end service.
 
 
 
@@ -281,5 +272,5 @@ The following sample code shows you a `stStart` function of a reuse component wh
 **Related Information**  
 
 
-[Refresh Data Set for Back Navigation when `sap-keep-alive` is Set to True](refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-0c41fcd.md "When sap-keep-alive is set to true, and the user navigates from one application to another, modifies some common data and navigates back to the source app, the data isn't refreshed automatically. You can add a custom code to perform a refresh of specific data.")
+[Refresh Data Set for Back Navigation when `sap-keep-alive` is Set to True](refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-0c41fcd.md "You can add a custom code to perform a refresh of specific data.")
 

@@ -2,9 +2,9 @@
 
 # Line Micro Chart
 
-A line chart is a basic type of chart used in many fields.
+You can render the micro chart as a line micro chart.
 
-It displays information as a series of data points connected by a line.
+The line chart displays information as a series of data points connected by a line.
 
 ![](images/Line_Micro_Chart_f99a0bc.png)
 
@@ -15,7 +15,7 @@ In the chart, the values at the bottom \(10 and 70\) represent the dimension val
 > 
 > -   Ensure that the dimension values linked to the chart either have a float-based field or the current values can be cast to float values.
 
-The dimension values can also have string-based fields if they are annotated to denote calendar values. For more information about the sample code, see the [Additional Features in SAP Fiori Elements for OData V4](line-micro-chart-e5cb2af.md#loioe5cb2afe0e484e4b803b0c82190895de__section_wv2_2sg_rwb) section in this topic.
+The dimension values can also have string-based fields if they are annotated to denote calendar values.
 
 For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.LineMicroChart).
 
@@ -227,11 +227,7 @@ The following annotations are mandatory and must be used in the line micro chart
 
 <a name="loioe5cb2afe0e484e4b803b0c82190895de__section_wv2_2sg_rwb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Support for String-Based Dimension Fields Annotated to Denote Time Period
+## Support for String-Based Dimension Fields Annotated to Denote Time Period
 
 Line micro charts can have string-based dimension fields annotated with any of the following:
 

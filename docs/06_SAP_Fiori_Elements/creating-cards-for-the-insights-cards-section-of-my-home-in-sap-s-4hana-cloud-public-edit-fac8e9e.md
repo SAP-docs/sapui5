@@ -2,20 +2,25 @@
 
 # Creating Cards for the Insights Cards Section of **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA
 
-An option for tables in the list report or charts in the analytical list page allows end users to create cards that can be added to the *Insights* section of **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA.
+Users can add insights cards in *My Home*.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA Cloud Public Edition and My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-cloud-public-edit-9b13559.md).
+
+In tables on the list report page or in charts on the analytical list page, users can create cards that can be added to the *Insights* section of **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA.
 
 **Prerequisites**
 
 The administrator must enable **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA to create and add cards.
 
-Once **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA is enabled, the *Add Card to Insights* option automatically appears in the overflow toolbar of the table in list report applications and the overflow toolbar of the chart in analytical list page applications.
+Once **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA is enabled, the *Add Card to Insights* option automatically appears in the overflow toolbar of the table in list report page applications and the overflow toolbar of the chart in analytical list page applications.
 
   
   
-**Add Card to Insights Option in the Table Toolbar of List Report**
+**Add Card to Insights Option in the Table Toolbar of List Report Page**
 
-![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in the Table Toolbar of List
-				Report ")
+![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in the Table Toolbar of List Report
+				Page")
 
   
   
@@ -45,9 +50,11 @@ Once **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4H
 
 Application developers can hide the *Add Card to Insights* option from the overflow toolbar by configuring specific settings in the `manifest.json` file.
 
-Using the `manifest.json`, list report applications can choose to hide this feature by setting the `addCardtoInsightsHidden` property within `tableSettings` to `true`, as displayed in the following sample code:
+Using the `manifest.json`, list report page applications can choose to hide this feature by setting the `addCardtoInsightsHidden` property within `tableSettings` to `true`, as displayed in the following sample code:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "sap.ui.generic.app": {
 >     "pages": [{
@@ -68,6 +75,8 @@ Using the `manifest.json`, list report applications can choose to hide this feat
 Similarly, using the `manifest.json`, analytical list page applications can choose to hide this feature by setting the `addCardtoInsightsHidden` property within `chartSettings` to `true`, as displayed in the following sample code:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "sap.ui.generic.app": {
 >     "pages": [{

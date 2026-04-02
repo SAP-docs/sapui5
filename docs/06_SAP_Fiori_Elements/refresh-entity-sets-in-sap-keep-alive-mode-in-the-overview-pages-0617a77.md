@@ -2,7 +2,10 @@
 
 # Refresh Entity Sets in `sap-keep-alive` Mode in the Overview Pages
 
-The `sap-keep-alive` feature in SAP Fiori launchpad ensures that a view is not destroyed in the view cache when navigating away from the source application.
+You can use the `sap-keep-alive` feature in SAP Fiori launchpad to ensure that a view is not destroyed in the view cache when navigating away from the source app.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Refresh Entity Sets in sap-keep-alive Mode in the Overview Pages](refresh-entity-sets-in-sap-keep-alive-mode-in-the-overview-pages-0c35c87.md).
 
 This feature enhances performance by preserving the view state, allowing the same view to reload upon returning to the source application.
 
@@ -16,8 +19,7 @@ In the following sample code, the entity set `self` is automatically refreshed w
 > ```
 > "sap.ovp": {
 >         "globalFilterModel": "salesOrder",
->         "globalFilterEntityType": "GlobalFilters",//Represents the entity used as a global filter in the smart filter bar control. Deprecated since SAPUI5 1.54.
->         "globalFilterEntitySet": "ZFilterEntitySet", //Represents the entity set used as a global filter in the smart filter bar control. Available from SAPUI5 1.54 onwards.
+>         "globalFilterEntitySet": "ZFilterEntitySet", //Represents the entity set used as a global filter in the smart filter bar control. 
 >         "smartVariantRequired": true,
 >         "enableLiveFilter": true,
 >         "containerLayout": "resizable",

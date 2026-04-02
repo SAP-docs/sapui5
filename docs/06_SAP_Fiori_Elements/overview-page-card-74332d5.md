@@ -2,7 +2,7 @@
 
 # Overview Page Card
 
-A card is a smart component that uses UI annotation to render its content. It contains a header area and a footer area.
+Cards are components that use UI annotation to render their content. They contain a header area and a footer area.
 
 
 
@@ -11,6 +11,10 @@ Each card is bound to a single entity set in a data source, and its configuratio
 The card ID is the property name, and the card configuration is provided as a value in the object. At runtime, the cards are displayed in the order that they appear in the application descriptor.
 
 For more information on cards and its areas, see [Card](https://experience.sap.com/fiori-design-web/cards/).
+
+
+
+Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
 
 
 
@@ -30,14 +34,12 @@ The `title` property is mandatory. The `subTitle` is only mandatory if the card 
 > 
 > ```
 > "sap.ovp": {
->     "_version": "1.1.0",
 >     "globalFilterModel": "ZCD204_EPM_DEMO_SRV",
->     "globalFilterEntityType": "SalesOrder", // Deprecated since SAPUI5 1.54.
->     "globalFilterEntitySet": "SalesOrder", // Available from SAPUI5 1.54 onwards.
+>     "globalFilterEntitySet": "SalesOrder",
 >     "cards": {
 >         "card00": {
 >             "model": "ZCD204_EPM_DEMO_SRV",
->             "template": "sap.ovp.cards.stack",
+>             "template": "sap.ovp.cards.v4.stack",
 >             "settings": {
 >                 // Additional settings can be placed here
 >                 "category": "{{card00_category}}",
@@ -48,7 +50,7 @@ The `title` property is mandatory. The `subTitle` is only mandatory if the card 
 >         },
 >         "card01": {
 >             "model": "ZCD204_EPM_DEMO_SRV",
->             "template": "sap.ovp.cards.table",
+>             "template": "sap.ovp.cards.v4.table",
 >             "settings": {
 >                 "title": "{{card01_category}}"
 >                 // Additional settings can be placed here
@@ -89,7 +91,7 @@ These annotation terms can be configured in the `manifest.json` file, as shown i
 >         ...
 >         "card02": {
 >             "model": "ZCD204_EPM_DEMO_SRV",
->             "template": "sap.ovp.cards.charts.bubble",
+>             "template": "sap.ovp.cards.v4.charts.bubble",
 >             "settings": {
 >                 "entitySet": "SalesOrders",
 >                 "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#bubble",
@@ -143,7 +145,7 @@ You can also restrict the generation of individual analytical, list, and table c
 > ```
 > "card01": {
 >     "model": "MODEL",
->     "template": "sap.ovp.cards.charts.analytical",
+>     "template": "sap.ovp.cards.v4.charts.analytical",
 >     "settings": {
 >         "title": "{{card01_title}}",
 >         "subTitle": "{{card01_subTitle}}",

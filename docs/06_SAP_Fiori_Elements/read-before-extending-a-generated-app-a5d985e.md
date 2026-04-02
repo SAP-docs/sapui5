@@ -2,7 +2,10 @@
 
 # Read Before Extending a Generated App
 
-Before you start creating an extension for your app, make sure you have read the information provided in this topic.
+Review the extension guidelines before modifying your SAP Fiori elements app.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Read Before Extending a Generated App](read-before-extending-a-generated-app-d9c146a.md).
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).
@@ -30,7 +33,7 @@ In extension coding, you can use the standard SAPUI5 programming API. However, y
 
 Make sure you do not use the following:
 
--   Services provided by the namespace `sap.ui.generic.app` or `sap.fe.navigation`, since these services are intended for use only by freestyle SAPUI5 apps or within the generic list report and object page and analytical list page template implementation.
+-   Services provided by the namespace `sap.ui.generic.app` or `sap.fe.navigation`, since these services are intended for use only by freestyle SAPUI5 apps or within the generic list report page, object page, and analytical list page template implementation.
 -   Services provided directly by the namespace `sap.ui.generic.template`. Unwanted side effects may occur if two layers \(template coding and extension coding\) access these services at the same time.
 
 After you have defined a view extension, you can access and modify the properties of all UI elements defined within these extensions \(such as changing the visibility\). You can access the elements you have created by their ID. However, you must not access any UI elements that are not defined within your view extensions.
@@ -48,7 +51,7 @@ Access the model \(through the standard SAPUI5 API methods\) with care, since si
 
 This applies in particular to function imports. Therefore, use method `invokeActions` of the extension API to call function imports.
 
-Several models \(instances of `sap.ui.model.Model`\) are attached to the list report and object page, and analytical list page template artifacts.
+Several models \(instances of `sap.ui.model.Model`\) are attached to the list report page and object page, and analytical list page template artifacts.
 
 -   **OData Model** 
 

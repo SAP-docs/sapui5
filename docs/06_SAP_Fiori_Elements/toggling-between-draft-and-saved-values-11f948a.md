@@ -4,9 +4,12 @@
 
 You can toggle between draft and saved values.
 
-The draft-enabled applications have an additional entry, *All \(Hiding Drafts\)*, in the *Editing Status* filter field in the list report.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-fd3950a.md).
 
-The following table shows the system behavior for the list report and object page:
+The draft-enabled applications have an additional entry, *All \(Hiding Drafts\)*, in the *Editing Status* filter field on the list report page.
+
+The following table shows the system behavior for the list report page and object page:
 
 ****
 
@@ -15,12 +18,12 @@ The following table shows the system behavior for the list report and object pag
 <tr>
 <th valign="top">
 
-Editing Status Filter in List Report
+Editing Status Filter on List Report Page
 
 </th>
 <th valign="top">
 
-In a List Report
+On a List Report Page
 
 </th>
 <th valign="top">
@@ -30,7 +33,7 @@ While Navigating to an Object Page
 </th>
 <th valign="top">
 
-Navigating back to a List Report
+Navigating back to a List Report Page
 
 </th>
 </tr>
@@ -42,7 +45,7 @@ Navigating back to a List Report
 </td>
 <td valign="top">
 
-Only the saved objects with their respective data are displayed in the list report table
+Only the saved objects with their respective data are displayed in the list report page table
 
 </td>
 <td valign="top">
@@ -52,7 +55,7 @@ Saved object is displayed with a *Return to Draft* button if a draft exists for 
 </td>
 <td valign="top">
 
-Only the saved objects with their respective data are displayed in the list report table
+Only the saved objects with their respective data are displayed in the list report page table
 
 </td>
 </tr>
@@ -76,5 +79,5 @@ In the following screenshot, the object page displays the *Saved Version*:
 **Related Information**  
 
 
-[Draft Handling](draft-handling-b0eb3cc.md "A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements supports the creation of apps using draft handling.")
+[Draft Handling](draft-handling-b0eb3cc.md "You can configure how your SAP Fiori elements app handles drafts.")
 

@@ -2,7 +2,9 @@
 
 # Enabling the Related Apps Button
 
-By default, the *Related Apps* button is disabled on object pages created with the object page template. If you want, you can enable this button, which allows you to provide a link to any of the semantic object's navigation targets.
+You can enable the *Related Apps* button on the object page.
+
+When enabled, the button allows you to provide a link to any of the semantic object's navigation targets. By default, the *Related Apps* button is disabled on object pages created with the object page template.
 
   
   
@@ -12,7 +14,31 @@ By default, the *Related Apps* button is disabled on object pages created with t
 
 The *Related Apps* button is displayed on the object page if you set the `showRelatedApps` parameter to `true` in the `manifest.json` file.
 
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "SalesOrderManageObjectPage":{
+>    "type": "Component",
+>    "id": "SalesOrderManageObjectPage",
+>    "name": "sap.fe.templates.ObjectPage",
+>    "options":{
+>       "settings":{
+>          ...
+>          ...
+>          "showRelatedApps": true,
+>          ...
+>          ...
+>       }
+>    }
+> }
+> 
+> ```
+
 If a user chooses this button, the navigation targets of the given semantic object are displayed. The semantic object is taken from the app that's currently open \(see the hash in the app's URL\). Apps with the same semantic object but different actions are shown in the popover.
+
+> ### Note:  
+> When making a call to the SAP Fiori launchpad to determine the related apps through the `GetLinks` API, SAP Fiori elements passes all the semantic keys if they are available. If not all semantic keys are available, then SAP Fiori elements passes all the technical keys.
 
 
 
@@ -61,296 +87,7 @@ For example, you can hide the `displayFactSheet` action associated with related 
 
 ## Adding Additional Links to Related Apps
 
-You can add additional links under the "Related Apps" button of the object page header. The links originate from the additional semantic objects defined in the `manifest.json` file.
-
-> ### Note:  
-> Links from additional semantic objects are only considered if you have set the `showRelatedApps` parameter to `true` in the `manifest.json` file.
-
-
-
-<a name="loio8dcfe2e4555f49db8859cb6eb838692e__section_app_rdd_dmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-The *Related Apps* button is displayed on the object page if you set the `showRelatedApps` parameter to `true` in the `manifest.json` file as shown in the following sample code:
-
-```js
-{
-  "sap.ui.generic.app": {
-    "pages": [
-      {
-        "entitySet": "SEPMRA_C_PD_Product",
-        "component": {
-          "name": "sap.suite.ui.generic.template.ListReport",
-          "list": true
-        },
-        "pages": [
-          {
-            "entitySet": "SEPMRA_C_PD_Product",
-            "component": {
-              "name": "sap.suite.ui.generic.template.ObjectPage",
-              "settings": {
-                "showRelatedApps": true
-              }
-            },
-            "pages": [
-              {
-                "navigationProperty": "to_ProductText",
-                "entitySet": "SEPMRA_C_PD_ProductText",
-                "component": {
-                  "name": "sap.suite.ui.generic.template.ObjectPage"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-}
-```
-
-
-
-### Adding Semantic Objects as Related Apps
-
-You can define multiple semantic objects in the `manifest.json` file that are displayed under the *Related Apps* button.
-
-You can configure the `relatedAppsSettings` parameter in the `manifiest.json` file as shown in the following sample code:
-
-> ### Sample Code:  
-> ```
-> 
-> {
->   "sap.ui.generic.app": {
->     "pages": [
->       {
->         "entitySet": "SEPMRA_C_PD_Product",
->         "component": {
->           "name": "sap.suite.ui.generic.template.ListReport",
->           "list": true
->         },
->         "pages": [
->           {
->             "entitySet": "SEPMRA_C_PD_Product",
->             "component": {
->               "name": "sap.suite.ui.generic.template.ObjectPage",
->               "settings": {
->                 "showRelatedApps": true,
->                 "relatedAppsSettings": {
->                   "0": {
->                     "semanticObject": "EPMProduct"
->                   }
->                 }
->               }
->             },
->             "pages": [
->               {
->                 "navigationProperty": "to_ProductText",
->                 "entitySet": "SEPMRA_C_PD_ProductText",
->                 "component": {
->                   "name": "sap.suite.ui.generic.template.ObjectPage"
->                 }
->               }
->             ]
->           }
->         ]
->       }
->     ]
->   }
-> }
-> ```
-
-With this setting, all related apps from the app's URL and from the `manifest.json` file are displayed on the UI under the *Related Apps* button.
-
-
-
-### Adding Semantic Objects with Required Action on Related App Settings
-
-As shown in the previous subsection of this topic, you can define multiple semantic objects in the `manifest.json` file that are displayed under the *Related Apps* button. See the following sample code:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> 
-> {
->   "sap.ui.generic.app": {
->     "pages": [
->       {
->         "entitySet": "SEPMRA_C_PD_Product",
->         "component": {
->           "name": "sap.suite.ui.generic.template.ListReport"
->         },
->         "pages": [
->           {
->             "entitySet": "SEPMRA_C_PD_Product",
->             "component": {
->               "name": "sap.suite.ui.generic.template.ObjectPage",
->               "relatedAppsSettings": {                
->                 "EPMProduct": {
->                   "semanticObject": "EPMProduct"
->                 },
->                 "STTA_WD20": {
->                   "semanticObject": "STTA_WD20",
->                   "semanticObjectAction": {
->                     "0": {
->                       "action": "Multi_View"
->                     },
->                     "1": {
->                       "action": "Tree_Table"
->                     }
->                   }
->                 }
->               }
->             }
->           }
->         ]
->       }
->     ]
->   }
-> }
-> ```
-
-You must ensure that you define the same semantic object list object-key and there corresponding `semanticObject` value.
-
-In the code sample for `"semanticObject" : "EPMProduct"`, `semanticObjectAction` is not defined. In this case, all the `semanticObjectAction`, excluding the ones with `SemanticObjectUnavailableActions` annotation, are displayed in the related apps list.
-
-If the `semanticObjectAction` list is defined in the `manifest.json` file as shown for `"semanticObject": "STTA_WD20"`, then only the ones defined in the list are shown in the related apps list. In this case, the `SemanticObjectUnavailableActions` annotation is not considered.
-
-If the `semanticObjectAction` list is defined in the `manifest.json` file as an empty object, such as `"semanticObjectAction":{}` provided in the sample code, then no action from the semantic object of the current application is considered.
-
-
-
-### Overriding Related App Settings with Extension API
-
-If the same project is deployed under multiple semantic objects or actions, and the application needs to display related apps based on the deployed semantics environment, you can override the related app settings using `modifyRelatedAppsSettings` extension API in the `manifest.json` file.
-
-See the following sample code about modifying related app settings based on the deployed semantic environment:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> 
-> modifyRelatedAppsSettings: function (oRelatedAppSetting, sCurrentSemanticObject, sEntityTypeName) {
->     if (sCurrentSemanticObject === "EPMProduct") {
->         oRelatedAppSetting = {
->             ...oRelatedAppSetting,
->             // adding additional semantic object and action to the existing related app settings.
->             "EPMSalesOrder": {
->                 semanticObject: "EPMSalesOrder",
->                 semanticObjectAction: {
->                     0: {
->                         action: "display"
->                     }
->                 }
-> 			}
->         }
->     }
->     return oRelatedAppSetting;
-> }
-> 
-> ```
-
-
-
-<a name="loio8dcfe2e4555f49db8859cb6eb838692e__section_lnm_5bx_4lb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-You can enable this feature through the following settings in the `manifest.json` file.
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "SalesOrderManageObjectPage":{
->    "type": "Component",
->    "id": "SalesOrderManageObjectPage",
->    "name": "sap.fe.templates.ObjectPage",
->    "options":{
->       "settings":{
->          ...
->          ...
->          "showRelatedApps": true,
->          ...
->          ...
->       }
->    }
-> }
-> 
-> ```
-
-> ### Note:  
-> When making a call to the SAP Fiori launchpad to determine the related apps through the `GetLinks` API, SAP Fiori elements passes all the semantic keys if they are available. If not all semantic keys are available, then SAP Fiori elements passes all the technical keys.
-
-
-
-### Supporting the Mapping of Default Links in Related Apps
-
-When working with default links, if the technical field name of the field on the object page and the corresponding field in the target app differ, application developers can define a mapping between these fields. This mapping enables passing the context between these fields, even though their technical field names are different.
-
-To create this mapping, you can use `Common.SemanticObject` and `Common.SemanticObjectMapping` annotation as shown in the following sample codes:
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage">
->     <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
->     <Annotation Term="Common.SemanticObjectMapping">
->         <Collection>
->             <Record Type="Common.SemanticObjectMappingType">
->                 <PropertyValue Property="LocalProperty" PropertyPath="SoldToParty"/>
->                 <PropertyValue Property="SemanticObjectProperty" String="Customer"/>
->             </Record>
->         </Collection>
->     </Annotation>
-> </Annotations>
-> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```xml
-> 
-> annotate view SalesOrderManage with {
->    @Consumption.semanticObject: 'SalesOrder'
->    @Consumption.semanticObjectMapping.additionalBinding: [{element: 'Customer', localElement: 'SoldToParty'}]
->    Customer
-> }
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```xml
-> entity SalesOrderManage
-> @(
->   Common: {
->     SemanticObject: 'SalesOrder',
->     SemanticObjectMapping: [
->       {
->         LocalProperty: SoldToParty,
->         SemanticObjectProperty: 'Customer'
->       }
->     ]
->   }
-> )
-> ```
-
-> ### Note:  
-> You mustn't define a mapping between the fields on the object page and the additional links added through the `additionalSemanticObjects` property in the `manifest.json` file.
-> 
-> To map to these additional links, use the manifest settings as provided in the following section of this topic.
-
-
-
-### Adding Additional Links to Related Apps
-
-Application developers can add additional links under the *Related Apps* button of the object page header. The links originate from the additional semantic objects defined in the `manifest.json` file, as shown in the following example:
+You can add additional links under the *Related Apps* button of the object page header. The links originate from the additional semantic objects defined in the `manifest.json` file, as shown in the following example:
 
 ```json
 "SalesOrderManageObjectPage": {
@@ -421,9 +158,74 @@ You can also use the `allowedActions` key in the `manifest.json` file to define 
 In this example, three application links appear in the *Related Apps* menu.
 
 > ### Note:  
+> -   Links from additional semantic objects are only considered if you have set the `showRelatedApps` parameter to `true` in the `manifest.json` file.
+> 
 > -   When you use the `allowedActions` key, the `unavailableActions` key is ignored.
 > 
 > -   If you do not list any links under `allowedActions`, no applications for the semantic objects are shown under the *Related Apps* button.
+
+
+
+<a name="loio8dcfe2e4555f49db8859cb6eb838692e__section_lnm_5bx_4lb"/>
+
+## Supporting the Mapping of Default Links in Related Apps
+
+When working with default links, if the technical field name of the field on the object page and the corresponding field in the target app differ, application developers can define a mapping between these fields. This mapping enables passing the context between these fields, even though their technical field names are different.
+
+To create this mapping, you can use `Common.SemanticObject` and `Common.SemanticObjectMapping` annotation as shown in the following sample codes:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage">
+>     <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+>     <Annotation Term="Common.SemanticObjectMapping">
+>         <Collection>
+>             <Record Type="Common.SemanticObjectMappingType">
+>                 <PropertyValue Property="LocalProperty" PropertyPath="SoldToParty"/>
+>                 <PropertyValue Property="SemanticObjectProperty" String="Customer"/>
+>             </Record>
+>         </Collection>
+>     </Annotation>
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```xml
+> 
+> annotate view SalesOrderManage with {
+>    @Consumption.semanticObject: 'SalesOrder'
+>    @Consumption.semanticObjectMapping.additionalBinding: [{element: 'Customer', localElement: 'SoldToParty'}]
+>    Customer
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```xml
+> entity SalesOrderManage
+> @(
+>   Common: {
+>     SemanticObject: 'SalesOrder',
+>     SemanticObjectMapping: [
+>       {
+>         LocalProperty: SoldToParty,
+>         SemanticObjectProperty: 'Customer'
+>       }
+>     ]
+>   }
+> )
+> ```
+
+> ### Note:  
+> You mustn't define a mapping between the fields on the object page and the additional links added through the `additionalSemanticObjects` property in the `manifest.json` file.
+> 
+> To map to these additional links, use the manifest settings as provided in the following section of this topic.
 
 
 

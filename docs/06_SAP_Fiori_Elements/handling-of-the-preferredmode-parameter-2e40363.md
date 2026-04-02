@@ -2,12 +2,15 @@
 
 # Handling of the `preferredMode` Parameter
 
-Applications can configure the mode in which the object page is initially launched using the `preferredMode` parameter.
+You can use the `preferredMode` parameter to configure the mode in which the object page is initially launched.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md).
 
 The `preferredMode` parameter supports multiple values that allow you to specify the mode in which the object page is launched.
 
 > ### Note:  
-> If no object page is defined in the `manifest.json` file of the target app, or if the \(usually internal\) navigation to the object page is overridden by external navigation, the list report is shown.
+> If no object page is defined in the `manifest.json` file of the target app, or if the \(usually internal\) navigation to the object page is overridden by external navigation, the list report page is shown.
 > 
 > In this case, the information described in this topic does not apply.
 
@@ -17,7 +20,7 @@ The `preferredMode` parameter supports multiple values that allow you to specify
 
 ## Using the `preferredMode=create` Parameter
 
-You can configure the list report and object page applications in the SAP Fiori launchpad with a start-up parameter `preferredMode=create`. When you launch the application from the tile, the list report and object page load directly in create mode.
+You can configure the list report page and object page applications in the SAP Fiori launchpad with a start-up parameter `preferredMode=create`. When you launch the application from the tile, the list report page and object page load directly in create mode.
 
 To achieve this behavior during external navigation, you can add `preferredMode=create` to the navigation URL during external navigation.
 
@@ -83,13 +86,13 @@ In draft-enabled applications, a new draft is created by using the `POST` call, 
 
 You can use URL parameters to prefill specific values. This is not supported for draft creation with `newAction`. For example, to set the value 01 for the *DefectCategory* field, enter the URL `…#Defect-displayWorklist?preferredMode=create&DefectCategory=01`.
 
-> ### Note:  
-> The target application must specify in its `manifest.json` file which parameters are to be used from the incoming URL. In the following example, only the `DefectCategory` parameter is used.
+The target application must specify in its `manifest.json` file which parameters are to be used from the incoming URL. In the following example, only the `DefectCategory` parameter is used:
+
+> ### Sample Code:  
+> `manifest.json`
 > 
 > ```
-> 
 > "sap.ui.generic.app": { 
->     "_version": "1.2.0",
 >     "settings": {
 >         ... 
 >         "inboundParameters": {
@@ -99,7 +102,6 @@ You can use URL parameters to prefill specific values. This is not supported for
 >         }
 >     },
 >     "pages": [{
->         ...
 > ```
 
 
@@ -116,13 +118,14 @@ You can use URL parameters to prefill specific values. This is not supported for
 
 You can use this value to automatically trigger an unbound action when an app is started with this startup parameter during an external navigation scenario. The startup parameters must contain the mandatory parameters of the unbound action and values for the inbound parameters of that action.
 
-The target app must make the unbound action available. To do this, you can specify the changes in the `manifest.json` file, as shown in the following sample code:
+The target app must make the unbound action available. To do this, you can specify the changes in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > 
 > "sap.ui.generic.app": { 
->     "_version": "1.2.0",
 >     "settings": {
 >         ... 
 >         "inboundParameters": {
@@ -172,9 +175,9 @@ The source app can also pass values for any inbound parameter of the specified a
 **Related Information**  
 
 
-[Actions in the List Report Page](actions-in-the-list-report-page-43ff607.md "The list report supports a number of actions.")
+[Actions on the List Report Page](actions-on-the-list-report-page-43ff607.md "You can configure various action buttons on the list report page.")
 
 [Actions](actions-14418d7.md "You can use generic actions provided by SAP Fiori elements and implement application-specific actions using annotations or extension points.")
 
-[Configuring Navigation](configuring-navigation-1a6c395.md "SAP Fiori elements control the navigation within an app (internal navigation) and the navigation to and from an app (external navigation).")
+[Configuring Navigation](configuring-navigation-1a6c395.md "You can configure the SAP Fiori elements navigation within an app (internal navigation) and the navigation to and from an app (external navigation).")
 

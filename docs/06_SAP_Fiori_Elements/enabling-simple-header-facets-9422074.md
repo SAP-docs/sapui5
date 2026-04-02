@@ -2,7 +2,7 @@
 
 # Enabling Simple Header Facets
 
-If you want to display more content in your header facet, you can enable the simple header facet.
+You can enable the simple header facet if you want to display more content in your header facet.
 
 To do so, you must add the `simpleHeaderFacets:true` flag manually in the app's `manifest.json` file.
 
@@ -23,39 +23,44 @@ The following figure shows a sample simple header facet:
 > ```
 > 
 > "sap.ui.generic.app": {
->         "_version": "1.2.0",
->         
->         "pages": [{
->                 "entitySet": "STTA_C_MP_Product",
->                 "component": {
->                         "name": "sap.suite.ui.generic.template.ListReport",
->                         "list": true,
+>     "pages": [
+>         {
+>             "entitySet": "STTA_C_MP_Product",
+>             "component": {
+>                 "name": "sap.suite.ui.generic.template.ListReport",
+>                 "list": true,
+>                 "settings": {
+>                     "gridTable": false,
+>                     "multiSelect": true,
+>                     "smartVariantManagement": true
+>                 }
+>             },
+>             "pages": [
+>                 {
+>                     "entitySet": "STTA_C_MP_Product",
+>                     "component": {
+>                         "name": "sap.suite.ui.generic.template.ObjectPage",
 >                         "settings": {
->                                 "gridTable": false,
->                                 "multiSelect": true,
->                                 "smartVariantManagement": true
+>                             "showRelatedApps": true,
+>                             "gridTable": false,
+>                             "editableHeaderContent": true,
+>                             "simpleHeaderFacets": true // This Enables Simple Header Facet on the Object Page
 >                         }
->                 },
->                 "pages": [{
->                         "entitySet": "STTA_C_MP_Product",
->                         "component": {
->                                 "name": "sap.suite.ui.generic.template.ObjectPage",
->                                 "settings": {
->                                         "showRelatedApps": true,
->                                         "gridTable": false,
->                                         "editableHeaderContent": true,
->                                         "simpleHeaderFacets":true, // This Enables Simple Header Facet on the Object Page
->                                 }
->                         },
->                         "pages": [{
->                                 "navigationProperty": "to_ProductText",
->                                 "entitySet": "STTA_C_MP_ProductText",
->                                 "component": {
->                                         "name": "sap.suite.ui.generic.template.ObjectPage"
->                                 }
->                         }]
->                 }]
->         }]
-> },
+>                     },
+>                     "pages": [
+>                         {
+>                             "navigationProperty": "to_ProductText",
+>                             "entitySet": "STTA_C_MP_ProductText",
+>                             "component": {
+>                                 "name": "sap.suite.ui.generic.template.ObjectPage"
+>                             }
+>                         }
+>                     ]
+>                 }
+>             ]
+>         }
+>     ]
+> }
+> 
 > ```
 

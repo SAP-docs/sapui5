@@ -1,6 +1,6 @@
 <!-- loioc18ada4bc56e427a9a2df2d1898f28a5 -->
 
-# Different Representations of a `Field`
+# Different Representations of a Field
 
 You can control how the field is represented by using annotations or metadata.
 
@@ -548,15 +548,15 @@ You can display a field as a `TextArea` in edit mode or as an `ExpandableText` i
 
 
 
-### Default Length
+### Default Length in Edit Mode
 
-– Edit Mode –
+The default number of lines of a text area is 4, but you can change this in the `manifest.json` file. If the content exceeds the maximum number of lines for a given text area, then – depending on whether or not you are in edit mode – a scrollbar is shown. You can configure a text area in edit mode to grow and shrink, depending on its content.
 
-The default number of lines of a text area is 4, but you can change this in the `manifest.json`. If the content exceeds the maximum number of lines for a given text area, then – depending on whether or not you are in edit mode – a scrollbar is shown. You can configure a text area in edit mode to grow and shrink, depending on its content.
 
-– Display Mode –
 
-The text is cut off after 100 characters and a *More* link is shown, allowing users to display the full text. By default, the text is expanded `"InPlace"`, but you can change this in the `manifest.json` by setting the expand behavior to `"Popover"`.
+### Default Length in Display Mode
+
+The text is cut off after 100 characters and a *More* link is shown, allowing users to display the full text. By default, the text is expanded `"InPlace"`, but you can change this in the `manifest.json` file by setting the expand behavior to `"Popover"`.
 
 
 
@@ -741,7 +741,7 @@ For more information, see [Micro Chart Facet in the Object Page Header](micro-ch
 
 <a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_k33_55z_tqb"/>
 
-## Representation as File Upload/Download \(`Edm.Stream`\)
+## Representation as File Upload and Download \(`Edm.Stream`\)
 
 SAP Fiori elements allows you to enable stream support so that users can upload and download files. You can add `Edm.Stream` fields \(file upload\) to a form on the object page. For more information, see [Enabling Stream Support](enabling-stream-support-b236d32.md).
 
@@ -939,7 +939,7 @@ In edit mode, the input field masks each character with a dot \(•\), so end us
 > MaskedField  : String  @Common : {Masked: true};
 > ```
 
-For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Masked Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldEdit).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Masked Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldMasked).
 
 This feature only provides casual visual protection against shoulder surfing and doesn't influence how data is transferred to the back end. The data is transferred to the client like any other property in plain text without masking.
 
@@ -953,29 +953,10 @@ For more security-related information, see [Security Configuration](security-con
 
 ## Representation as an Avatar
 
-Fields of type `Edm.String` can be displayed as an avatar using the `UI.IsImageUrl` annotation. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Avatar](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldAvatar).
-
-You can set the `imageFitType` of the avatar for a field to determine how an image fits in the avatar's container using the `formatOptions` of the field. The default value is `Cover` which sets the image to be scaled to cover the container. You can also set the `imageFitType` to `Contain` which sets the image to be scaled so that the width and height can fit in the container, as shown in the following code sample:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "controlConfiguration": {
->     "@com.sap.vocabularies.UI.v1.FieldGroup#myFieldGroup": {
->         "fields": {
->             "DataField::myImage_content": {
->                 "formatOptions": {
->                     "imageFitType": "Contain"
->                 }
->             }
->         }
->     }
-> }
-> ```
+Fields of type `Edm.String` can be displayed as an avatar using the `UI.IsImageUrl` annotation. For more information and live examples, see [Using Images and Icons](using-images-and-icons-5760b63.md) and the SAP Fiori development portal at [Building Blocks - Field - Avatar](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldAvatar).
 
 **Related Information**  
 
 
-[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md "If your value help contains a fixed number of values, a dropdown list is rendered.")
+[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md "You can configure value help as a dropdown list.")
 

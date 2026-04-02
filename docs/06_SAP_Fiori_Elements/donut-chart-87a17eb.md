@@ -2,7 +2,7 @@
 
 # Donut Chart
 
-A donut chart displays data as the differently colored sections of a donut.
+You can render the chart as a donut chart, which displays data as the differently colored sections of a donut.
 
   
   

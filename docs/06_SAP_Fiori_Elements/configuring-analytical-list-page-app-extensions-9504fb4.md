@@ -2,7 +2,7 @@
 
 # Configuring Analytical List Page App Extensions
 
-This section provides some of the advance configurations and extensions for your application.
+You can make use of advanced configurations and extensions in your app.
 
 
 
@@ -11,17 +11,17 @@ For extensions common to all floorplans of SAP Fiori elements, see [Extending SA
 **Related Information**  
 
 
-[Analytical List Page](analytical-list-page-ff056b4.md "The analytical list page (ALP) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content.")
+[Analytical List Page](analytical-list-page-ff056b4.md "You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs (key performance indicators).")
 
-[Refresh API](refresh-api-c86cb44.md "Use the refreshBinding function (in Component.js) to refresh the header, filter, and content area elements.")
+[Refresh API](refresh-api-c86cb44.md "You can use the refreshBinding function (in Component.js) to refresh the header, filter, and content area elements.")
 
-[Smart Table Extensions](smart-table-extensions-4117ef9.md "Define custom actions for tables by configuring the annotation and manifest.json files.")
+[Smart Table Extensions](smart-table-extensions-4117ef9.md "You can define custom actions for tables by configuring the annotation and manifest.json files.")
 
-[Chart Extensions](chart-extensions-ad65420.md "Define custom actions for a chart by configuring the annotation and manifest.json files.")
+[Chart Extensions](chart-extensions-ad65420.md "You can define custom actions for a chart by configuring the annotation and manifest.json file.")
 
 [Creating Custom Filters](creating-custom-filters-7251ea3.md "You can define custom filters for compact filters and KPI tags.")
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md "Define custom actions by using the extensions in the manifest.json file. You can also define these custom actions so that they appear on charts, tables, or header toolbars based on the filter property value (chart/table/global).")
+[Defining Custom Actions](defining-custom-actions-c3de5c0.md "You can define custom actions by using extensions in the manifest.json file.")
 
-[Adding a Custom Message Strip to List Report, Analytical List Page and Object Page Tables](adding-a-custom-message-strip-to-list-report-analytical-list-page-and-object-page-tables-ac540d3.md "You can show your custom texts in the message strip above the table.")
+[Adding a Custom Message Strip to List Report Page, Analytical List Page and Object Page Tables](adding-a-custom-message-strip-to-list-report-page-analytical-list-page-and-object-page-ta-ac540d3.md "You can show your custom texts in the message strip above the table.")
 

@@ -2,9 +2,12 @@
 
 # Column Micro Chart
 
-A column chart uses vertical bars to compare multiple values over time or across categories.
+You can render the micro chart as a column micro chart.
 
-One axis of the chart shows the categories being compared, the other axis represents a value.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Column Micro Chart](column-micro-chart-1a4ecb8.md).
+
+The column micro chart uses vertical bars to compare multiple values over time or across categories. One axis of the chart shows the categories being compared, the other axis represents a value.
 
 ![](images/Column_Micro_Chart_f7b8bbc.png)
 

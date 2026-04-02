@@ -2,17 +2,26 @@
 
 # Enabling Variant Management on the Object Page
 
-You can enable and disable variant management on the object page.
+You can enable and disable control-level variant management on the object page.
 
 
 
 ## Context
 
+> ### Note:  
+> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> 
+> -   Properties or methods exposed by the building block
+> 
+> -   Custom code using extensions
+
 You can enable and disable variant management for tables.
 
-Variant management is disabled by default. You can enable it on the object page by setting `"variantManagement"` to `"Control"`.
+Variant management is disabled by default. You can enable it on the object page by setting `"ariantManagement"` to `"ontrol"`.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "SalesOrderManageObjectPage": {
 >     "options": {
@@ -41,7 +50,7 @@ Variant management is disabled by default. You can enable it on the object page 
 > }
 > ```
 
-If you've enabled variant management, you can disable it again by setting `"variantManagement"` to `"None"`.
+If you've enabled variant management, you can disable it again by setting `variantManagement` to `None`.
 
 You can turn personalization on or off for each table individually. Personalization is independent of variant management. You can't enable variant management if personalization is turned off.
 
@@ -51,7 +60,7 @@ You can turn personalization on or off for each table individually. Personalizat
 **Related Information**  
 
 
-[Creating a List Report without Variant Management](creating-a-list-report-without-variant-management-094fe8c.md "The applications generated using the SAP Fiori elements includes the variant management option by default. However, you can also choose to create one without variant management.")
+[Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-094fe8c.md "You can create a list report page app without variant management.")
 
 <a name="concept_ech_15p_c3c"/>
 

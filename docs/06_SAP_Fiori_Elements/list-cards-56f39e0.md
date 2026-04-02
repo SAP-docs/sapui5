@@ -45,9 +45,6 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the applicat
 > }
 > ```
 
-> ### Note:  
-> In SAP Fiori elements for OData V4, add `sap.ovp.cards.v4.list` as the `template`. All other manifest settings are the same as in SAP Fiori elements for OData V2.
-
 By default, the fields in the list card are mapped to the `com.sap.vocabularies.UI.v1.LineItem` annotation. Any other collection of `DataFieldAbstract` can be used by setting the `annotationPath` property. `LineItem` is a collection of `DataFieldAbstract` records. You can use different `com.sap.vocabularies.UI.v1.LineItem` annotations for different card instances of the same entity type by using different qualifiers and setting the `annotationPath` property with the qualifier in the card configuration. For example `com.sap.vocabularies.UI.v1.LineItem#Qualifier1`.
 
 At runtime, the `DataField` records are sorted according to the optional `Importance (com.sap.vocabularies.UI.v1.ImportanceType)` annotation. `DataField` entries are sorted according to importance and their order of entry.
@@ -73,12 +70,12 @@ Number of list items displayed: up to 6.
 <tr>
 <td valign="top">
 
-![](images/Condensed_Standard_342d904.png)
+![](images/Condensed_Standard_342d904.jpg)
 
 </td>
 <td valign="top">
 
-![](images/Extended_Standard_849fdc4.png)
+![](images/Extended_Standard_849fdc4.jpg)
 
 </td>
 </tr>
@@ -120,12 +117,12 @@ In this type of list, each list item displays up to five fields. The first `Data
 <tr>
 <td valign="top">
 
-![](images/Condensed_Bar_8f1def4.png)
+![List card condensed bar chart having suppliers with progress bars, contract values, and dates for each entry.](images/List_Card_-_Condensed_Bar_789d0c4.png)
 
 </td>
 <td valign="top">
 
-![](images/Extended_Bar_bdbbbb2.png)
+![List card extended bar chart showing contract volume, targets, and colored progress bars.](images/List_Card_-_Extended_b62df9c.png)
 
 </td>
 </tr>
@@ -187,10 +184,17 @@ To display images or icons in the condensed list card, set the property `"imageS
 > ```
 
 > ### Note:  
-> In list card, an image control is used instead of avatar. For more information, see [Using Images, Initials, and Icons](using-images-initials-and-icons-5760b63.md).
+> In list card, an image control is used instead of avatar. For more information, see [Using Images and Icons](using-images-and-icons-5760b63.md).
 
 
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V2, see [List Cards](list-cards-1a3c28c.md).
+
+**Related Information**  
+
+
+[Configuring List Card](configuring-list-card-7f65716.md "You can add and configure various attributes of the list card.")
+
+[Configuring the List Area](configuring-the-list-area-f57373d.md "You can add values and navigation properties to the list area.")
 

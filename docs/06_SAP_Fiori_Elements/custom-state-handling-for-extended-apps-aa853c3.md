@@ -2,9 +2,12 @@
 
 # Custom State Handling for Extended Apps
 
-You can perform inner app-state handling for custom UI elements.
+You can perform inner app state handling for custom UI elements.
 
-To perform inner app-state handling for custom UI elements, three methods need to be adapted by the relevant implementation:
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Custom State Handling for Extended Apps](custom-state-handling-for-extended-apps-89fa878.md).
+
+To perform inner app state handling for custom UI elements, three methods need to be adapted by the relevant implementation:
 
 -   <code><b>onCustomStateChange</b></code>
 

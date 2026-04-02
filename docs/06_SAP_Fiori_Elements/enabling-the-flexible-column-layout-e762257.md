@@ -2,9 +2,9 @@
 
 # Enabling the Flexible Column Layout
 
-The flexible column layout is a feature that can show two or three columns on a single page.
+You can use the flexible column layout to show two or three columns on a single page.
 
-For example, a list of items is shown in the first column, and when you choose an item to see its details, the related object page is shown in the second or third column. You can expand the column you want to focus on, switch between different layouts, and view the column on the right-hand side in full-screen mode.
+In a flexible column layout, a list of items can be shown in the first column, and when you choose an item to see its details, the related object page is shown in the second or third column. You can expand the column you want to focus on, switch between different layouts, and view the column on the right-hand side in full-screen mode.
 
 Use the following attributes to create the column layout you want:
 
@@ -48,11 +48,7 @@ End users can expand and collapse the columns using the focus buttons. They can 
 
 2.  To select the flexible column layout configuration, go to the *Property Panel* and switch on *Flexible Column Layout*.
 
-3.  Select your desired layout. You can select a layout for two or three columns. You can also customize your layout settings further in the `manifest.json` file. For more information, see [Additional Features in SAP Fiori Elements for OData V2](enabling-the-flexible-column-layout-e762257.md#loioe762257125b34513b0859faa1610b09e__section_grc_dmp_gmb) or [Additional Features in SAP Fiori Elements for OData V4](enabling-the-flexible-column-layout-e762257.md#loioe762257125b34513b0859faa1610b09e__section_enh_np2_ymb).
-
-    The following screenshot shows the flexible column layout property in an application based on SAP Fiori elements for OData V2:
-
-    ![](images/Fiori_Tools_-_Business_Application_Studio_-_Flexible_Column_Layout_Property_1bba2f4.png)
+3.  Select your desired layout. You can select a layout for two or three columns. You can also customize your layout settings further in the `manifest.json` file. For more information, see further in this topic.
 
 4.  Preview your chosen flexible column layout. For more information, see [Previewing an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/b962685bdf9246f6bced1d1cc1d9ba1c.html).
 
@@ -75,90 +71,16 @@ The flexible column layout allows end users to resize the columns in both 2-colu
 
 
 
-<a name="loioe762257125b34513b0859faa1610b09e__section_grc_dmp_gmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-> ### Note:  
-> -   For the overview page, the flexible column layout is not relevant.
-> 
-> -   The analytical list page supports only the `TwoColumnsBeginExpanded` layout. For more information, see [2409984](https://me.sap.com/notes/2409984).
-> 
-> -   The flexible column layout can be used in both draft and non-draft scenarios.
-> 
-> -   Both draft and non-draft applications support 2-column and 3-column layouts.
-> 
->     In non-draft flexible column layout applications with create, read, update, and delete \(CRUD\) capabilities, only the last column shows the *Edit* and *Delete* buttons.
-
-To enable the flexible column layout in an application, you must create an entry in the `manifest.json` file as shown in the following sample code:
-
-```
-"sap.ui.generic.app": {
-        "_version": "1.1.0",
-        "settings": {
-            "flexibleColumnLayout": {
-                "defaultTwoColumnLayoutType": "TwoColumnsMidExpanded",
-                "defaultThreeColumnLayoutType": "ThreeColumnsEndExpanded"
-            }
-        },
-        "pages": [...
-```
-
-> ### Note:  
-> For optimum readability, you can set the `PopinLayout` property to `Block`, `GridLarge`, or `GridSmall`. For more information, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
-
-
-
-### Defining a Default Layout
-
-For each page configured in the `manifest.json` file, you can define a default layout that is used when the page is opened. You can use the `defaultLayoutType` property to do so. For example, you can use the `MidColumnFullScreen` property value to open a page in full-screen mode. This overrides the layout that has been defined in the global `flexibleColumnLayout` settings for the corresponding column. Note that this is only relevant if different pages in the same column need different default layouts.
-
-For an object page, you can define `"defaultLayoutType": "OneColumn"`. By doing so, in the flexible column layout, this object page moves to the first column. All other object pages that are below the first one in the hierarchy move up accordingly. If they have the same setting, they also move to the first column.
-
-Usually, this setting is made on the main object page. After navigating from the list report, the object page is then displayed in full-screen mode, that is, the main object page replaces the list report. When navigating to an item, the main object remains in the first column and the item is displayed in the second column.
-
-> ### Sample Code:  
-> ```
-> 
-> "sap.ui.generic.app": {
->     "settings": {
->             "flexibleColumnLayout": {
->                 "defaultTwoColumnLayoutType": "TwoColumnsMidExpanded",
->                 "defaultThreeColumnLayoutType": "ThreeColumnsEndExpanded"
->             }
->         },
->                       "pages": [{
->                                "entitySet": "…",
->                                "component": {
->                                      "name": "sap.suite.ui.generic.template.ListReport",
->                                      "settings": {
->                                               …
->                                        }
->                                  },
->                                   "pages": [{
->                                             "entitySet": "…",
->                                              "defaultLayoutType": "OneColumn",
->                                              "component": {
->                                                       "name": "sap.suite.ui.generic.template.ObjectPage",
->                                                       "settings": {
->                                                                  …
->                                                       }
->                                              },
-> 
-> ```
-
-
-
 <a name="loioe762257125b34513b0859faa1610b09e__section_enh_np2_ymb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
+## Configuration in the `manifest.json` File
 
 You must do the following configuration in the `manifest.json` file to enable the flexible column layout, compared to a full-screen mode:
 
 1.  Add the `rootView` object to specify the use of the flexible column layout.
 
     > ### Sample Code:  
-    > manifest.json
+    > `manifest.json`
     > 
     > ```
     > "sap.ui5":{
@@ -197,7 +119,7 @@ You must do the following configuration in the `manifest.json` file to enable th
 
 
 
-### Route Configuration
+## Route Configuration
 
 The route target leads to an array instead of a single element in the usual full-screen application. The pattern key format describes the pattern to be matched from a navigation to identify the route. It must end with an optional query parameter `:?query:` for a full-screen application.
 
@@ -210,9 +132,9 @@ You must set the following keys:
 
 You can enable the flexible column layout and define the number of columns in the layout by configuring the `target` key in the `manifest.json` file.
 
-The following sample code shows a 3-column layout that starts with a list report:
+The following sample code shows a 3-column layout that starts with a list report page:
 
-The scenario is: List report →List report | Object page 1→List report | Object page 1 | Object page 2 → Object page 3
+The scenario is: List report page →List report page | Object page 1→List report page | Object page 1 | Object page 2 → Object page 3
 
 > ### Sample Code:  
 > manifest.json
@@ -297,7 +219,7 @@ The scenario is: List report →List report | Object page 1→List report | Obje
 
 The following sample code shows a 2-column layout that starts with an object page:
 
-The scenario is: List report → Object page 1→ Object page 1 | Object page 2 → Object page 3
+The scenario is: List report page → Object page 1→ Object page 1 | Object page 2 → Object page 3
 
 > ### Sample Code:  
 > ```
@@ -371,7 +293,7 @@ The scenario is: List report → Object page 1→ Object page 1 | Object page 2 
 
 The following sample code shows a 3-column layout that starts with an object page:
 
-The scenario is: List report → Object page 1→ Object page 2 → Object page 2 | Object page 3 → Object page 2 | Object page 3 | Object page 4 →Object page 5
+The scenario is: List report page → Object page 1→ Object page 2 → Object page 2 | Object page 3 → Object page 2 | Object page 3 | Object page 4 →Object page 5
 
 > ### Sample Code:  
 > ```
@@ -474,7 +396,7 @@ The scenario is: List report → Object page 1→ Object page 2 → Object page 
 
 
 
-### Target Configuration
+## Target Configuration
 
 You must set the following keys for each target:
 
@@ -500,7 +422,7 @@ You must set the following keys for each target:
 
 -   `contextPattern`: navigation path of the current target.
 
--   All other keys remain unchanged compared to the full-screen applications.
+-   All other keys remain unchanged, compared to the full-screen applications.
 
 
 > ### Sample Code:  
@@ -559,16 +481,16 @@ You must set the following keys for each target:
 > 
 > ```
 
+
+
 > ### Restriction:  
 > -   In edit mode on an object page, the subobject page closes automatically when you add or remove a column from a table.
 > 
-> -   If you have a list report or an object page with multiple tables that are based on the same entity, only the first table is synchronized with its associated subobject page.
+> -   If you have a list report page or an object page with multiple tables that are based on the same entity, only the first table is synchronized with its associated subobject page.
 > 
-> -   When you update a multi-input field on an object page, you need to first refresh the parent page \(either an object page or a list report\) before the changes are visible.
+> -   When you update a multi-input field on an object page, you need to first refresh the parent page \(either an object page or a list report page\) before the changes are visible.
 > 
-> -   In the flexible column layout, you can neither display a tree table nor an analytical table in the list report with a draft-enabled service.
-
-
+> -   In the flexible column layout, you can neither display a tree table nor an analytical table in the list report page with a draft-enabled service.
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V2, see [Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-75631b7.md).

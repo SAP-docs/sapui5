@@ -4,6 +4,9 @@
 
 You can add a read-only rating indicator to the object page header.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Rating Indicator Facet in the Object Page Header](rating-indicator-facet-in-the-object-page-header-bcc12cb.md).
+
 The rating indicator allows you to visually represent the rating types described below.
 
 

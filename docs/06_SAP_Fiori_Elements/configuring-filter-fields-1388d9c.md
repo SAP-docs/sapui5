@@ -6,6 +6,11 @@ You can configure filter fields to ensure they only accept either a single value
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Filter Fields](configuring-filter-fields-f5dcb29.md).
+
+
+
 <a name="loio1388d9c39185459fb02ff695c15e63b5__section_nld_r3y_zxb"/>
 
 ## Copying and Pasting Multiple Values in the Filter Bar

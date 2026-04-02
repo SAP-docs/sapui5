@@ -55,13 +55,9 @@ The following list explains how other concepts used in SAPUI5 are distinguished 
 
     Both concepts provide a set of controls behind a single interface. Composite controls are intended for reuse within control development and allow to include existing controls in a complex control whereas components are intended for reuse in application development.
 
--   UI library
+-   Libraries
 
-    The UI library is the deployable unit around controls: Controls are never deployed standalone, but as part of a control library. Components, however, are self-contained and should **not** be used to deploy controls.
-
--   Notepad control
-
-    A notepad control is another way to define a control. Notepad controls have all the characteristics of a control.
+    A library is the deployable unit around controls: SAPUI5 controls are never deployed standalone, but as part of a control library. Components, however, are self-contained and should **not** be used to deploy controls for reuse outside themselves.
 
 -   MVC
 

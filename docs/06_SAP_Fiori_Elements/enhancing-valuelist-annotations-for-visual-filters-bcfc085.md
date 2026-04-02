@@ -2,11 +2,18 @@
 
 # Enhancing `ValueList` Annotations for Visual Filters
 
-The value list annotation lets you map an entity to another entity that is associated with a different entity set. The value list annotation defines the relationship between filter fields of the main entity set and the fields in the value help entity set.
+You can specify a value help entity for a field and maintain the value help configuration with a `ValueList` annotation.
 
 
 
-You must enhance the value list annotation corresponding to a filter field with `"PresentationVariantQualifier"` as shown in the sample code below to ensure that the value list annotation \(and therefore the filter field\) is considered for the visual filter rendering. The value for this term must point to a `UI.PresentationVariant` that contains the `UI.Chart` annotation required to render the visual filter.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md).
+
+
+
+These annotations can be used to control the rendering of the value help, such as the fields shown inside the value help, or the filters that act upon the value help. For more information, see[In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-32bfc09.md).
+
+You must enhance the value list annotation corresponding to a filter field with `PresentationVariantQualifier` as shown in the sample code below to ensure that the value list annotation \(and therefore the filter field\) is considered for the visual filter rendering. The value for this term must point to a `UI.PresentationVariant` that contains the `UI.Chart` annotation required to render the visual filter.
 
 > ### Note:  
 > The `UI.PresentationVariant` referred to by `"PresentationVariantQualifier"` is always associated with the value help entity set to which the value list annotation points, and **not** the main entity set of the analytical list page.
@@ -126,7 +133,7 @@ After selecting the region chart, if you select a bar in the country chart then 
 **Related Information**  
 
 
-[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-b44fe77.md "The visual filter bar enables end users to select filter values based on measure values in addition to the filters and filter values already selected in the regular filter bar.")
+[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-b44fe77.md "You can configure the visual filter bar on the analytical list page.")
 
-[Choosing Filter Modes](choosing-filter-modes-74c4b43.md "ALP offers compact and visual filter modes. You can choose to set filters from both modes.")
+[Choosing Filter Modes](choosing-filter-modes-74c4b43.md "You can choose to set filters from the compact and visual filter modes on the analytical list page.")
 

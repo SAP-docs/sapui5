@@ -6,6 +6,10 @@ You can assign custom actions to quick view cards that open in the object stream
 
 
 
+Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
+
+
+
 ## Procedure
 
 To define a custom action in quick view cards, proceed as follows:
@@ -143,7 +147,6 @@ To add custom global actions on the smart filter bar, you must configure the `ma
 > 
 > ```
 > "sap.ui5": {
->    "_version": "1.1.0",
 >        "dependencies": {
 >          "libs": {
 >            "sap.ovp": {}

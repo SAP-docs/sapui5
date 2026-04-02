@@ -2,9 +2,9 @@
 
 # Defining and Configuring Sections
 
-The object page content is arranged into sections and subsections that you can configure.
+You can define sections and subsections of the object page with `com.sap.vocabularies.UI.v1.Facets` annotations.
 
-You can use the `com.sap.vocabularies.UI.v1.Facets` annotations to build sections. Different facets have been defined to display important information in the content area sections.
+Different facets have been defined to display important information in the content area sections.
 
 
 
@@ -14,12 +14,7 @@ A collection or reference facet directly under the `UI.Facets` represents a sect
 
 All reference facets that are part of the second-level collection facet are arranged one beside the other.
 
-Note the following behavior:
-
--   In SAP Fiori elements for OData V2, the reference facets outside the second-level collection facet are ignored.. If there is no second-level collection facet, all reference facets are considered.
-
--   In SAP Fiori elements for OData V4, the reference facets outside the second-level collection facet are considered and shown as separate subsections.
-
+The reference facets outside the second-level collection facet are considered and shown as separate subsections.
 
 In the figure below, the collection facet for *General Information* combines two reference facets that both point to a field group.
 
@@ -157,11 +152,11 @@ You can hide and display sections based on properties.
 > ```
 
 > ### Tip:  
-> -   You must not use a comma \(,\) in a section or subsection title, as commas serve as delimiters in SAP Fiori elements. A comma is used while grouping backend messages for a field within the section or subsection.
+> -   You must not use a comma \(,\) in a section or subsection title, as commas serve as delimiters in SAP Fiori elements. A comma is used while grouping back-end messages for a field within the section or subsection.
 > 
 > -   If the object page uses an icon tab bar for sections, then the section title isn't displayed in the content area. If the object page uses an anchor bar for sections, then only the title of the first section is hidden in the content area.
 > 
-> -   For object pages configured with *Page* section layout mode, the following applies: if a section/subsection contains only a table or a chart as a control, the title of the section or subsection is hidden but the title of the control is replaced with the title from the section or subsection. In *Tabs* mode, this only applies to subsections but isn't applied to sections. For SAP Fiori elements for OData V2, this special logic is also not invoked if the section or subsection has multiple controls configured within it and, at runtime, due to dynamic visibility or UI adaptation, the section/subsection has a single visible control.
+> -   For object pages configured with *Page* section layout mode, the following applies: if a section/subsection contains only a table or a chart as a control, the title of the section or subsection is hidden but the title of the control is replaced with the title from the section or subsection. In *Tabs* mode, this only applies to subsections but isn't applied to sections.
 > 
 > 
 > ![](images/section-subsection_title_08a8f08.png)
@@ -184,7 +179,7 @@ For more information, see [Grouping of Fields](grouping-of-fields-cb1748e.md).
 
 To render a table in a section, follow these steps:
 
-1.  Include a list in the section, indicated by `com.sap.vocabularies.UI.v1.LineItem` or `com.sap.vocabularies.UI.v1.PresentationVariant`. In SAP Fiori elements for OData V4, `UI.v1.SelectionPresentationVariant` is also supported. If `PresentationVariant` is specified, then it must have `UI.LineItem` as the first property of the "Visualizations". If a`SelectionPresentationVariant` is specified, it must contain a valid `PresentationVariant` with `UI.LineItem` as the first property of the "Visualizations".
+1.  Include a list in the section, indicated by `com.sap.vocabularies.UI.v1.LineItem` or `com.sap.vocabularies.UI.v1.PresentationVariant`. `UI.v1.SelectionPresentationVariant` is also supported. If `PresentationVariant` is specified, then it must have `UI.LineItem` as the first property of the "Visualizations". If a`SelectionPresentationVariant` is specified, it must contain a valid `PresentationVariant` with `UI.LineItem` as the first property of the "Visualizations".
 
     > ### Sample Code:  
     > XML Annotation
@@ -251,8 +246,11 @@ To render a table in a section, follow these steps:
 
     For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Extensions for Object Pages - Custom Section](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/floorplanObjectPage/customSection).
 
-2.  To render a *Create* button, set `Org.OData.Capabilities.V1.InsertRestrictions/Insertable/Bool` to `true` for the entity set. For more information, see the [Generic Actions](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__section_nx4_qpb_2nb)section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+2.  To render a *Create* button, set `Org.OData.Capabilities.V1.InsertRestrictions/Insertable/Bool` to `true` for the entity set. For more information, see the [Generic Actions](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__section_nx4_qpb_2nb) section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
+
+> ### Remember:  
+> If you use a chart or table for the `UI.ReferenceFacet`, ensure that this is the only content and does not have another peer `ReferenceFacet` to avoid rendering issues.
 
 For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
@@ -325,84 +323,9 @@ It is mandatory to define an ID for collection facets but optional for reference
 
 
 
-<a name="loiofacfea09018d4376acaceddb7e3f03b6__section_mp4_yhd_dmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-You can define a hierarchy level. Instead of a reference facet, you can add a collection facet that consists of several reference facets. The contents of these reference facets are arranged underneath.
-
-In the figure below, the collection facet for *Product Information* combines three reference facets. Each reference facet refers to a field group or to an identification annotation.
-
-  
-  
-**Object Page: CollectionFacet**
-
-![](images/ObjectPage_Section_CollFacet_2bcb89d.jpg "Object Page: CollectionFacet")
-
-Further reference facets refer to identification sections, the field group, contact, or line item annotations. For line items, a list is rendered.
-
-  
-  
-**Object Page: ReferenceFacets**
-
-![](images/ObjectPage_ReferenceFacet_2740bd6.png "Object Page: ReferenceFacets")
-
-> ### Note:  
-> When rendering a table in a section, `NavigationRestrictions` works only if `InlineCreate` is enabled for the related entity table. The creation from a new object page is not supported using the mentioned annotation.
-
-When increasing the section and table height to use available free space on the object page, you can also optimize the table visualization by using the condensed mode. For more information, see [Using the Condensed Table Layout](using-the-condensed-table-layout-f3cc057.md).
-
-If your table has many entries, see the information regarding the `MultiSelectionPlugin` at [Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md).
-
-For more information about the icon tab bar, see *Adapting the UI: Object Page* \> *Switch to tabs* in [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
-
-
-
-### Defining the SmartForm Column Layout
-
-The column layout is used by default in the `SmartForm` on the object page. Do not include any layout or other container controls into the `GroupElement`. Views are also not supported. This could damage the visual layout, keyboard support, and screen-reader support.
-
-The default of six columns in smart form of extra-large screens can be changed to four columns using the following manifest setting.
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```json
-> "sap.ui.generic.app": { 
->         "settings": { 
->             "objectPageColumns": { 
->                 "screenSizeXL": 4 
->             } 
->         },
-> 
-> ```
-
-You can also use the `useColumnLayoutForSmartForm` switch in the manifest, at `sap.ui.generic.app\settings`, to change from the default layout for the `SmartForm` \(column layout\) to the responsive grid layout. To do so, set the switch to `false`.
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```json
-> "sap.ui.generic.app": {
->                               "_version": "1.3.0",
->                               "settings": {
->                                              "useColumnLayoutForSmartForm": false
->                               }
-> 
-> ```
-
-
-
 <a name="loiofacfea09018d4376acaceddb7e3f03b6__section_wgv_fvx_4lb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
-
-> ### Remember:  
-> If you use a chart or table for the `UI.ReferenceFacet`, ensure that this is the only content and does not have another peer `ReferenceFacet` to avoid rendering issues.
-
-
-
-### Tab Representation vs. Anchor Representation
+## Tab Representation vs. Anchor Representation
 
 By default, `"Page"` mode is the section layout mode. In this mode, all the sections and subsections are added to the same page. End users can reach the section or subsection by either choosing the corresponding anchor below the header facet, or by simply scrolling down on the page.
 
@@ -447,7 +370,7 @@ To choose a tab visualization, you must use the `sectionLayout` property in the 
 
 
 
-### Special Handling of Text Area Label as a Single Field in a Section or Subsection
+## Special Handling of Text Area Label as a Single Field in a Section or Subsection
 
 If `UI.FieldGroup` has only one property based on `UI.MultiLineText` and no other controls, the label of the corresponding `TextArea` control is hidden, as the section or subsection title suffices as the label.
 
@@ -455,7 +378,7 @@ However, you must use a meaningful label for the `TextArea` control to ensure it
 
 
 
-### Responsive Column Layout
+## Responsive Column Layout
 
 We're using the responsive column layout on the object page, which means that form data is spread across six columns by default when opened on extra large screens to improve content density. The number of columns adapts automatically, depending on the screen size.
 

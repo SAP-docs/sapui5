@@ -2,9 +2,11 @@
 
 # Store/Restore the Application State
 
-SAP Fiori elements uses the `iAppState` mechanism for storing or restoring the application state. This mechanism enables a smooth user experience when navigating back and forth between apps developed using SAP Fiori elements and other apps.
+SAP Fiori elements uses the `iAppState` mechanism for storing or restoring the application state.
 
-The state of the application is preserved when users refresh or navigate away from an application created using SAP Fiori elements \(either a list report or an object page\) and then navigate back to this page. The application state is also preserved when the URL of the application is shared with another user who then opens the link. For more information, see [The Share Functionality](the-share-functionality-022bf0d.md).
+This mechanism enables a smooth user experience when navigating back and forth between apps developed using SAP Fiori elements and other apps.
+
+The state of the application is preserved when users refresh or navigate away from an application created using SAP Fiori elements \(either a list report page or an object page\) and then navigate back to this page. The application state is also preserved when the URL of the application is shared with another user who then opens the link. For more information, see [The Share Functionality](the-share-functionality-022bf0d.md).
 
 
 
@@ -12,42 +14,32 @@ The state of the application is preserved when users refresh or navigate away fr
 
 ## What Is Stored/Restored
 
--   Any filter field values in the list report filter bar. The *Go* button state, when available, is also considered.
+-   Any filter field values in the filter bar of the list report page. The *Go* button state, when available, is also considered.
 
--   Any change in a chosen variant.
+-   Any change in a chosen variant. The chosen variant is always restored and the fallback to the *Standard* variant only happens when the chosen variant isn't available at the time of the restore.
 
-    In SAP Fiori elements for OData V2, the chosen variant is always restored if it was stored in a 'clean' state. If the variant was marked as 'dirty', restoring leads to the loading of a *Standard* variant with a 'dirty' indicator.
-
-    In SAP Fiori elements for OData V4, the chosen variant is always restored and the fallback to the *Standard* variant only happens when the chosen variant isn't available at the time of the restore.
-
--   Object page details such as tab selection, personalization of chart/table. For more information about object page handling, see [Enabling Discovery/Persistence Mode](enabling-discovery-persistence-mode-7c62084.md).
+-   Object page details such as tab selection, personalization of chart/table. For more information about object page handling, see [Enabling Persistence Mode](enabling-persistence-mode-7c62084.md).
 
 -   Data from custom UI elements. For more information, see [Custom State Handling for Extended Apps](custom-state-handling-for-extended-apps-89fa878.md).
+
+-   Personalization in the `Table`, `Chart`, and `FilterBar` building blocks and filter values in the `FilterBar` building block.
 
 
 > ### Note:  
 > -   If a potentially sensitive field \(a property that is annotated using the `PersonalData.v1.IsPotentiallySensitive` annotation\) is changed, SAP Fiori elements doesn't store/restore this information. Any changes added by users are therefore lost upon refresh. This is not applicable if the field is used in filter context. For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 > 
-> -   In SAP Fiori elements for OData V2, changes to the visibility of filter fields in the filter bar aren't stored/restored. However, if any new filter fields containing values are added from the *Adapt Filters* dialog, then they're stored as a part of the `iAppState`. The order of the filter fields in the smart filter fields is not stored or restored from the `iAppState`.
-> 
 > -   Selections in a chart and a table, as well as the scroll position in a table, are not stored/restored.
 > 
 > -   Refreshing the browser doesn't restore the `iAppState` if SAP Fiori launchpad isn't configured to persist it in the back end.
-
-
-
-<a name="loio46bf248182ed47cb85a05610abe361f7__section_bkt_vyl_mtb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-Note the following restrictions related to the content provided in the [What Is Stored/Restored](store-restore-the-application-state-46bf248.md#loio46bf248182ed47cb85a05610abe361f7__section_nkf_5ff_ymb) section in this topic:
 
 > ### Restriction:  
 > -   Drilldown filters applied to the chart using the *View By* options aren't stored/restored.
 
 
 
-### Handling Changes from Other Layers
+<a name="loio46bf248182ed47cb85a05610abe361f7__section_bkt_vyl_mtb"/>
+
+## Handling Changes from Other Layers
 
 Changes coming in from other flex layers, such as changes made by key users, are merged with user personalization changes coming from the `iAppState`. For more information, see [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md).
 
@@ -68,7 +60,7 @@ Changes coming in from other flex layers are not considered in the following sce
 > ### Note:  
 > Restoring a shared URL reinstates the last state of the control if variant management isn't enabled. For example, consider the following scenario:
 > 
-> -   A key user adds two columns to a table in a list report-based application.
+> -   A key user adds two columns to a table in a list report page-based application.
 > 
 > -   User A loads the application and adds two new columns. To share the application link as an email to user B, user A clicks the *Share* menu button and then *Send Email*.
 > 

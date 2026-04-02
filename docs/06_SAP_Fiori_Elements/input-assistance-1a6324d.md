@@ -2,10 +2,14 @@
 
 # Input Assistance
 
-Object page fields can be filled with recommended values.
+You can enable input assistance to fill object page fields with recommended values.
 
 > ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
+> This topic describes how to use the building block within SAP Fiori elements object pages and subobject pages. If the functionality isn't available when you use the building block in other floorplans, custom pages, or custom sections, you can try achieving the functionality through other means, such as the following:
+> 
+> -   Properties or methods exposed by the building block
+> 
+> -   Custom code using extensions
 
 In edit mode, object page fields can include recommendations. The recommendations are shown in the *Recommendations* section in the same order as they are sent from the back end. The back end can also label one of the recommendations as the most fitting recommendation. This recommendation is displayed as a placeholder in the field with a different style to indicate to users that recommendations are available for this field.
 
@@ -27,15 +31,15 @@ Users can click the field and accept the recommended value or ignore the recomme
 > ### Restriction:  
 > Recommendations aren't available in the following cases:
 > 
-> -   Fields without value help \(except fields with a drop-down list\).
+> -   Fields without value help \(except fields with a drop-down list\)
 > 
-> -   Fields with business-defined values \(for example, side effects\).
+> -   Fields with business-defined values \(for example, side effects\)
 > 
-> -   Fields with multiple values.
+> -   Fields with multiple values
 > 
-> -   Custom fields.
+> -   Custom fields
 > 
-> -   Fields that have more than one key field in their value help entity aren't used for recommendations. For example, if the field *Plant* has two key fields, *PlantID* and *RegionID*, to uniquely identify a given plant, the field *Plant* must be excluded from providing recommendations.
+> -   Fields that have more than one key field in their value help entity aren't used for recommendations. For example, if the field *Plant* has two key fields, *PlantID* and *RegionID*, to uniquely identify a given plant, the field *Plant* must be excluded from providing recommendations
 
 
 
@@ -44,6 +48,12 @@ Users can click the field and accept the recommended value or ignore the recomme
 ## Modeling Applications for Input Assistance
 
 Applications must enable input assistance by modeling it in the back end. This enhances the metadata with recommendation-relevant annotations, which are interpreted by the SAP Fiori elements framework to provide input assistance for users working on the object in edit mode.
+
+Input assistance can be modeled using the RESTful Application Programming Model \(RAP\) and the SAP Cloud Application Programming Model \(CAP\) back ends.
+
+
+
+### Input Assistance in RESTful Application Programming Model \(RAP\)
 
 The `UI.Recommendations` annotation is the most important annotation and is defined at entity level. The entity uses back-end recommendations and points to a complex property in the entity.
 
@@ -116,6 +126,62 @@ See below for recommendation-relevant properties and their descriptions:
 
 
 
+### Input Assistance in SAP Cloud Application Programming Model \(CAP\)
+
+In the CAP back end, input assistance is enabled using a navigation property:
+
+> ### Sample Code:  
+> ```
+> 
+> <Annotations Target="com.c_salesordermanage_sd.SalesOrderItem">
+>     <Annotation Term="UI.Recommendations" Path="SAP_Nav_Recommendations"/>
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> 
+> <EntitySet Name="SalesOrderItem" EntityType="com.c_salesordermanage_sd.SalesOrderItem">
+>     <NavigationPropertyBinding Path="SAP_Nav_Recommendations" Target="SalesOrderItem_SAP_Nav_Recommendations"/>
+> </EntitySet>
+> ....
+> <EntityType Name="SalesOrderItem_SAP_Nav_Recommendations">
+>     <Key>
+>         <PropertyRef Name="up__ID"/>
+>         <PropertyRef Name="IsActiveEntity"/>
+>     </Key>
+>     <NavigationProperty Name="up_" Type="com.c_salesordermanage_sd.SalesOrderItem" Nullable="false" Partner="SAP_Nav_Recommendations"/>
+>     <Property Name="up__ID" Type="Edm.Guid" Nullable="false"/>
+>     <Property Name="Material" Type="Collection(com.c_salesordermanage_sd.c_salesordermanage_sd_MaterialRecommendationType)" Nullable="false"/>
+>     <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="true"/>
+>     <Property Name="HasActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+>     <Property Name="HasDraftEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+>     <NavigationProperty Name="DraftAdministrativeData" Type="com.c_salesordermanage_sd.DraftAdministrativeData" ContainsTarget="true"/>
+>     <Property Name="DraftAdministrativeData_DraftUUID" Type="Edm.Guid"/>
+>     <NavigationProperty Name="SiblingEntity" Type="com.c_salesordermanage_sd.SalesOrderItem_SAP_Nav_Recommendations"/>
+> </EntityType>
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> entity SalesOrderItem_SAP_Nav_Recommendations as projection on db.SalesOrderItem.SAP_Nav_Recommendations;
+> 
+> entity SalesOrderItem {
+>     SAP_Nav_Recommendations : Composition of one {
+>         Material : many MaterialRecommendationType;
+>     }
+> }
+> 
+> ```
+
+
+
 ### Ensuring Correct Labels for Recommended Fields
 
 When users try to save the object, unaccepted recommendations are displayed in a dialog.
@@ -124,7 +190,7 @@ The label of the recommended field in the dialog that lists all unaddressed reco
 
 The dialog also groups the recommendations under the entity to which the recommended fields belong using the `UI.HeaderInfo.TypeName` of the entity for the group name. This group name possibly differs from the name of the field group seen outside of the dialog, such as on the object page or subobject page, where we use the label of the `UI.ReferenceFacet` holding that field.
 
-For more information, see the [User Notifications](input-assistance-1a6324d.md#loio1a6324d5ad7f4034a93f911b4e53e080__section_ccf_dm4_dzb) section below.
+For more information, see the [User Notifications](input-assistance-1a6324d.md#loio1a6324d5ad7f4034a93f911b4e53e080__section_ccf_dm4_dzb) section in this topic.
 
 
 
@@ -159,7 +225,7 @@ If input assistance is not required, ensure that the metadata generated by the b
 
 New recommendation values are fetched from the back end when one of the following events occurs:
 
--   A new context is created or loaded when users click on *Create* in the list report and the new object details are loaded or when users create a new table row in inline creation mode.
+-   A new context is created or loaded when users click on *Create* in the list report page and the new object details are loaded or when users create a new table row in inline creation mode.
 
 -   The draft version of the object is loaded due to user actions, such as when users click the *Edit* button.
 

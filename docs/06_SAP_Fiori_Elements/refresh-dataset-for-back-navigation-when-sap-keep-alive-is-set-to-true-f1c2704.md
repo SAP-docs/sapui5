@@ -1,6 +1,8 @@
 <!-- loiof1c2704cc302401ba935f18e6303f123 -->
 
-# Refresh Dataset for Back Navigation When `sap-keep-alive` Is Set to True
+# Refresh Dataset for Back Navigation When `sap-keep-alive` Is Set to `True`
+
+You can add a custom code to perform a refresh of specific data.
 
 When `sap-keep-alive` is set to true, and the user navigates from one application to another, modifies some common data and navigates back to the source app, the data isn't refreshed automatically. You can add a custom code to perform a refresh of specific data.
 
@@ -12,7 +14,7 @@ SAP Fiori elements provides two extension methods for applications that run in `
 
 
 > ### Sample Code:  
-> List report extension implementing `sap-keep-alive` extension APIs
+> List report page extension implementing `sap-keep-alive` extension APIs
 > 
 > ```
 > return ControllerExtension.extend("SalesOrder.ext.LRExtend", {

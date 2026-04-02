@@ -2,7 +2,10 @@
 
 # Prefilling Fields When Creating a New Entity
 
-When a user creates a new entity, it is possible to prefill fields with specific values.
+When users create a new entity, you can prefill the fields with specific values.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md).
 
 If the entity is draft-enabled, the relevant service implementation can be used to prefill the fields.
 
@@ -25,5 +28,5 @@ There are more options for supporting the prefilling of fields on the UI.
 **Related Information**  
 
 
-[Actions in the List Report](actions-in-the-list-report-page-43ff607.md "The list report supports a number of actions.")
+[Actions in the List Report](actions-on-the-list-report-page-43ff607.md "You can configure various action buttons on the list report page.")
 

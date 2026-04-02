@@ -31,17 +31,19 @@ Perform the following steps to use the extension:
     > ```
     > 
     > "extends": {
-    >    "extensions": {
-    >       ... 
-    >       "sap.ui.controllerExtensions": { 
-    >          ...
-    >          "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+    >     "extensions": {
+    >         ...
+    >         "sap.ui.controllerExtensions": {
     >             ...
-    >             "controllerName": "MY_APP.ext.controller.DetailsExtension",
-    >             ...
-    >          }
-    >       } 
-    >       ...
+    >             "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+    >                 ...
+    >                 "controllerName": "MY_APP.ext.controller.DetailsExtension",
+    >                 ...
+    >             }
+    >         }
+    >         ...
+    >     }
+    > }
     > 
     > ```
 

@@ -2,7 +2,7 @@
 
 # Setting the Table Header
 
-The header of the table is set using `com.sap.vocabularies.UI.v1.HeaderInfo TypeNamePlural`.
+You can set the header of the table with `com.sap.vocabularies.UI.v1.HeaderInfo TypeNamePlural`.
 
   
   
@@ -22,45 +22,44 @@ You can define the table header text and control the visibility of the header te
 > `manifest.json`
 > 
 > ```
-> 	"sap.ui5": {
-> 		"routing": {
-> 			"targets": {
-> 				"SalesOrderManageList": {
-> 					"options": {
-> 						"settings": {
-> 							"controlConfiguration": {
-> 								"@com.sap.vocabularies.UI.v1.LineItem": {
-> 									"tableSettings": {
-> 										"header": "Another header",
-> 										"headerVisible": true
-> 									}
-> 								}
-> 							}
-> 						}
-> 					}
-> 				},
-> 				"SalesOrderManageObjectPage": {
-> 					"options": {
-> 						"settings": {
-> 							"controlConfiguration": {
-> 								"_Partner/@com.sap.vocabularies.UI.v1.LineItem": {
-> 									"tableSettings": {
-> 										"header": "Another header for the Partners",
-> 										"headerVisible": true
-> 									}
-> 								},
-> 								"_Item/@com.sap.vocabularies.UI.v1.LineItem": {
-> 									"tableSettings": {
-> 										"headerVisible": false
-> 									}
-> 								}
-> 							}
-> 						}
-> 					}
-> 				}
-> 			}
-> 		}
-> 	}
+> "sap.ui5": {
+>     "routing": {
+>         "targets": {
+>             "SalesOrderManageList": {
+>                 "options": {
+>                     "settings": {
+>                         "controlConfiguration": {
+>                             "@com.sap.vocabularies.UI.v1.LineItem": {
+>                                 "tableSettings": {
+>                                     "header": "Another header",
+>                                     "headerVisible": true
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 }
+>             },
+>             "SalesOrderManageObjectPage": {
+>                 "options": {
+>                     "settings": {
+>                         "controlConfiguration": {
+>                             "_Partner/@com.sap.vocabularies.UI.v1.LineItem": {
+>                                 "tableSettings": {
+>                                     "header": "Another header for the Partners",
+>                                     "headerVisible": true
+>                                 }
+>                             },
+>                             "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+>                                 "tableSettings": {
+>                                     "headerVisible": false
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
 > }
 > ```
 

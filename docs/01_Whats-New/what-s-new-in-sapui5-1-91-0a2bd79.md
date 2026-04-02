@@ -115,7 +115,7 @@ Feature
 
 The new version of the SAPUI5 OData V4 model introduces the following features:
 
--   For a list binding with visual grouping, that is with a `groupLevels` list provided in the `$$aggregation` binding parameter, you can now request the `$count` parameter. The resulting count represents the number of records at the leaf level. The `$count` parameter can be accessed through the header context as described in [Binding Collection Inline Count](../04_Essentials/binding-collection-inline-count-77d2310.md).
+-   For a list binding with visual grouping, that is with a `groupLevels` list provided in the `$$aggregation` binding parameter, you can now request the `$count` parameter. The resulting count represents the number of records at the leaf level. The `$count` parameter can be accessed through the header context as described in [Binding the Count of a Collection](../04_Essentials/binding-the-count-of-a-collection-77d2310.md).
 
 -   We now provide a new `sap.ui.model.odata.v4.ODataListBinding#getCount` method that allows you to get the count of elements or leaves in your collection.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/getCount).
 
@@ -492,6 +492,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

@@ -107,7 +107,7 @@ Update the `manifest.json` file so that it references the correct files.
 
 ```js
 {
-    "_version": "1.8.0",
+    "_version": "2.6.0",
     "sap.app": {
         "id": "viewportScenetreeStepnav",
         "type": "application",
@@ -129,7 +129,7 @@ Update the `manifest.json` file so that it references the correct files.
     "sap.ui5": {
         "rootView": "viewportScenetreeStepnav.view.App",
         "dependencies": {
-            "minUI5Version": "1.30",
+            "minUI5Version": "1.146.0",
             "libs": {
                 "sap.m": {}
             }

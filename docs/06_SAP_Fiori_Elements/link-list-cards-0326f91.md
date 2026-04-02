@@ -6,6 +6,10 @@ Displays a list of links with a title, picture, icon, or subtitle.
 
 
 
+Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
+
+
+
 A link list card supports the following:
 
 -   Quick view to display contact annotation information.
@@ -29,8 +33,7 @@ Description: Configuring this property places the card title on top of the link 
 > ```
 > "sap.ovp": {
 >     "globalFilterModel": "salesOrder",
->     "globalFilterEntityType": "GlobalFilters", // Deprecated since SAPUI5 1.54.
->     "globalFilterEntitySet": "GlobalFilters",  // Available from SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters",
 >     ...
 >     "cards": {
 >         "card005_RecentContacts": {
@@ -60,8 +63,7 @@ Description: Configuring this property places the card subtitle below the title 
 > ```
 > "sap.ovp": {
 >     "globalFilterModel": "salesOrder",
->     "globalFilterEntityType": "GlobalFilters", // Deprecated since SAPUI5 1.54
->     "globalFilterEntitySet": "GlobalFilters", // Available from SAPUI5 1.54
+>     "globalFilterEntitySet": "GlobalFilters",
 >     ...
 >     "cards": {
 >         "card005_RecentContacts": {
@@ -89,8 +91,7 @@ Property: `staticContent`
 > ```
 > "sap.ovp": {
 >     "globalFilterModel": "salesOrder",
->     "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54
->     "globalFilterEntitySet": "GlobalFilters",  //Available from SAPUI5 1.54
+>     "globalFilterEntitySet": "GlobalFilters",
 >     ...
 >     "cards": {
 >         "card005_RecentContacts": {
@@ -206,7 +207,7 @@ The standard link list card displays a list of ordered items. Optionally, you ca
 -   A picture and/or subtitle to the list item.
 -   Multiple columns if the dashboard layout includes multiple columns by modifying the card size.
 
-![](images/StandardLLC_f27c6ec.png)
+![](images/StandardLLC_f27c6ec.jpg)
 
 The following sample code shows how to configure a link list card with a standard view:
 
@@ -236,7 +237,7 @@ The following sample code shows how to configure a link list card with a standar
 
 This type of card provides a carousel-based view, where the title and subtitle appear at the top of the card, allowing more space for the image. Additionally, this list type can be configured to support multiple columns.
 
-![](images/CarouselLLC_4a16a45.png)
+![](images/CarouselLLC_4a16a45.jpg)
 
 You can customize the link list information to appear in the following formats:
 

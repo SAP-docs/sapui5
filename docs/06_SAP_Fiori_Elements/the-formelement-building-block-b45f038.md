@@ -2,7 +2,9 @@
 
 # The `FormElement` Building Block
 
-The `FormElement` building block provides an easy way to add a label and visibility control to a field inside a form. The label can either be set manually, or the building block will get the label automatically from the annotations.
+You can use the `FormElement` building block to add a label and visibility control to a field inside a form.
+
+The label can either be set manually, or the building block will get the label automatically from the annotations.
 
 
 
@@ -59,5 +61,5 @@ You can use the `FormElement` building block inside custom header facets, custom
 
 ## API
 
-For information about the `FormElement` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.FormElement).
+For information about the `FormElement` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.form.FormElement).
 

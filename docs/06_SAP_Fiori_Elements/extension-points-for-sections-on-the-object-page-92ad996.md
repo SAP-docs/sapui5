@@ -5,7 +5,7 @@
 You define application-specific sections in the form of annotations. However, in some cases you might need to integrate components into the front end, for example charts or attachments.
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
@@ -38,54 +38,56 @@ To define a section on UI level - you do this if you want to add a custom look a
 
 > ### Sample Code:  
 > ```json
-> {
->    "sap.ui5": {
->       "routing": {
->          "targets": {
->             "SalesOrderManageObjectPage": {
->                "options": {
->                   "settings": {
->                      "content": {
->                         "body": {
->                            "sections": {
->                               "customSection": {
->                                  "template": "SalesOrder.ext.CustomSection",
->                                  "title": "{i18n>customSection}",
->                                  "position": {
->                                     "placement": "Before",
->                                     "anchor": "SalesOrderItems"
->                                  }
->                               },
->                               "anotherCustomSection": {
->                                  "title": "Multiple Subsections",
->                                  "subSections": {
->                                      "firstSubSectionKey": {
->                                          "title": "First Subsection",
->                                          "template": "SalesOrder.ext.CustomFieldForm"
->                                      },
->                                      "secondSubSectionKey": {
->                                          "title": "Second Subsection",
->                                          "template": "SalesOrder.ext.CustomFieldForm2",
->                                          "position": {
->                                              "placement": "After",
->                                              "anchor": "firstSubSectionKey"
->                                          }
->                                      }
->                                  }
->                                  "position": {
->                                     "placement": "After",
->                                     "anchor": "customSection"
->                                  }
->                               }
->                            }
->                         }
->                      }
->                   }
->                }
->             }
->          }
->       }
->    }
+> { 
+>     "sap.ui5": { 
+>         "routing": { 
+>             "targets": { 
+>                 "SalesOrderManageObjectPage": { 
+>                     "options": { 
+>                         "settings": { 
+>                             "content": { 
+>                                 "body": { 
+>                                     "sections": { 
+>                                         "customSection": { 
+>                                             "template": "SalesOrder.ext.CustomSection", 
+>                                             "title": "{i18n>customSection}", 
+>                                             "position": { 
+>                                                 "placement": "Before", 
+>                                                 "anchor": "SalesOrderItems" 
+>                                             }, 
+>                                             "isPartOfPreview": false 
+>                                         }, 
+>                                         "anotherCustomSection": { 
+>                                             "title": "Multiple Subsections", 
+>                                             "subSections": { 
+>                                                 "firstSubSectionKey": { 
+>                                                     "title": "First Subsection", 
+>                                                     "template": "SalesOrder.ext.CustomFieldForm" 
+>                                                 }, 
+>                                                 "secondSubSectionKey": { 
+>                                                     "title": "Second Subsection", 
+>                                                     "template": "SalesOrder.ext.CustomFieldForm2", 
+>                                                     "position": { 
+>                                                         "placement": "After", 
+>                                                         "anchor": "firstSubSectionKey" 
+>                                                     }, 
+>                                                     "isPartOfPreview": false 
+>                                                 } 
+>                                             }, 
+>                                             "position": { 
+>                                                 "placement": "After", 
+>                                                 "anchor": "customSection" 
+>                                             } 
+>                                         } 
+>                                     } 
+>                                 } 
+>                             } 
+>                         } 
+>                     } 
+>                 } 
+>             } 
+>         } 
+>     } 
 > }
 > ```
 
@@ -232,6 +234,23 @@ Actions Object
 <td valign="top">
 
 Allows you to add actions placed by the framework to the custom \(sub-\)sections in the same format as described in [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+isPartOfPreview
+
+</td>
+<td valign="top">
+
+true | false
+
+</td>
+<td valign="top">
+
+Defines if the section is hidden and the Show More and Show Less buttons are displayed as described in [Showing and Hiding Content in Object Page Facets](showing-and-hiding-content-in-object-page-facets-9fcea86.md). The default setting is true and the section is displayed.
 
 </td>
 </tr>

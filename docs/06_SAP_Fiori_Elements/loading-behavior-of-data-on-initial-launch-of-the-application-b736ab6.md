@@ -2,7 +2,10 @@
 
 # Loading Behavior of Data on Initial Launch of the Application
 
-Several factors affect the loading behavior of data on initial launch of the application.
+You can configure the loading behavior of SAP Fiori apps.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
 
 Some of the factors are initial configuration of the variant, initial loading configuration for the *Standard* variant as specified in the manifest by the application developers, or initial launch of the application with a navigation context.
 
@@ -22,19 +25,23 @@ Some of the factors are initial configuration of the variant, initial loading co
 You can change the default loading behavior of data by configuring the `"loadDataOnAppLaunch"` property in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
+> 
 > "pages": {
->                    "ListReport | < EntitySet > ": {
->                                       "entitySet": < EntitySet > ,
->                                        "component": {
->                                                             "name": "sap.suite.ui.generic.template.ListReport",
->                                                             "list": true,
->                                                              "settings": {
->                                                                               "dataLoadSettings": {
->                                                                             "loadDataOnAppLaunch": "always" / "never"/ "ifAnyFilterExist"
->                                                          }
->                                       }
->                    }
+>     "ListReport|<EntitySet>": {
+>         "entitySet": <EntitySet>,
+>         "component": {
+>             "name": "sap.suite.ui.generic.template.ListReport",
+>             "list": true,
+>             "settings": {
+>                 "dataLoadSettings": {
+>                     "loadDataOnAppLaunch": "always" / "never" / "ifAnyFilterExist"
+>                 }
+>             }
+>         }
+>     }
 > }
 > 
 > ```
@@ -55,19 +62,23 @@ These settings work for both single-view and multi-view applications.
 For multi-view scenarios, you can also change the `enableAutobinding` manifest setting to `true` or `false` under `quickVariantSelectionX` instead of using the `loadDataOnAppLaunch` setting. However, SAP Fiori elements recommends that you use the `loadDataOnAppLaunch` manifest setting for the multi-view scenario.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
+> 
 > "pages": {
->           "ListReport|<EntitySet> ": {
->                   "entitySet": <EntitySet>,
->                   "component": {
->                   "name": "sap.suite.ui.generic.template.ListReport",
->                   "settings": {
->                               "quickVariantSelectionX": {
->                                       "enableAutoBinding":  false
->                                }
->                    }
->              }
->           }
+>     "ListReport|<EntitySet>": {
+>         "entitySet": <EntitySet>,
+>         "component": {
+>             "name": "sap.suite.ui.generic.template.ListReport",
+>             "settings": {
+>                 "quickVariantSelectionX": {
+>                     "enableAutoBinding": false
+>                 }
+>             }
+>         }
+>     }
+> }
 > 
 > ```
 

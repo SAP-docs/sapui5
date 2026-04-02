@@ -8,11 +8,11 @@ The following tables show available configuration options.
 > In earlier framework versions, the configuration options available in SAPUI5 could be found in the [API Reference via the `sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration). This legacy module has been deprecated with SAPUI5 1.120 and replaced by a modular, future-proof solution for configuration handling.
 
 > ### Note:  
-> The SAPUI5 configuration options now follow a consistent naming scheme based on kebab-case notation. Configuration options in older framework versions or code samples \(especially those from before SAPUI5 1.120\) may follow the former camelCase notation. Typically, you should now use \(or search for\) the newer names, e.g. `log-level` instead of `logLevel`.
+> As of SAPUI5 1.120, the configuration options follow a consistent naming scheme based on kebab-case notation. Configuration options in older framework versions or code samples \(especially those from before SAPUI5 1.120\) may still use the former camelCase notation. **You must now use the kebab-case names** instead of the old camelCase syntax, e.g. `log-level` instead of `logLevel`.
 
 The available configuration options are given below the topic they belong to, e.g. **Localization**, **Theming**, etc. Often, these topics correspond to modules with the same name, which provide methods to retrieve and set the values of their associated configuration options.
 
-Some configuration options can also be set via URL parameters, which is indicated by an entry in the corresponding column in the tables below. URL parameter names are composed of the `sap-ui-` prefix together with the name of the configuration option, for example: `sap-ui-log-level=ALL`. An application may set the `ignore-url-parameters` option to `true` to disable configuration URL parameters.
+Some configuration options can also be set via URL parameters, which is indicated by an entry in the corresponding column in the tables below. URL parameter names are composed of the `sap-ui-` prefix together with the name of the configuration option, for example: `sap-ui-log-level=ALL`. An application may set the `ignore-url-params` option to `true` to disable configuration URL parameters.
 
 Typically, configuration options are evaluated when booting SAPUI5. After that, all changes to these options are ignored. For some configuration options, specific APIs exist that allow you to modify their values at runtime. This is indicated by an entry in the corresponding column in the tables below, which usually also provides a link to the respective API method.
 
@@ -209,7 +209,7 @@ by URL parameter
 </td>
 <td valign="top">
 
-Type: [`sap/base/18n/date/CalendarType`](https://ui5.sap.com/#/api/module:sap/base/18n/date/CalendarType)
+Type: [`sap/base/i18n/date/CalendarType`](https://ui5.sap.com/#/api/module:sap/base/i18n/date/CalendarType)
 
 Default value: If there is no value defined, the actual value is determined from the locale data for the configured locale.
 
@@ -237,13 +237,13 @@ Defines the calendar type that is used for locale-dependent, date-related featur
 </td>
 <td valign="top">
 
-Type: [`sap/base/18n/date/CalendarWeekNumbering`](https://ui5.sap.com/#/api/module:sap/base/18n/date/CalendarWeekNumbering)
+Type: [`sap/base/i18n/date/CalendarWeekNumbering`](https://ui5.sap.com/#/api/module:sap/base/i18n/date/CalendarWeekNumbering)
 
 Default value: `Default`
 
 Defines the calendar week numbering algorithm that is used to determine the first day of the week and the first calendar week of the year.
 
-For more information, see the [API Reference: `sap/base/18n/date/CalendarWeekNumbering`](https://ui5.sap.com/#/api/module:sap/base/18n/date/CalendarWeekNumbering)
+For more information, see the [API Reference: `sap/base/i18n/date/CalendarWeekNumbering`](https://ui5.sap.com/#/api/module:sap/base/i18n/date/CalendarWeekNumbering)
 
 </td>
 <td valign="top">

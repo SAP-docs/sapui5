@@ -2,66 +2,33 @@
 
 # Browser and Platform Support
 
-Here you can find information on the browser and platform support for the SAPUI5 libraries on iOS, Android, macOS, and Windows platforms.
+Supported browsers and platforms for the SAPUI5 libraries.
 
 > ### Note:  
-> The single source of truth about supported browsers and platforms is the Product Availability Matrix \(PAM\) that you can find at [https://support.sap.com/pam](https://support.sap.com/pam). SAPUI5 is not a product of its own, so please check the PAM for the product you're using SAPUI5 with. For more information, see SAP Note [1716423](https://me.sap.com/notes/1716423).
-> 
-> The following sections only contain additional information on restrictions and platform support information for specific SAPUI5 libraries in a summarized form.
-
-As SAPUI5 is based on CSS3, HTML5, and modern ECMAScript, only browsers with corresponding capabilities are supported. In general, only major versions that are also supported by the respective platform can be supported by the SAPUI5 framework.
-
-> ### Note:  
-> Certain restrictions apply for the usage of modern ECMAScript by SAPUI5 applications. For more information, see [ECMAScript Support](ecmascript-support-0cb44d7.md).
-
-Depending on the platform your SAPUI5 apps run on, different browsers in different versions are supported. If you know which platform and which browsers are used by your users, you can decide on which libraries to use for your app.
+> SAPUI5 is not a product of its own, so please check the Product Availability Matrix \(PAM\) at [https://support.sap.com/pam](https://support.sap.com/pam) for the product you're using SAPUI5 with. For more information, see SAP Note [1716423](https://me.sap.com/notes/1716423).
 
 
 
-## Overview of Supported Browsers, Platforms, and Reference Devices
+## SAP Vendor-Synchronized Policy
 
-The following tables give a general overview of the browsers, platforms, and reference devices supported by the main SAPUI5 libraries. Combinations not included in the table may still function but are not part of the supported scope. Before you report an issue, make sure that it can be reproduced on one of the browser and platform combinations listed.Browsers and platforms that are no longer supported by their respective vendors are also not supported by SAP. There are certain known device-browser combinations that lead to visual degradations. For more information, see [Visual Degradations](visual-degradations-f08f296.md).
-
-> ### Note:  
-> Browsers are constantly evolving across various devices. Browser upgrades may introduce changes that are not backward compatible and can affect the behavior of SAPUI5. SAP has no control over these upgrades and doesn't provide any warranty regarding the features or qualities of these browsers.
+SAP does not provide support for browsers or platforms that are no longer under general support by their respective vendors. This policy also applies when a vendor offers extended support agreements.
 
 
 
 <a name="loio74b59efa0eef48988d3b716bd0ecc933__section_bgw_kns_hnb"/>
 
-## Browser and Platform Support Matrix
+## Browser Support
+
+The following tables provide details on supported browsers and platforms.
+
+**Supported Desktop Browsers and Operating Systems**
 
 
 <table>
 <tr>
 <th valign="top" align="center">
 
-Platform
-
-</th>
-<th valign="top" align="center">
-
-Device Category
-
-</th>
-<th valign="top" align="center">
-
-Platform Version
-
-</th>
-<th valign="top" align="center">
-
-Safari
-
-</th>
-<th valign="top" align="center">
-
-Web View
-
-</th>
-<th valign="top" align="center">
-
-Microsoft Edge \(Chromium\)<sup>3</sup>
+Desktop
 
 </th>
 <th valign="top" align="center">
@@ -71,75 +38,61 @@ Google Chrome
 </th>
 <th valign="top" align="center">
 
+Microsoft Edge
+
+</th>
+<th valign="top" align="center">
+
 Mozilla Firefox
 
 </th>
 <th valign="top" align="center">
 
-SAP Fiori Client
+Apple Safari
 
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="2">
-
-Windows<sup>2</sup>
-
-</td>
 <td valign="top">
 
-Desktop
-
-</td>
-<td valign="top">
-
-Windows 10<sup>1</sup>
-
-Windows 11
+**Windows** \(Version 11\)
 
 </td>
 <td valign="top" align="center">
 
-\-
-
-</td>
-<td valign="top">
-
-Latest version
-
-</td>
-<td valign="top">
-
-Latest version
-
-</td>
-<td valign="top">
-
-Latest version
-
-</td>
-<td valign="top" rowspan="2">
-
-Latest version and latest Extended Support Release \(ESR\)<sup>10</sup>
+Latest stable version
 
 </td>
 <td valign="top" align="center">
 
-\-
+Latest stable version
+
+</td>
+<td valign="top" align="center">
+
+Latest release and latest ESR
+
+</td>
+<td valign="top" align="center">
+
+n/a
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Touch<sup>6, 7, 9</sup>
+**macOS** \(Latest 2 major versions\)
 
 </td>
-<td valign="top">
+<td valign="top" align="center">
 
-Windows 10<sup>1</sup>
+Latest stable version
 
-Windows 11
+</td>
+<td valign="top" align="center">
+
+Latest stable version
 
 </td>
 <td valign="top" align="center">
@@ -147,188 +100,118 @@ Windows 11
 \-
 
 </td>
-<td valign="top">
+<td valign="top" align="center">
 
 Latest version
-
-</td>
-<td valign="top">
-
-Latest version<sup>10</sup>
-
-</td>
-<td valign="top">
-
-Latest version<sup>10</sup>
-
-</td>
-<td valign="top">
-
-Latest version<sup>8</sup>
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-macOS
-
-</td>
-<td valign="top">
-
-Desktop
-
-</td>
-<td valign="top">
-
-Latest major 2 versions
-
-</td>
-<td valign="top">
-
-Latest version
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-</td>
-<td valign="top">
-
-Latest version <sup>6</sup>
-
-</td>
-<td valign="top">
-
-Latest version<sup>6</sup>
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-iOS & iPadOS<sup>4</sup>
-
-</td>
-<td valign="top">
-
-Phone and Tablet<sup>6, 7, 9</sup>
-
-</td>
-<td valign="top">
-
-Latest version
-
-</td>
-<td valign="top">
-
-Latest version
-
-</td>
-<td valign="top">
-
-Latest version<sup>10</sup>
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-</td>
-<td valign="top">
-
-Latest version<sup>8</sup>
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Android<sup>5</sup>
-
-</td>
-<td valign="top">
-
-Phone and Tablet<sup>6, 7, 9</sup>
-
-</td>
-<td valign="top">
-
-Latest major 3 versions supported by Google
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-</td>
-<td valign="top">
-
-Latest version
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-</td>
-<td valign="top">
-
-Latest version<sup>8</sup>
 
 </td>
 </tr>
 </table>
 
-1\) Windows 10 is supported only until official end of support by Microsoft \(October 14, 2025\). Although applications are expected to continue to run on Windows 10, it is strongly recommended to upgrade to Windows 11 as soon as possible.  
- 2\) The specified browsers are also supported in virtual environments, such as Citrix and VMware. Any issues found must be reproducible in a non-virtualized environment.  
- 3\) SAPUI5 treats Microsoft Edge \(Chromium\) like Google Chrome from a technical perspective. However, if your personal or organizational tracking prevention settings in MS Edge are too strict, loading SAPUI5 from hostnames ending in `hana.ondemand.com` may be blocked. To prevent this, load SAPUI5 from `https://ui5.sap.com/`  \(see [Short and Powerful: Convenient URLs for SAPUI5/OpenUI5 CDN](https://community.sap.com/t5/technology-blog-posts-by-sap/short-and-powerful-convenient-urls-for-sapui5-openui5-cdn/bc-p/13525618)\). Alternatively, ensure that `[*.]hana.ondemand.com` is added to `edge://settings/privacy/trackingPrevention/trackerExceptions` as outlined in SAP Note [3216225](https://me.sap.com/notes/3216225).  
- 4\) We use current Apple iPhone and iPad devices for testing and reproducing the reported issues.  
- 5\) Android-based devices are very fragmented in matters of operating system variants and hardware diversity. We use current Samsung Galaxy S and Galaxy Tab S series devices for testing and reproducing the reported issues.  
- 6\) Not supported for `sap.ui.commons` and `sap.ui.ux3`.  
- 7\) Not supported for `sap.sac.df`.  
- 8\) With the removal of the SAP Fiori Client from the Public App stores, preferable native browsers should be used on mobile devices. For more information see, [2992772](https://me.sap.com/notes/2992772).  
-9\) Not supported for `sap.gantt`. Note that gantt charts consuming `sap.gantt` can be displayed on tablet devices.  
- 10\) Not supported for `sap.ui.vbm`.
+**Supported Mobile Browsers and Operating Systems**
+
+
+<table>
+<tr>
+<th valign="top" align="center">
+
+Mobile
+
+</th>
+<th valign="top" align="center">
+
+Google Chrome
+
+</th>
+<th valign="top" align="center">
+
+Apple Safari
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+**iOS & iPadOS** \(Latest version\)
+
+</td>
+<td valign="top" align="center">
+
+\-
+
+</td>
+<td valign="top" align="center">
+
+Latest version
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Android** \(Latest 3 major versions supported by Google\)
+
+</td>
+<td valign="top" align="center">
+
+Latest stable version
+
+</td>
+<td valign="top" align="center">
+
+n/a
+
+</td>
+</tr>
+</table>
+
+
+
+## Additional Information
+
+-   Windows 10 support ended on October 14, 2025. Although SAPUI5 is expected to continue running on Windows 10, upgrade to Windows 11 is strongly recommended.
+-   Touch input on Windows is supported, subject to the restrictions listed below.
+-   For Firefox, ESR stands for Extended Support Release.
+-   The SAP Fiori Client remains supported; however, it is no longer available in public app stores. Therefore, native browsers should be used on mobile devices. For more information, see SAP Note [2992772](https://me.sap.com/notes/2992772).
+-   Support is provided for the latest WebView on Windows and iPadOS/iOS. Certain features may be limited compared to regular browsers.
+-   If browser tracking-prevention settings \(for example, in Microsoft Edge\) block hostnames ending in hana.ondemand.com, SAPUI5 may not load. To avoid this, load SAPUI5 from https://ui5.sap.com/ or add \[\*.\]hana.ondemand.com to your browser’s tracking exceptions \(see SAP Note [3216225](https://me.sap.com/notes/3216225)\).
+
+
+
+
+## Known Issues
+
+Additional restrictions apply to specific SAPUI5 libraries as listed below:
+
+-   `sap.gantt`, `sap.sac.df`, `sap.ui.commons`, `sap.ui.ux3`, and `sap.ui.vbm` libraries do not support touch input on Windows.
+-   `sap.gantt`, `sap.sac.df`, `sap.ui.commons`, and `sap.ui.ux3` libraries are not supported on mobile devices. Note that Gantt charts consuming `sap.gantt` can be displayed on tablet devices.
+-   `sap.ui.commons` and `sap.ui.ux3` are not supported in Google Chrome or Microsoft Edge on macOS.
+-   `sap.ui.vbm` is not supported in Mozilla Firefox or in WebView on iPadOS/iOS.
+-   [Visual Degradations](visual-degradations-f08f296.md) may occur for certain combinations of browsers and platforms.
+
+
+
+## ECMAScript Support
+
+SAPUI5 leverages modern ECMAScript, HTML5, and CSS3. Certain restrictions apply for the usage of ECMAScript by SAPUI5 applications. For more information, see [ECMAScript Support](ecmascript-support-0cb44d7.md).
 
 
 
 <a name="loio74b59efa0eef48988d3b716bd0ecc933__MS_IE"/>
 
-## SAPUI5 Support Status for Microsoft Internet Explorer 11
+## Reproducing Support Issues
 
-Support for Microsoft Internet Explorer 11 \(IE11\) ended with the end of IE11 support by Microsoft, and for the sake of completeness Internet Explorer mode of MS Edge was never supported by SAPUI5.
+SAPUI5 may function on browser and platform combinations outside the officially supported scope. However, any reported issue must be reproducible on a supported browser and platform combination.
 
-For more information, see SAP Note [1672817](https://me.sap.com/notes/1672817).
+For Windows, the specified browsers are also supported in virtual environments, such as Citrix and VMware. However, any issues found must be reproducible in a non-virtualized environment.
+
+For mobile devices, the reported issues must be reproducible on:
+
+-   current Apple iPhone and iPad devices
+-   current Samsung Galaxy S phone and Galaxy Tab S Android devices
+
+
+
+> ### Note:  
+> Browsers are constantly evolving across various platforms. Browser upgrades may introduce changes that are not backward compatible and can affect the behavior of SAPUI5. SAP doesn't provide any warranty regarding the features or qualities of these browsers.
 

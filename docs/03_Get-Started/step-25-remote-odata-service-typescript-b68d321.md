@@ -59,32 +59,32 @@ We schedule the simpleproxy middleware after the `compression` middleware, right
 ```
 specVersion: '3.0'
 metadata:
-  name: "ui5.walkthrough"
+    name: "ui5.walkthrough"
 type: application
 framework:
-  name: OpenUI5
-  version: "1.120.1"
-  libraries:
-    - name: sap.m
-    - name: sap.ui.core
-    - name: themelib_sap_horizon
+    name: OpenUI5
+    version: "1.120.1"
+    libraries:
+        - name: sap.m
+        - name: sap.ui.core
+        - name: themelib_sap_horizon
 builder:
-  customTasks:
-  - name: ui5-tooling-transpile-task
-    afterTask: replaceVersion
+    customTasks:
+    - name: ui5-tooling-transpile-task
+        afterTask: replaceVersion
 server:
-  customMiddleware:
-  - name: ui5-tooling-transpile-middleware
-    afterMiddleware: compression
-  - name: ui5-middleware-serveframework
-    afterMiddleware: compression
-  - name: ui5-middleware-simpleproxy
-    afterMiddleware: compression
-    mountPath: /V2
-    configuration:
-      baseUri: "https://services.odata.org"
-  - name: ui5-middleware-livereload
-    afterMiddleware: compression
+    customMiddleware:
+    - name: ui5-tooling-transpile-middleware
+        afterMiddleware: compression
+    - name: ui5-middleware-serveframework
+        afterMiddleware: compression
+    - name: ui5-middleware-simpleproxy
+        afterMiddleware: compression
+        mountPath: /V2
+        configuration:
+            baseUri: "https://services.odata.org"
+    - name: ui5-middleware-livereload
+        afterMiddleware: compression
 ```
 
 
@@ -101,29 +101,29 @@ In the `models` section, we replace the content of the `invoice` model. This key
 
 ```
 {
-	...
-	"sap.app": {
-		...,
-		"dataSources": {
-			"invoiceRemote": {
-				"uri": "V2/Northwind/Northwind.svc/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "2.0"
-				}
-			}
-		}
-	},
-	...
-	"sap.ui5": {
-		...
-		"models": {
-			...
-			"invoice": {
-				"dataSource": "invoiceRemote"
-			}
-		}
-		...
+...
+    "sap.app": {
+        ...,
+        "dataSources": {
+            "invoiceRemote": {
+                "uri": "V2/Northwind/Northwind.svc/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    ...
+    "sap.ui5": {
+        ...
+        "models": {
+            ...
+            "invoice": {
+                "dataSource": "invoiceRemote"
+            }
+        }
+...
 ```
 
 Our component now automatically creates an instance of `sap.ui.model.odata.v2.ODataModel` according to the settings we specified above, and makes it available as a model named `invoice`. When you use the `invoiceRemote` data source, the `ODataModel` fetches the data from the real Northwind OData service. The invoices we receive from the Northwind OData service have identical properties as the JSON data we used previously \(except for the `status` property, which is not available in the Northwind OData service\).

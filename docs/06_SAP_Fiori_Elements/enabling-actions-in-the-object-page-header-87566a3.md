@@ -4,6 +4,9 @@
 
 You can enable generic actions in your object header.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md).
+
 *Edit*, *Delete* and *Copy* are the generic actions.
 
 All `com.sap.vocabularies.UI.v1.DataFieldForAction` within the unqualified `UI.Identification` are interpreted as actions. The system renders a button in the header displaying the text of the data field label.
@@ -176,7 +179,7 @@ Applications can define a label for this button. If a label is not provided, the
 **Related Information**  
 
 
-[Displaying Actions on the Object Page](displaying-actions-on-the-object-page-91f81fa.md "")
+[Displaying Actions on the Object Page](displaying-actions-on-the-object-page-91f81fa.md "Specific rules apply when displaying actions on the object page.")
 
 [Actions](actions-14418d7.md "You can use generic actions provided by SAP Fiori elements and implement application-specific actions using annotations or extension points.")
 

@@ -24,7 +24,7 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
 
 ```
 {
-  "_version": "1.65.0",
+  "_version": "2.6.0",
   "sap.app": {
 	"id": "ui5.walkthrough",
 	"i18n": "i18n/i18n.properties",
@@ -45,7 +45,7 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
   },
   "sap.ui5": {
 	"dependencies": {
-	  "minUI5Version": "1.108.0",
+	  "minUI5Version": "1.146.0",
 	  "libs": {
 		"sap.ui.core": {},
 		"sap.m": {}
@@ -109,7 +109,7 @@ The content of the `manifest.json` file is a configuration object in JSON format
 
     -   `rootView`: If you specify this parameter, the component will automatically instantiate the view and use it as the root for this component
 
-    -   `dependencies`: Here we declare the UI libraries used in the application
+    -   `dependencies`: Here we declare the libraries used in the application
 
     -   `models`: In this section of the descriptor we can define models that will be automatically instantiated by SAPUI5 when the app starts. Here we can now define the local resource bundle. We define the name of the model "i18n" as key and specify the bundle file by namespace. As in the previous steps, the file with our translated texts is stored in the `i18n` folder and named `i18n.properties`. We simply prefix the path to the file with the namespace of our app. The manual instantiation in the app component's init method will be removed later in this step. In this tutorial, the `supportedLocales` and `fallbackLocale` properties are set to empty strings. We do this because our demo app uses only one `i18n.properties` file for simplicity, and in this way we prevent the browser from trying to load additional `i18n_*.properties` files based on your browser settings and locale. For more information, see [Supported Locales and Fallback Chain](../04_Essentials/supported-locales-and-fallback-chain-ec753bc.md).
 

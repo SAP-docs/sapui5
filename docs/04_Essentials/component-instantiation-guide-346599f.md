@@ -605,7 +605,7 @@ createContent: function() {
 
 [Enabling Routing in Nested Components](enabling-routing-in-nested-components-fb19f50.md "Every SAPUI5 component can define routing configuration in its manifest and a UI5 router instance will be created automatically after the component is instantiated.")
 
-[Descriptor Dependencies to Libraries and Components](descriptor-dependencies-to-libraries-and-components-8521ad1.md "Description of the performance-relevant attributes that are available for the descriptor for applications, components and libraries")
+[Manifest Dependencies to Libraries and Components](manifest-dependencies-to-libraries-and-components-8521ad1.md "Description of the performance-relevant attributes that are available for the manifest (also known as descriptor for applications, components and libraries).")
 
 [The Owner Component](the-owner-component-a7a3138.md "If you wish to extend your view or controller, you must define the extension in the manifest.json of their owner component.")
 

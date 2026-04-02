@@ -6,6 +6,11 @@ You can add a read-only rating indicator to a table.
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding a Rating Indicator to a Table](adding-a-rating-indicator-to-a-table-a797173.md).
+
+
+
 The rating indicator allows you to visually represent the value of a field from the back-end system with the corresponding number of stars \(configurable\). This field can indicate a rating or classification for a specific object or item.
 
 Decimal values are rounded up or down accordingly. If a value falls between x.25 and x.74, a half star is displayed.

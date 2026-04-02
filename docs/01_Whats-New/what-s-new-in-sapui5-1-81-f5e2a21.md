@@ -774,7 +774,7 @@ SAP Fiori Elements
 
 -   It is now possible to exclude certain date range value in semantic date range fields. For more information, see [Enabling Semantic Operators in the Filter Bar](../06_SAP_Fiori_Elements/enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 
--   It is now possible to create non-draft sub-objects using a dialog on the object page. For more information, see [Enabling Sub-object Creation Through Dialog on a Non-draft Object Page](../06_SAP_Fiori_Elements/enabling-sub-object-creation-through-dialog-on-a-non-draft-object-page-d7be84d.md).
+-   It is now possible to create non-draft sub-objects using a dialog on the object page. For more information, see [Enabling Subobject Creation Through Dialog on a Non-draft Object Page](../06_SAP_Fiori_Elements/enabling-subobject-creation-through-dialog-on-a-non-draft-object-page-d7be84d.md).
 
 -   The SAP Fiori elements list reports and analytical list pages now support the use of user default filters and filters from standard variants together in combination.
 
@@ -848,6 +848,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

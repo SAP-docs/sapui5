@@ -2,12 +2,15 @@
 
 # Using Global Side Effects
 
-Global side effects are those side effects that are defined without any source properties or source entities.
+You can configure global side effects.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Using Global Side Effects](using-global-side-effects-955ae31.md).
 
 > ### Note:  
 > Global side effects are only applicable to draft-enabled applications.
 
-Global side effects can be annotated under each entity separately. When you press [Enter\] on any input field, the global side effect defined under the corresponding entity is triggered.
+Global side effects are those side effects that are defined without any source properties or source entities. Global side effects can be annotated under each entity separately. When you press [Enter\] on any input field, the global side effect defined under the corresponding entity is triggered.
 
 The following sample code shows the global side effect with target fields and the `TriggerAction`:
 
@@ -43,13 +46,13 @@ It is recommended to specify the target properties or target entities for global
 > `manifest.json`
 > 
 > ```
+> 
 > "sap.ui.generic.app": {
->         "_version": "1.3.0",
->         "settings": {
->             "forceGlobalRefresh": true,
->             .....
->                 }
->             },
+>     "settings": {
+>         "forceGlobalRefresh": true,
+>         ...
+>     }
+> },
 > ```
 
 -   If the `forceGlobalRefresh` parameter is set to `true`, a refresh of the entire model is triggered when you press [Enter\].
@@ -64,5 +67,5 @@ For newly generated apps, the \(design time\) default is `false`, that is, the p
 **Related Information**  
 
 
-[Draft Handling](draft-handling-b0eb3cc.md "A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements supports the creation of apps using draft handling.")
+[Draft Handling](draft-handling-b0eb3cc.md "You can configure how your SAP Fiori elements app handles drafts.")
 

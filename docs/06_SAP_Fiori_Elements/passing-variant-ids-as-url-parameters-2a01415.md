@@ -2,7 +2,10 @@
 
 # Passing Variant IDs as URL Parameters
 
-You can pass the variant ID as part of the navigation context \(or as a URL parameter\) while navigating from an application to the analytical list page or to the list report, or the other way around.
+You can pass the variant ID as part of the navigation context \(or as a URL parameter\) while navigating between an application and an analytical list page or a list report page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Passing Variant IDs as URL Parameters](passing-variant-ids-as-url-parameters-4132ffa.md).
 
 The URL parameter value should be an ID of the variant that exists in the target app. Ensure that the variant name is not passed as the URL parameter.
 
@@ -40,9 +43,9 @@ You can choose to pass a page variant or a control variant using these parameter
 > ### Note:  
 > -   If you add both a page variant and a control variant to a URL:
 > 
->     -   The page variant-based analytical list page or list report ignores the control variant ID and applies the page level variant
+>     -   The page variant-based analytical list page or list report page ignore the control variant ID and apply the page level variant.
 > 
->     -   The control variant-based analytical list page or list report applies the control variant ID. If the control variant ID is missing, the page variant ID applies to the control
+>     -   The control variant-based analytical list page or list report page apply the control variant ID. If the control variant ID is missing, the page variant ID applies to the control.
 > 
 >     -   If the variant ID passed is invalid, the default or standard variant is considered.
 > 
@@ -72,5 +75,5 @@ You can pass the variant ID as the URL parameter by updating the `manifest.json`
 **Related Information**  
 
 
-[Managing Variants](managing-variants-b82d987.md "Allows you to manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-b82d987.md "You can manage variants with different structures in the filter and content areas.")
 

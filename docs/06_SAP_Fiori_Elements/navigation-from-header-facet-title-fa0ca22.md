@@ -2,10 +2,7 @@
 
 # Navigation from Header Facet Title
 
-Applications can configure header facets so that end users can perform both in-page navigation and the navigation to an external application.
-
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
+You can configure header facets to allow users to perform both internal navigation and external navigation.
 
 
 
@@ -13,7 +10,7 @@ Applications can configure header facets so that end users can perform both in-p
 
 ## In-Page Navigation
 
-This allows end user to click on the title of the header facet and navigate to a section/sub section in the same page.
+This allows the user to click on the title of the header facet and navigate to a section/sub section in the same page.
 
 Users can navigate within a page from a data point or micro chart in the header to a section or a subsection. In-page navigation is facilitated by rendering the title of the header item \(data point or micro chart\) as a link. To enable in-page navigation, you must add the control configuration for the header item in the `manifest.json` file:
 
@@ -43,13 +40,13 @@ Users can navigate within a page from a data point or micro chart in the header 
 
 You can provide either the section ID or the subsection ID in the control configuration. In-page navigation to a custom section is also supported. If only the section ID is given, the user is shown the first subsection. The following controls support in-page navigation:
 
--   data point
+-   Data point
 
--   rating indicator
+-   Rating indicator
 
--   progress indicator
+-   Progress indicator
 
--   micro chart
+-   Micro chart
 
 
 Given an incorrect configuration, the user is shown an error message indicating that the specified section could not be found.
@@ -60,7 +57,7 @@ Given an incorrect configuration, the user is shown an error message indicating 
 
 ## External Navigation
 
-This allows end users to click on the title of the header facet and navigate to an external application as configured by the app developer.
+This allows users to click on the title of the header facet and navigate to an external application as configured by the app developer.
 
 
 

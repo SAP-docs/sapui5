@@ -2,9 +2,7 @@
 
 # SAPUI5: UI Development Toolkit for HTML5
 
-Create apps with rich user interfaces for modern web business applications, responsive across browsers and devices, based on HTML5. \(Documentation patch 1.145.0\)
-
-> ### Caution:  
+Create apps with rich user interfaces for modern web business applications, responsive across browsers and devices, based on HTML5. \(Documentation patch 1.146.0\)
 
 
 
@@ -61,9 +59,4 @@ For more information about SAP Fiori, see [http://www.sap.com/fiori](http://www.
 > For more information, see [Versioning and Maintenance of SAPUI5](02_Read-Me-First/versioning-and-maintenance-of-sapui5-91f0214.md).
 > 
 > Need a PDF version of the SAPUI5 documentation? Go to [https://help.sap.com/viewer/p/SAPUI5](https://help.sap.com/viewer/p/SAPUI5).
-
-
-
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [General Concepts](06_SAP_Fiori_Elements/general-concepts-f52647a.md).
 

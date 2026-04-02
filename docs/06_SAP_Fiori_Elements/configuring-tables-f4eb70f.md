@@ -90,10 +90,6 @@ You can use the `UI.LineItem` annotation to configure a table. It can also be pa
 **Related Information**  
 
 
-[Maintaining Standard Texts for Tables](maintaining-standard-texts-for-tables-aacfac5.md)
-
-[Maintaining Standard Texts for Charts](maintaining-standard-texts-for-charts-37cd601.md "For charts in analytical list pages, list reports, and object pages, if the system does not find any entries when using the filters, standard UI texts are displayed, which you can adapt in the i18n file of your app.")
-
 [Setting the Default Column Width](setting-the-default-column-width-a765253.md "You can customize the width of a column defined in a line item using the com.sap.vocabularies.HTML5.v1.CssDefaults UI annotation.")
 
 [Extension Points for Tables](extension-points-for-tables-d525522.md "You can use extension points to enhance tables in SAP Fiori elements-based apps.")

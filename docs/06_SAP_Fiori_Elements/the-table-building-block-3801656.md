@@ -2,7 +2,7 @@
 
 # The `Table` Building Block
 
-The `Table` building block provides an easy way to instantiate a table based on an `entitySet` or a specific navigation property.
+You can use the `Table` building block to instantiate a table based on an `entitySet` or a specific navigation property.
 
 
 
@@ -18,6 +18,45 @@ You can instantiate the building block by referencing the building block namespa
 This instantiates the actual control tree that corresponds to this building block.
 
 You can use the `Table` building block inside custom sections, custom subsections, and custom pages.
+
+You can use the `Table` building block to dynamically create tables at runtime. You can use this building block inside controllers for more flexibility and a wider variety of use cases. The following sample code shows an example of a table inside a dialog:
+
+> ### Sample Code:  
+> ```
+> 
+> createTable: function() {
+>     const table = new Table({
+>         contextPath: "/Entities",
+>         metaPath: "to_subEntities/@UI.LineItem"
+>     });
+>     const newDialog = new Dialog({
+>         title: "Dialog",
+>         content: [table],
+>         beginButton: new Button({
+>             text: "OK",
+>             press: function () {
+>                 newDialog.close();
+>             }
+>         }),
+>         endButton: new Button({
+>             text: "Cancel",
+>             press: function () {
+>                 newDialog.close();
+>             }
+>         })
+>     })
+> 
+>     newDialog.setBindingContext(context);
+>     newDialog.addStyleClass("sapUiContentPadding");
+>     this.getExtensionAPI().addDependent(newDialog);
+>     newDialog.open();
+> }
+> 
+> ```
+
+Any personalization done by the user is automatically stored and restored using `iAppState`. For more information about the `iAppState` mechanism, see [Store/Restore the Application State](store-restore-the-application-state-46bf248.md).
+
+If a table doesn't contain any data, users see an illustrated message. For more information, see[Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md) 
 
 You can use the `Table` building block to add bound and unbound actions, to group actions as menu buttons, to add custom columns, and to specify the create options for the table. For example, you have the following options:
 
@@ -138,7 +177,7 @@ You can interact and influence a `Table` building block using a set of propertie
 
 For more information about the `Table` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table). For more information, see the *API Reference* for `sap.fe.macros.Table` in the Demo Kit.
 
-For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableDefault).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableDefault).
 
 
 
@@ -196,7 +235,7 @@ Then, implement the `beforeRebindTable` extension point in the controller extens
 > 
 > ```
 
-For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Custom Actions](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customTableAction).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Custom Action](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customTableAction).
 
 
 

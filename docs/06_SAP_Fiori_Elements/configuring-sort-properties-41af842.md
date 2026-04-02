@@ -20,7 +20,7 @@ List, table, and stack cards support sorting by using the `sortBy` and `sortOrde
 >         ...
 >         "card04": {
 >             "model": "ZCD204_EPM_DEMO_SRV",
->             "template": "sap.ovp.cards.list",
+>             "template": "sap.ovp.cards.v4.list",
 >             "settings": {
 >                 "sortBy": "Price",
 >                 "sortOrder": "descending",

@@ -881,7 +881,7 @@ Control
 
 -   **No Data Texts in Object Page Tables**
 
-    Meaningful default texts are now provided for Object Page tables when a search does not return data. There is also an option to overwrite the default texts with app-specific texts. For more information, see [Maintaining Standard Texts for Tables](../06_SAP_Fiori_Elements/maintaining-standard-texts-for-tables-aacfac5.md).
+    Meaningful default texts are now provided for Object Page tables when a search does not return data. There is also an option to overwrite the default texts with app-specific texts.
 
 -   **Sticky Tab Bar in List Report and Worklist**
 
@@ -906,6 +906,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

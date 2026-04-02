@@ -6,6 +6,11 @@ You can add filters to all card types, by using the `com.sap.vocabularies.UI.v1.
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Card Filters](configuring-card-filters-ecde99f.md).
+
+
+
 The following example shows filter configuration in the annotation document. The record set is filtered by the `TotalSum` property and returns values between 0 and 8000. You can provide multiple filters in the `SelectOptions` collection.
 
 > ### Sample Code:  

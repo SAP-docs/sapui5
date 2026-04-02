@@ -1,8 +1,15 @@
 <!-- loio39bf75399d62480284fd1cfd376ed19e -->
 
+<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
+
 # Status Colors and Icons
 
 You can define status colors and icons.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Status Colors and Icons](status-colors-and-icons-1641180.md).
 
 
 
@@ -63,12 +70,12 @@ The property containing the criticality can have the following values \(derived 
 -   3 - Positive \(green\)
 
 -   > ### Note:  
-    > -   By default, SAP Fiori elements assumes that the `DataField` is also marked with "CriticalityRepresentationType/WithIcon" and sets the icon of the `ObjectStatus` appropriately \(for example, for fields marked with "com.sap.vocabularies.UI.v1.CriticalityType/Negative", SAP Fiori elements sets the 'sap-icon://status-negative'\).
+    > -   By default, SAP Fiori elements assumes that the `DataField` is also marked with `CriticalityRepresentationType/WithIcon` and sets the icon of the `ObjectStatus` appropriately. For example, for fields marked with `com.sap.vocabularies.UI.v1.CriticalityType/Negative`, the icon <span class="SAP-icons-V5"></span> is set.
     > 
-    > -   If the field is marked with "CriticalityRepresentationType/WithoutIcon", then the `ObjectStatus` is rendered without the icon.
+    > -   If the field is marked with `CriticalityRepresentationType/WithoutIcon`, then the `ObjectStatus` is rendered without the icon.
 
 
-The texts are not static, so you can change them to suit your needs by defining them in the criticality path. The following image shows examples of using these values in stock availability of products both in the list report and the object page:
+The texts are not static, so you can change them to suit your needs by defining them in the criticality path. The following image shows examples of using these values in stock availability of products both on the list report page and the object page:
 
 ![](images/LROP_Status_Colors_and_Icons_75aa307.png)
 

@@ -70,5 +70,5 @@ You can use the `waitForHeaderData` and `waitForViewportEnter` properties to def
 **Related Information**  
 
 
-[Rebinding a Table with Each Instance Change on an Object Page](rebinding-a-table-with-each-instance-change-on-an-object-page-a6946a8.md "You can rebind a table on each instance change in an object page.")
+[Rebinding a Table with Each Instance Change on an Object Page](rebinding-a-table-with-each-instance-change-on-an-object-page-a6946a8.md "You can rebind a table on an object page on each instance change.")
 

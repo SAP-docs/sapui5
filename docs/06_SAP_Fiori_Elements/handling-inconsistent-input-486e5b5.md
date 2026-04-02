@@ -2,7 +2,7 @@
 
 # Handling Inconsistent Input
 
-Users might enter data that is so inconsistent that the system cannot store it.
+Learn how SAP Fiori apps handle inconsistent input.
 
 For example, you've entered characters in a number field. Or you've entered more characters than the field length allows. The system behaves as described below.
 
@@ -14,14 +14,6 @@ The system also behaves like this when using the *Apply* button in the subobject
 
 > ### Note:  
 > This message lists only errors related to technical inconsistencies, not to logical inconsistencies. For example, if a user enters a business partner that does not exist, this error is not displayed. These types of errors are displayed in a state message when you save the object.
-
-
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-**System behavior in non-draft apps**
-
-Before users can save the data, the system displays a message prompting the users to solve these errors. After all errors have been solved, the object can be saved.
 
 
 

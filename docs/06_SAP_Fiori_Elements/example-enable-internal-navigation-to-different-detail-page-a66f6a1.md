@@ -2,7 +2,10 @@
 
 # Example: Enable Internal Navigation to Different Detail Page
 
-You can enable internal navigation to a different detail page \(that is, using different entity sets\) for a list report or an object page.
+You can enable internal navigation to a different detail page \(that is, using different entity sets\) for a list report page or an object page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md).
 
 In the extension function, you can define the logic or condition that triggers the navigation to the detail page. If none of the conditions mentioned in the extension are met, navigation to the default detail page is triggered.
 
@@ -14,66 +17,74 @@ Enabling conditional navigation to a different detail page can be achieved using
 
 > ### Sample Code:  
 > ```
+> 
 > onListNavigationExtension: function(oEvent) {
-> 			var oBindingContext = oEvent.getSource().getBindingContext();
-> 			var oObject = oBindingContext.getObject();
-> 			var sNavigationProperty;
-> 			switch (oObject.Column3){
-> 				case "100":
-> 					sNavigationProperty = "NavigationProperty1";
-> 					break;
-> 				case "200":
-> 					sNavigationProperty = "NavigationProperty2";
-> 					break;
-> 			}
-> 			if (sNavigationProperty){
-> 				var oExtensionAPI = this.extensionAPI;
-> 				var fnNavigate = function(){
-> 					return new Promise(function(fnResolve, fnReject){
-> 						var oModel = oBindingContext.getModel();
-> 						var oTarget;
-> 						oModel.createBindingContext(sNavigationProperty, oBindingContext, {}, function(oTarget){
-> 							var oNavigationController = oExtensionAPI.getNavigationController();
-> 							oNavigationController.navigateInternal(oTarget);
-> 							fnResolve();
-> 						});
-> 					});
-> 				};
-> 			oExtensionAPI.securedExecution(fnNavigate, {
->                 busy: {
->                                check: false
->                 },
->                 dataloss: {
->                              popup: false
->                 }
-> });
+>     var oBindingContext = oEvent.getSource().getBindingContext();
+>     var oObject = oBindingContext.getObject();
+>     var sNavigationProperty;
+>     switch (oObject.Column3){
+>         case "100":
+>             sNavigationProperty = "NavigationProperty1";
+>             break;
+>         case "200":
+>             sNavigationProperty = "NavigationProperty2";
+>             break;
+>     }
+>     if (sNavigationProperty){
+>         var oExtensionAPI = this.extensionAPI;
+>         var fnNavigate = function(){
+>             return new Promise(function(fnResolve, fnReject){
+>                 var oModel = oBindingContext.getModel();
+>                 var oTarget;
+>                 oModel.createBindingContext(sNavigationProperty, oBindingContext, {}, function(oTarget){
+>                     var oNavigationController = oExtensionAPI.getNavigationController();
+>                     oNavigationController.navigateInternal(oTarget);
+>                     fnResolve();
+>                 });
+>             });
+>         };
+>         oExtensionAPI.securedExecution(fnNavigate, {
+>             busy: {
+>                 check: false
+>             },
+>             dataloss: {
+>                 popup: false
+>             }
+>         });
+>         
+>         return true;
+>     }
+>     return false;
+> }
 > 
-> 				return true;				
-> 			}
-> 			return false;
-> 		}
+> ```
+
+For implementation in `manifest.json`, see the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
 > 
-> Sample Implementation of Manifest changes:
-> 		"pages": {
-> 					"ObjectPage|EntitySet1 ": {
-> 						"entitySet": " EntitySet1",
-> 						"component": {
-> 							"name": "sap.suite.ui.generic.template.ObjectPage"
-> 						}
-> 					},					
-> 					"ObjectPage| EntitySet2 ": {
-> 						"entitySet": " EntitySet2",
-> 						"component": {
-> 							"name": "sap.suite.ui.generic.template.ObjectPage"
-> 						}
-> 					},
-> 					"ObjectPage| EntitySet3": {
-> 						"entitySet": " EntitySet3",
-> 						"component": {
-> 							"name": "sap.suite.ui.generic.template.ObjectPage"
-> 						}
-> 					}
-> 
+> ```
+> "pages": {
+>     "ObjectPage|EntitySet1": {
+>         "entitySet": "EntitySet1",
+>         "component": {
+>             "name": "sap.suite.ui.generic.template.ObjectPage"
+>         }
+>     },
+>     "ObjectPage|EntitySet2": {
+>         "entitySet": "EntitySet2",
+>         "component": {
+>             "name": "sap.suite.ui.generic.template.ObjectPage"
+>         }
+>     },
+>     "ObjectPage|EntitySet3": {
+>         "entitySet": "EntitySet3",
+>         "component": {
+>             "name": "sap.suite.ui.generic.template.ObjectPage"
+>         }
+>     }
+> }
 > ```
 
 
@@ -82,28 +93,29 @@ Enabling conditional navigation to a different detail page can be achieved using
 
 ## Visual Indication for Table Rows when Navigated Using `onListNavigationExtension`
 
-You can implement the `onChildOpenedExtension` function within the list report/object page controller extension, where you can pass the binding path of corresponding list item to `fnSetPath`.
+You can implement the `onChildOpenedExtension` function within the list report page or object page controller extension, where you can pass the binding path of corresponding list item to `fnSetPath`.
 
 > ### Sample Code:  
 > ```
+> 
 > onChildOpenedExtension: function(oSelectionInfo, fnSetPath) {
-> 	//oSelectionInfo - Information about the child page instance opened last.
-> 	//oSelectionInfo.keys – The array of keys (one on each hierarchy level) used for last opened child page.
-> 	//fnSetPath - pass the binding path of the corresponding list item to this function if it is not identical 	to oSelection.path.
-> 	var oModel = this.getView().getModel();
->           oModel.createBindingContext(oSelectionInfo.path + "NavigationProperty", null, null, function(oContext) { 
->                 fnSetPath(oContext.getPath());
-> 	});
-> },  
+>     //oSelectionInfo - Information about the child page instance opened last.
+>     //oSelectionInfo.keys – The array of keys (one on each hierarchy level) used for last opened child page.
+>     //fnSetPath - pass the binding path of the corresponding list item to this function if it is not identical to oSelection.path.
+>     var oModel = this.getView().getModel();
+>     oModel.createBindingContext(oSelectionInfo.path + "NavigationProperty", null, null, function(oContext) {
+>         fnSetPath(oContext.getPath());
+>     });
+> },
 > 
 > ```
 
 **Related Information**  
 
 
-[Example: Replacing Standard Navigation in a Responsive Table in the List Report](example-replacing-standard-navigation-in-a-responsive-table-in-the-list-report-5ae7b0c.md "You can replace the standard navigation from the list report to the object page with your own navigation to an external or internal target.")
+[Example: Replacing Standard Navigation in a Responsive Table in the List Report](example-replacing-standard-navigation-in-a-responsive-table-on-the-list-report-page-5ae7b0c.md "You can replace standard list report table navigation with custom navigation to external or internal targets using controller extensions.")
 
-[Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-e87763d.md "You can replace the standard navigation from the object page with your own navigation to an external or internal target.")
+[Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md "You can replace standard object page table navigation with custom navigation to external or internal targets using controller extensions.")
 
-[Configuring Internal Navigation](configuring-internal-navigation-666b503.md "SAP Fiori elements control the navigation within an app (internal navigation). This section describes the configuration options that you have.")
+[Configuring Internal Navigation](configuring-internal-navigation-666b503.md "You can configure internal navigation within an SAP Fiori elements app.")
 

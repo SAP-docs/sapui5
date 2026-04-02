@@ -48,11 +48,11 @@ To enable navigation for a KPI card, you need to define the semantic object, act
 **Related Information**  
 
 
-[Analytical List Page](analytical-list-page-ff056b4.md "The analytical list page (ALP) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content.")
+[Analytical List Page](analytical-list-page-ff056b4.md "You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs (key performance indicators).")
 
-[Managing Variants](managing-variants-b82d987.md "Allows you to manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-b82d987.md "You can manage variants with different structures in the filter and content areas.")
 
-[Creating Key Performance Indicator Tags](creating-key-performance-indicator-tags-101b199.md "The key performance indicator (KPI) tag is an abbreviated and clickable title with a KPI value.")
+[Creating Key Performance Indicator Tags](creating-key-performance-indicator-tags-101b199.md "You can create key performance indicator tags for the analytical list page.")
 
-[Choosing Filter Modes](choosing-filter-modes-74c4b43.md "ALP offers compact and visual filter modes. You can choose to set filters from both modes.")
+[Choosing Filter Modes](choosing-filter-modes-74c4b43.md "You can choose to set filters from the compact and visual filter modes on the analytical list page.")
 

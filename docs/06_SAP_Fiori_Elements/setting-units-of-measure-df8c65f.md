@@ -6,6 +6,11 @@ You can display the unit of measure next to numeric values by providing the `sap
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Setting Units of Measure](setting-units-of-measure-0d6c1d5.md).
+
+
+
 In the following example of the `Product` entity type definition in the OData metadata file, the `Price` property has the `CurrencyCode` property as its unit of measure; `Width`, `Depth`, and `Height` have the `DimUnit` property as their unit of measure; and the `WeightMeasure` property has the `WeightUnit` property as its unit of measure.
 
 > ### Sample Code:  

@@ -2,46 +2,52 @@
 
 # Toggling the Editability of Header Fields
 
-You can enable an option to make fields in the object page header editable.
-
-The editability of header fields can be controlled by the manifest property `editableHeaderContent`. If edit is enabled, the editability of the individual fields or facets still depends on whether the actual individual field or facet is editable. For example, micro chart facets are not editable, and a text field marked as `ReadOnly` will not be editable.
+You can make the object page header content editable.
 
 > ### Note:  
-> The header is **not** editable by default. You can enable it, if required, by setting `editableHeaderContent` to `true`.
+> For information about SAP Fiori elements for OData V4, see [Toggling the Editability of Header Fields](toggling-the-editability-of-header-fields-c8a9a40.md).
+
+To make the object page header content editable, set the manifest property `editableHeaderContent` to `true`. Note that the editability of individual header fields and facets depends on their type and properties. For example, micro chart facets aren't editable in general, and neither are text fields set to `ReadOnly` .
+
+> ### Note:  
+> By default, the header is **not** editable.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
+> 
 > "sap.ui.generic.app": {
->         "pages": [
->             {
->                 "entitySet": "SEPMRA_C_PD_Product",
->                 "component": {
->                     "name": "sap.suite.ui.generic.template.ListReport",
->                     "list": true
->                 },
->                 "pages": [
->                     {
->                         "entitySet": "SEPMRA_C_PD_Product",
->                         "component": {
->                             "name": "sap.suite.ui.generic.template.ObjectPage",
->                             "settings": {
->                                 "editableHeaderContent": true
+>     "pages": [
+>         {
+>             "entitySet": "SEPMRA_C_PD_Product",
+>             "component": {
+>                 "name": "sap.suite.ui.generic.template.ListReport",
+>                 "list": true
+>             },
+>             "pages": [
+>                 {
+>                     "entitySet": "SEPMRA_C_PD_Product",
+>                     "component": {
+>                         "name": "sap.suite.ui.generic.template.ObjectPage",
+>                         "settings": {
+>                             "editableHeaderContent": true
+>                         }
+>                     },
+>                     "pages": [
+>                         {
+>                             "navigationProperty": "to_ProductText",
+>                             "entitySet": "SEPMRA_C_PD_ProductText",
+>                             "component": {
+>                                 "name": "sap.suite.ui.generic.template.ObjectPage"
 >                             }
->                         },
->                         "pages": [
->                             {
->                                 "navigationProperty": "to_ProductText",
->                                 "entitySet": "SEPMRA_C_PD_ProductText",
->                                 "component": {
->                                     "name": "sap.suite.ui.generic.template.ObjectPage"
->                                 }
->                             }
->                         ]
->                     }
->                 ]
->             }
->         ]
->     },
+>                         }
+>                     ]
+>                 }
+>             ]
+>         }
+>     ]
+> }
 > 
 > ```
 

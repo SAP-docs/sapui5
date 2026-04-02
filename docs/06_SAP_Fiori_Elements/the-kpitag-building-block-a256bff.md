@@ -2,7 +2,7 @@
 
 # The `KPITag` Building Block
 
-The `KPITag` building block provides an easy way to display a simple key performance indicator \(KPI\) in your application.
+You can use the `KPITag` building block to add a key performance indicator \(KPI\) to your application.
 
 > ### Sample Code:  
 > The `KPITag` building block

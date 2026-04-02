@@ -21,48 +21,9 @@ The default settings for filtering in the list report page table are as follows:
 
 
 
-<a name="loio3e2b4d212b66481a829ccef1dc0ca16b__section_a2h_ntx_gqb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Enabling Table Filters
-
-In harmonized variant management, by default, users cannot set a filter in the table personalization settings. To enable filtering for users, set the `enableTableFilterInPageVariant` property in the manifest. If `smartVariantManagement` is set to `false`, then table filter is enabled by default.
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> 
-> "sap.ui.generic.app": {
->     "_version": "1.3.0",
->         "settings": {
->         "forceGlobalRefresh": true
->         },
->         "pages": {
->             "ListReport|STTA_C_MP_Product": {
->                 "entitySet": "STTA_C_MP_Product",
->                 "component": {
->                     "name": "sap.suite.ui.generic.template.ListReport",
->                     "list": true,
->                     "settings": {
->                         "smartVariantManagement": true,
->                         "enableTableFilterInPageVariant": true
->                     }
->                 },
-> ```
-
-
-
 <a name="loio3e2b4d212b66481a829ccef1dc0ca16b__section_hgz_b5x_gqb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Enabling and Disabling Table Personalization
+## Enabling and Disabling Table Personalization
 
 Table personalization is provided by default for all tables. Options for adding or removing columns, filtering, sorting, and grouping are available.
 
@@ -179,7 +140,9 @@ Table personalization is provided by default for all tables. Options for adding 
 
 
 
-### Choosing Personalization Settings
+<a name="loio3e2b4d212b66481a829ccef1dc0ca16b__choosingPersSettings"/>
+
+## Choosing Personalization Settings
 
 By default, table personalization provides options for adding or removing columns, filtering, sorting, and grouping. Use the `personalization` setting in the`manifest.json` file to change the default behavior.
 
@@ -225,7 +188,7 @@ You can use the following values for the `"personalization"` setting:
 
 
 
-### Personalization for Properties with Text Arrangement
+## Personalization for Properties with Text Arrangement
 
 Note the following when enabling personalization for properties that have a text arrangement annotation:
 

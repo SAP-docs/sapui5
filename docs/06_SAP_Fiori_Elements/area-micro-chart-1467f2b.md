@@ -2,7 +2,7 @@
 
 # Area Micro Chart
 
-An area micro chart is a trend chart.
+You can render the micro chart as an area micro chart.
 
 It provides information for actual and target values for a specific time range.
 

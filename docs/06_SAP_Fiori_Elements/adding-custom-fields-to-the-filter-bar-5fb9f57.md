@@ -4,8 +4,15 @@
 
 You can extend the filter bar by using a custom filter field.
 
+> ### Note:  
+> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> 
+> -   Properties or methods exposed by the building block
+> 
+> -   Custom code using extensions
+
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
@@ -252,7 +259,7 @@ The following sample code defines a custom filter using a custom operator:
 > The `property` property must be specified in the `manifest.json` file. It must point to the metadata property for which the custom operator is implemented.
 
 > ### Restriction:  
-> If the custom operator contains multiple properties, you can specify only one property in the `manifest.json` file. This limitation can result in unexpected behavior when `property` is used to identify the relevant field. For example, in a multi-view list report where each tab is bound to a different entity.
+> If the custom operator contains multiple properties, you can specify only one property in the `manifest.json` file. This limitation can result in unexpected behavior when `property` is used to identify the relevant field. For example, in a multi-view list report page where each tab is bound to a different entity.
 
 The `template` property points to the custom fragment definition, located at `<ProjectFolder>.ext.CustomRatingFilter`. The custom fragment is defined as shown in the following sample code:
 

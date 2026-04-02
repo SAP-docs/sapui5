@@ -23,12 +23,24 @@ For every aggregatable property, you can provide the name of the custom aggregat
 
 Normally, there is also a structural property of the same name as the custom aggregate, providing type information, etc. In case of a multi-unit situation, [`v4.Context#getFilter`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context%23methods/getFilter) may be helpful to send a request for more details.
 
-The following client-side instance annotations can be used to access a node level or expansion state. For property bindings, a syntax like `{= %{@$ui5.node.level} }` is usually helpful, because automatic type determination is not available.
+You can use the client-side instance annotations listed below to access a node level, expansion state, and other node properties.
+
+> ### Note:  
+> For property bindings, the usual syntax like `{= %{@$ui5.node.level} }` can be used, and automatic type determination is available.
+> 
+> For expression bindings, use the `%{binding}` syntax instead of `${binding}` to avoid type conversion errors, for example:
+> 
+> -   `<m:Button enabled="{= %{@$ui5.node.level} > 1 }"/>`
+> -   `<m:Button enabled="{= %{@$ui5.node.isExpanded} !== undefined }"/>`
+> 
+> The `%{binding}` syntax is a shortcut for `${path : 'binding', targetType : 'any'}` and prevents automatic type detection that would otherwise format the value according to the control property's target type.
 
 -   `@$ui5.node.level` – A non-negative integer which describes the node level; "0" is the single root node which corresponds to the grand total row, "1" are the top-level group nodes, etc.
 
 -   `@$ui5.node.isExpanded` – A boolean which determines whether this node is currently expanded. `true` means yes, `false` means no, `undefined` means that \(the state is undefined because\) this node is a leaf. As an implementation detail, the annotation might simply be missing for leaves.
 -   `@$ui5.node.groupLevelCount` – An integer value which determines the count of the direct children of a group node. As an implementation detail, the annotation is only available if the corresponding node is expanded.
+
+-   `@$ui5.node.isTotal` – A boolean which indicates whether the node represents a subtotal or grand total row.
 
 
 Two scenarios are supported:
@@ -72,7 +84,7 @@ Two scenarios are supported:
 
 -   You can provide group levels to determine a hierarchy of expandable group levels in addition to the leaf nodes determined by the groupable and aggregatable properties. To achieve this, specify the names of the group levels in the `groupLevels` property of `$$aggregation`. If no other groupable properties are given except those named as levels, the last group level determines the leaf nodes and is not expandable.
 
-    Group levels can be combined with the system query option `$count : true`; for more information, see [Binding Collection Inline Count](binding-collection-inline-count-77d2310.md). Group levels can only be combined with filtering before the aggregation \(see below\). Note how an `$orderby` option can address groups across all levels. For every aggregatable property, you can request subtotals and a grand total individually.
+    Group levels can be combined with the system query option `$count : true`; for more information, see [Binding the Count of a Collection](binding-the-count-of-a-collection-77d2310.md). Group levels can only be combined with filtering before the aggregation \(see below\). Note how an `$orderby` option can address groups across all levels. For every aggregatable property, you can request subtotals and a grand total individually.
 
     > ### Sample Code:  
     > **Example XML View With Hierarchy**
@@ -136,7 +148,7 @@ Use the `grandTotalAtBottomOnly` or `subtotalsAtBottomOnly` property with values
 
 Filters are provided to the list binding as described in [Filtering](filtering-5338bd1.md). The `Filter` objects are analyzed automatically to perform the filtering before the aggregation where possible using the `filter()` transformation. The remaining filters, including the provided `$filter` parameter of the binding, are applied after the aggregation either via the system query option `$filter` or within the system query option `$apply`, using again the `filter()` transformation.
 
-Note that `Filter` objects are not supported for aggregatable properties with an alias.For more information, see the `name` property of the `aggregate` map of the `oAggregation` parameter of [`v4.ODataListBinding#setAggregation`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/setAggregation).
+Note that `Filter` objects are only supported for aggregatable properties with an alias if neither `grandTotal` nor `groupLevels` are used. For more information, see the `name` property of the `aggregate` map of the `oAggregation` parameter of [`v4.ODataListBinding#setAggregation`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/setAggregation).
 
 
 

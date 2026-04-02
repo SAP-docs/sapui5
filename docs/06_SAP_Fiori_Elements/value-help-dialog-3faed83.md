@@ -2,7 +2,9 @@
 
 # Value Help Dialog
 
-A field configured with value help typically allows end users to select values using a value help dialog. A value help dialog is useful when the associated value help entity contains a large dataset \(for example, more than 1000 items\), or when end users need to search using multiple attributes, such as city and company name.
+You can configure the components of the value help dialog.
+
+A field configured with value help typically allows users to select values using a value help dialog. A value help dialog is useful when the associated value help entity contains a large dataset \(for example, more than 1000 items\), or when users need to search using multiple attributes, such as city and company name.
 
 
 
@@ -10,7 +12,7 @@ A field configured with value help typically allows end users to select values u
 
 ## Configuring the Components of the Value Help Dialog
 
-The value help dialog consists of several components, such as a filter bar, a table, and sometimes a dropdown list that allows end users to choose different flavors of the value help definition.
+The value help dialog consists of several components, such as a filter bar, a table, and sometimes a dropdown list that allows users to choose different flavors of the value help definition.
 
 
 
@@ -24,7 +26,10 @@ When context-dependent value help is defined with `Common.ValueListRelevantQuali
 
 ### Multiple Value Help Definitions
 
-If there are more than one `Common.ValueList` or `Common.ValueListMapping` annotations for a field, the default \(unqualified\) is used as the default variant. Other variants are displayed as a dropdown list, allowing end users to switch between them.
+If a field contains more than one `Common.ValueList` or `Common.ValueListMapping` annotation, the unqualified annotation is used as the default variant. Other variants are displayed as a dropdown list, allowing users to switch between them.
+
+> ### Note:  
+> To avoid duplicate entries, the dropdown list doesn't include `Common.ValueList` or `Common.ValueListMapping` annotations associated with visual filters, such as those associated with a `PresentationVariant` associated with a `UI.Chart` visualization.
 
 ![](images/Value_Help_Variant_9903303.png)
 
@@ -47,7 +52,7 @@ Use the `ValueListParameterConstant` annotation to provide a constant value that
 
 The `ValueListParameterConstant` annotation supports the following properties:
 
--   `ValueListProperty`: String representing the property in the value list.
+-   `ValueListProperty`: A string representing the property in the value list.
 
 -   `Constant`: A string representing the constant value used to filter the value list with an `eq` comparison, using the same representation as property default values.
 
@@ -88,7 +93,7 @@ For more information about these properties, see [In/Out Mappings in the ValueLi
 
 **Defining the Behavior of Data Load in the Table**
 
-By default, value help dialog loads the data immediately upon opening. To delay data loading until after user input, use  `FetchValues` annotation. This allows end users to load data only after clicking *Go*. For more information about `FetchValues`, see the [Annotations](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__Annotations) section in [Value Help](value-help-fccb255.md).
+By default, value help dialog loads the data immediately upon opening. To delay data loading until after user input, use  `FetchValues` annotation. This allows users to load data only after clicking *Go*. For more information about `FetchValues`, see the [Annotations](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__Annotations) section in [Value Help](value-help-fccb255.md).
 
 **Text Handling**
 
@@ -108,7 +113,7 @@ The text handling for fields displayed in the table is determined by the text as
 
 The text associated with the `ValueListParameterOut` parameters of the value help entity is carried forward to the corresponding property of the main entity, even if the main entity's property is annotated to have a different text.
 
-For more information about the `Common.Text` or `Common.TextArrangement` annotations, see [Further Features of the Field](further-features-of-the-field-f49a0f7.md).
+For more information about the `Common.Text` or `Common.TextArrangement` annotations, see [Further Features of the Field](additional-features-of-the-field-f49a0f7.md).
 
 **Sorting the Table**
 
@@ -295,7 +300,7 @@ You can display a hierarchy within a value help dialog. To do so, the hierarchy 
 > ```
 
 > ### Sample Code:  
-> CAPCDS Annotation
+> CAP CDS Annotation
 > 
 > ```
 > entity Artist {
@@ -334,17 +339,14 @@ You can display a hierarchy within a value help dialog. To do so, the hierarchy 
 > 
 > ```
 
-For more information and live examples, see the SAP Fiori development portal.
+For more information and live examples, see the following topics in the SAP Fiori development portal:
 
 -   Display of a hierarchy within a value help for a multi-input field at [Building Blocks - Field - Input Fields - Multi Value Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldMultiValueField)
--   Property with a tree table within a value help at [Filter Bar - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarDefault)
+-   Property with a tree table within a value help at [Building Blocks - Filter Bar - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarDefault)
 
 **Caching Table Contents**
 
 When the value help dialog is initially opened, the table data is loaded and cached by default. On subsequent accesses within the same session, the data is retrieved from the cache instead of initiating a new back end request. To ensure the data reflects the latest changes, you can enforce a refresh when needed. For example, if an action updates the contents of the value help entity, you can trigger a data refresh by defining a side effect that targets the entity. For more information on side effects, see [Side Effects](side-effects-18b17bd.md). For more information and live examples, see the SAP Fiori development portal at [Global Patterns - Side Effects](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/guidanceSideEffects).
-
-> ### Note:  
-> Caching of value help data is not supported in dropdown-based fields.
 
 > ### Restriction:  
 > The value help cache can be invalidated and refreshed only when the value help entity is defined within the same metadata as the main entity, as in CAP-based applications. This mechanism isn't supported in RESTful ABAP Programming \(RAP\)-based applications, where the value help entity is defined in a separate metadata file.
@@ -353,7 +355,7 @@ When the value help dialog is initially opened, the table data is loaded and cac
 
 ### Define Conditions
 
-The *Define Conditions* tab is defined for fields used in filter contexts. It enables end users to apply filters on the value help entity, ensuring that the search results include only records that match the specified criteria.
+The *Define Conditions* tab is defined for fields used in filter contexts. It enables users to apply filters on the value help entity, ensuring that the search results include only records that match the specified criteria.
 
 ![](images/Define_Conditions_cf810ef.png)
 
@@ -429,7 +431,7 @@ None
 </td>
 <td valign="top">
 
-Multiple conditions, matching the `SingleRange` conditions
+Multiple conditions matching the `SingleRange` conditions
 
 </td>
 </tr>
@@ -466,13 +468,32 @@ All conditions
 > ### Note:  
 > For both `SingleValue` and `MultiValue` expressions, the *Define Condition* tab is hidden.
 
-The tab also includes a corresponding negation condition called *Exclude*, with the options such as *not less than* or *does not end with*. Additionally, an empty operator is available, displaying an <empty\> placeholder for the field. For nullable fields, it corresponds to *equal to ""* or *equal to null*, and for non-nullable fields, it corresponds to *equal to ""*.
+The tab also includes a corresponding negation condition called *Exclude*, with the options such as *not less than* or *does not end with*. Additionally, an empty operator is available, displaying an *<empty\>* placeholder for the field. For nullable fields it corresponds to *equal to ""* or *equal to null*, and for non-nullable fields it corresponds to *equal to ""*.
 
 > ### Note:  
 > The `Edm.Date` fields with `AllowedExpressions` set to `SingleValue` or `SingleRange`, and `Edm.DateTimeOffset` fields with `AllowedExpressions` set to `SingleRange`, are displayed with semantic date options when used in a filter context. For more information, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 
 
 
+## Enabling Links in a Value Help Dialog Table
+
+Values in value help dialogs are displayed as plain text by default. We don't recommend displaying them as links to avoid suggesting navigation. If your use case requires displaying values as links, you can do so using the following global manifest setting:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+>   "sap.fe": {
+>     "macros": {
+>       "valueHelp": {
+>         "enableLinksInDialogTable": true
+>       }
+>     }
+>   }
+> ```
+
+
+
 > ### Note:  
-> For information aboutSAP Fiori elements for OData V2, see [Value Help Dialog](value-help-dialog-2b70be2.md).
+> For information about SAP Fiori elements for OData V2, see [Value Help Dialog](value-help-dialog-2b70be2.md).
 

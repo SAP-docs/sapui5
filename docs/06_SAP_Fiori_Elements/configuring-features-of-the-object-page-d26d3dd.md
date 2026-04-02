@@ -7,5 +7,5 @@ You can use annotations to set up various elements on the object page, such as t
 **Related Information**  
 
 
-[Prefilling Fields Using the `DefaultValuesFunction`](prefilling-fields-using-the-defaultvaluesfunction-6613e42.md "When creating a new entity or when prefilling action parameters, you can provide default values using a DefaultValuesFunction.")
+[Prefilling Fields Using the `DefaultValuesFunction`](prefilling-fields-using-the-defaultvaluesfunction-6613e42.md "You can provide default values with DefaultValuesFunction when creating a new entity or when prefilling action parameters, you can provide default values.")
 

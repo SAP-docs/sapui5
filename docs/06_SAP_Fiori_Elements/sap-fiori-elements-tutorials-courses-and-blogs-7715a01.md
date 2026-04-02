@@ -12,8 +12,6 @@ The list is continually growing. Our learning resources are provided on the foll
 
 -   [Create an Incident Management App with SAP Fiori Elements for OData V4](https://developers.sap.com/group.fiori-tools-odata-v4-incident.html)
 
--   [Create a List Report Object Page App with SAP Fiori Tools](https://developers.sap.com/group.fiori-tools-lrop.html)
-
 -   [Use the Mockserver and OPA Test Library with SAP Fiori Elements for OData V4 Applications](https://developers.sap.com/group.fiori-elements-mockserver-opa.html)
 
 -   [Work with SAPUI5 Adaptation Projects to Make Changes and Extend the Source Code of an Application Variant of an SAP Fiori Application in SAP S/4HANA Cloud Public Edition](https://developers.sap.com/group.sapui5-adaptation-projects.html)
@@ -47,5 +45,5 @@ Here are some articles you may find useful:
 
 
 > ### Note:  
-> For information aboutSAP Fiori elements for OData V2, see [SAP Fiori Elements Tutorials, Courses, and Blogs](sap-fiori-elements-tutorials-courses-and-blogs-eb8fc41.md).
+> For information about SAP Fiori elements for OData V2, see [SAP Fiori Elements Tutorials, Courses, and Blogs](sap-fiori-elements-tutorials-courses-and-blogs-eb8fc41.md).
 

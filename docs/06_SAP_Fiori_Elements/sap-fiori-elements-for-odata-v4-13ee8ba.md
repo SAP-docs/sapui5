@@ -4,7 +4,7 @@
 
 Develop apps using SAP Fiori elements for OData V4 and benefit from the convenience of building blocks, the structure of standard floorplans, and freedom to adapt your app.
 
-To generate the UI, SAP Fiori elements for OData V4 modularizes visible UI patterns and application behavior into building blocks: reusable UI components and interaction patterns that provide the framework benefits. Building blocks are pre-built and automatically comply with [SAP Design System](https://www.sap.com/design-system/) standards from the framework.
+To generate the UI, SAP Fiori elements for OData V4 modularizes visible UI patterns and application behavior into building blocks: reusable UI components and interaction patterns that provide the framework benefits. Building blocks are pre-built and automatically comply with [SAP Design System](https://www.sap.com/design-system/fiori-design-web/) standards from the framework.
 
 You can consume the building blocks in standard floorplans or in custom pages, or you can combine both approaches to best fit your application requirements.
 

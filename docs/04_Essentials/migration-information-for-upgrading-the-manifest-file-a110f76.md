@@ -58,7 +58,7 @@ Deprecated Manifest Entries
 Deprecated manifest entries managed by the SAPUI5 framework cannot be used anymore and will cause errors. This has the following consequences:
 
 -   Arbitrary JavaScript resources can no longer be loaded via `sap.ui5/resources/js`. Please use dedicated modules as eager dependencies instead, such as within your `Component.js`
--   The routing properties `ViewId`, `viewName`, `viewPath` and `viewLevel` can no longer be used. Please use the documented alternatives by replacing them with the properties `id`, `name`, `path` and `level`, respectively along with adding the `type: "view"`. For more information, See [Routing Configuration](https://github.wdf.sap.corp/uics-innersource/ui5-docs/blob/manifestmigr/docs/04_Essentials/routing-configuration-9023130.md).
+-   The routing properties `ViewId`, `viewName`, `viewPath` and `viewLevel` can no longer be used. Please use the documented alternatives by replacing them with the properties `id`, `name`, `path` and `level`, respectively along with adding the `type: "view"`. For more information, See [Routing Configuration](https://github.com/SAP-docs/sapui5/blob/main/docs/04_Essentials/migration-information-for-upgrading-the-manifest-file-a110f76.md).
 -   Supported themes can no longer be specified via the `sap.ui/supportedThemes` section.
 
 

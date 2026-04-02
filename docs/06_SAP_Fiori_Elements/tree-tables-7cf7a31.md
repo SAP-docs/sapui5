@@ -4,10 +4,7 @@
 
 You can use tree tables in the list report and the object page.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
-SAP Fiori elements for OData V4 supports displaying a tree table on the list report with a draft-enabled service with the following behavior:
+SAP Fiori elements for OData V4 supports displaying a tree table on the list report page with a draft-enabled service with the following behavior:
 
 -   Only the active entities are displayed.
 
@@ -34,7 +31,7 @@ SAP Fiori elements for OData V4 supports displaying a tree table on the list rep
 
 ## Enabling Tree Tables
 
-To enable tree tables in the list report or object page, the following parameters are needed in the `tableSettings` part of the `manifest.json`:
+To enable tree tables on a list report page or an object page, the following parameters are needed in the `tableSettings` part of the `manifest.json`:
 
 -   Set the `type` to `TreeTable`.
 
@@ -67,7 +64,7 @@ The following creation modes are supported with a tree table:
 -   `CreationDialog`: create dialog
 
 
-In the list report, only the create page \(default\) and the create dialog are supported.
+On the list report page, only the create page \(default\) and the create dialog are supported.
 
 SAP Fiori elements for OData V4 supports the default create mode as well as a custom create mode. To use the custom create mode, add the following annotations to the `nodeType` section:
 
@@ -242,9 +239,9 @@ You can use the `createInPlace` option to place the new node in its real positio
 
 ## Drag and Drop
 
-Drag and drop actions are supported by SAP Fiori elements for OData V4 as of SAPUI5 1.124.
+Drag and drop actions are supported as of SAPUI5 1.124.
 
-Drag and drop between siblings is supported if the `ChangeNextSiblingAction` term is defined in the `RecursiveHierarchyActions` annotation. When using the ABAP RESTful Application Programming Model \(RAP\), this annotation is not set for root entities. For this reason, drag and drop between siblings is not supported in the list report.
+Drag and drop between siblings is supported if the `ChangeNextSiblingAction` term is defined in the `RecursiveHierarchyActions` annotation. When using the ABAP RESTful Application Programming Model \(RAP\), this annotation is not set for root entities. For this reason, drag and drop between siblings is not supported on the list report page.
 
 If a node is dropped onto the empty area on the right-hand side of a table, the node is promoted to a root node. In the following example, dropping the "Canada" node onto the highlighted area turns it into a root node, that is, a sibling to the "Europe North" and "America North" nodes.
 
@@ -345,7 +342,7 @@ The following screenshot shows another example of the outcome. Moving the "Dubli
 
 End users can move a node up or down between its siblings in a tree table. To place a node before its previous sibling or after its next sibling, select the node and choose *Move Up* or *Move Down* from the tree table toolbar.
 
-Moving a node up or down is supported if the `ChangeNextSiblingAction` term is defined in the `RecursiveHierarchyActions` annotation. When using the ABAP RESTful Application Programming Model \(RAP\), this annotation is not set for root entities. For this reason, moving up or down a node is not supported in the list report.
+Moving a node up or down is supported if the `ChangeNextSiblingAction` term is defined in the `RecursiveHierarchyActions` annotation. When using the ABAP RESTful Application Programming Model \(RAP\), this annotation is not set for root entities. For this reason, moving up or down a node is not supported on the list report page.
 
 > ### Restriction:  
 > A node that is created without the `createInPlace` option is displayed as the first child below its parent and is therefore considered "out of place". Move operations are disabled for such nodes. Similarly, moving a node up is disabled if its previous sibling is an "out of place" node.
@@ -362,7 +359,7 @@ Moving a node up or down is supported if the `ChangeNextSiblingAction` term is d
 
 ## Cut and Paste
 
-Cut and paste actions are supported by SAP Fiori elements for OData V4 as of SAPUI5 1.124.
+Cut and paste actions are supported as of SAPUI5 1.124.
 
 Both actions can be enabled or disabled by using the same extension points as for drag and drop:
 
@@ -388,7 +385,7 @@ In the following example, the USA node can't be cut or dragged:
 
 ## Copy and Paste
 
-Copying a node is supported by SAP Fiori elements for OData V4 as of SAPUI5 1.136. It can be enabled or disabled by using the following extension points:
+Copying a node is supported as of SAPUI5 1.136. It can be enabled or disabled by using the following extension points:
 
 -   `isNodeCopyable`: Defines if a node can be copied. The associated callback receives the source context as a parameter.
 -   `isCopyToPositionAllowed`: Defines if a source node can be pasted under a specific parent node. The associated callback receives the source and target contexts as parameters.
@@ -509,7 +506,7 @@ If `ChangeSiblingForRootsSupported` is not defined, it is considered as set to `
 
 ## `TreeTable` Building Block
 
-You can use a dedicated `TreeTable` building block in SAP Fiori elements for OData V4.
+You can use a dedicated `TreeTable` building block.
 
 -   For more information about this building block, see the [API reference](https://ui5.sap.com/#/api/sap.fe.macros.TreeTable).
 

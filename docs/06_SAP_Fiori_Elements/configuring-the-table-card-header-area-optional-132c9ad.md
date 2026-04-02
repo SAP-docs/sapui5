@@ -6,6 +6,11 @@ You can configure the header area using the annotations and `manifest.json` file
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-05887bd.md).
+
+
+
 1.  Configure card header properties \(card title, subtitle, KPI value, and view switch settings\) in the `manifest.json` file, as shown in the following sample code:
 
     -   Card `title` and `subTitle`
@@ -16,8 +21,7 @@ You can configure the header area using the annotations and `manifest.json` file
         > ```
         > "sap.ovp": {
         > "globalFilterModel": "salesOrder",
-        > "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
-        > "globalFilterEntitySet": "GlobalFilters", //Available from SAPUI5 1.54.
+        > "globalFilterEntitySet": "GlobalFilters",
         >       ...
         >       ...
         > "cards": {
@@ -134,42 +138,43 @@ You can configure the header area using the annotations and `manifest.json` file
         > ### Sample Code:  
         > ```
         > "sap.ovp": {
-        > 	"globalFilterModel": "salesOrder",
-        > 	"globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
-        >      "globalFilterEntitySet": "GlobalFilters", //Available from SAPUI5 1.54.
-        > 	"showDateInRelativeFormat": false,
-        > 	"disableTableCardFlexibility": false,
-        > 	"considerAnalyticalParameters": true,
-        > 	"useDateRangeType": false,
-        > 	"cards": {
-        >      "card014": {
-        >          "model": "salesOrder",
-        >          "template": "sap.ovp.cards.table",
-        >          "settings": {
-        >      "title": "Sales Forecast",
-        >      "subTitle": "per Supplier",
-        >      "valueSelectionInfo": "Value Selection Info",
-        >      "entitySet": "SalesShare",
-        >      "tabs": [
-        >            {
-        >      "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
-        >      "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
-        >      "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#line1",
-        >      "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line",
-        >      "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
-        >      "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
-        >      "value": "{{dropdown_value2}}"
-        >            },
-        >            {
-        >      "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
-        >      "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View4",
-        >      "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#item2",
-        >      "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
-        >      "value": "{{dropdown_value4}}"
+        >     "globalFilterModel": "salesOrder",
+        >     "globalFilterEntitySet": "GlobalFilters",
+        >     "showDateInRelativeFormat": false,
+        >     "disableTableCardFlexibility": false,
+        >     "considerAnalyticalParameters": true,
+        >     "useDateRangeType": false,
+        >     "cards": {
+        >         "card014": {
+        >             "model": "salesOrder",
+        >             "template": "sap.ovp.cards.table",
+        >             "settings": {
+        >                 "title": "Sales Forecast",
+        >                 "subTitle": "per Supplier",
+        >                 "valueSelectionInfo": "Value Selection Info",
+        >                 "entitySet": "SalesShare",
+        >                 "tabs": [
+        >                     {
+        >                         "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
+        >                         "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
+        >                         "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#line1",
+        >                         "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line",
+        >                         "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+        >                         "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
+        >                         "value": "{{dropdown_value2}}"
+        >                     },
+        >                     {
+        >                         "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
+        >                         "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View4",
+        >                         "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#item2",
+        >                         "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
+        >                         "value": "{{dropdown_value4}}"
+        >                     }
+        >                 ]
+        >             }
+        >         }
         >     }
-        >    ]
-        >   }
-        > },DescriptorSettings
+        > }
         > ```
 
 
@@ -195,7 +200,7 @@ You can configure the header area using the annotations and `manifest.json` file
 
     You can also define criticality using a path property that returns value:
 
-    -   0 for Neutral- default neutral color is considered
+    -   0 for Neutral – default neutral color is considered
 
     -   1 for Negative – Red is considered
 

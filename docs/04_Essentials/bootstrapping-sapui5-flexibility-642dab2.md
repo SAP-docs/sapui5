@@ -18,12 +18,11 @@ If you have a specific use case, you can change the default behavior using the `
 > ```
 > <script
 >     id="sap-ui-bootstrap"
->     src=resources/sap-ui-core.js       
+>     src=resources/sap-ui-core.js
 > 
->     data-sap-ui-flexibilityServices=""
+>     data-sap-ui-flexibility-services=""
 >     data-sap-ui-preload="async" >
 > </script>
-> 
 > ```
 
 
@@ -89,7 +88,7 @@ For more information, see [Developing Applications Running Standalone](https://h
 <tr>
 <td valign="top">
 
-`KeyUserConnector` 
+`KeyUserConnector`
 
 </td>
 <td valign="top">
@@ -100,8 +99,6 @@ For more information, see [Developing Applications Running Standalone](https://h
 <td valign="top">
 
 > ### Caution:  
-> .
-> 
 > If you develop apps running standalone on SAP BTP, Cloud Foundry environment, we strongly recommend that you replace the `KeyUserConnector` with the `BtpServiceConnector` in your SAPUI5 bootstrap.
 
 Used to connect key user adaptation and shared views on SAP BTP, Cloud Foundry environment.

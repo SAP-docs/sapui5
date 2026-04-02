@@ -2,6 +2,8 @@
 
 # Using a Custom Root View
 
+The root view is the view that is loaded when the app is started.
+
 The root view is the view that is loaded when the application is started. For more information, see [App Overview: The Basic Files of Your App](../05_Developing_Apps/app-overview-the-basic-files-of-your-app-28b59ca.md).
 
 If the standard root views `NavContainer` or `FlexibleColumnLayout` don't fit your requirements, you can create and register a custom root view.

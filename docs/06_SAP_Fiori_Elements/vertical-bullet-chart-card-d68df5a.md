@@ -4,6 +4,9 @@
 
 Vertical bullet charts accept at least one measure and one dimension.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Vertical Bullet Chart](vertical-bullet-chart-f4a899f.md).
+
   
   
 **Example of a Vertical Bullet Chart Card**

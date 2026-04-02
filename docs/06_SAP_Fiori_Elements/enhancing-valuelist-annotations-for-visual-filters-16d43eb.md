@@ -2,9 +2,11 @@
 
 # Enhancing `ValueList` Annotations for Visual Filters
 
-The value list annotation lets you map an entity to another entity that is associated with a different entity set. The value list annotation defines the relationship between filter fields of the main entity set and the fields in the value help entity set.
+You can specify a value help entity for a field and maintain the value help configuration with a `ValueList` annotation.
 
 
+
+These annotations can be used to control the rendering of the value help, such as the fields shown inside the value help, or the filters that act upon the value help. For more information, see[In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-4de40b3.md).
 
 You must enhance the value list annotation corresponding to a filter field with `"PresentationVariantQualifier"` as shown in the sample code below to ensure that the value list annotation \(and therefore the filter field\) is considered for the visual filter rendering. The value for this term must point to a `UI.PresentationVariant` that contains the `UI.Chart` annotation required to render the visual filter.
 
@@ -134,9 +136,9 @@ After selecting the region chart, if you select a bar in the country chart then 
 **Related Information**  
 
 
-[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "The visual filter bar enables end users to select filter values based on measure values in addition to the filters and filter values already selected in the regular filter bar.")
+[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page.")
 
-[Choosing Filter Modes on the Analytical List Page](choosing-filter-modes-on-the-analytical-list-page-00c19e1.md "ALP offers compact and visual filter modes. You can choose to set filters from both modes.")
+[Choosing Filter Modes on the Analytical List Page](choosing-filter-modes-on-the-analytical-list-page-00c19e1.md "You can choose to set filters from the compact and visual filter modes on the analytical list page.")
 
-[Value Help](value-help-fccb255.md "Value help allows end users to either select a value from a value help entity associated with the field or define a condition to retrieve a suitable value for the field from the main entity.")
+[Value Help](value-help-fccb255.md "You can configure value help to assist users in selecting the correct values.")
 

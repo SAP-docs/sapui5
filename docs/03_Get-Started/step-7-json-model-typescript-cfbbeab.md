@@ -46,20 +46,20 @@ import JSONModel from "sap/ui/model/json/JSONModel";
  * @name ui5.walkthrough.controller.App
  */
 export default class AppController extends Controller {
-   onInit() : void {
-      // set data model on view
+    onInit() : void {
+        // set data model on view
         const data = {
-           recipient: {
-              name: "World"
-           }
+            recipient: {
+                name: "World"
+            }
         };
         const dataModel = new JSONModel(data);
         this.getView()?.setModel(dataModel);
     }
 
     onShowHello(): void {
-       MessageToast.show("Hello World");
-     }
+        MessageToast.show("Hello World");
+    }
 };
 ```
 

@@ -2,7 +2,7 @@
 
 # Extending Delivered Apps With Key User Adaptation
 
-Both application developers and key users can extend and customize SAP Fiori applications by adapting the UI.
+App developers and key users can extend and configure the app UI.
 
 **UI Adaptation**
 
@@ -81,34 +81,12 @@ Key User
 <tr>
 <td valign="top">
 
-**SAP Fiori Elements for OData V2**
+**Documentation**
 
 </td>
 <td valign="top">
 
-For information about the features that application developers can adapt, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md), [Adapting the UI: Analytical List Page](adapting-the-ui-analytical-list-page-2c5fa29.md), and [Extending Delivered Apps Using Adaptation Projects](extending-delivered-apps-using-adaptation-projects-a2b24a6.md).
-
-</td>
-<td valign="top">
-
-For more information about what you have to consider when developing apps that support key user adaptation, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md).
-
-</td>
-<td valign="top">
-
-See the [Additional Features in the SAP Fiori Elements for OData V2](extending-delivered-apps-with-key-user-adaptation-59bfd31.md#loio59bfd317ed5d4af3b490abbe7a9731d8__section_g15_g2n_gnb) section in this topic.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**SAP Fiori Elements for OData V4**
-
-</td>
-<td valign="top">
-
-App developers adapt the UI manually or use SAP Fiori tools for the most common settings. For more information, see [\[Extending SAP Fiori Applications\]](https://help.sap.com/docs/bas/developing-sap-fiori-app-in-sap-business-application-studio/extending-sap-fiori-application?version=Cloud).
+App developers adapt the UI manually or use SAP Fiori tools for the most common settings. For more information, see [Extending SAP Fiori Applications](https://help.sap.com/docs/bas/developing-sap-fiori-app-in-sap-business-application-studio/extending-sap-fiori-application?version=Cloud).
 
 </td>
 <td valign="top">
@@ -120,638 +98,17 @@ For more information about what you have to consider when developing apps that s
 </td>
 <td valign="top">
 
-See the [Additional Features in the SAP Fiori Elements for OData V4](extending-delivered-apps-with-key-user-adaptation-59bfd31.md#loio59bfd317ed5d4af3b490abbe7a9731d8__section_qmw_cxf_zcc) section in this topic.
+See further in this topic.
 
 </td>
 </tr>
 </table>
 
-
-
-<a name="loio59bfd317ed5d4af3b490abbe7a9731d8__section_g15_g2n_gnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Variant Management
-
-Key users can create public variants and deliver them to all users or to users with specific roles. This is supported for page variants in list pages and table variants in list report and object pages.
-
-Key users can also perform the following:
-
--   Modify existing public variants
-
--   Rename variants
-
--   Manage views by adding or removing favorites and modifying the visibility
-
-
-![](images/Key_Users_Manage_Views1_9ff91e8.png)
-
-![](images/Key_Users_Manage_Views_2_f31343c.png)
-
-While switching to key user adaptation mode from normal mode, the app starts in a fresh state and the applied changes are not preserved in the internal app state. Also, when a user exits key user adaptation mode, the app restores to the old state it was in before entering key user adaptation mode.
-
-> ### Note:  
-> We do not recommend embedding iFrames in SAP Fiori elements for OData V2 applications using UI adaptation.
-
-The following table provides an overview of the available configuration settings for key users:
-
-**Configuration Settings for Key Users**
-
-
-<table>
-<tr>
-<th valign="top">
-
-Feature
-
-</th>
-<th valign="top">
-
-Setting
-
-</th>
-<th valign="top">
-
-Values
-
-</th>
-<th valign="top">
-
-Description
-
-</th>
-<th valign="top">
-
-Documentation
-
-</th>
-<th valign="top">
-
-Additional Information
-
-</th>
-</tr>
-<tr>
-<td valign="top" rowspan="4">
-
-List Report
-
-</td>
-<td valign="top">
-
-*Variant Management*
-
-</td>
-<td valign="top">
-
-*Page*
-
-*Control*
-
-</td>
-<td valign="top">
-
-Configure how variant management is used in the list report.
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-> ### Note:  
-> Settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Hide Variant Management*
-
-</td>
-<td valign="top">
-
-Configure how variant management is disabled in the list report.
-
-</td>
-<td valign="top">
-
-[Creating a List Report without Variant Management](creating-a-list-report-without-variant-management-094fe8c.md)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-*Initial Load*
-
-</td>
-<td valign="top">
-
-*Auto*
-
-*Enabled*
-
-*Disabled*
-
-</td>
-<td valign="top">
-
-Configure how data is loaded initially when the app is loaded.
-
-</td>
-<td valign="top">
-
-[Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Open In Edit Mode*
-
-</td>
-<td valign="top">
-
-Configure to open the object directly in edit mode.
-
-</td>
-<td valign="top">
-
-[Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-8665847.md)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Analytical List Page
-
-</td>
-<td valign="top">
-
-*Default Display Mode*
-
-</td>
-<td valign="top">
-
-*Hybrid*
-
-*Chart*
-
-*Table*
-
-</td>
-<td valign="top">
-
-Configure the default display mode of data in the analytical list page.
-
-</td>
-<td valign="top">
-
-[Hybrid View](hybrid-view-6615668.md)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" rowspan="3">
-
-Filter Bar
-
-</td>
-<td valign="top" colspan="2">
-
-*Display Go Button*
-
-</td>
-<td valign="top">
-
-Configure if the *Go* button is displayed in the visual filter bar.
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-Only applicable to the analytical list page.
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Enable Date Range*
-
-</td>
-<td valign="top">
-
-Configure if the semantic date range options in the `manifest.json` file are active.
-
-</td>
-<td valign="top">
-
-[Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Navigation Properties*
-
-</td>
-<td valign="top">
-
-Configure the list of filterable properties from navigation entities to include them as filters.
-
-</td>
-<td valign="top">
-
-[Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md)
-
-Section: Including Navigation Properties
-
-</td>
-<td valign="top">
-
-Only applicable to the list report.
-
-</td>
-</tr>
-<tr>
-<td valign="top" rowspan="4">
-
-Object Page
-
-</td>
-<td valign="top" colspan="2">
-
-*Editable Header Content*
-
-</td>
-<td valign="top">
-
-Configure if the header fields are editable.
-
-</td>
-<td valign="top">
-
-[Toggling the Editability of Header Fields](toggling-the-editability-of-header-fields-c8a9a40.md)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Table Variant Management*
-
-</td>
-<td valign="top">
-
-Configure if variant management is used in tables on the object page.
-
-</td>
-<td valign="top">
-
-[Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md)
-
-</td>
-<td valign="top">
-
-> ### Note:  
-> Settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Chart Variant Management*
-
-</td>
-<td valign="top">
-
-Configure if variant management is used in charts on the object page.
-
-</td>
-<td valign="top">
-
-[Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md)
-
-</td>
-<td valign="top">
-
-> ### Note:  
-> Settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Show Related Apps*
-
-</td>
-<td valign="top">
-
-Configure if the *Related Apps* button is displayed on the object page.
-
-</td>
-<td valign="top">
-
-[Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" rowspan="9">
-
-Table
-
-</td>
-<td valign="top">
-
-*Selection Mode*
-
-</td>
-<td valign="top">
-
-*Single*
-
-*Multi*
-
-</td>
-<td valign="top">
-
-Configure if end users can select a single row or multiple rows in a table.
-
-</td>
-<td valign="top">
-
-[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-*Create Mode*
-
-</td>
-<td valign="top">
-
-*New Page*
-
-*Inline*
-
-*Inline Creation Rows*
-
-*Inline Creation Rows \(Hidden in edit page\)*
-
-</td>
-<td valign="top">
-
-Configure the mode for creating tables.
-
-</td>
-<td valign="top">
-
-[Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md)
-
-</td>
-<td valign="top">
-
-Only applicable to the object page.
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Condensed Table Layout*
-
-</td>
-<td valign="top">
-
-Configure if the table uses this layout.
-
-</td>
-<td valign="top">
-
-[Using the Condensed Table Layout](using-the-condensed-table-layout-f3cc057.md)
-
-</td>
-<td valign="top">
-
-Not applicable to responsive tables.
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Width Including Column Header*
-
-</td>
-<td valign="top">
-
-Configure if the *Column Header* label is considered when calculating the column width.
-
-</td>
-<td valign="top">
-
-[Setting the Default Column Width](setting-the-default-column-width-a765253.md)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Enable Select All*
-
-</td>
-<td valign="top">
-
-Configure if the *Select All* option is displayed in the table.
-
-</td>
-<td valign="top">
-
-[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md)
-
-Section: Select All and Clear All Options in the Table
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Selection Limit*
-
-</td>
-<td valign="top">
-
-Configure the maximum limit of the number of rows that can be selected at once.
-
-</td>
-<td valign="top">
-
-[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md)
-
-Section: Limiting the Number of Selected Rows in a Table
-
-</td>
-<td valign="top">
-
-Not applicable to responsive tables.
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Scroll Threshold*
-
-</td>
-<td valign="top">
-
-Configure the number of additional records that must be dynamically loaded when scrolling through the application.
-
-</td>
-<td valign="top">
-
-[Optimizing Data Loading Using the `ScrollThreshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_ygl_t1s_kdc)
-
-</td>
-<td valign="top">
-
-Not applicable to responsive tables.
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Threshold*
-
-</td>
-<td valign="top">
-
-Configure the number of records that must be loaded during the initial load of the application.
-
-</td>
-<td valign="top">
-
-[Initial Data Loading Using the `Threshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_xkq_dhx_rfc)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-*Hide "Add Card to Insights"*
-
-</td>
-<td valign="top">
-
-Configure if the *Add Card to Insights* feature for *My Home* in SAP S/4HANA and SAP S/4HANA Cloud Public Edition is hidden.
-
-</td>
-<td valign="top">
-
-[Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA Cloud Public Edition and My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-cloud-public-edit-9b13559.md)
-
-</td>
-<td valign="top">
-
-Only applicable to the list report.
-
-</td>
-</tr>
-</table>
-
-
-
-<a name="loio59bfd317ed5d4af3b490abbe7a9731d8__section_qmw_cxf_zcc"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-SAP Fiori elements for OData V4 provides configuration settings for the list report, the object page, and for the filter bar and tables. These configuration settings are applied to the app's `manifest.json` file, so they are not immediately visible on the UI. When a key user activates a new version and exits key user adaptation mode, the application automatically reloads with the new settings.
+SAP Fiori elements for OData V4 provides configuration settings for the list report page, the object page, and for the filter bar and tables. These configuration settings are applied to the app's `manifest.json` file, so they are not immediately visible on the UI. When a key user activates a new version and exits key user adaptation mode, the application automatically reloads with the new settings.
 
 Key users can make the following adaptations on applications:
 
--   Create different variants of the list report for users by adjusting filters, column sorting, and tab selection, for example.
+-   Create different variants of the list report page for users by adjusting filters, column sorting, and tab selection, for example.
 
 -   Change the text arrangement of fields
 
@@ -761,7 +118,7 @@ Key users can make the following adaptations on applications:
 
 -   Move, rename, and remove buttons and add previously removed buttons to the following places:
 
-    -   A toolbar in the header and the table of the list report
+    -   A toolbar in the header and the table of the list report page
 
     -   The header, section, subsection, table, and footer of the object page
 
@@ -772,7 +129,7 @@ Key users can make the following adaptations on applications:
     > Actions with dynamic visibility cannot be added nor removed.
 
 
--   Split and combine actions in tables on the object page and in the list report.
+-   Split and combine actions in tables on the object page and on the list report page.
 
 -   Move, rename, remove, and reveal sections and subsections of the object page.
 
@@ -827,7 +184,7 @@ Additional Information
 <tr>
 <td valign="top" rowspan="2">
 
-List Report
+List Report Page
 
 </td>
 <td valign="top">
@@ -846,12 +203,12 @@ List Report
 </td>
 <td valign="top">
 
-Configure how variant management is used in the list report.
+Configure how variant management is used on the list report page.
 
 </td>
 <td valign="top">
 
-[Creating a List Report without Variant Management](creating-a-list-report-without-variant-management-094fe8c.md)
+[Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-094fe8c.md)
 
 </td>
 <td valign="top">
@@ -912,9 +269,7 @@ Configure if the *Clear* button is displayed in the filter bar.
 </td>
 <td valign="top">
 
-[Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md)
-
-Section: Adding a Clear Button
+[Adding a Clear Button](adapting-the-filter-bar-609c39a.md#loio609c39a7498541559dbef503c1ffd194__add_clear_button) in [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md)
 
 </td>
 <td valign="top">
@@ -946,7 +301,7 @@ Configure if the semantic date range options in the `manifest.json` are active.
 </td>
 </tr>
 <tr>
-<td valign="top">
+<td valign="top" rowspan="3">
 
 Object Page
 
@@ -976,7 +331,58 @@ Configure if variant management is used in tables on the object page.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="11">
+<td valign="top" colspan="2">
+
+*Form*
+
+</td>
+<td valign="top">
+
+Configure the list of properties from navigation entities to include them as form fields.
+
+</td>
+<td valign="top">
+
+[Adapting the Form](adapting-the-form-ac54768.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Avatar Image Fit Type*
+
+</td>
+<td valign="top">
+
+*Cover*
+
+*Contain*
+
+</td>
+<td valign="top">
+
+Configure how an image fits in the avatar's container.
+
+</td>
+<td valign="top">
+
+[Using Images and Icons](using-images-and-icons-5760b63.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="12">
 
 Table
 
@@ -1010,7 +416,7 @@ Configure if the *Export* button is displayed in the table.
 </td>
 <td valign="top">
 
-Configure the count of columns that are always visible when scrolling horizontally.
+Configure the count of columns that are always visible when scrolling horizontally. Not applicable to responsive tables.
 
 </td>
 <td valign="top">
@@ -1036,7 +442,7 @@ Configure the count of columns that are always visible when scrolling horizontal
 
 *Disabled*
 
-*Own Settings*
+*Own Settings:*
 
 -   *Sorting*
 
@@ -1065,7 +471,7 @@ Configure if the table personalization settings are enabled. To configure the li
 > ### Note:  
 > Settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
 
-
+Grouping is not applicable to grid and tree tables.
 
 </td>
 </tr>
@@ -1194,7 +600,7 @@ Configures the number of additional records that must be dynamically loaded when
 </td>
 <td valign="top">
 
-[Optimizing Data Loading Using the `ScrollThreshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_ygl_t1s_kdc)
+[Optimizing Data Loading Using the `ScrollThreshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_ygl_t1s_kdc) section in [Tables](tables-c0f6592.md)
 
 </td>
 <td valign="top">
@@ -1216,7 +622,7 @@ Configures the number of records that must be loaded during the initial load of 
 </td>
 <td valign="top">
 
-[Initial Data Loading Using the `Threshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_xkq_dhx_rfc)
+[Initial Data Loading Using the `Threshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_xkq_dhx_rfc) in [Tables](tables-c0f6592.md)
 
 </td>
 <td valign="top">
@@ -1228,7 +634,7 @@ Configures the number of records that must be loaded during the initial load of 
 <tr>
 <td valign="top" colspan="2">
 
-*Enable Add Card to Insights*
+*Hide Add Card to Insights*
 
 </td>
 <td valign="top">
@@ -1243,7 +649,42 @@ Configure the *Add Card to Insights* feature for *My Home* in SAP S/4HANA and SA
 </td>
 <td valign="top">
 
-Only applicable to the list report.
+Only applicable to the list report page.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Creation Mode*
+
+</td>
+<td valign="top">
+
+*Inline*
+
+*Inline Creation Rows*
+
+*New Page*
+
+</td>
+<td valign="top">
+
+Configures the creation mode of the table.
+
+</td>
+<td valign="top">
+
+[sap.fe.macros.table.TableCreationOptions](https://ui5.sap.com/#/api/sap.fe.macros.table.TableCreationOptions)
+
+</td>
+<td valign="top">
+
+*Inline* is not applicable to analytical tables.
+
+*Inline Creation Rows* is not applicable to tree and analytical tables.
+
+*New Page* is not applicable to analytical tables.
 
 </td>
 </tr>
@@ -1252,5 +693,5 @@ Only applicable to the list report.
 
 
 > ### Note:  
-> For information aboutSAP Fiori elements for OData V2, see [Adapting the UI](adapting-the-ui-7837c7a.md).
+> For information about SAP Fiori elements for OData V2, see [Adapting the UI](adapting-the-ui-7837c7a.md).
 

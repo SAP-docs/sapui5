@@ -59,16 +59,18 @@ You can view and download all files at [OData V4 - Step 9](https://ui5.sap.com/#
             }
         },
 ...
-		onMessageBindingChange : function (oEvent) {
-			...
-		},
+        onMessageBindingChange : function (oEvent) {
+            ...
+        },
 
-		onSelectionChange : function (oEvent) {
+        onSelectionChange : function (oEvent) {
             this._setDetailArea(oEvent.getParameter("listItem").getBindingContext());
         },
 
-...		
-         /**
+...
+        },
+
+        /**
          * Toggles the visibility of the detail area
          *
          * @param {object} [oUserContext] - the current user context
@@ -77,7 +79,7 @@ You can view and download all files at [OData V4 - Step 9](https://ui5.sap.com/#
             var oDetailArea = this.byId("detailArea"),
                 oLayout = this.byId("defaultLayout"),
                 oSearchField = this.byId("searchField");
- 
+
             oDetailArea.setBindingContext(oUserContext || null);
             // resize view
             oDetailArea.setVisible(!!oUserContext);
@@ -85,6 +87,8 @@ You can view and download all files at [OData V4 - Step 9](https://ui5.sap.com/#
             oLayout.setResizable(!!oUserContext);
             oSearchField.setWidth(oUserContext ? "40%" : "20%");
         }
+    });
+});
 ```
 
 The `onSelectionChange` event handler retrieves the context of the selected list item and passes it to a new `_setDetailArea` function. Within `_setDetailArea`, the given context is passed as binding context for the semantic page detail area.
@@ -101,168 +105,168 @@ The application also needs to close the detail area if its binding context is de
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.core.tutorial.odatav4.controller.App"
-	displayBlock="true"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:l="sap.ui.layout"
-	xmlns:semantic="sap.f.semantic"
-	xmlns:f="sap.ui.layout.form"
-	xmlns:core="sap.ui.core">
-	<Shell>
-		<App busy="{appView>/busy}" class="sapUiSizeCompact">
-			<pages>
-				...
-					<content>
-						<l:ResponsiveSplitter defaultPane="defaultPane">
-							<l:PaneContainer orientation="Horizontal">
-								<l:SplitPane id="defaultPane">
-									<l:layoutData>
-										<l:SplitterLayoutData id="defaultLayout" size="100%" resizable="false"/>
-									</l:layoutData>
-									<Table
-										id="peopleList"
-										growing="true"
-										growingThreshold="10"
-										items="{
-											path: '/People',
-											parameters: {
-												$count: true,
-												$$updateGroupId : 'peopleGroup'
-											}
-										}"
-										mode="SingleSelectLeft"
-										selectionChange=".onSelectionChange">
-										<headerToolbar>
-											...
-										</headerToolbar>
-										...
-									</Table>
-								</l:SplitPane>
-								<l:SplitPane>
-									<!--Details-->
-									<!--remove busy-->
-									<semantic:SemanticPage
-										id="detailArea"
-										visible="false">
-										<semantic:titleHeading>
-											<Title
-												text="{FirstName} {LastName}"
-												level="H2"/>
-										</semantic:titleHeading>
-										<semantic:headerContent>
-												<FlexBox>
-													<VBox>
-														<ObjectAttribute text="{i18n>userNameLabelText}"/>
-														<ObjectAttribute text="{UserName}"/>
-													</VBox>
-													<VBox class="sapUiMediumMarginBegin">
-														<ObjectAttribute text="{i18n>ageLabelText}"/>
-														<ObjectNumber number="{Age}" unit="Years"/>
-													</VBox>
-												</FlexBox>
-										</semantic:headerContent>
-										<semantic:content>
-											<VBox>
-												<FlexBox wrap="Wrap">
-													<f:Form	editable="false">
-														<f:title>
-															<core:Title text="{i18n>addressTitleText}" />
-														</f:title>
-														<f:layout>
-															<f:ResponsiveGridLayout
-																labelSpanXL="3"
-																labelSpanL="3"
-																labelSpanM="3"
-																labelSpanS="12"
-																adjustLabelSpan="false"
-																emptySpanXL="4"
-																emptySpanL="4"
-																emptySpanM="4"
-																emptySpanS="0"
-																columnsXL="1"
-																columnsL="1"
-																columnsM="1"
-																singleContainerFullSize="false" />
-														</f:layout>
-														<f:formContainers>
-															<f:FormContainer>
-																<f:formElements>
-																	<f:FormElement label="{i18n>addressLabelText}">
-																		<f:fields>
-																			<Text text="{HomeAddress/Address}" />
-																		</f:fields>
-																	</f:FormElement>
-																	<f:FormElement label="{i18n>cityLabelText}">
-																		<f:fields>
-																			<Text text="{HomeAddress/City/Name}" />
-																		</f:fields>
-																	</f:FormElement>
-																	<f:FormElement label="{i18n>regionLabelText}">
-																		<f:fields>
-																			<Text text="{HomeAddress/City/Region}" />
-																		</f:fields>
-																	</f:FormElement>
-																	<f:FormElement label="{i18n>countryLabelText}">
-																		<f:fields>
-																			<Text text="{HomeAddress/City/CountryRegion}" />
-																		</f:fields>
-																	</f:FormElement>
-																</f:formElements>
-															</f:FormContainer>
-														</f:formContainers>
-													</f:Form>
-													<f:Form	editable="false">
-														<f:title>
-															<core:Title text="{i18n>bestFriendTitleText}" />
-														</f:title>
-														<f:layout>
-															<f:ResponsiveGridLayout
-																labelSpanXL="3"
-																labelSpanL="3"
-																labelSpanM="3"
-																labelSpanS="12"
-																adjustLabelSpan="false"
-																emptySpanXL="4"
-																emptySpanL="4"
-																emptySpanM="4"
-																emptySpanS="0"
-																columnsXL="1"
-																columnsL="1"
-																columnsM="1"
-																singleContainerFullSize="false" />
-														</f:layout>
-														<f:formContainers>
-															<f:FormContainer>
-																<f:formElements>
-																	<f:FormElement label="{i18n>nameLabelText}">
-																		<f:fields>
-																			<Text text="{BestFriend/FirstName} {BestFriend/LastName}" />
-																		</f:fields>
-																	</f:FormElement>
-																	<f:FormElement label="{i18n>ageLabelText}">
-																		<f:fields>
-																			<Text text="{BestFriend/Age}" />
-																		</f:fields>
-																	</f:FormElement>
-																	<f:FormElement label="{i18n>userNameLabelText}">
-																		<f:fields>
-																			<Text text="{BestFriend/UserName}" />
-																		</f:fields>
-																	</f:FormElement>
-																</f:formElements>
-															</f:FormContainer>
-														</f:formContainers>
-													</f:Form>
-												</FlexBox>
-											</VBox>
-										</semantic:content>
-									</semantic:SemanticPage>
-								</l:SplitPane>
-							</l:PaneContainer>
-						</l:ResponsiveSplitter>
-					</content>
-					...
+    controllerName="sap.ui.core.tutorial.odatav4.controller.App"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Shell>
+        <App busy="{appView>/busy}" class="sapUiSizeCompact">
+            <pages>
+                ...
+                    <content>
+                        <l:ResponsiveSplitter defaultPane="defaultPane">
+                            <l:PaneContainer orientation="Horizontal">
+                                <l:SplitPane id="defaultPane">
+                                    <l:layoutData>
+                                        <l:SplitterLayoutData id="defaultLayout" size="100%" resizable="false"/>
+                                    </l:layoutData>
+                                    <Table
+                                        id="peopleList"
+                                        growing="true"
+                                        growingThreshold="10"
+                                        items="{
+                                            path: '/People',
+                                            parameters: {
+                                                $count: true,
+                                                $$updateGroupId : 'peopleGroup'
+                                            }
+                                        }"
+                                        mode="SingleSelectLeft"
+                                        selectionChange=".onSelectionChange">
+                                        <headerToolbar>
+                                            ...
+                                        </headerToolbar>
+                                        ...
+                                    </Table>
+                                </l:SplitPane>
+                                <l:SplitPane>
+                                    <!--Details-->
+                                    <!--remove busy-->
+                                    <semantic:SemanticPage
+                                        id="detailArea"
+                                        visible="false">
+                                        <semantic:titleHeading>
+                                            <Title
+                                                text="{FirstName} {LastName}"
+                                                level="H2"/>
+                                        </semantic:titleHeading>
+                                        <semantic:headerContent>
+                                                <FlexBox>
+                                                    <VBox>
+                                                        <ObjectAttribute text="{i18n>userNameLabelText}"/>
+                                                        <ObjectAttribute text="{UserName}"/>
+                                                    </VBox>
+                                                    <VBox class="sapUiMediumMarginBegin">
+                                                        <ObjectAttribute text="{i18n>ageLabelText}"/>
+                                                        <ObjectNumber number="{Age}" unit="Years"/>
+                                                    </VBox>
+                                                </FlexBox>
+                                        </semantic:headerContent>
+                                        <semantic:content>
+                                            <VBox>
+                                                <FlexBox wrap="Wrap">
+                                                    <f:Form    editable="false">
+                                                        <f:title>
+                                                            <core:Title text="{i18n>addressTitleText}" />
+                                                        </f:title>
+                                                        <f:layout>
+                                                            <f:ResponsiveGridLayout
+                                                                labelSpanXL="3"
+                                                                labelSpanL="3"
+                                                                labelSpanM="3"
+                                                                labelSpanS="12"
+                                                                adjustLabelSpan="false"
+                                                                emptySpanXL="4"
+                                                                emptySpanL="4"
+                                                                emptySpanM="4"
+                                                                emptySpanS="0"
+                                                                columnsXL="1"
+                                                                columnsL="1"
+                                                                columnsM="1"
+                                                                singleContainerFullSize="false" />
+                                                        </f:layout>
+                                                        <f:formContainers>
+                                                            <f:FormContainer>
+                                                                <f:formElements>
+                                                                    <f:FormElement label="{i18n>addressLabelText}">
+                                                                        <f:fields>
+                                                                            <Text text="{HomeAddress/Address}" />
+                                                                        </f:fields>
+                                                                    </f:FormElement>
+                                                                    <f:FormElement label="{i18n>cityLabelText}">
+                                                                        <f:fields>
+                                                                            <Text text="{HomeAddress/City/Name}" />
+                                                                        </f:fields>
+                                                                    </f:FormElement>
+                                                                    <f:FormElement label="{i18n>regionLabelText}">
+                                                                        <f:fields>
+                                                                            <Text text="{HomeAddress/City/Region}" />
+                                                                        </f:fields>
+                                                                    </f:FormElement>
+                                                                    <f:FormElement label="{i18n>countryLabelText}">
+                                                                        <f:fields>
+                                                                            <Text text="{HomeAddress/City/CountryRegion}" />
+                                                                        </f:fields>
+                                                                    </f:FormElement>
+                                                                </f:formElements>
+                                                            </f:FormContainer>
+                                                        </f:formContainers>
+                                                    </f:Form>
+                                                    <f:Form    editable="false">
+                                                        <f:title>
+                                                            <core:Title text="{i18n>bestFriendTitleText}" />
+                                                        </f:title>
+                                                        <f:layout>
+                                                            <f:ResponsiveGridLayout
+                                                                labelSpanXL="3"
+                                                                labelSpanL="3"
+                                                                labelSpanM="3"
+                                                                labelSpanS="12"
+                                                                adjustLabelSpan="false"
+                                                                emptySpanXL="4"
+                                                                emptySpanL="4"
+                                                                emptySpanM="4"
+                                                                emptySpanS="0"
+                                                                columnsXL="1"
+                                                                columnsL="1"
+                                                                columnsM="1"
+                                                                singleContainerFullSize="false" />
+                                                        </f:layout>
+                                                        <f:formContainers>
+                                                            <f:FormContainer>
+                                                                <f:formElements>
+                                                                    <f:FormElement label="{i18n>nameLabelText}">
+                                                                        <f:fields>
+                                                                            <Text text="{BestFriend/FirstName} {BestFriend/LastName}" />
+                                                                        </f:fields>
+                                                                    </f:FormElement>
+                                                                    <f:FormElement label="{i18n>ageLabelText}">
+                                                                        <f:fields>
+                                                                            <Text text="{BestFriend/Age}" />
+                                                                        </f:fields>
+                                                                    </f:FormElement>
+                                                                    <f:FormElement label="{i18n>userNameLabelText}">
+                                                                        <f:fields>
+                                                                            <Text text="{BestFriend/UserName}" />
+                                                                        </f:fields>
+                                                                    </f:FormElement>
+                                                                </f:formElements>
+                                                            </f:FormContainer>
+                                                        </f:formContainers>
+                                                    </f:Form>
+                                                </FlexBox>
+                                            </VBox>
+                                        </semantic:content>
+                                    </semantic:SemanticPage>
+                                </l:SplitPane>
+                            </l:PaneContainer>
+                        </l:ResponsiveSplitter>
+                    </content>
+                    ...
 </mvc:View>
 ```
 

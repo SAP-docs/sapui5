@@ -2,7 +2,12 @@
 
 # Configuring Internal Navigation
 
-SAP Fiori elements control the navigation within an app \(internal navigation\). This section describes the configuration options that you have.
+You can configure internal navigation within an SAP Fiori elements app.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Internal Navigation](configuring-internal-navigation-2c65f07.md).
 
 
 
@@ -25,47 +30,47 @@ You can control whether it is possible to navigate to a detail page. It simply d
 > 
 > ```json
 > "sap.ui.generic.app": {
->   "pages": {
->     "MyListReport": {
->       "entitySet": "MyEntitySet",
->       "component": {
->         "name": "sap.suite.ui.generic.template.ListReport",
->         "list": true
->       },
->       // Navigation to detail page: eliminate this block if no navigation is needed
->       "pages": {
->         "MyObjectPageOnFirstLevel":          {
->           "entitySet": "MyEntitySet",
->           "component": {
->             "name": "sap.suite.ui.generic.template.ObjectPage"
->           },
->           "pages": {
->                                    "MyFirstObjectPageOnSecondLevel": {
->               "navigationProperty": "to_MyFirstEntitySet",
->               "entitySet": "MyFirstEntitySet",
->               "component": {
->                 "name": "sap.suite.ui.generic.template.ObjectPage"
->               },
->             }, 
->                                                "MySecondObjectPageOnSecondLevel": {
->               "navigationProperty": "to_MySecondEntitySetNavigation",
->               "entitySet": "MMySecondEntitySet",
->               "component": {
->                 "name": "sap.suite.ui.generic.template.ObjectPage"
->               },
->             }, 
->                                                "MyThirdObjectPageOnSecondLevel": {
->               "navigationProperty": "to_MyThirdEntitySet",
->               "entitySet": "MyThirdEntitySet",
->               "component": {
->                 "name": "sap.suite.ui.generic.template.ObjectPage"
->               }
+>     "pages": {
+>         "MyListReport": {
+>             "entitySet": "MyEntitySet",
+>             "component": {
+>                 "name": "sap.suite.ui.generic.template.ListReport",
+>                 "list": true
+>             },
+>             // Navigation to detail page: eliminate this block if no navigation is needed
+>             "pages": {
+>                 "MyObjectPageOnFirstLevel": {
+>                     "entitySet": "MyEntitySet",
+>                     "component": {
+>                         "name": "sap.suite.ui.generic.template.ObjectPage"
+>                     },
+>                     "pages": {
+>                         "MyFirstObjectPageOnSecondLevel": {
+>                             "navigationProperty": "to_MyFirstEntitySet",
+>                             "entitySet": "MyFirstEntitySet",
+>                             "component": {
+>                                 "name": "sap.suite.ui.generic.template.ObjectPage"
+>                             }
+>                         },
+>                         "MySecondObjectPageOnSecondLevel": {
+>                             "navigationProperty": "to_MySecondEntitySetNavigation",
+>                             "entitySet": "MMySecondEntitySet",
+>                             "component": {
+>                                 "name": "sap.suite.ui.generic.template.ObjectPage"
+>                             }
+>                         },
+>                         "MyThirdObjectPageOnSecondLevel": {
+>                             "navigationProperty": "to_MyThirdEntitySet",
+>                             "entitySet": "MyThirdEntitySet",
+>                             "component": {
+>                                 "name": "sap.suite.ui.generic.template.ObjectPage"
+>                             }
+>                         }
+>                     }
+>                 }
 >             }
->           }
 >         }
->       }
 >     }
->   }
 > }
 > 
 > 
@@ -80,29 +85,29 @@ A chevron indicates the navigation options. The user can navigate by clicking on
 > ### Note:  
 > In a non-draft app, if the user is in edit mode on an object page and has made changes before the navigation has been executed, the system displays a message indicating that the changes will be lost if the user navigates without saving first.
 
-The chevron navigation from a list report can also be modified using [onListNavigationExtension](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ListReport.controllerFrameworkExtensions) to navigate to deeper-hierarchy child pages of the same app. However, it is not recommended to do so. For more information about configuring navigation restrictions, see [Adding Actions to Tables](adding-actions-to-tables-c909f6b.md).
+The chevron navigation from a list report page can also be modified using [onListNavigationExtension](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ListReport.controllerFrameworkExtensions) to navigate to deeper-hierarchy child pages of the same app. However, it is not recommended to do so. For more information about configuring navigation restrictions, see [Adding Actions to Tables](adding-actions-to-tables-c909f6b.md).
 
 
 
-### Showing Item List in a List Report and Parent on an Object Page
+### Showing Item List on a List Report Page and Parent on an Object Page
 
-You can enable applications to display item lists in a list report and parent/main object along with its child entities on an object page. To do this, you need to map a child entity to a list report page and enable navigation to the parent/main object.
+You can enable applications to display item lists on a list report page and parent/main object along with its child entities on an object page. To do this, you need to map a child entity to a list report page and enable navigation to the parent/main object.
 
-Add the following configuration in the manifest to direct the *Create* action in a list report to the main entity:
+Add the following configuration in the manifest to direct the *Create* action on a list report oage to the main entity:
 
 > ### Sample Code:  
 > `manifest.json`
 > 
 > ```json
 > 
->   "component": {
+> "component": {
 >     "name": "sap.suite.ui.generic.template.ListReport",
 >     "list": true,
 >     "settings": {
->       // Create of parent entity: Provide the parent entity set name.
->       "creationEntitySet": "C_MPPurchasingSource"
+>         // Create of parent entity: Provide the parent entity set name.
+>         "creationEntitySet": "C_MPPurchasingSource"
 >     }
->   }
+> }
 > 
 > ```
 
@@ -193,15 +198,16 @@ The following example shows how to use the `DataFieldWithNavigationPath` annotat
 > ABAP CDS Annotation
 > 
 > ```
+> 
 > @UI.fieldGroup: [
->   {
->     targetelement: 'TO_SALESORDER',
->     label: 'Ref. Sales Order',
->     value: 'REFSALESORDERID',
->     type: #WITH_NAVIGATION_PATH,
->     position: 1 ,
->     qualifier: 'NavExample'
->   }
+>     {
+>         targetelement: 'TO_SALESORDER',
+>         label: 'Ref. Sales Order',
+>         value: 'REFSALESORDERID',
+>         type: #WITH_NAVIGATION_PATH,
+>         position: 1 ,
+>         qualifier: 'NavExample'
+>     }
 > ]
 > REFSALESORDERID;
 > ```
@@ -210,6 +216,7 @@ The following example shows how to use the `DataFieldWithNavigationPath` annotat
 > CAP CDS Annotation
 > 
 > ```
+> 
 > UI.FieldGroup #NavExample : {
 >     Data : [
 >         {

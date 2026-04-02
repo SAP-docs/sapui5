@@ -2,7 +2,12 @@
 
 # Enabling the History of Recently Entered Values
 
-You can enable the history of the most recently entered values for any field, when you move the cursor back to that field. It is enabled by default for some of the controls that are used as a filter, such as for multi-input fields. However, it may not be enabled for controls such as drop-down list.
+You can enable the history of the most recently entered values for any field.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-37dbf1f.md).
+
+You can view the field history by moving the cursor back to the field. It's enabled by default for some of the controls that are used as a filter, such as for multi-input fields. However, it may not be enabled for controls such as a dropdown list.
 
 If you have fields that contain sensitive personal data, use the `com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive` annotation to disable the storing of data in the history.
 
@@ -85,5 +90,5 @@ The `historyEnabled` setting has three possible values: `enabled`, `disabled`, o
 **Related Information**  
 
 
-[Configuring Filter Bars](configuring-filter-bars-76066e5.md "You can configure filter bars in both list report applications and analytical list pages.")
+[Configuring Filter Bars](configuring-filter-bars-76066e5.md "You can configure the filter bar on the list report page and the analytical list page.")
 

@@ -6,6 +6,11 @@ List cards display lists of records according to the configuration in the `com.s
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [List Cards](list-cards-56f39e0.md).
+
+
+
 When creating a list card, you can choose from a number of different types of lists. The number of items displayed depends on the type of list. You can choose from two types of list cards:
 
 -   Condensed
@@ -74,12 +79,12 @@ Number of list items displayed: up to 6.
 <tr>
 <td valign="top">
 
-![](images/Condensed_Standard_342d904.png)
+![](images/Condensed_Standard_342d904.jpg)
 
 </td>
 <td valign="top">
 
-![](images/Extended_Standard_849fdc4.png)
+![](images/Extended_Standard_849fdc4.jpg)
 
 </td>
 </tr>
@@ -107,6 +112,8 @@ In this type of list, each list item displays up to three fields. Only use this 
 
 Number of list items displayed: up to 3.
 
+![](images/List_Card_-_Condensed_Bar_789d0c4.png)
+
 
 
 <a name="loio1a3c28c662c94419ad6e64daab05a823__section_ekf_t4r_fhc"/>
@@ -120,33 +127,7 @@ In this type of list, each list item displays up to five fields. The first `Data
 > 
 > Number of list items displayed: up to 5.
 
-
-<table>
-<tr>
-<td valign="top">
-
-![](images/Condensed_Bar_8f1def4.png)
-
-</td>
-<td valign="top">
-
-![](images/Extended_Bar_bdbbbb2.png)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Condensed List Type - Bar Flavor
-
-</td>
-<td valign="top">
-
-Extended List Type - Bar Flavor
-
-</td>
-</tr>
-</table>
+![](images/List_Card_-_Extended_b62df9c.png)
 
 
 

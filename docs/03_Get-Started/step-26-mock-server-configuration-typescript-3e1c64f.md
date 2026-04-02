@@ -46,32 +46,32 @@ For simplicity, we remove all content from the original Northwind OData metadata
 
 ```xml
 <edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
-	<edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0"
-			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
-		<Schema Namespace="NorthwindModel" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-			<EntityType Name="Invoice">
-				<Key>
-					<PropertyRef Name="ProductName"/>
-					<PropertyRef Name="Quantity"/>
-					<PropertyRef Name="ShipperName"/>
-				</Key>
-				<Property Name="ShipperName" Type="Edm.String" Nullable="false" MaxLength="40" FixedLength="false"
-							Unicode="true"/>
-				<Property Name="ProductName" Type="Edm.String" Nullable="false" MaxLength="40" FixedLength="false"
-							Unicode="true"/>
-				<Property Name="Quantity" Type="Edm.Int16" Nullable="false"/>
-				<Property Name="ExtendedPrice" Type="Edm.Decimal" Precision="19" Scale="4"/>
-				<Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="1" FixedLength="false"
-							Unicode="true"/>
-			</EntityType>
-		</Schema>
-		<Schema Namespace="ODataWebV2.Northwind.Model" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-			<EntityContainer Name="NorthwindEntities" m:IsDefaultEntityContainer="true" p6:LazyLoadingEnabled="true"
-					xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
-				<EntitySet Name="Invoices" EntityType="NorthwindModel.Invoice"/>
-			</EntityContainer>
-		</Schema>
-	</edmx:DataServices>
+    <edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0"
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+        <Schema Namespace="NorthwindModel" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Invoice">
+                <Key>
+                    <PropertyRef Name="ProductName"/>
+                    <PropertyRef Name="Quantity"/>
+                    <PropertyRef Name="ShipperName"/>
+                </Key>
+                <Property Name="ShipperName" Type="Edm.String" Nullable="false" MaxLength="40" FixedLength="false"
+                    Unicode="true"/>
+                <Property Name="ProductName" Type="Edm.String" Nullable="false" MaxLength="40" FixedLength="false"
+                    Unicode="true"/>
+                <Property Name="Quantity" Type="Edm.Int16" Nullable="false"/>
+                <Property Name="ExtendedPrice" Type="Edm.Decimal" Precision="19" Scale="4"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="1" FixedLength="false"
+                    Unicode="true"/>
+            </EntityType>
+        </Schema>
+        <Schema Namespace="ODataWebV2.Northwind.Model" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="NorthwindEntities" m:IsDefaultEntityContainer="true" p6:LazyLoadingEnabled="true"
+                xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+                <EntitySet Name="Invoices" EntityType="NorthwindModel.Invoice"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
 </edmx:Edmx>
 
 ```
@@ -88,46 +88,46 @@ We add the new file `Invoices.json` to our new folder and define one flat array 
 
 ```
 [
-  {
-	"ProductName": "Pineapple",
-	"Quantity": 21,
-	"ExtendedPrice": 87.2,
-	"ShipperName": "Fun Inc.",
-	"ShippedDate": "2015-04-01T00:00:00",
-	"Status": "A"
-  },
-  {
-	"ProductName": "Milk",
-	"Quantity": 4,
-	"ExtendedPrice": 10,
-	"ShipperName": "ACME",
-	"ShippedDate": "2015-02-18T00:00:00",
-	"Status": "B"
-  },
-  {
-	"ProductName": "Canned Beans",
-	"Quantity": 3,
-	"ExtendedPrice": 6.85,
-	"ShipperName": "ACME",
-	"ShippedDate": "2015-03-02T00:00:00",
-	"Status": "B"
-  },
-  {
-	"ProductName": "Salad",
-	"Quantity": 2,
-	"ExtendedPrice": 8.8,
-	"ShipperName": "ACME",
-	"ShippedDate": "2015-04-12T00:00:00",
-	"Status": "C"
-  },
-  {
-	"ProductName": "Bread",
-	"Quantity": 1,
-	"ExtendedPrice": 2.71,
-	"ShipperName": "Fun Inc.",
-	"ShippedDate": "2015-01-27T00:00:00",
-	"Status": "A"
-  }
+    {
+        "ProductName": "Pineapple",
+        "Quantity": 21,
+        "ExtendedPrice": 87.2,
+        "ShipperName": "Fun Inc.",
+        "ShippedDate": "2015-04-01T00:00:00",
+        "Status": "A"
+    },
+    {
+        "ProductName": "Milk",
+        "Quantity": 4,
+        "ExtendedPrice": 10,
+        "ShipperName": "ACME",
+        "ShippedDate": "2015-02-18T00:00:00",
+        "Status": "B"
+    },
+    {
+        "ProductName": "Canned Beans",
+        "Quantity": 3,
+        "ExtendedPrice": 6.85,
+        "ShipperName": "ACME",
+        "ShippedDate": "2015-03-02T00:00:00",
+        "Status": "B"
+    },
+    {
+        "ProductName": "Salad",
+        "Quantity": 2,
+        "ExtendedPrice": 8.8,
+        "ShipperName": "ACME",
+        "ShippedDate": "2015-04-12T00:00:00",
+        "Status": "C"
+    },
+    {
+        "ProductName": "Bread",
+        "Quantity": 1,
+        "ExtendedPrice": 2.71,
+        "ShipperName": "Fun Inc.",
+        "ShippedDate": "2015-01-27T00:00:00",
+        "Status": "A"
+    }
 ]
 ```
 
@@ -149,7 +149,7 @@ Finally, we call the `start` method on the mock server. From this point, each re
 
 ```js
 import MockServer from "sap/ui/core/util/MockServer";
-				
+
 export default {
 
     init: function () {
@@ -210,23 +210,22 @@ We define that the HTML page now initializes the `initMockServer` module instead
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>SAPUI5 UI5 Walkthrough - Mockserver Test Page</title>
-	<script
-		id="sap-ui-bootstrap"
-		src="../resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-compat-version="edge"
-		data-sap-ui-async="true"
-		data-sap-ui-on-init="module:ui5/walkthrough/test/initMockServer"
-		data-sap-ui-resource-roots='{
-			"ui5.walkthrough": "../"
-		}'>
-	</script>
+    <meta charset="utf-8">
+    <title>SAPUI5 UI5 Walkthrough - Mockserver Test Page</title>
+    <script
+        id="sap-ui-bootstrap"
+        src="../resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-compat-version="edge"
+        data-sap-ui-async="true"
+        data-sap-ui-on-init="module:ui5/walkthrough/test/initMockServer"
+        data-sap-ui-resource-roots='{
+            "ui5.walkthrough": "../"
+        }'>
+    </script>
 </head>
 <body class="sapUiBody" id="content">
-	<div data-sap-ui-component data-name="ui5.walkthrough" data-id="container" data-settings='{"id" : "walkthrough"}'></div>
-
+    <div data-sap-ui-component data-name="ui5.walkthrough" data-id="container" data-settings='{"id" : "walkthrough"}'></div>
 </body>
 </html>
 ```
@@ -249,21 +248,13 @@ If you prefer to continue with the local data, you should adjust the `start` scr
 
 ```
 {
-  "name": "ui5.walkthrough",
-  "version": "1.0.0",
-  "description": "UI5 TypeScript Walkthrough",
-  "scripts": {
-      "start": "ui5 serve -o test/mockServer.html"
-  },
-  "devDependencies": {    
-    "@types/openui5": "^1.120.0",
-    "@ui5/cli": "^3.7.1",
-    "typescript": "^5.2.2",	
-    "ui5-middleware-livereload": "^3.0.2",
-    "ui5-middleware-serveframework": "3.0.0",
-    "ui5-middleware-simpleproxy": "^3.2.8",
-    "ui5-tooling-transpile": "^3.2.7"
-  }
+    "name": "ui5.walkthrough",
+    "version": "1.0.0",
+    "description": "UI5 TypeScript Walkthrough",
+    "scripts": {
+        "start": "ui5 serve -o test/mockServer.html"
+    },
+    ...
 }
 ```
 

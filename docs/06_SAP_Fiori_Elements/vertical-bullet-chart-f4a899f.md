@@ -2,7 +2,7 @@
 
 # Vertical Bullet Chart
 
-Vertical bullet charts accept at least one measure and one dimension.
+You can render the chart as vertical bullet charts, which accepts at least one measure and one dimension.
 
   
   

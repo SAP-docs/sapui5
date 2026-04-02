@@ -25,7 +25,7 @@ Also, `isIntentSupported` is standard functionality in the Cross Application Nav
 >      ...
 >       "card01": {
 >         "model": "salesOrder",
->         "template": "sap.ovp.cards.stack",
+>         "template": "sap.ovp.cards.v4.stack",
 >         "settings": {
 >           "title": "Stack Card Title",
 >           "subTitle": "Stack Card",

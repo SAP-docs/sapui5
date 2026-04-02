@@ -49,7 +49,7 @@ In the following example, the stack card displays information about business par
 >     "cards": {
 >         "card00": {
 >             "model": "salesOrder",
->             "template": "sap.ovp.cards.stack",
+>             "template": "sap.ovp.cards.v4.stack",
 >             "settings": {
 >                 "title": "Stack Card Title",
 >                 "subTitle": "Stack Card",

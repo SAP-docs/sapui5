@@ -2,6 +2,11 @@
 
 # Configuring the List Area
 
+You can add values and navigation properties to the list area.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring the List Area](configuring-the-list-area-f57373d.md).
+
 1.  Define `DataField` property to display values \(text\) for the list. For example:
 
     > ### Sample Code:  

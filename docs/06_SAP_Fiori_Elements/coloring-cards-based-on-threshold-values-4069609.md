@@ -4,6 +4,9 @@
 
 With overview pages, column chart cards can be semantically colored based on threshold values.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Coloring Cards Based on Threshold Values](coloring-cards-based-on-threshold-values-02c53f4.md).
+
 The threshold values used to semantically color column charts come from the data point annotation that is associated with the measure used in the analytic card. We recommend to only use one measure in the chart if you intend to use this feature.
 
 When you color the chart card, the threshold value that influences the semantic color would also be displayed in the legend; however, in instances where you have more than one measure, then the chart legend would only show "good", "bad" or "neutral" values. For example, a measure can be linked with a data point as follows, if the following two conditions are met:

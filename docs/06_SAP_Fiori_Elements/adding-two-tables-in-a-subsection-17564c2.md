@@ -7,6 +7,8 @@ You can add two tables adjacent to each other in a subsection of an object page.
 To achieve this, add the annotations as shown below:
 
 > ### Sample Code:  
+> Two Tables in a Subsection of an Object Page
+> 
 > ```
 > 
 > <Record Type="UI.CollectionFacet">

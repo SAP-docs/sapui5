@@ -46,7 +46,7 @@ sap.ui.define([
 
 We create a new folder `control` and a file `ProductRating.js` that will hold our new control. As with our controllers and views, the custom control inherits the common control functionality from a SAPUI5 base object, for controls this is done by extending the base class `sap.ui.core.Control`.
 
-Custom controls are small reuse components that can be created within the app very easily. Due to their nature, they are sometimes also referred to as "notepad" or "on the fly" controls. A custom control is a JavaScript object that has two special sections \(`metadata` and `renderer`\) and a number of methods that implement the functionality of the control.
+A custom control offers a reusable visual experience. It might be located directly inside your application or stored in a dedicated library. A custom control is a subclass of the base `Control` class written in JavaScript or TypeScript. To implement it, specify `sap/ui/core/Control` in the `extend` method call. You can also define special control-related properties, such as `metadata` and `renderer`, and methods that implement the control's functionality.
 
 The `metadata` section defines the data structure and thus the API of the control. With this meta information on the properties, events, and aggregations of the control SAPUI5 automatically creates setter and getter methods and other convenience functions that can be called within the app.
 

@@ -16,7 +16,7 @@ Custom pages provide the following features:
 
 -   Availability of the binding context for the OData model in custom XML view and page controller
 
--   Context-based navigation from a custom page to an SAP Fiori elements-based list report or object page through the controller extension `sap.fe.core.controllerextensions.Routing`
+-   Context-based navigation from a custom page to an SAP Fiori elements-based list report page or object page through the controller extension `sap.fe.core.controllerextensions.Routing`
 
 -   Support for building blocks
 

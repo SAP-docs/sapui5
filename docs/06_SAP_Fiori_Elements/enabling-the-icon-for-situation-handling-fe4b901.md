@@ -2,9 +2,9 @@
 
 # Enabling the Icon for Situation Handling
 
-You can enable the icon to indicate an existing situation in the list report and the object page.
+You can enable the icon to indicate an existing situation on the list report page and the object page.
 
-SAP Fiori elements for OData V4 automatically displays an icon for Situation Handling in the list report and the object page if your service contains the corresponding annotation. You must ensure that exactly one navigation property exists whose target entity type is annotated with the following:
+SAP Fiori elements for OData V4 automatically displays an icon for Situation Handling on the list report page and the object page if your service contains the corresponding annotation. You must ensure that exactly one navigation property exists whose target entity type is annotated with the following:
 
 > ### Sample Code:  
 > ```
@@ -15,7 +15,7 @@ SAP Fiori elements for OData V4 automatically displays an icon for Situation Han
 > </Annotation>
 > ```
 
-The following screenshot shows an example from a list report:
+The following screenshot shows an example from a list report page:
 
 ![](images/Situation_Handling_in_a_List_Report_8cbabf0.png)
 

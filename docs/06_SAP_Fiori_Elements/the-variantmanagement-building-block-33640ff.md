@@ -48,9 +48,9 @@ The `VariantManagement` building block can be initialized as shown in the follow
 > </f:DynamicPage>
 > ```
 
-The `for` association enables linking of other flex-enabled controls to the `VariantManagement` building block. Once linked, the building block automatically captures all the flex-relevant user personalization changes on these controls and saves them whenever the end user creates a new variant.
+The `for` association enables linking of other flex-enabled controls to the `VariantManagement` building block. Once linked, the building block automatically captures all the flex-relevant user personalization changes on these controls and saves them whenever the user creates a new variant.
 
-In the sample code, the table and filter bar controls are linked to the `VariantManagement` building block. Any personalization changes made by the end user to these controls are saved within a user-created variant when the changes are saved to a variant.
+In the sample code, the table and filter bar controls are linked to the `VariantManagement` building block. Any personalization changes made by the user to these controls are saved within a user-created variant when the changes are saved to a variant.
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Filter Bar - With Variant Management and Chart](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarVMWithChart).
 

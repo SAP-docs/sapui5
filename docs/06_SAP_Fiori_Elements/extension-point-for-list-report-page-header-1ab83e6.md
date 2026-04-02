@@ -52,5 +52,5 @@ You can explore and work with the coding yourself. For more information and live
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Extension Point for List Report Header](extension-point-for-list-report-header-a2533dc.md).
+> For information about SAP Fiori elements for OData V2, see [Extension Point for List Report Page Header](extension-point-for-list-report-page-header-a2533dc.md).
 

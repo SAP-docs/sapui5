@@ -2,6 +2,11 @@
 
 # Adding Actions to Tables
 
+You can add different buttons to tables.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+
 The table control offers the possibility to show generic actions, such as *Create* and *Delete*, as well as application-specific actions.
 
 
@@ -196,7 +201,7 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 
 ### Enable or Disable the *Delete* Button \(Using `deletable-path` Annotations\)
 
-You can enable or disable the *Delete* button in the list report based on conditions specified in the back-end system. For example, you can disable the deletion for a sales order that has already been paid. In this case, if a user selects an item that can't be deleted, the *Delete* button is disabled. In addition, if the user navigates from this item in the list report to the object page, the *Delete* button is hidden.
+You can enable or disable the *Delete* button on the list report page based on conditions specified in the back-end system. For example, you can disable the deletion for a sales order that has already been paid. In this case, if a user selects an item that can't be deleted, the *Delete* button is disabled. In addition, if the user navigates from this item on the list report page to the object page, the *Delete* button is hidden.
 
 In your annotation, set the `deletable-path` to point to a particular property of an object \(entity\) in the back-end system that is either `true` or `false`. If the value of this property is `true`, the *Delete* button is enabled; if it's `false`, it's disabled. If you want to use the `deletable-path` annotation to specify conditions for deletion, you have to ensure that the setting `sap:deletable` isn't present in your annotations.
 
@@ -465,7 +470,7 @@ In the example above, the order in which the record types are presented in the a
 
 ### Inline Deletion of Rows in Tables
 
-You can enable inline deletion list report and object page tables. To do so, set the `inlineDelete` property to `true` for `tableSettings` as shown in the following sample code:
+You can enable inline deletion in list report page and object page tables. To do so, set the `inlineDelete` property to `true` for `tableSettings` as shown in the following sample code:
 
 > ### Sample Code:  
 > ```

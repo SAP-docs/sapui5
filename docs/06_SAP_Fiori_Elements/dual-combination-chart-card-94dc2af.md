@@ -4,6 +4,9 @@
 
 A dual combination chart type lets you view individual data points for a particular dimension.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Dual Combination Chart](dual-combination-chart-c406c18.md).
+
   
   
 **Example of a Dual Combination Chart Card**

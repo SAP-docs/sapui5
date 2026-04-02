@@ -2,7 +2,7 @@
 
 # Waterfall Chart
 
-You use waterfall charts to analyze a cumulative value.
+You can render the chart as a waterfall chart to analyze a cumulative value.
 
   
   

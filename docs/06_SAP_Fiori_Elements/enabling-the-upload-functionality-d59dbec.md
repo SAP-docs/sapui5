@@ -2,10 +2,7 @@
 
 # Enabling the Upload Functionality
 
-The SAP Fiori elements Table building block provides a built-in upload functionality that allows users to upload files to the server.
-
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
+You can enable users to upload files to a server.
 
 When the upload functionality is enabled, the user can do the following:
 

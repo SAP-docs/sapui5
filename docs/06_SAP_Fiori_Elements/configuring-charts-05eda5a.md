@@ -2,7 +2,10 @@
 
 # Configuring Charts
 
-You can add a chart facet to a content section within the list report and object page.
+You can add a chart facet to a content section within the list report page and the object page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Charts](configuring-charts-653ed0f.md).
 
 A chart facet is suitable to use if you wish to present data graphically for analysis.
 
@@ -10,9 +13,9 @@ A chart facet is suitable to use if you wish to present data graphically for ana
 
 <a name="loio05eda5aef50245f2b6e07e51802ad855__section_tth_5tc_2tb"/>
 
-## Configuring Charts in a List Report
+## Configuring Charts on a List Report Page
 
-You can configure a chart to be part of a list report that has multiple views. For more information, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
+You can configure a chart to be part of a list report page that has multiple views. For more information, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views in a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-in-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
 
 
 

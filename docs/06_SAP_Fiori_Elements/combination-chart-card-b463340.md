@@ -6,6 +6,11 @@ A combination chart lets you combine and view two or more chart types in a singl
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Combination Chart](combination-chart-5871393.md).
+
+
+
   
   
 **Example of a Combination Chart Card**

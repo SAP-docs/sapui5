@@ -2,7 +2,7 @@
 
 # The `Chart` Building Block
 
-The `Chart` building block provides an easy way to instantiate a chart based on an `entitySet` or a specific navigation property.
+You can use the `Chart` building block to render a chart based on an `entitySet` or a specific navigation property.
 
 
 
@@ -50,6 +50,10 @@ You can do the following with the `Chart` building block:
 
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Chart](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/chart/chartDefault).
+
+Any personalization done by the user is automatically stored and restored using `iAppState`. For more information about the `iAppState` mechanism, see [Store/Restore the Application State](store-restore-the-application-state-46bf248.md).
+
+If a chart doesn't contain any data, users see an illustrated message. For more information, see[Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md) 
 
 
 

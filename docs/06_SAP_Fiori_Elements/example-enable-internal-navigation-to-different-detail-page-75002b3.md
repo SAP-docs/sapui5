@@ -139,9 +139,7 @@ In addition, here's an example for the object page:
 **Related Information**  
 
 
-[Example: Replacing Standard Navigation in a Responsive Table in the List Report](example-replacing-standard-navigation-in-a-responsive-table-on-the-list-report-page-a12ad60.md "You can replace the standard navigation from the list report page to the object page with your own navigation to an external or internal target.")
+[Replacing Standard Navigation in a Table](replacing-standard-navigation-in-a-table-a12ad60.md "You can replace the standard navigation from the list report page to the object page with your own navigation to an external or internal target.")
 
-[Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md "You can replace the standard navigation from the object page with your own navigation to an external or internal target.")
-
-[Configuring Internal Navigation](configuring-internal-navigation-2c65f07.md "SAP Fiori elements control the navigation within an app (internal navigation). This section describes the configuration options that you have.")
+[Configuring Internal Navigation](configuring-internal-navigation-2c65f07.md "You can configure internal navigation within an SAP Fiori elements app.")
 

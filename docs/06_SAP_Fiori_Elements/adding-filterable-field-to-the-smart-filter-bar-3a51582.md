@@ -2,25 +2,25 @@
 
 # Adding Filterable Field to the Smart Filter Bar
 
-The following example shows the development steps for adding an additional filter to the smart filter bar of the list report.
+You can add an additional filter to the smart filter bar on the list report page.
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
-In this example, we assume that you want to add a *Price* field with two filter options to the smart filter bar of the Manage Products app's list report. To do so, you have to complete the following steps:
+In this example, we assume that you want to add a *Price* field with two filter options to the smart filter bar of the Manage Products app's list report page. To do so, you have to complete the following steps:
 
-1.  Create a controller for a new facet on the list report
-2.  Add field name and filter option texts to the `i18n` file
-3.  Define a view and a controller extension in the `manifest.json` file
+1.  Create a controller for a new facet on the list report page.
+2.  Add field name and filter option texts to the `i18n` file.
+3.  Define a view and a controller extension in the `manifest.json` file.
 
 > ### Note:  
 > You can only add new fields to the smart filter bar, not change existing ones. If you want to change existing fields, you must remove them first completely from the annotations, then add them again as new fields.
 
 
 
-## Step 1: Create a controller for a new facet in the list report
+## Step 1: Create a Controller for a New Facet on the List Report Page
 
 In the SAP Business Application Studio or Visual Studio Code, open the folder structure of the Manage Products project and then proceed as follows:
 
@@ -97,7 +97,7 @@ In the SAP Business Application Studio or Visual Studio Code, open the folder st
 
 
 
-## Step 2: Add field name and filter option texts to the i18n file
+## Step 2: Add field name and filter option texts to the `i18n` file
 
 To make the field name and the filter options translatable, add the texts to the `i18n` file as follows:
 
@@ -147,5 +147,5 @@ The logic is added to the `ListReport` section of the Manage Products app.
 
 ## Results
 
-The list report of the Manage Products app displays the new *Price* field with filter options.
+The list report page of the Manage Products app displays the new *Price* field with filter options.
 

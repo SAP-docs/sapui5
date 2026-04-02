@@ -48,7 +48,7 @@ You can add a custom fragment to the *Mass Edit* dialog by defining the `customF
 > </core:FragmentDefinition>
 > ```
 
-Next, implement the `customMassEditSave` function within the list report or object page controller extension. For more information, see [Replacing the Standard Save Functionality in the Mass Edit Dialog](replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md).
+Next, implement the `customMassEditSave` function within the list report page or object page controller extension. For more information, see [Replacing the Standard Save Functionality in the Mass Edit Dialog](replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md).
 
 > ### Sample Code:  
 > ```
@@ -96,9 +96,4 @@ Next, implement the `customMassEditSave` function within the list report or obje
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V2, see [Adding Custom Input Fields to the Mass Edit Dialog](adding-custom-input-fields-to-the-mass-edit-dialog-b15bfac.md).
-
-**Related Information**  
-
-
-[Enabling Editing Using a Dialog \(Mass Edit\) in the List Report](enabling-editing-using-a-dialog-mass-edit-on-the-list-report-page-7cc4f04.md "You can edit a single object or multiple objects using a dialog in the list report page.")
 

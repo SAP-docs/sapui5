@@ -2,11 +2,16 @@
 
 # Displaying Images in Tables
 
-To display images in tables, you must first add a data field with a value that relates to an image URL.
+You can display images in a table.
 
 
 
-This is shown in the following example:
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Displaying Images in Tables](displaying-images-in-tables-492bc79.md).
+
+
+
+To display images in tables, you must first add a data field with a value that relates to an image URL. This is shown in the following example:
 
 > ### Sample Code:  
 > XML Annotation

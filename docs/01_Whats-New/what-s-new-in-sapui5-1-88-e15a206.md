@@ -72,7 +72,7 @@ Announcement
 
 **End of Support for Microsoft Internet Explorer 11**
 
-Starting with version 1.88, SAPUI5 no longer supports Microsoft Internet Explorer 11. For more information, see [SAPUI5 Support Status for Microsoft Internet Explorer 11](../02_Read-Me-First/browser-and-platform-support-74b59ef.md#loio74b59efa0eef48988d3b716bd0ecc933__MS_IE).
+Starting with version 1.88, SAPUI5 no longer supports Microsoft Internet Explorer 11. For more information, see [Reproducing Support Issues](../02_Read-Me-First/browser-and-platform-support-74b59ef.md#loio74b59efa0eef48988d3b716bd0ecc933__MS_IE).
 
 <sub>Deprecated•Announcement•Info Only•1.88</sub>
 
@@ -969,6 +969,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

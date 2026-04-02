@@ -2,7 +2,10 @@
 
 # Adapting the UI
 
-Both application developers and key users can extend and customize SAP Fiori applications by adapting the UI.
+App developers and key users can extend and configure the app UI.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Extending Delivered Apps With Key User Adaptation](extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
 
 **UI Adaptation**
 
@@ -86,7 +89,7 @@ Key User
 </td>
 <td valign="top">
 
-For information about the features that application developers can adapt, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md), [Adapting the UI: Analytical List Page](adapting-the-ui-analytical-list-page-2c5fa29.md), and [Extending the Delivered Apps Manifest Using an Adaptation Project](extending-the-delivered-apps-manifest-using-an-adaptation-project-61a015c.md).
+For information about the features that application developers can adapt, see [Adapting the UI: List Report Page and Object Page](adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md), [Adapting the UI: Analytical List Page](adapting-the-ui-analytical-list-page-2c5fa29.md), and [Extending the Delivered Apps Manifest Using an Adaptation Project](extending-the-delivered-apps-manifest-using-an-adaptation-project-61a015c.md).
 
 </td>
 <td valign="top">
@@ -108,7 +111,7 @@ See further in this topic.
 
 ## Variant Management
 
-Key users can create public variants and deliver them to all users or to users with specific roles. This is supported for page variants in list pages and table variants in list report and object pages.
+Key users can create public variants and deliver them to all users or to users with specific roles. This is supported for page variants on list pages and table variants on list report pages and object pages.
 
 Key users can also perform the following:
 
@@ -169,7 +172,7 @@ Additional Information
 <tr>
 <td valign="top" rowspan="4">
 
-List Report
+List report page
 
 </td>
 <td valign="top">
@@ -186,7 +189,7 @@ List Report
 </td>
 <td valign="top">
 
-Configure how variant management is used in the list report.
+Configure how variant management is used on the list report page.
 
 </td>
 <td valign="top">
@@ -211,7 +214,7 @@ Configure how variant management is used in the list report.
 </td>
 <td valign="top">
 
-Configure how variant management is disabled in the list report.
+Configure how variant management is disabled on the list report page.
 
 </td>
 <td valign="top">
@@ -281,7 +284,7 @@ Configure to open the object directly in edit mode.
 <tr>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
 </td>
 <td valign="top">
@@ -317,7 +320,7 @@ Configure the default display mode of data in the analytical list page.
 <tr>
 <td valign="top" rowspan="3">
 
-Filter Bar
+Filter bar
 
 </td>
 <td valign="top" colspan="2">
@@ -337,7 +340,7 @@ Configure if the *Go* button is displayed in the visual filter bar.
 </td>
 <td valign="top">
 
-Only applicable to the analytical list page.
+Only applicable to the analytical list page
 
 </td>
 </tr>
@@ -383,14 +386,14 @@ Section: Including Navigation Properties
 </td>
 <td valign="top">
 
-Only applicable to the list report.
+Only applicable to the list report page
 
 </td>
 </tr>
 <tr>
 <td valign="top" rowspan="4">
 
-Object Page
+Object page
 
 </td>
 <td valign="top" colspan="2">
@@ -711,7 +714,7 @@ Configure if the *Add Card to Insights* feature for *My Home* in SAP S/4HANA and
 </td>
 <td valign="top">
 
-Only applicable to the list report.
+Only applicable to the list report page
 
 </td>
 </tr>

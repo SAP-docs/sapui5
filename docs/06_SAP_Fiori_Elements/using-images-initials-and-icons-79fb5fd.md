@@ -2,7 +2,10 @@
 
 # Using Images, Initials, and Icons
 
-SAP Fiori elements supports the use of images, initials, and icons.
+You can use images, initials, and icons in SAP Fiori elements.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Using Images and Icons](using-images-and-icons-5760b63.md).
 
 > ### Note:  
 > You can change the display shape using the Page Editor of SAP Fiori tools. For more information, see [Configure Page Elements](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html).

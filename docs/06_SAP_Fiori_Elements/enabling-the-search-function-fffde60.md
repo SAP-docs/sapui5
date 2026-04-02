@@ -2,7 +2,10 @@
 
 # Enabling the Search Function
 
-You can enable the *Search* function in the list report.
+You can enable the *Search* function on the list report page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling the Search Function](enabling-the-search-function-3cdebee.md).
 
 The search is restricted to 1000 characters.
 
@@ -10,7 +13,7 @@ To enable the search function, you must set `sap:searchable` to `true` for the r
 
   
   
-**List Report: Search**
+**List Report Page: Search**
 
 
 
@@ -34,5 +37,5 @@ To enable the search function, you must set `sap:searchable` to `true` for the r
 
 ## More Information
 
-For more information about configuring the filter bar in a list report, see [Adapting the Filter Bar](adapting-the-filter-bar-c7a7ac4.md).
+For more information about configuring the filter bar on a list report page, see [Adapting the Filter Bar](adapting-the-filter-bar-c7a7ac4.md).
 

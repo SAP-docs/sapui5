@@ -96,6 +96,9 @@ You can either provide the `UI.SelectionVariant` annotation directly, or as part
 > 
 > ```
 
+> ### Restriction:  
+> You cannot define the default values for filter fields using `SelectionVariant` in analytical list page-based applications.
+
 
 
 <a name="loiof27ad7bc1f9c4b0d947b1fb18c37e94c__section_dk1_x2n_dsb"/>
@@ -145,8 +148,6 @@ If only single values need to be applied for the filter fields, application deve
 > -   When adding a date value, be sure to use the YYYY-MM-DD format.
 > 
 > -   Note the special handling for the `DisplayCurrency` field, for which default values can also come from SAP Fiori launchpad \(FLP\). For more information, see the [Handling Default Values from SAP Fiori Launchpad \(FLP\)](navigation-to-an-app-inbound-navigation-c337d8b.md#loioc337d8bde8c544598969c8e4edaab262__HandlingDefault) section in [Navigation to an App \(Inbound Navigation\)](navigation-to-an-app-inbound-navigation-c337d8b.md).
-> 
-> -   For the analytical list page in SAP Fiori elements for OData V2, you must set the manifest property `filterDefaultsFromSelectionVariant`: true to ensure the filter defaults from the SelectionVariant are considered.
 
 
 
@@ -227,15 +228,6 @@ User-defined default values are applied and combined with the values from the st
 
 
 
-<a name="loiof27ad7bc1f9c4b0d947b1fb18c37e94c__section_o4y_t5m_rnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-> ### Restriction:  
-> You cannot define the default values for filter fields using `SelectionVariant` in analytical list page-based applications.
-
-
-
 > ### Note:  
 > For information about SAP Fiori elements for OData V2, see [Configuring Default Filter Values](configuring-default-filter-values-b221ce0.md).
 
@@ -244,5 +236,5 @@ User-defined default values are applied and combined with the values from the st
 
 [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md "You can adapt the filter bar using additional annotations or configuring the manifest.json file.")
 
-[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "The visual filter bar enables end users to select filter values based on measure values in addition to the filters and filter values already selected in the regular filter bar.")
+[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page.")
 

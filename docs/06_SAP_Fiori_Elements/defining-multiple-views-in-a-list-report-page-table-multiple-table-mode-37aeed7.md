@@ -1,0 +1,815 @@
+<!-- loio37aeed74e17a42caa2cba3123f0c15fc -->
+
+# Defining Multiple Views in a List Report Page Table - Multiple Table Mode
+
+You can define multiple views of a table and display them in multiple table mode. Users can switch between views using an icon tab bar.
+
+
+
+<a name="loio37aeed74e17a42caa2cba3123f0c15fc__context_ekf_14g_3mb"/>
+
+## Context
+
+To define multiple views using multiple table mode, perform the following steps:
+
+
+
+<a name="loio37aeed74e17a42caa2cba3123f0c15fc__steps_mgg_b4g_3mb"/>
+
+## Procedure
+
+1.  Add `SelectionVariants` or `SelectionPresentationVariants` to your annotations file. The annotation target of `SelectionPresentationVariants` must be the `EntityType`.
+
+    > ### Note:  
+    > You can reference different `UI.LineItem` annotations for different tabs. To do so, reference the annotation under `PresentationVariant/Visualizations`. If there is no `PresentationVariant/Visualizations` for a tab, a default `UI.LineItem` \(without a qualifier\) is taken into account.
+
+    -   Multiple table mode with table
+
+        `SelectionVariant` that filters for items that are lower or greater than a value, between certain values, or equal to a specific value \(for example here: equal to 5\).
+
+        > ### Sample Code:  
+        > XML Annotation
+        > 
+        > ```xml
+        > <Annotation Term="UI.SelectionVariant" Qualifier="Good">
+        >      <Record Type="UI.SelectionVariantType">
+        >           <PropertyValue Property="SelectOptions">
+        >                <Collection>
+        >                     <Record Type="UI.SelectOptionType">
+        >                          <PropertyValue Property="PropertyName" PropertyPath="Rating" />
+        >                          <PropertyValue Property="Ranges">
+        >                               <Collection>
+        >                                    <Record Type="UI.SelectionRangeType">
+        >                                         <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+        >                                         <PropertyValue Property="Low" String="5" />
+        >                                    </Record>
+        >                               </Collection>
+        >                          </PropertyValue>
+        >                     </Record>
+        >                </Collection>
+        >           </PropertyValue>
+        >           <PropertyValue Property="Text" String="Good Rating/SV" />
+        >      </Record>
+        > </Annotation>
+        > 
+        > ```
+
+        > ### Sample Code:  
+        > ABAP CDS Annotation
+        > 
+        > ```
+        > 
+        > @UI.selectionVariant: [
+        >   {
+        >     text: 'Good',
+        >     qualifier: 'Good'
+        >   }
+        > ]
+        > 
+        > annotate view SALESORDERMANAGE with {
+        > 
+        > }
+        > 
+        > ```
+
+        > ### Sample Code:  
+        > CAP CDS Annotation
+        > 
+        > ```
+        > 
+        > UI.SelectionVariant #Good : {
+        >     $Type : 'UI.SelectionVariantType',
+        >     SelectOptions : [
+        >         {
+        >             $Type : 'UI.SelectOptionType',
+        >             PropertyName : Rating,
+        >             Ranges : [
+        >                 {
+        >                     $Type : 'UI.SelectionRangeType',
+        >                     Option : #EQ,
+        >                     Low : '5'
+        >                 }
+        >             ]
+        >         }
+        >     ],
+        >     Text : 'Good Rating/SV'
+        > },
+        > 
+        > ```
+
+        `SelectionPresentationVariant` containing a `SelectionVariant` and a `PresentationVariant`. The `SelectionVariant` filters for items with a rating lower than or between certain values \(for example, between 2 and 4\), the `PresentationVariant` defines the ascending sort order for the `ID` and the `SalesOrderType`, as well as the maximum number of items to show in the table. Note that a `PresentationVariant` must contain a `Visualization` to be valid. Without a `Visualization`, the `PresentationVariant` isn't applied and the default `LineItem` is applied instead.
+
+        > ### Sample Code:  
+        > XML Annotation
+        > 
+        > ```xml
+        > <Annotation Term="UI.SelectionPresentationVariant" Qualifier="PV">
+        >      <Record Type="UI.SelectionPresentationVariantType">
+        >           <PropertyValue Property="Text" String="Medium Rating/PV">
+        >           </PropertyValue>
+        >           <PropertyValue Property="SelectionVariant">
+        >                <Record Type="UI.SelectionVariantType">
+        >                     <PropertyValue Property="SelectOptions">
+        >                          <Collection>
+        >                               <Record Type="UI.SelectOptionType">
+        >                                    <PropertyValue Property="PropertyName" PropertyPath="Rating" />
+        >                                         <PropertyValue Property="Ranges">
+        >                                              <Collection>
+        >                                                   <Record Type="UI.SelectionRangeType">
+        >                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT" />
+        >                                                        <PropertyValue Property="Low" String="2" />
+        >                                                        <PropertyValue Property="High" String="4" />
+        >                                                   </Record>
+        >                                              </Collection>
+        >                                    </PropertyValue>
+        >                               </Record>
+        >                          </Collection>
+        >                     </PropertyValue>
+        >                     <PropertyValue Property="Text" String="Medium Rating" />
+        >                </Record>
+        >           </PropertyValue>
+        >           <PropertyValue Property="PresentationVariant">
+        >                <Record Type="UI.PresentationVariantType">>
+        >                     <PropertyValue Property="Visualizations">
+        >                          <Collection>
+        >                               <AnnotationPath>@UI.LineItem#Reduced</AnnotationPath>
+        >                          </Collection>
+        >                     </PropertyValue>
+        >                     <PropertyValue Property="MaxItems" Int="5" />
+        >                     <PropertyValue Property="SortOrder">
+        >                          <Collection>
+        >                               <Record Type="Common.SortOrderType">
+        >                                    <PropertyValue Property="Property" PropertyPath="ID" />
+        >                                    <PropertyValue Property="Ascending" Bool="true" />
+        >                               </Record>
+        >                               <Record Type="Common.SortOrderType">
+        >                                    <PropertyValue Property="Property" PropertyPath="SalesOrderType" />
+        >                                    <PropertyValue Property="Descending" Bool="true" />
+        >                               </Record>
+        >                          </Collection>
+        >                     </PropertyValue>
+        >                </Record>
+        >           </PropertyValue>
+        >      </Record>
+        > </Annotation>
+        > ```
+
+        > ### Sample Code:  
+        > ABAP CDS Annotation
+        > 
+        > ```
+        > 
+        > @UI.selectionPresentationVariant: [{
+        >   id: '',
+        >   text: 'Medium Rating/PV',
+        >   selectionVariantQualifier: 'Default',
+        >   presentationVariantQualifier: 'Default',
+        >   qualifier: 'PV'
+        > }]
+        > 
+        > @UI.selectionVariant: [
+        >   {
+        >     text: 'Medium Rating',
+        >     qualifier: 'Default'
+        >   }
+        > ]
+        > 
+        > @UI.presentationVariant: [
+        >   {
+        >     qualifier: 'Default',
+        >     sortOrder: [
+        >                 {by: 'ID', direction: #ASC }, 
+        >                 {by: 'SalesOrderType', direction: #DESC }
+        >               ],
+        >     visualizations: [{
+        >         type: #AS_LINEITEM,
+        >         qualifier: 'Reduced'
+        >     }
+        >   }
+        > ]
+        > annotate view SALESORDERMANAGE with {
+        > 
+        > }
+        > 
+        > ```
+
+        > ### Sample Code:  
+        > CAP CDS Annotation
+        > 
+        > ```
+        > 
+        > UI.SelectionPresentationVariant #PV : {
+        >     $Type : 'UI.SelectionPresentationVariantType',
+        >     Text : 'Medium Rating/PV',
+        >     SelectionVariant : {
+        >         $Type : 'UI.SelectionVariantType',
+        >         SelectOptions : [
+        >             {
+        >                 $Type : 'UI.SelectOptionType',
+        >                 PropertyName : Rating,
+        >                 Ranges : [
+        >                     {
+        >                         $Type : 'UI.SelectionRangeType',
+        >                         Option : #BT,
+        >                         Low : '2',
+        >                         High : '4'
+        >                     }
+        >                 ]
+        >             }
+        >         ],
+        >         Text : 'Medium Rating'
+        >     },
+        >     PresentationVariant : {
+        >         $Type : 'UI.PresentationVariantType',
+        >         MaxItems : 5,
+        >         SortOrder : [
+        >             {
+        >                 $Type : 'Common.SortOrderType',
+        >                 Property : ID,
+        >                 Ascending : true
+        >             },
+        >             {
+        >                 $Type : 'Common.SortOrderType',
+        >                 Property : SalesOrderType,
+        >                 Descending : true
+        >             }
+        >         ],
+        >         Visualizations : ['@UI.LineItem#Reduced']
+        >     }
+        > }
+        > 
+        > 
+        > ```
+
+    -   Multiple table mode with different `LineItem`
+
+        A `SelectionPresantationVariant` can be based on a different `LineItem`. To do so, create a `LineItem` with a qualifier and add this to the `SelectionPresentationVariant` visualization:
+
+        > ### Sample Code:  
+        > XML Annotation
+        > 
+        > ```xml
+        > <Annotation Term="UI.LineItem" Qualifier="Simplified">
+        >      <Collection>
+        >           <Record Type="UI.DataField">
+        >                <PropertyValue Property="Value" Path="ID" />
+        >           </Record>
+        >           <Record Type="UI.DataField">
+        >                <PropertyValue Property="Value" Path="ImageUrl" />
+        >           </Record>
+        >           <Record Type="UI.DataFieldForAnnotation">
+        >                <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#multipleActionFields" />
+        >                <PropertyValue Property="Label" String="Sold-To Party" />
+        >           </Record>
+        >      </Collection>
+        > </Annotation>
+        > 
+        > <Annotation Term="UI.SelectionPresentationVariant" Qualifier="PVandSV">
+        >      <Record Type="UI.SelectionPresentationVariantType">
+        >           <PropertyValue Property="Text" String="Medium Rating/PVandSV">
+        >           </PropertyValue>
+        >           <PropertyValue Property="SelectionVariant">
+        >                <Record Type="UI.SelectionVariantType">
+        >                     <PropertyValue Property="SelectOptions">
+        >                          <Collection>
+        >                               <Record Type="UI.SelectOptionType">
+        >                                    <PropertyValue Property="PropertyName" PropertyPath="Rating" />
+        >                                    <PropertyValue Property="Ranges">
+        >                                         <Collection>
+        >                                              <Record Type="UI.SelectionRangeType">
+        >                                                   <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT" />
+        >                                                   <PropertyValue Property="Low" String="2" />
+        >                                                   <PropertyValue Property="High" String="4" />
+        >                                              </Record>
+        >                                         </Collection>
+        >                                    </PropertyValue>
+        >                               </Record>
+        >                          </Collection>
+        >                     </PropertyValue>
+        >                     <PropertyValue Property="Text" String="Medium Rating" />
+        >                </Record>
+        >           </PropertyValue>
+        >           <PropertyValue Property="PresentationVariant">
+        >                <Record Type="UI.PresentationVariantType">>
+        >                     <PropertyValue Property="MaxItems" Int="2" />
+        >                     <PropertyValue Property="SortOrder">
+        >                          <Collection>
+        >                               <Record Type="Common.SortOrderType">
+        >                                    <PropertyValue Property="Property" PropertyPath="ID" />
+        >                                    <PropertyValue Property="Ascending" Bool="false" />
+        >                               </Record>
+        >                               <Record Type="Common.SortOrderType">
+        >                                    <PropertyValue Property="Property" PropertyPath="SalesOrderType" />
+        >                                    <PropertyValue Property="Descending" Bool="true" />
+        >                               </Record>
+        >                          </Collection>
+        >                     </PropertyValue>
+        >                     <PropertyValue Property="Visualizations">
+        >                          <Collection>
+        >                               <AnnotationPath>@UI.LineItem#Simplified</AnnotationPath>
+        >                          </Collection>
+        >                     </PropertyValue>
+        >                </Record>
+        >           </PropertyValue>
+        >      </Record>
+        > </Annotation>
+        > ```
+
+        > ### Sample Code:  
+        > ABAP CDS Annotation
+        > 
+        > ```
+        > 
+        > @UI.lineItem: [
+        >   {
+        >     value: 'ID',
+        >     type: #STANDARD,
+        >     position: 1 ,
+        >     qualifier: 'Simplified'
+        >   }
+        > ]
+        > ID;
+        > @UI.lineItem: [
+        >   {
+        >     value: 'IMAGEURL',
+        >     type: #STANDARD,
+        >     position: 2 ,
+        >     qualifier: 'Simplified'
+        >   }
+        > ]
+        > IMAGEURL;
+        > 
+        > @UI.lineItem: [
+        >   {
+        >     type: #AS_FIELDGROUP,
+        >     position: 3 ,
+        >     qualifier: 'Simplified',
+        >     label: 'Sold-To Party',
+        >     valueQualifier: 'multipleActionFields'
+        >   }
+        > ]
+        > SOLDTOPARTY;
+        > 
+        > 
+        > @UI.selectionPresentationVariant: [{
+        >   id: '',
+        >   text: 'Medium Rating/PVandSV',
+        >   selectionVariantQualifier: 'Default',
+        >   presentationVariantQualifier: 'Default',
+        >   qualifier: 'PVandSV'
+        > }]
+        > 
+        > @UI.selectionVariant: [
+        >   {
+        >     text: 'Medium Rating',
+        >     qualifier: 'Default'
+        >   }
+        > ]
+        > 
+        > @UI.presentationVariant: [
+        >   {
+        >     qualifier: 'Default',
+        >     maxItems: 2,
+        >     sortOrder: [
+        >                 {by: 'ID', direction: #DESC }, 
+        >                 {by: 'SalesOrderType', direction: #DESC }
+        >               ],
+        >    visualizations: [{type: #AS_LINEITEM, qualifier: 'Simplified'}
+        >   }
+        > ]
+        > 
+        > ```
+
+        > ### Sample Code:  
+        > CAP CDS Annotation
+        > 
+        > ```
+        > 
+        > UI.LineItem #Simplified : [
+        >     {
+        >         $Type : 'UI.DataField',
+        >         Value : ID
+        >     },
+        >     {
+        >         $Type : 'UI.DataField',
+        >         Value : ImageUrl
+        >     },
+        >     {
+        >         $Type : 'UI.DataFieldForAnnotation',
+        >         Target : '@UI.FieldGroup#multipleActionFields',
+        >         Label : 'Sold-To Party'
+        >     }
+        > ],
+        > UI.SelectionPresentationVariant #PVandSV : {
+        >     $Type : 'UI.SelectionPresentationVariantType',
+        >     Text : 'Medium Rating/PVandSV',
+        >     SelectionVariant : {
+        >         $Type : 'UI.SelectionVariantType',
+        >         SelectOptions : [
+        >             {
+        >                 $Type : 'UI.SelectOptionType',
+        >                 PropertyName : Rating,
+        >                 Ranges : [
+        >                     {
+        >                         $Type : 'UI.SelectionRangeType',
+        >                         Option : #BT,
+        >                         Low : '2',
+        >                         High : '4'
+        >                     }
+        >                 ]
+        >             }
+        >         ],
+        >         Text : 'Medium Rating'
+        >     },
+        >     PresentationVariant : {
+        >         $Type : 'UI.PresentationVariantType',
+        >         MaxItems : 2,
+        >         SortOrder : [
+        >             {
+        >                 $Type : 'Common.SortOrderType',
+        >                 Property : ID,
+        >                 Ascending : false
+        >             },
+        >             {
+        >                 $Type : 'Common.SortOrderType',
+        >                 Property : SalesOrderType,
+        >                 Descending : true
+        >             }
+        >         ],
+        >         Visualizations : [
+        >             '@UI.LineItem#Simplified'
+        >         ]
+        >     }
+        > }
+        > 
+        > 
+        > ```
+
+
+    > ### Note:  
+    > For the `SelectionVariant`, the following applies:
+    > 
+    > -   The `FilterExpression` of the `SelectionVariantType` isn't supported.
+    > 
+    > -   The following `SelectionRangeOptionTypes` are supported without any wildcards, for example, \*, ?, …:
+    > 
+    >     -   EQ: Equal to
+    > 
+    >     -   BT: Between
+    > 
+    >     -   LE: Less than or equal to
+    > 
+    >     -   GE: Greater than or equal to
+    > 
+    >     -   NE: Not equal to
+    > 
+    >     -   GT: Greater than
+    > 
+    >     -   LT: Less than
+    > 
+    > 
+    > 
+    > For the `PresentationVariant`, `SortOrders` and visualizations are supported.
+
+2.  Extend the `manifest.json` file to switch on the multiple view feature and link to the variants you have added to your annotations. You do this in the list report page settings section under the section *routing* \> *targets*. In the settings of your list report page, use the views configuration for multiple table mode.
+
+    -   The `paths` section \(lines 9–22\) contains a set of entries that point to the variants defined in the annotations.
+
+    -   For each entry under `paths` \(for example, lines 10–13\), define an `annotationPath` \(line 12\) of a specific variant.
+
+    -   Provide a key entry \(line 11\) that is used for initializing the corresponding `IconTabBar` item. This entry is mandatory.
+
+
+    > ### Sample Code:  
+    > ```
+    > 
+    > "SalesOrderManageList": {
+    >     "type": "Component",
+    >     "id": "SalesOrderManageList",
+    >     "name": "sap.fe.templates.ListReport",
+    >     "options": {
+    >         "settings": {
+    >             "contextPath": "/SalesOrderManage",
+    >             "views": {
+    >                 "paths": [
+    > 	            {
+    > 	                "key": "tab1",
+    > 	                "annotationPath":        "com.sap.vocabularies.UI.v1.SelectionVariant#Good"
+    > 	            },
+    > 	            {
+    > 	                "key": "tab2",
+    > 	                "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#UncompletePV"
+    > 	            },
+    > 	            { 
+    > 	                "key": "tab3",
+    > 	                "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#PVandSV"
+    > 	            }
+    > 	        ],
+    > 	        "showCounts" : false
+    > 	    },
+    > 	    "controlConfiguration": {
+    > 	        ...
+    >             }
+    > 	},
+    > 	...
+    >     }
+    > }
+    > ```
+
+    **Settings**
+
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    Setting
+    
+    </th>
+    <th valign="top">
+
+    Description
+    
+    </th>
+    <th valign="top">
+
+    Status
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `showCounts`
+    
+    </td>
+    <td valign="top">
+    
+    determines whether the count is displayed in the tabs
+    
+    </td>
+    <td valign="top">
+    
+    optional \(default setting: false\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `key`
+    
+    </td>
+    <td valign="top">
+    
+    Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you've specified in the manifest. This avoids duplicate ID errors and allows you to adapt specific tables in key user adaptation \(for example, hiding a toolbar action for a specific table\).
+    
+    </td>
+    <td valign="top">
+    
+    required
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `annotationPath`
+    
+    </td>
+    <td valign="top">
+    
+    Each object in `paths` defines a view. The `annotationPath` points to a selection variant or a selection presentation variant.
+
+    If it points to a selection variant, the default `LineItem` \(no qualifier\) is displayed in this view and the selection variant filters are applied.
+
+    If it points to a selection presentation variant, the `SPV.Visualization` is used to render the view with the settings for the selection presentation variant.
+
+    Any settings to be applied on a `LineItem` or a `Chart` have to be added in the `controlConfiguration` section.
+
+    > ### Example:  
+    > `SelectionPresentationVariant#PVandSVPaths` has `LinItem#withPrice` as the visualization.
+
+    Application developers can configure the table in the `controlConfiguration` section as shown in the following sample code:
+
+    > ### Sample Code:  
+    > ```
+    > "controlConfiguration": {
+    >    "@com.sap.vocabularies.UI.v1.LineItem#withPrice ": {
+    >       "tableSettings": {
+    >          "type": "ResponsiveTable",
+    >          "enableExport": false,  
+    >           ...
+    >       },
+    >    }
+    > }
+    > ```
+
+
+    
+    </td>
+    <td valign="top">
+    
+    required
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `keepPreviousPersonalization`
+    
+    </td>
+    <td valign="top">
+    
+    If you switch from an app with only a single table to an app with multiple tables, you can keep the previously defined variant on one tab. To do so, add the `"keepPreviousPersonalization"` setting to your view definition at the `key` and `annotationPath` level. The corresponding tab keeps the default `LineItem` ID \(without the key\), so the variant is applied to it.
+
+    Note that you can only add the personalization to one view because of the need of table-specific IDs.
+    
+    </td>
+    <td valign="top">
+    
+    optional
+    
+    </td>
+    </tr>
+    </table>
+    
+    > ### Note:  
+    > You can combine multiple views with quick filters \(single table mode\). You can configure each table in the`manifest.json` file in the `controlConfiguration` and define the `quickvariantSelection` for a table.
+
+
+
+
+## Example
+
+![](images/Multiple_Table_Mode_7249fb3.png)
+
+> ### Note:  
+> -   Refreshing the count available on a tab using a global side effect is only possible for a view that has been opened.
+> 
+> -   If the table title matches the view name, the table title is omitted to avoid duplicating information.
+
+<a name="task_rbs_2lm_1rb"/>
+
+<!-- task\_rbs\_2lm\_1rb -->
+
+## Using Charts in Multiple Table Mode
+
+You can also use charts in multiple table mode.
+
+
+
+<a name="task_rbs_2lm_1rb__context_fg2_dmm_1rb"/>
+
+## Context
+
+To do so, you must have defined a `UI.Chart` annotation, including a qualifier, as shown in the following sample codes:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="UI.Chart" Qualifier="Chart1">
+>     <Record Type="UI.ChartDefinitionType">
+>         <PropertyValue Property="Title" String="Revenue by Customer"/>
+>         <PropertyValue Property="Description" String="Net Revenue by Customer"/>
+>         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+>         <PropertyValue Property="Dimensions">
+>             <Collection>
+>                 <PropertyPath>ProductCategory</PropertyPath>             
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="Measures">
+>             <Collection>
+>                 <PropertyPath>NetAmount</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @UI.Chart: [
+>   {
+>     title: 'Revenue by Customer',
+>     description: 'Net Revenue by Customer',
+>     chartType: #COLUMN,
+>     dimensions: [
+>       'PRODUCTCATEGORY'
+>     ],
+>     measures: [
+>       'NETAMOUNT'
+>     ],
+>     qualifier: 'Chart1'
+>   }
+> ]
+> annotate view SALESORDERMANAGE with {
+> 
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> UI.Chart #Chart1 : {
+>     $Type : 'UI.ChartDefinitionType',
+>     Title : 'Revenue by Customer',
+>     Description : 'Net Revenue by Customer',
+>     ChartType : #Column,
+>     Dimensions : [
+>         ProductCategory
+>     ],
+>     Measures : [
+>         NetAmount
+>     ],
+> }
+> ```
+
+Reference the `UI.Chart` annotation in your `SelectionPresentationVariant` or `PresentationVariant` for your view in the same manner as when adding a table to the view described in this topic below, as shown in the following sample codes:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> 
+> <Annotation Term="UI.SelectionPresentationVariant" Qualifier="Chart1">
+>     <Record>
+>         <PropertyValue Property="Text" String="Chart1"/>
+>             <PropertyValue Property="SelectionVariant">
+>                 <Record>
+>                     ....
+>                 </Record>
+>             </PropertyValue>
+>         <PropertyValue Property="PresentationVariant">
+>             <Record>
+>                 <PropertyValue Property="Visualizations">
+>                     <Collection>
+>                         <AnnotationPath>@UI.Chart#Chart1</AnnotationPath>
+>                     </Collection>
+>                 </PropertyValue>
+>             </Record>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @UI.selectionPresentationVariant: [{
+>   text: 'Chart1',
+>   selectionVariantQualifier: '',
+>   presentationVariantQualifier: 'Default',
+>   qualifier: 'Chart1'
+> }]
+> 
+> @UI.presentationVariant: [
+>   {
+>     qualifier: 'Default',
+>     sortOrder: [{by: 'GrossAmount', direction: #ASC }],
+>     visualizations: [{type: #AS_CHART, qualifier: 'Chart1'}]
+>   }
+> ]
+> annotate view SALESORDERMANAGE with {
+> 
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> UI.SelectionPresentationVariant #Chart1 : {
+>     Text : 'Chart1',
+>     SelectionVariant : {
+>         ....
+>     },
+>     PresentationVariant : {
+>         Visualizations : [
+>             '@UI.Chart#Chart1'
+>         ]
+>     }
+> },
+> ```
+
+<a name="concept_sqw_43b_c3c"/>
+
+<!-- concept\_sqw\_43b\_c3c -->
+
+## 
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md).
+

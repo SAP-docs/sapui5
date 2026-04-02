@@ -2,7 +2,7 @@
 
 # Rebinding a Table with Each Instance Change on an Object Page
 
-You can rebind a table on each instance change in an object page.
+You can rebind a table on an object page on each instance change.
 
 
 

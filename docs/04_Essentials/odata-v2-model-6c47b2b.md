@@ -9,214 +9,40 @@ The OData model is a server-side model, meaning that the data set is only availa
 > ### Note:  
 > Requests to the back end are triggered by list bindings \(`ODataListBinding`\), context bindings \(`ODataContextBinding`\), and CRUD functions provided by the `ODataModel`. Property bindings \(`ODataPropertyBindings`\) do not trigger requests.
 
-The OData model currently supports OData version 2.0.
-
-The following version of the OData model is implemented: `sap.ui.model.odata.v2.ODataModel`. The `v2.ODataModel` has an improved feature set and new features will only be implemented in this model. `sap.ui.model.odata.ODataModel` is deprecated. We recommend to only use `v2.ODataModel`.
-
-The following table shows the supported features for both OData models:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Feature
-
-</th>
-<th valign="top">
-
-`sap.ui.model.odata.v2.ODataModel` 
-
-</th>
-<th valign="top">
-
-`sap.ui.model.odata.ODataModel` 
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-OData version support
-
-</td>
-<td valign="top">
-
-2.0
-
-</td>
-<td valign="top">
-
-2.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-JSON format
-
-</td>
-<td valign="top">
-
-Yes \(default\)
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-XML format
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-<td valign="top">
-
-Yes \(default\)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Support of two-way binding mode
-
-</td>
-<td valign="top">
-
-Yes; for property changes only, not yet implemented for aggregations
-
-</td>
-<td valign="top">
-
-Experimental; only properties of one entity can be changed at the same time
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Default binding mode
-
-</td>
-<td valign="top">
-
-One-way binding
-
-</td>
-<td valign="top">
-
-One-way binding
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Client-side sorting and filtering
-
-</td>
-<td valign="top">
-
-Yes
-
-For more information, see [API Reference: sap.ui.model.odata.OperationMode](https://ui5.sap.com/#/api/sap.ui.model.odata.OperationMode). 
-
-</td>
-<td valign="top">
-
-No
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-$batch
-
-</td>
-<td valign="top">
-
-Yes; all requests can be batched
-
-</td>
-<td valign="top">
-
-Only manual batch requests are possible
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Data cache in model
-
-</td>
-<td valign="top">
-
-All data is cached in the model
-
-</td>
-<td valign="top">
-
-Manually requested data is **not** cached
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Automatic refresh
-
-</td>
-<td valign="top">
-
-Yes \(default\)
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Message handling
-
-</td>
-<td valign="top">
-
-Yes, see [Error, Warning, and Info Messages](error-warning-and-info-messages-62b1481.md) 
-
-</td>
-<td valign="top">
-
-No
-
-</td>
-</tr>
-</table>
-
 > ### Note:  
 > Be aware of the Same-Origin-Policy security concept which prevents access to back ends on different domains or sites.
 
 The requests to the service to fetch data are made automatically based on the data bindings that are defined for the controls.
 
+**On this page:**
+
+-   [Creating the Model Instance](odata-v2-model-6c47b2b.md#loio218afa0780da42fd982b72e992fb57d2)
+-   [Service Metadata](odata-v2-model-6c47b2b.md#loio71a3ae02691147abaf6d78a553d50161)
+-   [Adding Additional URL Parameters](odata-v2-model-6c47b2b.md#loio82afe9152177428290cc9d5dbd90e245)
+-   [Custom HTTP Headers](odata-v2-model-6c47b2b.md#loio7370a173015e49929e011d6ab6b4885c)
+-   [Addressing Entities: Binding Path Syntax](odata-v2-model-6c47b2b.md#loioc4be40ce21ff4d0485b1d8f8114f7426)
+-   [Accessing Data from an OData Model](odata-v2-model-6c47b2b.md#loioadd47c3966dd40489e952bb4f5f74a7c)
+-   [Creating Entities](odata-v2-model-6c47b2b.md#loio4c4cd99af9b14e08bb72470cc7cabff4)
+-   [CRUD Operations](odata-v2-model-6c47b2b.md#loioff667e12b8714f3595e68f3e7c0e7a14)
+-   [Concurrency Control and ETags](odata-v2-model-6c47b2b.md#loio94e302455f8044e79de759c86bb295a2)
+-   [XSRF Token](odata-v2-model-6c47b2b.md#loio30362c1cafd244dd86752e28993bbcdd)
+-   [Refreshing the Model](odata-v2-model-6c47b2b.md#loio66a130fa4d10411b8fc90df00185554b)
+-   [Batch Processing](odata-v2-model-6c47b2b.md#loio8a6ae1d390534d05a560bf350af59c29)
+-   [Two-Way Binding](odata-v2-model-6c47b2b.md#loio42b3ca19a47d49a3b4ba5f34ca0d1f7e)
+-   [Binding-specific Parameters](odata-v2-model-6c47b2b.md#loiobf1fc3b4c9ab4bbc845a3f0e0940c004)
+-   [Optimizing Dependent Bindings](odata-v2-model-6c47b2b.md#loio62149734b5c24507868e722fe87a75db)
+-   [Function Import](odata-v2-model-6c47b2b.md#loio6cb8d585ed594ee4b447b5b560f292a4)
+-   [Language](odata-v2-model-6c47b2b.md#loioc40fc72612754bad877f374bdeb0f893)
+-   [Meta Model for OData V2](odata-v2-model-6c47b2b.md#loio341823349ed04df1813197f2a0d71db2)
+-   [Currency and Unit Customizing in OData V2](odata-v2-model-6c47b2b.md#loioaa9024c7c5444822a68daeb21a92bd51)
+-   [Handling of Temporarily Unavailable Back Ends](odata-v2-model-6c47b2b.md#loio262f75165c3d43b1817f6469aaad453c)
+
 **Related Information**  
 
 
 [API Reference: `sap.ui.model.odata.v2.ODataModel`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel)
+
+[OData Models](odata-models-cb44153.md "")
 
 <a name="loio218afa0780da42fd982b72e992fb57d2"/>
 
@@ -3618,7 +3444,7 @@ With the metadata above, you can use the `sap.ui.model.odata.type.Currency` and 
     core:require="{
       CurrencyType: 'sap/ui/model/odata/type/Currency',
       DecimalType: 'sap/ui/model/odata/type/Decimal,
-      StringType: 'sap/ui/model/odata/type/String',
+      EdmString: 'sap/ui/model/odata/type/String',
       UnitType: 'sap/ui/model/odata/type/Unit'
     }">
     ...
@@ -3630,7 +3456,7 @@ With the metadata above, you can use the `sap.ui.model.odata.type.Currency` and 
         constraints: {'precision': 13, 'scale': 3, 'nullable': false}
       }, {
         path: 'WeightUnit',
-        type: 'StringType',
+        type: 'EdmString',
         constraints: {'maxLength': 5, 'nullable': false}, formatOptions: {'parseKeepsEmptyString': true}
       }, {
         mode: 'OneTime',
@@ -3647,7 +3473,7 @@ With the metadata above, you can use the `sap.ui.model.odata.type.Currency` and 
         constraints: {'precision': 16, 'scale': 3, 'nullable': false}
       }, {
         path: 'CurrencyCode',
-        type: 'StringType',
+        type: 'EdmString',
         constraints: {'maxLength': 5, 'nullable': false}, formatOptions: {'parseKeepsEmptyString': true}
       }, {
         mode: 'OneTime',

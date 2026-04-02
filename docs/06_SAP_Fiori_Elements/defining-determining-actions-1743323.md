@@ -109,5 +109,5 @@ Footer actions must not be available in display mode, so ensure that you add the
 **Related Information**  
 
 
-[Displaying Actions on the Object Page](displaying-actions-on-the-object-page-f65e8b1.md)
+[Displaying Actions on the Object Page](displaying-actions-on-the-object-page-f65e8b1.md "Specific rules apply when displaying actions on the object page.")
 

@@ -2,9 +2,12 @@
 
 # Line Micro Chart
 
-A line chart is a basic type of chart used in many fields.
+You can render the micro chart as a line micro chart.
 
-It displays information as a series of data points connected by a line.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Line Micro Chart](line-micro-chart-e5cb2af.md).
+
+The line micro chart displays information as a series of data points connected by a line.
 
 ![](images/Line_Micro_Chart_f99a0bc.png)
 

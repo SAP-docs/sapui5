@@ -2,7 +2,7 @@
 
 # Enabling Stream Support
 
-End users of SAP Fiori elements-based applications can upload, download, and delete files.
+You can enable users to upload, download, and delete files.
 
 > ### Note:  
 > To prevent security issues and protect data from being created or processed with malicious content, you must ensure the following security measures are in place:
@@ -27,7 +27,7 @@ Fields based on `Edm.Stream` have the following features:
 -   In edit mode, there are additional buttons to upload or delete the stream content.
 
 
-The following image shows an example of a list report from which end users can download a file:
+The following image shows an example of a list report page from which users can download a file:
 
 ![](images/Edm_Stream_List_Report_-_Download_File_5659cb3.png)
 
@@ -73,7 +73,7 @@ To add the file upload elements, proceed as follows:
     > ### Note:  
     > The `odata.mediaEditLink` annotation is not supported.
 
-    For more information, see [https://cap.cloud.sap/docs/guides/providing-services\#annotating-media-elements](https://cap.cloud.sap/docs/guides/providing-services#annotating-media-elements).
+    For more information, see [Define Provided Services](https://cap.cloud.sap/docs/guides/providing-services#annotating-media-elements).
 
 2.  Maintain and annotate the UI field as a `DataField`.
 
@@ -157,11 +157,13 @@ You can click on the document link to open the content of the stream property. S
 > 
 > ```
 > @title : 'Stream with file name'
+> 
 > @Core.MediaType : streamWithFilename_type
+> 
 > @Core.ContentDisposition.Filename : streamWithFilename_name
->                                     streamWithFilename_content : Stream;
->                                     streamWithFilename_type : MediaType;
->                                     streamWithFilename_name : StreamName;
+> streamWithFilename_content : Stream;
+> streamWithFilename_type : MediaType;
+> streamWithFilename_name : StreamName;
 > ```
 
 
@@ -177,7 +179,7 @@ An avatar is rendered instead of the icon and link representation when one of th
 
 To display the image or person avatar as a circle, specify the `Common.IsNaturalPerson` annotation at the entity type or for the `UI.IsImage` annotation of a stream property.
 
-You also can set the `imageFitType` of the avatar determine how an image fits in the avatar's container. For more information, see the [Representation as an Avatar](different-representations-of-a-field-c18ada4.md#loioc18ada4bc56e427a9a2df2d1898f28a5__represent_avatar) section in [Different Representations of a Field](different-representations-of-a-field-c18ada4.md).
+You can set the `imageFitType` of the avatar to determine how an image fits in the avatar's container. You can also set the `enableEnlargeImage` of the avatar to determine if users can open and enlarge the image in a popup. For more information, see [Using Images and Icons](using-images-and-icons-5760b63.md).
 
 
 
@@ -186,6 +188,8 @@ You also can set the `imageFitType` of the avatar determine how an image fits in
 In edit mode, an upload button and a delete button are available so that users can upload a different file or delete the file. If the back-end response provides a new value for `odata.mediaContentType` after uploading a new file, the icon and link change their representation according to the new value.
 
 
+
+<a name="loiob236d32d48b74304887b3dd5163548c1__subsection_upload_attribute"/>
 
 ## File Upload as an Action Parameter
 
@@ -213,7 +217,7 @@ To restrict the file size and define the allowed media types, use the `MaxLength
 > </Action>
 > 
 > <ComplexType Name="FileStreamTypeName">
->   <Property Name="StreamProperty" Type="Edm.Stream" Nullable="false" MaxLength="128" />
+>   <Property Name="StreamProperty" Type="Edm.Stream" Nullable="false" MaxLength="128000" />
 >   <Property Name="MimeType" Type="Edm.String" Nullable="false" />
 >   <Property Name="FileName" Type="Edm.String" Nullable="false" />
 > </ComplexType>
@@ -253,10 +257,10 @@ To restrict the file size and define the allowed media types, use the `MaxLength
 >   streamproperty : abap.rawstring(0);
 >   
 >   @UI.hidden: true
->   mimetype : abap.char(128);
+>   mimetype : abap.char(128000);
 >   
 >   @UI.hidden: true
->   filename : abap.char(128);
+>   filename : abap.char(128000);
 > }
 > 
 > // == Behavior Definitions for FILE_STREAM_TYPE_NAME

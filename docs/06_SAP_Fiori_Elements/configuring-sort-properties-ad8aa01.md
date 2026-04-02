@@ -6,6 +6,11 @@ All cards support sorting using the `com.sap.vocabularies.UI.v1.PresentationVari
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Sort Properties](configuring-sort-properties-41af842.md).
+
+
+
 List, table, and stack cards support sorting by using the `sortBy` and `sortOrder` properties in the application manifest file.
 
 The following example shows sort configuration in the application manifest file. The records are sorted by the `Price` property in descending order.

@@ -4,6 +4,9 @@
 
 You can configure the content area of the quick views to display specific data.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring the Content of Quick Views](configuring-the-content-of-quick-views-c245ad7.md).
+
 The content area, consisting of a title and additional information, for example, a field group, has a default behavior and can be adapted to your needs.
 
 
@@ -25,8 +28,10 @@ The content area, consisting of a title and additional information, for example,
 
     -   If you annotate `HeaderInfo.ImageUrl` and `HeaderInfo.TypeImageUrl`, `HeaderInfo.ImageUrl` is evaluated first, and `HeaderInfo.TypeImageUrl` second. The `ImageUrl/TypeImageUrl` string and path including navigation properties are evaluated.
 
+    -   Add an image to the quick view card in the same way you add an image to the object page header. For more information, see [Setting Up the Object Page Header](setting-up-the-object-page-header-c4e45a3.md).
 
--   -   Title
+
+-   Title
 
     -   Enter the title according to the `TextArrangement` annotation. See the figure below: `TextArrangementType/TextLast`. Note that *Computer Systems* is declared as `TextLast` here.
 
@@ -52,7 +57,7 @@ The content area, consisting of a title and additional information, for example,
 
 ## Content Area
 
-The content area can contain field groups, contacts, and DataPoints.
+The content area can contain field groups, contacts, and data points.
 
 
 
@@ -101,18 +106,18 @@ The following applies:
 
 <a name="loioe598e59b3a0c40ebb7de30147aa88fee__section_y3q_x1j_tgc"/>
 
-## DataPoints
+## Data Points
 
--   You can place an existing DataPoint in your annotation.
+-   You can place an existing data point in your annotation.
 
--   You can place the DataPoint anywhere. It is specified by the position of the reference facet in the collection.
+-   You can place the data point anywhere. It is specified by the position of the reference facet in the collection.
 
--   A DataPoint can have a label. It is taken from within the `<Record Type="UI.ReferenceFacet">`.
+-   A data point can have a label. It is taken from within the `<Record Type="UI.ReferenceFacet">`.
 
 
 ![](images/DataPoint_in_QuickView_5da4f79.png)
 
-The sample codes show a quick view facet containing field group, contact and DataPoint:
+The sample codes show a quick view facet containing field group, contact and data point:
 
 > ### Sample Code:  
 > XML Annotation

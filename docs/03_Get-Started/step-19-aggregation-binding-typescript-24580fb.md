@@ -87,32 +87,32 @@ We add a new model named `invoice` to the `sap.ui5` section of the descriptor. T
 
 ```
 {
-  ...
-  "sap.ui5": {
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "ui5.walkthrough.i18n.i18n",
-          "supportedLocales": [
-            ""
-          ],
-          "fallbackLocale": ""
-        }
-      },
-      "invoice": {
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "model/localInvoices.json"
-      }
+    ...
+    "sap.ui5": {
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ui5.walkthrough.i18n.i18n",
+                    "supportedLocales": [
+                        ""
+                    ],
+                    "fallbackLocale": ""
+                }
+            },
+            "invoice": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "model/localInvoices.json"
+            }
         },
         "resources": {
-          "css": [
-            {
-              "uri": "css/style.css"
-            }
-          ]
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
         }
-      }
+    }
 }
 ```
 
@@ -155,18 +155,18 @@ In the `items` aggregation, we define the template for the list that will be aut
 
 ```xml
 <mvc:View
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-   <List
-      headerText="{i18n>invoiceListTitle}"
-      class="sapUiResponsiveMargin"
-      width="auto"
-      items="{invoice>/Invoices}" >
-      <items>
-         <ObjectListItem
-            title="{invoice>Quantity} x {invoice>ProductName}"/>
-      </items>
-   </List>
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <List
+        headerText="{i18n>invoiceListTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{invoice>/Invoices}" >
+        <items>
+            <ObjectListItem
+                title="{invoice>Quantity} x {invoice>ProductName}"/>
+        </items>
+    </List>
 </mvc:View>
 ```
 
@@ -180,10 +180,10 @@ In the app view we add a second view and assign it to our newly created `Invoice
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true">
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
     <Shell>
         <App class="myAppDemoWT">
             <pages>

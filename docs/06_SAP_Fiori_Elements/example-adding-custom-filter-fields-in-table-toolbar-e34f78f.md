@@ -2,7 +2,7 @@
 
 # Example: Adding Custom Filter Fields in Table Toolbar
 
-To add custom filter fields in a table toolbar, follow the steps described below:
+You can add custom filter fields like selects, combo boxes, or date pickers to your object page table toolbar using view extensions.
 
 
 
@@ -128,5 +128,5 @@ The following screenshot shows a table with custom filter fields in its toolbar:
 **Related Information**  
 
 
-[Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-510b6af.md "You can use annotations to enable generic actions in tables on the object page.")
+[Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-d27ae99.md "You can use annotations to enable generic actions in tables on the object page.")
 

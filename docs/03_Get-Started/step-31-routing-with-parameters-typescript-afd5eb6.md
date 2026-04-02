@@ -37,42 +37,42 @@ We want to hand over the information for the selected item when navigating to th
 
 ```js
 {
-  …
-  "sap.ui5": {
-	…
-	"routing": {
-	  "config": {
-		"routerClass": "sap.m.routing.Router",
-		"type": "View",
-		"viewType": "XML",
-		"path": "ui5.walkthrough.view",
-		"controlId": "app",
-		"controlAggregation": "pages"
-	  },
-	  "routes": [
-		{
-		  "pattern": "",
-		  "name": "overview",
-		  "target": "overview"
-		},
-		{
-		  "pattern": "detail/{invoicePath}",
-		  "name": "detail",
-		  "target": "detail"
-		}
-	  ],
-		  "targets": {
-		"overview": {
-		  "id": "overview",
-		  "name": "Overview"
-		},
-		"detail": {
-		  "id": "detail",
-		  "name": "Detail"
-		}
-	  }
-	}
-  }
+    …
+    "sap.ui5": {
+        …
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "type": "View",
+                "viewType": "XML",
+                "path": "ui5.walkthrough.view",
+                "controlId": "app",
+                "controlAggregation": "pages"
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "overview",
+                    "target": "overview"
+                },
+                {
+                    "pattern": "detail/{invoicePath}",
+                    "name": "detail",
+                    "target": "detail"
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "id": "overview",
+                    "name": "Overview"
+                },
+                "detail": {
+                    "id": "detail",
+                    "name": "Detail"
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -104,8 +104,8 @@ import ObjectListItem from "sap/m/ObjectListItem";
 /**
  * @namespace ui5.walkthrough.controller
  */
-export default class App extends Controller {	
-	…
+export default class App extends Controller {    
+    …
     onPress(event: Event): void {
         const item = event.getSource() as ObjectListItem;
 
@@ -165,15 +165,15 @@ Our last piece to fit the puzzle together is the detail view. We replace the app
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.Detail"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Page
-		title="{i18n>detailPageTitle}">
-		<ObjectHeader
-			intro="{invoice>ShipperName}"
-			title="{invoice>ProductName}"/>
-	</Page>
+    controllerName="ui5.walkthrough.controller.Detail"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page
+        title="{i18n>detailPageTitle}">
+        <ObjectHeader
+            intro="{invoice>ShipperName}"
+            title="{invoice>ProductName}"/>
+    </Page>
 </mvc:View>
 ```
 

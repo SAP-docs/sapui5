@@ -6,6 +6,11 @@ You can customize messages for success, success with no data, and error scenario
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Custom Messages on the Overview Page](configuring-custom-messages-on-the-overview-page-b75910f.md).
+
+
+
 To configure custom messages, define `getCustomMessage` in your extension controller file.
 
 > ### Sample Code:  

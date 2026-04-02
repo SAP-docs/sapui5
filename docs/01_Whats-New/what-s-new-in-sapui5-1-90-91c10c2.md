@@ -754,7 +754,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Application developers can now arrange semantically connected fields side by side to reflect their data retention using the `UI.ConnectedFields` annotation. For more information, see [Grouping of Fields](../06_SAP_Fiori_Elements/grouping-of-fields-cb1748e.md).
 
--   A new text is now provided in the variant management dialog for standard variants. For more information, see [List Report Elements](../06_SAP_Fiori_Elements/list-report-elements-1cf5c7f.md).
+-   A new text is now provided in the variant management dialog for standard variants. For more information, see [List Report Page](../06_SAP_Fiori_Elements/list-report-page-1cf5c7f.md).
 
 -   Application developers can now extend the delivered SAP Fiori elements applications to add new nodes \(entity sets\), perform create and update operations on the newly defined node, or change the existing manifest page configurations. For more information, see [Extending Delivered Apps Using Adaptation Projects](../06_SAP_Fiori_Elements/extending-delivered-apps-using-adaptation-projects-a2b24a6.md).
 
@@ -816,7 +816,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   In display mode of an object page, if there is a bound transition message from the back end, this is now shown in a message dialog and no longer in a message popover. For more information, see [Using Messages](../06_SAP_Fiori_Elements/using-messages-239b192.md).
 
--   Application developers can now set a field to be read only within a table, but set it to be editable on the UI. For more information, see [Further Features of the Field](../06_SAP_Fiori_Elements/further-features-of-the-field-f49a0f7.md).
+-   Application developers can now set a field to be read only within a table, but set it to be editable on the UI. For more information, see [Additional Features of the Field](../06_SAP_Fiori_Elements/additional-features-of-the-field-f49a0f7.md).
 
 -   Applications can now filter by navigation properties on non-main entities. For more information, see [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](../06_SAP_Fiori_Elements/defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
 
@@ -839,6 +839,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

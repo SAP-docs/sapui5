@@ -2,3 +2,5 @@
 
 # General Concepts
 
+Get to know the general concepts of the list report page and the object page.
+

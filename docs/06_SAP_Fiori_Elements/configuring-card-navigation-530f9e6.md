@@ -2,9 +2,11 @@
 
 # Configuring Card Navigation
 
+You can configure internal and external navigation in cards.
+
+
+
 All cards support navigation, both to a different SAP Fiori application using intent based navigation, and to external applications and websites through a direct URL which opens in a new browser tab. To trigger the navigation, users click or tap on a card header and in some cases, on an item within the card.
-
-
 
 Navigation information is taken from the `com.sap.vocabularies.UI.v1.Identification`
 

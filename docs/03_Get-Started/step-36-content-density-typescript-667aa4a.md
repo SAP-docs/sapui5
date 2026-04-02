@@ -66,7 +66,7 @@ import Component from "../Component";
  * @namespace ui5.walkthrough.controller
  */
 export default class App extends Controller {
-	onInit(): void {
+    onInit(): void {
         this.getView().addStyleClass((<Component> this.getOwnerComponent()).getContentDensityClass())
     }
 };
@@ -82,15 +82,15 @@ As we have just enabled the app to run in both modes depending on the devices ca
 
 ```json
 ...
-  "sap.ui5": {
-    ...  
-    },
-    "contentDensities": {
-      "compact": true,
-      "cozy": true
+    "sap.ui5": {
+        ...  
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        }
+        ...
     }
-    ...
-  }
 ```
 
 **Related Information**  

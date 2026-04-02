@@ -18,14 +18,13 @@ You can configure the title and subtitle of a list card in the `manifest.json` f
 > ```
 > "sap.ovp": {
 > 		"globalFilterModel": "salesOrder",
-> 		"globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
->                 "globalFilterEntitySet": "GlobalFilters",  //Available from SAPUI5 1.54.
+> 		"globalFilterEntitySet": "GlobalFilters",
 >               ...
 >               ...
 > 		"cards": {
 >           "sap.ovp.test_card.card002": {
 >             "model": "salesOrder",
->             "template": "sap.ovp.cards.list",
+>             "template": "sap.ovp.cards.v4.list",
 >             "settings": {
 >               "title": "Purchase History",
 >               "subTitle": "SubTitle",
@@ -430,7 +429,7 @@ You can configure the view switch using the ***tabs*** property in the manifest 
 > "cards": {
 >       "card00": {
 >         "model": "salesOrder",
->         "template": "sap.ovp.cards.list",
+>         "template": "sap.ovp.cards.v4.list",
 >         "settings": {
 >           "category" : "Sales Orders With Analytical Header",
 >           "listFlavor": "bar",
@@ -470,4 +469,11 @@ You can configure the navigation \(from the header and content area\) within an 
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V2, see [Configuring the List Card Header Area](configuring-the-list-card-header-area-72b5323.md).
+
+**Related Information**  
+
+
+[Configuring List Card](configuring-list-card-7f65716.md "You can add and configure various attributes of the list card.")
+
+[Configuring the List Area](configuring-the-list-area-f57373d.md "You can add values and navigation properties to the list area.")
 

@@ -2,7 +2,7 @@
 
 # Choosing Filter Modes on the Analytical List Page
 
-ALP offers compact and visual filter modes. You can choose to set filters from both modes.
+You can choose to set filters from the compact and visual filter modes on the analytical list page.
 
 
 
@@ -34,9 +34,7 @@ Analytical List Page lets you toggle between the visual filter and compact filte
 **Related Information**  
 
 
-[Configuring the Title Area](configuring-the-title-area-ebdb5da.md "The dynamic area of the analytical list page is the title area.")
+[Managing Variants](managing-variants-8ce658e.md "You can manage variants with different structures in the filter and content areas.")
 
-[Managing Variants](managing-variants-8ce658e.md "Allows you to manage variants with different structures in the filter and content areas.")
-
-[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md "The value list annotation lets you map an entity to another entity that is associated with a different entity set. The value list annotation defines the relationship between filter fields of the main entity set and the fields in the value help entity set.")
+[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md "You can specify a value help entity for a field and maintain the value help configuration with a ValueList annotation.")
 

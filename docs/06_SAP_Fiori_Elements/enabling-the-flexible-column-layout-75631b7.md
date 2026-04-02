@@ -2,13 +2,16 @@
 
 # Enabling the Flexible Column Layout
 
-The flexible column layout is a feature that can show two or three columns on a single page.
+You can use the flexible column layout to show two or three columns on a single page.
 
-For example, a list of items is shown in the first column, and when you choose an item to see its details, the related object page is shown in the second or third column. You can expand the column you want to focus on, switch between different layouts, and view the column on the right-hand side in full-screen mode.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md).
+
+In a flexible column layout, a list of items can be shown in the first column, and when you choose an item to see its details, the related object page is shown in the second or third column. You can expand the column you want to focus on, switch between different layouts, and view the column on the right-hand side in full-screen mode.
 
 Use the following attributes to create the column layout you want:
 
--   `defaultTwoColumnLayoutType`: A 2-column layout with the following options:
+-   `defaultTwoColumnLayoutType`: A two-column layout with the following options:
 
     -   `TwoColumnsBeginExpanded`
 
@@ -19,7 +22,7 @@ Use the following attributes to create the column layout you want:
         ![](images/Two_Columns_Mid_Expanded_392c14f.png)
 
 
--   `defaultThreeColumnLayoutType`: A 3-column layout with the following options:
+-   `defaultThreeColumnLayoutType`: A three-column layout with the following options:
 
     -   `ThreeColumnsMidExpanded`
 
@@ -41,7 +44,7 @@ End users can expand and collapse the columns using the focus buttons. They can 
 
 ## Enabling the Flexible Column Layout Using SAP Fiori Tools
 
-> ### Remember:  
+> ### Restriction:  
 > The flexible column layout isn't available for the overview page floorplan.
 
 1.  Launch the *Page Map*. You can launch the *Page Map* in several ways, for example by right-clicking the project folder and selecting *Show Page Map*. For more information, see [Define Application Structure](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/bae38e6216754a76896b926a3d6ac3a9.html).
@@ -53,11 +56,11 @@ End users can expand and collapse the columns using the focus buttons. They can 
     > ### Note:  
     > -   For the overview page, the flexible column layout is not relevant.
     > 
-    > -   The analytical list page supports only the `TwoColumnsBeginExpanded` layout. For more information, see [2409984](https://me.sap.com/notes/2409984).
+    > -   The analytical list page supports only the `TwoColumnsBeginExpanded` layout.
     > 
     > -   The flexible column layout can be used in both draft and non-draft scenarios.
     > 
-    > -   Both draft and non-draft applications support 2-column and 3-column layouts.
+    > -   Both draft and non-draft applications support two-column and three-column layouts.
     > 
     >     In non-draft flexible column layout applications with create, read, update, and delete \(CRUD\) capabilities, only the last column shows the *Edit* and *Delete* buttons.
 
@@ -65,7 +68,6 @@ End users can expand and collapse the columns using the focus buttons. They can 
 
     ```
     "sap.ui.generic.app": {
-            "_version": "1.1.0",
             "settings": {
                 "flexibleColumnLayout": {
                     "defaultTwoColumnLayoutType": "TwoColumnsMidExpanded",
@@ -76,7 +78,7 @@ End users can expand and collapse the columns using the focus buttons. They can 
     ```
 
     > ### Note:  
-    > For optimum readability, you can set the `PopinLayout` property to `Block`, `GridLarge`, or `GridSmall`. For more information, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
+    > For optimum readability, you can set the `PopinLayout` property to `Block`, `GridLarge`, or `GridSmall`. For more information, see [Adapting the UI: List Report Page and Object Page](adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md).
 
     The following screenshot shows the flexible column layout property in an application based on SAP Fiori elements for OData V2:
 
@@ -99,7 +101,7 @@ The following screen recording shows how to enable the flexible column layout an
 
 ## Saving Column Resize Information
 
-The flexible column layout allows end users to resize the columns in both 2-column display and 3-column display, with SAP Fiori elements saving this information in the personalization settings. This information is specific to each application and device type, such as desktop, tablet, and phone.
+The flexible column layout allows users to resize the columns in both two-column display and three-column display, with SAP Fiori elements saving this information in the personalization settings. This information is specific to each application and device type, such as desktop, tablet, and phone.
 
 
 
@@ -111,7 +113,7 @@ For each page configured in the `manifest.json` file, you can define a default l
 
 For an object page, you can define `"defaultLayoutType": "OneColumn"`. By doing so, in the flexible column layout, this object page moves to the first column. All other object pages that are below the first one in the hierarchy move up accordingly. If they have the same setting, they also move to the first column.
 
-Usually, this setting is made on the main object page. After navigating from the list report, the object page is then displayed in full-screen mode, that is, the main object page replaces the list report. When navigating to an item, the main object remains in the first column and the item is displayed in the second column.
+Usually, this setting is made on the main object page. After navigating from the list report page, the object page is then displayed in full-screen mode, that is, the main object page replaces the list report page. When navigating to an item, the main object remains in the first column and the item is displayed in the second column.
 
 > ### Sample Code:  
 > ```

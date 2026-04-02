@@ -2,14 +2,14 @@
 
 # Changing Default Titles of New and Unnamed Objects
 
-When an end user creates new items in a list report or object page table, SAP Fiori elements provides a default title. We recommend application developers to replace it with an application-specific title.
+You can change the default titles of table items.
 
-In list reports and object pages, the default title for a newly created object in a table is *New Object*. If an end user saves the object without modifying this title, it is automatically updated to 'Unnamed Object'. If the title is editable, end users can modify this new title as needed. If the end user clears the title, it reverts to the default title *Unnamed Object*.
+On list report pages and object pages, the default title for a newly created object in a table is *New Object*. If users save the object without modifying this title, it's automatically updated to 'Unnamed Object'. If the title is editable, users can modify this new title as needed. If the users clear the title, it reverts to the default title *Unnamed Object*.
 
 To modify the default title, you can use the `T_NEW_OBJECT` and `T_ANNOTATION_HELPER_DEFAULT_HEADER_TITLE_NO_HEADER_INFO` keys in the `i18n.properties` file. For more information, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
 
 > ### Note:  
-> If `UI.HeaderInfo.Typename` is undefined, the title is set to an empty string \(""\) when the end user clears the title or saves the newly created item without modifying the default title 'New Object'.
+> If `UI.HeaderInfo.Typename` is undefined, the title is set to an empty string \(""\) when the users clear the title or saves the newly created item without modifying the default title 'New Object'.
 
 
 

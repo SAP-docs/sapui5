@@ -6,9 +6,50 @@ You can add segmented buttons to the toolbar to enable switching between the tab
 
 You can associate every button of the segmented buttons \(or every list item in the select box\) with a selection variant that filters the table according to the selection variant filters once a user has clicked it. This means that the user has multiple views in a single table of the object page. You can enable this feature for any table on the object page.
 
-To implement this feature, make a `"quickVariantSelection"` entry in the manifest. See the separate sections below for further details.
+To implement this feature, make a `"quickVariantSelection"` entry in the manifest.
 
+Every `"paths"` entry corresponds to its filter on the UI. A segmented button is rendered when the number of variants defined is less than or equal to 3. Defining 4 or more variants in the manifest renders a selection box.
 
+The following manifest settings are required for adding segmented buttons:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "SalesOrderManageObjectPage": {
+> 	"type": "Component",
+> 	"id": "SalesOrderManageObjectPage",
+> 	"name": "sap.fe.templates.ObjectPage",
+> 	"options": {
+> 		"settings": {
+> 			"contextPath": "/SalesOrderManage",
+> 			"navigation": {
+> 	           ...
+> 			},
+> 			"controlConfiguration": {
+> 				"_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+> 					"tableSettings": {
+> 						"type": "GridTable",
+> 						"quickVariantSelection": {
+> 							"paths": [
+> 								{
+> 									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SimpleFilter"
+> 								},
+> 								{
+> 									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ComplexFilter"
+> 								}
+> 							],
+> 							"showCounts": true,
+> 							"hideTableTitle": true
+> 						},
+> 	                  ...
+> 					}
+> 				}
+> 			}
+> 		}
+> 	}
+> }
+> ```
 
 You can define a simple or a complex filter condition inside the `SelectionVariant`. While the simple condition has only one property in the `SelectionVariant`, the complex filter condition can have more than one property to be filtered.
 
@@ -172,103 +213,7 @@ The table containing the segmented buttons looks like this:
 > ### Note:  
 > When the table is initially loaded, two calls are made to determine the number of records in the table. These are shown in the button text.
 > 
-> In SAP Fiori elements for OData V2, setting `showCounts` to `false` will not show the number in the button text. This means that in this case no count calls are made.
-> 
-> In SAP Fiori elements for OData V4, `showCounts` is set to `false` by default.
-
-
-
-<a name="loio5532c899e6e94137b18b8ee68df12efb__section_wyn_r1c_2nb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-Every variant corresponds to its filter on the UI. A segmented button is rendered when the number of variants defined is less than or equal to 3. Defining 4 or more variants in the manifest renders a selection box.
-
-The following manifest settings are required for adding segmented buttons:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "component": {
->   "name": "sap.suite.ui.generic.template.ObjectPage",
->   "settings": {
->     "sections": {
->       "SalesOrderItemsID": {
->         "navigationProperty": "to_Item",
->         "entitySet": "C_STTA_SalesOrderItem_WD_20",
->         "createMode": "inline",
->         "quickVariantSelection": {
->           "showCounts": true,
->           "variants": {
->             "0": {
->               "key": "_tab2",
->               "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SimpleFilter"
->             },
->             "1": {
->               "key": "_tab3",
->               "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ComplexFilter"
->             }
->           }
->         }
->       }
->     },
->     "showRelatedApps": true
->   }
-> }
-> 
-> ```
-
-To show the number of records available next to the title of the segmented button, set `showCounts` to `true`.
-
-
-
-<a name="loio5532c899e6e94137b18b8ee68df12efb__section_lym_v1c_2nb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-Every `"paths"` entry corresponds to its filter on the UI. A segmented button is rendered when the number of variants defined is less than or equal to 3. Defining 4 or more variants in the manifest renders a selection box.
-
-The following manifest settings are required for adding segmented buttons:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "SalesOrderManageObjectPage": {
-> 	"type": "Component",
-> 	"id": "SalesOrderManageObjectPage",
-> 	"name": "sap.fe.templates.ObjectPage",
-> 	"options": {
-> 		"settings": {
-> 			"contextPath": "/SalesOrderManage",
-> 			"navigation": {
-> 	           ...
-> 			},
-> 			"controlConfiguration": {
-> 				"_Item/@com.sap.vocabularies.UI.v1.LineItem": {
-> 					"tableSettings": {
-> 						"type": "GridTable",
-> 						"quickVariantSelection": {
-> 							"paths": [
-> 								{
-> 									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SimpleFilter"
-> 								},
-> 								{
-> 									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ComplexFilter"
-> 								}
-> 							],
-> 							"showCounts": true,
-> 							"hideTableTitle": true
-> 						},
-> 	                  ...
-> 					}
-> 				}
-> 			}
-> 		}
-> 	}
-> }
-> ```
+> By default, `showCounts` is set to `false`.
 
 If `showCounts` is set to `true`, the segmented buttons show the count next to the button label and no count is shown next to the title of the table.
 
@@ -284,5 +229,5 @@ To hide the title of the table and show only the segmented buttons or the `selec
 **Related Information**  
 
 
-[Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md "You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.")
+[Defining Multiple Views in a List Report Page Table - Single Table Mode](defining-multiple-views-in-a-list-report-page-table-single-table-mode-0d390fe.md "You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.")
 

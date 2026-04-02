@@ -119,7 +119,9 @@ For more information, see [sap.ui.core.RenderManager](https://ui5.sap.com/#/api/
 
 The renderer class is the base class for control renderers. The `Renderer` implements the static `render` method that is called when a control is added to the DOM. To render a control, the `RenderManager` executes the `render` method on the corresponding `Renderer` of the respective control and passes the reference to itself and to the control.
 
-For notepad controls, the renderer class is normally not directly used, the "renderer" method is directly part of the control implementation and will be added to a renderer class behind the scenes.
+Custom controls don't need a dedicated renderer module that exports the `Renderer` class. Instead, you can embed the rendering code in the control's class definition by using the `renderer` property. This approach applies to all custom controls, regardless of whether they're defined within a library or not.
+
+Use an external renderer in a separate file when the renderer has a lot of code or must inherit from another renderer. In other cases, embedding the renderer takes less effort.
 
 **Related Information**  
 

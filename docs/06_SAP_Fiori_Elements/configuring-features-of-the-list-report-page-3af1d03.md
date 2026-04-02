@@ -2,5 +2,5 @@
 
 # Configuring Features of the List Report Page
 
-You can use annotations and configurations to set up various elements in the list report view, such as the table type and filter bar.
+You can set up various elements of the list report page, such as table type and filter bar, with annotations and configurations.
 

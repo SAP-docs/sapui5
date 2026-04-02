@@ -2,10 +2,12 @@
 
 # Value Help
 
-Value help allows end users to either select a value from a value help entity associated with the field or define a condition to retrieve a suitable value for the field from the main entity.
+You can configure value help to assist users in selecting the correct values.
 
 > ### Note:  
 > Value help for draft-enabled entities only shows active documents.
+
+Value help allows users to either select a value from a value help entity associated with the field or define a condition to retrieve a suitable value for the field from the main entity.
 
 
 
@@ -13,7 +15,7 @@ Value help allows end users to either select a value from a value help entity as
 
 ## Annotations
 
-A value help or value help dialog is configured using the  `Common.ValueList` or  `Common.ValueListMapping`  annotation.
+A value help or value help dialog is configured using the  `Common.ValueList` or  `Common.ValueListMapping`  annotation. The following annotation samples show the settings you can use to configure the value help.
 
 
 
@@ -195,14 +197,15 @@ Both `ValueList` and `ValueListMapping` annotations are used in similar contexts
 
 -   `Parameters`: Determines how the selection in the value help dialog affects the fields outside the value help dialog \(`OUT` mapping\), how external fields influence the contents of the value help dialog \(`IN` mapping\), or both \(`IN/OUT` mapping\). For more information, see [In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-4de40b3.md).
 
+    -   `Importance`: Is applicable only for parameters marked as `OUT` or `DisplayOnly` and indicates whether the field also appears in the type-ahead suggestion. For more information, see the [Type-Ahead Support](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__Type-AheadSupport) section in [Field Help](field-help-a5608ea.md).
+
+
 -   `FetchValues`: Controls the data request for the table within the value help dialog. It can have the following values:
 
     -   `1`: Data is loaded immediately when the value help dialog is opened, without any input from the end user. This is the default behavior.
 
     -   `2` : Data is loaded only after the end user applies the filters.
 
-
--   `Importance`: Indicates whether the field value must appear in the type-ahead suggestion. For more information, see the [Type-Ahead Support](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__Type-AheadSupport) section in [Field Help](field-help-a5608ea.md).
 
 
 > ### Note:  
@@ -476,4 +479,9 @@ In the following sample code, `InitialValueIsSignificant` is used to consider an
 
 > ### Restriction:  
 > Parameterized value help service isn't supported.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Value Help](value-help-48e5fa7.md).
 

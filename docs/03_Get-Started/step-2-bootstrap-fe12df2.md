@@ -66,7 +66,7 @@ In this step, we load the SAPUI5 framework from the webserver provided by UI5 CL
 
 -   The SAPUI5 controls support different themes. We choose `sap_horizon` as our default theme.
 
--   We specify the required UI library `sap.m`, which contains the UI controls we need for this tutorial.
+-   We specify the required library `sap.m`, which contains the UI controls we need for this tutorial.
 
 -   To make use of the most recent functionality of SAPUI5 we define the compatibility version as `edge`.
 

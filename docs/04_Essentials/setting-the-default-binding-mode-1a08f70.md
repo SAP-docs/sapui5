@@ -4,29 +4,5 @@
 
 The default binding mode applies when a model instance is created. You can overwrite the default binding mode after model creation.
 
-Here's what you need to know:
-
--   To change the default binding mode, call the `setDefaultBindingMode` method on the model as follows:
-
-    ```js
-    
-    var oModel = new sap.ui.model.json.JSONModel();
-    oModel.setDefaultBindingMode(sap.ui.model.BindingMode.OneWay);
-    ```
-
-    In this example, all new bindings for the model will have the one-way binding mode by default.
-
--   You can, however, only set supported binding modes as default binding mode. You can check if a binding mode is supported as follows:
-
-    ```js
-    
-    var oModel = new sap.ui.model.json.JSONModel();
-    if (oModel.isBindingModeSupported(sap.ui.model.BindingMode.OneTime)) { // true
-        oModel.setDefaultBindingMode(sap.ui.model.BindingMode.OneTime); 
-    }
-    ```
-
-    > ### Note:  
-    > When you change the binding mode of an existing model instance, the existing bindings are not updated with the newly set binding mode.
-
+This content has moved to [Setting the Default Binding Mode](data-binding-68b9644.md#loio68b9644a253741e8a4b9e4279a35c247__section_SDBM).
 

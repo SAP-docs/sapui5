@@ -786,7 +786,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   The `UI.DataFieldWithUrl` annotation now supports the `IconUrl` property. For more information, see [Different Representations of a Field](../06_SAP_Fiori_Elements/different-representations-of-a-field-c18ada4.md).
 
--   In apps using the flexible column layout, the state of the object page is now stored/restored using `iAppState`. For more information, see [Enabling Discovery/Persistence Mode](../06_SAP_Fiori_Elements/enabling-discovery-persistence-mode-7c62084.md).
+-   In apps using the flexible column layout, the state of the object page is now stored/restored using `iAppState`. For more information, see [Enabling Persistence Mode](../06_SAP_Fiori_Elements/enabling-persistence-mode-7c62084.md).
 
 -   You can now add a *Clear* button to the filter bar in the list report, enabling users to clear all filter fields, by making the required settings in the `manifest.json`. For more information, see [Adapting the Filter Bar](../06_SAP_Fiori_Elements/adapting-the-filter-bar-609c39a.md).
 
@@ -1006,7 +1006,7 @@ Feature
 
 The new version of the SAPUI5 OData V4 model introduces the following features:
 
--   Requesting `$count` and using `sap.ui.model.odata.v4.ODataListBinding#getDownloadUrl` now work with the experimental hierarchy feature introduced with SAPUI5 1.105. For more information, see the API Reference for [`getDownloadUrl`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/getDownloadUrl) and the `hierarchyQualifier` in [`setAggregation`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/setAggregation), and[Binding Collection Inline Count](../04_Essentials/binding-collection-inline-count-77d2310.md).
+-   Requesting `$count` and using `sap.ui.model.odata.v4.ODataListBinding#getDownloadUrl` now work with the experimental hierarchy feature introduced with SAPUI5 1.105. For more information, see the API Reference for [`getDownloadUrl`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/getDownloadUrl) and the `hierarchyQualifier` in [`setAggregation`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/setAggregation), and[Binding the Count of a Collection](../04_Essentials/binding-the-count-of-a-collection-77d2310.md).
 -   The `synchronizationMode` model parameter is now optional and deprecated.
 -   User input into inactive rows is now regarded as a pending change by `sap.ui.model.odata.v4.Context#hasPendingChanges`; it can be reset using `sap.ui.model.odata.v4.Context#resetChanges`. You can prevent the activation of inactive rows after user input since SAPUI5 1.109 using `sap.ui.base.Event#preventDefault` in the handler of the `createActivate` event.For more information, see the API Reference for [`hasPendingChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/hasPendingChanges), [`resetChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/resetChanges), and [`preventDefault`](https://ui5.sap.com/#/api/sap.ui.base.Event/methods/preventDefault).
 -   The `sap.ui.model.odata.v4.ODataModel` now supports the `propertyChange` event.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/events/propertyChange).
@@ -1029,6 +1029,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

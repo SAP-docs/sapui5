@@ -2,7 +2,7 @@
 
 # Placing Reuse Component Instances on the Object Page
 
-Each reuse component instance defined for an object page belonging to an SAP Fiori elements-based app is realized by a section.
+You can add a reuse component instance to the object page.
 
 Each reuse component instance defined for an object page belonging to an SAP Fiori elements-based app is realized by a section that contains a custom subsection which in turn contains the content of the reuse component.
 
@@ -33,43 +33,43 @@ Value
 <tr>
 <td valign="top">
 
-type
+`type`
 
 </td>
 <td valign="top">
 
-component
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-controlAggregation
-
-</td>
-<td valign="top">
-
-blocks
+`Component`
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-clearControlAggregation
+`controlAggregation`
 
 </td>
 <td valign="top">
 
-true
+`blocks`
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-name
+`clearControlAggregation`
+
+</td>
+<td valign="top">
+
+`true`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`name`
 
 </td>
 <td valign="top">
@@ -81,7 +81,7 @@ path to your reuse component
 <tr>
 <td valign="top">
 
-parent
+`parent`
 
 </td>
 <td valign="top">
@@ -93,7 +93,7 @@ name of your object page
 <tr>
 <td valign="top">
 
-controlID
+`controlID`
 
 </td>
 <td valign="top">
@@ -105,7 +105,7 @@ ID of your custom subsection
 <tr>
 <td valign="top">
 
-options \> settings
+`options` \> `settings`
 
 </td>
 <td valign="top">
@@ -119,90 +119,92 @@ any settings of your reuse component
 In the example below, two reuse components are added to the same object page: one to an existing section \(`mySection`\) and one as a new section.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > 
-> { 
->    "sap.ui5": { 
->       "routing": { 
->          "routes": [ 
->             { 
->                "pattern": "myEntitySet({key}):?query:", 
->                "name": "myObjectPage", 
->                "target": ["myObjectPage", "ReuseComponent", "ReuseComponent2"] 
->             } 
->          ], 
->          "targets": { 
->             "myObjectPage": { 
->                "type": "Component", 
->                "id": "myObjectPage", 
->                "name": "sap.fe.templates.ObjectPage", 
->                "options": { 
->                   "settings": { 
->                      "content": { 
->                         "body": { 
->                            "sections": { 
->                               "mySection": { 
->                                  "subSections": { 
->                                     "ReuseContainer": { 
->                                        "title": "{i18n>reuseTitle}", 
->                                        "controlId": "firstReuseContainer", 
->                                        "position": { 
->                                           "placement": "After", 
->                                           "anchor": "someSubSection" 
->                                        } 
->                                     } 
->                                  } 
->                               }, 
->                               "ReuseComponentContainer": { 
->                                  "position": { 
->                                     "placement": "Before", 
->                                     "anchor": "mySubSection" 
->                                  }, 
->                                  "title": "Reuse Container", 
->                                  "subSections": { 
->                                     "ReuseContainer": { 
->                                        "controlId": "secondReuseContainer" 
->                                     } 
->                                  } 
->                               } 
->                            } 
->                         } 
->                      } 
->                   } 
->                } 
->             }, 
->             "ReuseComponent": { 
->                "type": "Component", 
->                "id": "Reuse", 
->                "name": "path/to/reuseComponent", 
->                "options": { 
->                   "settings": { 
->                      "exampleSettings": "{somePropertyName}" 
->                   } 
->                }, 
->                "parent": "myObjectPage", 
->                "controlId": "firstReuseContainer", 
->                "controlAggregation": "blocks", 
->                "clearControlAggregation": true 
->             }, 
->             "ReuseComponent2": { 
->                "type": "Component", 
->                "id": "Reuse2", 
->                "name": "path/to/reuseComponent2", 
->                "options": { 
->                   "settings": { 
->                      "exampleSettings": "{somePropertyName}" 
->                   } 
->                }, 
->                "parent": "myObjectPage", 
->                "controlId": "secondReuseContainer", 
->                "controlAggregation": "blocks", 
->                "clearControlAggregation": true 
->             } 
->          } 
->       } 
->    } 
-> } 
+> {
+>     "sap.ui5": {
+>         "routing": {
+>             "routes": [
+>                 {
+>                     "pattern": "myEntitySet({key}):?query:",
+>                     "name": "myObjectPage",
+>                     "target": ["myObjectPage", "ReuseComponent", "ReuseComponent2"]
+>                 }
+>             ],
+>             "targets": {
+>                 "myObjectPage": {
+>                     "type": "Component",
+>                     "id": "myObjectPage",
+>                     "name": "sap.fe.templates.ObjectPage",
+>                     "options": {
+>                         "settings": {
+>                             "content": {
+>                                 "body": {
+>                                     "sections": {
+>                                         "mySection": {
+>                                             "subSections": {
+>                                                 "ReuseContainer": {
+>                                                     "title": "{i18n>reuseTitle}",
+>                                                     "controlId": "firstReuseContainer",
+>                                                     "position": {
+>                                                         "placement": "After",
+>                                                         "anchor": "someSubSection"
+>                                                     }
+>                                                 }
+>                                             }
+>                                         },
+>                                         "ReuseComponentContainer": {
+>                                             "position": {
+>                                                 "placement": "Before",
+>                                                 "anchor": "mySubSection"
+>                                             },
+>                                             "title": "Reuse Container",
+>                                             "subSections": {
+>                                                 "ReuseContainer": {
+>                                                     "controlId": "secondReuseContainer"
+>                                                 }
+>                                             }
+>                                         }
+>                                     }
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 },
+>                 "ReuseComponent": {
+>                     "type": "Component",
+>                     "id": "Reuse",
+>                     "name": "path/to/reuseComponent",
+>                     "options": {
+>                         "settings": {
+>                             "exampleSettings": "{somePropertyName}"
+>                         }
+>                     },
+>                     "parent": "myObjectPage",
+>                     "controlId": "firstReuseContainer",
+>                     "controlAggregation": "blocks",
+>                     "clearControlAggregation": true
+>                 },
+>                 "ReuseComponent2": {
+>                     "type": "Component",
+>                     "id": "Reuse2",
+>                     "name": "path/to/reuseComponent2",
+>                     "options": {
+>                         "settings": {
+>                             "exampleSettings": "{somePropertyName}"
+>                         }
+>                     },
+>                     "parent": "myObjectPage",
+>                     "controlId": "secondReuseContainer",
+>                     "controlAggregation": "blocks",
+>                     "clearControlAggregation": true
+>                 }
+>             }
+>         }
+>     }
+> }
 > 
 > ```
 

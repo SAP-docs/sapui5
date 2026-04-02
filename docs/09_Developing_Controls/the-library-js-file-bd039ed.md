@@ -8,7 +8,10 @@ The file calls the `sap/ui/core/Lib.init` method with an object that describes t
 
 The library style sheet file \(`library.css`\) contains all styles relevant for this library. For libraries that have been developed with the SAPUI5 application development tools, this file is also generated automatically during the build.
 
-In a `library.js` file, the call to `sap/ui/core/Lib.init` takes care of creating the namespace object of the library and returns a library object that you can use to write types or helpers:
+In the `library.js` file, the call to `sap/ui/core/Lib.init` creates an object with the exports of the library \(enums, helpers, …\).
+
+> ### Remember:  
+> The object returned by `Library.init()` must be used as the return value of the `library.js` module. This ensures that consumers of the library can access the enums and other exports properly.
 
 ```js
 sap.ui.define([
@@ -51,13 +54,55 @@ sap.ui.define([
 
 
 
-<a name="loiobd039ed5f99e4d3f8d020b0da62f9d85__section_cxp_t22_2z"/>
+<a name="loiobd039ed5f99e4d3f8d020b0da62f9d85__section_ENUM"/>
 
 ## Enumerations and RegEx Types
 
+Add all managed property types \(instances of [`sap.ui.base.DataType`](https://ui5.sap.com/#/api/sap.ui.base.DataType)\) of a library to the `library.js` module. Define enums as properties on the object that `Library.init()` returns. Register each enum with `DataType.registerEnum` to make it available to the framework.
 
 
-We recommend to add all simple types of a library to the `library.js` module. Other modules that need to work with such types can simply include the respective library as a module dependency:
+
+### Defining Enums
+
+When defining an enum, make sure that the **enum keys and values match**:
+
+```js
+// Correct: keys and values match
+oThisLibrary.Size = {
+    Small: "Small",
+    Medium: "Medium",
+    Large: "Large"
+};
+
+// Register the enum to make it known to the framework
+DataType.registerEnum("my.lib.Size", oThisLibrary.Size);
+```
+
+
+
+### Enums in Nested Namespaces
+
+For enums that belong to a nested namespace, make sure to create the namespace object first before defining the enum:
+
+```js
+// Create the nested namespace first
+oThisLibrary.cards = oThisLibrary.cards || {};
+
+// Define the enum within the nested namespace
+oThisLibrary.cards.Position = {
+    Top: "Top",
+    Bottom: "Bottom"
+};
+
+// Register with the fully qualified name
+DataType.registerEnum("my.lib.cards.Position", oThisLibrary.cards.Position);
+```
+
+
+
+### Consuming Enums
+
+Other modules that need to work with these types can include the relevant library as a module dependency:
 
 ```js
 // requiring a library

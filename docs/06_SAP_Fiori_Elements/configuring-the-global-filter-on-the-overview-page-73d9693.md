@@ -2,19 +2,19 @@
 
 # Configuring the Global Filter on the Overview Page
 
-The global filter lets end users filter the data displayed on one or more cards.
+You can configure the global filter to allow users to filter the data displayed on one or more cards.
 
 
 
-The global filter is implemented using the `sap.ui.comp.smartfilterbar.SmartFilterBar` control. This control enables end users to persist their preferred filters and share them with other users. The filter presents filterable properties according to the configured entity type. It's applied to all cards that have the same property name in their entity type. You can also define filters that you want to add to the filter bar by default with the `UI.SelectionFields` configuration in the annotations file.
+Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
+
+The global filter is implemented using the `sap.ui.comp.smartfilterbar.SmartFilterBar` control. This control enables users to persist their preferred filters and share them with other users. The filter presents filterable properties according to the configured entity type. It's applied to all cards that have the same property name in their entity type. You can also define filters that you want to add to the filter bar by default with the `UI.SelectionFields` configuration in the annotations file.
 
 You configure the global filter in the `"sap.ovp"` section using the following properties:
 
 -   `globalFilterModel`: The OData model to use for the global filter.
 
--   `globalFilterEntityType`: The entity type that contains the filterable properties. This property is deprecated since SAPUI5 1.54.
-
--   `globalFilterEntitySet`: The entity set that contains the filterable properties. Use this property from SAPUI5 1.54 onwards.
+-   `globalFilterEntitySet`: The entity set that contains the filterable properties.
 
 
 > ### Sample Code:  
@@ -22,10 +22,8 @@ You configure the global filter in the `"sap.ovp"` section using the following p
 > 
 > ```
 > "sap.ovp": {
->     "_version": "1.1.0",
 >     "globalFilterModel": "ZCD204_EPM_DEMO_SRV",
->     "globalFilterEntityType": "SalesOrder", //Deprecated since SAPUI5 1.54
->     "globalFilterEntitySet": "SalesOrders", //Available from SAPUI5 1.54 onwards
+>     "globalFilterEntitySet": "SalesOrders",
 >     "cards": {
 >         ...
 >     }

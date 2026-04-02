@@ -32,13 +32,13 @@ You can view and download all files at [OData V4 - Step 5](https://ui5.sap.com/#
 
 ```json
 ...
-				"": {
-				"dataSource": "default",
-				"settings": {
-					"autoExpandSelect": true,
-					"operationMode": "Server",
-					"groupId": "$auto"
-				}
+                "": {
+                "dataSource": "default",
+                "settings": {
+                    "autoExpandSelect": true,
+                    "operationMode": "Server",
+                    "groupId": "$auto"
+                }
 ...
 ```
 

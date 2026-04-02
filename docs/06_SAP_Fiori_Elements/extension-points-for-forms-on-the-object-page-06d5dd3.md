@@ -2,7 +2,10 @@
 
 # Extension Points for Forms on the Object Page
 
-On the object page, you can use extension points to extend forms in sections.
+You can use extension points to extend forms in sections on the object page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Extension Points for Forms on the Object Page](extension-points-for-forms-on-the-object-page-4e49753.md).
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).
@@ -12,6 +15,8 @@ On the object page, you can use extension points to extend forms in sections.
 Use the `"SmartFormExtension|<entity name>|<fieldgroup annotation>"` key in the manifest entry to add new fields to an existing field group. In the example below, an extension is added to the *General Information* field group.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > 
 > "sap.suite.ui.generic.template.ObjectPage.view.Details": {

@@ -2,7 +2,7 @@
 
 # Tables
 
-SAP Fiori elements supports several table types.
+You can configure the appearance, interactivity, and loading behavior of tables..
 
 The following table types are available:
 
@@ -77,6 +77,11 @@ Analytical table
 
 The analytical table offers a comprehensive set of features for working with analytical data, such as advanced grouping options and data aggregation.
 
+> ### Restriction:  
+> Analytical tables aren't supported on draft-enabled entities.
+
+
+
 </td>
 </tr>
 </table>
@@ -94,10 +99,31 @@ The table control uses page mechanisms while loading data. It contains the follo
 
 -   Application-specific actions rendered as text buttons, for example, *Copy*, *Approve*, and *Delete*.
 
--   An indication of draft status \(only for list report tables\)
+-   An indication of draft status \(only for list report page tables\)
 
--   A display of items locked by other users \(only for list report tables\)
+-   A display of items locked by other users \(only for list report page tables\)
 
+
+
+
+## Determining the Default Table Type
+
+SAP Fiori elements for OData V4 determines the table type based on the configuration specified in the `manifest.json` file.
+
+If the table type is not specified, the default table type is set based on the characteristics of the entity set with the following precedence:
+
+-   The table type defaults to an analytical table if the table entity set supports analytical usage. This is indicated by the `@Aggregation.ApplySupported` annotation along with the following transformation functions:
+    -   `filter`
+    -   `identity`
+    -   `orderby`
+    -   `skip`
+    -   `top`
+    -   `groupby`
+    -   `aggregate`
+    -   `concat`
+
+-   The table type defaults to a tree table if the table entity set supports hierarchical usage. This is indicated by both the `@Aggregation.RecursiveHierarchy` and the `@Hierarchy.RecursiveHierarchy` annotations with a common `RecursiveHierarchy` qualifier.
+-   The table type defaults to a responsive table if neither analytical nor hierarchical usage is detected.
 
 
 
@@ -105,7 +131,7 @@ The table control uses page mechanisms while loading data. It contains the follo
 
 ## Context Menu in Tables
 
-Tables in list report, object page, and analytical list page applications support a context menu. The context menu is available as a default option and appears only when users perform a right-click on a row or a set of selected rows. This menu displays all context-dependent actions, including both standard and custom actions that appear on the table toolbar. Additionally, an option to open the selected row or rows in a new browser tab or window is available within the menu. Inline actions are not included as part of context menu actions.
+Tables in list report page, object page, and analytical list page applications support a context menu. The context menu is available as a default option and appears only when users perform a right-click on a row or a set of selected rows. This menu displays all context-dependent actions, including both standard and custom actions that appear on the table toolbar. Additionally, an option to open the selected row or rows in a new browser tab or window is available within the menu. Inline actions are not included as part of context menu actions.
 
 > ### Note:  
 > When the table is configured to navigate to an object page in edit mode by setting `openInEditMode` to `true`, the *Open in New Tab* option is not shown in the context menu. For more information, see [Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-8665847.md).
@@ -113,7 +139,7 @@ Tables in list report, object page, and analytical list page applications suppor
 When implementing custom actions, you can use the `extensionAPI.getSelectedContexts` API to identify the rows associated with the context menu.
 
 > ### Note:  
-> You must use the `extensionAPI.getSelectedContexts` API only within synchronous code blocks. For more information, see [Defining Custom Actions](defining-custom-actions-c3de5c0.md).
+> You must use the `extensionAPI.getSelectedContexts` API only within synchronous code blocks.
 
 
 
@@ -121,7 +147,7 @@ When implementing custom actions, you can use the `extensionAPI.getSelectedConte
 
 ## Showing or Hiding Columns Based on Importance and Available Screen Size in Responsive Tables
 
-You can show or hide columns of the list report and object page tables depending on the screen width for situations like the following:
+You can show or hide columns of the list report page and object page tables depending on the screen width for situations like the following:
 
 -   The browser window is small.
 -   The application is running on a devise with a smaller screen.
@@ -179,7 +205,7 @@ For columns with `Low`, `None`, and `Medium` settings, the *Show More per Row* /
 
 ## Hiding Table Columns Using the `UI.Hidden` Annotation
 
-You can hide the table columns or specific fields within the table column in an analytical list page, list report, and object page. To hide the entire table column, set the `UI.Hidden` annotation value for any field as static `true`. To hide a specific field of a table column, set the `UI.Hidden` annotation value as a path-based value, and the fields for which `UI.Hidden` evaluates to `true` are hidden. For more information, see [Hiding Features Using the UI.Hidden Annotation](hiding-features-using-the-ui-hidden-annotation-ca00ee4.md).
+You can hide the table columns or specific fields within the table column in analytical list page, list report page, and object page tables. To hide the entire table column, set the `UI.Hidden` annotation value for any field as static `true`. To hide a specific field of a table column, set the `UI.Hidden` annotation value as a path-based value, and the fields for which `UI.Hidden` evaluates to `true` are hidden. For more information, see [Hiding Features Using the UI.Hidden Annotation](hiding-features-using-the-ui-hidden-annotation-ca00ee4.md).
 
 > ### Note:  
 > If the path-based value for `UI.Hidden` evaluates to `true` for all rows, then only the fields are hidden and not the entire column.
@@ -244,618 +270,6 @@ You can hide the table columns or specific fields within the table column in an 
 ## Searching for Rows in a Table on an Object Page
 
 A search field is displayed in the table toolbar if the used entity set is searchable. You can use the search bar to search for particular rows in the table.
-
-
-
-<a name="loioc0f6592a592e47f9bb6d09900de47412__section_uzk_54j_x4b"/>
-
-## Defining the Column Width Using an Annotation
-
-SAP Fiori elements automatically calculates the default width of columns containing texts based on the `MaxLength` property of the field defined in the metadata. The lower limit is set to 3 rem and the upper limit is set to 20 rem.
-
-To customize the width of a column defined in a line item, use the UI annotation `com.sap.vocabularies.HTML5.v1.CssDefaults`. For more information, see [Setting the Default Column Width](setting-the-default-column-width-a765253.md).
-
-
-
-<a name="loioc0f6592a592e47f9bb6d09900de47412__section_pth_3mb_dzb"/>
-
-## Copying Multiple Rows and Range Selections
-
-Users can copy multiple rows as well as ranges of rows and columns to the clipboard. The selected content \(rows or ranges\) can then be pasted to another application such as Microsoft Excel, Microsoft Word, or to another SAP Fiori elements table.
-
-> ### Note:  
-> When using custom columns in SAP Fiori elements for OData V4, the cell content is the properties listed in the `property` array of the custom column definition. For more information, see [Extension Points for Tables](extension-points-for-tables-d525522.md).
-
-To select a range with the mouse, click and hold while dragging to make a selection. As tables can have cells with editable fields, these fields automatically gain focus upon cell selection. To prevent this, press [CTRL\] on Microsoft Windows or [CMD\] on macOS before selecting a cell with the mouse. Keyboard shortcuts are also available as an alternative for cell selection.
-
-
-<table>
-<tr>
-<th valign="top">
-
-Key Combination
-
-</th>
-<th valign="top">
-
-Behavior
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-[Space\]
-
-</td>
-<td valign="top">
-
-Selec ts the cell that the focus is set on. If used inside a selection, removes the selection.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-[Shift\] + [Arrow keys\] 
-
-</td>
-<td valign="top">
-
-Adjusts an existing selection. If used outside a selection, creates a new selection.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-[Shift\] + [Space\] 
-
-</td>
-<td valign="top">
-
-Transforms the current selection into a row selection, based on the selection mode applied to the table.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-[Control\] + [Space\] 
-
-</td>
-<td valign="top">
-
-Expands the selection to all cells in a column \(up to the range limit\).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-[Control\] + [Shift\] + [A\] 
-
-</td>
-<td valign="top">
-
-Clears the selection.
-
-</td>
-</tr>
-</table>
-
-For more information about pasting data to tables and the expected format, see [Copying and Pasting from External Applications to Tables](copying-and-pasting-from-external-applications-to-tables-f6a8fd2.md).
-
-
-
-<a name="loioc0f6592a592e47f9bb6d09900de47412__section_ygl_t1s_kdc"/>
-
-## Optimizing Data Loading Using the `scrollThreshold` Property
-
-As Users scroll within grid tables, tree tables, or analytical tables, the application dynamically loads additional records from the back-end system. By default, it loads 300 additional records while scrolling.
-
-You can modify this value by configuring the `scrollThreshold` property.
-
-For analytical tables and tree tables, `scrollThreshold` must be higher than `threshold` to take effect.
-
-For more information about configuration in OData V2, see the [Configuring the `scrollThreshold` Property for Dynamic Data Loading](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__Configuring_the_scrollThreshold_Property_v2) subsection in the **Additional Features in SAP Fiori elements for OData V2** section of this topic.
-
-For more information about configuration in OData V4, see the [Configuring the `scrollThreshold` Property for Dynamic Data Loading](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__Configuring_the_scrollThreshold_Property_v4) subsection in the **Additional Features in SAP Fiori elements for OData V4** section of this topic.
-
-
-
-<a name="loioc0f6592a592e47f9bb6d09900de47412__section_xkq_dhx_rfc"/>
-
-## Initial Data Loading Using the `threshold` Property
-
-As responsive, grid, tree, and analytical tables load, the `threshold` property defines the number of initially loaded rows.
-
-You can configure the `threshold` property in the `manifest.json` file to specify the number of additional rows that can be preloaded from the back-end system. The specified value is added to the number of visible rows. For example, if `threshold` is set to 100 and there are ten visible rows, the table loads a total of 110 records. This property applies to actions such as initial loading, sorting, and filtering.
-
-> ### Sample Code:  
-> `manifest.json` 
-> 
-> ```
->  
-> "targets": {
->     "EntityList": {
->         ...
->     },
->     "controlConfiguration": {
->         "@com.sap.vocabularies.UI.v1.LineItem#entityListItem": {
->             "tableSettings": {
->                 "threshold": 100,
->                 ...
->             }
->         },
->         ...
->     }
-> }
-> 
-> ```
-
-> ### Note:  
-> If `threshold` is set to 0, no additional records are preloaded, and `scrollThreshold` is used instead.
-
-For more information about configuration in OData V2, see the [Configuring the `threshold` Property for Initial Data Loading](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__subsection_lvm_cjx_rfc) subsection in the **Additional Features in SAP Fiori elements for OData V2** section of this topic.
-
-For more information about configuration in OData V4, see the [Configuring the `threshold` Property for Initial Data Loading](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__Configuring_the_Threshold_Property_v4) subsection in the **Additional Features in SAP Fiori elements for OData V4** section of this topic.
-
-
-
-<a name="loioc0f6592a592e47f9bb6d09900de47412__section_amq_ynw_xmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Default Selection Mode for Rows in Tables
-
-By default, the table generated by the template uses the single-selection mode. In the single-selection mode, users select an item from the table to trigger a custom action, such as *Validate*, which then returns the results for the selected item.
-
-You can change the selection mode from single-selection to multi-selection. For more information, see [Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md).
-
-
-
-### Smart Multi-Input Control
-
-[Smart multi-input](../10_More_About_Controls/smart-multi-input-5644169.md) is automatically rendered as a column in responsive and grid tables if a 1:n relationship exists in the association for the given column.
-
-To configure smart multi-input fields on an object page, see [Using the Multi-Input Field on the Object Page](using-the-multi-input-field-on-the-object-page-04ff5b1.md).
-
-
-
-### Vertical Alignment of Responsive Tables
-
-To define the vertical alignment for a responsive table, set the `tableColumnVerticalAlignment` manifest property under the settings of `sap.ui.generic.app` to the values `Top`, `Middle`, or `Bottom`.
-
-
-
-### Showing or Hiding the *Copy to Clipboard* Button
-
-By default, the *Copy to Clipboard* button is displayed in the table toolbar. However, you can also configure the visibility of the *Copy to Clipboard* button by defining the `copy` settings in the `manifest.json` file. If `copy` is set to `true`, the *Copy to Clipboard* button is shown in the table toolbar. If `copy` is set to `false`, the *Copy to Clipboard* button is hidden from the table toolbar.
-
-> ### Sample Code:  
-> Settings for the List Report Page
-> 
-> ```json
-> "sap.ui.generic.app": {
->     "pages": {
->         "ListReport|<EntitySetName>": {
->             "entitySet": "<EntitySetName>",
->             "component": {
->                 "name": "sap.suite.ui.generic.template.ListReport",
->                 "settings": {
->                     "tableSettings": {
->                         "copy": false
->                     }
->                 }
->             }
->         }
->     }
-> }
-> 
-> ```
-
-> ### Sample Code:  
-> Settings for the Analytical List Page
-> 
-> ```json
-> "sap.ui.generic.app": {
->     "pages": {
->         "ListReport|<EntitySetName>": {
->             "entitySet": "<EntitySetName>",
->             "component": {
->                 "name": "sap.suite.ui.generic.template.AnalyticalListPage",
->                 "settings": {
->                     "tableSettings": {
->                         "copy": true
->                     }
->                 }
->             }
->         }
->     }
-> }
-> 
-> ```
-
-> ### Sample Code:  
-> Settings for the Object Page
-> 
-> ```json
-> "sap.ui.generic.app": {
->     "pages": {
->         "ListReport|<EntitySetName>": {
->             ...
->             ...
->             "pages": {
->                 "ObjectPage|<EntitySetName>": {
->                     "entitySet": "<EntitySetName>",
->                     "component": {
->                         "name": "sap.suite.ui.generic.template.ObjectPage",
->                         "settings": {
->                             "sections": {
->                                 "SalesOrderItemsID": {
->                                     "navigationProperty": "<NavigationProperty>",
->                                     "entitySet": "<NavigationEntitySetName>",
->                                     "tableSettings": {
->                                         "copy": true
->                                     }
->                                 }
->                             },
->                             "tableSettings": {
->                                 "copy": false
->                             }
->                         }
->                     }
->                 }
->             }
->         }
->     }
-> }
-> 
-> ```
-
-> ### Note:  
-> The `copy` settings defined for a table at the section level have a higher priority than the `copy` settings defined for the table at the object page level.
-
-
-
-### Hiding Columns Using the `UI.Hidden` Annotation on an Object Page
-
-Table columns in the object page can be hidden using the `UI.Hidden` annotation either with a boolean value `true` or with a path referring to the property of the same entity or parent instance. If it points to a property of the parent entity, then the entire column is hidden. In the following example, `to_Product` is the navigation property pointing to the parent entity:
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotation Term="UI.LineItem">
->     <Collection>
->         <Record Type="UI.DataField">
->             <PropertyValue Property="Value" Path="SoldToParty" />
->             <Annotation Term="UI.Hidden" Path="to_Product/Delivered" />
->         </Record>
->     </Collection>
-> </Annotation>
-> 
-> ```
-
-> ### Note:  
-> -   You must not use the `UI.Hidden` annotation with a path for columns that support grouping, sorting, or filtering; this can lead to UX inconsistency as these operations are performed in the back end.
-> 
-> -   If the path for `UI.Hidden` defined on the table points to a field of its parent entity and it evaluates to `true`, then the entire column is hidden.
-
-
-
-### Context Menu in Tables
-
-In list report and object page tables, both standard and custom actions are available either as buttons or menu buttons in the table toolbar. A menu button can contain both types of actions. If it contains multiple actions, they appear as a sub-menu in the context menu. If the menu button contains only one action, that action is shown directly in the context menu.
-
-By default, all standard actions are shown in the context menu. Custom actions appear only if `requiresSelection` is set to `true` and `excludeFromContextMenu` is either not defined or set to `false`, as shown in the following sample code:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "sap.ui.controllerExtensions": {
->     "sap.suite.ui.generic.template.ListReport.view.ListReport": {
->         "controllerName": "STTA_MP.ext.controller.ListReportExtension",
->         "sap.ui.generic.app": {
->             "STTA_C_MP_Product": {
->                 "EntitySet": "STTA_C_MP_Product",
->                 "Actions": {
->                     ...
->                     "CopyWithNewSupplier": {
->                         "id": "CopyWithNewSupplier",
->                         "text": "Copy with new Supplier",
->                         "press": "onCopyWithNewSupplier",
->                         "excludeFromContextMenu": false,
->                         "requiresSelection": true,
->                     }
->                     ...
->                 }
->             }
->         }
->     }
-> }
-> 
-> ```
-
-To exclude a custom action from the context menu, set `excludeFromContextMenu` to `true`.
-
-> ### Note:  
-> The *Open in New Tab or Window* option isn't available in the context menu, in the following cases, :
-> 
-> -   The list report or object page extension controller implements the `onListNavigationExtension` method.
-> 
-> -   The list report table is configured in direct edit mode. For more information about direct edit mode, see [Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-8665847.md).
-
-
-
-### Configuring the `threshold` Property for Initial Data Loading
-
-**Default threshold Values**
-
-
-<table>
-<tr>
-<th valign="top" colspan="2">
-
-Table Type
-
-</th>
-<th valign="top">
-
-Number of Preloaded Rows
-
-</th>
-</tr>
-<tr>
-<td valign="top" rowspan="3">
-
-Responsive table
-
-</td>
-<td valign="top">
-
-List report
-
-</td>
-<td valign="top">
-
-20
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Object page \(anchor bar mode\)
-
-</td>
-<td valign="top">
-
-10
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Object page \(icon bar mode\)
-
-</td>
-<td valign="top">
-
-20
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-Tree table
-
-</td>
-<td valign="top">
-
-100
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-Grid table
-
-</td>
-<td valign="top">
-
-100
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-Analytical table
-
-</td>
-<td valign="top">
-
-100
-
-</td>
-</tr>
-</table>
-
-The following sample code shows how to configure the `threshold` property in list reports, object pages, and analytical list pages:
-
-> ### Sample Code:  
-> List Report
-> 
-> ```
-> "component": {
->     "name": "sap.suite.ui.generic.template.ListReport",
->     "list": true,
->     "settings": {
->         "gridTable": true,
->         "tableSettings": {
->             "threshold": 400
->         }
->     }
-> }
-> 
-> ```
-
-> ### Sample Code:  
-> Object Page
-> 
-> ```
-> "component": {
->     "name": "sap.suite.ui.generic.template.ObjectPage",
->     "settings": {
->         "showRelatedApps": true,
->         "gridTable": true,
->         "editableHeaderContent": true,
-> 
->         "tableSettings": {
->             "threshold": 400
->         }
->     }
-> }
-> 
-> ```
-
-> ### Sample Code:  
-> Analytical List Page
-> 
-> ```
-> "component": {
->     "name": "sap.suite.ui.generic.template.AnalyticalListPage",
->     "list": true,
->     "settings": {
->         "tableSettings": {
->             "type": "AnalyticalTable",
->             "multiSelect": true,
->             "selectAll": false,
->             "selectionLimit": 10,
->             "threshold": 400
->         }
->     }
-> }
-> 
-> ```
-
-Key users can configure the `threshold` property using the UI adaptation mode. For more information, see [Extending Delivered Apps With Key User Adaptation](extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
-
-
-
-### Configuring the `scrollThreshold` Property for Dynamic Data Loading
-
-You can configure the `scrollThreshold` property in the `manifest.json` file. The following sample code shows how to configure it in list reports, object pages, and analytical list pages:
-
-> ### Sample Code:  
-> List Report
-> 
-> ```
-> "component": {
->     "name": "sap.suite.ui.generic.template.ListReport",
->     "list": true,
->     "settings": {
->         "gridTable": true,
->         "tableSettings": {
->             "scrollThreshold": 600
->         }
->     }
-> }
-> 
-> ```
-
-> ### Sample Code:  
-> Object Page
-> 
-> ```
-> "component": {
->     "name": "sap.suite.ui.generic.template.ObjectPage",
->     "settings": {
->         "showRelatedApps": true,
->         "gridTable": true,
->         "editableHeaderContent": true,
-> 
->         "tableSettings": {
->             "scrollThreshold": 600
->         }
->     }
-> }
-> 
-> ```
-
-> ### Sample Code:  
-> Analytical List Page
-> 
-> ```
-> "component": {
->     "name": "sap.suite.ui.generic.template.AnalyticalListPage",
->     "list": true,
->     "settings": {
->         "tableSettings": {
->             "type": "AnalyticalTable",
->             "multiSelect": true,
->             "selectAll": false,
->             "selectionLimit": 10,
->             "scrollThreshold": 600
->         }
->     }
-> }
-> 
-> ```
-
-Key users can configure the `scrollThreshold` parameter using the UI adaptation mode. For more information, see [Extending Delivered Apps With Key User Adaptation](extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
-
-
-
-<a name="loioc0f6592a592e47f9bb6d09900de47412__section_ey5_lvv_gnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-> ### Note:  
-> Analytical tables aren't supported on draft-enabled entities.
-
-
-
-### Default Selection Mode for Rows in Tables
-
-By default, the table generated by the template uses the multi-selection mode. In the multi-selection mode, users select an item from the table to trigger a custom action, such as *Validate*, which then returns the results for the selected item.
-
-You can change the selection mode from multi-selection to single-selection. For more information, see [Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md).
-
-
-
-### Determining the Default Table Type
-
-SAP Fiori elements for OData V4 determines the table type based on the configuration specified in the `manifest.json` file.
-
-If the table type is not specified, the default table type is set based on the characteristics of the entity set with the following precedence:
-
--   The table type defaults to an analytical table if the table entity set supports analytical usage. This is indicated by the `@Aggregation.ApplySupported` annotation along with the following transformation functions:
-    -   `filter`
-    -   `identity`
-    -   `orderby`
-    -   `skip`
-    -   `top`
-    -   `groupby`
-    -   `aggregate`
-    -   `concat`
-
--   The table type defaults to a tree table if the table entity set supports hierarchical usage. This is indicated by both the `@Aggregation.RecursiveHierarchy` and the `@Hierarchy.RecursiveHierarchy` annotations with a common `RecursiveHierarchy` qualifier.
--   The table type defaults to a responsive table if neither analytical nor hierarchical usage is detected.
-
-
-
-### Excluding Fields from Table Personalization
-
-You can exclude specific fields from the table personalization dialog in the list report and object page by setting the `availability` property of the column to `hidden`. For more information, see [Enabling Table Personalization](enabling-table-personalization-3e2b4d2.md).
 
 
 
@@ -1052,54 +466,11 @@ The search field is displayed in the toolbar of an analytical table or tree tabl
 
 
 
-### Freezing Table Columns
+<a name="loioc0f6592a592e47f9bb6d09900de47412__section_uzk_54j_x4b"/>
 
-You can freeze table columns to keep them visible when scrolling the table horizontally. To do so, choose one of the following options:
+## Defining the Column Width Using an Annotation
 
--   You can use the *Column Settings* dialog to select a column to freeze. The selected column and all the columns to the left of it \(or right, if you use right-to-left mode\) are frozen.
-
--   You can use the `frozenColumnCount` parameter to choose a number of columns to freeze. To do this, add the `frozenColumnCount` parameter in the `manifest.json` file and specify how many columns to freeze. In the example below, the first three columns are frozen.
-
-    > ### Sample Code:  
-    > `manifest.json`
-    > 
-    > ```json
-    > 
-    > "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
-    >     "tableSettings": {
-    >         "type": "GridTable",
-    >         "frozenColumnCount": 3,
-    >         …
-    >     },
-    >     …
-    > }
-    > 
-    > ```
-
-
-You can disable freezing columns using the *Column Settings* dialog with the `disableColumnFreeze` parameter at the table level of the `manifest.json` file.
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```json
-> "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
->      "tableSettings": {
->           "type": "GridTable",
->           "disableColumnFreeze": true,
->           …
->      },
->      ...
-> }
-> 
-> ```
-
-> ### Note:  
-> Freezing table columns is not available in the responsive table.
-
-
-
-### Calculating the Column Width
+SAP Fiori elements automatically calculates the default width of columns containing texts based on the `MaxLength` property of the field defined in the metadata. The lower limit is set to 3 rem and the upper limit is set to 20 rem.
 
 By default, the column width is calculated based on the type of the content. You can include the column header while calculating the column width by configuring the `widthIncludingColumnHeader` setting in the `manifest.json` file. This setting can be defined at the table level or at the column level. The `widthIncludingColumnHeader` setting defined at the column level has a higher priority than the `widthIncludingColumnHeader` setting defined at the table level.
 
@@ -1122,11 +493,126 @@ By default, the column width is calculated based on the type of the content. You
 > 
 > ```
 
+To customize the width of a column defined in a line item, use the UI annotation `com.sap.vocabularies.HTML5.v1.CssDefaults`. For more information, see [Setting the Default Column Width](setting-the-default-column-width-a765253.md).
 
 
-### Showing or Hiding the *Copy to Clipboard* Button
 
-By default, the *Copy to Clipboard* button is displayed in the table toolbar if the selection mode, such as single selection or multi selection, is configured for the corresponding table. However, you can also configure the visibility of the *Copy to Clipboard* button by defining the `disableCopyToClipboard` settings in the `manifest.json` file as shown in the following sample code:
+<a name="loioc0f6592a592e47f9bb6d09900de47412__section_ey5_lvv_gnb"/>
+
+## Default Selection Mode for Rows in Tables
+
+By default, the table generated by the template uses the multi-selection mode. In the multi-selection mode, users select an item from the table to trigger a custom action, such as *Validate*, which then returns the results for the selected item.
+
+You can change the selection mode from multi-selection to single-selection. For more information, see [Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md).
+
+
+
+<a name="loioc0f6592a592e47f9bb6d09900de47412__section_pth_3mb_dzb"/>
+
+## Copying Multiple Rows and Range Selections
+
+Users can copy multiple rows as well as ranges of rows and columns to the clipboard. The selected content \(rows or ranges\) can then be pasted to another application such as Microsoft Excel, Microsoft Word, or to another SAP Fiori elements table.
+
+> ### Note:  
+> When using custom columns, the cell content is the properties listed in the `property` array of the custom column definition. For more information, see [Extension Points for Tables](extension-points-for-tables-d525522.md).
+
+To select a range with the mouse, click and hold while dragging to make a selection. As tables can have cells with editable fields, these fields automatically gain focus upon cell selection. To prevent this, press [CTRL\] on Microsoft Windows or [CMD\] on macOS before selecting a cell with the mouse. Keyboard shortcuts are also available as an alternative for cell selection.
+
+
+<table>
+<tr>
+<th valign="top">
+
+Key Combination
+
+</th>
+<th valign="top">
+
+Behavior
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+[Space\]
+
+</td>
+<td valign="top">
+
+Selects the cell that the focus is set on. If used inside a selection, removes the selection.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Shift\] + [Arrow keys\] 
+
+</td>
+<td valign="top">
+
+Adjusts an existing selection. If used outside a selection, creates a new selection.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Shift\] + [Space\] 
+
+</td>
+<td valign="top">
+
+Transforms the current selection into a row selection, based on the selection mode applied to the table.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Control\] + [Space\] 
+
+</td>
+<td valign="top">
+
+Expands the selection to all cells in a column \(up to the range limit\).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Control\] + [Shift\] + [A\] 
+
+</td>
+<td valign="top">
+
+Clears the selection.
+
+</td>
+</tr>
+</table>
+
+For more information about pasting data to tables and the expected format, see [Copying and Pasting from External Applications to Tables](copying-and-pasting-from-external-applications-to-tables-f6a8fd2.md).
+
+
+
+<a name="loioc0f6592a592e47f9bb6d09900de47412__section_ygl_t1s_kdc"/>
+
+## Optimizing Data Loading Using the `scrollThreshold` Property
+
+As users scroll within grid tables, tree tables, or analytical tables, the application dynamically loads additional records from the back-end system. By default, it loads 300 additional records while scrolling.
+
+You can modify this value by configuring the `scrollThreshold` property.
+
+For analytical tables and tree tables, `scrollThreshold` must be higher than `threshold` to take effect.
+
+
+
+### Configuring the `scrollThreshold` Property for Dynamic Data Loading
+
+You can configure the `scrollThreshold` property in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -1141,7 +627,8 @@ By default, the *Copy to Clipboard* button is displayed in the table toolbar if 
 >                         "controlConfiguration": {
 >                             "@com.sap.vocabularies.UI.v1.LineItem": {
 >                                 "tableSettings": {
->                                     "disableCopyToClipboard": true
+>                                     "type": "GridTable",
+>                                     "scrollThreshold": 200
 >                                 }
 >                             }
 >                         }
@@ -1154,9 +641,42 @@ By default, the *Copy to Clipboard* button is displayed in the table toolbar if 
 > 
 > ```
 
-For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
+Key users can configure the `scrollThreshold` property using the UI adaptation mode. For more information, see [Extending Delivered Apps With Key User Adaptation](extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
 
-The `Table` building block also supports the copy to clipboard option. For more information, see [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table%23overview).
+
+
+<a name="loioc0f6592a592e47f9bb6d09900de47412__section_xkq_dhx_rfc"/>
+
+## Initial Data Loading Using the `threshold` Property
+
+As responsive, grid, tree, and analytical tables load, the `threshold` property defines the number of initially loaded rows.
+
+You can configure the `threshold` property in the `manifest.json` file to specify the number of additional rows that can be preloaded from the back-end system. The specified value is added to the number of visible rows. For example, if `threshold` is set to 100 and there are ten visible rows, the table loads a total of 110 records. This property applies to actions such as initial loading, sorting, and filtering.
+
+> ### Sample Code:  
+> `manifest.json` 
+> 
+> ```
+>  
+> "targets": {
+>     "EntityList": {
+>         ...
+>     },
+>     "controlConfiguration": {
+>         "@com.sap.vocabularies.UI.v1.LineItem#entityListItem": {
+>             "tableSettings": {
+>                 "threshold": 100,
+>                 ...
+>             }
+>         },
+>         ...
+>     }
+> }
+> 
+> ```
+
+> ### Note:  
+> If `threshold` is set to 0, no additional records are preloaded, and `scrollThreshold` is used instead.
 
 
 
@@ -1214,7 +734,7 @@ Responsive table
 </td>
 <td valign="top">
 
-List report
+List report page
 
 </td>
 <td valign="top">
@@ -1281,9 +801,62 @@ Key users can configure the `threshold` property using the UI adaptation mode. F
 
 
 
-### Configuring the `scrollThreshold` Property for Dynamic Data Loading
+## Excluding Fields from Table Personalization
 
-You can configure the `scrollThreshold` property in the `manifest.json` file as shown in the following sample code:
+You can exclude specific fields from the table personalization dialog on the list report page and the object page by setting the `availability` property of the column to `hidden`. For more information, see [Enabling Table Personalization](enabling-table-personalization-3e2b4d2.md).
+
+
+
+## Freezing Table Columns
+
+You can freeze table columns to keep them visible when scrolling the table horizontally. To do so, choose one of the following options:
+
+-   You can use the *Column Settings* dialog to select a column to freeze. The selected column and all the columns to the left of it \(or right, if you use right-to-left mode\) are frozen.
+
+-   You can use the `frozenColumnCount` parameter to choose a number of columns to freeze. To do this, add the `frozenColumnCount` parameter in the `manifest.json` file and specify how many columns to freeze. In the example below, the first three columns are frozen.
+
+    > ### Sample Code:  
+    > `manifest.json`
+    > 
+    > ```json
+    > 
+    > "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+    >     "tableSettings": {
+    >         "type": "GridTable",
+    >         "frozenColumnCount": 3,
+    >         …
+    >     },
+    >     …
+    > }
+    > 
+    > ```
+
+
+You can disable freezing columns using the *Column Settings* dialog with the `disableColumnFreeze` parameter at the table level of the `manifest.json` file.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```json
+> "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+>      "tableSettings": {
+>           "type": "GridTable",
+>           "disableColumnFreeze": true,
+>           …
+>      },
+>      ...
+> }
+> 
+> ```
+
+> ### Note:  
+> Freezing table columns is not available in the responsive table.
+
+
+
+## Showing or Hiding the *Copy to Clipboard* Button
+
+By default, the *Copy to Clipboard* button is displayed in the table toolbar if the selection mode, such as single selection or multi selection, is configured for the corresponding table. However, you can also configure the visibility of the *Copy to Clipboard* button by defining the `disableCopyToClipboard` settings in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -1298,8 +871,7 @@ You can configure the `scrollThreshold` property in the `manifest.json` file as 
 >                         "controlConfiguration": {
 >                             "@com.sap.vocabularies.UI.v1.LineItem": {
 >                                 "tableSettings": {
->                                     "type": "GridTable",
->                                     "scrollThreshold": 200
+>                                     "disableCopyToClipboard": true
 >                                 }
 >                             }
 >                         }
@@ -1312,7 +884,14 @@ You can configure the `scrollThreshold` property in the `manifest.json` file as 
 > 
 > ```
 
-Key users can configure the `scrollThreshold` property using the UI adaptation mode. For more information, see [Extending Delivered Apps With Key User Adaptation](extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
+For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
+
+The `Table` building block also supports the copy to clipboard option. For more information, see [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table%23overview).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Tables](tables-f242a02.md).
 
 **Related Information**  
 
@@ -1323,5 +902,5 @@ Key users can configure the `scrollThreshold` property using the UI adaptation m
 
 [Tables: Which One Should I Choose?](../10_More_About_Controls/tables-which-one-should-i-choose-148892f.md "The libraries provided by SAPUI5 contain various different table controls that are suitable for different use cases. The table below outlines which table controls are available, and what features are supported by each one.")
 
-[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md "This feature enables you to configure whether end users can select a single row or multiple rows in a table, while triggering table toolbar actions that require context.")
+[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md "You can configure single or multiple selection in tables while triggering table toolbar actions that require context.")
 

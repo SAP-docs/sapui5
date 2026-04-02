@@ -2,7 +2,12 @@
 
 # Value Help Dialog
 
-A field configured with value help typically allows end users to select values using a value help dialog. A value help dialog is useful when the associated value help entity contains a large dataset \(for example, more than 1000 items\), or when end users need to search using multiple attributes, such as city and company name.
+You can configure the components of the value help dialog.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Value Help Dialog](value-help-dialog-3faed83.md).
+
+A field configured with value help typically allows users to select values using a value help dialog. A value help dialog is useful when the associated value help entity contains a large dataset \(for example, more than 1000 items\), or when users need to search using multiple attributes, such as city and company name.
 
 
 
@@ -10,13 +15,13 @@ A field configured with value help typically allows end users to select values u
 
 ## Configuring the Components of the Value Help Dialog
 
-The value help dialog consists of several components, such as a filter bar, a table, and sometimes a dropdown list that allows end users to choose different flavors of the value help definition.
+The value help dialog consists of several components, such as a filter bar, a table, and sometimes a dropdown list that allows users to choose different flavors of the value help definition.
 
 
 
 ### Title
 
-If the field is annotated with `DataField` and includes a `label` property, it is used as the title of the value help dialog. If the`label` property isn't defined in `DataField`, the `Common.Label` annotation of the property is used. If neither is defined, the `label` property defined in the `Common.ValueList` or `Common.ValueListMapping` annotation is used as a fallback.
+If the field is annotated with `DataField` and includes a `label` property, it is used as the title of the value help dialog. If the `label` property isn't defined in `DataField`, the `Common.Label` annotation of the property is used. If neither is defined, the `label` property defined in the `Common.ValueList` or `Common.ValueListMapping` annotation is used as a fallback.
 
 When context-dependent value help is defined with `Common.ValueListRelevantQualifiers`, the label defined in the `Common.ValueList` or `Common.ValueListMapping` annotation is used as the title. If label isn't defined in either of these annotation, `Common.Label` annotation of the property is considered. If `label` is also not defined, the label from the `DataField` annotation is used as a fallback.
 
@@ -24,7 +29,7 @@ When context-dependent value help is defined with `Common.ValueListRelevantQuali
 
 ### Multiple Value Help Definitions
 
-If there are more than one `Common.ValueList` or `Common.ValueListMapping` annotations for a field, the default \(unqualified\) is used as the default variant. Other variants are displayed as a dropdown list, allowing end users to switch between them.
+If there are more than one `Common.ValueList` or `Common.ValueListMapping` annotations for a field, the default \(unqualified\) is used as the default variant. Other variants are displayed as a dropdown list, allowing users to switch between them.
 
 ![](images/Value_Help_Variant_9903303.png)
 
@@ -82,7 +87,7 @@ For more information about these properties, see [In/Out Mappings in the ValueLi
 
 **Defining the Behavior of Data Load in the Table**
 
-By default, value help dialog loads the data immediately upon opening. To delay data loading until after user input, use  `FetchValues` annotation. This allows end users to load data only after clicking *Go*. For more information about `FetchValues`, see the [Annotations](value-help-48e5fa7.md#loio48e5fa7ca0224e27a82f1582ef88a9de__Annotations) section in [Value Help](value-help-48e5fa7.md).
+By default, value help dialog loads the data immediately upon opening. To delay data loading until after user input, use  `FetchValues` annotation. This allows users to load data only after clicking *Go*. For more information about `FetchValues`, see the [Annotations](value-help-48e5fa7.md#loio48e5fa7ca0224e27a82f1582ef88a9de__Annotations) section in [Value Help](value-help-48e5fa7.md).
 
 **Text Handling**
 
@@ -338,7 +343,7 @@ When the value help dialog is initially opened, the table data is loaded and cac
 
 ### Define Conditions
 
-The *Define Conditions* tab is defined for fields used in filter contexts. It enables end users to apply filters on the value help entity, ensuring that the search results include only records that match the specified criteria.
+The *Define Conditions* tab is defined for fields used in filter contexts. It enables users to apply filters on the value help entity, ensuring that the search results include only records that match the specified criteria.
 
 ![](images/Define_Conditions_cf810ef.png)
 

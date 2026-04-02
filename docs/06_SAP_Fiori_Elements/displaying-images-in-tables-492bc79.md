@@ -2,11 +2,9 @@
 
 # Displaying Images in Tables
 
-To display images in tables, you must first add a data field with a value that relates to an image URL.
+You can display images in tables.
 
-
-
-This is shown in the following example:
+To display images in tables, you must first add a data field with a value that relates to an image URL. This is shown in the following example:
 
 > ### Sample Code:  
 > XML Annotation
@@ -79,12 +77,6 @@ You also need to annotate the property with the `UI.IsImageUrl` annotation to sp
 
 The `Common.Text` annotation is optional. You can use it to provide textual information for the image, for example, for accessibility purposes. This text is not visible on the UI, but can be read by screen readers. From a technical perspective, the provided string \(in this example, the product\) is assigned to the `alt` property of the `sap.m.Image` instance.
 
-
-
-<a name="loio492bc791a7bd41cd9932fdf5d3aa2656__section_hwk_2nh_2nb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
 A property containing media data of type **stream**, such as an image, is also supported. The local annotation file needs to specify that this property contains a URL and a Media Content Type set to `image/<File_Format>`, as in the following example:
 
 > ### Sample Code:  
@@ -137,6 +129,26 @@ You can also use media data of type **binary** instead of **stream**. The local 
 >   @Core.MediaType : 'image/png'
 >   ProductPictureURL
 > };
+> ```
+
+You can set the `imageFitType` of the avatar to determine how an image fits in the avatar's container. You can also set the `enableEnlargeImage` of the avatar to determine if users can open and enlarge the image in a popup, as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "controlConfiguration": {
+>     children/@com.sap.vocabularies.UI.v1.LineItem: {
+>         "columns": {
+>             "DataField::streamImage_content": {
+>                 "formatOptions": {
+>                     "imageFitType": "Contain",
+>                     "enableEnlargeImage": true
+>                 }
+>             }
+>         }
+>     }
+> }
 > ```
 
 

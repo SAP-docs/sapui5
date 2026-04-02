@@ -2,14 +2,10 @@
 
 # Enabling an App for Key User Adaptation
 
-You can enable key users to make adaptations in the list report and on the object page.
-
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
+You can enable key users to make adaptations on the list report page and the object page.
 
 To enable an app for key user adaptation, you must set `flexEnabled` to 'true' in the `manifest.json` file. For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md).
 
--   
 
 
 <a name="loioccd45ba3f0b446a0901b2c9d42b8ad53__section_rhq_1nh_tcc"/>
@@ -59,23 +55,30 @@ You can remove header facets by stashing, as well as restrict the adaptability o
 > 
 > ```json
 > "SalesOrderManageObjectPage": {
->        "type": "Component",
->         "id": "SalesOrderManageObjectPage",
->         "name": "sap.fe.templates.ObjectPage",
->         "options": {
->               "settings": {
->                    "editableHeaderContent ": false,
->                    "controlConfiguration": {
->                         "@com.sap.vocabularies.UI.v1.HeaderFacets": {
->                             "facets": {
->                                 "ColumnMicroChart": {
->                                     "stashed": true
->                                 },
->                                 "ProgressIndicator": {
->                                     "stashed": false,
->                                     "flexSettings": {
->                                         "designtime": "not-adaptable-visibility"
-> }}}}}}}}
+>     "type": "Component",
+>     "id": "SalesOrderManageObjectPage",
+>     "name": "sap.fe.templates.ObjectPage",
+>     "options": {
+>         "settings": {
+>             "editableHeaderContent ": false,
+>             "controlConfiguration": {
+>                 "@com.sap.vocabularies.UI.v1.HeaderFacets": {
+>                     "facets": {
+>                         "ColumnMicroChart": {
+>                             "stashed": true
+>                         },
+>                         "ProgressIndicator": {
+>                             "stashed": false,
+>                             "flexSettings": {
+>                                 "designtime": "not-adaptable-visibility"
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
 > ```
 
 > ### Note:  

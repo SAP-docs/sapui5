@@ -6,12 +6,15 @@ A table card displays a list of records in a 3-column table layout.
 
 
 
-To create a table card, you need these annotations:
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Table Cards](table-cards-167bf7c.md).
+
+
 
 > ### Note:  
 > \(Optional\) You can configure smart links in table cards to access quick links.
 
-![](images/TC_19e10b0.png)
+![](images/Table_Cards_200eb7f.jpg)
 
 
 
@@ -25,8 +28,7 @@ Description: Configuring this property displays the card title at the top of the
 > ```
 > "sap.ovp": {
 >     "globalFilterModel": "salesOrder",
->     "globalFilterEntityType": "GlobalFilters", // Deprecated since SAPUI5 1.54.
->     "globalFilterEntitySet": "GlobalFilters",  // Available from SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters",
 >     ...
 >     "cards": {
 >         "card014": {
@@ -54,8 +56,7 @@ Description: Configuring this property displays the card subtitle below the titl
 > ```
 > "sap.ovp": {
 >     "globalFilterModel": "salesOrder",
->     "globalFilterEntityType": "GlobalFilters", // Deprecated since SAPUI5 1.54.
->     "globalFilterEntitySet": "GlobalFilters",  // Available from SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters",
 >     ...
 >     "cards": {
 >         "card014": {
@@ -460,8 +461,7 @@ Description: Configuring this property allows you to define a dropdown list to f
 > ```
 > "sap.ovp": {
 >     "globalFilterModel": "salesOrder",
->     "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
->     "globalFilterEntitySet": "GlobalFilters", //Available from SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters",
 >     "showDateInRelativeFormat": false,
 >     "disableTableCardFlexibility": false,
 >     "considerAnalyticalParameters": true,
@@ -513,8 +513,7 @@ Description: Configuring this annotation displays the table header title \(`Labe
 > ```
 > "sap.ovp": {
 >     "globalFilterModel": "salesOrder",
->     "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
->     "globalFilterEntitySet": "GlobalFilters", //Available from SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters", 
 >     "showDateInRelativeFormat": false,
 >     "disableTableCardFlexibility": false,
 >     "considerAnalyticalParameters": true,
@@ -684,7 +683,7 @@ Description: Configuring this annotation displays the table header title \(`Labe
 
 
 
-The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the application manifest file by setting the `annotationPath` property with a qualifier, as shown in the example below. If the `annotationPath` property is not configured, the `com.sap.vocabularies.UI.v1.LineItem` term, without a qualifier, is used.
+The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the `manifest.json` file by setting the `annotationPath` property with a qualifier, as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
@@ -710,6 +709,8 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the applicat
 >     ...
 > }
 > ```
+
+If the `annotationPath` property is not configured, the `com.sap.vocabularies.UI.v1.LineItem` term, without a qualifier, is used.
 
 You can use different `com.sap.vocabularies.UI.v1.LineItem` annotations for different card instances of the same entity type by using different qualifiers and setting the `annotationPath` property with the qualifier in the card configuration. For example `com.sap.vocabularies.UI.v1.LineItem#Qualifier1`.
 

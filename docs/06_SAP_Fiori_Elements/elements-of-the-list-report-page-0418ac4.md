@@ -2,7 +2,12 @@
 
 # Elements of the List Report Page
 
-The list report allows end users to work with a large list of items. It combines powerful functions for filtering large lists with different ways of displaying the resulting item list.
+Get to know the UI elements of the list report page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [List Report Page](list-report-page-1cf5c7f.md).
+
+The list report page allows users to work with a large list of items. It combines powerful functions for filtering large lists with different ways of displaying the resulting item list.
 
 
 
@@ -14,7 +19,7 @@ The list report allows end users to work with a large list of items. It combines
 
 ## Main Elements
 
-The list report view includes the following main elements:
+The list report page includes the following main elements:
 
 -   Application header
 
@@ -42,7 +47,7 @@ The list report view includes the following main elements:
 
 ## Related Information
 
-For more information about the various functions in a list report, see [Configuring Features of the List Report Page](configuring-features-of-the-list-report-page-3af1d03.md) and [Configuring Further Common Features](configuring-further-common-features-a4d3c46.md).
+For more information about the various functions of a list report page, see [Configuring Features of the List Report Page](configuring-features-of-the-list-report-page-3af1d03.md) and [Configuring Further Common Features](configuring-further-common-features-a4d3c46.md).
 
 For more information about the loading behavior of an app, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-b736ab6.md).
 

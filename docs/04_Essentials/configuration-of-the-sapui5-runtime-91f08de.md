@@ -137,7 +137,7 @@ You can use this attribute instead of attaching individual options with individu
 <script id="sap-ui-bootstrap"
 	src="resources/sap-ui-core.js"
 	data-sap-ui-config="
-	\"anmination-mode\":\"full\",
+	\"animation-mode\":\"full\",
 		\"compat-version\":\"edge\"
 	">
 </script>
@@ -203,7 +203,7 @@ The URL parameter name is composed of the name of the configuration option and t
 
 The value of a URL parameter is of type `string` and the same type mapping as for HTML attributes applies. However, URLs require a different encoding than HTML; they use, for example % encoding instead of entity encoding.
 
-For security reasons, only some configuration options can be set via URL parameters. An application can set the `ignore-url-parameters` option to `true` to disable URL configuration parameters completely.
+For security reasons, only some configuration options can be set via URL parameters. An application can set the `ignore-url-params` option to `true` to disable URL configuration parameters completely.
 
 
 

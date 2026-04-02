@@ -311,7 +311,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 -   We have introduced the experimental `copy` parameter to `sap.ui.model.odata.v4.Context#move`. It must not be set to `true` for productive applications yet.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/move).
 
--   We have provided the `sap.ui.model.odata.v4.ODataListBinding#getSelectionCount` method to return the number of selected items. The selection count may be bound by using the `$selectionCount` parameter in a similar way as for binding the `$count`. For more information, see [Binding Collection Inline Count](../04_Essentials/binding-collection-inline-count-77d2310.md).
+-   We have provided the `sap.ui.model.odata.v4.ODataListBinding#getSelectionCount` method to return the number of selected items. The selection count may be bound by using the `$selectionCount` parameter in a similar way as for binding the `$count`. For more information, see [Binding the Count of a Collection](../04_Essentials/binding-the-count-of-a-collection-77d2310.md).
 
 
 <sub>Changed•Feature•Info Only•1.135</sub>
@@ -509,6 +509,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

@@ -2,9 +2,9 @@
 
 # Form Entry Object Page
 
-The form entry object page is a variation of the standard object page layout in which the header and navigation bar aren't displayed.
+You can use the form entry object page as an alternative to a list report page when you only want to provide a page for data entry.
 
-You can use the form entry object page as an alternative to a list report object page pattern when you only want to provide a page for data entry.
+The form entry object page is a variation of the standard object page layout in which the header and navigation bar aren't displayed.
 
 The form entry object page supports the same content and considers the same annotations as a standard object page template.
 

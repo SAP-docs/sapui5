@@ -2,7 +2,12 @@
 
 # Enabling the Related Apps Button
 
-By default, the *Related Apps* button is disabled on object pages created with the object page template. If you want, you can enable this button, which allows you to provide a link to any of the semantic object's navigation targets.
+You can enable the *Related Apps* button on the object page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md).
+
+By default, the *Related Apps* button is disabled on object pages created with the object page template. When enabled, the button allows you to provide a link to any of the semantic object's navigation targets.
 
   
   
@@ -12,43 +17,47 @@ By default, the *Related Apps* button is disabled on object pages created with t
 
 The *Related Apps* button is displayed on the object page if you set the `showRelatedApps` parameter to `true` in the `manifest.json` file, as shown in the following sample code:
 
-```js
-{
-  "sap.ui.generic.app": {
-    "pages": [
-      {
-        "entitySet": "SEPMRA_C_PD_Product",
-        "component": {
-          "name": "sap.suite.ui.generic.template.ListReport",
-          "list": true
-        },
-        "pages": [
-          {
-            "entitySet": "SEPMRA_C_PD_Product",
-            "component": {
-              "name": "sap.suite.ui.generic.template.ObjectPage",
-              "settings": {
-                "showRelatedApps": true
-              }
-            },
-            "pages": [
-              {
-                "navigationProperty": "to_ProductText",
-                "entitySet": "SEPMRA_C_PD_ProductText",
-                "component": {
-                  "name": "sap.suite.ui.generic.template.ObjectPage"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-}
-```
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> {
+>     "sap.ui.generic.app": {
+>         "pages": [
+>             {
+>                 "entitySet": "SEPMRA_C_PD_Product",
+>                 "component": {
+>                     "name": "sap.suite.ui.generic.template.ListReport",
+>                     "list": true
+>                 },
+>                 "pages": [
+>                     {
+>                         "entitySet": "SEPMRA_C_PD_Product",
+>                         "component": {
+>                             "name": "sap.suite.ui.generic.template.ObjectPage",
+>                             "settings": {
+>                                 "showRelatedApps": true
+>                             }
+>                         },
+>                         "pages": [
+>                             {
+>                                 "navigationProperty": "to_ProductText",
+>                                 "entitySet": "SEPMRA_C_PD_ProductText",
+>                                 "component": {
+>                                     "name": "sap.suite.ui.generic.template.ObjectPage"
+>                                 }
+>                             }
+>                         ]
+>                     }
+>                 ]
+>             }
+>         ]
+>     }
+> }
+> ```
 
-If a user chooses this button, the navigation targets of the given semantic object are displayed. The semantic object is taken from the app that's currently open \(see the hash in the app's URL\). Apps with the same semantic object but different actions are shown in the popover.
+If the user selects this button, the navigation targets of the given semantic object are displayed. The semantic object is taken from the app that's currently open \(see the hash in the app's URL\). Apps with the same semantic object but different actions are shown in the popover.
 
 
 
@@ -64,15 +73,16 @@ For example, you can hide the `displayFactSheet` action associated with related 
 > XML Annotation
 > 
 > ```xml
+> 
 > <Annotations Target="SalesOrderService.SalesOrderManage"> 
->      …
->      <Annotation Term="Common.SemanticObjectUnavailableActions"> 
->           <Collection> 
->                <String>displayFactSheet</String> 
->           </Collection> 
->      </Annotation>
->      <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
->      …
+>     …
+>     <Annotation Term="Common.SemanticObjectUnavailableActions"> 
+>         <Collection> 
+>             <String>displayFactSheet</String> 
+>         </Collection> 
+>     </Annotation>
+>     <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+>     …
 > </Annotations>
 > ```
 
@@ -113,46 +123,11 @@ You can display multiple semantic objects under the *Related Apps* button in the
 You can configure the `relatedAppsSettings` parameter in the `manifiest.json` file as shown in the example below:
 
 > ### Sample Code:  
+> `manifiest.json`
+> 
 > ```
 > 
 > {
->   "sap.ui.generic.app": {
->     "pages": [
->       {
->         "entitySet": "SEPMRA_C_PD_Product",
->         "component": {
->           "name": "sap.suite.ui.generic.template.ListReport",
->           "list": true
->         },
->         "pages": [
->           {
->             "entitySet": "SEPMRA_C_PD_Product",
->             "component": {
->               "name": "sap.suite.ui.generic.template.ObjectPage",
->               "settings": {
->                 "showRelatedApps": true,
->                 "relatedAppsSettings": {
->                   "0": {
->                     "semanticObject": "EPMProduct"
->                   }
->                 }
->               }
->             },
->             "pages": [
->               {
->                 "navigationProperty": "to_ProductText",
->                 "entitySet": "SEPMRA_C_PD_ProductText",
->                 "component": {
->                   "name": "sap.suite.ui.generic.template.ObjectPage"
->                 }
->               }
->             ]
->           }
->         ]
->       }
->     ]
->   }
-> }
 > ```
 
 With this setting, all related apps from the app's URL and from the `manifest.json` file are displayed on the UI under the *Related Apps* button.
@@ -171,40 +146,42 @@ You can display multiple semantic objects under the *Related Apps* button in the
 > ```
 > 
 > {
->   "sap.ui.generic.app": {
->     "pages": [
->       {
->         "entitySet": "SEPMRA_C_PD_Product",
->         "component": {
->           "name": "sap.suite.ui.generic.template.ListReport"
->         },
+>     "sap.ui.generic.app": {
 >         "pages": [
->           {
->             "entitySet": "SEPMRA_C_PD_Product",
->             "component": {
->               "name": "sap.suite.ui.generic.template.ObjectPage",
->               "relatedAppsSettings": {                
->                 "EPMProduct": {
->                   "semanticObject": "EPMProduct"
+>             {
+>                 "entitySet": "SEPMRA_C_PD_Product",
+>                 "component": {
+>                     "name": "sap.suite.ui.generic.template.ListReport",
+>                     "list": true
 >                 },
->                 "STTA_WD20": {
->                   "semanticObject": "STTA_WD20",
->                   "semanticObjectAction": {
->                     "0": {
->                       "action": "Multi_View"
->                     },
->                     "1": {
->                       "action": "Tree_Table"
+>                 "pages": [
+>                     {
+>                         "entitySet": "SEPMRA_C_PD_Product",
+>                         "component": {
+>                             "name": "sap.suite.ui.generic.template.ObjectPage",
+>                             "settings": {
+>                                 "showRelatedApps": true,
+>                                 "relatedAppsSettings": {
+>                                     "0": {
+>                                         "semanticObject": "EPMProduct"
+>                                     }
+>                                 }
+>                             }
+>                         },
+>                         "pages": [
+>                             {
+>                                 "navigationProperty": "to_ProductText",
+>                                 "entitySet": "SEPMRA_C_PD_ProductText",
+>                                 "component": {
+>                                     "name": "sap.suite.ui.generic.template.ObjectPage"
+>                                 }
+>                             }
+>                         ]
 >                     }
->                   }
->                 }
->               }
+>                 ]
 >             }
->           }
 >         ]
->       }
->     ]
->   }
+>     }
 > }
 > ```
 
@@ -222,13 +199,11 @@ If the `semanticObjectAction` list is defined in the manifest as an empty object
 
 ## Overriding Related App Settings With Extension API
 
-If the same project is deployed under multiple semantic objects or actions, and the application needs to display related apps based on the deployed semantics environment, you can override the related app settings using `modifyRelatedAppsSettings` extension API in the `manifest.json` file.
+If the same project is deployed under multiple semantic objects or actions, and the application needs to display related apps based on the deployed semantics environment, you can override the related app settings using `modifyRelatedAppsSettings` extension API.
 
 See the following sample code about modifying related app settings based on the deployed semantic environment:
 
 > ### Sample Code:  
-> `manifest.json`
-> 
 > ```
 > 
 > modifyRelatedAppsSettings: function (oRelatedAppSetting, sCurrentSemanticObject, sEntityTypeName) {
@@ -243,7 +218,7 @@ See the following sample code about modifying related app settings based on the 
 >                         action: "display"
 >                     }
 >                 }
-> 			}
+>             }
 >         }
 >     }
 >     return oRelatedAppSetting;

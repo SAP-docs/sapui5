@@ -2,6 +2,8 @@
 
 # Working With OData Annotations
 
+You can add vocabularies and annotations to extend OData services and their data.
+
 OData annotations are metadata extensions used to enrich OData services with additional semantic information. These annotations enable SAP Fiori elements and other frameworks to automatically generate user interfaces based on the business context. The annotations define UI behavior, layout, and data relationships, such as labels, field groups, and navigation paths, without requiring manual coding for the UI. OData annotations are served with the `$metadata` document or contained in additional XML files.
 
 
@@ -12,7 +14,7 @@ OData annotations are metadata extensions used to enrich OData services with add
 
 OData annotations are defined using terms, and these terms are organized in vocabularies. Vocabularies are collections of related terms that provide a common semantic framework. The relevant vocabularies for SAP Fiori elements are:
 
--   [SAP defined vocabularies](https://github.com/sap/odata-vocabularies)
+-   [SAP-defined vocabularies](https://github.com/sap/odata-vocabularies)
 -   [OASIS vocabularies](https://github.com/oasis-tcs/odata-vocabularies)
 
 
@@ -169,7 +171,7 @@ For more information, see the [SAP Fiori Tools Documentation](https://help.sap.c
 **Related Information**  
 
 
-[Feature Showcase Apps and Samples](https://ui5.sap.com/#/topic/521405cc719e4e699a25366461a516cb)
+[Feature Showcase Apps and Samples](feature-showcase-apps-and-samples-521405c.md "See some sample apps we put together to demonstrate and document a broad variety of features of SAP Fiori elements for OData V4. Learn how to implement them and test them yourself!")
 
 [RESTful Application Programming Model](https://help.sap.com/docs/abap-cloud/abap-rap/abap-restful-application-programming-model)
 

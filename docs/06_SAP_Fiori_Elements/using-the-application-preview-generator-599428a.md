@@ -4,7 +4,7 @@
 
 # Using the Application Preview Generator
 
-Applications based on SAP Fiori elements can generate integration cards and adaptive cards.
+You can generate integration and adaptive cards in SAP Fiori elements.
 
 You can use cards to provide a preview of the data of the object page. Cards can be shared using SAP Collaboration Manager, Microsoft Teams, or any other platform where the integration card or the adaptive card can be hosted.
 
@@ -90,7 +90,7 @@ Next, open a new terminal at a desired project location and run one of the follo
 
 After enabling the application preview generator as described, launch the project by using the `npm run start-cards-generator` command.
 
-If the landing page of the application is a list report, use the necessary filters or search to navigate to the object page for which the card will be created. After the object page is launched, open the user menu and choose *Generate Card*.
+If the landing page of the application is a list report page, use the necessary filters or search to navigate to the object page for which the card will be created. After the object page is launched, open the user menu and choose *Generate Card*.
 
 ![](images/Generate_Card_in_User_Menu_b9f3b50.png)
 

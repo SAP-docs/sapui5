@@ -2,15 +2,18 @@
 
 # Using Messages
 
-The system generates messages in response to what users do in the SAP system. A message presents information, an instruction, or a warning to users in a given situation.
+Get to know the message types supported by SAP Fiori elements.
 
-Back-end systems can generate either a state message or a transition message.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Using Messages](using-messages-239b192.md).
+
+The system generates messages in response to what users do in the SAP system. A message presents information, an instruction, or a warning to users in a given situation. Back-end systems can generate either a state message or a transition message.
 
 -   State message
 
     A state message refers to the state of an instance, for example when a user tries to activate an object with field values that return an error like "Amount must not be negative". These messages are displayed on the UI until the state of the related instance has been corrected, for example by changing the amount attribute to a positive value. The messages are displayed to the user and also persisted in the back-end system.
 
-    State messages are not expected or supported in the list report and on the object page \(or subobject page\) in display mode. In edit mode of the object page \(or subobject page\), state messages are shown in the message popover. The popover only shows the message of the current object and its subtree, but not the messages from objects above that level. Client-side validation messages are also shown here.
+    State messages are not expected or supported on the list report page and the object page \(or subobject page\) in display mode. In edit mode of the object page \(or subobject page\), state messages are shown in the message popover. The popover only shows the message of the current object and its subtree, but not the messages from objects above that level. Client-side validation messages are also shown here.
 
 -   Transition message
 

@@ -4,9 +4,33 @@
 
 You can use annotations to enable generic actions in tables on the object page.
 
-For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+For more information, see [Adding Actions to Tables](adding-actions-to-tables-c909f6b.md).
 
 
+
+Within your annotations, you set the `creatable-path` to a particular property of the root object \(entity\) in the back-end system that is either `true` or `false`. If the value of this property is `true`, the *Create* button is displayed; if it is `false`, it is hidden. Note that the `creatable-path` must point to a property of the root entity.
+
+
+
+### Code Samples
+
+`creatable-path` 
+
+```xml
+<NavigationProperty Name="to_ProductText" sap:creatable-path="CanCreateProductText".../>
+```
+
+
+
+### Enable or Disable Delete Button
+
+You can enable or disable the *Delete* button in the toolbar of tables on the object page based on certain conditions in the back-end system. For example, you can disable the *Delete* button for a product's text if the text is in English.
+
+Within your annotation, you set the `deletable-path` for an entity set to point to a particular Boolean property of the entity that has a value of either `true` or `false`. The *Delete* button is enabled if the selected item's property is `true`. If multiple selection is enabled for the table, the button is enabled if at least one selected item is deletable.
+
+
+
+<a name="loiod27ae998a20a4dbead161e3e7c0ac2e8__section_l5d_srn_ghc"/>
 
 ## Display of the *Create* Button
 
@@ -27,15 +51,12 @@ The *Create* button is only displayed in the table toolbar when the object page 
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```xml
-> <Annotations Target="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductText">
->    <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
->         <Record>
->             <PropertyValue Property="Deletable" Path="Delete_mc"/>
->         </Record>
->     </Annotation>
-> </Annotations>
+> ```
 > 
+> <EntitySet Name="STTA_C_MP_ProductText"
+>     EntityType="STTA_PROD_MAN.STTA_C_MP_ProductTextType" 
+>     sap:deletable-path="Delete_mc" 
+>     sap:content-version="1"/>
 > ```
 
 > ### Sample Code:  
@@ -50,13 +71,8 @@ The *Create* button is only displayed in the table toolbar when the object page 
 > );
 > ```
 
-
-
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-510b6af.md).
-
 **Related Information**  
 
 
-[Example: Adding Custom Filter Fields in Table Toolbar](example-adding-custom-filter-fields-in-table-toolbar-e34f78f.md "To add custom filter fields in a table toolbar, follow the steps described below:")
+[Example: Adding Custom Filter Fields in Table Toolbar](example-adding-custom-filter-fields-in-table-toolbar-e34f78f.md "You can add custom filter fields like selects, combo boxes, or date pickers to your object page table toolbar using view extensions.")
 

@@ -70,7 +70,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     By using the `CreateHidden`/`UpdateHidden`/`DeleteHidden` annotations, you control the visibility of the standard *Create*/*Edit*/*Delete* buttons. For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md) and [Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md).
 
-    By using the `OperationAvailable` annotation, you control the enablement of an action button. For more information, see [Actions in the List Report](actions-in-the-list-report-993e99e.md).
+    By using the `OperationAvailable` annotation, you control the enablement of an action button. For more information, see [Actions on the List Report Page](actions-on-the-list-report-page-993e99e.md).
 
 -   **How can I refresh data on the UI?**
 
@@ -153,7 +153,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **How can I ensure that my action is enabled only upon selection of table records? How can I ensure that the context is passed to the action?**
 
-    You can configure your actions using specific annotations. For more information about bound/unbound actions, see the [Actions Calling OData Function Imports](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__actions_calling_subsection) subsection in [Actions](actions-cbf16c5.md).
+    You can configure your actions using specific annotations. For more information about bound/unbound actions, see the [Bound and Unbound Actions](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__BoundUnbound) subsection in [Actions](actions-cbf16c5.md).
 
 -   **How can end users pass additional parameters to the action? Can these action parameters have default values?**
 
@@ -165,7 +165,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **How do I control the visibility/enablement of the standard *Create* button in the table on the list report page?**
 
-    You can control the visibility or enablement of the standard *Create* button in the table on the list report page by using the `OperationAvailable` annotation. For more information, see the [Standard Action: Create](actions-in-the-list-report-993e99e.md#loio993e99eae4414b73bc7afef9518c79bf__standard_action_create_subsection) subsection in [Actions in the List Report](actions-in-the-list-report-993e99e.md).
+    You can control the visibility or enablement of the standard *Create* button in the table on the list report page by using the `OperationAvailable` annotation. For more information, see the [Standard Action: Create](actions-on-the-list-report-page-993e99e.md#loio993e99eae4414b73bc7afef9518c79bf__standard_action_create_subsection) subsection in [Actions on the List Report Page](actions-on-the-list-report-page-993e99e.md).
 
 -   **Can I define app-level critical actions that are shown emphasized rather than the default emphasized buttons such as *Edit* and *Save* of SAP Fiori elements?** 
 
@@ -269,7 +269,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **In SAP Fiori elements for OData V4, the analytical list page \(ALP\) isn't a separate floorplan, but rather a 'flavor' of the list report page. Can I still use a multi-view table?**
 
-    In the ALP flavor, we allow only multiple views of the same table \(that is, the same table has different filters in each view\). For more information, see [Defining Multiple Views of a Table in an Analytical List Page](defining-multiple-views-of-a-table-in-an-analytical-list-page-664a79a.md).
+    In the ALP flavor, we allow only multiple views of the same table \(that is, the same table has different filters in each view\).
 
 
 
@@ -324,8 +324,6 @@ You can get answers to the most frequently asked questions we receive from our u
 
     You can look at the possibility of using app extensions. In addition, you can also explore the use of building blocks to build your own custom section \(or even a free-style app\) that still allows you to get most of the standard behavior out-of-the-box.
 
-    You can use app extensions to extend your app to suit your requirements. For more information, see [Extending List Reports and Object Pages Using App Extensions](extending-list-reports-and-object-pages-using-app-extensions-a892eb8.md).
-
 -   **Where can I see some samples of extensions and building blocks?**
 
     You can find the examples in the [SAP Fiori development portal](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/introduction).
@@ -338,5 +336,5 @@ You can get answers to the most frequently asked questions we receive from our u
 
 
 > ### Note:  
-> For information about SAP Fiori Elements for OData V2, see [FAQs](faqs-b94bab9.md).
+> For information about SAP Fiori elements for OData V2, see [FAQs](faqs-b94bab9.md).
 

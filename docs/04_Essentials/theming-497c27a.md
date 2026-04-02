@@ -2,58 +2,161 @@
 
 # Theming
 
-SAPUI5 is an HTML UI library, therefore styling is done using Cascading Style Sheets \(CSS\). This allows for creating an impressive visual experience using a widely known standard technology which is well-accepted on the market.
+SAPUI5 is an HTML library, therefore styling is done using Cascading Style Sheets \(CSS\). This allows for creating an impressive visual experience using a widely known standard technology which is well-accepted on the market.
 
-SAPUI5 supports you when creating and using different visual designs - called **themes** - that can be used alternatively and switched on the fly. This way, the same application can look very different, depending on the user's design preference or accessibility requirements. Existing themes can serve as a basis for new themes and, in case of new design trends, it is possible to create a matching theme for all existing applications without modifying the applications. The theme handling is decoupled from application development and done in a separate layer. The SAPUI5 library loads the required CSS files and offers ways of switching themes. For more information about the themes that are available, see [Available Themes](available-themes-da0d2e7.md).
-
-SAPUI5 offers a variety of optional features that add value regarding modularization, modification, compatibility, and performance:
-
--   [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) providing all theming-related colors, metrics, ... \(available since SAPUI5 1.127.0\)
--   Variables, mixins, color calculations, and other functions, provided by the Open Source library [LESS](http://lesscss.org/) \(deprecated since SAPUI5 1.127.0\)
--   Compilation of one CSS file per control library from modular per-control CSS files
--   Optimization/compression of CSS size
--   Clean browser switch and mobile platform detection available \(inside CSS code\)
--   Base theme \(as a basis for a style that is always required to reduce the amount of CSS required for specific themes\)
--   Generic right-to-left support
-
-To ensure these functions, SAPUI5 uses the following components:
-
--   A CSS generator with several functions: LESS processing \(CSS variables substitution, etc.\), merging of CSS files created for different themes and controls for optimal runtime consumption, as well as compression or right-to-left substitution if required.
-
-    > ### Tip:  
-    > With the availability of CSS custom properties, LESS processing is going to be removed as soon as all SAPUI5 libraries make consistent use of the CSS custom properties.
-
--   The SAPUI5 runtime handles the loading of the appropriate CSS file for the control libraries used in the application page by adding `<style>` tags to the document head. There is also an API available for switching themes, which replaces the CSS URLs and therefore does not modify the application state.
+SAPUI5 supports you when creating and using different visual designs - called **themes** - that can be used alternatively and switched on the fly. This way, the same application can look very different, depending on the user's design preference or accessibility requirements.
 
 
 
-## How to Theme Your SAPUI5 Application
+## Theming Approach
 
-To theme your application, you can choose among a number of options:
+SAPUI5 offers a modern theming approach with the following key features:
 
--   Adapt an existing theme by using the UI theme designer, which basically modifies the color scheme, but in a very easy, non-technical manner with instant live preview. Adaptation parameters are limited, but the UI theme designer also lets you add custom CSS, which gives you the freedom to adapt basically everything.
--   Create a new theme from scratch, writing every piece of CSS which will then be loaded later. The only requirement is to have `library.css` files within a certain folder structure \(which also defines the theme name\).
--   Adapt an existing theme by adding CSS on application level. This is the easiest option and still sufficient for many use cases. You can technically adapt and change everything. The adaptation is rather done on top of an existing theme and only available within the specific application.
+-   **CSS custom properties** providing all theming-related colors, metrics, and values \(available as of SAPUI5 1.127.0\)
+-   **Theme switching** with programmatic APIs for dynamic theme changes
+-   **Automatic CSS management**, where the framework handles loading and updating
+-   **Performance optimization** through efficient CSS loading strategies
 
-All options except the last one result in a new stand-alone theme which needs to be deployed and referenced by its name in the application and which can be used by any application.
-
-For all these options, the CSS developer might reduce the styling effort and focus on those controls which are actually used in the application \(which in turn decreases the reuse value of the theme in other applications\).
-
+> ### Note:  
+> Variables, mixins, and other LESS features have been deprecated as of version 1.127.0 in favor of CSS custom properties.
 
 
-## Developing Custom HTML or Your Own Control – What to Bear in Mind
 
--   To ensure that your SAPUI5 application's theme can be adapted easily, you should follow some recommendations.
+## Core Concepts
 
-    For more information, see [Creating Themable User Interfaces](creating-themable-user-interfaces-a2c67ac.md).
 
--   To ensure that your custom content fits the colors of the SAPUI5 theme used, you can use specific CSS classes.
 
-    For more information, see [CSS Classes for Theme Parameters](css-classes-for-theme-parameters-ea08f53.md).
+### Themes, Libraries, and CSS Artifacts
 
+-   Each SAPUI5 library \(such as `sap.ui.core`, `sap.m`\) provides a `library.css` file per theme.
+
+-   Themes can provide a `custom.css` with customer overrides.
+
+-   SAPUI5 computes and requests the correct files based on the active theme, libraries used, and configuration.
+
+
+
+
+### Default Behavior
+
+-   If no theme is specified by any of the available configuration mechanisms, SAPUI5 automatically applies a default theme.
+
+-   The default theme depends on the SAPUI5 version and is currently one of the themes of the *Horizon* theme family, for example, `sap_horizon`, depending on which flavor is selected in the Demo Kit.
+
+-   If no theme has been specified, SAPUI5 also considers the system's light or dark mode settings and automatically applies the corresponding theme flavor. For example, if the user's system preference is dark mode, and no theme has been specified, SAPUI5 automatically applies `sap_horizon_dark`.
+
+
+
+
+### CSS Custom Property Integration
+
+Theme parameters are accessible as CSS custom properties:
+
+-   CSS custom property: `--sapButton_Background`
+
+
+
+
+## Overview of Theming Capabilities
+
+SAPUI5 provides comprehensive theming capabilities using multiple approaches:
+
+-   CSS custom properties \(recommended\)
+-   Runtime parameter access
+-   Theme discovery
+
+
+
+### CSS Custom Properties \(Recommended\)
+
+The modern approach uses CSS custom properties for a theme-aware styling:
+
+```
+.myComponent {
+  background-color: var(--sapButton_Background);
+  border-color: var(--sapButton_BorderColor);
+  color: var(--sapButton_TextColor);
+}
+```
+
+-   **Direct CSS usage**: No `JavaScript` required for basic theming
+-   **Performance**: Optimal performance with native browser support
+-   **Theme awareness**: Automatically updated when themes change
+
+
+
+### Runtime Parameter Access
+
+For dynamic theming scenarios, the `Parameters` API provides `JavaScript` access to theme values. For more information, see [Enhanced Theming Concepts](enhanced-theming-concepts-45df6df.md).
+
+
+
+### Theme Discovery
+
+To explore available custom CSS properties and their current values, use the [Theme Parameter Toolbox](https://ui5.sap.com/test-resources/sap/m/demokit/theming/webapp/index.html).
+
+
+
+## Creating Custom Themes
+
+You can create custom themes using several approaches, depending on your requirements and technical expertise.
+
+
+
+### UI Theme Designer \(Recommended\)
+
+The UI theme designer is the easiest way to create custom themes:
+
+-   **Easy customization:** Modify color schemes with instant live preview
+-   **Non-technical approach:** No CSS knowledge required for basic modifications
+-   **Custom CSS support:** Add custom CSS for advanced adaptations
+-   **Theme export:** Generate complete theme packages for deployment
+
+For more information, see [UI Theme Designer](https://help.sap.com/viewer/product/UI_THEME_DESIGNER/Cloud/en-US).
+
+
+
+### Theme from Scratch
+
+You can create a completely new theme by writing CSS files if you meet the following requirements:
+
+-   Create `library.css` files for each SAPUI5 library you want to support
+-   Follow the required folder structure: `themes/[theme-name]/[library]/library.css`
+-   Define all required theme parameters as CSS custom properties
+
+
+
+## Best Practices
+
+
+
+### Dos ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+-   **Use CSS custom properties** as the primary theming approach
+-   **Test themes** across all target browsers and devices
+-   **Ensure accessibility compliance**, such as contrast ratios
+-   **Use the UI theme designer** for productive scenarios where themes are created on a company-wide level
+-   **Follow semantic naming** when creating custom themes
+
+
+
+### Don'ts ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+-   **Don't hard-code colors** or metrics in custom CSS
+-   **Don't use deprecated LESS features** in new development
+-   **Don't create overly complex CSS selectors** that impact performance
+-   **Don't forget to test accessibility** for custom themes
+
+
+
+## Next Steps
+
+For detailed implementation guidance, see the specialized topics below this topic.
 
 **Related Information**  
 
+
+[Available Themes](available-themes-da0d2e7.md "Provides a list of themes and their names.")
 
 [Supported Combinations of Themes and Libraries](../02_Read-Me-First/supported-combinations-of-themes-and-libraries-38ff8c2.md "This chapter gives an overview of the possible combinations of themes and libraries for the SAPUI5 versions that are still in maintenance.")
 

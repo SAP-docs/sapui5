@@ -489,9 +489,9 @@ SAP Fiori Elements
 
 -   The finalizing action buttons now vary based on the mode of the object page. In create mode, the *Create* button is available and in edit mode, the *Save* button is available. For more information, see [Displaying Actions on the Object Page](../06_SAP_Fiori_Elements/displaying-actions-on-the-object-page-f65e8b1.md).
 
--   In the SAP Fiori elements list reports, the extensionAPI `invokeActions` now supports changeset processing. For more information, see [Using the extensionAPI](../06_SAP_Fiori_Elements/using-the-extensionapi-bd2994b.md).
+-   In the SAP Fiori elements list reports, the extensionAPI `invokeActions` now supports changeset processing. For more information, see [Using the ExtensionAPI](../06_SAP_Fiori_Elements/using-the-extensionapi-bd2994b.md).
 
--   In list reports and analytical list pages, the *Export to Excel* button is now available by default. For more information, see [Adapting the UI: List Report and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-and-object-page-0d2f1a9.md) and [Adapting the UI: Analytical List Page](../06_SAP_Fiori_Elements/adapting-the-ui-analytical-list-page-2c5fa29.md).
+-   In list reports and analytical list pages, the *Export to Excel* button is now available by default. For more information, see [Adapting the UI: List Report Page and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md) and [Adapting the UI: Analytical List Page](../06_SAP_Fiori_Elements/adapting-the-ui-analytical-list-page-2c5fa29.md).
 
 -   If you have defined default filter values in SAP Fiori Launchpad, they are now merged with the default filter values set in standard variant. This applies to list reports and analytical list pages. For more information, see [Configuring Default Filter Values](../06_SAP_Fiori_Elements/configuring-default-filter-values-f27ad7b.md).
 
@@ -518,6 +518,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

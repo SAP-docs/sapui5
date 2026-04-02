@@ -2,7 +2,12 @@
 
 # Using the `extensionAPI`
 
-The `extensionAPI` consists of several elements that are described below. It can be used for the list report, the analytical list page, and the object page.
+You can use `extensionAPI` to extend your application.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).
+
+The `extensionAPI` consists of several elements that are described below. It can be used for the list report page, the analytical list page, and the object page.
 
 
 
@@ -36,7 +41,7 @@ Instance
 <tr>
 <td valign="top">
 
-List Report
+List report page
 
 </td>
 <td valign="top">
@@ -48,7 +53,7 @@ List Report
 <tr>
 <td valign="top">
 
-Object Page
+Object page
 
 </td>
 <td valign="top">
@@ -60,7 +65,7 @@ Object Page
 <tr>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
 </td>
 <td valign="top">
@@ -195,7 +200,7 @@ Sets parameters for invoking application controller's `invokeActions` method
 </td>
 <td valign="top">
 
-Determines whether common or unique changeset is sent in batches
+Determines whether a common or unique change set is sent in batches
 
 </td>
 </tr>

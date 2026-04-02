@@ -40,38 +40,38 @@ To format the output text individually, we remove the description from the input
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true">
-	<Shell>
-		<App>
-			<pages>
-				<Page title="{i18n>homePageTitle}">
-					<content>
-						<Panel
-							headerText="{i18n>helloPanelTitle}"
-							class="sapUiResponsiveMargin"
-							width="auto">
-							<content>
-								<Button
-									text="{i18n>showHelloButtonText}"
-									press=".onShowHello"
-									class="sapUiSmallMarginEnd"/>
-								<Input
-									value="{/recipient/name}"
-									valueLiveUpdate="true"
-									width="60%"/>
-								<Text
-									text="Hello {/recipient/name}"
-									class="sapUiSmallMargin"/>
-							</content>
-						</Panel>
-					</content>
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Shell>
+        <App>
+            <pages>
+                <Page title="{i18n>homePageTitle}">
+                    <content>
+                        <Panel
+                            headerText="{i18n>helloPanelTitle}"
+                            class="sapUiResponsiveMargin"
+                            width="auto">
+                            <content>
+                                <Button
+                                    text="{i18n>showHelloButtonText}"
+                                    press=".onShowHello"
+                                    class="sapUiSmallMarginEnd"/>
+                                <Input
+                                    value="{/recipient/name}"
+                                    valueLiveUpdate="true"
+                                    width="60%"/>
+                                <Text
+                                    text="Hello {/recipient/name}"
+                                    class="sapUiSmallMargin"/>
+                            </content>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
 ```
 

@@ -54,12 +54,12 @@ Now we add the new `Detail.view.xml` file to our view folder. Besides the root n
 
 ```xml
 <mvc:View
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Page
-		title="{i18n>detailPageTitle}">
-		<ObjectHeader title="Invoice"/>
-	</Page>
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page
+        title="{i18n>detailPageTitle}">
+        <ObjectHeader title="Invoice"/>
+    </Page>
 </mvc:View>
 ```
 
@@ -140,42 +140,42 @@ We add a new "routing" section to the `sap.ui5` part of the descriptor. There ar
 
 ```
 {
-  ...
-  "sap.ui5": {
-  ...
-    "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "type": "View",
-        "viewType": "XML",
-        "path": "ui5.walkthrough.view",
-        "controlId": "app",
-        "controlAggregation": "pages"
-      },
-      "routes": [
-        {
-          "pattern": "",
-          "name": "overview",
-          "target": "overview"
-        },
-        {
-          "pattern": "detail",
-          "name": "detail",
-          "target": "detail"
+    ...
+    "sap.ui5": {
+    ...
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "type": "View",
+                "viewType": "XML",
+                "path": "ui5.walkthrough.view",
+                "controlId": "app",
+                "controlAggregation": "pages"
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "overview",
+                    "target": "overview"
+                },
+                {
+                    "pattern": "detail",
+                    "name": "detail",
+                    "target": "detail"
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "id": "overview",
+                    "name": "Overview"
+                },
+                "detail": {
+                    "id": "detail",
+                    "name": "Detail"
+                }
+            }
         }
-      ],
-      "targets": {
-        "overview": {
-          "id": "overview",
-          "name": "Overview"
-        },
-        "detail": {
-          "id": "detail",
-          "name": "Detail"
-        }
-      }
     }
-  }
 }
 ```
 
@@ -246,7 +246,7 @@ import UIComponent from "sap/ui/core/UIComponent";
  * @namespace ui5.walkthrough.controller
  */
 export default class App extends Controller {
-		…
+        …
     onPress(): void {
         const router = UIComponent.getRouterFor(this);
         router.navTo("detail");

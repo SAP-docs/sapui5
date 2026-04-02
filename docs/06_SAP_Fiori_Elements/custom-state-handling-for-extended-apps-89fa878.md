@@ -67,14 +67,14 @@ The code sample below shows a control state handler object taking care of a `sap
 > ### Sample Code:  
 > ```
 > {
->   retrieve: function(oOPLayout) {
->     return {
->       selectedSection: oOPLayout.getSelectedSection()
->     };
->   },
->   apply: function(oOPLayout, oControlState, oNavParameters) {
->     oControlState && oOPLayout.setSelectedSection(oControlState.selectedSection);
->   }
+>     retrieve: function(oOPLayout) {
+>         return {
+>             selectedSection: oOPLayout.getSelectedSection()
+>         };
+>     },
+>     apply: function(oOPLayout, oControlState, oNavParameters) {
+>         oControlState && oOPLayout.setSelectedSection(oControlState.selectedSection);
+>     }
 > }
 > ```
 
@@ -87,37 +87,37 @@ To further extend the already defined `ViewState` controller extension, you must
 > ### Sample Code:  
 > ```
 > return ControllerExtension.extend("Custom.LRControllerExtension", {
-> 	override: {
-> 		viewState: {
-> 			adaptControlStateHandler: function(oControl, aControlHandlers) {
-> 				if (oControl.isA("sap.f.DynamicPage")) {
-> 					aControlHandlers.push({
-> 						retrieve: function(oControl) {
-> 							return {
-> 								headerExpanded: oControl.getHeaderExpanded()
-> 							};
-> 						},
-> 						apply: function(oControl, mControlState) {
-> 							if ("headerExpanded" in mControlState) {
-> 								oControl.setHeaderExpanded(mControlState.headerExpanded);
-> 							}
-> 						}
-> 					});
-> 				}
-> 			},
-> 			adaptStateControls: function(aControls) {
-> 				aControls.push(this.getView().byId("My::DynamicePage::Control"));
-> 			},
-> 			retrieveAdditionalStates: function(mAdditionalStates) {
-> 				mAdditionalStates.lastVisit = new Date().toString();
-> 			},
-> 			applyAdditionalStates: function(mAdditionalStates) {
-> 				if (mAdditionalStates.lastVisit) {
-> 					MessageToast.show("Applying view state from " + mAdditionalStates.lastVisit);
-> 				}
-> 			}
-> 		}
-> 	}
+>     override: {
+>         viewState: {
+>             adaptControlStateHandler: function(oControl, aControlHandlers) {
+>                 if (oControl.isA("sap.f.DynamicPage")) {
+>                     aControlHandlers.push({
+>                         retrieve: function(oControl) {
+>                             return {
+>                                 headerExpanded: oControl.getHeaderExpanded()
+>                             };
+>                         },
+>                         apply: function(oControl, mControlState) {
+>                             if ("headerExpanded" in mControlState) {
+>                                 oControl.setHeaderExpanded(mControlState.headerExpanded);
+>                             }
+>                         }
+>                     });
+>                 }
+>             },
+>             adaptStateControls: function(aControls) {
+>                 aControls.push(this.getView().byId("My::DynamicePage::Control"));
+>             },
+>             retrieveAdditionalStates: function(mAdditionalStates) {
+>                 mAdditionalStates.lastVisit = new Date().toString();
+>             },
+>             applyAdditionalStates: function(mAdditionalStates) {
+>                 if (mAdditionalStates.lastVisit) {
+>                     MessageToast.show("Applying view state from " + mAdditionalStates.lastVisit);
+>                 }
+>             }
+>         }
+>     }
 > });
 > ```
 
@@ -141,8 +141,6 @@ You must register the controller extension in the manifest as follows:
 >     ...
 > }
 > ```
-
-For more information about the sample implementation, see [State Handling](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview/viewState).
 
 
 

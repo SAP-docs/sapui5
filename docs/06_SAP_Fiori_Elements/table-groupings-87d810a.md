@@ -2,6 +2,11 @@
 
 # Table Groupings
 
+You can disable table grouping or define default table groups in different table types.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Table Groupings](table-groupings-d344c5a.md).
+
 SAP Fiori elements handles table groupings automatically.
 
 The grouping of rows is supported in analytical tables \(`sap.ui.Table.AnalyticalTable`\) and responsive tables \(`sap.m.Table`\). Grid tables and tree tables are not supported.
@@ -35,9 +40,9 @@ For analytical tables, take the following restrictions into account:
 
 These group header formatters are automatically set by SAP Fiori elements:
 
--   Responsive table: Set a grouping function on the sorter: `fnGroup of sap.ui.model.Sorter`.
+-   Responsive table: Set a grouping function on the sorter: `fnGroup` of `sap.ui.model.Sorter`.
 
--   Analytical table: Set property `groupHeaderFormatter` of `sap.ui.table.AnalyticalColumn`.
+-   Analytical table: Set property `groupHeaderFormatter` of `sap.ui.table.AnalyticalColumn```.
 
 
 
@@ -85,7 +90,7 @@ Comments
 <tr>
 <td valign="top">
 
-Edm.DateTimeOffsetDate
+`Edm.DateTimeOffsetDate`
 
 </td>
 <td valign="top">
@@ -117,7 +122,7 @@ UTC
 <tr>
 <td valign="top">
 
-Edm.DateTimeOffset
+`Edm.DateTimeOffset`
 
 </td>
 <td valign="top">
@@ -149,7 +154,7 @@ Jan 27, 2017, 12:00:00 AM
 <tr>
 <td valign="top">
 
-Edm.DateTime
+`Edm.DateTime`
 
 </td>
 <td valign="top">
@@ -181,7 +186,7 @@ UTC
 <tr>
 <td valign="top">
 
-Edm.DateTime
+`Edm.DateTime`
 
 </td>
 <td valign="top">
@@ -213,7 +218,7 @@ Jan 27, 2017, 12:00:00 AM
 <tr>
 <td valign="top">
 
-Edm.Time
+`Edm.Time`
 
 </td>
 <td valign="top">
@@ -245,7 +250,7 @@ PT11H13M01S
 <tr>
 <td valign="top">
 
-Edm.String
+`Edm.String`
 
 </td>
 <td valign="top">
@@ -277,7 +282,7 @@ Mar 13, 2018
 <tr>
 <td valign="top">
 
-Edm.Boolean
+`Edm.Boolean`
 
 </td>
 <td valign="top">
@@ -309,7 +314,7 @@ Yes
 <tr>
 <td valign="top">
 
-Edm.Decimal
+`Edm.Decimal`
 
 </td>
 <td valign="top">
@@ -341,7 +346,7 @@ Unit of measure
 <tr>
 <td valign="top">
 
-Edm.Decimal
+`Edm.Decimal`
 
 </td>
 <td valign="top">
@@ -373,7 +378,7 @@ Currency
 <tr>
 <td valign="top">
 
-Edm.String
+`Edm.String`
 
 </td>
 <td valign="top">
@@ -398,14 +403,14 @@ Meter \(m\)\*
 </td>
 <td valign="top">
 
-Unit of measure and TextArrangement
+Unit of measure and `TextArrangement`
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Edm.String
+`Edm.String`
 
 </td>
 <td valign="top">
@@ -430,7 +435,7 @@ Euro \(EUR\)\*
 </td>
 <td valign="top">
 
-Currency and TextArrangement
+Currency and `TextArrangement`
 
 </td>
 </tr>

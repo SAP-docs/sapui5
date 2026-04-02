@@ -2,7 +2,9 @@
 
 # The `Paginator` Building Block
 
-You can use the `Paginator` building block to bring up paginator buttons in scenarios where end users have to traverse a list using these paginator buttons.
+You can use the `Paginator` building block to add paginator buttons to lists.
+
+The paginator buttons are added to the header of the detail page and allow users to flip through the list items without having to return to the list.
 
 > ### Sample Code:  
 > `Paginator` Building Block

@@ -2,7 +2,10 @@
 
 # Extending the Delivered Apps Manifest Using an Adaptation Project
 
-You can extend the SAP-delivered list report and object page apps that are developed on SAP Fiori elements.
+You can extend SAP Fiori elements-based list report page and object page apps.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Extending Delivered Apps Using Adaptation Projects](extending-delivered-apps-using-adaptation-projects-a2b24a6.md).
 
 The delivered apps can be extended by adding a new node in the object page or by modifying the manifest configurations settings through the adaptation project. By configuring the adaptation project manifest, you can enable the following features:
 
@@ -69,6 +72,8 @@ You must add the parameters in the `changeType`, `layer`, `parentPage`, and `chi
 The following sample code is a definition to set the `createMode` and table type for a node in the object page. It must be added to the `manifest.appdescr_variant` file of the adaptation project.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > {
 >     "changeType": "appdescr_ui_generic_app_changePageConfiguration",

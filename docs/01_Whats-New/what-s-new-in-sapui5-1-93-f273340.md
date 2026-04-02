@@ -649,7 +649,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   The `FlexibleColumnLayoutActions` building block provides you with an easy way to instantiate the *Close*, *Enter Full Screen*, and *Exit Full Screen* buttons. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
--   App developers can now display custom content in a dedicated tab together with regular tabs defined through annotations. For more information, see [Extension Points for Views in the List Report](../06_SAP_Fiori_Elements/extension-points-for-views-in-the-list-report-eb37203.md).
+-   App developers can now display custom content in a dedicated tab together with regular tabs defined through annotations. For more information, see [Extension Points for Views on the List Report Page](../06_SAP_Fiori_Elements/extension-points-for-views-on-the-list-report-page-eb37203.md).
 
 -   App developers can now use the `MicroChart` building block and the `Share` building block. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
@@ -765,6 +765,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

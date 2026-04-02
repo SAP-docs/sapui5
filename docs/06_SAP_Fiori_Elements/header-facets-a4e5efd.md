@@ -4,6 +4,9 @@
 
 You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Header Facets](header-facets-17dbd5b.md).
+
 You can use the annotation term `UI.HeaderFacets` to define which information is displayed in the header. The `UI.HeaderFacets` annotation contains a collection of `UI.ReferenceFacet`, with each reference facet, corresponding to a header element displayed on the UI. The following sample code shows such a structure:
 
 > ### Sample Code:  

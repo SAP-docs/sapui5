@@ -211,7 +211,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   Row selection in responsive tables of list reports, object pages, and analytical list pages now resets automatically after an action updates the table's data binding. You can configure the `rememberSelections` property using the UI adaptation project. For more information, see [Adapting the UI: List Report and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-and-object-page-0d2f1a9.md) and [Adapting the UI: Analytical List Page](../06_SAP_Fiori_Elements/adapting-the-ui-analytical-list-page-2c5fa29.md).
+-   Row selection in responsive tables of list reports, object pages, and analytical list pages now resets automatically after an action updates the table's data binding. You can configure the `rememberSelections` property using the UI adaptation project. For more information, see [Adapting the UI: List Report Page and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md) and [Adapting the UI: Analytical List Page](../06_SAP_Fiori_Elements/adapting-the-ui-analytical-list-page-2c5fa29.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.133</sub>
@@ -658,6 +658,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

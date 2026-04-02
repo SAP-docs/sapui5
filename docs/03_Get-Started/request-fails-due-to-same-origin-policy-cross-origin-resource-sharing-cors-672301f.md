@@ -63,7 +63,7 @@ In the `manifest.json` descriptor file of your app, you can now change the data 
 
 ```js
 {
-  "_version": "1.59.0",
+  ...
   "sap.app": {
 	...
 	"dataSources": {

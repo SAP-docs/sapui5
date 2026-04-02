@@ -2,24 +2,24 @@
 
 # Adding Custom Actions Using Extension Points
 
-You can use extension points to add custom actions to the list report and the object page.
+You can use extension points to add custom actions to the list report page and the object page.
 
 
 
 ## Context
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
 You can define custom actions for:
 
--   List reports \(global action\)
+-   List report page \(global action\)
 
-    For global actions, you do not have to select a line in the list report table. This type of action refers to the whole list report, for example, *Display Log*. Global actions are placed in the list report filter bar next to the *Share* button.
+    For global actions, you do not have to select a line in the list report page table. This type of action refers to the whole list report page, for example, *Display Log*. Global actions are placed in the list report page filter bar next to the *Share* button.
 
--   Table toolbar of the list report
+-   Table toolbar of the list report page
 -   Header of the object page
 -   Table toolbar for a specific table on the object page
 -   Form in a section on the object page
@@ -196,7 +196,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
 
 ## Results
 
--   Table toolbar action for the list report
+-   Table toolbar action for the list report page
 
     > ### Sample Code:  
     > ```xml
@@ -308,7 +308,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     > 
     > ```
 
--   List report \(global action\)
+-   List report page \(global action\)
 
     > ### Sample Code:  
     > ```xml

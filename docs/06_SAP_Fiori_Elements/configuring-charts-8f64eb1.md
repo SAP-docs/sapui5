@@ -6,6 +6,11 @@ You can configure the measures and dimensions displayed in charts by setting the
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Charts on the Overview Page](configuring-charts-on-the-overview-page-c7c5a82.md).
+
+
+
 You can use the same annotation file with different qualifiers to present charts with different chart views. To do this, specify different qualifiers in the annotation file for each card. The following sections of the annotation file apply to all chart types:
 
 
@@ -553,7 +558,7 @@ You can make data labels visible in analytical cards. To do this, set the `showD
 > 
 > "sap.ovp": {
 >       "globalFilterModel": "salesOrder",
->       "globalFilterEntityType": "GlobalFilters",
+>       "globalFilterEntitySet": "GlobalFilters",
 >       "chartSettings": {
 >         "showDataLabel":true
 >       },

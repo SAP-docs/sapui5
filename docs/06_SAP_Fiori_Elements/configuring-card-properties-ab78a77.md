@@ -6,6 +6,11 @@ This section provides the configuration items relevant for all overview page car
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Card Properties](configuring-card-properties-53b0791.md).
+
+
+
 All cards inherit the generic capabilities that are shared across all cards, such as a card header, card footer, navigation support, and more. The following card properties are mandatory for all cards:
 
 -   `model`: Name of the model to provide to the card instance

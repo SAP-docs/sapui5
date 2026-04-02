@@ -2,13 +2,13 @@
 
 # Feature Showcase Apps and Samples
 
-We've put together some sample apps to demonstrate and document a broad variety of features of SAP Fiori elements for OData V4. Learn how to implement them and test them yourself!
+See some sample apps we put together to demonstrate and document a broad variety of features of SAP Fiori elements for OData V4. Learn how to implement them and test them yourself!
 
 
 
 Whether you're a newbie or an experienced developer who just wants to look up how a certain feature is implemented – we'll help you get started.
 
-We've created the following SAP Fiori elements for OData V4 feature showcase apps:
+We've created the following feature showcase apps:
 
 -   [Feature showcase based on CAP](https://github.com/SAP-samples/fiori-elements-feature-showcase#readme)
 -   [Feature showcase based on RAP](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase#readme)
@@ -21,9 +21,4 @@ We've created the following sample apps:
 
 
 For more information and live examples, see the SAP Fiori development portal at [Introduction - Using the SAP Fiori Development Portal](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/introduction/portal).
-
-
-
-> ### Note:  
-> For information aboutSAP Fiori elements for OData V2, see [Feature Showcase Apps and Samples](feature-showcase-apps-and-samples-ebe44ec.md).
 

@@ -1469,7 +1469,7 @@ List report and object page have the following new and enhanced features:
 
 -   You can use extension points to adapt the text of the *Delete* dialog box that is displayed when you delete list report items, the entire object page content, or an item from a table on an object page. For more information, see
 
-    -   [Adapting Texts in the Delete Dialog Using Extensions \(List Report\)](../06_SAP_Fiori_Elements/adapting-texts-in-the-delete-dialog-using-extensions-list-report-25885b6.md)
+    -   [Adapting Texts in the Delete Dialog Using Extensions \(List Report Page\)](../06_SAP_Fiori_Elements/adapting-texts-in-the-delete-dialog-using-extensions-list-report-page-25885b6.md)
 
     -   [Adapting Texts in the Delete Dialog \(Object Page Header\)](../06_SAP_Fiori_Elements/adapting-texts-in-the-delete-dialog-object-page-header-1fd8e52.md)
 
@@ -1679,6 +1679,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

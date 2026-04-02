@@ -675,9 +675,9 @@ SAP Fiori Elements
 
 **SAP Fiori Elements**
 
--   SAP Fiori Elements has enhanced the initial no data text for charts in analytical list page floorplans, and users can now configure them. For more information, see [Maintaining Standard Texts for Charts](../06_SAP_Fiori_Elements/maintaining-standard-texts-for-charts-37cd601.md).
+-   SAP Fiori Elements has enhanced the initial no data text for charts in analytical list page floorplans, and users can now configure them.
 
--   SAP Fiori Elements now provides an option to choose fields to be displayed based on the device type and the importance of the field. For example, applications can be set to show only fields of high importance when viewed on small screens. For more information, see [Displaying Fields in Smartforms on Small Devices](../06_SAP_Fiori_Elements/displaying-fields-in-smartforms-on-small-devices-0096cd2.md).
+-   SAP Fiori Elements now provides an option to choose fields to be displayed based on the device type and the importance of the field. For example, applications can be set to show only fields of high importance when viewed on small screens. For more information, see [Displaying Fields in Smartforms on Small-Screen Devices](../06_SAP_Fiori_Elements/displaying-fields-in-smartforms-on-small-screen-devices-0096cd2.md).
 
 -   Object page tables and chart variants can now be enabled through a manifest setting. For more information, see [Enabling Variant Management on the Object Page](../06_SAP_Fiori_Elements/enabling-variant-management-on-the-object-page-f26d42b.md).
 
@@ -706,6 +706,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

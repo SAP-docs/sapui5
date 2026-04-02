@@ -2,7 +2,7 @@
 
 # Setting Up the Object Page Header
 
-You have various options for defining the object page header.
+You can configure the object page header in different ways.
 
 The object page supports the dynamic header. See also [Object Page Header](../10_More_About_Controls/object-page-header-6e340c1.md).
 
@@ -14,7 +14,7 @@ The object page header display is determined by the following vocabularies:
 
 -   `com.sap.vocabularies.UI.v1.HeaderInfo/ImageUrl` determines the image.
 
--   `com.sap.vocabularies.UI.v1.HeaderInfo/TypeName` is used as the text for the link that navigates back to the list report.
+-   `com.sap.vocabularies.UI.v1.HeaderInfo/TypeName` is used as the text for the link that navigates back to the list report page.
 
 -   `com.sap.vocabularies.UI.v1.HeaderInfo/TypeImageUrl` determines the icon.
 
@@ -61,7 +61,7 @@ Title \(Object Type\)
 </td>
 <td valign="top">
 
-Image of the object instance
+Image of the object instance \(avatar\)
 
 </td>
 </tr>
@@ -174,7 +174,13 @@ This sample code is a selectable version of the code shown above for setting up 
 
 
 
-For information on display options for a object, see [Using Images, Initials, and Icons](using-images-initials-and-icons-5760b63.md).
+## Avatar
+
+The avatar displayed for the object in the header is determined based on the following logic, depending on the presence of the `HeaderInfo.ImageUrl` or `HeaderInfo.Initials` annotations:
+
+![](images/Avatar_e9e8ed2.jpg)
+
+For more information about displaying avatars, see [Using Images and Icons](using-images-and-icons-5760b63.md).
 
 
 

@@ -6,11 +6,11 @@ You can modify startup parameters using an extension method.
 
 You can use the extension method `modifyStartupExtension` to do the following:
 
--   Modify selection variants: You can modify the filter context while navigating from the SAP Fiori launchpad or from another application to the list report, the overview page, or the analytical list page.
+-   Modify selection variants: You can modify the filter context while navigating from the SAP Fiori launchpad or from another application to the list report page, the overview page, or the analytical list page.
 
-    -   List report
+    -   List report page
 
-        A source app may provide parameters which need to be modified so that they can be applied to the SmartFilterBar in the target app. For example, the source app provides the parameters `FiscalYear` and `FiscalPeriod`, but the target app only understands the `FiscalYearPeriod` parameter. This means that the two source app parameters need to be combined into one parameter, `FiscalYearPeriod`, in the target app before the parameters can be applied to the SmartFilterBar.
+        A source app may provide parameters which need to be modified so that they can be applied to the `SmartFilterBar` in the target app. For example, the source app provides the parameters `FiscalYear` and `FiscalPeriod`, but the target app only understands the `FiscalYearPeriod` parameter. This means that the two source app parameters need to be combined into one parameter, `FiscalYearPeriod`, in the target app before the parameters can be applied to the `SmartFilterBar`.
 
         In some cases, parameters need to be added, deleted, or renamed.
 
@@ -30,25 +30,25 @@ You can use the extension method `modifyStartupExtension` to do the following:
         > ### Note:  
         > The analytical list page ensures that the `SelectionVariant` passed to the application through the extension is filled with the filter context that would otherwise be set to the filter bar. This filter context can have different values based on the scenario:
         > 
-        > -   External navigation to the analytical list page: The `SelectionVariant` will have the navigation context passed by the source application. It could have the `DisplayCurrency` value set in the SAP Fiori launchpad user default settings.
+        > -   External navigation to the analytical list page: The `SelectionVariant` will have the navigation context passed by the source application. It could have the `DisplayCurrency` value set in theSAP Fiori launchpad user default settings.
         > 
         > -   Navigation to the analytical list page through a SAP Fiori launchpad tile: If a default variant is maintained, the `SelectionVariant` has values from the default variant. If not, it has the values from the SAP Fiori launchpad user default values. If these values are also missing, the `SelectionVariant` has the CDS defaults that come from the `Common.FilterDefaultValue`.
 
 
--   Dynamically choose a particular tab when starting a list report with multiple views and multiple tables
+-   Dynamically choose a particular tab when starting a list report page with multiple views and multiple tables
 
-    This can be relevant, for example, when launching an app from the SAP Fiori launchpad or during external navigation to a list report with multiple views and multiple tables. For example, when navigating from an overview page, depending on the card clicked, a particular tab should be selected in the list report.
+    This can be relevant, for example, when launching an app from the SAP Fiori launchpad or during external navigation to a list report page with multiple views and multiple tables. For example, when navigating from an overview page, depending on the card clicked, a particular tab should be selected in the list report page.
 
 
 The object `oStartupObject` passed in this method has the following properties:
 
 -   `selectionVariant`: Contains the selection variant object that is passed from source app. You can modify this object in the target app.
 
--   `urlParameters`: Is used to decide which tab is to be loaded dynamically. The data in `urlParameters` is used only as a deciding factor for dynamically selecting a tab \(relevant for list report only\).
+-   `urlParameters`: Is used to decide which tab is to be loaded dynamically. The data in `urlParameters` is used only as a deciding factor for dynamically selecting a tab \(relevant for list report page only\).
 
     For example, if `urlParameters` contains the sales order status "paid", the system chooses the tab that contains the sales order status "paid" in the multiple views application.
 
--   `selectedQuickVariantSelectionKey`: Optional string that is the key provided while creating the tabs in the manifest. By setting this value, the default tab is set \(relevant for list report only\).
+-   `selectedQuickVariantSelectionKey`: Optional string that is the key provided while creating the tabs in the manifest. By setting this value, the default tab is set \(relevant for list report page only\).
 
 -   `semanticDates` contains the semantic date range fields. You can also modify this object in the target app.
 
@@ -64,9 +64,9 @@ The object `oStartupObject` passed in this method has the following properties:
 
 
 
-### List Report
+### List Report Page
 
-To pass the filter context during navigation or during the initial launch of app, overwrite the `modifyStartupExtension` extension method in the list report.
+To pass the filter context during navigation or during the initial launch of app, overwrite the `modifyStartupExtension` extension method in the list report page.
 
 > ### Sample Code:  
 > ```

@@ -2,9 +2,11 @@
 
 # Quick View Cards
 
-Quick view cards display detailed information about a single record, in greater depth than would be displayed in a table or list.
+You can configure and assign actions to the quick view cards
 
 
+
+Quick view cards display detailed information about a single record in greater depth than would be displayed in a table or list.
 
 The information displayed in quick view cards is configured in the `com.sap.vocabularies.UI.v1.HeaderInfo` and `com.sap.vocabularies.UI.v1.Facets` terms. The `com.sap.vocabularies.UI.v1.HeaderInfo` term is used to present the entity header information, and the `com.sap.vocabularies.UI.v1.Facets` term is used to present detailed information about the record. Quick view card supports the following properties:
 
@@ -44,6 +46,8 @@ Depending on the number of assigned actions, they are displayed in the footer as
 Each OData action is translated into a request according to the annotation. Clicking an action invokes the OData service request. Complex actions open a dialog box with the action parameters or a confirmation message.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "sap.ovp": {
 >     ...
@@ -69,6 +73,8 @@ Interaction buttons in the footer area are part of `sap.m.OverflowToolbar` so th
 > Cards can have different sizes because the height of each quick view card is aligned with the content of the card. If there is more content than can be shown in the card, you'll be able to scroll vertically, but only within the content area itself. The header and footers stay fixed.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "sap.ovp": {
 >     ...

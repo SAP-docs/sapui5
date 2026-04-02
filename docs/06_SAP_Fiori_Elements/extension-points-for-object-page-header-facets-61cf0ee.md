@@ -357,7 +357,7 @@ requestGroupId
 </td>
 <td valign="top">
 
-Enables the grouping of back-end requests retrieving the header facet data in different $batch groups according to their loading time. You should separate long runners from fast runners to optimize the overall user experience. For more information, refer to [Defining the Loading Behavior of Object Pages](defining-the-loading-behavior-of-object-pages-ac03570.md).
+Enables the grouping of back-end requests retrieving the header facet data in different $batch groups according to their loading time. You should separate long runners from fast runners to optimize the overall user experience. For more information, see [Defining the Loading Behavior of Object Pages](defining-the-loading-behavior-of-object-pages-ac03570.md).
 
 </td>
 </tr>
@@ -473,8 +473,6 @@ Custom header fields provide the following features:
 
 > ### Note:  
 > Custom fields are supported only as read-only. To have editable fields for the information provided through custom fields, you need to extend the "Edit Header Section".
-> 
-> For more information, refer to [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 
 ![](images/Custom_Header_Field_8c26693.png)
 

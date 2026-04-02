@@ -47,7 +47,7 @@ export default class HelloPanel extends Controller {
     onShowHello(): void {
         ...
     }
-   async onOpenDialog(): Promise<void> {
+    async onOpenDialog(): Promise<void> {
         ...
     }
     onCloseDialog(): void {

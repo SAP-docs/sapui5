@@ -2,7 +2,10 @@
 
 # Keyboard Shortcuts
 
-SAP Fiori elements provides keyboard shortcuts for basic operations.
+Learn about keyboard shortcuts for basic operations in SAP Fiori elements.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Keyboard Shortcuts](keyboard-shortcuts-0cd318c.md).
 
 The table shows the available keyboard shortcuts.
 
@@ -95,7 +98,7 @@ The focus is set on the table.
 </td>
 <td valign="top">
 
-List report
+List report page
 
 Object page
 
@@ -129,7 +132,7 @@ The focus is on the table.
 </td>
 <td valign="top">
 
-List report
+List report page
 
 </td>
 <td valign="top">
@@ -193,7 +196,7 @@ The focus is set on the table.
 </td>
 <td valign="top">
 
-List report
+List report page
 
 Object page
 
@@ -266,7 +269,7 @@ The focus is set on the table.
 
 Analytical list page
 
-List report
+List report page
 
 Object page
 
@@ -302,7 +305,7 @@ The focus is set anywhere on the SmartFilterBar.
 
 Analytical list page
 
-List report
+List report page
 
 Object page
 
@@ -434,7 +437,7 @@ The focus is on a table cell.
 
 Analytical list page
 
-List report
+List report page
 
 Object page
 
@@ -463,14 +466,14 @@ Share
 </td>
 <td valign="top">
 
-The focus is set anywhere on the list report or object page.
+The focus is set anywhere on the list report page or object page.
 
 </td>
 <td valign="top">
 
 Analytical list page
 
-List report
+List report page
 
 Object page
 
@@ -506,7 +509,7 @@ The focus is set on the table.
 
 Analytical list page
 
-List report
+List report page
 
 Object page
 
@@ -594,11 +597,11 @@ The prerequisite for the shortcut remains unchanged.
 > 
 > ```
 
-The object page follows the same concept as the list report. You must add the `logicalAction` property to the manifest.
+The object page follows the same concept as the list report page. You must add the `logicalAction` property to the manifest.
 
 Redirection of the following shortcuts is supported:
 
--   For List Report:
+-   For list report page:
 
     -   Create: [Ctrl\] + [Enter\] 
 
@@ -607,9 +610,9 @@ Redirection of the following shortcuts is supported:
     -   Delete: [Ctrl\] + [D\]  
 
 
--   For Object Page:
+-   For Object page:
 
-    -   For Header:
+    -   For header:
 
         -   Save: [Ctrl\] + [S\] 
 
@@ -618,7 +621,7 @@ Redirection of the following shortcuts is supported:
         -   Delete: [Ctrl\] + [Del\] 
 
 
-    -   For Sections:
+    -   For sections:
 
         -   Create: [Ctrl\] + [Enter\]  
 
@@ -635,7 +638,7 @@ Redirection of the following shortcuts is supported:
 
 You can define keyboard shortcuts for custom actions. The custom shortcuts are also displayed in the keyboard shortcuts popup window.
 
-The following sample code shows an example where the shortcut [Ctrl\] + [G\]  is defined for a custom action `ChangePriceCommand` in the list report:
+The following sample code shows an example where the shortcut [Ctrl+G\]  is defined for a custom action `ChangePriceCommand` on the list report page:
 
 > ### Sample Code:  
 > `manifest.json`

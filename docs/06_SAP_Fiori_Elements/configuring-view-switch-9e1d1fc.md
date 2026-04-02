@@ -7,6 +7,11 @@ Configuring this property lets you define a drop-down list to filter/view data a
 
 
 > ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring View Switch](configuring-view-switch-931f92d.md).
+
+
+
+> ### Note:  
 > You can extend this feature to react based on filter conditions or custom configuration. For more information, see [Custom View Switch](custom-view-switch-be7a236.md).
 
 You can define view switch with a single entity set or with multiple entity sets.

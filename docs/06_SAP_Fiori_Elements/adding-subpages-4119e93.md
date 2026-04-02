@@ -4,6 +4,9 @@
 
 You can add additional subpages based on the object page template to your app, and, if required, remove them again.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Navigation to Subpages](navigation-to-subpages-5d49e31.md).
+
 We recommend that you use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to add, remove, and configure pages with the Page Map tool.
 
 

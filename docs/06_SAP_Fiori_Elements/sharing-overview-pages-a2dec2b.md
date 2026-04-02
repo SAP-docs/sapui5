@@ -6,6 +6,11 @@ Share your application as a tile on the SAP Fiori launchpad or by sending an ema
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Sharing Overview Pages](sharing-overview-pages-f9d88b5.md).
+
+
+
 <a name="loioa2dec2b07a5246d4972e33ed36d8a196__section_epj_kss_dhc"/>
 
 ## SAP Fiori Launchpad

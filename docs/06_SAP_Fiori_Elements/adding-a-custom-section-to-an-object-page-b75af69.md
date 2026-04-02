@@ -4,7 +4,12 @@
 
 # Adding a Custom Section to an Object Page
 
-You can add custom sections to your object page, as described in this document.
+You can add custom sections to the object page.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding a Custom Section to an Object Page](adding-a-custom-section-to-an-object-page-a357047.md).
 
 
 
@@ -12,7 +17,7 @@ You can add custom sections to your object page, as described in this document.
 
 ## Adding a Custom Section to an Object Page Using SAP Fiori Tools
 
-Find out how to add a section to an object page using SAP Fiori tools.
+To add a section to an object page using SAP Fiori tools, follow these steps:
 
 1.  Launch the *Page Map*. You can launch the *Page Map* in several ways, for example by right-clicking the project folder and selecting *Show Page Map*. For more information, see [Define Application Structure](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/bae38e6216754a76896b926a3d6ac3a9.html).
 2.  Launch the *Page Editor* for your object page. Click the :pencil2: \(*Edit*\) icon next to *Object Page*.
@@ -55,6 +60,7 @@ In the editor of your choice, open the folder structure of the project where you
 
 > ### Sample Code:  
 > ```
+> 
 > <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 >   <VBox>
 >     <TextArea
@@ -96,69 +102,72 @@ In the following example, the custom section is placed after the `GeneralInforma
 > ```
 > 
 > "extends": {
->   "extensions": {
->     "sap.ui.viewExtensions": {
->       "sap.suite.ui.generic.template.ObjectPage.view.Details": {
->         "AfterFacet|SEPMRA_C_PD_Product|GeneralInformation": {
->           "className": "sap.ui.core.mvc.View",
->           "viewName": "ManageProducts.ext.view.DescriptionBreakout",
->           "type": "XML",
->           "sap.ui.generic.app": {
->             "title": "{{ProductDescription}}"
->           }
+>     "extensions": {
+>         "sap.ui.viewExtensions": {
+>             "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+>                 "AfterFacet|SEPMRA_C_PD_Product|GeneralInformation": {
+>                     "className": "sap.ui.core.mvc.View",
+>                     "viewName": "ManageProducts.ext.view.DescriptionBreakout",
+>                     "type": "XML",
+>                     "sap.ui.generic.app": {
+>                         "title": "{{ProductDescription}}"
+>                     }
+>                 }
+>             }
 >         }
->       }
 >     }
->   }
 > }
 > 	
 > ```
 
-To add multiple sections, the extension name needs to contain a key after the annotation name in the extension entry, for example,`"BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem|1"`, as well as a `key` object in `sap.ui.generic.app`.
+To add multiple sections, the extension name needs to contain a key after the annotation name in the extension entry, for example,`BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem|1`, as well as a `key` object in `sap.ui.generic.app`.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
+> 
 > "extends": {
->   "extensions": {
->     "sap.ui.viewExtensions": {
->       "sap.suite.ui.generic.template.ObjectPage.view.Details": {
->         "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
->           "className": "sap.ui.core.mvc.View",
->           "viewName": "ManageProducts.ext.view.BeforeFacetTest",
->           "type": "XML",
->           "sap.ui.generic.app": {
->             "title": "Facet Breakout before Product Text LineItem"
->           }
->         },
->         "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem|1": {
->           "className": "sap.ui.core.mvc.View",
->           "viewName": "ManageProducts.ext.view.BeforeFacetTestNew",
->           "type": "XML",
->           "sap.ui.generic.app": {
->             "title": "Facet Breakout before Product Text LineItem",
->             "key": "1"
->           }
->         },
->         "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification": {
->           "className": "sap.ui.core.mvc.View",
->           "viewName": "ManageProducts.ext.view.AfterFacetTest",
->           "type": "XML",
->           "sap.ui.generic.app": {
->             "title": "Facet Breakout after Supplier Identification"
->           }
->         },
->         "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification|1": {
->           "className": "sap.ui.core.mvc.View",
->           "viewName": "ManageProducts.ext.view.AfterFacetTest",
->           "type": "XML",
->           "sap.ui.generic.app": {
->             "title": "Facet Breakout after Supplier Identification",
->             "key": 1
->           }
+>     "extensions": {
+>         "sap.ui.viewExtensions": {
+>             "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+>                 "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
+>                     "className": "sap.ui.core.mvc.View",
+>                     "viewName": "ManageProducts.ext.view.BeforeFacetTest",
+>                     "type": "XML",
+>                     "sap.ui.generic.app": {
+>                         "title": "Facet Breakout before Product Text LineItem"
+>                     }
+>                 },
+>                 "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem|1": {
+>                     "className": "sap.ui.core.mvc.View",
+>                     "viewName": "ManageProducts.ext.view.BeforeFacetTestNew",
+>                     "type": "XML",
+>                     "sap.ui.generic.app": {
+>                         "title": "Facet Breakout before Product Text LineItem",
+>                         "key": "1"
+>                     }
+>                 },
+>                 "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification": {
+>                     "className": "sap.ui.core.mvc.View",
+>                     "viewName": "ManageProducts.ext.view.AfterFacetTest",
+>                     "type": "XML",
+>                     "sap.ui.generic.app": {
+>                         "title": "Facet Breakout after Supplier Identification"
+>                     }
+>                 },
+>                 "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification|1": {
+>                     "className": "sap.ui.core.mvc.View",
+>                     "viewName": "ManageProducts.ext.view.AfterFacetTest",
+>                     "type": "XML",
+>                     "sap.ui.generic.app": {
+>                         "title": "Facet Breakout after Supplier Identification",
+>                         "key": 1
+>                     }
+>                 }
+>             }
 >         }
->       }
 >     }
->   }
 > }
 > 
 > ```
@@ -188,10 +197,11 @@ Define the same event in the controller and call the `setAsTitleOwner` extension
 
 > ### Sample Code:  
 > ```
+> 
 > SalesPriceInitialise: function(oEvent) {
-> 	var oSmartTable = oEvent.getSource();
-> 	var oExtensionAPI = extensionAPI.getExtensionAPI(oSmartTable);
-> 	oExtensionAPI.setAsTitleOwner(oSmartTable);
+>     var oSmartTable = oEvent.getSource();
+>     var oExtensionAPI = extensionAPI.getExtensionAPI(oSmartTable);
+>     oExtensionAPI.setAsTitleOwner(oSmartTable);
 > }
 > ```
 

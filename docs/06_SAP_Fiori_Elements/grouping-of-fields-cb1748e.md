@@ -2,7 +2,7 @@
 
 # Grouping of Fields
 
-Application developers can group fields that should be shown together, such as various address fields \(street name, house number, and postal code\).
+You can group fields that should be shown together, such as various address fields \(street name, house number, and postal code\).
 
 The grouping can be done in several ways, depending on the use case.
 
@@ -361,140 +361,6 @@ This displays a `DataField` and a dummy button, as shown in the following screen
 
 Semantically connected fields are displayed side by side to reflect their data relation. Fields can be displayed under a single display name but can be edited separately. If all the semantically connected fields are hidden, the display name is hidden as well. You can use the `UI.ConnectedFields` annotation to display two or more fields side by side.
 
-For more information about semantically connected fields in OData V2, see the [Semantically Connected Fields](grouping-of-fields-cb1748e.md#loiocb1748ea9b984251addc03718d98df35__semanticfieldsv2) subsection in this topic.
-
-For more information about semantically connected fields in OData V4, see the [Semantically Connected Fields](grouping-of-fields-cb1748e.md#loiocb1748ea9b984251addc03718d98df35__semanticfieldsv4) subsection in this topic.
-
-> ### Example:  
-> You can maintain date and time as two properties in the back end and show this information in a single form. You can use a delimiter to separate the two values.
-
-![](images/Semantically_Connected_Fields_eb0b024.png)
-
-> ### Note:  
-> The `UI.FieldGroup` annotation is not supported in grid tables, tree tables, and analytical tables.
-
-
-
-<a name="loiocb1748ea9b984251addc03718d98df35__section_hmt_lb2_4tb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Table Implementation
-
-> ### Note:  
-> You can't use a table implementation if you need to display a label alongside each field value.
-
-
-
-### Semantically Connected Fields
-
-> ### Sample Code:  
-> Annotation for a Connected Field
-> 
-> ```
-> <Annotation Term="com.sap.vocabularies.UI.v1.ConnectedFields" Qualifier="ConnectedDateTime">
->     <Record >
->         <PropertyValue Property="Data">
->             <Record >
->                 <PropertyValue Property="SalesOrderDate">
->                     <Record Type="com.sap.vocabularies.UI.v1.DataField">
->                         <PropertyValue Property="Value" Path="SalesOrderDate"/>
->                     </Record>
->                 </PropertyValue>
->                 <PropertyValue Property="SalesOrderTime">
->                     <Record Type="com.sap.vocabularies.UI.v1.DataField">
->                         <PropertyValue Property="Value" Path="TrialTOD"/>
->                     </Record>
->                 </PropertyValue>
->             </Record>
->         </PropertyValue>
->         <PropertyValue Property="Label" String="Connected DateTime"/>
->         <PropertyValue Property="Template" String="{SalesOrderDate} / {SalesOrderTime}"/>
->     </Record>
-> </Annotation>
->  
-> <Annotation Term="com.sap.vocabularies.UI.v1.ConnectedFields" Qualifier="ConnectedData">
->     <Record >
->         <PropertyValue Property="Data">
->             <Record >
->                 <PropertyValue Property="PurchaseOrderByCustomer">
->                     <Record Type="com.sap.vocabularies.UI.v1.DataField">
->                         <PropertyValue Property="Value" Path="PurchaseOrderByCustomer"/>
->                     </Record>
->                 </PropertyValue>
->                 <PropertyValue Property="ShippingCondition">
->                     <Record Type="com.sap.vocabularies.UI.v1.DataField">
->                         <PropertyValue Property="Value" Path="ShippingCondition"/>
->                     </Record>
->                 </PropertyValue>
->             </Record>
->         </PropertyValue>
->         <PropertyValue Property="Label" String="Connected Data"/>
->         <PropertyValue Property="Template" String="{ShippingCondition} - {PurchaseOrderByCustomer}"/>
->     </Record>
-> </Annotation>
->  
-> .....
-> <Annotation Term="com.sap.vocabularies.UI.v1.FieldGroup" Qualifier="OrderData">
->     <Record >
->         <PropertyValue Property="Data">
->             <Collection>
->                 <Record Type="com.sap.vocabularies.UI.v1.DataFieldForAnnotation">
->                     <PropertyValue Property="Target" AnnotationPath="@UI.ConnectedFields#ConnectedDateTime"/>
->                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->                 </Record>
->                 <Record Type="com.sap.vocabularies.UI.v1.DataFieldForAnnotation">
->                     <PropertyValue Property="Target" AnnotationPath="@UI.ConnectedFields#ConnectedData"/>
->                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->                 </Record>
->             </Collection>
->         </PropertyValue>
->     </Record>
-> </Annotation>
-> ```
-
-
-
-<a name="loiocb1748ea9b984251addc03718d98df35__section_fc5_rb2_4tb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Showing Field Labels in a Field Group inside a Table
-
-You can show the labels of fields inside the table columns when you show a `UI.FieldGroup`. To enable the display of a field label, you can use the `showDataFieldsLabel` setting in the manifest as shown in the following sample code:
-
-> ### Sample Code:  
-> ```
-> "controlConfiguration": {
->    "@com.sap.vocabularies.UI.v1.LineItem": {
->       columns: {
->          "DataFieldForAnnotation::FieldGroup::myFieldGroup": {
->             "showDataFieldsLabel": true
->          }
->       }
->    }
-> }
-> ```
-
-You can see what the result looks like in the following screenshot:
-
-  
-  
-**FieldGroup Column "Sold-To Party" with Field Labels**
-
-![](images/FieldGroup_Column_Sold-To_Party_with_Field_Labels_81e38b2.png "FieldGroup Column "Sold-To Party" with Field
-                        Labels")
-
-For more information about how to find the right key for a column, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
-
-
-
-### Semantically Connected Fields
-
 > ### Sample Code:  
 > XML Annotation
 > 
@@ -605,6 +471,14 @@ For more information about how to find the right key for a column, see [Finding 
 > ### Restriction:  
 > Connected fields can only be configured in sections that belong to a form, so connected fields cannot be configured in a header section.
 
+> ### Example:  
+> You can maintain date and time as two properties in the back end and show this information in a single form. You can use a delimiter to separate the two values.
+
+![](images/Semantically_Connected_Fields_eb0b024.png)
+
+> ### Note:  
+> The `UI.FieldGroup` annotation is not supported in grid tables, tree tables, and analytical tables.
+
 
 
 ### Navigation with Semantically Connected Fields
@@ -622,7 +496,38 @@ For more information about how to configure navigation using fields, see [Naviga
 
 
 
-### Merging the `TextArea` Label with the Section or Subsection Title
+<a name="loiocb1748ea9b984251addc03718d98df35__section_fc5_rb2_4tb"/>
+
+## Showing Field Labels in a Field Group inside a Table
+
+You can show the labels of fields inside the table columns when you show a `UI.FieldGroup`. To enable the display of a field label, you can use the `showDataFieldsLabel` setting in the manifest as shown in the following sample code:
+
+> ### Sample Code:  
+> ```
+> "controlConfiguration": {
+>    "@com.sap.vocabularies.UI.v1.LineItem": {
+>       columns: {
+>          "DataFieldForAnnotation::FieldGroup::myFieldGroup": {
+>             "showDataFieldsLabel": true
+>          }
+>       }
+>    }
+> }
+> ```
+
+You can see what the result looks like in the following screenshot:
+
+  
+  
+**FieldGroup Column "Sold-To Party" with Field Labels**
+
+![](images/FieldGroup_Column_Sold-To_Party_with_Field_Labels_81e38b2.png "FieldGroup Column "Sold-To Party" with Field Labels")
+
+For more information about how to find the right key for a column, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
+
+
+
+## Merging the `TextArea` Label with the Section or Subsection Title
 
 By default, the `TextArea` label is always displayed. However, if `UI.FieldGroup` has only one `UI.MultiLineText`-based property and no other controls, the label of the corresponding `TextArea` control can be hidden. To do this, in the `manifest.json` file, set `useSingleTextAreaFieldAsNotes` to `true`.
 
@@ -660,7 +565,7 @@ When this setting is enabled, only the section or subsection title is displayed.
 
 
 
-### Grouping Checkboxes
+## Grouping Checkboxes
 
 You can group one or more checkboxes together under a shared label in the `UI.FieldGroup` section of the object page.
 
@@ -845,8 +750,95 @@ You can align the boxes horizontally by adding the horizontal layout setting to 
 > 
 > ```
 
-> ### Note:  
-> Configuring a mandatory checkbox group that requires users to select at least one checkbox is not supported. Use the `MultiComboBox` property instead. For more information, see [Value Help as a Dropdown List](https://sapui5untested.int.sap.eu2.hana.ondemand.com/#/topic/2a0a630e50c7472b803fb94dab922d18).
+You can configure a checkbox group that requires users to select at least one or more checkboxes, as shown in the following screenshot:
+
+  
+  
+**Checkbox Group Required**
+
+![](images/Checkbox_Group_Required_bd57a1d.png "Checkbox Group Required")
+
+You can do so by setting the `UI.FieldGroup` to `Mandatory` in the `@Common.FieldControl` annotation, as shown in the following sample code:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotation Term="UI.FieldGroup" Qualifier="CheckBoxGroup5">
+>     <Record Type="UI.FieldGroupType">
+>         <PropertyValue Property="Label" String="CheckBoxGroup Required"/>
+>         <PropertyValue Property="Data">
+>             <Collection>
+>                 <Record Type="UI.DataField">
+>                     <PropertyValue Property="Value" Path="Boolean13"/>
+>                     <PropertyValue Property="Label" String="One"/>
+>                 </Record>
+>                 <Record Type="UI.DataField">
+>                     <PropertyValue Property="Value" Path="Boolean14"/>
+>                     <PropertyValue Property="Label" String="Two"/>
+>                 </Record>
+>                 <Record Type="UI.DataField">
+>                     <PropertyValue Property="Value" Path="Boolean15"/>
+>                     <PropertyValue Property="Label" String="Three"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>         <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+>     </Record>
+> </Annotation>
+> ```
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> FieldGroup #CheckBoxGroup5    : {
+>     $Type               : 'UI.FieldGroupType',
+>     Label               : 'CheckBoxGroup Required',
+>     Data                : [
+>         {
+>             $Type: 'UI.DataField',
+>             Value: Boolean13,
+>             Label: 'One'
+>         },
+>         {
+>             $Type: 'UI.DataField',
+>             Value: Boolean14,
+>             Label: 'Two'
+>         },
+>         {
+>             $Type: 'UI.DataField',
+>             Value: Boolean15,
+>             Label: 'Three',
+>         }
+>     ],
+>     @Common.FieldControl: #Mandatory
+> },
+> ```
+
+The select logic must be implemented in the back end. An error must be displayed where the Boolean values contained in the `CheckBoxGroup` are set as the values for the `target` and `@Common.additionalTargets` properties, as shown in the following sample code:
+
+> ### Sample Code:  
+> JSON
+> 
+> ```
+> error: {
+>     code: "400",
+>     message: "Select at least two options",
+>     target: "Boolean13",
+>     "@Common.additionalTargets": ["Boolean14", "Boolean15"]
+> }
+> ```
 
 
 

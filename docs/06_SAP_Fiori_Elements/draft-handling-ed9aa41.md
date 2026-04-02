@@ -2,7 +2,9 @@
 
 # Draft Handling
 
-A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements supports the creation of apps using draft handling.
+You can configure how your SAP Fiori elements app handles drafts.
+
+A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements supports the creation of apps that use draft handling.
 
 Drafts are used as follows:
 
@@ -16,6 +18,32 @@ Drafts are used as follows:
 When a user starts creating a new business entity or edits an existing one, a draft is created in the background. This enables field validation and dynamic field control \(showing additional fields based on user interaction\) and provides default values for fields based on recent data entry. A draft can be validated for consistency and completeness at any time. This returns a list of messages.
 
 While the user is modifying a business entity, an indicator shows when a draft is saved implicitly. The user still needs to choose *Save* to incorporate the changes into an active business document.
+
+There are two kinds of drafts :
+
+-   Exclusive draft: only one user can create the draft for the business entity. Other users cannot see the changes before the user saves the draft.
+
+-   Collaborative draft: all users who have access to a business object can access the draft and change the business entity.
+
+
+Drafts are saved automatically in the background whenever users add or change information within a business entity while it's in edit mode.
+
+You can use a keyboard shortcut to execute a `PreparationAction` or global side effects in the draft mode.
+
+
+
+<a name="loioed9aa41c563a44b18701529c8327db4d__section_oll_ghj_gvb"/>
+
+## Preparing the Draft for Activation by Pressing [Enter\]
+
+On a draft version of a document, if you press [Enter\] on input fields, one of the following actions is triggered:
+
+-   Global side effects \(`SideEffects` without `SourceProperties` and `SourceEntities`\) are executed if these side effects are defined in the entity related to the field, that is, the page entity in a form or the table entity in a cell.
+
+-   If a `PreparationAction` is defined in the `DraftRoot` entity and the message is annotated, that `PreparationAction` is triggered and the messages are requested.
+
+
+For more information, see [Using Global Side Effects](using-global-side-effects-955ae31.md) and our live example in the SAP Fiori development portal at [Global Patterns - Draft Validation](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/draftValidation).
 
 
 
@@ -61,6 +89,15 @@ The object page displays the *Validate* button to execute the `PreparationAction
 
 
 
+## Filtering Draft-Related Data
+
+Filtering draft-related data is enabled by default. The available filters are *Draft Created By*, *Draft Created On*, *Draft Last Changed By*, and *Draft Last Changed On*. Semantic operators are used by default for the time-related filters, displaying only past values.
+
+> ### Note:  
+> This feature is not available with a CAP service.
+
+
+
 <a name="loioed9aa41c563a44b18701529c8327db4d__section_qvv_ts2_pmb"/>
 
 ## Handling Inconsistent Input
@@ -74,96 +111,7 @@ This system behavior is also valid when using the *Apply* button. When choosing 
 
 
 
-<a name="loioed9aa41c563a44b18701529c8327db4d__section_eq2_h5q_j5b"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-Drafts are saved automatically in the background after an interval of 20 seconds whenever users add or change information within a business entity while it's in edit mode. However, if the user has modified a field on the UI that has a side effect annotation, then the draft is saved immediately after the user moves out of the virtual field group of the corresponding side effect. The draft is also saved immediately when the user executes an action. In this case, the pending changes in the draft are also saved immediately.
-
-You can turn off the feature to delay draft merges in `manifest.json` in exceptional cases using the following sample code:
-
-> ### Sample Code:  
-> Settings in `manifest.json`
-> 
-> ```
-> "sap.ui.generic.app": {
->     "settings": {
->         "draftSettings": {
->             "dataSaveFrequency": "immediate"
->         }
->     }
-> }
-> 
-> ```
-
-You can use keyboard shortcuts for common tasks.
-
-When a user toggles away from the draft version, any pending changes are automatically saved and are visible in the active version.
-
-
-
-### Switching Between the Draft and Saved Version
-
-Users can switch between the draft and saved version using a toggle button in applications that have the static or classic header.
-
-  
-  
-**Static/Classic Header**
-
-![](images/Static_or_Classic_Header_-_Draft_Handling_17f784f.png "Static/Classic Header")
-
-
-
-### Preparing the Draft for Activation by Pressing [Enter\]
-
-On a draft version of a document, if you press [Enter\] on input fields, by default the draft validation \(`PreparationAction` available on the `DraftRoot`\) is triggered. The `PreparationAction` performs a validation in the back end for the draft values and sends back validation messages if they're available. The pending changes on the draft, if any, are also saved before validating the draft instance.
-
-The `PreparationAction` that is defined within the `DraftRoot` is called, even if you've pressed [Enter\] in the fields of the object page table, or in the subobject pages.
-
-The side effects, if configured, are also triggered upon pressing [Enter\]. The `PreparationAction` call is skipped if you've annotated `TriggerAction` in the global side effects under the corresponding entity. In this case, `TriggerAction` is called instead of `PreparationAction`. However, in case of side effects annotated with source properties and `TriggerAction`, `PreparationAction` call is not impacted. For more information, see [Using Global Side Effects](using-global-side-effects-955ae31.md).
-
-
-
-<a name="loioed9aa41c563a44b18701529c8327db4d__section_oll_ghj_gvb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-There are two kinds of drafts in SAP Fiori elements for OData V4:
-
--   Exclusive draft: only one user can create the draft for the business entity. Other users cannot see the changes before the user saves the draft.
-
--   Collaborative draft: all users who have access to a business object can access the draft and change the business entity.
-
-
-Drafts are saved automatically in the background whenever users add or change information within a business entity while it's in edit mode.
-
-You can use a keyboard shortcut to execute a `PreparationAction` or global side effects in the draft mode.
-
-
-
-### Preparing the Draft for Activation by Pressing [Enter\]
-
-On a draft version of a document, if you press [Enter\] on input fields, one of the following actions is triggered:
-
--   Global side effects \(`SideEffects` without `SourceProperties` and `SourceEntities`\) are executed if these side effects are defined in the entity related to the field, that is, the page entity in a form or the table entity in a cell.
-
--   If a `PreparationAction` is defined in the `DraftRoot` entity and the message is annotated, that `PreparationAction` is triggered and the messages are requested.
-
-
-For more information, see [Using Global Side Effects](using-global-side-effects-955ae31.md) and our live example in the SAP Fiori development portal at [Global Patterns - Draft Validation](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/draftValidation).
-
-
-
-### Filtering Draft-Related Data
-
-Filtering draft-related data is enabled by default in SAP Fiori elements for OData V4. The available filters are *Draft Created By*, *Draft Created On*, *Draft Last Changed By*, and *Draft Last Changed On*. Semantic operators are used by default for the time-related filters, displaying only past values.
-
-> ### Note:  
-> This feature is not available with a CAP service.
-
-
-
-### Using the Collaborative Draft
+## Using the Collaborative Draft
 
 If the service supports the collaborative draft using a `ShareAction` annotation, all drafts are automatically shared with all users who have access to draft data of the business object. In this case, users can edit the entity as long as the draft exists. If the user isn't authorized to modify draft data of the business object, a warning is displayed, and the draft is opened in display mode.
 
@@ -191,7 +139,7 @@ When a user is added to the list, the draft appears in their *Own Draft* list.
 
 
 
-### Hiding Draft-Related Features
+## Hiding Draft-Related Features
 
 In applications that have only a limited number of editable fields, draft handling adds unnecessary overhead for users. For such applications, all features related to draft handling can be hidden from the UI while the draft functionality remains active in the background. To achieve this, enable the `hideDraft` property in the `manifest.json` file, as shown in the following sample code:
 
@@ -211,11 +159,11 @@ In applications that have only a limited number of editable fields, draft handli
 
 These applications work as follows:
 
--   List Report
+-   List report page
 
     The *Editing Status* filter field is hidden.
 
--   Object Page
+-   Object page
 
     -   In create mode, when a user attempts to navigate away without saving the object, the application does not display the standard confirmation popup for activating the draft. Instead, it only displays the *Save* and *Cancel* actions.
 
@@ -267,7 +215,7 @@ These applications work as follows:
 
 
 
-### Draft Handling with `editFlow`
+## Draft Handling with `editFlow`
 
 The `editFlow` API is the main controller extension for draft handling in SAP Fiori elements for OData V4. You can use it to do the following:
 
@@ -280,7 +228,7 @@ The `editFlow` API is the main controller extension for draft handling in SAP Fi
     For more information and live examples, see the SAP Fiori development portal at [Custom Page - Draft Handling](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/customEditFlow).
 
 
-For information about the `editFlow` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.EditFlow). 
+For information about the `editFlow` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.EditFlow).
 
 
 
@@ -294,9 +242,9 @@ For information about the `editFlow` API, see the [API Reference](https://ui5.sa
 
 [https://help.sap.com/docs/SAP\_NETWEAVER\_AS\_ABAP\_752/cc0c305d2fab47bd808adcad3ca7ee9d/d36820f082c84085b6634be4576e351a.html](https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/cc0c305d2fab47bd808adcad3ca7ee9d/d36820f082c84085b6634be4576e351a.html)
 
-[Confirmation Popups](confirmation-popups-9a53662.md "You can configure confirmation popups for various use cases in list reports and object pages.")
+[Confirmation Popups](confirmation-popups-9a53662.md "You can configure confirmation popups for various use cases on the list report page and the object page.")
 
-[Using Global Side Effects](using-global-side-effects-955ae31.md "Global side effects are those side effects that are defined without any source properties or source entities.")
+[Using Global Side Effects](using-global-side-effects-955ae31.md "You can configure global side effects.")
 
 [Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-fd3950a.md "You can toggle between draft and saved values.")
 

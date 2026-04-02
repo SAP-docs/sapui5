@@ -179,21 +179,9 @@ For more information, see [Configuring External Navigation](configuring-external
 
 
 
-<a name="loioe64efdad5bdf4264b54052bd7ab2229a__section_nk1_vft_knb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-You can change the form action button styles through UI adaptations.
-
-
-
 <a name="loioe64efdad5bdf4264b54052bd7ab2229a__section_f5r_zhf_knb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Adding Form Actions
+## Adding Form Actions
 
 In addition to the `UI.FieldGroup` definition given above, form actions can also be added with `UI.Identification` or `UI.StatusInfo`.
 
@@ -340,7 +328,7 @@ Here are some examples of the various possibilities through which a `UI.DataFiel
 
 
 
-### Placing Form Actions Inside the Form Toolbar
+## Placing Form Actions Inside the Form Toolbar
 
 You can also place action inside the form toolbar using the `inline` parameter.
 
@@ -420,7 +408,7 @@ When you set `inline=true`, a given action from a `FieldGroup` shows up directly
 
 
 
-### Visibility and Enablement of the Action Button
+## Visibility and Enablement of the Action Button
 
 The visibility of the action button is mainly controlled by the `UI.Hidden` annotation for the action button. In addition, if the value of `OperationAvailable` is set to false \(that is, to a static false value\), then the button is not rendered.
 
@@ -435,7 +423,7 @@ The enablement of the button is controlled by the `OperationAvailable` annotatio
 
 
 
-### Passing Context when Invoking the Form Action
+## Passing Context when Invoking the Form Action
 
 If the form action is defined as a bound action, the entire context of the object page is passed to the action when the form action is triggered. If it is defined as an unbound action, then no context is passed.
 
@@ -443,7 +431,7 @@ For a `DataFieldForIntentBasedNavigation` button, the page context is passed if 
 
 
 
-### Emphasizing the Most Important 'Form' Action
+## Emphasizing the Most Important Form Action
 
 By default, all form action buttons are rendered with a transparent background. If you need to set a focus on the most important action, you can highlight it by using a 'ghost' styling.
 
@@ -525,7 +513,7 @@ You can highlight form actions maintained with the `DataFieldForAction` and `Dat
 
 
 
-### Triggering Actions Connected to a Field Value
+## Triggering Actions Connected to a Field Value
 
 You can trigger an action that is connected to a field value on a form. For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 

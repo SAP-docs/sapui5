@@ -2,7 +2,7 @@
 
 # Further Resources
 
-This section brings together curated resources for learning about SAP Fiori elements for OData V4.
+See a list of curated resources for learning about SAP Fiori elements for OData V4.
 
 -   Check out various learning resources in [SAP Fiori Elements Tutorials, Courses, and Blogs](sap-fiori-elements-tutorials-courses-and-blogs-7715a01.md).
 

@@ -5,6 +5,9 @@
 Custom models can be used if none of the models provided by SAPUI5 is suitable for the specific needs of an application.
 
 > ### Note:  
+> It is possible to create a custom model implementation for data sources that are not yet covered by the framework or are domain-specific. Keep in mind, however, that creating a custom model is highly complex and error-prone. We recommend using one of SAPUI5's predefined models whenever possible.
+
+> ### Note:  
 > The subclassing of standard models is not supported in SAPUI5.
 
 To instantiate a custom model, proceed as follows:

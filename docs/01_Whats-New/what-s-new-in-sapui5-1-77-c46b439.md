@@ -847,7 +847,7 @@ SAP Fiori Elements
 
 **SAP Fiori Elements**
 
--   Objects with less than 8 required fields can now be created quickly using a dialog on the list report page, without navigating to the object page. For more information, see [Enabling Object Creation Using the Dialog on the List Report](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-on-the-list-report-ceb9284.md).
+-   Objects with less than 8 required fields can now be created quickly using a dialog on the list report page, without navigating to the object page. For more information, see [Enabling Object Creation Using the Dialog on the List Report Page](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-on-the-list-report-page-ceb9284.md).
 
 -   You can enable an inline deletion option in tables of list report and object pages.
 
@@ -859,7 +859,7 @@ SAP Fiori Elements
 
 -   List reports now provide an option to enable date range filters in the smart filter bar. You can also configure filter range types. For more information, see [Enabling Semantic Operators in the Filter Bar](../06_SAP_Fiori_Elements/enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 
--   You can now customize application-specific texts when data is not returned for charts in list report and object pages. For more information, see [Maintaining Standard Texts for Charts](../06_SAP_Fiori_Elements/maintaining-standard-texts-for-charts-37cd601.md).
+-   You can now customize application-specific texts when data is not returned for charts in list report and object pages. .
 
 -   We have improved performance for delete actions, as both Delete and Get calls are grouped into a single batch call.
 
@@ -892,6 +892,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

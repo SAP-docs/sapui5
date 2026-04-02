@@ -2,7 +2,16 @@
 
 # Plain Text Facet in the Object Page Header
 
-You can add a plain text facet to the header area. This type of facet is suitable if you wish to add a single field or block of text with a title, such as a description.
+You can add a plain text facet to the object page header.
+
+> ### Note:  
+> This topic describes how to use the building block within SAP Fiori elements object pages. If the functionality isn't available when you use the building block in other floorplans, custom pages, or custom sections, you can try achieving the functionality through other means, such as the following:
+> 
+> -   Properties or methods exposed by the building block
+> 
+> -   Custom code using extensions
+
+The plain text facet is suitable if you wish to add a single field or block of text with a title, such as a description.
 
 A plain text facet shows the label property of the `UI.ReferenceFacet` as the title. It also shows the value property of the `DataField` complex type of the `FieldGroup` annotation as the description.
 

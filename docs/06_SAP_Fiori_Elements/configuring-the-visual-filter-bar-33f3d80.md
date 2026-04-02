@@ -2,18 +2,33 @@
 
 # Configuring the Visual Filter Bar
 
-The visual filter bar enables end users to select filter values based on measure values in addition to the filters and filter values already selected in the regular filter bar.
+You can enable and configure the visual filter bar on the analytical list page.
+
+> ### Note:  
+> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> 
+> -   Properties or methods exposed by the building block
+> 
+> -   Custom code using extensions
 
 
+
+The visual filter bar enables users to select filter values based on measure values in addition to the filters and filter values already selected in the regular filter bar.
 
 To make the visual filter bar visible, applications must define visual filters. The filter values applied for every field are always synchronized across the different filter bars.
 
-To define visual filters, application developers must define value list annotations for the filter fields. For more information, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md).
+To define visual filters, you must define value list annotations for the filter fields. For more information, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md).
 
 > ### Note:  
 > -   Visual filters are only applicable for filter fields that accept single or multiple values, and not for range-based fields.
 > 
 > -   Semantic dates are not supported.
+> 
+> -   This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> 
+>     -   Properties or methods exposed by the building block
+> 
+>     -   Custom code using extensions
 
 You must ensure that there's a manifest property for each visual filter that is to be rendered:
 
@@ -100,9 +115,9 @@ You can also define charts against a draft-enabled entity. In this case only act
 **Related Information**  
 
 
-[Analytical List Page](analytical-list-page-3d33684.md "The analytical list page (ALP) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content.")
+[Analytical List Page](analytical-list-page-3d33684.md "You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs (key performance indicators).")
 
-[Visual Filters](visual-filters-1714720.md "An intuitive way of choosing filter values from an associated measure value.")
+[Visual Filters](visual-filters-1714720.md "You can configure visual filters by enhancing the ValueList annotation associated with the filter field.")
 
-[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md "The value list annotation lets you map an entity to another entity that is associated with a different entity set. The value list annotation defines the relationship between filter fields of the main entity set and the fields in the value help entity set.")
+[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md "You can specify a value help entity for a field and maintain the value help configuration with a ValueList annotation.")
 

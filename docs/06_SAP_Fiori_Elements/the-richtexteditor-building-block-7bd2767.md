@@ -2,7 +2,7 @@
 
 # The `RichTextEditor` Building Block
 
-Use the `RichTextEditor` building block to add a control that allows users to view a formatted text in display mode and edit it directly in edit mode.
+You can use the `RichTextEditor` building block to add a control that allows users to view a formatted text in display mode and edit it directly in edit mode.
 
 > ### Note:  
 > The `RichTextEditor` building block uses a SAPUI5 `sap.m.FormattedText` control in display mode. Some formatting, such as images, is not supported in display mode. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.FormattedText%23controlProperties).

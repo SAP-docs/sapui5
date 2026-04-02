@@ -2,7 +2,9 @@
 
 # Configuring the Content Area
 
-Visualize data from the main entity set and seamlessly navigate to an application. Define a valid `UI.Chart` or `UI.LineItem` annotation to render content for the chart area and table area. For more information, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-c4ebbae.md).
+You can visualize data from the main entity set and seamlessly navigate to an application.
+
+Define a valid `UI.Chart` or `UI.LineItem` annotation to render content for the chart area and table area. For more information, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-c4ebbae.md).
 
 You can choose to view the main entity set data in the following view modes:
 
@@ -33,13 +35,13 @@ The dynamic page header is pinnable when the app has a responsive table in deskt
 **Related Information**  
 
 
-[Analytical List Page](analytical-list-page-ff056b4.md "The analytical list page (ALP) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content.")
+[Analytical List Page](analytical-list-page-ff056b4.md "You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs (key performance indicators).")
 
-[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md "In this mode, the data is displayed in the table format.")
+[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md "You can display data on the analytical list page in a table format.")
 
-[Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md "Uses a chart that provides visual representation of analytical data.")
+[Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md "You can display data on the analytical list page in a chart format.")
 
-[Hybrid View](hybrid-view-6615668.md "The hybrid view is the default data display mode in the ALP content area. It lets you view both analytical data (chart format) and transactional data (table format).")
+[Hybrid View](hybrid-view-6615668.md "You can view both analytical data (chart format) and transactional data (table format) using the hybrid view.")
 
-[Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-22e32b7.md "SAP Fiori elements allows you to specify a UI.SelectionPresentationVariant.")
+[Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-22e32b7.md "You can configure several settings of the main content area, such as sort order or filter values, with UI.SelectionPresentationVariant.")
 

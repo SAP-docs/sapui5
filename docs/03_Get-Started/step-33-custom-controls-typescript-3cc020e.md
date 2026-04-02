@@ -79,7 +79,7 @@ We could also do this with more HTML in the renderer, but this is the simplest w
 
 ## webapp/control/ProductRating.ts \(New\)
 
-Custom controls are small reuse components that can be created within the app very easily. Due to their nature, they are sometimes also referred to as "notepad" or "on the fly" controls. A custom control is a script object that has two special sections \(`metadata` and `renderer`\) and a number of methods that implement the functionality of the control.
+A custom control offers a reusable visual experience. It might be located directly inside your application or stored in a dedicated library. A custom control is a subclass of the base `Control` class written in JavaScript or TypeScript. To implement it, specify `sap/ui/core/Control` in the `extends` method call. You can also define special control-related properties, such as `metadata` and `renderer`, and methods that implement the control's functionality.
 
 We create a new folder `control` and a file `ProductRating.ts` that will hold our new control.
 

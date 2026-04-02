@@ -2,9 +2,12 @@
 
 # Defining and Adapting Sections
 
-The object page content is arranged into sections and subsections that you can configure.
+You can define sections and subsections of the object page with `com.sap.vocabularies.UI.v1.Facets` annotations.
 
-You can use the `com.sap.vocabularies.UI.v1.Facets` annotations to build sections. Different facets have been defined to display important information in the content area sections.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md).
+
+Different facets have been defined to display important information in the content area sections.
 
 
 
@@ -22,7 +25,8 @@ In the figure below, the collection facet for *General Information* combines two
   
 **Object Page: CollectionFacet**
 
-![](images/Object_Page_Collection_Facet_a7f074e.png "Object Page: CollectionFacet")
+![](images/Object_Page_Collection_Facet_a7f074e.png "Object Page:
+						CollectionFacet")
 
 > ### Note:  
 > -   `UI.CollectionFacets` at third level and beyond are not considered.
@@ -35,12 +39,14 @@ Furthermore, reference facets can refer to identification sections, the field gr
   
 **Object Page: ReferenceFacet**
 
-![](images/Object_Page_Reference_Facet_9fa2aec.png "Object Page: ReferenceFacet")
+![](images/Object_Page_Reference_Facet_9fa2aec.png "Object Page:
+						ReferenceFacet")
 
 > ### Sample Code:  
 > XML Annotation
 > 
 > ```xml
+> 
 > <Annotation Term="UI.Facets">
 >     <Collection>
 >         <Record Type="UI.ReferenceFacet">
@@ -65,23 +71,24 @@ Furthermore, reference facets can refer to identification sections, the field gr
 > ABAP CDS Annotation
 > 
 > ```
+> 
 > @UI.Facet: [
->   {
->     label: '{@i18n>@GeneralInfoFacetLabel}',
->     targetQualifier: 'GeneralInformation',
->     type: #FIELDGROUP_REFERENCE,
->     purpose: #STANDARD
->   },
->   {
->     id: 'FurtherData',
->     label: '{@i18n>@FurtherData}',
->     type: #COLLECTION,
->     purpose: #STANDARD
->   },
->   {
->     parentId: 'FurtherData',
->     purpose: #STANDARD
->   }
+>     {
+>         label: '{@i18n>@GeneralInfoFacetLabel}',
+>         targetQualifier: 'GeneralInformation',
+>         type: #FIELDGROUP_REFERENCE,
+>         purpose: #STANDARD
+>     },
+>     {
+>         id: 'FurtherData',
+>         label: '{@i18n>@FurtherData}',
+>         type: #COLLECTION,
+>         purpose: #STANDARD
+>     },
+>     {
+>         parentId: 'FurtherData',
+>         purpose: #STANDARD
+>     }
 > ]
 > product;
 > 
@@ -91,6 +98,7 @@ Furthermore, reference facets can refer to identification sections, the field gr
 > CAP CDS Annotation
 > 
 > ```
+> 
 > UI.Facets : [
 >     {
 >         $Type : 'UI.ReferenceFacet',
@@ -116,6 +124,7 @@ You can hide and display sections based on properties.
 > XML Annotation
 > 
 > ```xml
+> 
 > <Record Type="UI.ReferenceFacet">
 >    <Annotation Term="UI.Hidden" Path="IsActiveEntity"/>
 >    <PropertyValue Property="Label" String="{@i18n>@SalesData}" />
@@ -128,13 +137,14 @@ You can hide and display sections based on properties.
 > ABAP CDS Annotation
 > 
 > ```
+> 
 > @UI.facet: [
->  {
->   label: '{@i18n>@SalesData}',
->   type:         #DATAPOINT_REFERENCE,
->   targetElement: '_PRODUCTSALESDATA',
->   purpose: #STANDARD
->  }
+>     {
+>         label: '{@i18n>@SalesData}',
+>         type: #DATAPOINT_REFERENCE,
+>         targetElement: '_PRODUCTSALESDATA',
+>         purpose: #STANDARD
+>     }
 > ]
 > product;
 > ```
@@ -143,6 +153,7 @@ You can hide and display sections based on properties.
 > CAP CDS Annotation
 > 
 > ```
+> 
 > UI.Facets : {
 >     $Type : 'UI.ReferenceFacet',
 >     Label : '{@i18n>@SalesData}',
@@ -152,7 +163,7 @@ You can hide and display sections based on properties.
 > ```
 
 > ### Tip:  
-> -   You must not use a comma \(,\) in a section or subsection title, as commas serve as delimiters in SAP Fiori elements. A comma is used while grouping backend messages for a field within the section or subsection.
+> -   You must not use a comma \(,\) in a section or subsection title, as commas serve as delimiters in SAP Fiori elements. A comma is used while grouping back-end messages for a field within the section or subsection.
 > 
 > -   If the object page uses an icon tab bar for sections, then the section title isn't displayed in the content area. If the object page uses an anchor bar for sections, then only the title of the first section is hidden in the content area.
 > 
@@ -169,7 +180,8 @@ In the figure below, the collection facet for *Product Information* combines thr
   
 **Object Page: CollectionFacet**
 
-![](images/ObjectPage_Section_CollFacet_2bcb89d.jpg "Object Page: CollectionFacet")
+![](images/ObjectPage_Section_CollFacet_2bcb89d.jpg "Object Page:
+							CollectionFacet")
 
 Further reference facets refer to identification sections, the field group, contact, or line item annotations. For line items, a list is rendered.
 
@@ -177,7 +189,8 @@ Further reference facets refer to identification sections, the field group, cont
   
 **Object Page: ReferenceFacets**
 
-![](images/ObjectPage_ReferenceFacet_2740bd6.png "Object Page: ReferenceFacets")
+![](images/ObjectPage_ReferenceFacet_2740bd6.png "Object Page:
+							ReferenceFacets")
 
 > ### Note:  
 > When rendering a table in a section, `NavigationRestrictions` works only if `InlineCreate` is enabled for the related entity table. The creation from a new object page is not supported using the mentioned annotation.
@@ -186,7 +199,7 @@ When increasing the section and table height to use available free space on the 
 
 If your table has many entries, see the information regarding the `MultiSelectionPlugin` at [Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-402fac7.md).
 
-For more information about the icon tab bar, see *Adapting the UI: Object Page* \> *Switch to tabs* in [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
+For more information about the icon tab bar, see *Adapting the UI: Object Page* \> *Switch to tabs* in [Adapting the UI: List Report Page and Object Page](adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md).
 
 
 
@@ -202,6 +215,7 @@ The default of six columns in smart form of extra-large screens can be changed t
 > `manifest.json`
 > 
 > ```json
+> 
 > "sap.ui.generic.app": { 
 >         "settings": { 
 >             "objectPageColumns": { 
@@ -217,11 +231,11 @@ You can also use the `useColumnLayoutForSmartForm` switch in the manifest, at `s
 > `manifest.json`
 > 
 > ```json
+> 
 > "sap.ui.generic.app": {
->                               "_version": "1.3.0",
->                               "settings": {
->                                              "useColumnLayoutForSmartForm": false
->                               }
+>     "settings": {
+>     "useColumnLayoutForSmartForm": false
+> }
 > 
 > ```
 

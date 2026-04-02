@@ -24,7 +24,7 @@ To display information in the link list card as either standard or carousal type
         > ```
         > "card010_QuickLinks": {
         >   "model": "salesOrder",
-        >   "template": "sap.ovp.cards.linklist",
+        >   "template": "sap.ovp.cards.v4.linklist",
         >   "settings": {
         >     "title": "Quick Links",
         >     "subTitle": "Standard Link List With Static Data",
@@ -60,7 +60,7 @@ To display information in the link list card as either standard or carousal type
         > ```
         > "card010_QuickLinks": {
         >   "model": "salesOrder",
-        >   "template": "sap.ovp.cards.linklist",
+        >   "template": "sap.ovp.cards.v4.linklist",
         >   "settings": {
         >     "title": "Quick Links",
         >     "subTitle": "Standard Link List With Static Data",

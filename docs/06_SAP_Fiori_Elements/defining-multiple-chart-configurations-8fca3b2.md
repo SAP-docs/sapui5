@@ -4,9 +4,12 @@
 
 You can define multiple chart configurations for the same dataset.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Defining Multiple Chart Configurations](defining-multiple-chart-configurations-822c1cf.md).
+
 This feature enables you to display different charts for different use cases, based on the same dataset. Use the chart configurations to do the following:
 
--   Display different charts in different views of the list report.
+-   Display different charts in different views of the list report page.
 
 -   Display different charts in different sections of the object page.
 

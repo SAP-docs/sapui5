@@ -2,9 +2,12 @@
 
 # Formatting Numeric Values
 
-Numeric values in overview pages appear in their short format, using the SAPUI5 `sap.ui.core.format.NumberFormat` utility. You can configure the number of decimal points to display by using information provided in the OData metadata file, or by using annotations.
+You can configure the number of displayed decimal points by using information provided in the OData metadata file, or by using annotations.
 
 
+
+> ### Note:  
+> Numeric values in overview pages appear in their short format, using the SAPUI5 `sap.ui.core.format.NumberFormat` utility.
 
 In the following example, the `scale` attribute in the OData metadata is set to 3, indicating that the properties `Price`, `Width`, `Depth`, and `Height` will be displayed with three decimal points.
 

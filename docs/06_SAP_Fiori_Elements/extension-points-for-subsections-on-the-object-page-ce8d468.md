@@ -2,10 +2,10 @@
 
 # Extension Points for Subsections on the Object Page
 
-On the object page, you can use extension points to add additional subsections.
+You can use extension points to add additional subsections to the object page.
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
@@ -39,37 +39,38 @@ To define a subsection on UI level - you do this if you want to add a custom loo
 > ### Sample Code:  
 > ```json
 > {
-> 	"sap.ui5": {
-> 		"routing": {
-> 			"targets": {
-> 				"SalesOrderManageObjectPage": {
-> 					"options": {
-> 						"settings": {
-> 							"content": {
-> 								"body": {
-> 									"sections": {
-> 										"myObjectPageSection": {
-> 											"subSections": {
-> 												"customSubSection": {
-> 													"type": "XMLFragment",
-> 													"name": "SalesOrder.ext.CustomSubSection",
-> 													"title": "{i18n>customSubSection}",
-> 													"position": {
-> 														"placement": "After",
-> 														"anchor": "someSubSection"
-> 													}
-> 												}
-> 											}
-> 										}
-> 									}
-> 								}
-> 							}
-> 						}
-> 					}
-> 				}
-> 			}
-> 		}
-> 	}
+>     "sap.ui5": {
+>         "routing": {
+>             "targets": {
+>                 "SalesOrderManageObjectPage": {
+>                     "options": {
+>                         "settings": {
+>                             "content": {
+>                                 "body": {
+>                                     "sections": {
+>                                         "myObjectPageSection": {
+>                                             "subSections": {
+>                                                 "customSubSection": {
+>                                                     "type": "XMLFragment",
+>                                                     "name": "SalesOrder.ext.CustomSubSection",
+>                                                     "title": "{i18n>customSubSection}",
+>                                                     "position": {
+>                                                         "placement": "After",
+>                                                         "anchor": "someSubSection"
+>                                                     },
+>                                                     "isPartOfPreview": false
+>                                                 }
+>                                             }
+>                                         }
+>                                     }
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
 > }
 > ```
 
@@ -77,7 +78,7 @@ The result looks as shown in the following screenshot. The highlighted subsectio
 
 ![](images/Subsections_90b2aad.jpg)
 
-For more information, see [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md).
+You can use all the settings available in custom sections for custom subsections. For more information, see [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md).
 
 > ### Note:  
 > You can specify either a view or a fragment contained in the additional subsection. Either way, you do not need to use the object page \(uxap\) tags `ObjectPageSection`, `subSections`, or `ObjectPageSubSection`. These definitions are already part of the template for the object page view. Additional sections are rendered if an extension exists.

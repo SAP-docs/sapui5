@@ -2,11 +2,11 @@
 
 # Hybrid View
 
-The hybrid view is the default data display mode in the ALP content area. It lets you view both analytical data \(chart format\) and transactional data \(table format\).
+You can view both analytical data \(chart format\) and transactional data \(table format\) using the hybrid view.
 
 
 
-Users can interact with both the chart and the table. The initial view of the chart visualizes the most important aspects of the whole dataset. Selecting a dimension within a chart area automatically filters all relevant information in the table area. For example, if a chart selection is Country=ABC, then all records associated with this country selection are filtered in the table.
+The hybrid view is the default data display mode in the ALP content area. Users can interact with both the chart and the table. The initial view of the chart visualizes the most important aspects of the whole dataset. Selecting a dimension within a chart area automatically filters all relevant information in the table area. For example, if a chart selection is Country=ABC, then all records associated with this country selection are filtered in the table.
 
 > ### Note:  
 > Hybrid mode is not available for tablets or smartphones.
@@ -15,8 +15,9 @@ Make the following setting:
 
 > ### Sample Code:  
 > ```
+> 
 > "settings": {
->               "defaultContentView": "charttable",
+>     "defaultContentView": "charttable",
 > }
 > 
 > ```
@@ -32,5 +33,5 @@ Make the following setting:
 **Related Information**  
 
 
-[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "Visualize data from the main entity set and seamlessly navigate to an application. Define a valid UI.Chart or UI.LineItem annotation to render content for the chart area and table area. For more information, see Configuring the Manifest for the Analytical List Page.")
+[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "You can visualize data from the main entity set and seamlessly navigate to an application.")
 

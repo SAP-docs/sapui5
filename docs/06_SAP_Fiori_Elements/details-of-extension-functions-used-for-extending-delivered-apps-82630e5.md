@@ -2,9 +2,9 @@
 
 # Details of Extension Functions Used for Extending Delivered Apps
 
-In this document, you can find the details of all the extension functions that can be used for extending delivered apps using adaptation extensions.
+You can use extension functions to extend apps.
 
-**Extension functions of list report, object page and overview page**
+**Extension functions of the list report page, the object page and the overview page**
 
 
 <table>
@@ -33,9 +33,9 @@ Description
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Analytical List Page
+Analytical list page
 
 </td>
 <td valign="top">
@@ -52,11 +52,11 @@ This extension function is called when the `SmartFilterbar` has been initialized
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Analytical List Page
+Analytical list page
 
-Overview Page
+Overview page
 
 </td>
 <td valign="top">
@@ -80,11 +80,11 @@ Note that the call is ignored if `oAppState` is faulty.
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Analytical List Page
+Analytical list page
 
-Overview Page
+Overview page
 
 </td>
 <td valign="top">
@@ -101,11 +101,11 @@ Enable extensions to restore their state based on a previously stored state. In 
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Analytical List Page
+Analytical list page
 
-Object Page
+Object page
 
 </td>
 <td valign="top">
@@ -133,13 +133,13 @@ For each custom field the extension must call `fnEnsureSelectionProperty` \(`oCo
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Analytical List Page
+Analytical list page
 
-Object Page
+Object page
 
-Overview Page
+Overview page
 
 </td>
 <td valign="top">
@@ -165,7 +165,7 @@ For each filter the extension must call `fnAddFilter` \(`oControllerExtension`, 
 </td>
 <td valign="top">
 
-Object Page
+Object page
 
 </td>
 <td valign="top">
@@ -193,7 +193,7 @@ The values for the lifecycle object parameters \(Page, Permanent etc.\) are prov
 </td>
 <td valign="top">
 
-Object Page
+Object page
 
 </td>
 <td valign="top">
@@ -214,7 +214,7 @@ In this case, the implementing controller extension can call `fnGetExtensionStat
 </td>
 <td valign="top">
 
-Overview Page
+Overview page
 
 </td>
 <td valign="top">
@@ -233,7 +233,7 @@ The parameter, while calling this function, is a reference to the custom selecti
 </td>
 <td valign="top">
 
-Overview Page
+Overview page
 
 </td>
 <td valign="top">
@@ -252,7 +252,7 @@ This function is called with the standard navigation entry details \(if present\
 </td>
 <td valign="top">
 
-Overview Page
+Overview page
 
 </td>
 <td valign="top">
@@ -271,7 +271,7 @@ The method provided to this function is defined in the controller extension.
 </td>
 <td valign="top">
 
-Overview Page
+Overview page
 
 </td>
 <td valign="top">
@@ -287,5 +287,5 @@ The method that returns is also defined in the extension controller.
 **Related Information**  
 
 
-[Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-4221538.md "You can extend delivered apps based on SAP Fiori elements by using the Adaptation Editor in SAP Business Application Studio. It allows you to create adaptation projects on top of delivered apps.")
+[Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-4221538.md "You can create adaptation projects on top of SAP Fiori elements-based applications by using the Adaptation Editor in SAP Business Application Studio.")
 

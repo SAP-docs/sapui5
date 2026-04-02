@@ -4,15 +4,11 @@
 
 # Configuring Filter Bars
 
-You can configure filter bars in both list report applications and analytical list pages.
+You can configure the filter bar on the list report page and the analytical list page.
 
 By default, only the fields included in `UI.SelectionFields`, along with all mandatory filter fields, are displayed in the filter bar. The *Editing Status* filter is added automatically if you have a draft service.
 
-The filter bar is available only if the service configured for the application supports filtering using the following annotations:
-
-SAP Fiori elements for OData V2: `sap-filterable=true`
-
-SAP Fiori elements for OData V4: `Capabilities.Filterable=true`
+The filter bar is available only if the service configured for the application supports filtering using `Capabilities.Filterable=true`.
 
 
 
@@ -92,9 +88,7 @@ In live mode, any changes made by an end user to the filter fields automatically
 
 This mode is ideal for applications with a small amount of data that have no performance issues from the underlying database layer, such as those requiring complex joins to execute actions.
 
-For more information about enabling the live mode in OData V2, see the [Enabling Live Mode](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__live_mode_v2) subsection in the V2-specific section of this topic.
-
-For more information about enabling the live mode in OData V4, see the [Enabling Live Mode](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__live_mode_v4) subsection in the V4-specific section of this topic.
+For more information about enabling the live mode, see the [Enabling Live Mode](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__live_mode_v4) section in this topic.
 
 > ### Caution:  
 > Impact on performance
@@ -103,55 +97,9 @@ For more information about enabling the live mode in OData V4, see the [Enabling
 
 
 
-<a name="loio4bd7590569c74c61a0124c6e370030f6__section_jl2_54v_wsb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### `entitySet` with Input Parameters
-
-If the `entitySet` has any input parameters, then it is shown in the filter bar automatically without the `UI.SelectionFields` annotation.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> 
-> <EntityType Name="SalesShareParametersType" sap:semantics="parameters">
->     <Key>          
->         <PropertyRef Name="P_Currency"/>
->         <PropertyRef Name="P_Country"/>
->         <PropertyRef Name="P_Optional"/>
->     </Key>
->     <Property Name="P_Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:parameter="mandatory"/>
->     <Property Name="P_Country" Type="Edm.String" Nullable="false" DefaultValue="3" MaxLength="20" sap:label="CountryCode" sap:parameter="mandatory"/>
->     <Property Name="P_Optional" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Optional" sap:parameter="optional"/>
->     <NavigationProperty Name="Results" Relationship="sap.smartbusinessdemo.services.SalesShareParameters_SalesShareType" FromRole="SalesShareParametersPrincipal" ToRole="SalesShareDependent"/>
-> </EntityType>
-> 
-> ```
-
-In this example, `P_Currency` and `P_Country` are mandatory and they must be filled with a valid input value to trigger the filter query. However, `P_Optional` is an optional input parameter. If there is no parameter value defined, by default an empty string value is used.
-
-> ### Note:  
-> Current support for optional parameters only includes the `Edm.String` type.
-
-
-
-### Enabling Live Mode
-
-You can enable live mode by setting `liveMode` to `true` using UI adaptation. For more information, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
-
-
-
 <a name="loio4bd7590569c74c61a0124c6e370030f6__section_dyt_hc2_wpb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Adding Filter Fields Using SAP Fiori Tools
+## Adding Filter Fields Using SAP Fiori Tools
 
 1.  Launch the *Page Map*. You can launch the *Page Map* in several ways, for example by right-clicking the project folder and selecting*Show Page Map*. For more information, see [Define Application Structure](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/bae38e6216754a76896b926a3d6ac3a9.html).
 
@@ -184,9 +132,9 @@ The following screen recording shows how to add a new filter field:
 
 
 
-### Hiding the Filter Bar
+## Hiding the Filter Bar
 
-You can configure your application to hide the filter bar on a list report by making the corresponding settings in the `manifest.json` file.
+You can configure your application to hide the filter bar on a list report page by making the corresponding settings in the `manifest.json` file.
 
 You can choose to actively hide the filter bar, even if the entity set contains filterable fields. Your application then loads with the following behavior:
 
@@ -224,12 +172,14 @@ The following sample code shows how to hide the filter bar by setting `hideFilte
 
 
 
-### Enabling Live Mode
+<a name="loio4bd7590569c74c61a0124c6e370030f6__live_mode_v4"/>
+
+## Enabling Live Mode
 
 You can enable live mode by setting the `liveMode` to `true` in the `manifest.json` file, as shown in the following sample code:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > 
@@ -254,7 +204,7 @@ Enabling live mode may have some impact on performance. For more information, se
 
 
 
-### Configuring Mandatory Filter Fields
+## Configuring Mandatory Filter Fields
 
 You can configure the filter fields as mandatory using the `Capabilities.RequiredProperties` annotation. Such properties need a value before the filter fields can be triggered.
 
@@ -299,7 +249,7 @@ You can configure the filter fields as mandatory using the `Capabilities.Require
 
 
 
-### Adding Tooltips to Filter Fields
+## Adding Tooltips to Filter Fields
 
 To add a tooltip to a filter field, use the `@Common.QuickInfo` annotation as shown in the following sample code:
 
@@ -333,7 +283,7 @@ To add a tooltip to a filter field, use the `@Common.QuickInfo` annotation as sh
 
 
 
-### Configuring Fields to Remain Hidden in the Filter Bar and the *Adapt Filters* Dialog
+## Configuring Fields to Remain Hidden in the Filter Bar and the *Adapt Filters* Dialog
 
 Applications can ensure that a field within the entity to which the filter bar is bound remains hidden in both the filter bar and the *Adapt Filters* dialog. You can use the `Capabilities.NonFilterableProperties` annotation to achieve this behavior.
 
@@ -383,7 +333,9 @@ Applications can ensure that a field within the entity to which the filter bar i
 
 
 
-### Supporting Parameterized Entities
+<a name="loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection"/>
+
+## Supporting Parameterized Entities
 
 When linked to a parameterized entity, the filter bar automatically includes fields for all required parameters. To access the data of a parameterized service, the parameter fields need to be supplied with parameter values when making the data call. These parameter values are then used to load the data for the view \(including the data in the object page or subobject page\). Furthermore, the invocation of any action that needs context to be passed, is also passed using these parameter values.
 
@@ -494,7 +446,7 @@ Ensure you have added the `@Common.ResultContext#$parameters` annotation to the 
 
 
 
-### Specifying Filter Restrictions for the Main Entity Set \(Parameterized Entities Only\)
+## Specifying Filter Restrictions for the Main Entity Set \(Parameterized Entities Only\)
 
 You can use one of the following two approaches:
 

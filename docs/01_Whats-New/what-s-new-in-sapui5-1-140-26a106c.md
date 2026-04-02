@@ -157,7 +157,7 @@ Feature
 
 The new version of the SAPUI5 OData V4 model introduces the following features:
 
--   You can now bind the count of a collection-valued navigation property without binding the entire collection. For more information, see [Binding A Navigation Property's Count](../04_Essentials/binding-collection-inline-count-77d2310.md#loio77d2310b637b490495d78b393ed6aa64__section_BNPC).
+-   You can now bind the count of a collection-valued navigation property without binding the entire collection. For more information, see [Binding A Navigation Property's Count](../04_Essentials/binding-the-count-of-a-collection-77d2310.md#loio77d2310b637b490495d78b393ed6aa64__section_BNPC).
 
 -   Within a `$batch` request, a `GET` request caused by refreshing a list binding's row context is now merged with additional property `GET` requests for the same entity.
 
@@ -523,6 +523,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

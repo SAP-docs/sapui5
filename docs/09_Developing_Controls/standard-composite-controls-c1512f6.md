@@ -117,6 +117,9 @@ SearchField.prototype.exit = function() {
 };
 ```
 
+> ### Caution:  
+> When the framework destroys an aggregation by calling `destroyAggregation` \(or indirectly via `destroyXYZ`\), the named aggregation mutators \(`setXYZ` for a `0..1` aggregation, `removeXYZ` for a `0..n` aggregation\) are not called for the aggregated children. If your composite control implements side effects in those mutator methods, you must also implement corresponding side effects in its `destroyXYZ` method.
+
 
 
 ### Properties

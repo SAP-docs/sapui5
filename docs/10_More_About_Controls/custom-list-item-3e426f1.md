@@ -163,7 +163,7 @@ The example above creates an attachment list item that displays an attachment ti
 
 ![](images/Custom_List_Item_6c6af3e.png)
 
-The following example shows how to use a notepad control as a reusable control in an `sap.m.CustomListItem`. It assumes you want to build a product list item that shows an image of the product and displays its details:
+The following example shows how to use a custom control as a reusable control in an `sap/m/CustomListItem`. It assumes you want to build a product list item that shows an image of the product and displays its details:
 
 ```js
 sap.ui.define(["sap/ui/core/Control", "sap/m/Image"], function (Control, Image) {
@@ -217,7 +217,7 @@ sap.ui.define(["sap/ui/core/Control", "sap/m/Image"], function (Control, Image) 
 });
 ```
 
-After we've created this notepad control above, we consume it in the `sap.m.CustomListItem` as a content aggregation, as shown here:
+After we've created this custom control, we consume it in the `sap/m/CustomListItem` as a content aggregation, as shown here:
 
 ```js
 // "CustomListItem" required from "sap/m/CustomListItem"

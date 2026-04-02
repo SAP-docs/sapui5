@@ -6,6 +6,11 @@ You can add multiple IDs, descriptions, and action buttons to one column in a re
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding Multiple Fields to One Column in Responsive Tables](adding-multiple-fields-to-one-column-in-responsive-tables-d318e42.md).
+
+
+
 To include these items, the `UI.FieldGroup` needs to be referred to in the `UI.LineItem` annotation. The `UI.FieldGroup` then contains a collection of annotations that can be grouped together semantically.
 
 The `FieldGroup` below contains the fields that are displayed in the same column.

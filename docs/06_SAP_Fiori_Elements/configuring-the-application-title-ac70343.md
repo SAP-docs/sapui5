@@ -10,12 +10,7 @@ The following screenshots show the application title displayed in the shell bar 
   
 **Application Title on a List Report Page**
 
-![](images/Application_Header_Title_d6eb0e9.png "Application Title
-				on
-				a
-				List
-				Report
-				Page")
+![](images/Application_Header_Title_d6eb0e9.png "Application Title on a List Report Page")
 
   
   
@@ -29,21 +24,11 @@ For more information, see the [Sample Code](setting-up-the-object-page-header-cc
 
 
 
-<a name="loioac70343fdf16499e8b39d42cec7593be__section_vfr_y1x_cnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-Additionally, you can also configure the application title of the overview page and the analytical list page.
-
-
-
 <a name="loioac70343fdf16499e8b39d42cec7593be__section_ph5_31q_1cb"/>
 
 ## Related Links
 
 -   For information about adapting the table header on a list report page, see [Setting the Table Header](setting-the-table-header-f996207.md).
-
--   For information about adapting object page titles and subtitles, see [Configuring the Object Page Header Title and Description](configuring-the-object-page-header-title-and-description-333f850.md).
 
 
 

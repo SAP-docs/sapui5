@@ -2,7 +2,12 @@
 
 # Creating an Extension to Modify Properties in the Navigation Context
 
-Application developers can use this extension to modify \(add/remove/change\) the information available in the navigation context just before the external outbound navigation is triggered.
+You can use this extension to add, remove, or change the information available in the navigation context just before the external outbound navigation is triggered.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Creating an Extension to Modify Properties in the Navigation Context](creating-an-extension-to-modify-properties-in-the-navigation-context-199a496.md).
 
 
 
@@ -21,7 +26,7 @@ Application developers can use this extension to modify \(add/remove/change\) th
 
 ## Procedure
 
-1.  In the `manifest.json`, register your extension with the controller for the list report and the object page, as described below:
+1.  In the `manifest.json`, register your extension with the controller for the list report page and the object page, as described below:
 
     ```
     "extends": {
@@ -48,7 +53,7 @@ Application developers can use this extension to modify \(add/remove/change\) th
 
     ![](images/Controller_Extension_4303c97.png)
 
-3.  Implement the `adaptNavigationParameterExtension` function in the controller extension files of the list report / object page or the analytical list page and check the *API Reference* for [`SelectionVariant`](https://ui5.sap.com/#/api/sap.ui.generic.app.navigation.service.SelectionVariant/overview).
+3.  Implement the `adaptNavigationParameterExtension` function in the controller extension files of the list report page / object page or the analytical list page and check the *API Reference* for [`SelectionVariant`](https://ui5.sap.com/#/api/sap.ui.generic.app.navigation.service.SelectionVariant/overview).
 
     > ### Note:  
     > You cannot remove all properties for each navigation link. For example, the property of the semantic object is required for the semantic object link on the object page.

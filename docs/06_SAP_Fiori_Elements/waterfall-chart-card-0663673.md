@@ -4,6 +4,9 @@
 
 You use waterfall charts to analyze a cumulative value.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Waterfall Chart](waterfall-chart-e8106e5.md).
+
   
   
 **Example of a Waterfall Chart Card**

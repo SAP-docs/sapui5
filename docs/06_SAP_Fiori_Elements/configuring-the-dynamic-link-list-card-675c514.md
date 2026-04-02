@@ -6,7 +6,7 @@ Allows you to display data such as links, images, and icons in the form of list 
 
 
 
-To display information in the link list card as either standard or carousal type, configure the `listFlavor` property in the card settings.
+To display information in the link list card as either standard or carousel type, configure the `listFlavor` property in the card settings.
 
 The dynamic link list card also supports the contact annotation as the default annotation without a qualifier, enabling quick view information.
 
@@ -20,11 +20,11 @@ The dynamic link list card also supports the contact annotation as the default a
     > ```
     > "card017": {
     >           "model": "salesOrder",
-    >           "template": "sap.ovp.cards.linklist",
+    >           "template": "sap.ovp.cards.v4.linklist",
     >           "settings": {
     >             "title": "Standard Dynamic Linklist Card",
     >             "targetUri": "https://en.abc.org/wiki/xyz _2",
-    >             "subTitle": "Smartlink Feature Test",
+    >             "subTitle": "Link Feature Test",
     >             "listFlavor": "standard",
     >             "entitySet": "ProductSet",
     >             "sortBy": "Name",

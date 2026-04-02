@@ -2,6 +2,11 @@
 
 # Data Points
 
+You can render header fields as data points.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Data Points](data-points-c2a389a.md).
+
 A data point represents a single point of data. It is typically a number but can also be textual, for example, a status value.
 
 
@@ -10,9 +15,9 @@ The image below shows the data points *Price* and *Availability* in the object p
 
   
   
-**Object Page: DataPoints**
+**Object Page: Data Points**
 
-![](images/Object_Page_DataPoints_6eac05c.png "Object Page: DataPoints")
+![](images/Object_Page_DataPoints_6eac05c.png "Object Page: Data Points")
 
 This video shows the step-by-step procedure for adding a data point header to an object page:
 

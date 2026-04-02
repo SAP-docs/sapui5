@@ -4,12 +4,9 @@
 
 # Inline Edit
 
-Users can use inline edit to edit specific fields or field groups without switching the entire object to draft.
+You can enable the inline edit feature, which allows the users to edit specific fields or field groups without switching the entire object to draft.
 
-SAP Fiori elements for OData V4 supports inline edit in the list report and on the object page as of SAPUI5 1.136. With this feature, users can directly edit a field or a group of fields in the active version without switching the entire object to draft. Inline edit supports the same features as the regular edit mode.
-
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
+SAP Fiori elements for OData V4 supports inline edit on the list report page and on the object page as of SAPUI5 1.136. With this feature, users can directly edit a field or a group of fields in the active version without switching the entire object to draft. Inline edit supports the same features as the regular edit mode.
 
 Inline edit is supported on pages based on the `sap.fe.templates.ListReport` or `sap.fe.templates.ObjectPage` templates with a draft-enabled service. Inline edit is also supported with building blocks when they are used within these templates.
 
@@ -23,6 +20,8 @@ Inline edit is supported on pages based on the `sap.fe.templates.ListReport` or 
 > -   The field is a stream property field or a multi-input field.
 > 
 > -   Multiple views with different entity sets are defined on a list report page.
+> 
+> -   The application uses the analytical list page flavor of the list report page.
 
 
 
@@ -116,7 +115,7 @@ You can also specify groups of connected fields which should be edited together.
 > ### Tip:  
 > Immediate side effects aren't supported within a group of connected fields. If a side effect has a source property A and a target property B where both A and B belong to the same group of connected fields, this side effect is not triggered when property A is changed.
 
-**Example 1: All Fields Are Enabled for Inline Edit in the List Report**
+**Example 1: All Fields Are Enabled for Inline Edit on the List Report Page**
 
 > ### Sample Code:  
 > `manifest.json`

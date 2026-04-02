@@ -4,6 +4,9 @@
 
 You can add a `MicroChart` control to a facet within the header area of the object page.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md).
+
 A micro chart facet contains a title, subtitle, `MicroChart` control, and a footer. The `MicroChart` control supports several types of micro charts in the object page header, as shown in the following image:
 
 
@@ -253,17 +256,17 @@ The unit of measure is displayed in the footer of the micro chart. The following
 **Related Information**  
 
 
-[Area Micro Chart](area-micro-chart-92a40b6.md "An area micro chart is a trend chart.")
+[Area Micro Chart](area-micro-chart-92a40b6.md "You can render the micro chart as an area micro chart.")
 
-[Bullet Micro Chart](bullet-micro-chart-4a7e1b8.md "The bullet chart features a single, primary measure (for example, current year-to-date revenue).")
+[Bullet Micro Chart](bullet-micro-chart-4a7e1b8.md "You can render the micro chart as a bullet micro chart.")
 
-[Radial Micro Chart](radial-micro-chart-1d7cebc.md "Radial micro charts displays a single percentage value.")
+[Radial Micro Chart](radial-micro-chart-1d7cebc.md "You can render the micro chart as a radial micro chart.")
 
-[Line Micro Chart](line-micro-chart-3af8420.md "A line chart is a basic type of chart used in many fields.")
+[Line Micro Chart](line-micro-chart-3af8420.md "You can render the micro chart as a line micro chart.")
 
-[Column Micro Chart](column-micro-chart-5c0b4cd.md "A column chart uses vertical bars to compare multiple values over time or across categories.")
+[Column Micro Chart](column-micro-chart-5c0b4cd.md "You can render the micro chart as a column micro chart.")
 
-[Harvey Micro Chart](harvey-micro-chart-6c4835d.md "")
+[Harvey Micro Chart](harvey-micro-chart-6c4835d.md "You can render the micro chart as a Harvey Ball micro chart.")
 
-[Stacked Bar Micro Chart](stacked-bar-micro-chart-7328c4f.md "A stacked bar micro chart displays all the values from the back end for the configured measure as a percentage of the total measure value.")
+[Stacked Bar Micro Chart](stacked-bar-micro-chart-7328c4f.md "You can render the micro chart as a stacked bar micro chart.")
 

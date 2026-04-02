@@ -2,16 +2,16 @@
 
 # Enabling Actions Added Using Extension Points
 
-You can control the enablement of actions added using extension points in the list report and object page through certain settings in the `manifest.json` file.
+You can control the enablement of actions added using extension points on the list report page and the object page through certain settings in the `manifest.json` file.
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
 To enable actions based on a selection, set the property `enabled` of the custom action in the `manifest.json`file.
 
-To enable an action in the list report only upon selection of one row in the table, set the property `enabled` of the action in the `manifest.json` file as follows:
+To enable an action on the list report page only upon selection of one row in the table, set the property `enabled` of the action in the `manifest.json` file as follows:
 
 > ### Sample Code:  
 > ```
@@ -43,7 +43,7 @@ To enable an action in the list report only upon selection of one row in the tab
 
 ### List Report Page \(Action in Table Header\)
 
-The following code sample shows an example of how to set up your `manifest.json` file to determine whether to enable or disable an action in the list report:
+The following code sample shows an example of how to set up your `manifest.json` file to determine whether to enable or disable an action on the list report page:
 
 ```json
 

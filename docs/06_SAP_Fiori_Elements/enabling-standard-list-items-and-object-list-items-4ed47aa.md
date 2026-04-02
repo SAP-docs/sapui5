@@ -2,7 +2,7 @@
 
 # Enabling Standard List Items and Object List Items
 
-You can configure standard list items and object list items in list reports.
+You can configure standard list items and object list items on the list report page.
 
 Both list items can display standard, numeric, and date fields.
 

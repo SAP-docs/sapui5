@@ -2,7 +2,9 @@
 
 # Form Facet in the Object Page Header
 
-You can add a form facet to the object page header. To do this, add a `UI.ReferenceFacet` to the `UI.HeaderFacets` that points to `UI.FieldGroup` or `UI.Identification`. If you provide a label in the `UI.ReferenceFacet`, it is used as the title of the form. For example, the figure below shows the following fields within the *Sales Area* section \(created with a header facet\):
+You can add a form facet to the object page header.
+
+To do this, add a `UI.ReferenceFacet` to the `UI.HeaderFacets` that points to `UI.FieldGroup` or `UI.Identification`. If you provide a label in the `UI.ReferenceFacet`, it is used as the title of the form. For example, the figure below shows the following fields within the *Sales Area* section \(created with a header facet\):
 
 -   *Sales Organization*
 

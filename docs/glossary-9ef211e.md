@@ -715,7 +715,7 @@ SAP Fiori elements
 
 [Extending SAP Fiori Elements-Based Apps](06_SAP_Fiori_Elements/extending-sap-fiori-elements-based-apps-358cf25.md)
 
-[Extending List Reports and Object Pages Using App Extensions](06_SAP_Fiori_Elements/extending-list-reports-and-object-pages-using-app-extensions-a892eb8.md)
+[Extending List Reports and Object Pages Using App Extensions](06_SAP_Fiori_Elements/extending-list-report-pages-and-object-pages-using-app-extensions-a892eb8.md)
 
 [Configuring Analytical List Page App Extensions](06_SAP_Fiori_Elements/configuring-analytical-list-page-app-extensions-9504fb4.md)
 
@@ -957,7 +957,7 @@ library
 </td>
 <td valign="top">
 
-The top-level structural unit is called a **library**. Libraries are the main artifacts in the extensibility concept. They bundle a set of controls and related types and make them consumable by Web applications. There are predefined and standard libraries, like `sap.m`, with many commonly used controls. At the same time, it treats custom UI libraries as first-class citizens, making it easy for you to write and use your own controls alongside the predefined ones.
+The top-level structural unit is called a **library**. Libraries are the main artifacts in the extensibility concept. They bundle a set of controls and related types and make them consumable by Web applications. There are predefined and standard libraries, like `sap.m`, with many commonly used controls. At the same time, it treats custom libraries as first-class citizens, making it easy for you to write and use your own controls alongside the predefined ones.
 
 </td>
 <td valign="top">
@@ -1178,28 +1178,6 @@ SAP Fiori elements
 <tr>
 <td valign="top">
 
-notepad control
-
-</td>
-<td valign="top">
-
-A control that is defined on the fly without a library definition or running generation steps.
-
-</td>
-<td valign="top">
-
-SAPUI5/OpenUI5 
-
-</td>
-<td valign="top">
-
-[Developing Controls](09_Developing_Controls/developing-controls-8dcab00.md) 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 OData
 
 </td>
@@ -1285,7 +1263,7 @@ SAP Fiori elements
 </td>
 <td valign="top">
 
-[Object Page Elements](06_SAP_Fiori_Elements/object-page-elements-645e27a.md) 
+[Object Page Elements](06_SAP_Fiori_Elements/object-page-645e27a.md) 
 
 </td>
 </tr>
@@ -1701,7 +1679,7 @@ SAP Fiori elements
 </td>
 <td valign="top">
 
-[Further Features of the Field](06_SAP_Fiori_Elements/further-features-of-the-field-f49a0f7.md) 
+[Further Features of the Field](06_SAP_Fiori_Elements/additional-features-of-the-field-f49a0f7.md) 
 
 </td>
 </tr>

@@ -116,7 +116,7 @@ For more information, see [Property Metadata Binding](property-metadata-binding-
 
 ## Escaping Binding Syntax
 
-To prevent string values from being misinterpreted as binding expressions in `ManagedObject`'s `constructor` settings or `applySettings`, use the static helper function [`sap/ui/base/ManagedObject.escapeSettingsValue`](https://ui5.sap.com/#/api/sap.ui.base.managedObject%23methods/sap.ui.base.ManagedObject.escapeSettingsValue), which escapes special characters, such as curly braces \(`{}`\):
+To prevent string values from being misinterpreted as binding expressions in `ManagedObject`'s `constructor` settings or `applySettings`, use the static helper function [`sap/ui/base/ManagedObject.escapeSettingsValue`](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject%23methods/sap.ui.base.ManagedObject.escapeSettingsValue), which escapes special characters, such as curly braces \(`{}`\):
 
 ```js
 // ManagedObject required from "sap/ui/base/ManagedObject"

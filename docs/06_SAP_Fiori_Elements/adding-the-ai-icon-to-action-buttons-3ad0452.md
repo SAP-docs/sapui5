@@ -7,9 +7,7 @@
 You can add an icon to indicate that a button is related to an AI action.
 
 > ### Note:  
-> -   You must use the <span class="SAP-icons-V5"></span>\(*AI*\) icon for all buttons that are related to AI actions. In addition to that, provide transparency when using AI during processing of personal data.
-> 
-> -   This topic is only applicable to SAP Fiori elements for OData V4.
+> You must use the <span class="SAP-icons-V5"></span>\(*AI*\) icon for all buttons that are related to AI actions. In addition to that, you must provide documentation to users that explains your AI features and the process behind them to ensure transparency.
 
 The <span class="SAP-icons-V5"></span>\(*AI*\) icon is displayed before the text on the button, as shown in the following screenshot:
 

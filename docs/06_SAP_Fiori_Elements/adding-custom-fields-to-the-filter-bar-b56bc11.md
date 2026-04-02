@@ -4,6 +4,9 @@
 
 You can extend the filter bar by using a custom filter field.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md).
+
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).
 > 
@@ -12,22 +15,28 @@ You can extend the filter bar by using a custom filter field.
 To enable this, add a view extension along with the corresponding controller extension, as shown in the following example:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > 
 > "extends": {
->                         "extensions": {
->                         "sap.ui.controllerExtensions": {
->                           "sap.suite.ui.generic.template.ListReport.view.ListReport": {
->                             "controllerName": "my_app.ext.controller.ListReportExtension"
->                           }
->                         },
->                 "sap.ui.viewExtensions": { 
->                                         "sap.suite.ui.generic.template.ListReport.view.ListReport": {
->                                     "SmartFilterBarControlConfigurationExtension|<myEntityset>": {
->                                               "className": "sap.ui.core.Fragment",
->                                               "fragmentName": "<myNamespace>.ext.fragment.CustomFilter",
->                                               "type": "XML"
->                                           },
+>     "extensions": {
+>         "sap.ui.controllerExtensions": {
+>             "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+>                 "controllerName": "my_app.ext.controller.ListReportExtension"
+>             }
+>         },
+>         "sap.ui.viewExtensions": {
+>             "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+>                 "SmartFilterBarControlConfigurationExtension|<myEntityset>": {
+>                     "className": "sap.ui.core.Fragment",
+>                     "fragmentName": "<myNamespace>.ext.fragment.CustomFilter",
+>                     "type": "XML"
+>                 }
+>             }
+>         }
+>     }
+> }
 > 
 > ```
 
@@ -66,73 +75,78 @@ For an example with detailed instructions, see [Adding Filterable Field to the S
 
 When a table is exported, including the filter fields, the filter values are included by default. The exported values match those shown in the filter bar.
 
-For custom filters, the exported spreadsheet shows the filter property and condition as passed to the query. For example, if the user selects *Cost = Low* in the filter bar dropdown, the filter passed to the query can be `OverallCost < 1000`. This value appears in the exported file. To show the filter as displayed on the filter bar, you can use the `onBeforeExportTableExtension` extension method to modify the export content. This method supports table export on analytical list pages, list reports, and object pages.
+For custom filters, the exported spreadsheet shows the filter property and condition as passed to the query. For example, if the user selects *Cost = Low* in the filter bar dropdown, the filter passed to the query can be `OverallCost < 1000`. This value appears in the exported file. To show the filter as displayed on the filter bar, you can use the `onBeforeExportTableExtension` extension method to modify the export content. This method supports table export on analytical list pages, list report pages, and object pages.
 
 > ### Sample Code:  
 > ```
 > sap.ui.define([
 >     "sap/ui/core/Element",
-> >   "sap/ui/export/util/Filter"
-> > ], function (Element, ExportFilter) {
-> >   "use strict";
-> > 
-> >   return {
->           onInit: function () {
->                 //...
->            },
->            /**
->             * This extension method modifies the "Cost" filter in the exported file.
->             * 
->             * Removes the existing filter with label "OverallCost" and value "<=1000",
->             * and adds a new filter with label "Cost" and value "Low"
->            * 
->            * @param oExportParams 
->            * @returns 
->            */
->            onBeforeExportTableExtension: function (oExportParams) {
->                if (!oExportParams.includeFilterSettings) {
->                      return;
->                  }
->                // Array of filters in the exported file
->                var aFilterSettings = oExportParams.filterSettings;
->                 // Find the "Cost" combobox in smart filter bar
->            var COST_COMBOBOX_ID = "STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product--CustomFilter-OverallCost-combobox";
->                var oCostCombobox = Element.getElementById(COST_COMBOBOX_ID);
->                if (oCostCombobox && oCostCombobox.getValue()) {
->                     var oRawValue, sNewCostValue;
->                     for (var i = 0; i < aFilterSettings.length; i++) {
->                          var oCurrentFilter = aFilterSettings[i];
->                          // Find the filter with property "OverallCost"
->                          if (oCurrentFilter.getProperty() === "OverallCost") {
->                               //Store the raw value
->                               oRawValue = oCurrentFilter.rawValues[0];
->                              //Remove the current filter from the filters array
->                               aFilterSettings.splice(i, 1);
->                               break;
->                             }
->                      }
->                      // Derive Cost category (Low / High) from the raw value
->                      if (oRawValue.operator === "<=" && oRawValue.value === "1000") {
->                          sNewCostValue = "Low";
->                      } else {
->                         sNewCostValue = "High";
->                      }
+>     "sap/ui/export/util/Filter"
+> ], function (Element, ExportFilter) {
+>     "use strict";
 > 
->                      //Create a new export filter with the new label and value
->                      var sProperty = "OverallCost",
->                          sLabel = "Cost",
->                          oNewRawValue = {operator: "==", value: sNewCostValue},
->                          oCostFilter = new ExportFilter(sProperty, oNewRawValue, sLabel);
+>     return {
+>         onInit: function () {
+>             //...
+>         },
 > 
->                     //Add the updated filter to the filter settings array
->                     aFilterSettings.push(oCostFilter);
+>         /**
+>          * This extension method modifies the "Cost" filter in the exported file.
+>          *
+>          * Removes the existing filter with label "OverallCost" and value "<=1000",
+>          * and adds a new filter with label "Cost" and value "Low"
+>          *
+>          * @param oExportParams
+>          * @returns
+>          */
+>         onBeforeExportTableExtension: function (oExportParams) {
+>             if (!oExportParams.includeFilterSettings) {
+>                 return;
+>             }
+> 
+>             // Array of filters in the exported file
+>             var aFilterSettings = oExportParams.filterSettings;
+> 
+>             // Find the "Cost" combobox in smart filter bar
+>             var COST_COMBOBOX_ID = "STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product--CustomFilter-OverallCost-combobox";
+>             var oCostCombobox = Element.getElementById(COST_COMBOBOX_ID);
+> 
+>             if (oCostCombobox && oCostCombobox.getValue()) {
+>                 var oRawValue, sNewCostValue;
+> 
+>                 for (var i = 0; i < aFilterSettings.length; i++) {
+>                     var oCurrentFilter = aFilterSettings[i];
+> 
+>                     // Find the filter with property "OverallCost"
+>                     if (oCurrentFilter.getProperty() === "OverallCost") {
+>                         // Store the raw value
+>                         oRawValue = oCurrentFilter.rawValues[0];
+> 
+>                         // Remove the current filter from the filters array
+>                         aFilterSettings.splice(i, 1);
+>                         break;
+>                     }
 >                 }
->          }
->      };
+> 
+>                 // Derive Cost category (Low / High) from the raw value
+>                 if (oRawValue.operator === "<=" && oRawValue.value === "1000") {
+>                     sNewCostValue = "Low";
+>                 } else {
+>                     sNewCostValue = "High";
+>                 }
+> 
+>                 // Create a new export filter with the new label and value
+>                 var sProperty = "OverallCost",
+>                     sLabel = "Cost",
+>                     oNewRawValue = {operator: "==", value: sNewCostValue},
+>                     oCostFilter = new ExportFilter(sProperty, oNewRawValue, sLabel);
+> 
+>                 // Add the updated filter to the filter settings array
+>                 aFilterSettings.push(oCostFilter);
+>             }
+>         }
+>     };
 > });
->  in the controller extension.
->                     This extension method is supported for exporting tables on analytical list
->                     pages, list reports and object pages.
 > 
 > ```
 

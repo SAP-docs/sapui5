@@ -4,30 +4,12 @@
 
 You can use personalization to modify the settings of a chart.
 
-
-
-<a name="loio7d41330f363c49edb778821dc58fb0b1__section_ktk_3zy_swb"/>
-
-## Filter Option
-
-The filter option is available in the chart personalization settings, if personalization is enabled.
-
-The default state of the filter option is as follows:
-
--   It is disabled in the page-level variant or if variant management is not enabled.
-
--   It is enabled in the control-level variant.
-
-
-
-
-<a name="loio7d41330f363c49edb778821dc58fb0b1__section_vgq_5pz_swb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Enabling and Disabling Chart Personalization
+> ### Note:  
+> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> 
+> -   Properties or methods exposed by the building block
+> 
+> -   Custom code using extensions
 
 You can control the visibility of chart personalization options using the variant management settings. The default visibility is as follows:
 
@@ -106,7 +88,18 @@ The `"personalization"` setting can have the following values:
 
 
 
-### Filter Option
+<a name="loio7d41330f363c49edb778821dc58fb0b1__section_ktk_3zy_swb"/>
+
+## Filter Option
+
+The filter option is available in the chart personalization settings, if personalization is enabled.
+
+The default state of the filter option is as follows:
+
+-   It is disabled in the page-level variant or if variant management is not enabled.
+
+-   It is enabled in the control-level variant.
+
 
 The following fields are excluded from the `"Filter"` option under chart personalization:
 

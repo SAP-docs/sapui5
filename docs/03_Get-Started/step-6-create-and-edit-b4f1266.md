@@ -221,7 +221,7 @@ We implement the event handler for the `change` event of the `ListBinding` to th
             this._bTechnicalErrors = false; 
             this._setUIChanges();
         },
-        onSearch: function () {
+        onSave: function () {
             ...
         },
 ...

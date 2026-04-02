@@ -4,6 +4,9 @@
 
 You can configure the application title that is generated from SAP Fiori launchpad, if required.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring the Application Title](configuring-the-application-title-ac70343.md).
+
 The following screenshots show the application title displayed in the shell bar of a list report page and an object page:
 
   

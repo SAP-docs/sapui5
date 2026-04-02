@@ -1,6 +1,8 @@
 <!-- loio20de9506339949c7bd16b789e8352f26 -->
 
-# How To Use SAP Fiori Elements
+# How to Use SAP Fiori Elements
+
+You can use SAP Fiori elements to prepare, build, and extend applications.
 
 Creating an app with SAP Fiori elements generally consists of the following steps:
 

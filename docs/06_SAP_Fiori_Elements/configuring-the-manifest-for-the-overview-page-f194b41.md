@@ -6,7 +6,9 @@ You can use the `manifest.json` file for initializing an overview page applicati
 
 
 
-It defines static information about the application such as its name and the location of various files, and contains configuration parameters that control the application’s behavior, layout, and data handling.
+Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
+
+The `manifest.json` file defines static information about the application such as its name and the location of various files, and contains configuration parameters that control the application’s behavior, layout, and data handling.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -14,8 +16,7 @@ It defines static information about the application such as its name and the loc
 > ```
 > "sap.ovp" : { //section for ovp-specific app manifest settings
 >     "globalFilterModel": "ZModelName", //OData model that contains entity definitions relevant for global filters
->     "globalFilterEntityType": "ZFilterEntityType", //Represents the entity to use as a global filter in the smart filter bar control. Deprecated since SAPUI5 1.54.
->     "globalFilterEntitySet": "ZFilterEntitySet", //Represents the entity set to use as a global filter in the smart filter bar control. Available from SAPUI5 1.54 onwards.
+>     "globalFilterEntitySet": "ZFilterEntitySet", //Represents the entity set to use as a global filter in the smart filter bar control. 
 >     "containerLayout": "resizable", //Represents the layout of the card container.
 >     "smartVariantRequired": true, //Represents a switch to activate smart variant management in the global filters. The default value is true.
 >     "showDateInRelativeFormat": false, //Represents a switch to enable or disable relative/normal date formatting in OVP applications.
@@ -32,7 +33,7 @@ It defines static information about the application such as its name and the loc
 >     "cards": { //An object of cards 
 >         "card01": { //each card contains the following 
 >             "model": "ZCard1Model", //Model for the card
->             "template": "sap.ovp.cards.list", //Card component path to use for this card.
+>             "template": "sap.ovp.cards.v4.list", //Card component path to use for this card.
 >             "settings": {
 >                 "title": "card title", //Language-dependent title of the card - used in the card header.
 >                 "subTitle": "sub title", //Language-dependent subtitle of the card - used in the card header.

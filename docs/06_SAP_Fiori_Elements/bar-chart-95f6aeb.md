@@ -2,7 +2,7 @@
 
 # Bar Chart
 
-You can use a bar chart to display data, such as total product sales over a period of years in columns.
+You can render the chart as a a bar chart to display data, such as total product sales over a period of years in columns.
 
 The number of columns is equal to the number of measures in the annotation file.
 
@@ -11,6 +11,58 @@ The number of columns is equal to the number of measures in the annotation file.
 **Example of a Horizontal Bar Chart**
 
 ![](images/Example_of_a_Horizontal_Bar_Chart_Card_51ba955.png "Example of a Horizontal Bar Chart")
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="UI.Chart" Qualifier="BarChartSoldToParty">
+>     <Record Type="UI.ChartDefinitionType">
+>         <PropertyValue Property="Title" String="Bar Chart"/>
+>         <PropertyValue Property="Description" String="Testing Bar Chart"/>
+>         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
+>         <PropertyValue Property="Measures">
+>             <Collection>
+>                 <PropertyPath>totalPricing</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="Dimensions">
+>             <Collection>
+>                 <PropertyPath>SoldToParty</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="MeasureAttributes">
+>             <Collection/>
+>         </PropertyValue>
+>         <PropertyValue Property="DimensionAttributes">
+>             <Collection/>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> Chart #BarChartSoldToParty                              : {
+>     $Type              : 'UI.ChartDefinitionType',
+>     Title              : 'Bar Chart',
+>     Description        : 'Testing Bar Chart',
+>     ChartType          : #Bar,
+>     Measures           : [totalPricing],
+>     Dimensions         : [SoldToParty],
+>     MeasureAttributes  : [],
+>     DimensionAttributes: []
+> },
+> ```
 
 
 

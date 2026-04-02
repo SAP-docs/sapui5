@@ -33,72 +33,72 @@ You can view and download all files at [OData V4 - Step 11](https://ui5.sap.com/
 ```xml
 <mvc:View
 ...
-											<VBox>
-												<FlexBox wrap="Wrap">
-														...
-													<f:Form	editable="false">
-														<f:title>
-															<core:Title text="{i18n>bestFriendTitleText}" />
-														</f:title>
-														...
-														<f:formContainers>
-															<f:FormContainer>
-																<f:formElements>
-																	...
-																</f:formElements>
-															</f:FormContainer>
-														</f:formContainers>
-													</f:Form>
-												</FlexBox>
-												<Table
-													id="friendsTable"
-													width="auto"
-													items="{path: 'Friends',
-															parameters: {
-																$$ownRequest: true
-															}}"
-													noDataText="No Data"
-													class="sapUiSmallMarginBottom">
-													<headerToolbar>
-														<Toolbar>
-															<Title
-																text="Friends"
-																titleStyle="H3"
-																level="H3"/>
-														</Toolbar>
-													</headerToolbar>
-													<columns>
-														<Column>
-															<Text text="User Name"/>
-														</Column>
-														<Column>
-															<Text text="First Name"/>
-														</Column>
-														<Column>
-															<Text text="Last Name"/>
-														</Column>
-														<Column>
-															<Text text="Age"/>
-														</Column>
-													</columns>
-													<items>
-														<ColumnListItem>
-															<cells>
-																<Text text="{UserName}"/>
-															</cells>
-															<cells>
-																<Text text="{FirstName}"/>
-															</cells>
-															<cells>
-																<Text text="{LastName}"/>
-															</cells>
-															<cells>
-																<Text text="{Age}"/>
-															</cells>
-														</ColumnListItem>
-													</items>
-												</Table>
-											</VBox>
+                                            <VBox>
+                                                <FlexBox wrap="Wrap">
+                                                        ...
+                                                    <f:Form    editable="false">
+                                                        <f:title>
+                                                            <core:Title text="{i18n>bestFriendTitleText}" />
+                                                        </f:title>
+                                                        ...
+                                                        <f:formContainers>
+                                                            <f:FormContainer>
+                                                                <f:formElements>
+                                                                    ...
+                                                                </f:formElements>
+                                                            </f:FormContainer>
+                                                        </f:formContainers>
+                                                    </f:Form>
+                                                </FlexBox>
+                                                <Table
+                                                    id="friendsTable"
+                                                    width="auto"
+                                                    items="{path: 'Friends',
+                                                            parameters: {
+                                                                $$ownRequest: true
+                                                            }}"
+                                                    noDataText="No Data"
+                                                    class="sapUiSmallMarginBottom">
+                                                    <headerToolbar>
+                                                        <Toolbar>
+                                                            <Title
+                                                                text="Friends"
+                                                                titleStyle="H3"
+                                                                level="H3"/>
+                                                        </Toolbar>
+                                                    </headerToolbar>
+                                                    <columns>
+                                                        <Column>
+                                                            <Text text="User Name"/>
+                                                        </Column>
+                                                        <Column>
+                                                            <Text text="First Name"/>
+                                                        </Column>
+                                                        <Column>
+                                                            <Text text="Last Name"/>
+                                                        </Column>
+                                                        <Column>
+                                                            <Text text="Age"/>
+                                                        </Column>
+                                                    </columns>
+                                                    <items>
+                                                        <ColumnListItem>
+                                                            <cells>
+                                                                <Text text="{UserName}"/>
+                                                            </cells>
+                                                            <cells>
+                                                                <Text text="{FirstName}"/>
+                                                            </cells>
+                                                            <cells>
+                                                                <Text text="{LastName}"/>
+                                                            </cells>
+                                                            <cells>
+                                                                <Text text="{Age}"/>
+                                                            </cells>
+                                                        </ColumnListItem>
+                                                    </items>
+                                                </Table>
+                                            </VBox>
 ...
 </mvc:View>
 ```

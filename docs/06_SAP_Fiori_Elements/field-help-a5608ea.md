@@ -2,7 +2,7 @@
 
 # Field Help
 
-A field can be associated with a helper control, depending on how the field is configured.
+You can associate a field with a helper control, depending on how the field is configured.
 
 Fields can have an associated value help, or a dropdown list for several fixed values. They can also include a date or date-time picker. This topic provides information about the supported types of associations and how applications can enable them.
 
@@ -191,7 +191,7 @@ Fields can display the history of recently entered values, which is especially h
 To enable the history of recently entered values, use the `INPUTFIELD_HISTORY` parameter in SAP Fiori launchpad.
 
 > ### Note:  
-> History of recently entered values is not supported for value help based on fixed values.
+> History of recently entered values is not supported for field help based on fixed values.
 
 
 
@@ -201,7 +201,7 @@ To enable the history of recently entered values, use the `INPUTFIELD_HISTORY` p
 
 Fields with value help provide type-ahead suggestions based on user's input. These suggestions are fetched from the back end using the `$search` parameter included in the client request.
 
-You can control which columns appear in the type-ahead list using the  `UI.Importance` annotation property. The type-ahead list displays only those columns annotated as  `High`. If the annotation isn't defined, the type-ahead list shows the same columns as configured in the value help dialog. For more information about `UI.Importance`, see [Annotations](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__Annotations) section in [Value Help](value-help-fccb255.md).
+You can control which columns appear in the type-ahead list using the  `UI.Importance` annotation property. The type-ahead list displays only those columns annotated as  `High`. If the annotation isn't defined, the type-ahead list shows the same columns as configured in the value help dialog. For more information about `UI.Importance`, see the [Annotations](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__Annotations) section in [Value Help](value-help-fccb255.md).
 
 > ### Note:  
 > Type-ahead functionality is not available if the value help entity is configured as non-searchable. For more information, see [Enabling the Search Function](enabling-the-search-function-3cdebee.md).

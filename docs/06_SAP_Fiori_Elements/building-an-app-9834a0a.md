@@ -2,9 +2,9 @@
 
 # Building an App
 
-Learn how to create and maintain SAP Fiori elements applications in a fast and convenient way using SAP Fiori tools.
+You can create and maintain SAP Fiori elements apps in a fast and convenient way using SAP Fiori Tools.
 
-SAP Fiori tools provides a set of extensions for SAP Business Application Studio and Visual Studio Code which simplifies the development of SAP Fiori elements applications.
+SAP Fiori Tools provides a set of extensions for SAP Business Application Studio and Visual Studio Code which simplifies the development of SAP Fiori elements applications.
 
 
 
@@ -31,7 +31,7 @@ For more information about generating an application, see [Generate an Applicati
 
 ### Generating an Application with the Project Accelerator or Joule Using SAP Fiori Tools AI
 
-You can use the Project Accelerator from SAP Fiori tools AI, or Joule, to generate data models, services, sample data, and an SAP Fiori UI for your project based on your business requirements.
+You can use the Project Accelerator from SAP Fiori Tools AI, or Joule, to generate data models, services, sample data, and an SAP Fiori UI for your project based on your business requirements.
 
 You can use the Project Accelerator or Joule to kick-start your SAP Fiori development by directly translating your business requirements into a CAP project with a single SAP Fiori elements application. Your business requirements can consist of text, images, or text and images. The generated application can consist of just a list report page, a list report page with one or multiple object pages, or a form entry object page.
 

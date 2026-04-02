@@ -72,6 +72,9 @@ The control metadata is defined as follows:
 
     Multiple methods are created automatically at runtime, depending on the multiplicity, for example `getWorksetItems`, `insertWorksetItem`, `addWorksetItem`, `removeWorksetItem`, `removeAllWorksetItems`, `indexOfWorksetItem`, `destroyWorksetItems`. These methods have a default implementation which does everything to handle the aggregation properly, but they can be overridden and extended by the control implementation.
 
+    > ### Caution:  
+    > Destroying an aggregation by calling `destroyAggregation` \(or indirectly via `destroyXYZ`\) does not call the named aggregation mutators \(`setXYZ` for a `0..1` aggregation, `removeXYZ` for a `0..n` aggregation\) for the aggregated children. Controls that implement side effects in those methods must therefore also implement corresponding side effects in their `destroyXYZ` method.
+
     If you want to mark one aggregation as default aggregation in order to be able to omit the aggregation tag in XML views, you can do this by setting the `defaultAggregation` property to the name of the aggregation as shown in the following code snippet:
 
     ```js

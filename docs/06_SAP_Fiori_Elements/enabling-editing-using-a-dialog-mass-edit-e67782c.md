@@ -2,9 +2,12 @@
 
 # Enabling Editing Using a Dialog \(Mass Edit\)
 
-Mass editing allows end users to simultaneously change multiple objects that share the same editable properties.
+You can enable the mass edit feature to allow users to simultaneously change multiple objects that share the same editable properties.
 
-The values that are changed within the mass edit dialog are applied to all selected records that are editable.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md).
+
+Mass editing allows users to simultaneously change multiple objects that share the same editable properties. The values that are changed within the mass edit dialog are applied to all selected records that are editable.
 
 > ### Note:  
 > -   When the request for each selected instance is sent, the update is executed with the following logic:
@@ -14,9 +17,9 @@ The values that are changed within the mass edit dialog are applied to all selec
 >     -   Individual records are only updated if all fields can be updated.
 > 
 > 
-> -   In the list report, mass edit is available for active records that don't have unsaved drafts from any end user.
+> -   On the list report page, mass edit is available for active records that don't have unsaved drafts from any user.
 > 
 > -   To enhance performance, application developers must explicitly specify the fields to be displayed in the mass edit dialog.
 
-Using the mass edit dialog is only available in the list report. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) on the List Report Page](enabling-editing-using-a-dialog-mass-edit-on-the-list-report-page-c7be740.md).
+Using the mass edit dialog is only available on the list report page. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) on the List Report Page](enabling-editing-using-a-dialog-mass-edit-on-the-list-report-page-7cc4f04.md).
 

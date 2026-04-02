@@ -4,9 +4,6 @@
 
 You can export a table into a spreadsheet or to PDF.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4. For more information about the export option in SAP Fiori elements for OData V2, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
-
 
 
 <a name="loio4bab6f2043814257974b52d4dafe1dcd__section_jy3_4pg_mtb"/>

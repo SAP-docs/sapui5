@@ -2,6 +2,8 @@
 
 # Using Messages
 
+Get to know the message types supported by SAP Fiori elements.
+
 The system generates messages in response to what users do in the SAP system. A message presents information, an instruction, or a warning to users in a given situation.
 
 Back-end systems can generate either a state message or a transition message.
@@ -10,56 +12,20 @@ Back-end systems can generate either a state message or a transition message.
 
     A state message refers to the state of an instance, for example when a user tries to activate an object with field values that return an error like "Amount must not be negative". These messages are displayed on the UI until the state of the related instance has been corrected, for example by changing the amount attribute to a positive value. The messages are displayed to the user and also persisted in the back-end system.
 
-    State messages are not expected or supported in the list report and on the object page \(or subobject page\) in display mode. In edit mode of the object page \(or subobject page\), state messages are shown in the message popover. The popover only shows the message of the current object and its subtree, but not the messages from objects above that level. Client-side validation messages are also shown here \(for example, when the user enters a value that doesn't match the expected format of the field\).
+    State messages are not expected or supported on the list report page and on the object page \(or subobject page\) in display mode. In edit mode of the object page \(or subobject page\), state messages are shown in the message popover. The popover only shows the message of the current object and its subtree, but not the messages from objects above that level. Client-side validation messages are also shown here \(for example, when the user enters a value that doesn't match the expected format of the field\).
 
 -   Transition message
 
     A transition message does not affect the state of the object, but is rather 'transient' in nature and refers only to the last action that was executed, for example, "Document can't be printed as printer is not available" or "Order cannot be released because the specified quantity is not available in stock". Transition messages are not stored in the back end and are only sent in response to the specific request \(fire and forget\).
 
 
-
-
-<a name="loio239b1922758645e7b451e01ded7f56bc__section_jlv_bxt_jbc"/>
-
-## Back-End Validation Messages After a Field Change
-
-Use input validations moderately, as they can slow down the response time and unnecessarily prevent the end user from providing incomplete entries in the draft status.
-
-Input must be validated before the draft object is activated, or when the end user uses the [Enter\] key or *Validation* button on mobile devices. The validation process must return state messages for the fields that have invalid values. If there are invalid values in any fields, the draft is not activated and the end user returns to the draft version to correct the values. After the user corrects the value in a field, the back end must validate each changed field again and remove or display a state message corresponding to that field.
-
-> ### Note:  
-> You can configure multiple targets in a single message rather than configuring each target in multiple messages. This type of configuration must be used only during special scenarios, for example, some fields might be correct individually but are erroneous when considered collectively, like when the start date value surpasses the end date value. Another scenario is while highlighting the unit of measure value of an associated erroneous field. In these scenarios, you must ensure that the fields corresponding to different targets are on the same page in the UI.
-
-
-
-<a name="loio239b1922758645e7b451e01ded7f56bc__section_hhy_fsm_vsb"/>
-
-## Handling of 412 Messages \("Precondition Failed"\)
-
-Messages of this type allow users to retry the action that triggered the message by ignoring the 412 warnings. For more information, see [Confirmation Popups](confirmation-popups-9a53662.md).
-
-
-
-<a name="loio239b1922758645e7b451e01ded7f56bc__section_otc_1xw_cnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-Transition messages are always shown in the message dialog - this is true also in edit mode of an object page. Draft operations are handled like actions, for example, activate, prepare, or validate operations.
-
-> ### Note:  
-> Avoid raising transition messages during prepare and validate operations. The user sees them in a dialog box and this UI behavior is not needed in edit mode.
+For more information about the different transport channels for the different kinds of messages and about the lifecycle management of these messages, see [Server Messages in the OData V4 Model](../04_Essentials/server-messages-in-the-odata-v4-model-fbe1cb5.md).
 
 
 
 <a name="loio239b1922758645e7b451e01ded7f56bc__section_zxr_fxw_cnb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
-
-For more information about the different transport channels for the different kinds of messages and about the lifecycle management of these messages, see [Server Messages in the OData V4 Model](../04_Essentials/server-messages-in-the-odata-v4-model-fbe1cb5.md).
-
-
-
-### State Messages
+## State Messages
 
 State messages are always sent with the body in a complex type, meaning you can annotate the name of the message using `@com.sap.vocabularies.Common.v1.Messages`, but only if requested from the client. Once requested, the model removes the existing state messages for the current entity and fills the message model again with the returned ones from the back end.
 
@@ -109,28 +75,30 @@ Actions that return an entity with an annotated message property are likely to a
 
 
 
-### Bound and Unbound Messages
+## Bound and Unbound Messages
 
 SAP Fiori elements provides two main types of message handling, depending on whether the incoming messages are bound, that is, specific to an instance \(for example, the sales order that was chosen for the action to be executed\) or unbound, that is, not related to a specific instance \(for example "No new sales order can be created until the end of this quarter."\).
 
 Unbound messages are always considered as transition messages.
 
-– Handling Bound Messages –
+
+
+### Handling Bound Messages
 
 Bound messages \(both state and transition\) are shown in a message popover in edit mode. The message popover allows the display of a summarized list of different types of bound messages. In addition, it provides an organized way to navigate to messages and view the details. The messages for subitems are also shown. Messages are grouped based on the name of the message group the current item belongs to, or else categorized under 'General'.
 
-Bound transition messages are shown in the message dialog in the list report and on the object page \(or subobject page\) in display mode. State messages are not supported. If there is exactly one transition success message, the message is shown in a message toast.
+Bound transition messages are shown in the message dialog on the list report page and on the object page \(or subobject page\) in display mode. State messages are not supported. If there is exactly one transition success message, the message is shown in a message toast.
 
 Bound transition messages, unlike state messages, are always removed whenever the user triggers a new action or changes data.
 
-Usage
+**Usage**
 
 -   You want to display multiple messages to the user.
 
 -   You do not want to interrupt the user flow while still retaining the messages corresponding to the operations they perform.
 
 
-Layout: Message Button
+**Layout: Message Button**
 
 -   You want to display multiple messages to the user.
 
@@ -141,7 +109,7 @@ Layout: Message Button
 -   The message button is colored to indicate the highest severity among all the incoming bound messages. In addition, it displays the total count of error messages.
 
 
-Layout: Message Popover
+**Layout: Message Popover**
 
 The message popover consists of the following components:
 
@@ -168,16 +136,18 @@ The message popover consists of the following components:
 
 Navigation is also supported from the messages. This allows end users to navigate directly to the place where the error/warning occurs on the UI by simply clicking on the respective message in the message popover.
 
-– Handling Unbound Messages –
+
+
+### Handling Unbound Messages
 
 A message dialog displays a summarized list of different types of unbound messages \(messages that are not associated with any specific instance, for example, a message like "No new sales order can be created since the system is under maintenance until the end of the week."\). It provides an organized way to navigate and explore the technical details of every message. It automatically displays messages related to a user action connected to the back end, or to service failures or errors.
 
-Usage
+**Usage**
 
 -   You want to display unbound messages that provide immediate feedback to end users on an operation they performed.
 
 
-Layout: Message Dialog
+**Layout: Message Dialog**
 
 The message dialog consists of the following components:
 
@@ -202,7 +172,28 @@ The message dialog consists of the following components:
 
 
 
-### Special Handling of 503 Messages \("Service Unavailable" \)
+<a name="loio239b1922758645e7b451e01ded7f56bc__section_jlv_bxt_jbc"/>
+
+## Back-End Validation Messages After a Field Change
+
+Use input validations moderately, as they can slow down the response time and unnecessarily prevent the end user from providing incomplete entries in the draft status.
+
+Input must be validated before the draft object is activated, or when the end user uses the [Enter\] key or *Validation* button on mobile devices. The validation process must return state messages for the fields that have invalid values. If there are invalid values in any fields, the draft is not activated and the end user returns to the draft version to correct the values. After the user corrects the value in a field, the back end must validate each changed field again and remove or display a state message corresponding to that field.
+
+> ### Note:  
+> You can configure multiple targets in a single message rather than configuring each target in multiple messages. This type of configuration must be used only during special scenarios, for example, some fields might be correct individually but are erroneous when considered collectively, like when the start date value surpasses the end date value. Another scenario is while highlighting the unit of measure value of an associated erroneous field. In these scenarios, you must ensure that the fields corresponding to different targets are on the same page in the UI.
+
+
+
+<a name="loio239b1922758645e7b451e01ded7f56bc__section_hhy_fsm_vsb"/>
+
+## Handling of 412 Messages \("Precondition Failed"\)
+
+Messages of this type allow users to retry the action that triggered the message by ignoring the 412 warnings. For more information, see [Confirmation Popups](confirmation-popups-9a53662.md).
+
+
+
+## Special Handling of 503 Messages \("Service Unavailable" \)
 
 When the back end is not available, the gateway typically throws an error type 503: "Service Unavailable". Such errors are handled as follows:
 
@@ -220,7 +211,7 @@ When the back end is not available, the gateway typically throws an error type 5
 
 
 
-### Using Status Messages on the Object Page
+## Using Status Messages on the Object Page
 
 Based on information received from the back end, we show a message strip on the object page with a status message for the object whenever it's relevant to the entire object \(and not to a child entity or a specific field, for example\). The color of the message strip is derived from the criticality of the message. You can hide the message strip or display a specific message using the `ExtensionAPI`. For more information about the `ObjectPage.ExtensionAPI`, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ObjectPage.ExtensionAPI/methods/showMessages).
 

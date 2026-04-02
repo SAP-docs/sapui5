@@ -11,7 +11,7 @@ The following restrictions apply:
 <tr>
 <td valign="top">
 
-Columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime` support multiple calendars as defined by `module:sap/base/18n/date/CalendarType`. However, not all values of the `module:sap/base/18n/date/CalendarType` enumeration are supported. For more information about supported values for the `calendar` property for columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime`, see [`Date`, `Time`, and `DateTime`.](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b) 
+Columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime` support multiple calendars as defined by `module:sap/base/i18n/date/CalendarType`. However, not all values of the `module:sap/base/i18n/date/CalendarType` enumeration are supported. For more information about supported values for the `calendar` property for columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime`, see [`Date`, `Time`, and `DateTime`.](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b) 
 
 </td>
 </tr>

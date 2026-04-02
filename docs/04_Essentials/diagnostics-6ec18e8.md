@@ -4,7 +4,7 @@
 
 The *Diagnostics* window available in SAPUI5 is a support tool that runs within an existing SAPUI5 app.
 
-To open *Diagnostics*, use the following [shortcuts](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md): [CTRL\] + [SHIFT\] + [Alt\] /[Option\] + [S\]  in the app.
+To open the *Diagnostics* window, use the following [shortcuts](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md): [CTRL\] + [SHIFT\] + [Alt\] /[Option\] + [S\]  in the app.
 
 ![](../03_Get-Started/images/Diagnostics_Window_5ceb62a.png)
 
@@ -370,7 +370,9 @@ For example, support teams can use the data to identify which change is causing 
 
 ## Anonymize User IDs
 
-You can select the checkbox to anonymize user IDs in the data, such as those of users who have made changes to the application: ![](images/Anonymize_User_IDs_8163102.png)
+You can select the checkbox to anonymize user IDs in the data, such as those of users who have made changes to the application :
+
+![](images/Diagnostics_Flexibility_screenshot_2026_8c492fa.png)
 
 
 
@@ -379,6 +381,13 @@ You can select the checkbox to anonymize user IDs in the data, such as those of 
 ## Download Flexibility Data
 
 When you press this button, a JSON file downloads to your machine. It contains the flexibility data from the current application. You can examine this data or send it to support for troubleshooting. Make sure to review the file contents for any personal or confidential data before sharing..
+
+You can export data in two formats:
+
+-   *Full Data Export -* Exports all data, including the ability to revert applied changes.
+-   *Reduced Data Export -* Exports a limited set of data with less flexibility.
+
+Exporting the full data set is recommended. Exporting the reduced data set is required as a fallback.
 
 
 

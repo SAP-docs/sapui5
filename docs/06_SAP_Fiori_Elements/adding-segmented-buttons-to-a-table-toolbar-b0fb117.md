@@ -4,6 +4,9 @@
 
 You can add segmented buttons to the toolbar to enable switching between the table content using a selection variant annotation.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md).
+
 You can associate every button of the segmented buttons \(or every list item in the select box\) with a selection variant that filters the table according to the selection variant filters once a user has clicked it. This means that the user has multiple views in a single table of the object page. You can enable this feature for any table on the object page.
 
 To implement this feature, make a `"quickVariantSelection"` entry in the manifest. See the separate sections below for further details.
@@ -189,7 +192,6 @@ The following manifest settings are required for adding segmented buttons:
 >       "SalesOrderItemsID": {
 >         "navigationProperty": "to_Item",
 >         "entitySet": "C_STTA_SalesOrderItem_WD_20",
->         "createMode": "inline",
 >         "quickVariantSelection": {
 >           "showCounts": true,
 >           "variants": {
@@ -205,7 +207,6 @@ The following manifest settings are required for adding segmented buttons:
 >         }
 >       }
 >     },
->     "showRelatedApps": true
 >   }
 > }
 > 
@@ -216,5 +217,5 @@ To show the number of records available next to the title of the segmented butto
 **Related Information**  
 
 
-[Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0f6901e.md "You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.")
+[Defining Multiple Views on a List Report Page Table - Single Table Mode](defining-multiple-views-on-a-list-report-page-table-single-table-mode-0f6901e.md "You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.")
 

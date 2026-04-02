@@ -2,7 +2,7 @@
 
 # Configuring Filter Fields
 
-You can configure filter fields to ensure they only accept either a single value, multiple values, or a range of values. You can achieve this by configuring the filter restriction annotation as described in the specific sections.
+You can configure filter fields to ensure they only accept either a single value, multiple values, or a range of values. You can achieve this by configuring the filter restriction annotation.
 
 
 
@@ -30,39 +30,9 @@ For example, you can copy the values from the *Sales Order No.:* field and paste
 
 
 
-<a name="loiof5dcb29da3bf4e0091eba3e7ccef4580__section_amq_ynw_xmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Filter Restrictions
-
-You can control the filter field configuration using the `sap:filter-restriction` annotation as shown in the following sample code:
-
-> ### Sample Code:  
-> `sap:filter-restriction`
-> 
-> ```
-> <Property Name="StartDate" Type="Edm.DateTime" sap:display-format="Date" 
-> sap:aggregation-role="dimension" sap:label="Date" sap:filter-restriction="single-value"/>
-> 
-> <Property Name="StartDate" Type="Edm.String" sap:semantics="yearmonthday" 
-> sap:aggregation-role="dimension" sap:label="Date" sap:filter-restriction="single-value"/>
-> ```
-
-> ### Remember:  
-> If no filter-restriction is provided, the filter field is treated as a multi-valued field.
-
-
-
 <a name="loiof5dcb29da3bf4e0091eba3e7ccef4580__section_htd_5y1_y5b"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Filter Restrictions
+## Filter Restrictions
 
 You can control the filter field configuration using the `FilterRestrictions` as shown in the following sample code:
 
@@ -160,7 +130,7 @@ If you want to make a filter field required, proceed as shown in the following s
 
 
 
-### Filter Restrictions for Filter Field in Navigation Entity
+## Filter Restrictions for Filter Field in Navigation Entity
 
 You can annotate the `FilterRestriction` for a filter field in a navigation entity using either of the following approaches:
 
@@ -542,7 +512,9 @@ You can annotate the `FilterRestriction` for a filter field in a navigation enti
 >        @Consumption.filter.selectionType: #INTERVAL
 > ```
 
-**Prioritization**
+
+
+### Prioritization
 
 If the annotation holds more than one of these approaches, the filter restrictions are merged from different approaches for each field. If there's an annotation with a higher priority, it overrides the annotation with a lower priority for the same field. The prioritization is as follows:
 
@@ -568,7 +540,7 @@ If the annotation holds more than one of these approaches, the filter restrictio
 
 
 
-### Strict Filtering of Unit of Measure Fields
+## Strict Filtering of Unit of Measure Fields
 
 Strict filtering requires users to enter a single value in the unit of measure fields when filtering for measure field values, such as *Amount* or *Quantity*. Strict filtering is enabled by default. You can use the `disableStrictUomFiltering` annotation to disable strict filtering as shown in the following sample code:
 

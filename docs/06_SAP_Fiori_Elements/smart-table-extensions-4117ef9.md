@@ -2,7 +2,7 @@
 
 # Smart Table Extensions
 
-Define custom actions for tables by configuring the annotation and `manifest.json` files.
+You can define custom actions for tables by configuring the annotation and `manifest.json` files.
 
 
 
@@ -13,25 +13,30 @@ Use `onBeforeRebindTableExtension` to define app-specific logic before the table
 In the `manifest.json` file, define the `sap.ui.controllerExtensions` and extend ALP controller `sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage` as shown in the following sample code:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
+> 
 > "sap.ui5": {
->     "_version": "1.1.0",
-> 	…
-> 	…
-> "extends": {
-> 		"extensions": {
-> 		"sap.ui.controllerExtensions": {
-> 			"sap.suite.ui.generic.template.AnalyticalListPage.controller.AnalyticalListPage": {
-> 				"controllerName": "sap.poc.ftu.apps.alr.ext.controller.AnalyticalListPageExt",
-> 				"sap.ui.generic.app": {
-> 					…
-> 					…
+>     "extends": {
+>         "extensions": {
+>             "sap.ui.controllerExtensions": {
+>                 "sap.suite.ui.generic.template.AnalyticalListPage.controller.AnalyticalListPage": {
+>                     "controllerName": "sap.poc.ftu.apps.alr.ext.controller.AnalyticalListPageExt",
+>                     "sap.ui.generic.app": {   
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
 > ```
 
 Define the extended behavior in the extension method. This enables ALP to pass the event object for extracting controls and other details.
 
 > ### Sample Code:  
 > ```
+> 
 > sap.ui.define([], function() {
 >     return {
 >         onBeforeRebindTableExtension: function(oEvent) {
@@ -48,9 +53,11 @@ Define the extended behavior in the extension method. This enables ALP to pass t
 In the `manifest.json` file, define `sap.ui.viewExtensions` to extend ALP view and to create custom columns. Configure `sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage` to extend the ALP view and `AnalyticalTableColumnsExtension` to extended columns and its fragments \(define within the app namespace\) .
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
+> 
 > "sap.ui5": {
->     "_version": "1.1.0",
 >     "extends": {
 >         "extensions": {
 >             "sap.ui.viewExtensions": {
@@ -120,7 +127,7 @@ ALP allows applications to do conditional navigation using the `onListNavigation
 **Related Information**  
 
 
-[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "This section provides some of the advance configurations and extensions for your application.")
+[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your app.")
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md "Define custom actions by using the extensions in the manifest.json file. You can also define these custom actions so that they appear on charts, tables, or header toolbars based on the filter property value (chart/table/global).")
+[Defining Custom Actions](defining-custom-actions-c3de5c0.md "You can define custom actions by using extensions in the manifest.json file.")
 

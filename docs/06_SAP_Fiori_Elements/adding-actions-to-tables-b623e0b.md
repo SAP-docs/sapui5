@@ -2,7 +2,9 @@
 
 # Adding Actions to Tables
 
-The table control offers the possibility to show generic actions, such as *Create* and *Delete*, as well as application-specific actions.
+You can add different buttons to tables.
+
+The table control offers the possibility to show generic actions, such as *Create* and *Delete*, as well as app-specific actions.
 
 
 
@@ -10,7 +12,7 @@ The table control offers the possibility to show generic actions, such as *Creat
 
 ## Generic Actions
 
-SAP Fiori elements provides two generic actions \(*Create* and *Delete*\) that can be rendered in the toolbar based on metadata properties `sap:creatable=true` and `sap:deletable=true` of the entity set.
+SAP Fiori elements provides two generic actions \(*Create* and *Delete*\) that can be rendered in the toolbar based on metadata properties of the entity set.
 
 You can control the `Insert` capability for the related entities, that is the enablement of the *Create* button, using the following options:
 
@@ -72,6 +74,25 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 > };
 > ```
 
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> annotate STTA_PROD_MAN.STTA_C_MP_Product with @(
+>   Capabilities.NavigationRestrictions : {
+>     RestrictedProperties : [
+>         {
+>             NavigationProperty : to_ProductText,
+>             InsertRestrictions : {
+>                 Insertable : true
+>             }
+>         }
+>     ]
+>   }
+> );
+> ```
+
 
 
 ### Option 2: Using `InsertRestrictions`
@@ -118,9 +139,125 @@ For more information, see [Enabling Inline Creation Mode or Empty Row Mode for T
 
 
 
+### Showing or Hiding the *Create* Button
+
+You can control the visibility of the *Create* button depending on the `UI.CreateHidden` annotation. The annotation can be a Boolean value or can point to a path. In your annotation, set the path to point to a particular property \(either `true` or `false`\) of the parent object. If the value of the property is `true`, then the *Create* button is hidden; if it's `false`, it's visible.
+
+The following sample code shows you how to hide or show the *Create* button, depending on the `isCreateHidden` property of the parent entity:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="com.c_salesordermanage_sd.EntityContainer/HeaderPartner"> 
+>    <Annotation Term="UI.CreateHidden" Path="owner/isCreateHidden"/> 
+> </Annotations> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.createHidden: #(_Root.isCreateHidden)
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> Annotate com.c_salesordermanage_sd.HeaderPartner with @( UI.CreateHidden: owner.isCreateHidden);
+> ```
+
+
+
+### Working with the `Create` Dialog in `POST`-Based `Create`
+
+When you create new table records using the `POST` mechanism, that is, not using `NewAction`, and provided that the entity set on which the `create` is being performed has visible non-computed key fields, then these fields are brought up in a dialog so that users can enter values before the `create` is performed. Since the key fields are immutable, that is, not changeable after the initial `create`, the dialog is the only chance for users to enter values. The dialog also comes up for the following fields:
+
+-   Key fields that are based on `Edm.GUID`, annotated with `Core.ComputedDefaultValue`, and have a text association
+
+-   Fields that are marked as required for `create` using `InsertRestrictions`/`RequiredProperties`. Note that `InsertRestrictions`/`RequiredProperties`, if they are part of `NavgationRestrictions` of the parent entity, will take precedence over the same annotations directly at the level of the table entity set.
+
+-   Other non-key immutable fields \(non-hidden and non-computed\) in the main entity set
+
+
+> ### Tip:  
+> The dialog does **not** come up when you use inline creation mode.
+
+> ### Sample Code:  
+> XML Annotation for `ComputedDefaultValue`
+> 
+> ```xml
+> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage/ID">
+>     <Annotation Term="Common.Text" String="SalesOrder">
+>         <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+>     </Annotation>
+>     <Annotation Term="Common.Label" String="Sales Order" />
+>     <Annotation Term="Core.ComputedDefaultValue" Bool="true" />
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation for `Core.ComputedDefaultValue`
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation for `ComputedDefaultValue`
+> 
+> ```
+> entity SalesOrderManage @(
+>     title        : 'Manage Sales Order'
+> ) {
+>     key ID : UUID @(
+>             title         : 'Sales Order',
+>             Common        : {
+>                 Text            : SalesOrder,
+>                 TextArrangement : #TextOnly
+>             },
+>             Core.ComputedDefaultValue : true
+>         );
+>     .....
+>     .....
+> }
+> ```
+
+> ### Sample Code:  
+> XML Annotation for `InsertRestrictions`/`RequiredProperties`
+> 
+> ```xml
+> <Annotation Term="Capabilities.InsertRestrictions">
+>     <Record Type="Capabilities.InsertRestrictionsType">
+>         <PropertyValue Property="Insertable" Bool="true"/>
+>         <PropertyValue Property="RequiredProperties">
+>             <Collection>
+>                 <PropertyPath>PurchaseOrderByCustomer</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation for `InsertRestrictions`/`RequiredProperties`
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation for `InsertRestrictions`/`RequiredProperties`
+> 
+> ```
+> InsertRestrictions     : {
+>   Insertable         : true,
+>   RequiredProperties : [PurchaseOrderByCustomer]
+> }
+> ```
+
+
+
 ### Delete Action
 
-The *Delete* button can be seen as an action on the table and it's disabled until a selection is made.
+The *Delete* button can be seen as an action on the table and is disabled until a selection is made.
 
 `DeleteRestrictions` also supports path-based values.
 
@@ -192,43 +329,551 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 
 
 
-### Enable or Disable the *Delete* Button \(Using `deletable-path` Annotations\)
+### Showing or Hiding the *Delete* Button
 
-You can enable or disable the *Delete* button in the list report based on conditions specified in the back-end system. For example, you can disable the deletion for a sales order that has already been paid. In this case, if a user selects an item that can't be deleted, the *Delete* button is disabled. In addition, if the user navigates from this item in the list report to the object page, the *Delete* button is hidden.
+You can control the visibility of the *Delete* button depending on the `UI.DeleteHidden` annotation. The annotation can be a Boolean value or can point to a path. In your annotation, set the path to point to a particular property \(either `true` or `false`\) of the parent object. If the value of the property is `true`, then the *Delete* button is hidden; if it's `false`, it's visible.
 
-In your annotation, set the `deletable-path` to point to a particular property of an object \(entity\) in the back-end system that is either `true` or `false`. If the value of this property is `true`, the *Delete* button is enabled; if it's `false`, it's disabled. If you want to use the `deletable-path` annotation to specify conditions for deletion, you have to ensure that the setting `sap:deletable` isn't present in your annotations.
-
-The following sample code shows you how to set up your annotation to enable or disable the *Delete* button, based on the value of the `Delete_mc` property in the back-end system.
+The following sample code shows you how to hide or show the *Delete* button, depending on the `isDeleteHidden` property of the parent entity.
 
 > ### Sample Code:  
 > XML Annotation
 > 
 > ```xml
-> <Annotations Target="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_Product">
->     <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
->         <Record>
->             <PropertyValue Property="Deletable" Path="Delete_mc"/>
->         </Record>
->     </Annotation>
-> </Annotations>
+> <Annotations Target="com.c_salesordermanage_sd.EntityContainer/HeaderPartner"> 
+>    <Annotation Term="UI.DeleteHidden" Path="owner/isDeleteHidden"/> 
+> </Annotations> 
 > ```
 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
+> ```
+> @UI.deleteHidden: #(_Root.isDeleteHidden)
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> 
-> annotate STTA_C_MP_Product with @(
->     Capabilities.DeleteRestrictions : {
->         Deletable : Delete_mc
->     }
-> );
+> annotate com.c_salesordermanage_sd.SalesOrderManage with @( UI.DeleteHidden: owner.isDeleteHidden);
 > ```
+
+
+
+### Visibility of the *Delete* Button
+
+The following table shows the visibility of the *Delete* button and the enabled/disabled state, based on the navigation restrictions:
+
+****
+
+
+<table>
+<tr>
+<th valign="top">
+
+Restriction on Parent Entity Set: Deletable/Updatable
+
+</th>
+<th valign="top">
+
+Restriction on Table Entity Set: Deletable/Updatable
+
+</th>
+<th valign="top">
+
+Visibility of *Delete* Button
+
+</th>
+<th valign="top">
+
+Delete/Update Enabled
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+undefined
+
+</td>
+<td valign="top">
+
+undefined
+
+</td>
+<td valign="top">
+
+depends on `UI.DeleteHidden`
+
+</td>
+<td valign="top">
+
+enabled
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+undefined
+
+</td>
+<td valign="top">
+
+true
+
+</td>
+<td valign="top">
+
+depends on `UI.DeleteHidden`
+
+</td>
+<td valign="top">
+
+enabled
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+undefined
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+disabled
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+undefined
+
+</td>
+<td valign="top">
+
+<<Path\>\>
+
+</td>
+<td valign="top">
+
+depends on `UI.DeleteHidden`
+
+</td>
+<td valign="top">
+
+depends on <<Path\>\>
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+undefined
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+N/A
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+true
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+N/A
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+N/A
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+<<Path\>\>
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+N/A
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+true
+
+</td>
+<td valign="top">
+
+undefined
+
+</td>
+<td valign="top">
+
+depends on `UI.DeleteHidden`
+
+</td>
+<td valign="top">
+
+enabled
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+true
+
+</td>
+<td valign="top">
+
+true
+
+</td>
+<td valign="top">
+
+depends on `UI.DeleteHidden`
+
+</td>
+<td valign="top">
+
+enabled
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+true
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+depends on `UI.DeleteHidden`
+
+</td>
+<td valign="top">
+
+enabled
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+true
+
+</td>
+<td valign="top">
+
+<<Path\>\>
+
+</td>
+<td valign="top">
+
+depends on `UI.DeleteHidden`
+
+</td>
+<td valign="top">
+
+enabled
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+<<Path\>\>
+
+</td>
+<td valign="top">
+
+undefined
+
+</td>
+<td valign="top">
+
+depends on `UI.DeleteHidden`
+
+</td>
+<td valign="top">
+
+depends on <<Path\>\>
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+<<Path\>\>
+
+</td>
+<td valign="top">
+
+true
+
+</td>
+<td valign="top">
+
+depends on `UI.DeleteHidden`
+
+</td>
+<td valign="top">
+
+depends on <<Path\>\>
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+<<Path\>\>
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+depends on `UI.DeleteHidden`
+
+</td>
+<td valign="top">
+
+depends on <<Path\>\>
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+<<Path\>\>
+
+</td>
+<td valign="top">
+
+<<Path\>\>
+
+</td>
+<td valign="top">
+
+depends on `UI.DeleteHidden`
+
+</td>
+<td valign="top">
+
+depends on <<Path\>\> of parent entity set restrictions
+
+</td>
+</tr>
+</table>
+
+
+
+### Handling Delete Restrictions on the List Report Page
+
+In the list report page, the delete restrictions set on a table entity are evaluated for the saved version of the entity and not for the draft. So, when the user selects a non-deletable entity with an existing draft, the *Delete* button is still enabled. The delete action affects only the draft, not the saved version.
+
+![](images/Delete_Restrictions_Message_1ad6f21.png)
+
+
+
+### Defining the Order of Standard Actions
+
+You can define the order of standard actions in the table toolbar. To do so, define the properties `anchor` and `position` for each action corresponding to the action key in the `manifest.json` file. The following table shows the keys and the corresponding standard actions:
+
+
+<table>
+<tr>
+<th valign="top">
+
+Key
+
+</th>
+<th valign="top">
+
+Standard Action
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`Create`
+
+</td>
+<td valign="top">
+
+`StandardAction::Create`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Delete`
+
+</td>
+<td valign="top">
+
+`StandardAction::Delete`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`MassEdit`
+
+</td>
+<td valign="top">
+
+`StandardAction::MassEdit`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Delete`
+
+</td>
+<td valign="top">
+
+`StandardAction::'Insights'`
+
+</td>
+</tr>
+</table>
+
+> ### Sample Code:  
+> ```
+> { "sap.ui5": {
+>      "routing": { 
+>         "targets": { 
+>             "SalesOrderManageList": { 
+>                 "options": { 
+>                     "settings": { 
+>                         "controlConfiguration": { 
+>                             "@com.sap.vocabularies.UI.v1.LineItem": { 
+>                                 "actions": { "StandardAction::Delete": { 
+>                                     "position": { 
+>                                         "anchor": "StandardAction::Create", 
+>                                         "placement": "Before" 
+>                                         } 
+>                                     }, 
+>                                     "CustomAction": { 
+>                                         "press": "SalesOrder.custom.CustomActions.CustomAction1", 
+>                                         "enabled": true, "text": "Custom Action", 
+>                                         "command": "COMMON", "position": { 
+>                                             "anchor": "StandardAction::Create", 
+>                                             "placement": "After" 
+>                                             } 
+>                                         } 
+>                                     } 
+>                                 } 
+>                             } 
+>                         } 
+>                     } 
+>                 } 
+>             } 
+>         } 
+>     } 
+> }
+> ```
+
+
+
+### Enabling the `Update` Feature for the Table
+
+You can control the editability of table fields using `UpdateRestrictions`.
+
+```xml
+<Annotations Target="com.c_salesordermanage_sd.EntityContainer/Material">
+    <Annotation Term="Capabilities.UpdateRestrictions">
+        <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Path="owner.isUpdatable"/>
+        </Record>
+    </Annotation>
+</Annotations>
+
+```
 
 
 
@@ -238,11 +883,15 @@ The following sample code shows you how to set up your annotation to enable or d
 
 Tables can also show application-configured actions. These can either be custom actions configured in the `manifest.json`, or can come from annotations.
 
-**Custom Actions \(`manifest.json`\)**
 
-Applications can define custom table toolbar actions using enhancements to the `manifest.json` file. For more information, see the corresponding sections in [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
-**Annotation-Based Actions**
+### Custom Actions \(`manifest.json`\)
+
+Applications can define custom table toolbar actions using enhancements to the `manifest.json` file. For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
+
+
+
+### Annotation-Based Actions
 
 The following types of actions are supported:
 
@@ -461,292 +1110,9 @@ In the example above, the order in which the record types are presented in the a
 
 
 
-<a name="loiob623e0bbbb2b4147b2d0516c463921a0__section_cgn_hlf_nmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Delete Action
-
-The *Delete* button is shown by default if `DeleteRestrictions` is not provided. Note that if you want to specify conditions for deletion \(using the `deletable-path` annotation\), you must ensure that the setting `sap:deletable` has not been made.
-
-
-
-### Inline Deletion of Rows in Tables
-
-You can enable inline deletion list report and object page tables. To do so, set the `inlineDelete` property to `true` for `tableSettings` as shown in the following sample code:
-
-> ### Sample Code:  
-> ```
-> 
-> "tableSettings": {
->      "inlineDelete": true
-> }
-> 
-> ```
-
-After you enable this setting, a *Delete* button is displayed at the end of the row in the table.
-
-![](images/Inline_Deletion_3eaeca8.png)
-
-> ### Note:  
-> -   The inline deletion is only possible for responsive table types.
-> 
-> -   The `inlineDelete` and `multiselect` cannot be enabled simultaneously. If both are enabled, the application fails to load.
-> 
-> -   If you have set delete restrictions and the restriction path property is set to false for the item, the item cannot be deleted.
-
-
-
 <a name="loiob623e0bbbb2b4147b2d0516c463921a0__section_b1k_3lf_nmb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Enabling the *Create* button using `NavigationRestrictions` 
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate STTA_PROD_MAN.STTA_C_MP_Product with @(
->   Capabilities.NavigationRestrictions : {
->     RestrictedProperties : [
->         {
->             NavigationProperty : to_ProductText,
->             InsertRestrictions : {
->                 Insertable : true
->             }
->         }
->     ]
->   }
-> );
-> ```
-
-
-
-### Showing or Hiding the *Create* Button
-
-You can control the visibility of the *Create* button depending on the `UI.CreateHidden` annotation. The annotation can be a Boolean value or can point to a path. In your annotation, set the path to point to a particular property \(either `true` or `false`\) of the parent object. If the value of the property is `true`, then the *Create* button is hidden; if it's `false`, it's visible.
-
-The following sample code shows you how to hide or show the *Create* button, depending on the `isCreateHidden` property of the parent entity:
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotations Target="com.c_salesordermanage_sd.EntityContainer/HeaderPartner"> 
->    <Annotation Term="UI.CreateHidden" Path="owner/isCreateHidden"/> 
-> </Annotations> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.createHidden: #(_Root.isCreateHidden)
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> Annotate com.c_salesordermanage_sd.HeaderPartner with @( UI.CreateHidden: owner.isCreateHidden);
-> ```
-
-
-
-### Showing or Hiding the *Delete* Button
-
-You can control the visibility of the *Delete* button depending on the `UI.DeleteHidden` annotation. The annotation can be a Boolean value or can point to a path. In your annotation, set the path to point to a particular property \(either `true` or `false`\) of the parent object. If the value of the property is `true`, then the *Delete* button is hidden; if it's `false`, it's visible.
-
-The following sample code shows you how to hide or show the *Delete* button, depending on the `isDeleteHidden` property of the parent entity.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotations Target="com.c_salesordermanage_sd.EntityContainer/HeaderPartner"> 
->    <Annotation Term="UI.DeleteHidden" Path="owner/isDeleteHidden"/> 
-> </Annotations> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.deleteHidden: #(_Root.isDeleteHidden)
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> annotate com.c_salesordermanage_sd.SalesOrderManage with @( UI.DeleteHidden: owner.isDeleteHidden);
-> ```
-
-
-
-### Handling Delete Restrictions in the List Report
-
-In the list report, the delete restrictions set on a table entity are evaluated for the saved version of the entity and not for the draft. So, when the user selects a non-deletable entity with an existing draft, the *Delete* button is still enabled. The delete action affects only the draft, not the saved version.
-
-![](images/Delete_Restrictions_Message_1ad6f21.png)
-
-
-
-### Defining the Order of Standard Actions
-
-You can define the order of standard actions in the table toolbar. To do so, define the properties `anchor` and `position` for each action corresponding to the action key in the `manifest.json`. The following table shows the keys and the corresponding standard actions:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Key
-
-</th>
-<th valign="top">
-
-Standard Action
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-`Create`
-
-</td>
-<td valign="top">
-
-`StandardAction::Create`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`Delete`
-
-</td>
-<td valign="top">
-
-`StandardAction::Delete`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`MassEdit`
-
-</td>
-<td valign="top">
-
-`StandardAction::MassEdit`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`Delete`
-
-</td>
-<td valign="top">
-
-`StandardAction::'Insights'`
-
-</td>
-</tr>
-</table>
-
-> ### Sample Code:  
-> ```
-> { "sap.ui5": {
->      "routing": { 
->         "targets": { 
->             "SalesOrderManageList": { 
->                 "options": { 
->                     "settings": { 
->                         "controlConfiguration": { 
->                             "@com.sap.vocabularies.UI.v1.LineItem": { 
->                                 "actions": { "StandardAction::Delete": { 
->                                     "position": { 
->                                         "anchor": "StandardAction::Create", 
->                                         "placement": "Before" 
->                                         } 
->                                     }, 
->                                     "CustomAction": { 
->                                         "press": "SalesOrder.custom.CustomActions.CustomAction1", 
->                                         "enabled": true, "text": "Custom Action", 
->                                         "command": "COMMON", "position": { 
->                                             "anchor": "StandardAction::Create", 
->                                             "placement": "After" 
->                                             } 
->                                         } 
->                                     } 
->                                 } 
->                             } 
->                         } 
->                     } 
->                 } 
->             } 
->         } 
->     } 
-> }
-> ```
-
-
-
-### Enabling the `Update` or `Delete` Feature for the Table
-
-You can control the editability of table fields using `UpdateRestrictions`.
-
-```xml
-<Annotations Target="com.c_salesordermanage_sd.EntityContainer/Material">
-    <Annotation Term="Capabilities.UpdateRestrictions">
-        <Record Type="Capabilities.UpdateRestrictionsType">
-            <PropertyValue Property="Updatable" Path="owner.isUpdatable"/>
-        </Record>
-    </Annotation>
-</Annotations>
-
-```
-
-You can control the `Delete` functionality of tables by using `DeleteRestrictions`.
-
-```xml
-<Annotations Target="com.c_salesordermanage_sd.EntityContainer/Material">
-    <Annotation Term="Capabilities.DeleteRestrictions">
-        <Record Type="Capabilities.DeleteRestrictionsType">
-            <PropertyValue Property="Deletable" Path="owner.isDeletable"/>
-        </Record>
-    </Annotation>
-</Annotations>
-
-```
-
-> ### Sample Code:  
-> CDS annotation for `deletable-path`
-> 
-> ```
-> annotate com.c_salesordermanage_sd.SalesOrderManagewith @Capabilities: {Insertable: false, Deletable:'isDeletable', Updatable: true}
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation for `deletable-path`
-> 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
-
-
-
-### Enabling Single Selection for a Bound Action
+## Enabling Single Selection for a Bound Action
 
 Applications can control the number of table records that need to be selected for the bound action to be enabled. For more information, see [Actions](actions-cbf16c5.md). By default, for a bound action, this is 1 or more applicable records \(that is, 1 or more records for which `OperationAvailable` evaluates to `true`\). However, applications can change this configuration so that the action is enabled only when a single applicable record is selected. If more records are selected, then the action is disabled again. Applications can do this by specifying the `enableOnSelect` property in the `manifest.json`:
 
@@ -783,92 +1149,7 @@ Applications can control the number of table records that need to be selected fo
 
 
 
-### Working with the `Create` Dialog in `POST`-Based `Create`
-
-When you create new table records using the `POST` mechanism, that is, not using `NewAction`, and provided that the entity set on which the `create` is being performed has visible non-computed key fields, then these fields are brought up in a dialog so that users can enter values before the `create` is performed. Since the key fields are immutable, that is, not changeable after the initial `create`, the dialog is the only chance for users to enter values. The dialog also comes up for the following fields:
-
--   key fields that are based on `Edm.GUID`, annotated with `Core.ComputedDefaultValue`, and have a text association
-
--   fields that are marked as required for `create` using `InsertRestrictions`/`RequiredProperties`. Note that `InsertRestrictions`/`RequiredProperties`, if they are part of `NavgationRestrictions` of the parent entity, will take precedence over the same annotations directly at the level of the table entity set.
-
--   other non-key immutable fields \(non-hidden and non-computed\) in the main entity set
-
-
-> ### Tip:  
-> The dialog does **not** come up when you use inline creation mode.
-
-> ### Sample Code:  
-> XML Annotation for `ComputedDefaultValue`
-> 
-> ```xml
-> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage/ID">
->     <Annotation Term="Common.Text" String="SalesOrder">
->         <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
->     </Annotation>
->     <Annotation Term="Common.Label" String="Sales Order" />
->     <Annotation Term="Core.ComputedDefaultValue" Bool="true" />
-> </Annotations>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation for `Core.ComputedDefaultValue`
-> 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
-
-> ### Sample Code:  
-> CAP CDS Annotation for `ComputedDefaultValue`
-> 
-> ```
-> entity SalesOrderManage @(
->     title        : 'Manage Sales Order'
-> ) {
->     key ID : UUID @(
->             title         : 'Sales Order',
->             Common        : {
->                 Text            : SalesOrder,
->                 TextArrangement : #TextOnly
->             },
->             Core.ComputedDefaultValue : true
->         );
->     .....
->     .....
-> }
-> ```
-
-> ### Sample Code:  
-> XML Annotation for `InsertRestrictions`/`RequiredProperties`
-> 
-> ```xml
-> <Annotation Term="Capabilities.InsertRestrictions">
->     <Record Type="Capabilities.InsertRestrictionsType">
->         <PropertyValue Property="Insertable" Bool="true"/>
->         <PropertyValue Property="RequiredProperties">
->             <Collection>
->                 <PropertyPath>PurchaseOrderByCustomer</PropertyPath>
->             </Collection>
->         </PropertyValue>
->     </Record>
-> </Annotation>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation for `InsertRestrictions`/`RequiredProperties`
-> 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
-
-> ### Sample Code:  
-> CAP CDS Annotation for `InsertRestrictions`/`RequiredProperties`
-> 
-> ```
-> InsertRestrictions     : {
->   Insertable         : true,
->   RequiredProperties : [PurchaseOrderByCustomer]
-> }
-> ```
-
-
-
-### Rendering Buttons with an Icon Instead of Text
+## Rendering Buttons with an Icon Instead of Text
 
 The text for the inline `DataFieldForAction` and the `DataFieldForIntentBasedNavigation` buttons can be replaced with an icon, as specified in the `"IconUrl"` annotation property. The label of the button then appears as the tooltip of the button.
 
@@ -980,13 +1261,13 @@ The text for the inline `DataFieldForAction` and the `DataFieldForIntentBasedNav
 
 
 
-### Grouping Actions as Menu Buttons
+## Grouping Actions as Menu Buttons
 
 Actions that have a similar business purpose can be grouped together and rendered in the form of menu buttons. For more information, see [Actions](actions-cbf16c5.md).
 
 
 
-### Triggering Actions Connected to a Field Value
+## Triggering Actions Connected to a Field Value
 
 You can trigger an action that is connected to a field value. The field value is displayed as a link. The action to be triggered is defined by the `Action` property.
 

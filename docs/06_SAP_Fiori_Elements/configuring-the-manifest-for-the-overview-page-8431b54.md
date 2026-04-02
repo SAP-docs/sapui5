@@ -4,6 +4,9 @@
 
 You can use the `manifest.json` file for initializing an overview page application.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md).
+
 It defines static information about the application such as its name and the location of various files, and contains configuration parameters that control the application’s behavior, layout, and data handling.
 
 > ### Sample Code:  
@@ -12,8 +15,7 @@ It defines static information about the application such as its name and the loc
 > ```
 > "sap.ovp" : { //section for ovp-specific app manifest settings
 >     "globalFilterModel": "ZModelName", //OData model that contains entity definitions relevant for global filters
->     "globalFilterEntityType": "ZFilterEntityType", //Represents the entity to use as a global filter in the smart filter bar control. Deprecated since SAPUI5 1.54.
->     "globalFilterEntitySet": "ZFilterEntitySet", //Represents the entity set to use as a global filter in the smart filter bar control. Available from SAPUI5 1.54 onwards.
+>     "globalFilterEntitySet": "ZFilterEntitySet", //Represents the entity set to use as a global filter in the smart filter bar control. 
 >     "containerLayout": "resizable", //Represents the layout of the card container.
 >     "smartVariantRequired": true, //Represents a switch to activate smart variant management in the global filters. The default value is true.
 >     "showDateInRelativeFormat": false, //Represents a switch to enable or disable relative/normal date formatting in OVP applications.

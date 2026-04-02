@@ -280,13 +280,13 @@ Displaying timestamps in a specific time zone provided by the back end is done u
 >     core:require="{
 >         DateTimeOffset: 'sap/ui/model/odata/type/DateTimeOffset',
 >         DateTimeWithTimezone: 'sap/ui/model/odata/type/DateTimeWithTimezone',
->         StringType: 'sap/ui/model/odata/type/String'
+>         EdmString: 'sap/ui/model/odata/type/String'
 >     }">
 >     ...
 >     <Text text="{
 >         parts: [
 >             {path: 'json>DateTimeOffset', type: 'DateTimeOffset'},
->             {path: 'json>TimezoneID', type: 'StringType'}
+>             {path: 'json>TimezoneID', type: 'EdmString'}
 >         ],
 >         type: 'DateTimeWithTimezone'
 >      }" />

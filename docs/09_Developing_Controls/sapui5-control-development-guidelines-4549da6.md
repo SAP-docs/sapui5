@@ -12,6 +12,7 @@ Content developers developing SAPUI5 controls should follow the guidelines outli
 
 -   Reuse is good, but carefully compare how many features of the reused control are needed, and how big the impact on performance would be. For example, if a control needs a clickable area, you can simply implement `onclick` and check where the click came from - this has zero impact on performance. Only if you need more features should you think about instantiating and aggregating. For example, you could use a `Button` control and use its `press` event, but this would cost performance.
 
+-   SAPUI5 supports several data sources, such as JSON, XML, or OData. However, you need to make sure that the controls you develop work with the data models that the SAPUI5 application can be expected to use.
 
 
 

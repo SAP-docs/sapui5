@@ -57,12 +57,5 @@ For more information and live examples, see the SAP Fiori development portal at 
 
 
 > ### Note:  
-> For information aboutSAP Fiori elements for OData V2, see [Adding a Custom Message Strip to List Report, Analytical List Page and Object Page Tables](adding-a-custom-message-strip-to-list-report-analytical-list-page-and-object-page-tables-ac540d3.md).
-
-**Related Information**  
-
-
-[Extending List Reports and Object Pages Using App Extensions](extending-list-reports-and-object-pages-using-app-extensions-a892eb8.md "Various framework extension points are available for list reports and object pages.")
-
-[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "This section provides some of the advance configurations and extensions for your application.")
+> For information about SAP Fiori elements for OData V2, see [Adding a Custom Message Strip to List Report Page, Analytical List Page and Object Page Tables](adding-a-custom-message-strip-to-list-report-page-analytical-list-page-and-object-page-ta-ac540d3.md).
 

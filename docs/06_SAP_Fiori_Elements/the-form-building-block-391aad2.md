@@ -2,7 +2,7 @@
 
 # The `Form` Building Block
 
-The `Form` building block provides an easy way to instantiate a form based on a `FieldGroup` annotation.
+You can use the `Form` building block to instantiate a form based on a `FieldGroup` annotation.
 
 
 

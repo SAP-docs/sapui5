@@ -2,7 +2,10 @@
 
 # Extension Points for Subsections on the Object Page
 
-On the object page, you can use extension points to add additional subsections.
+You can use extension points to add additional subsections to the object page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Extension Points for Subsections on the Object Page](extension-points-for-subsections-on-the-object-page-ce8d468.md).
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).
@@ -21,40 +24,44 @@ You can add additional subsections in existing facets:
 -   `ReplaceSubSection`: The extension replaces an existing subsection in a facet.
 
 
-You must specify the subsection in the form of its annotation path. You also have to specify the entitySet name, as the same annotation path may exist for various entity sets. You add this information to the `manifest.json` file, as shown in the following sample code: For more information, see [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-1bfddc3.md).
+You must specify the subsection in the form of its annotation path. You also have to specify the `entitySet` name, as the same annotation path may exist for various entity sets. You add this information to the `manifest.json` file, as shown in the following sample code: For more information, see [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-1bfddc3.md).
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > 
 > "sap.ui.viewExtensions": {
->    "sap.suite.ui.generic.template.ObjectPage.view.Details": {
->       "BeforeSubSection|STTA_C_MP_Product|to_ProductSalesData::com.sap.vocabularies.UI.v1.Chart":{
->          "className": "sap.ui.core.mvc.View",
->          "viewName": "STTA_MP.ext.view.ProductSalesPrice",
->          "type": "XML",
->          "sap.ui.generic.app": {
->             "title": "Target Sales Prices",
->             "enableLazyLoading": true
->          }
->       },
->       "AfterSubSection|STTA_C_MP_Product|to_ProductSalesData::com.sap.vocabularies.UI.v1.LineItem":{
->          "className": "sap.ui.core.mvc.View",
->          "viewName": "STTA_MP.ext.view.ProductSalesPrice",
->          "type": "XML",
->          "sap.ui.generic.app": {
->             "title": "Target Sales Prices",
->             "enableLazyLoading": true
->          }
->      "ReplaceSubSection|STTA_C_MP_Product|to_ProductTextType::com.sap.vocabularies.UI.v1.LineItem":{
->          "className": "sap.ui.core.mvc.View",
->          "viewName": "STTA_MP.ext.view.ProductSalesPrice",
->          "type": "XML",
->          "sap.ui.generic.app": {
->             "title": "Target Sales Prices",
->             "enableLazyLoading": true
->          }
->       },
->     .....
+>     "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+>         "BeforeSubSection|STTA_C_MP_Product|to_ProductSalesData::com.sap.vocabularies.UI.v1.Chart":{
+>             "className": "sap.ui.core.mvc.View",
+>             "viewName": "STTA_MP.ext.view.ProductSalesPrice",
+>             "type": "XML",
+>             "sap.ui.generic.app": {
+>                 "title": "Target Sales Prices",
+>                 "enableLazyLoading": true
+>             }
+>         },
+>         "AfterSubSection|STTA_C_MP_Product|to_ProductSalesData::com.sap.vocabularies.UI.v1.LineItem":{
+>             "className": "sap.ui.core.mvc.View",
+>             "viewName": "STTA_MP.ext.view.ProductSalesPrice",
+>             "type": "XML",
+>             "sap.ui.generic.app": {
+>                 "title": "Target Sales Prices",
+>                 "enableLazyLoading": true
+>             }
+>         },
+>         "ReplaceSubSection|STTA_C_MP_Product|to_ProductTextType::com.sap.vocabularies.UI.v1.LineItem":{
+>             "className": "sap.ui.core.mvc.View",
+>             "viewName": "STTA_MP.ext.view.ProductSalesPrice",
+>             "type": "XML",
+>             "sap.ui.generic.app": {
+>                 "title": "Target Sales Prices",
+>                 "enableLazyLoading": true
+>             }
+>         }
+>     }
+> }
 > 
 > ```
 

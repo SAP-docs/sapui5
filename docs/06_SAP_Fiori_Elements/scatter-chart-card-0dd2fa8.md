@@ -6,6 +6,11 @@ With a scatter chart card, you can visualize the distribution of data points ove
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Scatter Chart](scatter-chart-7471c1f.md).
+
+
+
   
   
 **Example of a Scatter Chart Card**

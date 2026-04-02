@@ -76,9 +76,6 @@ Add a `LineItem` criticality annotation for the line items of the entity type th
 > 
 > ```
 
-> ### Note:  
-> In SAP Fiori elements for OData V2, the field that returns the criticality for analytical tables must be a property and not a dimension.
-
 
 
 > ### Note:  

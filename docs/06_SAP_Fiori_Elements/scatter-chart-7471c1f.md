@@ -2,7 +2,7 @@
 
 # Scatter Chart
 
-With a scatter chart card, you can visualize the distribution of data points over two measures.
+You can render the chart as a a scatter chart, which allows you visualize the distribution of data points over two measures.
 
 
 

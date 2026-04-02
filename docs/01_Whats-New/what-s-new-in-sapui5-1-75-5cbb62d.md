@@ -724,7 +724,7 @@ SAP Fiori Elements
 
 -   **List Report Page Loaded with Data on Launch**
 
-    By default, the list report page is loaded with data when an application is launched. For more information, see [List Report Elements](../06_SAP_Fiori_Elements/list-report-elements-1cf5c7f.md).
+    By default, the list report page is loaded with data when an application is launched. For more information, see [List Report Page](../06_SAP_Fiori_Elements/list-report-page-1cf5c7f.md).
 
 -   **Option to Set Vertical Alignment for Responsive Tables in List Report and Object Pages**
 
@@ -848,6 +848,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

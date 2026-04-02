@@ -209,7 +209,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 -   You can now execute actions with the `Prefer` header `handling=strict`. For more information, see [Strict Handling](../04_Essentials/odata-operations-b54f789.md#loiob54f7895b7594c61a83fa7257fa9d13f__section_SH).
 
--   We now support absolute property bindings of `$count`. Note that this will display the count as it is provided by the server. If a count that includes transient entries is required, the header context has to be used. For more information, see [Binding Collection Inline Count](../04_Essentials/binding-collection-inline-count-77d2310.md).
+-   We now support absolute property bindings of `$count`. Note that this will display the count as it is provided by the server. If a count that includes transient entries is required, the header context has to be used. For more information, see [Binding the Count of a Collection](../04_Essentials/binding-the-count-of-a-collection-77d2310.md).
 
 
 <sub>Changed•Feature•Info Only•1.92</sub>
@@ -632,6 +632,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

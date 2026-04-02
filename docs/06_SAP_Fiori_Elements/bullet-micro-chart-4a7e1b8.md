@@ -2,9 +2,12 @@
 
 # Bullet Micro Chart
 
-The bullet chart features a single, primary measure \(for example, current year-to-date revenue\).
+You can render the micro chart as a bullet micro chart.
 
-It compares the measure value to one or more data point values to enrich its meaning \(for example, compared to a target or a forecast value\), and displays it in the context of qualitative ranges of performance, such as poor, satisfactory, and good.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Bullet Micro Chart](bullet-micro-chart-b915166.md).
+
+The bullet chart displays the evaluation of a single, primary value compared against one or more data point values. For example, a current year-to-date revenue is displayed as below the target revenue for the same period.
 
 ![](images/Bullet_Micro_Chart_9d24d23.png)
 

@@ -9,7 +9,7 @@ You can create property binding changes manually by using the Page Editor. You c
 ## Context
 
 > ### Note:  
-> This procedure is only relevant for the following use cases described in [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md):
+> This procedure is only relevant for the following use cases described in [Adapting the UI: List Report Page and Object Page](adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md):
 > 
 > -   Object page: Show header content in edit mode
 > 
@@ -27,7 +27,7 @@ Perform the following steps to create a property binding change:
 
 2.  Find the property you want to apply an expression to \(such as the visibility of an object page section\). Change the value in the property panel. You can select a value from the drop-down or compose your own expression.
 
-3.  You may already have a change file of type *propertyChange* like in the following example:
+3.  You may already have a change file of type `propertyChange` like in the following example:
 
     ```
     

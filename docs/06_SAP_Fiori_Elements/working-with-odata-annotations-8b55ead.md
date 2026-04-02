@@ -2,7 +2,10 @@
 
 # Working With OData Annotations
 
-Vocabularies and annotations allow you to extend OData services by adding information about how to interpret the OData service and its data.
+You can use vocabularies and annotations to extend the OData services.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Working With OData Annotations](working-with-odata-annotations-83c89cc.md).
 
 For a general introduction to vocabularies and annotations, see the following links:
 
@@ -27,7 +30,7 @@ These annotations are available using a query to the SAP Gateway catalog service
 
 ## Reusability
 
-If the OData service is editable instead of read-only, add annotation elements as needed to activate or control the draft infrastructure. Existing read-only OData services that are annotated, such as fact sheets, can be reused for the list report and object page templates under these circumstances:
+If the OData service is editable instead of read-only, add annotation elements as needed to activate or control the draft infrastructure. Existing read-only OData services that are annotated, such as fact sheets, can be reused for the list report page and object page templates under these circumstances:
 
 -   The annotations have to be stored in the back-end system. They also need to have the life cycle of the data model in the back-end system. Note that facet texts need to be defined in a front-end file after generation.
 
@@ -60,7 +63,7 @@ Each action corresponds to an OData function import.
 ## Field Control
 
 > ### Note:  
-> This is relevant only for list report and object pages, worklists, and analytical list pages.
+> Only relevant for list report pages, object pages, worklists, and analytical list pages.
 > 
 > Field controls are omitted from the list report page since it is a read-only page. In a list report page, field controls are considered only if there are custom actions that reference field controls.
 

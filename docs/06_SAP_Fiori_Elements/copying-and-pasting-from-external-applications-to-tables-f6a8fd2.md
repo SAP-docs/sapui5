@@ -2,7 +2,9 @@
 
 # Copying and Pasting from External Applications to Tables
 
-End users can copy and paste data from external applications or other SAP Fiori elements applications to tables that are editable.
+Users can copy and paste from external applications to tables.
+
+Users can copy and paste data from external applications or other SAP Fiori elements apps to tables that are editable.
 
 The *Copy* button is shown in the table toolbar by default. The *Paste* icon is shown only if the table supports the paste action.
 
@@ -38,30 +40,6 @@ The paste action is available for the following scenarios:
 > -   This feature is not supported in custom tables.
 > 
 > -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Using the Export Button](using-the-export-button-4bab6f2.md).
-
-
-
-<a name="loiof6a8fd2812d9442a9bba2f6fb296c42e__section_u4k_cnp_gnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-The paste function in a smart table is also available if the smart table contains an inline action.
-
-![](images/Excel_copy_paste_5_db3d9d3.png)
-
-Sample data:
-
-![](images/Excel_copy_paste_6_fa98abc.png)
-
-Note that the columns containing inline actions are ignored by the paste operation. Therefore, they must be omitted from the source while copying, as shown in the screenshot.
-
-Read-only columns are also ignored by the paste operation. However, these columns are exported along with the rest of the data when the data is exported to a spreadsheet. They are a part of the format for preparing data in spreadsheets.
-
-
-
-<a name="loiof6a8fd2812d9442a9bba2f6fb296c42e__section_u35_d22_tnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
 
 The paste function is enabled by default on the object page if the creation mode is set to inline or empty row. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 

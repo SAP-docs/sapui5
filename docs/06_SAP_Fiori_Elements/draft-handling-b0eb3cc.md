@@ -2,7 +2,12 @@
 
 # Draft Handling
 
-A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements supports the creation of apps using draft handling.
+You can configure how your SAP Fiori elements app handles drafts.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Draft Handling](draft-handling-ed9aa41.md).
+
+A draft is an interim version of a business entity that has not yet been explicitly saved as an active version.SAP Fiori elements supports the creation of apps that use draft handling.
 
 Drafts are used as follows:
 
@@ -125,9 +130,9 @@ The side effects, if configured, are also triggered upon pressing [Enter\]. The 
 
 [https://help.sap.com/docs/SAP\_NETWEAVER\_AS\_ABAP\_752/cc0c305d2fab47bd808adcad3ca7ee9d/d36820f082c84085b6634be4576e351a.html](https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/cc0c305d2fab47bd808adcad3ca7ee9d/d36820f082c84085b6634be4576e351a.html)
 
-[Confirmation Popups](confirmation-popups-062078f.md "You can configure confirmation popups for various use cases in list reports and object pages.")
+[Confirmation Popups](confirmation-popups-062078f.md "You can configure confirmation popups for various list report page and object page use cases.")
 
-[Using Global Side Effects](using-global-side-effects-1c90f8d.md "Global side effects are those side effects that are defined without any source properties or source entities.")
+[Using Global Side Effects](using-global-side-effects-1c90f8d.md "You can configure global side effects.")
 
 [Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-11f948a.md "You can toggle between draft and saved values.")
 

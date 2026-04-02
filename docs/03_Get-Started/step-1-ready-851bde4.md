@@ -117,7 +117,7 @@ You can view and download all files at [Quick Start - Step 1](https://ui5.sap.co
 
     ```
     {
-      "_version": "1.58.0",
+      "_version": "2.6.0",
       "sap.app": {
         "id": "ui5.quickstart"
       }

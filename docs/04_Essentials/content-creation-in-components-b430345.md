@@ -12,7 +12,7 @@ You can use the following methods:
 
 -   `createContent`
 
-    By default, the UI component creates the `sap.ui5/rootView` declared in the manifest as the root control, see [Descriptor Dependencies to Libraries and Components](descriptor-dependencies-to-libraries-and-components-8521ad1.md).
+    By default, the UI component creates the `sap.ui5/rootView` declared in the manifest as the root control, see [Manifest Dependencies to Libraries and Components](manifest-dependencies-to-libraries-and-components-8521ad1.md).
 
     Alternatively, you can override this method and programmatically create the root control. You can either return the root control immediately or return a Promise resolving with the root control. For more information, see [`sap.ui.core.UIComponent#createContent`](https://ui5.sap.com/#/api/sap.ui.core.UIComponent/methods/createContent). Using `createContent` in an asynchronous fashion requires the UI Component to implement the `sap.ui.core.IAsyncContentCreation` interface.
 

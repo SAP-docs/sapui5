@@ -2,9 +2,9 @@
 
 # Analytical List Page
 
-The analytical list page \(ALP\) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content.
+You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs \(key performance indicators\).
 
-You can use SAP Fiori elements to build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs \(key performance indicators\).
+The analytical list page \(ALP\) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content.
 
 The combination of transactional and analytical data using chart and table visualization lets you quickly view the data you need. This hybrid view allows an interesting interplay between the chart and table representations.
 
@@ -33,13 +33,7 @@ For more information about the analytical list page, see [Building an App](build
 **Related Information**  
 
 
-[Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md "The manifest.json file is an application configuration file that contains valid entries for initializing the analytical list page (ALP).")
+[Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md "You can use the manifest.json file to configure the analytical list page.")
 
-[Configuring the Title Area](configuring-the-title-area-ebdb5da.md "The dynamic area of the analytical list page is the title area.")
-
-[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "The visual filter bar enables end users to select filter values based on measure values in addition to the filters and filter values already selected in the regular filter bar.")
-
-[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "Visualize data from the main entity set and seamlessly navigate to an application. Define a valid UI.Chart or UI.LineItem annotation to render content for the chart area and table area. For more information, see Configuring the Manifest for the Analytical List Page.")
-
-[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "This section provides some of the advance configurations and extensions for your application.")
+[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page.")
 

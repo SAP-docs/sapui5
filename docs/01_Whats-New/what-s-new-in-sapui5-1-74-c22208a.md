@@ -1202,7 +1202,7 @@ SAP Fiori Elements
 
 -   **Option to Set Initial Expansion Level in List Report and Analytical List Page Tables**
 
-    You can now set `initialExpansionLevel` using the `PresentationVariant` annotation to set the number of expanded levels for tables and trees. For more information, see [Initial Expansion Level for Tables in List Reports & Analytical List Pages](../06_SAP_Fiori_Elements/initial-expansion-level-for-tables-in-list-reports-analytical-list-pages-bc05d35.md).
+    You can now set `initialExpansionLevel` using the `PresentationVariant` annotation to set the number of expanded levels for tables and trees. For more information, see [Initial Expansion Level for Tables on List Report Pages & Analytical List Pages](../06_SAP_Fiori_Elements/initial-expansion-level-for-tables-on-list-report-pages-analytical-list-pages-bc05d35.md).
 
 -   **Themes**
 
@@ -1268,6 +1268,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

@@ -2,7 +2,7 @@
 
 # Prefilling Fields When Creating a New Entity
 
-When a user creates a new entity, it is possible to prefill fields with specific values.
+When users create a new entity, you can prefill the fields with specific values.
 
 If the entity is draft-enabled, the relevant service implementation can be used to prefill the fields.
 
@@ -15,15 +15,15 @@ For more information about creation using cross-app navigation, see [Handling of
 > 
 > Do not use this feature if the fields are not \(or might not be\) visible to the user.
 
-Applications can define `NewAction` and its parameters to ensure that end users can provide parameter values during creation \(`NewAction` is only supported for list report\). For `POST`-based creation, a dialog is still shown if there are any non-computed key fields or immutable fields. For more information, see [Actions](actions-cbf16c5.md).
+Applications can define `NewAction` and its parameters to ensure that end users can provide parameter values during creation \(`NewAction` is only supported for the list report page\). For `POST`-based creation, a dialog is still shown if there are any non-computed key fields or immutable fields. For more information, see [Actions](actions-cbf16c5.md).
 
 > ### Sample Code:  
 > ```
 > <Annotation Term="Common.DraftRoot">
 >     <Record Type="Common.DraftRootType">
 >         <PropertyValue Property="NewAction" String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.CreateWithSalesOrderType"/>
->         ....
->         ....
+>         ...
+>         ...
 >     </Record>
 > </Annotation>
 > ```
@@ -36,5 +36,5 @@ Applications can define `NewAction` and its parameters to ensure that end users 
 **Related Information**  
 
 
-[Actions in the List Report](actions-in-the-list-report-993e99e.md "The list report supports a number of actions.")
+[Actions in the List Report](actions-on-the-list-report-page-993e99e.md "You can configure various action buttons on the list report page.")
 

@@ -38,7 +38,7 @@ You can view and download all files at [Flexible Column Layout App - Step 5](htt
 
 ```json
 {
-	"_version": "1.38.0",
+	"_version": "2.6.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -54,7 +54,7 @@ You can view and download all files at [Flexible Column Layout App - Step 5](htt
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.98.0",
+			"minUI5Version": "1.146.0",
 			"libs": {
 				"sap.f": {},
 				"sap.m": {},

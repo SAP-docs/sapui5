@@ -435,7 +435,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We now support a new building block for the tree table. For more information, see [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
 
--   You can now define a `Common.ExternalID` annotation that displays a readable identifier of an item on the UI instead of the `Edm.Guid` value. The `Common.ExternalID` annotation is supported for both the fields and filter fields. For more information, see [Further Features of the Field](../06_SAP_Fiori_Elements/further-features-of-the-field-f49a0f7.md).
+-   You can now define a `Common.ExternalID` annotation that displays a readable identifier of an item on the UI instead of the `Edm.Guid` value. The `Common.ExternalID` annotation is supported for both the fields and filter fields. For more information, see [Further Features of the Field](../06_SAP_Fiori_Elements/additional-features-of-the-field-f49a0f7.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.124</sub>
@@ -1026,6 +1026,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

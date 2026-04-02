@@ -2,11 +2,16 @@
 
 # Visual Filters
 
-An intuitive way of choosing filter values from an associated measure value.
+You can configure visual filters by enhancing the `ValueList` annotation associated with the filter field.
 
 
 
-You can configure visual filters by enhancing the `ValueList` annotation associated with the filter field. For more information, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-bcfc085.md). This setup supports line and bar charts.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Visual Filters](visual-filters-1714720.md).
+
+
+
+Visual filters offer an intuitive way of choosing filter values from an associated measure value. Line and bar charts are supported. For more information, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-bcfc085.md)
 
 You must ensure that the records available through the value help entity set associated with the visual filter are the same as the records available through the value help entity set associated with the regular filter field. This is required for a smooth sync of the selected values across the different filter modes.
 
@@ -592,19 +597,19 @@ Description
 <tr>
 <td valign="top">
 
-TextFirst
+`TextFirst` 
 
 </td>
 <td valign="top">
 
-Use the visual filter to combine measures or item counts with filter values. The ChartDefault type that has the sap:text first, followed by the ID in brackets, for example, "Notebook \(001\)"
+Use the visual filter to combine measures or item counts with filter values. The `ChartDefault` type that has the sap:text first, followed by the ID in brackets, for example, "Notebook \(001\)"
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-TextLast
+`TextLast` 
 
 </td>
 <td valign="top">
@@ -616,7 +621,7 @@ ID followed by the sap:text in brackets, for example, "001 \(Notebook\)".
 <tr>
 <td valign="top">
 
-TextOnly
+`TextOnly` 
 
 </td>
 <td valign="top">
@@ -628,7 +633,7 @@ Shows only the sap:text, for example, "Notebook"
 <tr>
 <td valign="top">
 
-TextSeparate
+`TextSeparate` 
 
 </td>
 <td valign="top">
@@ -844,7 +849,7 @@ Semantic coloring is based on the criticality defined in the `ValueCriticality` 
 > ### Note:  
 > -   No color is applied to the chart dimension when a neutral value is returned.
 > 
-> -   Chart measure semantic coloring takes precendence over dimension semantic coloring.
+> -   Chart measure semantic coloring takes precedence over dimension semantic coloring.
 
 For a sample annotation, please see [Configuring Charts](configuring-charts-8f64eb1.md).
 
@@ -1100,5 +1105,5 @@ If the main entity set contains the text annotation for a unit, then that is dis
 **Related Information**  
 
 
-[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-b44fe77.md "The visual filter bar enables end users to select filter values based on measure values in addition to the filters and filter values already selected in the regular filter bar.")
+[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-b44fe77.md "You can configure the visual filter bar on the analytical list page.")
 

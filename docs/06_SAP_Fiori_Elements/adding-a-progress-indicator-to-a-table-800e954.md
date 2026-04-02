@@ -4,6 +4,9 @@
 
 You can add a progress indicator to a table.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding a Progress Indicator to a Table](adding-a-progress-indicator-to-a-table-43f6f0f.md).
+
 The progress indicator allows you to visually represent the level of completion of a project or a goal, for example.
 
 It can be used to express completion values either as a percentage or as absolute numbers \(for example, 8 of 10\).

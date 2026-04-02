@@ -2,10 +2,9 @@
 
 # Support for Extended OData Annotations
 
-SAP Fiori elements for OData V4 supports OData IF-Expressions for specific annotations.
+Learn about the supported If expressions.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
+SAP Fiori elements for OData V4 supports OData IF-Expressions for specific annotations.
 
 The following annotations are supported:
 
@@ -88,7 +87,7 @@ The following annotations are supported:
 
 ## Support of `odata.concat` function
 
-The `odata.concat` function is supported on the title of the object page header. App developers can use it to set the title as a concatenation of a text and value from the database.
+The `odata.concat` function is supported on the title of the object page header. You can use it to set the title as a concatenation of a text and value from the database.
 
 > ### Sample Code:  
 > ```

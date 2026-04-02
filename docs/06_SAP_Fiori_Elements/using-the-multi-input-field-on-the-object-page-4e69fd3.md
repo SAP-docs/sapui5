@@ -2,9 +2,12 @@
 
 # Using the Multi-Input Field on the Object Page
 
-When you can enter more than one value, the multi-input field is rendered on the object page.
+You can render a multi-input field on the object page.
 
-If the system identifies a 1:n association of a `DataField`, the multi-input field is activated automatically.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Using the Multi-Input Field on the Object Page](using-the-multi-input-field-on-the-object-page-04ff5b1.md).
+
+If the system identifies a 1:n association of a `DataField` on an object page, the multi-input field is activated automatically.
 
 You must define a 1:n association in the data model.
 
@@ -30,12 +33,13 @@ You can use the navigation property inside a `UI.DataField` to display the value
 > XML Annotation
 > 
 > ```
+> 
 > <Annotation Term="UI.LineItem">
->   <Collection>
-> <Record Type="UI.DataField">
-> 	  <PropertyValue Property="Value" Path="_SupportedMaterials.Material " />
-> 	</Record>
->   </Collection>
+>     <Collection>
+>         <Record Type="UI.DataField">
+>             <PropertyValue Property="Value" Path="_SupportedMaterials.Material " />
+>         </Record>
+>     </Collection>
 > </Annotation>
 > 
 > ```
@@ -44,22 +48,36 @@ You can use the navigation property inside a `UI.DataField` to display the value
 > ABAP CDS Annotation
 > 
 > ```
-> @UI: {  lineItem: [ { value: '_SupportedMaterials.Material', label: 'Supported Materials' } ] }  
-> @UI.fieldGroup: [{position: 10, qualifier: 'FieldgroupID', value: '_SupportedMaterials.Material'} ]
-> _SupportedMaterials;
+> @UI: {
+>     lineItem: [
+>         {
+>             value: '_SupportedMaterials.Material',
+>             label: 'Supported Materials'
+>         }
+>     ]
+> }
+> @UI.fieldGroup: [
+>     {
+>         position: 10,
+>         qualifier: 'FieldgroupID',
+>         value: '_SupportedMaterials.Material'
+>     }
+> ]
+> _SupportedMaterials
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
+> 
 > LineItem : {
-> 	{
-> 		$Type             : 'UI.DataField',
-> 		Label			  : 'Supported Materials',
-> 		Value             : _SupportedMaterials.Material,
-> 	 },
-> …
+>     {
+>         $Type             : 'UI.DataField',
+>         Label             : 'Supported Materials',
+>         Value             : _SupportedMaterials.Material,
+>     },
+>     …
 > }
 > 
 > ```
@@ -87,5 +105,5 @@ The multi-input field is also available for tables.
 **Related Information**  
 
 
-[Tables](tables-f242a02.md "SAP Fiori elements supports several table types.")
+[Tables](tables-f242a02.md "You can configure the appearance, interactivity, and loading behavior of tables.")
 

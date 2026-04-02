@@ -2,7 +2,7 @@
 
 # Example: Applying Custom Logic When a Table is Loaded or Refreshed
 
-This example explains how to use an extension point if you want to apply custom logic when your table is being loaded or refreshed.
+You can apply custom logic when loading or refreshing tables using the `onBeforeRebindTableExtension` controller extension point.
 
 
 

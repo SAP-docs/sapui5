@@ -11,32 +11,42 @@ You can define custom filters for compact filters and KPI tags.
 You can define custom filter view fragments, use view extensions, and define extended fragments and controllers in the application namespace as shown in the following sample code:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > 
->                         "sap.ui5": {
->     "_version": "1.1.0",
+> "sap.ui5": {
 >     "extends": {
 >         "extensions": {
->              "sap.ui.controllerExtensions": { // Controller extension
->                  "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": { // ALP app view to be extended with controller
->                    "controllerName": "my_app.ext.controller.AnalyticalListPageExt", // extended Controller declared using namespace
->                        ... // Other custom controllers
->                     ...
->                   } // End of ALP controller extensions
->              }, // End of controller extensions
->              "sap.ui.viewExtensions": { // View Extension
->                  "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": { // ALP app view to be extended with filter fragment
->                     "SmartFilterBarControlConfigurationExtension|CZ_EASILINEITEMS_SADL": { // <Filter Bar Extension>|<Entity Set>
->                     "className": "sap.ui.core.Fragment",
->                     "fragmentName": "analytics2.alr.ext.fragments.CustomFilters", // extended Fragment declared using namespace
->                     "type": "XML"
->                 },
->                 ... // Other view extensions
->                 ... 
->             } // End of ALP view extensions
->         } // End of view extensions
->       }
->    }
+>             "sap.ui.controllerExtensions": {
+>                 // Controller extension
+>                 "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": {
+>                     // ALP app view to be extended with controller
+>                     "controllerName": "my_app.ext.controller.AnalyticalListPageExt"
+>                     // extended Controller declared using namespace
+>                     // ... Other custom controllers ...
+>                 }
+>                 // End of ALP controller extensions
+>             },
+>             // End of controller extensions
+>             "sap.ui.viewExtensions": {
+>                 // View Extension
+>                 "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": {
+>                     // ALP app view to be extended with filter fragment
+>                     "SmartFilterBarControlConfigurationExtension|CZ_EASILINEITEMS_SADL": {
+>                         // <Filter Bar Extension>|<Entity Set>
+>                         "className": "sap.ui.core.Fragment",
+>                         "fragmentName": "analytics2.alr.ext.fragments.CustomFilters",
+>                         // extended Fragment declared using namespace
+>                         "type": "XML"
+>                     }
+>                     // ... Other view extensions ...
+>                 }
+>                 // End of ALP view extensions
+>             }
+>             // End of view extensions
+>         }
+>     }
 > }
 > 
 > ```
@@ -44,6 +54,8 @@ You can define custom filter view fragments, use view extensions, and define ext
 The following sample code shows the custom view XML fragment:
 
 > ### Sample Code:  
+> XML Fragment
+> 
 > ```
 > <core:FragmentDefinition xmlns="sap.m" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core">
 >     <smartfilterbar:ControlConfiguration key="CustomFilters" index="99" visibleInAdvancedArea="true" label="Custom Filter" groupId="_BASIC">
@@ -121,12 +133,13 @@ The following sample code shows the custom filter controller extension:
 > 
 >     > ### Sample Code:  
 >     > ```
+>     > 
 >     > onClearFilterExtension: function(oEvent) {
->     >         // Logic for clearing extended filters
->     >         'use strict';
->     >         if ( this.byId("CustomFilters-combobox") ) {
->     >              this.byId("CustomFilters-combobox").setSelectedKey(null);
->     >         }
+>     >     // Logic for clearing extended filters
+>     >     'use strict';
+>     >     if ( this.byId("CustomFilters-combobox") ) {
+>     >     this.byId("CustomFilters-combobox").setSelectedKey(null);
+>     >     }
 >     > }
 >     > ```
 
@@ -195,5 +208,5 @@ You can add or modify the existing filters or parameter values using the `onBefo
 **Related Information**  
 
 
-[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "This section provides some of the advance configurations and extensions for your application.")
+[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your app.")
 

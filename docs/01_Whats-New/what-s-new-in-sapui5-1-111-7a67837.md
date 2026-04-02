@@ -449,9 +449,9 @@ The following changes and new features are available forSAP Fiori elements for O
 
 -   You can now hide empty table rows in edit mode. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
--   You can now enable the *Copy* button in the list report header and the object page header. For more information, see [Actions in the List Report](../06_SAP_Fiori_Elements/actions-in-the-list-report-993e99e.md) and [Enabling Actions in the Object Page Header](../06_SAP_Fiori_Elements/enabling-actions-in-the-object-page-header-5fe4396.md).
+-   You can now enable the *Copy* button in the list report header and the object page header. For more information, see [Actions on the List Report Page](../06_SAP_Fiori_Elements/actions-on-the-list-report-page-993e99e.md) and [Enabling Actions in the Object Page Header](../06_SAP_Fiori_Elements/enabling-actions-in-the-object-page-header-5fe4396.md).
 
--   Fiscal annotations are now available in the filter bar and the field. For more information, see [Further Features of the Field](../06_SAP_Fiori_Elements/further-features-of-the-field-f49a0f7.md) .
+-   Fiscal annotations are now available in the filter bar and the field. For more information, see [Additional Features of the Field](../06_SAP_Fiori_Elements/additional-features-of-the-field-f49a0f7.md) .
 
 -   The chart building block now supports control variant management. For more information, see [Passing Variant IDs as URL Parameters](../06_SAP_Fiori_Elements/passing-variant-ids-as-url-parameters-4132ffa.md).
 
@@ -774,6 +774,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

@@ -4,6 +4,9 @@
 
 SAP Fiori elements provides generative AI features to enhance user experience.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Generative AI Features](generative-ai-features-0ec03d4.md).
+
 **Prerequisites**
 
 To use these generative AI features in SAP S/4HANA Cloud Public Edition, an additional entitlement and authorization may be required.
@@ -14,7 +17,7 @@ To use these generative AI features in SAP S/4HANA Cloud Public Edition, an addi
 
 ## AI-Assisted Easy Filter
 
-The AI-assisted easy filter on the list report allows users to define filter queries using natural language instead of applying filters manually.
+The AI-assisted easy filter on the list report page allows users to define filter queries using natural language instead of applying filters manually.
 
 ![](images/AI-Assisted_Easy_Filter_6254f19.png)
 

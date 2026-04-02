@@ -4,6 +4,9 @@
 
 A stacked column chart is similar to a column chart; however, all measures, irrespective of role, are stacked on top of each other.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Stacked Column Chart](stacked-column-chart-c54b815.md).
+
   
   
 **Example of a Stacked Column Chart**

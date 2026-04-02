@@ -377,7 +377,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   In the list report, you can now specify the title for the `NewAction` parameter popup while creating a new object. For more information, see [Actions in the List Report](../06_SAP_Fiori_Elements/actions-in-the-list-report-993e99e.md).
+-   In the list report, you can now specify the title for the `NewAction` parameter popup while creating a new object. For more information, see [Actions on the List Report Page](../06_SAP_Fiori_Elements/actions-on-the-list-report-page-993e99e.md).
 
 -   If mandatory input fields that are not nullable are used in an input dialog, the `clientSideMandatoryCheck` is enforced on these fields automatically.
 
@@ -668,6 +668,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

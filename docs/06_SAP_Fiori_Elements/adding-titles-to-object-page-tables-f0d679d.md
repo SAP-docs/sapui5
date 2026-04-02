@@ -4,6 +4,9 @@
 
 You can add a title to an object page table.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding Titles to Object Page Tables](adding-titles-to-object-page-tables-d9a4539.md).
+
 To add a title to an object page table, provide a string value to the `TypeNamePlural` property of the `UI.HeaderInfo` annotation for the entity type with which the table is associated.
 
 

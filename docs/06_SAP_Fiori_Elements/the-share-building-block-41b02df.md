@@ -2,9 +2,9 @@
 
 # The `Share` Building Block
 
-Use the `Share` building block to add the *Share* functionality to your app.
+You can use the `Share` building block to add the *Share* functionality to your app.
 
-The *Share* functionality allows end users to share the current application state using the options *Send Email*, *Share to Microsoft Teams*, *Save as Tile*, and *Share in SAP Jam* \(on platforms that are integrated with SAP Jam\). For more information, see [The Share Functionality](the-share-functionality-022bf0d.md).
+The *Share* functionality allows users to share the current application state using the options *Send Email*, *Share to Microsoft Teams*, *Save as Tile*, and *Share in SAP Jam* \(on platforms that are integrated with SAP Jam\). For more information, see [The Share Functionality](the-share-functionality-022bf0d.md).
 
 
 

@@ -6,6 +6,11 @@ Overview pages may contain transactional cards, such as table, list, stack, quic
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Types of Cards](types-of-cards-8ed3f76.md).
+
+
+
 The following is a list of cards that are available:
 
 
@@ -102,8 +107,7 @@ You can set all cards to refresh automatically for a given interval. The minimum
 > ```
 > "sap.ovp": {
 >     "globalFilterModel": "salesOrder",
->     "globalFilterEntityType": "GlobalFilters", // Deprecated since SAPUI5 1.54.
->     "globalFilterEntitySet": "GlobalFilters", // Available from SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters",
 >     ...
 >     "refreshIntervalInMinutes": 12,
 >     "disableTableCardFlexibility": false,

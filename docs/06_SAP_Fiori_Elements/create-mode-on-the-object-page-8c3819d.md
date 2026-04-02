@@ -2,7 +2,7 @@
 
 # Create Mode on the Object Page
 
-Users can use the create mode when working on tables on the object page.
+Users can edit tables on the object page in create mode.
 
 Create mode is available as follows:
 

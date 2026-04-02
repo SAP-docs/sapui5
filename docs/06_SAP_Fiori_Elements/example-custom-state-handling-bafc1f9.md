@@ -2,18 +2,18 @@
 
 # Example: Custom State Handling
 
-This example shows how to implement inner app state handling for custom UI elements.
+You can implement inner app -state handling for custom UI elements.
 
 The custom UI shows a map containing two state information items:
 
--   The `zoomFactor` is a number between 1 and 100. The `zoomFactor` should be passed to other instances on pagination. The `zoomFactor` should also remain valid for the whole session.
+-   The `zoomFactor` is a number between one and 100. The `zoomFactor` should be passed to other instances on pagination. The `zoomFactor` should also remain valid for the whole session.
 
--   The `selectedCity` is information consisting of a country and a city. The selected state should not be passed to other instances. However, it should be bookmarkable for the current instance, when customers enable storage on the frontend server.
+-   The `selectedCity` is information consisting of a country and a city. The selected state should not be passed to other instances. However, it should be bookmarkable for the current instance, when customers enable storage on the front end server.
 
-
-The following sample code shows this:
 
 > ### Sample Code:  
+> Inner App-State Handling
+> 
 > ```
 > 
 > onZoomFactorChange: function(iZoomFactor){

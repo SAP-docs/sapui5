@@ -2,9 +2,9 @@
 
 # Adding a Contact Quick View to a Table
 
-Using the `@Communication.Contact` annotation, you can enable a contact quick view in a table.
+You can enable a contact quick view in a table with the `@Communication.Contact` annotation
 
-The quick view can be displayed from the list report and the object page, as shown below.
+The quick view can be displayed from the list report page and the object page, as shown in the following screenshot:
 
   
   

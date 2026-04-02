@@ -2,11 +2,11 @@
 
 # Non-Draft Apps
 
-By default, you need to create apps that use draft handling.
+You can create non-draft apps for simple scenarios without complex flows.
 
 For general information about draft handling, see [Draft Handling](draft-handling-b0eb3cc.md) and SAP Fiori web design guidelines for [Draft Handling](https://experience.sap.com/fiori-design-web/draft-handling/).
 
-You can also create non-draft apps, however, you need to consider the specific features and restrictions listed below, as compared to those for draft apps. Create non-draft apps only for simple scenarios without complex flows.
+When creating non-draft apps, you need to consider the specific features and restrictions listed below, as compared to those for draft apps. Create non-draft apps only for simple scenarios without complex flows.
 
 > ### Note:  
 > Example of a complex flow: Creating items and subitems in a single step, before saving.
@@ -32,7 +32,7 @@ In non-draft scenarios, the application does not automatically save data to the 
 
 -   Navigating away, for example, by using a chevron in a table.
 
--   Navigating back to the list report.
+-   Navigating back to the list report page.
 
 
 The *Save* button is also available on subobject pages. If an end user tries to navigate away from the edit screen with unsaved data, the application displays a data-loss message.

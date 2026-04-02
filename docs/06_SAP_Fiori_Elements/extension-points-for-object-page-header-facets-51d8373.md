@@ -2,6 +2,11 @@
 
 # Extension Points for Object Page Header Facets
 
+You can use extension points to add additional header facets to the object page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Extension Points for Object Page Header Facets](extension-points-for-object-page-header-facets-61cf0ee.md).
+
 You define application-specific header facets using annotations, but in some cases it might be necessary to integrate components in the front end that are not available with annotations.
 
 > ### Caution:  
@@ -22,26 +27,29 @@ You must use a view inside the extension to create a header facet extension. Ent
 
 `<Different_Scenario>|<EntitySet_Name>|headerEditable::<Annotation_Information>`
 
-Specify the extension facet in the form of its annotation path. In addition, you must specify the entity set name, as the same annotation may exist for various entity sets. You also need to define the className, viewName, type and the optional parameter `bVisibleOnEdit`.
+Specify the extension facet in the form of its annotation path. In addition, you must specify the entity set name, as the same annotation may exist for various entity sets. You also need to define the `className`, `viewName`, type and the optional parameter `bVisibleOnEdit`.
 
 > ### Note:  
-> You only set this optional parameter to "false" if the entire header extension is to be hidden when the object page is edited.
+> You only set this optional parameter to `false` if the entire header extension is to be hidden when the object page is edited.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
+> 
 > "extends": {
->    "extensions": {
->          "sap.ui.viewExtensions": {
->                  "sap.suite.ui.generic.template.ObjectPage.view.Details": {
->                            "BeforeHeaderFacet|STTA_C_MP_Product|headerEditable::com.sap.vocabularies.UI.v1.Chart::SpecificationWidthBulletChart": {
->                                      "className": "sap.ui.core.mvc.View",
->                                      "viewName": "STTA_MP.ext.fragments.HeaderExtensionFacet",
->                                      "type": "XML",
->                                      "bVisibleOnEdit": true
->    }
->                         }
->            }
->      }
+>     "extensions": {
+>         "sap.ui.viewExtensions": {
+>             "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+>                 "BeforeHeaderFacet|STTA_C_MP_Product|headerEditable::com.sap.vocabularies.UI.v1.Chart::SpecificationWidthBulletChart": {
+>                     "className": "sap.ui.core.mvc.View",
+>                     "viewName": "STTA_MP.ext.fragments.HeaderExtensionFacet",
+>                     "type": "XML",
+>                     "bVisibleOnEdit": true
+>                 }
+>             }
+>         }
+>     }
 > }
 > 
 > ```
@@ -50,43 +58,43 @@ The following extension options are available:
 
 -   Standard object header facet: Before replace, and after scenario:
 
-    -   `"BeforeHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information "`
+    -   `BeforeHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>`
 
-    -   `"ReplaceHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>"`
+    -   `ReplaceHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>`
 
-    -   `"AfterHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>"`
+    -   `AfterHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>`
 
 
 -   Simple object header facet: Before replace, and after scenario:
 
-    `"BeforeSimpleHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>"` 
+    `BeforeSimpleHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>` 
 
-    `"ReplaceSimpleHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>"`
+    `ReplaceSimpleHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>`
 
-    `"AfterSimpleHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>"`
+    `AfterSimpleHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>`
 
 -   Replace the complete object page header with an extension. This means that the `UI.HeaderFacet` annotation is not there. If it is there, remove it from the annotations. The manifest entry should look like this:
 
-    `"ReplaceHeaderExtensionFacet|<EntitySet Name>"`
+    `ReplaceHeaderExtensionFacet|<EntitySet Name>`
 
 -   Standard object header: If there is no image in the object page header, you can include an extension instead of an image. The manifest entry should look like this:
 
-    `"NoImageExtensionFacet|<EntitySet Name>"`
+    `NoImageExtensionFacet|<EntitySet Name>`
 
     > ### Note:  
     > You can only use this scenario if there is no value for the `ImageUrl` or `TypeImageUrl` property of the `UI.HeaderInfo` annotation.
 
     If there is an image in the object page header, you can enter an extension after the image. The manifest entry should look like this:
 
-    `" AfterImageExtensionFacet|<EntitySet Name>"`
+    `AfterImageExtensionFacet|<EntitySet Name>`
 
 -   Object page header containing only a `DataPoint` annotation: Before replace, and after scenario:
 
-    -   `"BeforeHeaderDataPoint|<EntitySet Name> | <Annotation Information>"`
+    -   `BeforeHeaderDataPoint|<EntitySet Name> | <Annotation Information>`
 
-    -   `"ReplaceHeaderDataPoint|<EntitySet Name> | <Annotation Information>"`
+    -   `ReplaceHeaderDataPoint|<EntitySet Name> | <Annotation Information>`
 
-    -   `"AfterHeaderDataPoint|<EntitySet Name> | <Annotation Information>"`
+    -   `AfterHeaderDataPoint|<EntitySet Name> | <Annotation Information>`
 
 
 
@@ -100,6 +108,7 @@ You can display a custom status message of an object as a message strip on the o
 
 > ### Sample Code:  
 > ```
+> 
 > sap.ui.define([
 > ], function () {
 >     return {

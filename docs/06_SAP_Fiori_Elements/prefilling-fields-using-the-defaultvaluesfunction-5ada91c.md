@@ -2,7 +2,7 @@
 
 # Prefilling Fields Using the `DefaultValuesFunction`
 
-When creating a new entity or when prefilling action parameters, you can provide default values using a `DefaultValuesFunction`.
+You can provide default values with `DefaultValuesFunction` when creating a new entity or when prefilling action parameters, you can provide default values.
 
 > ### Note:  
 > This topic is only applicable to draft applications in the empty row mode. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
@@ -24,7 +24,7 @@ If you want to set default values for the newly created entity, use a `DefaultVa
 > 
 > ```
 
-For more information, see [Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md) and [Prefilling Fields When Creating a New Entity Using an Extension Point](prefilling-fields-when-creating-a-new-entity-using-an-extension-point-189e2d8.md).
+For more information, see [Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md).
 
 > ### Sample Code:  
 > `DefaultValuesFunction` for navigation property/item create

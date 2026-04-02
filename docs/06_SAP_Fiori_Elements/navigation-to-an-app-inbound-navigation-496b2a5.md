@@ -2,7 +2,10 @@
 
 # Navigation to an App \(Inbound Navigation\)
 
-This topic describes the key features when navigating into an SAP Fiori elements template, that is, inbound navigation.
+You can configure navigation to an SAP Fiori elements floorplan \(inbound navigation\).
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Navigation to an App \(Inbound Navigation\)](navigation-to-an-app-inbound-navigation-c337d8b.md).
 
 When navigating to an SAP Fiori elements application that has a filter bar \(with the exception of the overview page\), the incoming context is processed and the filter bar populated. This overrides the default variant/filter settings of the SAP Fiori elements application.
 
@@ -26,15 +29,15 @@ When dealing with incoming navigation, in addition to the navigation context pas
 
 ![](images/Handling_Default_Values_from_FLP_9c2ee88.png "Handling Default Values from FLP")
 
--   When you navigate to a list report application using intent-based navigation:
+-   When you navigate to a list report page application using intent-based navigation:
 
     Only the values added by the FLP through the standard target mapping mechanism are considered.
 
--   When you navigate to a list report application using a static FLP tile \(with no navigation context\):
+-   When you navigate to a list report page application using a static FLP tile \(with no navigation context\):
 
     If no user default variant is available, the FLP default values passed using the target mapping mechanism are used.
 
--   When you navigate to a list report application using a dynamic tile, such as an *SAP Smart Business* tile where the navigation context is passed:
+-   When you navigate to a list report page application using a dynamic tile, such as an *SAP Smart Business* tile where the navigation context is passed:
 
     In this case, a special handling applies for `DisplayCurrency`. If a mandatory filter field or a parameter with the technical name `DisplayCurrency` or `P_DisplayCurrency` respectively, doesn't receive a value from the incoming navigation context, it is set using the default `DisplayCurrency` setting configured in the end user's SAP Fiori launchpad. For all other fields, the FLP default values are ignored, except those provided by the FLP through the standard target mapping mechanism.
 
@@ -55,13 +58,13 @@ Navigation to the application uses deep linking. For more information, see [Navi
 
 For the SAP Fiori launchpad, the configuration steps for [Intent-Based Navigation](http://help.sap.com/saphelp_nw75/helpdata/en/bd/8ae3d327ab4541bcce8e7353c046fc/content.htm) are also relevant since it's the same mechanism.
 
-If the source application provides all the key fields in the URL to uniquely identify an object page \(or subobject page\) record, then this will be directly opened instead of the list report or analytical list page. Otherwise, the list report or analytical list page will be opened.
+If the source application provides all the key fields in the URL to uniquely identify an object page \(or subobject page\) record, then the link is opened directly instead of the list report page or the analytical list page. Otherwise, the list report page or the analytical list page is opened.
 
 
 
 ### Deep Linking to Object Pages
 
-You can trigger deep linking to object pages by providing all technical keys corresponding to the list report entity set. Depending on the value of the `IsActiveEntity` technical key, the result is:
+You can trigger deep linking to object pages by providing all technical keys corresponding to the list report page entity set. Depending on the value of the `IsActiveEntity` technical key, the result is:
 
 -   either the active or draft page is loaded
 
@@ -89,7 +92,7 @@ Technical keys are part of the metadata and are configured in the back end.
 
 ### Deep Linking to Subobject Pages
 
-You can also trigger deep linking directly to the n-th level of a subobject page. You must provide the manifest setting to indicate that deep linking is allowed for the subobject level. For more information, see the version-specific sections in this topic.
+You can also trigger deep linking directly to the n-th level of a subobject page. You must provide the manifest setting to indicate that deep linking is allowed for the subobject level.
 
 > ### Note:  
 > -   To directly load the n-th level subobject page, `allowDeepLinking` has to be true for all the n levels of the subobject page.
@@ -165,7 +168,7 @@ You can configure inbound navigation to any subobject page belonging to an appli
 
 ## Configuring Sort Order
 
-If the `xapp-state` carries the sort orders during inbound navigation to a target list report or an analytical list page application, the target framework reads these sort parameters from the `xapp-state` and applies it as the sorting criteria to the table in the list report or the analytical list page.
+If the `xapp-state` carries the sort orders during inbound navigation to a target list report page or an analytical list page application, the target framework reads these sort parameters from the `xapp-state` and applies it as the sorting criteria to the table in the list report page or the analytical list page.
 
 Although the sorters coming from the navigation is merged with the existing sorting criteria of the table, the sorters from the navigation context always take the priority.
 

@@ -2,7 +2,12 @@
 
 # Configuring Navigation
 
-SAP Fiori elements control the navigation within an app \(internal navigation\) and the navigation to and from an app \(external navigation\).
+You can configure the SAP Fiori elements navigation within an app \(internal navigation\) and the navigation to and from an app \(external navigation\).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Navigation](configuring-navigation-a424275.md).
 
 
 

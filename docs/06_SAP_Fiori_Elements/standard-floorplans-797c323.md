@@ -2,11 +2,11 @@
 
 # Standard Floorplans
 
-Our floorplans provide you with predefined templates for common application use cases.
+You can create apps using SAP Fiori elements floorplans: predefined templates for common application use cases.
 
-SAP Fiori elements floorplans provide you with predefined combinations of our building blocks that suit most standard use cases. You can create apps using the following  floorplans:
+You can create apps using the following  floorplans:
 
--   [List Report Page](list-report-elements-1cf5c7f.md)
+-   [List Report Page](list-report-page-1cf5c7f.md)
 
     The list report page lets users filter, view, and work with a list of objects visualized as line items in a table.
 
@@ -20,7 +20,7 @@ SAP Fiori elements floorplans provide you with predefined combinations of our bu
 
     You can also use the following specialized configurations of the list report page:
 
-    -   [Worklist Page](worklist-d1d588f.md)
+    -   [Worklist Page](worklist-page-d1d588f.md)
 
         This variant of the list report page displays a collection of items to be processed by the user in a table without filtering options. Working through the item list usually involves reviewing details of the list items and taking action. In most cases, the user has to either complete a work item or delegate it.
 
@@ -41,7 +41,7 @@ SAP Fiori elements floorplans provide you with predefined combinations of our bu
         ![](images/Using_SAP_Fiori_Elements_Floorplans_Analytical_List_Page_897c8d0.png "Analytical List Page")
 
 
--   [Object Page](object-page-elements-645e27a.md)
+-   [Object Page](object-page-645e27a.md)
 
     The object page lets users work with the details of an object. It provides functions for viewing, editing, and creating objects.
 
@@ -53,7 +53,7 @@ SAP Fiori elements floorplans provide you with predefined combinations of our bu
 
     ![](images/Using_SAP_Fiori_Elements_Floorplans_Object_Page_563b849.png "Object Page")
 
--   [Overview Page](overview-pages-c64ef8c.md)
+-   [Overview Page](overview-page-c64ef8c.md)
 
     An overview page is a data-driven SAP Fiori app for organizing large amounts of information. Information is visualized in a card format in an attractive and efficient way. Different cards are used for different types of content. The user-friendly experience makes viewing, filtering, and acting on data quick and easy. While presenting the big picture, business users can focus on the most important tasks enabling faster decision making as well as immediate action.
 
@@ -67,5 +67,5 @@ SAP Fiori elements floorplans provide you with predefined combinations of our bu
 Generic information that applies to various floorplans can be found under [Building Blocks](building-blocks-24c1304.md) and [Global Patterns](global-patterns-56dce56.md).
 
 > ### Note:  
-> For information aboutSAP Fiori elements for OData V2, see [Using SAP Fiori Elements Floorplans](using-sap-fiori-elements-floorplans-0a0925d.md).
+> For information about SAP Fiori elements for OData V2, see [Using SAP Fiori Elements Floorplans](using-sap-fiori-elements-floorplans-0a0925d.md).
 

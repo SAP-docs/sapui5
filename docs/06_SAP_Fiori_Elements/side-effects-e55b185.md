@@ -2,9 +2,12 @@
 
 # Side Effects
 
-If an end user changes the content of a field or performs another activity, this change can potentially influence other fields on the UI. This system behavior is called a side effect.
+You can annotate side effects to prevent UI showing outdated data.
 
-Side effects are performed in the back end. However, you need to annotate the side effects implemented in the back end using side effect annotations to "inform" the front end which fields on the UI are influenced by a change, so that the front end can request new data for these fields. Otherwise, the UI may still display outdated data.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Side Effects](side-effects-18b17bd.md).
+
+If a user changes the content of a field or performs another activity, this change can potentially influence other fields on the UI. This system behavior is called a side effect. Side effects are performed in the back end. However, you need to annotate the side effects implemented in the back end using side effect annotations to "inform" the front end which fields on the UI are influenced by a change, so that the front end can request new data for these fields. Otherwise, the UI may still display outdated data.
 
 > ### Note:  
 > Default side effects are relevant for most apps. You do not need to annotate these side effects. They are available by default and cannot be switched off.
@@ -34,7 +37,7 @@ Side Effect
 <tr>
 <td valign="top">
 
-Creating a new entity or draft version, either in the list report or on the object page
+Creating a new entity or draft version, either on the list report page or on the object page
 
 </td>
 <td valign="top">
@@ -46,7 +49,7 @@ List binding of the parent page is refreshed to show the newly created entity.
 <tr>
 <td valign="top">
 
-Deleting an entity, either in the list report or on the object page
+Deleting an entity, either on the list report page or on the object page
 
 </td>
 <td valign="top">
@@ -369,7 +372,7 @@ The following sample code shows how a custom table column with a checkbox is con
 **Related Information**  
 
 
-[Side Effect Annotations: Examples](side-effect-annotations-examples-c5562cb.md "This topic provides some examples for annotating side effects.")
+[Side Effect Annotations: Examples](side-effect-annotations-examples-c5562cb.md "See some examples about annotating side effects.")
 
-[Using Global Side Effects](using-global-side-effects-1c90f8d.md "Global side effects are those side effects that are defined without any source properties or source entities.")
+[Using Global Side Effects](using-global-side-effects-1c90f8d.md "You can configure global side effects.")
 

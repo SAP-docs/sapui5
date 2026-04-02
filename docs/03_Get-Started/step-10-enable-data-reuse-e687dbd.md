@@ -32,11 +32,11 @@ You can view and download all files at [OData V4 - Step 10](https://ui5.sap.com/
 
 ```js
 ...
-		onMessageBindingChange : function (oEvent) {
-			...
-		},
+        onMessageBindingChange : function (oEvent) {
+            ...
+        },
 
-		onSelectionChange : function (oEvent) {
+        onSelectionChange : function (oEvent) {
             this._setDetailArea(oEvent.getParameter("listItem").getBindingContext());
         },
 ...
@@ -45,25 +45,24 @@ You can view and download all files at [OData V4 - Step 10](https://ui5.sap.com/
          *
          * @param {object} [oUserContext] - the current user context
          */
-        _setDetailArea : function (oUserContext) {         
+        _setDetailArea : function (oUserContext) {
             var oDetailArea = this.byId("detailArea"),
                 oLayout = this.byId("defaultLayout"),
                 oOldContext,
                 oSearchField = this.byId("searchField");
- 
+
             if (!oDetailArea) {
                 return; // do nothing when running within view destruction
             }
- 
+
             oOldContext = oDetailArea.getBindingContext();
-            if (oOldContext) {
+            if (oOldContext && !oOldContext.isTransient()) {
                 oOldContext.setKeepAlive(false);
             }
-            if (oUserContext) {
+            if (oUserContext && !oUserContext.isTransient()) {
                 oUserContext.setKeepAlive(true,
-                    // hide details if kept entity was refreshed but does not exists any more
+                    // hide details if kept entity was refreshed but does not exist any more
                     this._setDetailArea.bind(this));
-
             }
             oDetailArea.setBindingContext(oUserContext || null);
             // resize view
@@ -72,7 +71,7 @@ You can view and download all files at [OData V4 - Step 10](https://ui5.sap.com/
             oLayout.setResizable(!!oUserContext);
             oSearchField.setWidth(oUserContext ? "40%" : "20%");
         }
- ...
+...
 ```
 
 We extend the logic of the `_setDetailArea` function. First, we check if there's an "old" binding context in the detail area. If so, the `keepAlive` for the old context is set to `false`.

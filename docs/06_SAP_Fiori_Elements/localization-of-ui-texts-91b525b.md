@@ -2,9 +2,12 @@
 
 # Localization of UI Texts
 
-If necessary, you can replace standard UI texts for apps that you have created with SAP Fiori elements.
+You can replace standard UI texts for apps you've created with SAP Fiori elements.
 
-Standard texts are available in the generic framework \(for example, the button texts for draft concepts\) and belong to the template components \(for example, list report and object page\). The following sections describe how you can replace the texts in your generated apps.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
+
+Standard texts are available in the generic framework \(for example, the button texts for draft concepts\) and belong to the template components \(for example, the list report page and the object page\). The following sections describe how you can replace the texts in your generated apps.
 
 Standard texts can be overwritten by application-specific texts.
 
@@ -28,7 +31,7 @@ Perform the following steps to replace the standard UI texts:
 
 ## Overriding Texts from Annotations
 
-You can override the texts that come from annotations. To do so, the annotation must refer to the i18n key that is used in the application's i18n file:
+You can override the texts that come from annotations. To do so, the annotation must refer to the i18n key that is used in the application's `i18n` file:
 
 > ### Sample Code:  
 > XML Annotation
@@ -96,8 +99,6 @@ You can override the texts that come from annotations. To do so, the annotation 
 For the annotation example above, the application's i18n properties file must have the key `CopyActionText=Copy Selected Item`. In addition, the model should have the `@i18n` model defined within the `manifest.json` file.
 
 > ### Sample Code:  
-> `manifest.json`
-> 
 > ```
 >  "models": {
 >                …
@@ -115,7 +116,7 @@ For the annotation example above, the application's i18n properties file must ha
 > ### Note:  
 > The annotation modification described above is done in a local annotations file if the back-end generated file does not have the corresponding annotation segment.
 > 
-> For example, if the back-end system is based on SAP NetWeaver 7.51 or lower \(SAP S/4HANA\) or on SAP NetWeaver 7.67 or lower \(SAP S/4HANA Cloud Public Edition\), you can't add `UI.ReferenceFacet` in the back end. In such a case, a modification to the *Reference Facet* label is only possible by modifying the local annotation file as described above.
+> For example, if the back-end system is based onSAP NetWeaver 7.51 or lower \(SAP S/4HANA\) or on SAP NetWeaver 7.67 or lower \(SAP S/4HANA Cloud Public Edition\), you can't add `UI.ReferenceFacet` in the back end. In such a case, a modification to the *Reference Facet* label is only possible by modifying the local annotation file as described above.
 
 
 
@@ -123,7 +124,7 @@ For the annotation example above, the application's i18n properties file must ha
 
 ## Localization Keys
 
-When you have created your specific application component, for example in SAP Fiori tools, standard texts are available from a specific template component \(for example, i18n file within `sap.suite.ui.generic.template.ListReport`\) and from the generic template component \(for example, i18n file within `sap.suite.ui.generic.template.lib`\).
+When you have created your specific application component, for example in SAP Fiori tools, standard texts are available from a specific template component \(for example, `i18n` file within `sap.suite.ui.generic.template.ListReport`\) and from the generic template component \(for example, i18n file within `sap.suite.ui.generic.template.lib`\).
 
 Texts from the *Generic Application Component* can't be replaced.
 
@@ -134,7 +135,7 @@ You can use the custom `i18n` file approach to override any keys that are mentio
 <tr>
 <th valign="top" colspan="3">
 
-**List Report Specific Key from `..>>lib>i18n`**
+**List Report Page Specific Key from `..>>lib>i18n`**
 
 </th>
 </tr>
@@ -185,7 +186,7 @@ Delete the selected objects?
 </td>
 <td valign="top">
 
-Text displayed in the delete dialog when a user selects all active objects or their own draft objects from the list report.
+Text displayed in the delete dialog when a user selects all active objects or their own draft objects from the list report page.
 
 </td>
 </tr>
@@ -425,7 +426,7 @@ Text displayed in the message toast when an object can't be deleted from the bac
 <tr>
 <th valign="top" colspan="3">
 
-**List Report Specific Key from `..>>ListReport>i18n`**
+**List Report Page Specific Key from `..>>ListReport>i18n`**
 
 </th>
 </tr>
@@ -459,7 +460,7 @@ Create
 </td>
 <td valign="top">
 
-Label for creating buttons in the list report.
+Label for creating buttons on the list report page.
 
 </td>
 </tr>
@@ -495,7 +496,7 @@ Application developers can set the title to "Create Order" or "Create Contract",
 </td>
 <td valign="top">
 
-Used in a message box that is displayed in the list report after a partial update, in case of mass edit.
+Used in a message box that is displayed on the list report page after a partial update, in case of mass edit.
 
 </td>
 </tr>
@@ -512,7 +513,7 @@ Create Object
 </td>
 <td valign="top">
 
-Title for the `NewAction` parameter dialog in the list report.
+Title for the `NewAction` parameter dialog on the list report page.
 
 </td>
 </tr>
@@ -529,7 +530,7 @@ Continue
 </td>
 <td valign="top">
 
-Label for a button within the `NewAction` parameter dialog in the list report.
+Label for a button within the `NewAction` parameter dialog on the list report page.
 
 </td>
 </tr>
@@ -546,7 +547,7 @@ Edit \(\{0\}\)
 </td>
 <td valign="top">
 
-Title for mass edit dialog in the list report page.
+Title for mass edit dialog on the list report page.
 
 Application developers can set the title to "Edit Purchase Orders \(\{0\}\)", for example.
 
@@ -595,7 +596,7 @@ If you take over, any changes will be lost.
 </td>
 <td valign="top">
 
-Text displayed in the confirmation dialog when a user clicks *Edit* on the object page that was locked and the lock expired.
+Text displayed in the confirmation dialog when a user chooses *Edit* on the object page that was locked and the lock expired.
 
 </td>
 </tr>
@@ -663,7 +664,7 @@ You haven't made any changes.
 </td>
 <td valign="top">
 
-Text displayed in a message toast when a user clicks *Save* and the object has no unsaved changes.
+Text displayed in a message toast when a user chooses *Save* and the object has no unsaved changes.
 
 </td>
 </tr>
@@ -765,7 +766,7 @@ Delete Item?
 </td>
 <td valign="top">
 
-Text displayed in the delete dialog when a user selects items without a title and description from the smart table in the subobject page, and clicks *Delete* on the smart table toolbar.
+Text displayed in the delete dialog when a user selects items without a title and description from the smart table in the subobject page, and chooses *Delete* on the smart table toolbar.
 
 </td>
 </tr>
@@ -1067,7 +1068,7 @@ Delete this object?
 </td>
 <td valign="top">
 
-Text displayed within the delete dialog when a user deletes an object \(without an object title\) by clicking *Delete* on the object page header.
+Text displayed within the delete dialog when a user deletes an object \(without an object title\) by choosing *Delete* on the object page header.
 
 </td>
 </tr>
@@ -1148,7 +1149,7 @@ Text displayed when the value for a required field is missing and so the draft c
 <tr>
 <th valign="top" colspan="3">
 
-**List Report, Object Page, and Analytical List Page Key from `..>>lib>i18n`**
+**List Report Page, Object Page, and Analytical List Page Key from `..>>lib>i18n`**
 
 </th>
 </tr>
@@ -1201,7 +1202,7 @@ This object has unsaved changes by \{0\}.
 </td>
 <td valign="top">
 
-When an object has unsaved changes from another user, an icon is displayed in the key field column of the list report, and next to the title on the object page. When the user clicks the icon, a popup appears with this message.
+When an object has unsaved changes from another user, an icon is displayed in the key field column of the list report page, and next to the title on the object page. When the user chooses the icon, a popup appears with this message.
 
 </td>
 </tr>
@@ -1242,193 +1243,6 @@ The header title for draft objects in edit mode.
 <tr>
 <td valign="top">
 
-`NOITEMS_SMARTTABLE` 
-
-</td>
-<td valign="top">
-
-No items available.
-
-</td>
-<td valign="top">
-
-No data text is displayed when there is no data available in the smart table of the object page.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_SMARTTABLE_WITH_FILTER` 
-
-</td>
-<td valign="top">
-
-No items available. Try adjusting the search or filter parameters.
-
-</td>
-<td valign="top">
-
-Text displayed when no results are available in the smart table of the object page after applying the filters.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON` 
-
-</td>
-<td valign="top">
-
-There are no items for the selected filter criteria and table view.
-
-</td>
-<td valign="top">
-
-Text displayed when no data is available in the selected view of the smart table with segmented buttons on the object page.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_SMARTCHART` 
-
-</td>
-<td valign="top">
-
-No data found.
-
-</td>
-<td valign="top">
-
-Text displayed in charts on the analytical list page and object page when no data is found without applying any filters.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_LR_SMARTCHART` 
-
-</td>
-<td valign="top">
-
-There is no data for the selected filter criteria and chart view.
-
-</td>
-<td valign="top">
-
-Text displayed in the list report chart when no data is found.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_SMARTCHART_WITH_FILTER` 
-
-</td>
-<td valign="top">
-
-No data found. Try adjusting the filter parameters.
-
-</td>
-<td valign="top">
-
-Text displayed in charts on the analytical list page and object page when no data is found even after applying filters.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`SMARTCHART_INITIAL_NODATA` 
-
-</td>
-<td valign="top">
-
-To start, set the relevant filters and choose "Go".
-
-</td>
-<td valign="top">
-
-Text displayed in the list report chart when no search is triggered.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_LR_SMARTTABLE` 
-
-</td>
-<td valign="top">
-
-No data found.
-
-</td>
-<td valign="top">
-
-Text displayed in the list report table, when the table is empty after clicking "Go" without setting any filters.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NODATA_SMARTTABLE_LR` 
-
-</td>
-<td valign="top">
-
-To start, set the relevant filters and choose "Go".
-
-</td>
-<td valign="top">
-
-Text displayed in the list report table, when no search is triggered.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_LR_SMARTTABLE_WITH_FILTER` 
-
-</td>
-<td valign="top">
-
-No data found. Try adjusting the search or filter criteria.
-
-</td>
-<td valign="top">
-
-Text displayed in the list report table when no data is found after applying filters.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER` 
-
-</td>
-<td valign="top">
-
-There is no data for the selected filter criteria and table view.
-
-</td>
-<td valign="top">
-
-Text displayed in the list report table when no data is found for a view in case of multi-view application.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `ST_GENERIC_DELETE_WITH_WARNING_SUGGESTION_PLURAL` 
 
 </td>
@@ -1456,9 +1270,9 @@ Warning message text displayed on the delete popover when a user tries to delete
 </td>
 <td valign="top">
 
-Warning message text on the delete popover informing the user that some of the objects are not deletable as the deletion has failed in the backend in case of multi-select delete.
+Warning message text on the delete popover informing the user that some of the objects are not deletable as the deletion has failed in the back end in case of multi-select delete.
 
-Warning message text on the delete popover when a user tries to delete multiple objects at once, but the deletion cannot proceed because some objects cannot be deleted as the deletion failed in the backend.
+Warning message text on the delete popover when a user tries to delete multiple objects at once, but the deletion cannot proceed because some objects cannot be deleted as the deletion failed in the back end.
 
 </td>
 </tr>
@@ -1475,7 +1289,7 @@ Some of the objects you selected can't be deleted. Try deleting the objects indi
 </td>
 <td valign="top">
 
-Warning message text on the delete popover when a user tries to delete multiple objects at once, indicating the deletion has failed in the backend for some objects, and as a result of a genetic error, the entire batch has failed.
+Warning message text on the delete popover when a user tries to delete multiple objects at once, indicating the deletion has failed in the back end for some objects, and as a result of a genetic error, the entire batch has failed.
 
 </td>
 </tr>
@@ -1492,7 +1306,7 @@ Warning message text on the delete popover when a user tries to delete multiple 
 </td>
 <td valign="top">
 
-Message text displayed for multi-select function import actions, when the action fails in the backend
+Message text displayed for multi-select function import actions, when the action fails in the back end
 
 </td>
 </tr>
@@ -1509,7 +1323,7 @@ The selected objects can't be processed.
 </td>
 <td valign="top">
 
-Message text displayed for multi-select function import actions. In this case, the action fails in the backend for some of the selected objects, and as a result, the entire batch fails.
+Message text displayed for multi-select function import actions. In this case, the action fails in the back end for some of the selected objects, and as a result, the entire batch fails.
 
 </td>
 </tr>
@@ -1543,9 +1357,9 @@ The filter \\"\{0\}\\" isn't relevant for the tab \\"\{1\}\\". Setting this filt
 </td>
 <td valign="top">
 
-Text displayed in the message strip above the smart table in the list report when a user sets filters that aren't relevant for the selected tab in a multi-view application, on a desktop, or a large screen device.
+Text displayed in the message strip above the smart table on the list report page when a user sets filters that aren't relevant for the selected tab in multiple table mode, on a desktop, or a large screen device.
 
-Text displayed in a message strip above the smart table in the list report when a user applies filters that aren't relevant for the selected tab in a multi-view application, on a desktop, or a large-screen device.
+Text displayed in a message strip above the smart table on the list report page when a user applies filters that aren't relevant for the selected tab in multiple table mode, on a desktop, or a large-screen device.
 
 </td>
 </tr>
@@ -1562,7 +1376,7 @@ You can't filter by \\"\{0\}\\" on the \\"\{1\}\\" tab.
 </td>
 <td valign="top">
 
-Text displayed in the message strip above the smart table in the list report when a user selects a filter that isn't relevant for the selected tab in a multi-view application, on a mobile, or a small-screen device.
+Text displayed in the message strip above the smart table on the list report page when a user selects a filter that isn't relevant for the selected tab in multiple table mode, on a mobile, or a small-screen device.
 
 </td>
 </tr>
@@ -1579,7 +1393,7 @@ Some of the filters aren't relevant for the tab \\"\{1\}\\" \(\{0\}\). Setting t
 </td>
 <td valign="top">
 
-Text displayed in the message strip above the smart table in the list report when a user selects a filter that isn't relevant for the selected tab in a multi-view application, on a desktop, or a large-screen device.
+Text displayed in the message strip above the smart table on the list report page when a user selects a filter that isn't relevant for the selected tab in multiple table mode, on a desktop, or a large-screen device.
 
 </td>
 </tr>
@@ -1596,7 +1410,7 @@ You can't use the following filters on the \\"\{1\}\\" tab\\: \\"\{0\}\\"
 </td>
 <td valign="top">
 
-Text displayed in the message strip above the smart table in the list report when a user selects a filter that isn't relevant for the selected tab in a multi-view application, on a mobile, or a small-screen device.
+Text displayed in the message strip above the smart table on the list report page when a user selects a filter that isn't relevant for the selected tab in multiple table mode, on a mobile, or a small-screen device.
 
 </td>
 </tr>
@@ -1651,7 +1465,7 @@ Confirm this action?
 </td>
 <td valign="top">
 
-Text within the confirmation dialog that comes up when a user clicks on an action that requires confirmation.
+Text within the confirmation dialog that comes up when a user chooses on an action that requires confirmation.
 
 > ### Note:  
 > The `ACTION_CONFIRM` key can also be interpreted as `ACTION_CONFIRM|<EntitySetName><ActionName>`.
@@ -1659,6 +1473,296 @@ Text within the confirmation dialog that comes up when a user clicks on an actio
 > Add the key-value pair and the message text to the`i18n.properties` file of your application. An example of a message box text for confirming an action question can be as follows:`ACTION_CONFIRM|STTA_C_MP_ProductActivation = Confirm activation?`
 
 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`SMARTCHART_INITIAL_NODATA_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+Let's get some results
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when a chart on a list report page in multiple table mode contains no data because the user hasn't chosen *Go*.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`SMARTCHART_INITIAL_NODATA_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+Start by providing your search or filter criteria.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_LR_SMARTCHART_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+No results found
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when the filters applied to a chart on a list report page in multiple table mode return no data.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_LR_SMARTCHART_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+Try changing the view or filter criteria.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTCHART_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+There are no entries yet
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when a chart on an object page contains no data because the user hasn't chosen *Go*.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTCHART_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+When there are, you'll see them here.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NODATA_SMARTTABLE_LR_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+Let's get some results
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when a chart on a list report page contains no data because the user hasn't chosen *Go*.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NODATA_SMARTTABLE_LR_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+Start by providing your search or filter criteria.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+No results found
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when the filters applied to a table on a list report page in multiple table mode return no data.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+Try changing the view or filter criteria.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_LR_SMARTTABLE_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+No results found
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when the filters applied to a list report page table return no data.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_LR_SMARTTABLE_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+Try changing your filter criteria.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_LR_SMARTTABLE_WITH_FILTER_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+There are no entries yet
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when a table on a list report page contains no data because the user hasn't chosen *Go*.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_LR_SMARTTABLE_WITH_FILTER_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+When there are, you'll see them here.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+No results found
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when no data is available in the selected view of an object page table with segmented buttons.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+Try changing the view or filter criteria.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+There are no entries yet
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when a table on an object page contains no data because the user hasn't chosen *Go*.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+When there are, you'll see them here.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+No results found
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when the filters applied to a table on an object page or an analytical list page return no data.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+Try changing your filter criteria.
 
 </td>
 </tr>
@@ -1693,40 +1797,6 @@ Used In
 <tr>
 <td valign="top">
 
-`NODATA_SMARTCHART_ALP` 
-
-</td>
-<td valign="top">
-
-To start, set the relevant filters and choose "Go".
-
-</td>
-<td valign="top">
-
-Text displayed in the analytical list page smart chart when no search is triggered.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NODATA_SMARTTABLE_ALP` 
-
-</td>
-<td valign="top">
-
-To start, set the relevant filters and choose "Go".
-
-</td>
-<td valign="top">
-
-Text displayed in the analytical list page smart table when no search is triggered.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `MESSAGE_MULTIPLE_VALUES_L_FORM` 
 
 </td>
@@ -1737,7 +1807,7 @@ Some of the filters aren't relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings 
 </td>
 <td valign="top">
 
-Text displayed in a message strip when a user applies filters, but some of the filters aren't applicable for the selected tab in a multi-view application, on a mobile, or a small-screen device.
+Text displayed in a message strip when a user applies filters, but some of the filters aren't applicable for the selected tab in multiple table mode, on a mobile, or a small-screen device.
 
 </td>
 </tr>
@@ -1754,11 +1824,100 @@ You can't use the following filters on the \\"\{1\}\\" tab\\: \\"\{0\}\\"
 </td>
 <td valign="top">
 
-Text displayed in a message strip when a user applies filters, but some of them aren't relevant for the selected tab in a multi-view application, on a mobile, or a small-screen device.
+Text displayed in a message strip when a user applies filters, but some of them aren't relevant for the selected tab in multiple table mode, on a mobile, or a small-screen device.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NODATA_SMARTCHART_ALP_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+Let's get some results
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when a chart on an analytical list page contains no data because the user hasn't chosen *Go*.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NODATA_SMARTCHART_ALP_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+Start by providing your search or filter criteria.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTCHART_WITH_FILTER_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+No results found
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when the filters applied to a chart on an analytical list page return no data.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTCHART_WITH_FILTER_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+Try changing your filter criteria.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NODATA_SMARTTABLE_ALP_ILLUSTRATION_TITLE`
+
+</td>
+<td valign="top">
+
+Let's get some results
+
+</td>
+<td valign="top" rowspan="2">
+
+Illustrated message text displayed when a table on an analytical list page contains no data because the user hasn't chosen *Go*.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NODATA_SMARTTABLE_ALP_ILLUSTRATION_DESCRIPTION`
+
+</td>
+<td valign="top">
+
+Start by providing your search or filter criteria.
 
 </td>
 </tr>
 </table>
+
+For more information about illustrated messages, see [Displaying an Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-dee77bd.md).
 
 
 
@@ -1768,13 +1927,13 @@ Text displayed in a message strip when a user applies filters, but some of them 
 
 SAP Fiori generator automatically generates the following initial folders and files when you create an app with SAP Fiori elements:
 
--   <root-folder\>
+-   `<root-folder>`
 
--   |--webapp
+-   `webapp`
 
--   |----i18n
+-   `i18n`
 
--   |—i18n.properties
+-   `i18n.properties`
 
 
 The required folder structure to the resource model appears as shown here. You can create it as required by your application structure and the texts that need adaptation. Since the `manifest.json` file also refers to the title and description of the app, there is a general `i18n.properties` file on the top level:
@@ -1793,7 +1952,10 @@ The app descriptor \(`manifest.json` file\) of an application specifies the SAPU
 Example:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
+> 
 > "sap.ui5": {
 >  
 >         ...
@@ -1801,19 +1963,22 @@ Example:
 >         "i18n": {                
 >             "type": "sap.ui.model.resource.ResourceModel",                
 >             "uri": "i18n/i18n.properties"           
->       },
+>         },
 >  
 >         "i18n|sap.suite.ui.generic.template.ListReport|POHeaders": {
 >             "type": "sap.ui.model.resource.ResourceModel",
 >             "uri": "i18n/ListReport/POHeaders/i18n.properties"
->               },
+>         },
 >         "i18n|sap.suite.ui.generic.template.ObjectPage|POHeaders": {
->                     "type": "sap.ui.model.resource.ResourceModel",
->                     "uri": "i18n/ObjectPage/POHeaders/i18n.properties"
->               },
+>             "type": "sap.ui.model.resource.ResourceModel",
+>             "uri": "i18n/ObjectPage/POHeaders/i18n.properties"
+>         },
 >         "i18n|sap.suite.ui.generic.template.ObjectPage|POItems": {
->                     "type": "sap.ui.model.resource.ResourceModel",
->                     "uri": "i18n/ObjectPage/POItems/i18n.properties"
+>             "type": "sap.ui.model.resource.ResourceModel",
+>             "uri": "i18n/ObjectPage/POItems/i18n.properties"
+>         }
+>     }
+> }
 > 
 > ```
 

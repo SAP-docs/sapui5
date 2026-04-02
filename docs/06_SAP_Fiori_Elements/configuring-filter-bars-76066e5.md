@@ -2,7 +2,10 @@
 
 # Configuring Filter Bars
 
-You can configure filter bars in both list report applications and analytical list pages.
+You can configure the filter bar on the list report page and the analytical list page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 
 By default, only the fields included in `UI.SelectionFields`, along with all mandatory filter fields, are displayed in the filter bar. The *Editing Status* filter is added automatically if you have a draft service.
 
@@ -131,7 +134,7 @@ In this example, `P_Currency` and `P_Country` are mandatory and they must be fil
 
 ## Enabling Live Mode
 
-You can enable live mode by setting `liveMode` to `true` using UI adaptation. For more information, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
+You can enable live mode by setting `liveMode` to `true` using UI adaptation. For more information, see [Adapting the UI: List Report Page and Object Page](adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md).
 
 
 

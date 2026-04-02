@@ -32,7 +32,7 @@ You can view and download all files at [Flexible Column Layout App - Step 3](htt
 
 ```json
 {
-	"_version": "1.38.0",
+	"_version": "2.6.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -48,7 +48,7 @@ You can view and download all files at [Flexible Column Layout App - Step 3](htt
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.98.0",
+			"minUI5Version": "1.146.0",
 			"libs": {
 				"sap.f": {},
 				"sap.m": {},
@@ -77,15 +77,14 @@ First, we add the `sap.m` library as a dependency in the `manifest.json`.
 	...
 	<script id="sap-ui-bootstrap"
 		src="resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-resource-roots='{
 			"sap.ui.demo.fcl": "./",
 			"sap.ui.demo.mock": "test-resources/sap/ui/documentation/sdk/"
 		}'
-		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
-		data-sap-ui-compatversion="edge"
+		data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-frameoptions="trusted">
+		data-sap-ui-frame-options="trusted">
 	</script>
 	...
 ```

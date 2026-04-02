@@ -2,13 +2,13 @@
 
 # Using the Multi-Input Field on the Object Page
 
-When you can enter more than one value, the multi-input field is rendered on the object page.
+You can render a multi-input field on the object page.
 
 If the system identifies a 1:n association of a `DataField`, the multi-input field is activated automatically.
 
 You must define a 1:n association in the data model.
 
-In the following example, `"_supportedMaterial"` is a one-to-many `navigationProperty` pointing to the `"SupportedMaterial"` entity:
+In the following example, `"_supportedMaterial"` is a one-to-many `navigationProperty` pointing to the `SupportedMaterial` entity:
 
 > ### Sample Code:  
 > ABAP CDS Annotation
@@ -24,7 +24,7 @@ In the following example, `"_supportedMaterial"` is a one-to-many `navigationPro
 > _SupportedMaterials : Composition of many SupportedMaterial on _SupportedMaterials.owner = $self;
 > ```
 
-You can use the navigation property inside a `UI.DataField` to display the values of the target entity. The following example shows how to display the `"material"` property of every associated `"SupportedMaterial"`:
+You can use the navigation property inside a `UI.DataField` to display the values of the target entity. The following example shows how to display the `material` property of every associated `SupportedMaterial`:
 
 > ### Sample Code:  
 > XML Annotation
@@ -83,12 +83,6 @@ The multi-input field is also available for tables.
 **Multi-Input Control on the Object Page Table**
 
 ![](images/Smart_MultiInput_Control_on_the_Object_Page_Table_dcb027c.png "Multi-Input Control on the Object Page Table")
-
-
-
-<a name="loio04ff5b1a81344a8e8169ea99630ff4e5__section_x43_wmz_c1c"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
 
 The multi-input field is only shown in edit mode if its target collection is both insertable and deletable. You can define this by using the following annotations for multi-input fields:
 
@@ -155,5 +149,5 @@ When you set the `Common.fieldControl` annotation to `Mandatory`, a red asterisk
 **Related Information**  
 
 
-[Tables](tables-c0f6592.md "SAP Fiori elements supports several table types.")
+[Tables](tables-c0f6592.md "You can configure the appearance, interactivity, and loading behavior of tables..")
 

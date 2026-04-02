@@ -2,7 +2,7 @@
 
 # The `Page` Building Block
 
-You can use the `Page` building block to create a custom page with a predefined layout. The generated page is preconfigured with the appropriate margins and padding.
+You can use the `Page` building block to create a custom page with a predefined layout. The `Page` building block is based on the `sap.f.DynamicPage`. The generated page is preconfigured with the appropriate margins and padding wherever this is technically possible.
 
 You can configure the content of the building block based on your needs. For example, in the following sample code, two panels containing a text element have been configured:
 

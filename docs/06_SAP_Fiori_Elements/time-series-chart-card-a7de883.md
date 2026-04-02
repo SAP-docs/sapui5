@@ -4,6 +4,9 @@
 
 A time series chart contains a time axis instead of a categorical axis.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Time Series Chart](time-series-chart-784d317.md).
+
   
   
 **Example of a Time Series Chart Card**

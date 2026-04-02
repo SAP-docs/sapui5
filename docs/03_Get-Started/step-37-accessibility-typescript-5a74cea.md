@@ -65,25 +65,25 @@ For more information, see the [API Reference: `sap.m.PageAccessibleLandmarkInfo`
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true">
-	<Page title="{i18n>homePageTitle}">
-		<landmarkInfo>
-			<PageAccessibleLandmarkInfo
-				rootRole="Region"
-				rootLabel="{i18n>Overview_rootLabel}"
-				contentRole="Main"
-				contentLabel="{i18n>Overview_contentLabel}"
-				headerRole="Banner"
-				headerLabel="{i18n>Overview_headerLabel}"/>
-		</landmarkInfo>
-		<content>
-			<mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"/>
-			<mvc:XMLView viewName="ui5.walkthrough.view.InvoiceList"/>
-		</content>
-	</Page>
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Page title="{i18n>homePageTitle}">
+        <landmarkInfo>
+            <PageAccessibleLandmarkInfo
+                rootRole="Region"
+                rootLabel="{i18n>Overview_rootLabel}"
+                contentRole="Main"
+                contentLabel="{i18n>Overview_contentLabel}"
+                headerRole="Banner"
+                headerLabel="{i18n>Overview_headerLabel}"/>
+        </landmarkInfo>
+        <content>
+            <mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"/>
+            <mvc:XMLView viewName="ui5.walkthrough.view.InvoiceList"/>
+        </content>
+    </Page>
 </mvc:View>
 ```
 
@@ -97,38 +97,38 @@ We add an `sap.m.Panel` around the invoice list and move the toolbar from the ta
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.InvoiceList"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Panel accessibleRole="Region">
-		<headerToolbar>
-			<Toolbar>
-				<Title text="{i18n>invoiceListTitle}"/>
-				<ToolbarSpacer/>
-				<SearchField
-					width="50%"
-					search=".onFilterInvoices"/>
-			</Toolbar>
-		</headerToolbar>
-		<Table
-			id="invoiceList"
-			class="sapUiResponsiveMargin"
-			width="auto"
-			items="{
-				path : 'invoice>/Invoices',
-				sorter : {
-					path : 'ShipperName',
-					group : true
-				}
-			}">
-			<columns>
-				<Column
-					hAlign="End"
-					...
-			</columns>
-			...
-		</Table>
-	</Panel>
+    controllerName="ui5.walkthrough.controller.InvoiceList"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Panel accessibleRole="Region">
+        <headerToolbar>
+            <Toolbar>
+                <Title text="{i18n>invoiceListTitle}"/>
+                <ToolbarSpacer/>
+                <SearchField
+                    width="50%"
+                    search=".onFilterInvoices"/>
+            </Toolbar>
+        </headerToolbar>
+        <Table
+            id="invoiceList"
+            class="sapUiResponsiveMargin"
+            width="auto"
+            items="{
+                path : 'invoice>/Invoices',
+                sorter : {
+                    path : 'ShipperName',
+                    group : true
+                }
+            }">
+            <columns>
+                <Column
+                    hAlign="End"
+                    ...
+            </columns>
+            ...
+        </Table>
+    </Panel>
 </mvc:View>
 ```
 
@@ -142,18 +142,18 @@ In the `HelloPanel` view, we already have a panel, so we just add the `accessibl
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.HelloPanel"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Panel
-		headerText="{i18n>helloPanelTitle}"
-		class="sapUiResponsiveMargin"
-		width="auto"
-		expandable="{device>/system/phone}"
-		expanded="{= !${device>/system/phone} }"
-		accessibleRole="Region">	
-		…
-	</Panel>
+    controllerName="ui5.walkthrough.controller.HelloPanel"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Panel
+        headerText="{i18n>helloPanelTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        expandable="{device>/system/phone}"
+        expanded="{= !${device>/system/phone} }"
+        accessibleRole="Region">    
+        …
+    </Panel>
 </mvc:View>
 
 ```

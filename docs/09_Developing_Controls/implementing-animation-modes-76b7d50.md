@@ -15,7 +15,7 @@ The following animation modes are available:
 -   `none`: deactivates the animation completely
 
 
-The animation mode can either be set using the configuration parameter `window['sap-ui-config]['animationMode']` or as URL parameter \(see [Configuration Options and URL Parameters](../04_Essentials/configuration-options-and-url-parameters-91f2d03.md)\).
+The animation mode can either be set using the configuration parameter `globalThis["sap-ui-config"]["animation-mode"]` or as URL parameter \(see [Configuration Options and URL Parameters](../04_Essentials/configuration-options-and-url-parameters-91f2d03.md)\).
 
 The value for the attribute `data-sap-ui-animation-mode` on the `<html>` document root element is injected automatically on loading with the return value by using the `getAnimationMode` method of the configuration object.
 

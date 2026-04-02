@@ -2,10 +2,13 @@
 
 # Adding Confirmation Popovers for Actions
 
-You can display a confirmation popover when a user triggers an action.
+You can display a confirmation popover when the user triggers an action.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md).
 
 > ### Tip:  
-> Such a confirmation popover is only supported on actions without an action parameter dialog.
+> Confirmation popovers are only supported on actions without an action parameter dialog.
 
 To display a confirmation popover, add the `IsActionCritical` annotation to your action as shown below:
 
@@ -32,8 +35,7 @@ To display a confirmation popover, add the `IsActionCritical` annotation to your
 > 
 > annotate GWSAMPLE_BASIC.RegenerateAllData with @(
 >     Common.IsActionCritical : true
-> ); CDS
-> 				Annotation
+> );
 > ```
 
 Apps can add action-specific messages to confirmation dialog boxes. For more information, see [Localization of UI Texts](localization-of-ui-texts-91b525b.md).

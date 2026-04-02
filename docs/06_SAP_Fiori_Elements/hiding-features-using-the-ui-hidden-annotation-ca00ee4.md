@@ -101,11 +101,6 @@ Properties or facets annotated with this term are not hidden if the path \(`edit
 
 `edmJSON` can be used to apply `UI.Hidden` based on conditions. Properties or facets annotated with this term are hidden if the path \(`displayCriteria`\) evaluates to `value_A` or `value_B`; however, they are not hidden if the path evaluates to any other value.
 
-> ### Note:  
-> This is applicable only to SAP Fiori elements for OData V4.
-
-
-
 </td>
 </tr>
 </table>
@@ -211,7 +206,7 @@ You can hide header facets on the object page, as shown in the following sample 
 
 You cannot use the `UI.Hidden` annotation to hide the entire `UI.FieldGroup` and `UI.Identification`. To hide them, you must hide all the `DataField` records within them.
 
-In SAP Fiori elements for OData V4, you can use the `UI.Hidden` annotation to hide the wrapper around the `FieldGroup` which is normally the `ReferenceFacet` or the `DataFieldForAnnotation`.
+You can use the `UI.Hidden` annotation to hide the wrapper around the `FieldGroup` which is normally the `ReferenceFacet` or the `DataFieldForAnnotation`.
 
 
 

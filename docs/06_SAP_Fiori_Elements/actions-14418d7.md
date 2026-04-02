@@ -4,6 +4,9 @@
 
 You can use generic actions provided by SAP Fiori elements and implement application-specific actions using annotations or extension points.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Actions](actions-cbf16c5.md).
+
 Application-specific actions either trigger an interaction with the back end, calling an OData service, or they trigger navigation. Depending on where you want to place an action, and how you want to use it, specific attributes, prerequisites, and guidelines apply. The details are described in this topic and in the floorplan-specific sections. For details about navigation, see [Configuring Navigation](configuring-navigation-1a6c395.md).
 
 
@@ -61,9 +64,9 @@ context independent
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Object Page
+Object page
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-3530e6b.md)
 
@@ -72,7 +75,7 @@ Object Page
 <tr>
 <td valign="top">
 
-Overview Page
+Overview page
 
 [Defining Custom Actions](defining-custom-actions-c3de5c0.md)
 
@@ -81,7 +84,7 @@ Overview Page
 <tr>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
 [Defining Custom Actions](defining-custom-actions-c3de5c0.md) 
 
@@ -100,7 +103,7 @@ page content is passed
 </td>
 <td valign="top">
 
-Object Page
+Object page
 
 [Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-87566a3.md)
 
@@ -131,20 +134,20 @@ depends \(see linked topics\)
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Object Page
+Object page
 
 [Adding Actions to Tables](adding-actions-to-tables-c909f6b.md)
 
-[Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-510b6af.md)
+[Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-d27ae99.md)
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
 </td>
 </tr>
@@ -168,9 +171,9 @@ context independent
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Object Page
+Object page
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-3530e6b.md)
 
@@ -179,7 +182,7 @@ Object Page
 <tr>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
 [Defining Custom Actions](defining-custom-actions-c3de5c0.md) 
 
@@ -287,7 +290,7 @@ depends \(see linked topics\)
 <tr>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
 [Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md)
 
@@ -306,7 +309,7 @@ depends \(see linked topics\)
 </td>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
 [Defining Custom Actions](defining-custom-actions-c3de5c0.md) 
 
@@ -337,7 +340,7 @@ page content is passed
 </td>
 <td valign="top">
 
-Object Page
+Object page
 
 [Defining Determining Actions](defining-determining-actions-ee6c827.md)
 
@@ -351,7 +354,7 @@ available content is passed
 </td>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
 [Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md)
 
@@ -370,7 +373,7 @@ context independent
 </td>
 <td valign="top">
 
-Object Page
+Object page
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-3530e6b.md)
 
@@ -401,7 +404,7 @@ context dependent
 </td>
 <td valign="top">
 
-Overview Page
+Overview page
 
 [Quick View Cards](quick-view-cards-f65817a.md)
 
@@ -415,9 +418,9 @@ Overview Page
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Object Page
+Object page
 
 [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-e5b509c.md)
 
@@ -438,9 +441,9 @@ Object Page
 
 ### Generic Actions
 
-In list reports and object pages, standard actions such as *Create* \(+\), *Delete*, and *Edit*, as well as actions that trigger external navigation to related apps, are provided by SAP Fiori elements. You can enable or disable these actions.
+On list report pages and object pages, standard actions such as *Create* \(+\), *Delete*, and *Edit*, as well as actions that trigger external navigation to related apps, are provided by SAP Fiori elements. You can enable or disable these actions.
 
-For more information, see [Adding Actions to Tables](adding-actions-to-tables-c909f6b.md), [Actions in the List Report Page](actions-in-the-list-report-page-43ff607.md), [Enabling the Related Apps Button](enabling-the-related-apps-button-f302a97.md)
+For more information, see [Adding Actions to Tables](adding-actions-to-tables-c909f6b.md), [Actions on the List Report Page](actions-on-the-list-report-page-43ff607.md), [Enabling the Related Apps Button](enabling-the-related-apps-button-f302a97.md)
 
 
 
@@ -474,7 +477,7 @@ There are different ways to configure custom actions.
 
 ### Global Actions
 
-Global actions are placed at the top of the page and refer to the whole page \(for example *Display Log*\). They can be configured either by using annotations \(applicable for the object page only\), or by using manifest entries \(applicable for the list report and object page\).
+Global actions are placed at the top of the page and refer to the whole page \(for example *Display Log*\). They can be configured either by using annotations \(applicable for the object page only\), or by using manifest entries \(applicable for the list report page and the object page\).
 
 
 
@@ -493,7 +496,7 @@ Determining actions are placed in the footer of the app. These actions are also 
 Example: *Save* or *Accept/Reject* in an object page.
 
 > ### Note:  
-> Determining actions aren't appropriate for the list report, since the list report holds several records and the finalizing actions are applicable to the whole page, and not just some selected records of the list report table.
+> Determining actions aren't appropriate for the list report page, because the list report page holds several records and the finalizing actions are applicable to the whole page, and not just some selected records of the list report page table.
 
 
 
@@ -638,7 +641,7 @@ Context-independent function imports don't provide an `sap:action-for` annotatio
 > EntitySet="C_STTA_SalesOrder_WD_20" m:HttpMethod="POST" />
 > ```
 
-Context-independent actions calling OData function imports can be placed in the table and smart chart toolbars of the list report and the object page as determining actions in the list report or in the object page header.
+Context-independent actions calling OData function imports can be placed in the table and smart chart toolbars of the list report page and the object page as determining actions in the list report page or in the object page header.
 
 **Action Parameters for Unbound Actions \(Context-Independent\)**
 
@@ -714,7 +717,7 @@ UI.OperationGroupingType/Isolated
 </td>
 <td valign="top">
 
-The request for each selected instance is sent in a separate changeset within a single batch.
+The request for each selected instance is sent in a separate change set within a single batch.
 
 Even if an error occurs for a selected instance, the requests for the other selected instances are still executed.
 
@@ -728,7 +731,7 @@ UI.OperationGroupingType/ChangeSet
 </td>
 <td valign="top">
 
--   The request for each selected instance is sent in the same changeset within a single batch.
+-   The request for each selected instance is sent in the same change set within a single batch.
 
 -   Even if only a single selected instance results in an error when an action is executed, none of the selected instances are executed. This means that the action is either executed successfully for all instances, or isn't executed for any of the selected instances.
 
@@ -795,9 +798,9 @@ For more information, see [Prefilling Fields Using the DefaultValuesFunction](pr
 **Related Information**  
 
 
-[Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-2315b07.md "You can display a confirmation popover when a user triggers an action.")
+[Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-2315b07.md "You can display a confirmation popover when the user triggers an action.")
 
-[Using Action Control for Context-Dependent Actions](using-action-control-for-context-dependent-actions-5b0b686.md "Action control refers to the ability of applications to be able to configure app-specific actions so that they are only enabled for certain instances of the object, but not others.")
+[Using Action Control for Context-Dependent Actions](using-action-control-for-context-dependent-actions-5b0b686.md "You can use action control to display actions by adding the sap:action-for and sap:applicable-path terms to your action or function import.")
 
-[Configuring Navigation](configuring-navigation-1a6c395.md "SAP Fiori elements control the navigation within an app (internal navigation) and the navigation to and from an app (external navigation).")
+[Configuring Navigation](configuring-navigation-1a6c395.md "You can configure the SAP Fiori elements navigation within an app (internal navigation) and the navigation to and from an app (external navigation).")
 

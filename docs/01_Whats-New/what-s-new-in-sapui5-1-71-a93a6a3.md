@@ -1011,13 +1011,13 @@ SAP Fiori Elements
 
 General Features
 
-You can now use `typeImageURL` as a fallback option for the header image. For more information, see [Using Images, Initials, and Icons](../06_SAP_Fiori_Elements/using-images-initials-and-icons-5760b63.md).
+You can now use `typeImageURL` as a fallback option for the header image. For more information, see [Using Images and Icons](../06_SAP_Fiori_Elements/using-images-and-icons-5760b63.md).
 
 The list report has these new features:
 
--   The default text in the Delete dialog box has been enhanced to provide object information. For more information, see [Configuring the Delete Dialog in List Reports](../06_SAP_Fiori_Elements/configuring-the-delete-dialog-in-list-reports-15b7740.md).
+-   The default text in the Delete dialog box has been enhanced to provide object information. For more information, see [Configuring the Delete Dialog on the List Report Page](../06_SAP_Fiori_Elements/configuring-the-delete-dialog-on-the-list-report-page-15b7740.md).
 
--   You can use the SAPUI5 Visual Editor to improve the usability of the list report's table layout if a high number of columns is displayed by choosing different popin layout options. For more information, see [Adapting the UI: List Report and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
+-   You can use the SAPUI5 Visual Editor to improve the usability of the list report's table layout if a high number of columns is displayed by choosing different popin layout options. For more information, see [Adapting the UI: List Report Page and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md).
 
 The object page has this new feature:
 
@@ -1041,6 +1041,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

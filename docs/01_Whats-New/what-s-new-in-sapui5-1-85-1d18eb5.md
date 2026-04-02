@@ -560,7 +560,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Value help with a dropdown list now also supports text arrangement with `#textFirst`, `#textLast`. For more information, see [Value Help as a Dropdown List](../06_SAP_Fiori_Elements/value-help-as-a-dropdown-list-2a0a630.md).
 
--   Key users can now move and rename sections and subsections on the object page. For more information, see [Adapting the UI: List Report and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
+-   Key users can now move and rename sections and subsections on the object page. For more information, see [Adapting the UI: List Report Page and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md).
 
 -   You can now define context-dependent value help via the `Common.ValueListRelevantQualifiers` annotation term. For more information, see [Configuring Fields](../06_SAP_Fiori_Elements/configuring-fields-4b50f21.md).
 
@@ -609,6 +609,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

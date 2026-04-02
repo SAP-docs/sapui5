@@ -2,7 +2,7 @@
 
 # `In`/`Out` Mappings in the `ValueList` Annotation
 
-This topic provides information how the `IN`/`OUT` parameters can be used within the value help definition to establish a link between the fields in the main entity and the fields in the value help entity.
+You can use the `IN`/`OUT` parameters within the value help definition to establish a link between the fields in the main entity and the fields in the value help entity.
 
 
 
@@ -85,7 +85,7 @@ This refers to the corresponding field within the value help entity.
 </table>
 
 > ### Tip:  
-> When you use the value help in a filter field of the list report, the `Out` parameters are only applied if the target property \(`LocalDataProperty`\) is visible in the filter bar.
+> When you use the value help in a filter field of the list report page, the `Out` parameters are only applied if the target property \(`LocalDataProperty`\) is visible in the filter bar.
 
 
 

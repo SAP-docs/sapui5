@@ -96,12 +96,22 @@ To display the progress indicator in the object page header, add a record to the
 
 ### CDS: `UI.DataPoint`
 
-In CDS, annotate the `EntityType` containing the properties required for the data point as shown in the separate sections for SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4, respectively, below.
+In CDS, annotate the `EntityType` containing the properties required for the data point.
+
+```
+@UI: DataPoint #Progress              : {
+        Value         : Progress,
+        TargetValue   : 100,
+        Title         : 'Progress',
+        Visualization : #Progress
+    }
+
+```
 
 > ### Note:  
 > -   The data point annotation is for a `Property`, even if the UI vocabulary specifies an `EntityType` as the `Target`.
 > 
-> -   The property name will be used as the `Qualifier` in the resulting \(generated\) annotation.
+> -   The property name is used as the `Qualifier` in the resulting \(generated\) annotation.
 
 The generated annotation will be similar to the example below:
 
@@ -278,48 +288,6 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
         ![](images/ProgIndicator_SpecialValues_ec1bbd3.png "Values in Progress Indicator")
 
 
-
-
-
-<a name="loio3b5e01c647f44ea98655b8c08feba780__section_gdw_jqm_bmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-**CDS: `UI.DataPoint`**
-
-In ABAP CDS, annotate the `EntityType` containing the properties required for the data point as shown below.
-
-```xml
-@UI.dataPoint: {   
-    title:'{@i18n>Title}',   
-    description: {@i18n>SubTitle},   
-    targetValue: 150,   
-    criticality: 'Criticality',   
-    visualization: #PROGRESS   
-}
-ProjectProgress.Progress
-
-```
-
-
-
-<a name="loio3b5e01c647f44ea98655b8c08feba780__section_bg1_nqm_bmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-**SAP Cloud Application Programming Model: `UI.DataPoint`**
-
-In CAP CDS, annotate the `EntityType` containing the properties required for the data point as shown below.
-
-```
-@UI: DataPoint #Progress              : {
-        Value         : Progress,
-        TargetValue   : 100,
-        Title         : 'Progress',
-        Visualization : #Progress
-    }
-
-```
 
 
 

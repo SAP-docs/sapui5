@@ -1748,15 +1748,15 @@ SAP Fiori Elements
 
     -   By default, the list report displays one table. You can define multiple views on a table for the user to switch between the views using an icon tab bar or a segmented button.
 
-        For more information, see [Defining Multiple Views on a List Report Table - Single Table Mode](../06_SAP_Fiori_Elements/defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md).
+        For more information, see [Defining Multiple Views in a List Report Page Table - Single Table Mode](../06_SAP_Fiori_Elements/defining-multiple-views-in-a-list-report-page-table-single-table-mode-0d390fe.md).
 
     -   For simplicity purposes, you can create an app without any variant management. In this case, just the title of the app is displayed. You can create a custom title, if required.
 
-        For more information, see [Creating a List Report without Variant Management](../06_SAP_Fiori_Elements/creating-a-list-report-without-variant-management-094fe8c.md).
+        For more information, see [Creating a List Report Page Without Variant Management](../06_SAP_Fiori_Elements/creating-a-list-report-page-without-variant-management-094fe8c.md).
 
     -   If you have not added a semantic key to the line items, the editing status is displayed in the *Title* or *Description* column, depending on the available information.
 
-        For more information, see [Settings for List Report Tables](../06_SAP_Fiori_Elements/settings-for-list-report-tables-4c2d17a.md).
+        For more information, see [Settings for List Report Page Tables](../06_SAP_Fiori_Elements/settings-for-list-report-page-tables-4c2d17a.md).
 
     -   Users can navigate from a tree table to the object page, at row level. The *Show Detail* button is not displayed in the tree table.
 
@@ -1764,7 +1764,7 @@ SAP Fiori Elements
 
     -   If users have set *Execute on Select* for their default variant, the content of the list report is displayed immediately upon launching the app, and the smart filter bar is collapsed.
 
-        For more information, see [List Report Elements](../06_SAP_Fiori_Elements/list-report-elements-1cf5c7f.md).
+        For more information, see [List Report Page](../06_SAP_Fiori_Elements/list-report-page-1cf5c7f.md).
 
 
 -   Object Page View
@@ -1960,6 +1960,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

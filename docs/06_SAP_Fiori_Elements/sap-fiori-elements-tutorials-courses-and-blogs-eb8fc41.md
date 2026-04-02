@@ -4,6 +4,9 @@
 
 Check out the learning resources we've provided for you.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [SAP Fiori Elements Tutorials, Courses, and Blogs](sap-fiori-elements-tutorials-courses-and-blogs-7715a01.md).
+
 The list is continually growing. Our learning resources are provided on the following different channels:
 
 **Tutorials**
@@ -22,7 +25,7 @@ The list is continually growing. Our learning resources are provided on the foll
 
 Blog posts change more often than other channels. In case any of the links provided below no longer work, try doing the following:
 
--   start on the [main page of the SAP Community](https://community.sap.com/) and browse by Blogs, Topics, or Groups,
+-   start on the [Main Page of the SAP Community](https://community.sap.com/) and browse by Blogs, Topics, or Groups,
 
 -   use the *Search* option to look for keywords or specific articles.
 

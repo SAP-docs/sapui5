@@ -2,7 +2,7 @@
 
 # Time Series Chart
 
-A time series chart contains a time axis instead of a categorical axis.
+You can render the chart as a time series chart, which contains a time axis instead of a categorical axis.
 
   
   
@@ -10,7 +10,31 @@ A time series chart contains a time axis instead of a categorical axis.
 
 ![](images/Time_Series_Chart_Card_2ae1caf.png "Example of a Time Series Chart")
 
-This chart type represents a time-based dimension that is more responsive to a change in card size. Analytical cards use the time axis automatically if these conditions apply:
+This chart type represents a time-based dimension that is more responsive to a change in card size.
+
+The time axis is automatically enabled for a chart when its dimension is one of the following types:
+
+-   `Edm.Date`
+
+-   `Edm.DateTimeOffset`
+
+
+Additionally, the time axis is enabled when the dimension is of type `String` and is annotated with one of the following annotations:
+
+-   `@Common.IsFiscalYear`
+
+-   `@Common.IsFiscalYearPeriod`
+
+-   `@Common.IsCalendarYearMonth`
+
+-   `@Common.IsCalendarYearQuarter`
+
+-   `@Common.IsCalendarYearWeek`
+
+-   `@Common.IsCalendarDate`
+
+
+Analytical cards use the time axis automatically if these conditions apply:
 
 -   The chart type must be either vertical bullet, stacked column, scatter, line, bubble, column, waterfall, combination, or dual combination.
 

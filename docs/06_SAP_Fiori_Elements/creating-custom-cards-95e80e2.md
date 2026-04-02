@@ -6,6 +6,11 @@ In overview pages, you can create custom cards and integrate them into the overv
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Creating Custom Cards](creating-custom-cards-6d260f7.md).
+
+
+
 <a name="loio95e80e21ca9046538b07f3f776290676__section_btg_5l3_3xb"/>
 
 ## Procedure

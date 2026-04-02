@@ -142,7 +142,7 @@ Charts
     >         "columns": {
     >             "DataField::SalesOrderItemCategory": {
     >                 "width": "10em"
-    > 		    }
+    >             }
     >         }
     >     }
     > }
@@ -158,40 +158,6 @@ Charts
 > -   When the application is rendered in mobile phones, the table column width is adjusted automatically so that the displayed columns can occupy the complete available width.
 > 
 > -   You can use em, rem, or % \(relative to the table width\) to specify the width of a column using a `CssDefaults` annotation or settings in the `manifest.json`.
-
-
-
-<a name="loioa76525362b754354a85981a7389ca7af__section_cn3_qx3_31c"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Including Column Label in Column Width Calculation
-
-You can include the column label while calculating the default width by setting `widthIncludingColumnHeader` to `true` in the `manifest.json` file:
-
-> ### Sample Code:  
-> manifest.json
-> 
-> ```
-> "settings": {
->                         "tableSettings": {
->                             "multiEdit": {
->                                 "enabled": true
->                             },
->                             "widthIncludingColumnHeader": true
->                         },
->                         "columns": {
->                             "com.sap.vocabularies.UI.v1.DataFieldWithIntentBasedNavigation::bp_id": {
->                                 "widthIncludingColumnHeader": true
->                             },
->                             "com.sap.vocabularies.UI.v1.DataField::gross_amount" : {
->                                 "widthIncludingColumnHeader": true
->                             }
->                         }
->                     }
-> ```
 
 
 

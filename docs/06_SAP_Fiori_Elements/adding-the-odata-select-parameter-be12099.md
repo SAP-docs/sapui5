@@ -14,12 +14,11 @@ The `select` parameter is not added automatically to the OData request in list c
 > ```
 > "sap.ovp": {
 >     "globalFilterModel": "salesOrder",
->     "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54
->     "globalFilterEntitySet": "GlobalFilters",  //Available from SAPUI5 1.54
+>     "globalFilterEntitySet": "GlobalFilters",
 >     "cards": {
 >       "card00": {
 >         "model": "salesOrder",
->         "template": "sap.ovp.cards.list",
+>         "template": "sap.ovp.cards.v4.list",
 >         "settings": {     
 >           "entitySet": "SalesOrderSet",
 >           "category": "Sales Orders with filters",

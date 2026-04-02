@@ -29,13 +29,15 @@ The default display order of actions in the object page header is as follows:
     Example: *Share* functionality
 
 
+If an application has set the criticality for an action, that is, if app developers have defined semantic actions, these are automatically placed first. This means semantic actions are placed before generic actions \(like *Save* and *Edit*\) and in this case the generic actions are no longer automatically emphasized.
+
 
 
 ## Display Based on Mode
 
 The display of actions depends on which mode the user is in:
 
--   In *Display* mode, the relevant actions are displayed in the header toolbar \(see [Object Page Elements](object-page-elements-645e27a.md)\).
+-   In *Display* mode, the relevant actions are displayed in the header toolbar \(see [Object Page](object-page-645e27a.md)\).
 
 -   In *Edit* or *Create* mode, the footer bar contains the relevant actions, for example, *Save* and *Cancel* in *Edit* mode \(see the mentioned figure\), and *Create* and *Cancel* in *Create* mode.
 
@@ -52,15 +54,9 @@ You can add criticality to an action button through annotations. For more inform
 
 <a name="loiof65e8b196335457cbfc891418ec25cfd__section_ayc_fnz_qsb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
+## Changing the Order of Action Buttons Specified by an Application
 
-If an application has set the criticality for an action, that is, if app developers have defined semantic actions, these are automatically placed first. This means semantic actions are placed before generic actions \(like *Save* and *Edit*\) and in this case the generic actions are no longer automatically emphasized.
-
-
-
-### Changing the Order of Action Buttons Specified by an Application
-
-You can change the order of action buttons for both manifest-based actions and annotation-based actions. To do so, use `"position"` to define the placement of your action. For more information, see the *Additional Features in SAP Fiori elements for OData V4* section in [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
+You can change the order of action buttons for both manifest-based actions and annotation-based actions. To do so, use `"position"` to define the placement of your action. For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
 
 

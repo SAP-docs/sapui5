@@ -6,7 +6,7 @@ You can enable custom save functionality for the mass edit dialog.
 
 In the extension function, you can define the logic to save the data provided in the mass edit dialog. The default save functionality is executed by the framework if the extension is not defined. Clean-up tasks, such as closing the dialog, are performed by the framework after the extension logic is executed.
 
-You can implement the `customMassEditSave` function within the list report or object page controller extension. The default save functionality will not be executed when the `customMassEditSave` function returns `true`.
+You can implement the `customMassEditSave` function within the list report page or object page controller extension. The default save functionality will not be executed when the `customMassEditSave` function returns `true`.
 
 > ### Sample Code:  
 > ```
@@ -54,5 +54,5 @@ You can implement the `customMassEditSave` function within the list report or ob
 **Related Information**  
 
 
-[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "Mass editing allows end users to simultaneously change multiple objects that share the same editable properties.")
+[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "You can enable the mass edit feature to allow users to simultaneously change multiple objects that share the same editable properties.")
 

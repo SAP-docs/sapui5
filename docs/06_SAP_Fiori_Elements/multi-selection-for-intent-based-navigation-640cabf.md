@@ -2,6 +2,8 @@
 
 # Multi-Selection for Intent-Based Navigation
 
+Get to know multi-selection for intent-based navigation.
+
 By default, multi-selection for intent-based navigation is enabled.
 
 > ### Note:  
@@ -101,7 +103,7 @@ The selection variant that is passed has the following format:
 >             {"Sign":"I","Option":"EQ","Low":"EUR","High":null},
 >             {"Sign":"I","Option":"EQ","Low":"USD","High":null}
 >         ]},
-> .....
-> .....
+> ...
+> 
 > ```
 

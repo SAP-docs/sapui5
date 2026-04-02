@@ -2,14 +2,19 @@
 
 # Multiple Views on the List Report Page
 
-By default, the list report displays only one table. You can define multiple views of a table, and add a chart, if required.
+You can define multiple views of a table and add a chart.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Multiple Views on the List Report Page](multiple-views-on-the-list-report-page-a37df40.md).
 
 
 
 > ### Note:  
 > You can define variants for specific selections of data on the user interface, for example, based on filter settings. In the definition dialog, these variants are called views, however, the feature is called variant management. Therefore, for clarity, we use the term variant management in this section.
 
-You have the following options:
+By default, the list report page displays only one table. You have the following options to define multiple views:
 
 -   **A single table for all views \("single table mode"\)**: The UI contains a single table instance, one table toolbar, and \(if activated\) one table variant management. To switch between the views, a segmented button is rendered in the table toolbar. If there are more than three views, a select control is rendered instead of a segmented button.
 
@@ -39,9 +44,9 @@ Tables are displayed by default.
 
 ## Which Annotations Should I Use?
 
--   If you only want to describe **which** data should be displayed in a view, you can define a `SelectionVariant` containing filter criteria for the data. See [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0f6901e.md).
+-   If you only want to describe **which** data should be displayed in a view, you can define a `SelectionVariant` containing filter criteria for the data. See [Defining Multiple Views on a List Report Page Table - Single Table Mode](defining-multiple-views-on-a-list-report-page-table-single-table-mode-0f6901e.md).
 
--   If you also want to describe **how** the data should be displayed \(for example, different sort orders in a table or a different visualization in a table\), you can define a `SelectionPresentationVariant`. Note that you can use this annotation only for multiple table mode and multiple table mode with charts. See [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-97dfeea.md).
+-   If you also want to describe **how** the data should be displayed \(for example, different sort orders in a table or a different visualization in a table\), you can define a `SelectionPresentationVariant`. Note that you can use this annotation only for multiple table mode and multiple table mode with charts. See [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md).
 
 -   If all you want to do is use a different visualization, you can define a `PresentationVariant`.
 
@@ -57,9 +62,11 @@ Tables are displayed by default.
 
       
       
-    **Multiple views on a list report with different entity sets**
+    **Multiple Views on a List Report Page with Different Entity Sets**
 
-    ![](images/Multiple_Views_with_Multiple_Entity_Sets_1f20511.png "Multiple views on a list report with different entity sets")
+    ![](images/Multiple_Views_with_Multiple_Entity_Sets_1f20511.png "Multiple
+    							Views
+    							on a List Report Page with Different Entity Sets")
 
 
 > ### Restriction:  
@@ -71,9 +78,9 @@ Tables are displayed by default.
 **Related Information**  
 
 
-[Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0f6901e.md "You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.")
+[Defining Multiple Views on a List Report Page Table - Single Table Mode](defining-multiple-views-on-a-list-report-page-table-single-table-mode-0f6901e.md "You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.")
 
-[Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-97dfeea.md "You can define multiple views of a table and display them in multiple table mode. Users can switch between views using an icon tab bar.")
+[Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md "You can define multiple views of a table and display them in multiple table mode. Users can switch between views using an icon tab bar.")
 
-[Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md "You can configure your application to display data for different entity sets and table settings.")
+[Defining Multiple Views in a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-in-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md "You can configure your application to display data for different entity sets and table settings.")
 

@@ -2,7 +2,12 @@
 
 # Choosing Filter Modes
 
-ALP offers compact and visual filter modes. You can choose to set filters from both modes.
+You can choose to set filters from the compact and visual filter modes on the analytical list page.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Choosing Filter Modes on the Analytical List Page](choosing-filter-modes-on-the-analytical-list-page-00c19e1.md).
 
 
 
@@ -26,7 +31,7 @@ You can customize filter fields or charts that show up on the filter bar. Use th
 
 ## Filter Modes
 
-Analytical List Page lets you toggle between the visual filter and compact filter, even while filter conditions are applied. When you toggle, ALP ensures that the filter values in one mode sync with those in the other mode. However, filter selections in fields without visual filter configuration are seen only in compact filters. When a user is on the visual filter bar, all filter values from the regular filter bar are applied to the main content area – including those regular filter fields that have no corresponding visual filter field.
+Analytical list page lets you toggle between the visual filter and compact filter, even while filter conditions are applied. When you toggle, ALP ensures that the filter values in one mode sync with those in the other mode. However, filter selections in fields without visual filter configuration are seen only in compact filters. When a user is on the visual filter bar, all filter values from the regular filter bar are applied to the main content area – including those regular filter fields that have no corresponding visual filter field.
 
 In visual filter mode, you can change the chart type, sort order, and measure according to your needs. Visual filter supports three basic chart types: bar, donut, and line.
 
@@ -35,7 +40,7 @@ In visual filter mode, you can change the chart type, sort order, and measure ac
 
 [Configuring the Title Area](configuring-the-title-area-ebdb5da.md "The dynamic area of the analytical list page is the title area.")
 
-[Managing Variants](managing-variants-b82d987.md "Allows you to manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-b82d987.md "You can manage variants with different structures in the filter and content areas.")
 
-[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-bcfc085.md "The value list annotation lets you map an entity to another entity that is associated with a different entity set. The value list annotation defines the relationship between filter fields of the main entity set and the fields in the value help entity set.")
+[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-bcfc085.md "You can specify a value help entity for a field and maintain the value help configuration with a ValueList annotation.")
 

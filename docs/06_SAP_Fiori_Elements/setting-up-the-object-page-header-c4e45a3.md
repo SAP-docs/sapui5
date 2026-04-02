@@ -2,7 +2,10 @@
 
 # Setting Up the Object Page Header
 
-You have various options for defining the object page header.
+You can configure the object page header in different ways.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Setting Up the Object Page Header](setting-up-the-object-page-header-cce93e6.md).
 
 The object page supports the dynamic header. See also [Object Page Header](../10_More_About_Controls/object-page-header-6e340c1.md).
 
@@ -14,7 +17,7 @@ The object page header display is determined by the following vocabularies:
 
 -   `com.sap.vocabularies.UI.v1.HeaderInfo/ImageUrl` determines the image.
 
--   `com.sap.vocabularies.UI.v1.HeaderInfo/TypeName` is used as the text for the link that navigates back to the list report.
+-   `com.sap.vocabularies.UI.v1.HeaderInfo/TypeName` is used as the text for the link that navigates back to the list report page.
 
 -   `com.sap.vocabularies.UI.v1.HeaderInfo/TypeImageUrl` determines the icon.
 

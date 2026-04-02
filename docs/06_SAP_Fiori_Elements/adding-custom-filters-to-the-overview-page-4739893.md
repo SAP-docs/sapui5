@@ -2,7 +2,11 @@
 
 # Adding Custom Filters to the Overview Page
 
-You can add custom filters to your overview page application. It provides the end users an option to filter the data displayed in one or more cards.
+You can add custom filters to your overview page application. This allows end users to filter the data displayed in one or more cards.
+
+
+
+Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
 
 
 
@@ -103,7 +107,7 @@ To add custom filters, proceed as follows:
     </table>
     
 2.  Create a controller extension. For example, create a `customFilter.controller.js` file and define the following functions:
-    -   Define `getCustomFilters()` to return a filter object.
+    -   `getCustomFilters()` - To return a filter object.
 
         > ### Sample Code:  
         > ```
@@ -138,7 +142,7 @@ To add custom filters, proceed as follows:
         > }
         > ```
 
-    -   Define `getCustomAppStateDataExtension(oCustomData)` to store the application state.
+    -   `getCustomAppStateDataExtension(oCustomData)` - To store the application state.
 
         > ### Sample Code:  
         > ```
@@ -161,7 +165,7 @@ To add custom filters, proceed as follows:
         > }
         > ```
 
-    -   Define `restoreCustomAppStateDataExtension(oCustomData)` to restore the application state.
+    -   `restoreCustomAppStateDataExtension(oCustomData)` - To restore the application state.
 
         > ### Sample Code:  
         > ```
@@ -186,12 +190,10 @@ To add custom filters, proceed as follows:
         > ```
 
 
-3.  Add the controller and view extension settings in the `manifest.json` file.
+3.  In the `manifest.json` file, add the controller and view extension settings.
 
     > ### Note:  
-    > You must ensure that the same entity type is used in both the `viewExtensions` and `globalFilterEntityType` settings.
-    > 
-    > As of SAPUI5 1.54, the `globalFilterEntityType` setting has been deprecated. We recommend using `globalFilterEntitySet` instead.
+    > Ensure that the same entity type is used in both the `viewExtensions` and `globalFilterEntitySet` settings.
 
     > ### Sample Code:  
     > `manifest.json`
@@ -217,8 +219,7 @@ To add custom filters, proceed as follows:
     > },
     > "sap.ovp": {
     >     "globalFilterModel": "salesOrder",
-    >     "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
-    >     "globalFilterEntitySet": "GlobalFilters",  //Available from SAPUI5 1.54.
+    >     "globalFilterEntitySet": "GlobalFilters",  
     >     ...
     > }
     > ```

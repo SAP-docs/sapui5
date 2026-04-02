@@ -2,6 +2,8 @@
 
 # Security Configuration
 
+Get to know app security and sensitive data protection.
+
 Security has always been an important element for the complete product life cycle of all SAP products, including product development, planning, and quality assurance. SAP takes care of some of the security focus areas, while others have to be handled by you.
 
 Consider the following security aspects:
@@ -11,7 +13,7 @@ Consider the following security aspects:
     > ### Example:  
     > You must ensure that the setting for the total number of requests of OData batches is high enough in case you want to use the `InvocationGrouping: Changeset`.
 
-    For more information, see [Security Aspects](https://cap.cloud.sap/docs/guides/security/aspects) and the section [Grouping of Multiple Invocations of the Same Action Using Multiple Selections in the Table](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__handlingWithinButtons) in [Actions](actions-cbf16c5.md).
+    For more information, see [CAP Security And Data Privacy](https://cap.cloud.sap/docs/guides/security/) and the [Grouping of Multiple Invocations of the Same Action Using Multiple Selections in the Table](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__handlingWithinButtons) section in [Actions](actions-cbf16c5.md).
 
 -   If you're using ABAP, see [Implementing Search in an Unmanaged Query](https://help.sap.com/docs/abap-cloud/abap-rap/implementing-search-in-unmanaged-query) and [Implementing Filtering in an Unmanaged Query](https://help.sap.com/docs/abap-cloud/abap-rap/implementing-filtering-in-unmanaged-query) for more information about security-related configurations.
 
@@ -26,7 +28,7 @@ Consider the following security aspects:
 
 ## Protecting Potentially Sensitive Data
 
-To protect potentially sensitive data, annotate properties as potentially sensitive as described in [PersonalData Vocabulary](https://sap.github.io/odata-vocabularies/vocabularies/PersonalData.html) and consider the following:
+To protect potentially sensitive data, annotate properties as potentially sensitive as described in [`PersonalData` Vocabulary](https://sap.github.io/odata-vocabularies/vocabularies/PersonalData.html) and consider the following:
 
 -   **Using the Export Button**
 

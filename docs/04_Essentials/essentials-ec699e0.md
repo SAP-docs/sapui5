@@ -24,7 +24,7 @@ Depending on the environment in which SAPUI5 is used, the libraries or your appl
 
 ## Artifacts in the Framework
 
-The top-level structural unit is called a **library**. Libraries are the master artifacts in the extensibility concept. They bundle a set of controls and related types and make them consumable by Web applications. There are predefined and standard libraries, like `sap.m`, with many commonly used controls. At the same time, it treats custom UI libraries as first-class citizens, making it easy for you to write and use your own controls alongside the predefined ones.
+The top-level structural unit is called a **library**. Libraries are the main artifacts in the extensibility concept. They bundle a set of controls and related types and make them consumable by Web applications. There are predefined and standard libraries, like `sap.m`, with many commonly used controls. At the same time, it treats custom libraries as first-class citizens, making it easy for you to write and use your own controls alongside the predefined ones.
 
 A UI **element** is the basic building block of our user interfaces; it is a reusable entity with properties, events, methods, and relations. The most important relations are aggregations to other UI elements, and in this way a tree structure of elements can be created.
 

@@ -6,6 +6,15 @@ You can configure the measures and dimensions displayed in charts by setting the
 
 
 
+> ### Note:  
+> This topic describes how to use charts within SAP Fiori elements overview pages. If you use the building block, you can try achieving the functionality through other means, such as the following:
+> 
+> -   Properties or methods exposed by the building block
+> 
+> -   Custom code using extensions
+
+
+
 You can use the same annotation file with different qualifiers to present charts with different chart views. To do this, specify different qualifiers in the annotation file for each card. The following sections of the annotation file apply to all chart types:
 
 
@@ -495,7 +504,7 @@ Additionally, you can add an index card with the rules configuration. The legend
 >     ...
 >     "<card_id>": {
 >       "model": "<model_name>",
->       "template": "sap.ovp.cards.charts.analytical",
+>       "template": "sap.ovp.cards.v4.charts.analytical",
 >       "settings": {
 >         "title": "<Card title>",
 >         "entitySet": "<entitySet>",
@@ -549,19 +558,13 @@ You can make data labels visible in analytical cards. To do this, set the `showD
 > 
 > "sap.ovp": {
 >       "globalFilterModel": "salesOrder",
->       "globalFilterEntityType": "GlobalFilters",
+>       "globalFilterEntitySet": "GlobalFilters",
 >       "chartSettings": {
 >         "showDataLabel":true
 >       },
 > ```
 
 ![](images/OVP_analytical_card_showdatalabel-true_bbf0cc3.png)
-
-
-
-## Related Links
-
-For more information about the type of charts used in overview pages, see [Chart Cards Used in Overview Pages](chart-cards-used-in-overview-pages-68e62ad.md).
 
 
 

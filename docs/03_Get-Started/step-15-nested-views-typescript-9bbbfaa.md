@@ -65,27 +65,27 @@ We create a new `HelloPanel.view.xml` file in our `webapp/view` folder and move 
 
 ```xml
 <mvc:View
-   controllerName="ui5.walkthrough.controller.HelloPanel"
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-   <Panel
-      headerText="{i18n>helloPanelTitle}"
-      class="sapUiResponsiveMargin"
-      width="auto">
-      <content>
-         <Button
-            text="{i18n>showHelloButtonText}"
-            press=".onShowHello"
-            class="myCustomButton"/>
-         <Input
-            value="{/recipient/name}"
-            valueLiveUpdate="true"
-            width="60%"/>
-         <FormattedText
-            htmlText="Hello {/recipient/name}"
-            class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
-      </content>
-   </Panel>
+    controllerName="ui5.walkthrough.controller.HelloPanel"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Panel
+        headerText="{i18n>helloPanelTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto">
+        <content>
+            <Button
+                text="{i18n>showHelloButtonText}"
+                press=".onShowHello"
+                class="myCustomButton"/>
+            <Input
+                value="{/recipient/name}"
+                valueLiveUpdate="true"
+                width="60%"/>
+            <FormattedText
+                htmlText="Hello {/recipient/name}"
+                class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+        </content>
+    </Panel>
 </mvc:View>
 ```
 
@@ -99,21 +99,21 @@ In the app view, we remove the panel control and its content and put the `XMLVie
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true">
-	<Shell>
-		<App class="myAppDemoWT">
-			<pages>
-				<Page title="{i18n>homePageTitle}">
-					<content>
-						<mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"/>
-					</content>
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Shell>
+        <App class="myAppDemoWT">
+            <pages>
+                <Page title="{i18n>homePageTitle}">
+                    <content>
+                        <mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"/>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
 ```
 

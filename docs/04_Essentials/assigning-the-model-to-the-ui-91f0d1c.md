@@ -27,7 +27,7 @@ Choose one of the following options:
     > 
     > ```json
     > {
-    >   "_version": "1.12.0",
+    >   ...
     >   "sap.app": {
     >     ...
     >     "dataSources": {

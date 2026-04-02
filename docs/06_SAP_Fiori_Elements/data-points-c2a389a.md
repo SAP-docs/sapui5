@@ -2,6 +2,8 @@
 
 # Data Points
 
+You can use the `Field` building block to render data points.
+
 A data point represents a single point of data. It is typically a number but can also be textual, for example, a status value.
 
 
@@ -10,9 +12,10 @@ The image below shows the data points *Price* and *Availability* in the object p
 
   
   
-**Object Page: DataPoints**
+**Object Page: Data Points**
 
-![](images/Object_Page_DataPoints_6eac05c.png "Object Page: DataPoints")
+![](images/Object_Page_DataPoints_6eac05c.png "Object Page: Data
+					Points")
 
 This video shows the step-by-step procedure for adding a data point header to an object page:
 

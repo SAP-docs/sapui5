@@ -2,25 +2,25 @@
 
 # Prerequisites for Using SAP Fiori Elements
 
-To create an app using SAP Fiori elements, some prerequisites apply.
+Get to know the prerequisites for creating an application using SAP Fiori elements.
 
-> ### Note:  
-> SAP Fiori elements only supports a single service as the service behind the data for all its controls.
-> 
-> KPI tags used in the analytical list page and the `ValueHelp` annotation in SAP Fiori elements for OData V4 are exceptions to this rule.
-> 
-> Note the following for SAP Fiori elements for OData V4:
-> 
-> -   The service must support the following OData query options:
-> 
->     -   `$count`
-> 
->     -   `$skip`
-> 
->     -   `$top`
-> 
-> 
-> -   This requirement also applies to a value help service that is used through the `ValueListReference` annotation.
+SAP Fiori elements only supports a single service as the service behind the data for all its controls.
+
+KPI tags used in the analytical list page and the `ValueHelp` annotation are exceptions to this rule.
+
+Note the following:
+
+-   The service must support the following OData query options:
+
+    -   `$count`
+
+    -   `$skip`
+
+    -   `$top`
+
+
+-   This requirement also applies to a value help service that is used through the `ValueListReference` annotation.
+
 
 
 
@@ -30,8 +30,7 @@ To create an app using SAP Fiori elements, some prerequisites apply.
 
 You can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to build your apps. For more information about SAP Business Application Studio, see the documentation on the SAP Help Portal at [SAP Business Application Studio](https://help.sap.com/viewer/product/SAP%20Business%20Application%20Studio/Cloud/en-US).
 
-> ### Note:  
-> In SAP Fiori elements for OData V4, an edit scenario works only in combination with a draft-enabled service.
+An edit scenario works only in combination with a draft-enabled service.
 
 
 
@@ -49,9 +48,9 @@ For more information about building OData services, use the following links to a
 
 
 > ### Note:  
-> While CAP defaults to OData V4, the latest protocol version, some projects need to fallback to OData V2, for example, to keep using existing V2-based UIs.
+> While CAP defaults to OData V4, the latest protocol version, some projects need to fallback to OData V2, for example, to keep using existing OData V2-based UIs.
 
-For SAP Fiori elements for OData V4, if you're using CAP, you must ensure the security configurations in the back end are compatible with the design and configuration of your app. For more information, see [Security Configuration](security-configuration-ba0484b.md).
+If you're using CAP, you must ensure the security configurations in the back end are compatible with the design and configuration of your app. For more information, see [Security Configuration](security-configuration-ba0484b.md).
 
 
 
@@ -70,11 +69,10 @@ For SAP Fiori elements for OData V4, if you're using CAP, you must ensure the se
 
 ## Tutorials
 
--   [https://developers.sap.com/group.fiori-tools-odata-v4-travel.html](https://developers.sap.com/group.fiori-tools-odata-v4-travel.html)
--   [https://developers.sap.com/group.fiori-tools-odata-v4-incident.html](https://developers.sap.com/group.fiori-tools-odata-v4-incident.html)
+For a curated list of tutorials and other learning resources, see [SAP Fiori Elements Tutorials, Courses, and Blogs](sap-fiori-elements-tutorials-courses-and-blogs-7715a01.md).
 
 
 
 > ### Note:  
-> For information about SAP Fiori Elements for OData V2, see [Prerequisites for Using SAP Fiori Elements](prerequisites-for-using-sap-fiori-elements-a84c137.md).
+> For information about SAP Fiori elements for OData V2, see [Prerequisites for Using SAP Fiori Elements](prerequisites-for-using-sap-fiori-elements-a84c137.md).
 

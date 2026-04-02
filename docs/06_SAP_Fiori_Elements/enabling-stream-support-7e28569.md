@@ -2,7 +2,10 @@
 
 # Enabling Stream Support
 
-End users of SAP Fiori elements-based applications can upload, download, and delete files.
+You can enable users to upload, download, and delete files.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling Stream Support](enabling-stream-support-b236d32.md).
 
 > ### Note:  
 > To prevent security issues and protect data from being created or processed with malicious content, you must ensure the following security measures are in place:
@@ -24,12 +27,15 @@ You can upload or download different `MediaType` files from an object page using
 The service must have an entity that is stream enabled because the `Edm.Stream` type is not supported.
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
+> 
 > <EntityType Name="MyStreamType" m:HasStream="true" sap:label="Stream Test" sap:content-version="1">
->   <Key>
->     <PropertyRef Name="Streamuuid" />
->     <PropertyRef Name="IsActiveEntity" />
->   </Key>
+>     <Key>
+>         <PropertyRef Name="Streamuuid" />
+>         <PropertyRef Name="IsActiveEntity" />
+>     </Key>
 > <Property Name="Edit_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
 > 
 > ```
@@ -43,6 +49,8 @@ The service must have an entity that is stream enabled because the `Edm.Stream` 
 To make stream support available on the object page, annotate the following in the `UI.FieldGroup` or `UI.Identification` annotation:
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > 
 > <Record Type="UI.DataField">
@@ -57,6 +65,8 @@ To make stream support available on the object page, annotate the following in t
 The following `MediaType` annotation represents the stream type that displays each record. This annotation is mandatory and exists on the entity level.
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > <Annotation Term="Org.OData.Core.V1.MediaType" Path="ThisMimeType"></Annotation>
 > ```
@@ -64,6 +74,8 @@ The following `MediaType` annotation represents the stream type that displays ea
 The following annotation must be set on the `entitylevel` if the stream is displayed as image.
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > <Annotation Term="UI.IsImage"/>
 > ```
@@ -85,6 +97,8 @@ Based on the `MediaType`, the icon for the non-image media type is shown differe
 The following annotation must exist on the `entitylevel` to set the text for the file name. If the annotations are not included, the hyperlink displays the text *Open File*.
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > 
 > <Annotation Term="SAP__core.ContentDisposition">
@@ -98,7 +112,10 @@ The following annotation must exist on the `entitylevel` to set the text for the
 You can restrict a `MediaType` from being uploaded by using the following annotation:
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
+> 
 > <Annotation Term="Core.AcceptableMediaTypes">
 >     <Collection>
 >         <String>text/plain</String>
@@ -114,11 +131,11 @@ If no file is present, a placeholder is displayed:
 ![](images/Stream_Support_4_adaa7a8.png)
 
 > ### Note:  
-> The uploaded file name is visible in the list report or the object page table but cannot be edited from the table.
+> The uploaded file name is visible in the list report page or the object page table but cannot be edited from the table.
 > 
 > To upload a file, navigate to the corresponding object page.
 > 
-> Only one file can be uploaded for a record; uploading a second file can replace the exisiting one.
+> Only one file can be uploaded for a record; uploading a second file can replace the existing one.
 > 
 > ![](images/Stream_Support_V2_08edaaf.png)
 

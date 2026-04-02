@@ -2,7 +2,7 @@
 
 # SAP Fiori Elements Feature Map
 
-This topic lists UI elements, controls, and features that are supported by SAP Fiori elements.
+See the list of UI elements, controls, and features supported by SAP Fiori elements.
 
 You can search, filter, and sort content in the table below. Use your mouse to hover over the links in the *Developer Documentation* column to display a short description of the feature.
 
@@ -17,21 +17,6 @@ You can use extension points to extend your generated app during the creation pr
 -   [Extending Generated Apps Using App Extensions](extending-generated-apps-using-app-extensions-340cdb2.md)
 
 -   [Extending SAP Fiori Elements-Based Apps](extending-sap-fiori-elements-based-apps-358cf25.md)
-
-
-
-
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__section_d5r_gst_ymb"/>
-
-## How To Use the Feature Map
-
-**Filter Usage for *Supported Floorplans* Column in Table** 
-
--   Features available for both OData versions are given without parentheses, as in *List report page* and *Object page*.
-
--   To search for features available only in SAP Fiori elements for OData V2, choose *List report page \(OData V2\)*.
-
--   To search for features available only in SAP Fiori elements for OData V4, choose *List report page \(OData V4\)*.
 
 
 
@@ -58,7 +43,7 @@ Developer Documentation
 </th>
 <th valign="top">
 
-SAP Fiori Design Guidelines
+SAP Design System
 
 </th>
 <th valign="top">
@@ -300,7 +285,7 @@ Adaptation
 </td>
 <td valign="top">
 
-[UI Adaptation](adapting-the-ui-list-report-and-object-page-0d2f1a9.md)
+[Adapting the UI: List Report Page and Object Page](adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md)
 
 [Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md)
 
@@ -329,7 +314,6 @@ Analytical table
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
 
@@ -382,8 +366,6 @@ Area micro chart
 
 [Area Micro Chart](area-micro-chart-1467f2b.md)
 
-[Smart Micro Chart](../10_More_About_Controls/smart-micro-chart-2180a6f.md)
-
 [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
 </td>
@@ -433,7 +415,7 @@ Avatar
 </td>
 <td valign="top">
 
-[Using Images, Initials, and Icons](using-images-initials-and-icons-5760b63.md)
+[Using Images and Icons](using-images-and-icons-5760b63.md)
 
 </td>
 <td valign="top">
@@ -508,9 +490,9 @@ Building blocks
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -535,7 +517,7 @@ Building blocks
 
 [The Chart Building Block](the-chart-building-block-52d065a.md)
 
-[The FlexibleColumnLayoutActions Building Blocks](the-flexiblecolumnlayoutactions-building-block-1ba680b.md)
+[The FlexibleColumnLayoutActions Building Block](the-flexiblecolumnlayoutactions-building-block-1ba680b.md)
 
 [The Share Building Block](the-share-building-block-41b02df.md)
 
@@ -552,6 +534,8 @@ Building blocks
 [The MessageButton Building Block](the-messagebutton-building-block-b365f2a.md)
 
 [The KPITag Building Block](the-kpitag-building-block-a256bff.md)
+
+[The AINotice Building Block](the-ainotice-building-block-8c6e98b.md)
 
 </td>
 <td valign="top">
@@ -643,8 +627,6 @@ Bullet micro chart
 [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
 
 [Bullet Micro Chart](bullet-micro-chart-b915166.md)
-
-[Smart Micro Chart](../10_More_About_Controls/smart-micro-chart-2180a6f.md)
 
 [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
@@ -798,87 +780,14 @@ parameter dialog
 <tr>
 <td valign="top">
 
-Canvas page
-
-</td>
-<td valign="top">
-
--   List report page \(OData V2\)
--   Object page \(OData V2\)
-
-
-
-</td>
-<td valign="top">
-
-[Extending Apps Using a Canvas Page](extending-apps-using-a-canvas-page-82c4b57.md)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-  
-  
-**Canvas Page**
-
-
-
-![](images/Canvas_Page_13fe5ce.png)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Card filter
-
-</td>
-<td valign="top">
-
-Overview page \(OData V2\)
-
-</td>
-<td valign="top">
-
-[Configuring Card Filters](configuring-card-filters-ecde99f.md)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-cards
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `Chart` building block
 
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -921,7 +830,7 @@ freestyle application
 <tr>
 <td valign="top">
 
-Chart/Smart chart
+Chart
 
 </td>
 <td valign="top">
@@ -936,18 +845,12 @@ Chart/Smart chart
 </td>
 <td valign="top">
 
-[Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md)
-
-[Configuring Charts](configuring-charts-653ed0f.md)
-
-[Chart Cards Used in Overview Pages](chart-cards-used-in-overview-pages-68e62ad.md)
+[Configuring Charts](configuring-charts-653ed0f.md) 
 
 </td>
 <td valign="top">
 
-[Chart](https://experience.sap.com/fiori-design-web/chart/)
-
-[Smart Chart](https://experience.sap.com/fiori-design-web/smart-chart/)
+[Chart](https://experience.sap.com/fiori-design-web/chart/) 
 
 </td>
 <td valign="top">
@@ -962,6 +865,8 @@ Chart/Smart chart
 <td valign="top">
 
 defaultPath
+
+smart chart
 
 </td>
 </tr>
@@ -1022,7 +927,7 @@ Checkbox group
 </td>
 <td valign="top">
 
-Object page \(OData V4\)
+Object page
 
 </td>
 <td valign="top">
@@ -1102,7 +1007,7 @@ Column chart
 </td>
 <td valign="top">
 
-[Chart Cards Used in Overview Pages](chart-cards-used-in-overview-pages-68e62ad.md) 
+[Column Chart](column-chart-d80ef8e.md) 
 
 </td>
 <td valign="top">
@@ -1258,9 +1163,9 @@ pro-down
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -1523,9 +1428,7 @@ Cumulation \(Waterfall chart\)
 </td>
 <td valign="top">
 
-[Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md)
-
-[Configuring Charts](configuring-charts-653ed0f.md)
+[Configuring Charts](configuring-charts-653ed0f.md) 
 
 </td>
 <td valign="top">
@@ -1995,7 +1898,7 @@ Date/time picker
 </td>
 <td valign="top">
 
-[Smart Field](../10_More_About_Controls/smart-field-4864403.md) [Field Help](field-help-a5608ea.md) 
+[Field Help](field-help-a5608ea.md) 
 
 </td>
 <td valign="top">
@@ -2048,11 +1951,7 @@ Date picker
 </td>
 <td valign="top">
 
-[Smart Filter Bar](../10_More_About_Controls/smart-filter-bar-7bcdffc.md)
-
-[Smart Field](../10_More_About_Controls/smart-field-4864403.md)
-
-[Field Help](field-help-a5608ea.md)
+[Field Help](field-help-a5608ea.md) 
 
 </td>
 <td valign="top">
@@ -2193,7 +2092,7 @@ Default values for action parameter dialog
 
 [Default Values for Action Parameters](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__DefaultValuesActionParameters) section in [Actions](actions-cbf16c5.md)
 
-[Prefilling Fields Using the `DefaultValuesFunction`](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md)
+[Prefilling Fields Using the DefaultValuesFunction](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md)
 
 </td>
 <td valign="top">
@@ -2270,17 +2169,11 @@ Dialog box
 </td>
 <td valign="top">
 
-[Adapting Texts in the Delete Dialog Using Extensions \(List Report\)](adapting-texts-in-the-delete-dialog-using-extensions-list-report-25885b6.md)
-
-[Adapting Texts in the Delete Dialog \(Object Page Header\)](adapting-texts-in-the-delete-dialog-object-page-header-1fd8e52.md)
-
-[Adapting Texts in the Delete Dialog \(Object Page with Nested Smart Table\)](adapting-texts-in-the-delete-dialog-object-page-with-nested-smart-table-b95adf3.md)
-
 [Adapting Texts for Confirmation Dialog Box When Deleting Lines in a Table](adapting-texts-for-confirmation-dialog-box-when-deleting-lines-in-a-table-0d1fbf4.md)
 
 [Confirmation Popups](confirmation-popups-9a53662.md)
 
-[Enabling Object Creation Using the Dialog on the List Report](enabling-object-creation-using-the-dialog-on-the-list-report-ceb9284.md)
+[Enabling Object Creation Using the Dialog on the List Report Page](enabling-object-creation-using-the-dialog-on-the-list-report-page-ceb9284.md)
 
 </td>
 <td valign="top">
@@ -2417,7 +2310,6 @@ Dynamic page layout
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Overview page
 
@@ -2469,7 +2361,7 @@ Editing status
 
 [Disabling the Editing Status Filter](disabling-the-editing-status-filter-8eb695a.md)
 
-[Settings for List Report Tables](settings-for-list-report-tables-4c2d17a.md)
+[Settings for List Report Page Tables](settings-for-list-report-page-tables-4c2d17a.md)
 
 </td>
 <td valign="top">
@@ -2581,9 +2473,9 @@ excel
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -2729,9 +2621,9 @@ visual filter
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -2791,7 +2683,6 @@ Flexible column layout
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
 
@@ -2831,9 +2722,9 @@ FCL
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -2887,11 +2778,11 @@ SAP Fiori development portal
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
--   Overview page \(OData V4\)
--   Worklist page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
+-   Overview page
+-   Worklist page
 
 
 
@@ -2938,10 +2829,7 @@ Footer toolbar
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
--   List report page \(OData V2\)
 -   Object page
--   Overview page \(OData V2\)
 
 
 
@@ -3081,9 +2969,9 @@ Overview page
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -3207,50 +3095,11 @@ Generative AI Features
 <tr>
 <td valign="top">
 
-Generic tag
-
-</td>
-<td valign="top">
-
-Analytical list page \(OData V2\)
-
-</td>
-<td valign="top">
-
-[Creating Key Performance Indicator Tags in Analytical Services](creating-key-performance-indicator-tags-in-analytical-services-d80a360.md)
-
-</td>
-<td valign="top">
-
-[Generic Tag](https://experience.sap.com/fiori-design-web/generic-tag/)
-
-</td>
-<td valign="top">
-
-  
-  
-**Generic Tag**
-
-![](images/Feature_map_Generic_Tag_1cbf80e.png "Generic Tag")
-
-</td>
-<td valign="top">
-
-tags
-
-cards
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 Grid table
 
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
 
@@ -3307,8 +3156,6 @@ Header toolbar
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
 
 [Defining Custom Actions on the Overview Page](defining-custom-actions-on-the-overview-page-02fb273.md)
-
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md)
 
 </td>
 <td valign="top">
@@ -3429,11 +3276,11 @@ Icon for AI buttons
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
--   Overview page \(OData V4\)
--   Worklist \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
+-   Overview page
+-   Worklist page
 
 
 
@@ -3471,7 +3318,6 @@ Icon tab bar
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
 
@@ -3510,13 +3356,53 @@ Icon tab bar
 <tr>
 <td valign="top">
 
-Inline Edit
+Illustrated message
 
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md)[Localization of UI Texts](localization-of-ui-texts-91b525b.md)
+
+</td>
+<td valign="top">
+
+[Illustrated Message](https://experience.sap.com/fiori-design-web/illustrated-message/)
+
+</td>
+<td valign="top">
+
+  
+  
+**Illustrated Message**
+
+![](images/Illustrated_Message_Feature_22a6546.png "Illustrated Message")
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Inline edit
+
+</td>
+<td valign="top">
+
+-   List report page
+-   Object page
 
 
 
@@ -3626,10 +3512,8 @@ Input field
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
--   Overview page \(OData V2\)
 
 
 
@@ -3829,7 +3713,6 @@ Label
 
 -   List report page
 -   Object page
--   Overview page \(OData V2\)
 
 
 
@@ -3904,7 +3787,7 @@ Lazy loading
 </td>
 <td valign="top">
 
-Object page \(OData V4\)
+Object page
 
 </td>
 <td valign="top">
@@ -3944,9 +3827,7 @@ Line chart
 </td>
 <td valign="top">
 
-[Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md)
-
-[Configuring Charts](configuring-charts-653ed0f.md)
+[Configuring Charts](configuring-charts-653ed0f.md) 
 
 </td>
 <td valign="top">
@@ -3990,8 +3871,6 @@ Line micro chart
 
 [Line Micro Chart](line-micro-chart-e5cb2af.md)
 
-[Smart Micro Chart](../10_More_About_Controls/smart-micro-chart-2180a6f.md)
-
 [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
 </td>
@@ -4027,7 +3906,6 @@ Link
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
 -   Overview page
@@ -4154,7 +4032,7 @@ Display text and ID for value help
 </td>
 <td valign="top">
 
-[Displaying Text and ID for Value Help Input Fields](displaying-text-and-id-for-value-help-input-fields-080886d.md)
+[Value Help](value-help-fccb255.md)
 
 </td>
 <td valign="top">
@@ -4303,20 +4181,19 @@ Mass edit
 <td valign="top">
 
 -   List report page
+-   Object page
 
 
 
 </td>
 <td valign="top">
 
-[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md)
-
-[Enabling Editing Using a Dialog \(Mass Edit\) in the List Report](enabling-editing-using-a-dialog-mass-edit-on-the-list-report-page-7cc4f04.md)
+[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md) 
 
 </td>
 <td valign="top">
 
-[Enabling Editing Using a Dialog in the List Report](https://experience.sap.com/fiori-design-web/mass-editing/)
+[Object Handling – Mass Edit](https://experience.sap.com/fiori-design-web/mass-editing/)
 
 </td>
 <td valign="top">
@@ -4342,48 +4219,9 @@ record
 
 records
 
-enableMassEdit
+`enableMassEdit`
 
 dialog
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Menu button
-
-</td>
-<td valign="top">
-
--   List report page \(OData V2\)
--   Object page \(OData V2\)
-
-
-
-</td>
-<td valign="top">
-
-[Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md) 
-
-</td>
-<td valign="top">
-
-[Menu Button](https://experience.sap.com/fiori-design-web/menu-button/)
-
-</td>
-<td valign="top">
-
-  
-  
-**Menu Buttons**
-
-![](images/Menu_Buttons_0629a79.jpg "Menu Buttons")
-
-</td>
-<td valign="top">
-
- 
 
 </td>
 </tr>
@@ -4445,47 +4283,6 @@ precondition failed
 strict handling
 
 Prefer:handling=strict
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Message page
-
-</td>
-<td valign="top">
-
--   Analytical list page
--   List report page
--   Object page
--   Overview page
-
-
-
-</td>
-<td valign="top">
-
-[Maintaining Standard Texts for Tables](maintaining-standard-texts-for-tables-aacfac5.md)
-
-</td>
-<td valign="top">
-
-[Messaging](https://experience.sap.com/fiori-design-web/illustrated-message/)
-
-</td>
-<td valign="top">
-
-  
-  
-**Message Page**
-
-![](images/Message_Page_b363ddd.png "Message Page")
-
-</td>
-<td valign="top">
-
- 
 
 </td>
 </tr>
@@ -4595,9 +4392,9 @@ success message
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -4640,7 +4437,7 @@ micro-chart
 <tr>
 <td valign="top">
 
-Micro chart/Smart micro chart
+Micro chart
 
 </td>
 <td valign="top">
@@ -4655,8 +4452,6 @@ Micro chart/Smart micro chart
 <td valign="top">
 
 [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
-
-[Smart Micro Chart](../10_More_About_Controls/smart-micro-chart-2180a6f.md)
 
 [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
@@ -4677,9 +4472,11 @@ Micro chart/Smart micro chart
 </td>
 <td valign="top">
 
-microchart
+smart microchart
 
-micro-chart
+smart micro-chart
+
+smart micro chart
 
 </td>
 </tr>
@@ -4691,7 +4488,6 @@ Multi-combo box
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
 
@@ -4731,9 +4527,6 @@ Multi-input field
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
--   List report page \(OData V2\)
--   Object page \(OData V2\)
 -   Overview page
 
 
@@ -4927,7 +4720,7 @@ Navigation extension
 </td>
 <td valign="top">
 
-[Example: Replacing Standard Navigation in a Responsive Table on the List Report Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-list-report-page-a12ad60.md)
+[Replacing Standard Navigation in a Table](replacing-standard-navigation-in-a-table-a12ad60.md)
 
 [Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md)
 
@@ -4955,6 +4748,46 @@ modify context
 context modification
 
 modifying route
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Notice for AI-generated content
+
+</td>
+<td valign="top">
+
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[AI Notice](ai-notice-10a6cda.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**AI Notice as a Link**
+
+![](images/AI_Notice_as_Link_4c1dc81.png "AI Notice as a Link")
+
+</td>
+<td valign="top">
+
+ai notice
+
+ai content
 
 </td>
 </tr>
@@ -5008,9 +4841,9 @@ personalisation
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -5185,45 +5018,7 @@ progress bar
 <tr>
 <td valign="top">
 
-Quick view
-
-</td>
-<td valign="top">
-
-Overview page \(OData V2\)
-
-</td>
-<td valign="top">
-
-[Quick View Cards](quick-view-cards-c4bd35e.md)
-
-</td>
-<td valign="top">
-
-[Quick View](https://experience.sap.com/fiori-design-web/quickview/)
-
-</td>
-<td valign="top">
-
-  
-  
-**Company Information**
-
-![](images/Quick_View_Card_dd1682b.png "Company Information")
-
-</td>
-<td valign="top">
-
-Quick views
-
-quickview
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Quick views for smart link navigation
+Quick views for link navigation
 
 </td>
 <td valign="top">
@@ -5248,9 +5043,9 @@ Quick views for smart link navigation
 
   
   
-**Quick Views for Smart Link Navigation**
+**Quick Views for Link Navigation**
 
-![](images/Quick_Views_for_Smart_Link_Navigation_5ee9b90.png "Quick Views for Smart Link Navigation")
+![](images/Quick_Views_for_Smart_Link_Navigation_5ee9b90.png "Quick Views for Link Navigation")
 
 </td>
 <td valign="top">
@@ -5258,6 +5053,8 @@ Quick views for smart link navigation
 view
 
 quickview
+
+smart link navigation
 
 </td>
 </tr>
@@ -5281,8 +5078,6 @@ Radial micro chart
 [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
 
 [Radial Micro Chart](radial-micro-chart-51eb569.md)
-
-[Smart Micro Chart](../10_More_About_Controls/smart-micro-chart-2180a6f.md)
 
 [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
@@ -5429,7 +5224,6 @@ Responsive table
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
 -   Overview page
@@ -5438,8 +5232,6 @@ Responsive table
 
 </td>
 <td valign="top">
-
-[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md)
 
 [Setting the Table Type](setting-the-table-type-7f844f1.md)
 
@@ -5474,11 +5266,11 @@ Retrieve row count of a table
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
--   Overview page \(OData V4\)
--   Worklist \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
+-   Overview page
+-   Worklist page
 
 
 
@@ -5594,7 +5386,7 @@ Object page
 </td>
 <td valign="top">
 
--   Object page \(OData V4\)
+-   Object page
 
 
 
@@ -5640,9 +5432,9 @@ free-style application
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -5692,9 +5484,9 @@ variant management
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -5744,9 +5536,9 @@ free-style application
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -5807,13 +5599,9 @@ Save
 </td>
 <td valign="top">
 
-[Adapting Logic Before Save Operation](adapting-logic-before-save-operation-6a0a050.md)
-
 [Save and Navigation Options on the Object Page](save-and-navigation-options-on-the-object-page-55d81bc.md)
 
 [Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-fd3950a.md)
-
-[Extending the Bookmark Function to Save Static Tiles to the SAP Fiori Launchpad](extending-the-bookmark-function-to-save-static-tiles-to-the-sap-fiori-launchpad-7e34ea9.md)
 
 </td>
 <td valign="top">
@@ -5842,7 +5630,7 @@ Save and navigate to the list report page
 </td>
 <td valign="top">
 
-Object page \(OData V4\)
+Object page
 
 </td>
 <td valign="top">
@@ -5857,7 +5645,11 @@ Object page \(OData V4\)
 </td>
 <td valign="top">
 
- 
+  
+  
+**Save and Back**
+
+![](images/Save_and_Back_48dcd40.png "Save and Back")
 
 </td>
 <td valign="top">
@@ -5878,7 +5670,7 @@ Search
 -   List report page
 -   Object page
 -   Overview page
--   Worklist
+-   Worklist page
 
 
 
@@ -6064,9 +5856,9 @@ Side effects
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -6158,7 +5950,7 @@ Sharing
 <tr>
 <td valign="top">
 
-Smart link
+Link
 
 </td>
 <td valign="top">
@@ -6180,16 +5972,16 @@ Smart link
 </td>
 <td valign="top">
 
-[Smart Link](https://experience.sap.com/fiori-design-web/smart-link/)
+ 
 
 </td>
 <td valign="top">
 
   
   
-**Smart Link**
+**Link**
 
-![](images/Smart_Link_6773928.png "Smart Link")
+![](images/Smart_Link_6773928.png "Link")
 
 </td>
 <td valign="top">
@@ -6204,50 +5996,7 @@ Contact card
 
 Communication.Contact
 
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Smart table
-
-</td>
-<td valign="top">
-
--   Analytical list page \(OData V2\)
--   List report page
--   Object page
--   Overview page
-
-
-
-</td>
-<td valign="top">
-
-[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md)
-
-[Setting the Table Type](setting-the-table-type-7f844f1.md)
-
-[Table Cards](table-cards-167bf7c.md)
-
-</td>
-<td valign="top">
-
-[Smart Table](https://experience.sap.com/fiori-design-web/smart-table/)
-
-</td>
-<td valign="top">
-
-  
-  
-**Smart Table**
-
-![](images/Smart_Table_722e977.png "Smart Table")
-
-</td>
-<td valign="top">
-
- 
+smart link
 
 </td>
 </tr>
@@ -6286,42 +6035,6 @@ Overview page
 <tr>
 <td valign="top">
 
-Stack card
-
-</td>
-<td valign="top">
-
-Overview page \(OData V2\)
-
-</td>
-<td valign="top">
-
-[Stack Cards](stack-cards-756c49c.md)
-
-</td>
-<td valign="top">
-
-[Stack Card](https://experience.sap.com/fiori-design-web/overview-page-stack-card-quick-view-card/)
-
-</td>
-<td valign="top">
-
-  
-  
-**Stack Card**
-
-![](images/Stack_Card_d26a509.jpg "Stack Card")
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 Stacked bar micro chart
 
 </td>
@@ -6339,8 +6052,6 @@ Stacked bar micro chart
 [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
 
 [Stacked Bar Micro Chart](stacked-bar-micro-chart-9c93837.md)
-
-[Smart Micro Chart](../10_More_About_Controls/smart-micro-chart-2180a6f.md)
 
 [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
@@ -6375,9 +6086,9 @@ Stacked bar microchart
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -6518,9 +6229,9 @@ Attachment
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -6539,14 +6250,18 @@ Attachment
 </td>
 <td valign="top">
 
- 
+  
+  
+**Table**
+
+![](images/Smart_Table_722e977.png "Table")
 
 </td>
 <td valign="top">
 
 table macro
 
-tables
+smart tables
 
 building blocks
 
@@ -6655,7 +6370,6 @@ Tables
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
 -   Overview page
@@ -6666,8 +6380,6 @@ Tables
 <td valign="top">
 
 [Configuring Tables](configuring-tables-f4eb70f.md)
-
-[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md)
 
 [Setting the Table Type](setting-the-table-type-7f844f1.md)
 
@@ -6708,7 +6420,6 @@ Table toolbar
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
 
@@ -6717,9 +6428,7 @@ Table toolbar
 </td>
 <td valign="top">
 
-[Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md)
-
-[Adaptation Extension Example: Adding a Button to the Table Toolbar in the List Report](adaptation-extension-example-adding-a-button-to-the-table-toolbar-in-the-list-report-a269671.md)
+[Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md) 
 
 </td>
 <td valign="top">
@@ -6857,8 +6566,6 @@ Title
 
 [Adding Titles to Object Page Tables](adding-titles-to-object-page-tables-d9a4539.md)
 
-[Configuring the Object Page Header Title and Description](configuring-the-object-page-header-title-and-description-333f850.md)
-
 [Changing Default Titles of New and Unnamed Objects](changing-default-titles-of-new-and-unnamed-objects-63946c0.md)
 
 [Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-05887bd.md)
@@ -6912,10 +6619,8 @@ Token
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
--   Overview page \(OData V2\)
 
 
 
@@ -6955,7 +6660,6 @@ Tree table
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
 -   List report page
 -   Object page
 
@@ -6964,9 +6668,7 @@ Tree table
 </td>
 <td valign="top">
 
-[Setting the Table Type](setting-the-table-type-7f844f1.md)
-
-[Example: Adding Columns to a Tree Table in the List Report](example-adding-columns-to-a-tree-table-in-the-list-report-b903da5.md)
+[Setting the Table Type](setting-the-table-type-7f844f1.md) 
 
 </td>
 <td valign="top">
@@ -6997,8 +6699,8 @@ Tree table hierarchy
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
+-   List report page
+-   Object page
 
 
 
@@ -7032,9 +6734,9 @@ TreeTable
 </td>
 <td valign="top">
 
--   List report page \(OData V4\)
--   Object page \(OData V4\)
--   Analytical list page \(OData V4\)
+-   List report page
+-   Object page
+-   Analytical list page
 
 
 
@@ -7179,7 +6881,7 @@ Variant management
 
 [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md)
 
-[Creating a List Report without Variant Management](creating-a-list-report-without-variant-management-094fe8c.md)
+[Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-094fe8c.md)
 
 [Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md)
 
@@ -7255,24 +6957,24 @@ filter on measure
 <tr>
 <td valign="top">
 
-Worklist
+Worklist page
 
 </td>
 <td valign="top">
 
--   Worklist
+-   Worklist page
 
 
 
 </td>
 <td valign="top">
 
-[Worklist](worklist-d1d588f.md)
+[Worklist Page](worklist-page-d1d588f.md)
 
 </td>
 <td valign="top">
 
-[Worklist](https://experience.sap.com/fiori-design-web/work-list/)
+[Worklist Floorplan](https://experience.sap.com/fiori-design-web/work-list/)
 
 </td>
 <td valign="top">
@@ -7291,5 +6993,5 @@ Worklist
 
 
 > ### Note:  
-> For information about SAP Fiori Elements for OData V2, see [SAP Fiori Elements Feature Map](sap-fiori-elements-feature-map-92065a5.md).
+> For information about SAP Fiori elements for OData V2, see [SAP Fiori Elements Feature Map](sap-fiori-elements-feature-map-92065a5.md).
 

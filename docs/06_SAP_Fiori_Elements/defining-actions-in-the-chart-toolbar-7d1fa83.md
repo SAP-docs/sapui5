@@ -132,34 +132,11 @@ The code samples below show how to add actions to the chart toolbar.
 
 
 
-<a name="loio7d1fa8399f714cf6a657ac5467a70d4a__section_ury_h4s_hnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Enabling and Disabling Actions in Chart Toolbar
-
-To control whether `UI.DataFieldForAction`-based actions are enabled or disabled in the chart toolbar, see [Using Action Control for Context-Dependent Actions](using-action-control-for-context-dependent-actions-5b0b686.md).
-
-To control whether `UI.DataFieldForIntentBasedNavigation`-based actions are enabled or disabled in the chart toolbar, use the property `RequiresContext`. If this property is set to `true` \(default value\), the user has to select an item in the chart before the action can be performed. If this property is set to `false`, then the button will always be enabled.
-
-> ### Note:  
-> If you are using the path-based `applicable-path` setting to control the visibility of actions in the chart toolbar, the property specified must be based on the property from the parent entity set. The property cannot be from the chart entity set.
-
-![](images/ChartActions_NavProps_9111386.png)
-
-
-
 <a name="loio7d1fa8399f714cf6a657ac5467a70d4a__section_r23_njz_hnb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
+## Enabling and Disabling Actions in Chart Toolbar
 
-
-
-### Enabling and Disabling Actions in Chart Toolbar
-
-Actions can be selectively enabled or disabled based on the context that is selected using the approach outlined in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md) in the section *Enablement of Operations* under *Additional Features in SAP Fiori Elements for OData V4*.
+Actions can be selectively enabled or disabled based on the context that is selected using the approach outlined in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
 > ### Note:  
 > If you are using the path-based `OperationAvailable` setting to control the visibility of actions in the chart toolbar, the property specified must be based on the property from the parent entity set. The property cannot be from the chart entity set.

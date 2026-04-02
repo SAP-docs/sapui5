@@ -31,7 +31,7 @@ To generally enable validation in the app, enter the highlighted line into the `
 "sap.ui5": {
 	"handleValidation": true,
 	"dependencies": {
-		"minUI5Version": "1.120.0",
+		"minUI5Version": "1.146.0",
 		"libs": {
 			"sap.m": {},
 			"sap.ui.core": {},

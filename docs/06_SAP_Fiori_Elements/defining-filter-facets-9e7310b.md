@@ -4,7 +4,10 @@
 
 You can use `FilterFacets` annotations to display filter groups in filter bars.
 
-Below is an example of a `FilterFacets` annotation on the target entity type:
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Defining Filter Facets](defining-filter-facets-89f63ef.md).
+
+See the following sample code for a `FilterFacets` annotation on the target entity type:
 
 > ### Sample Code:  
 > XML Annotation

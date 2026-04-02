@@ -2,7 +2,7 @@
 
 # Configuring Internal Navigation
 
-SAP Fiori elements control the navigation within an app \(internal navigation\). This section describes the configuration options that you have.
+You can configure internal navigation within an SAP Fiori elements app.
 
 
 
@@ -10,140 +10,7 @@ SAP Fiori elements control the navigation within an app \(internal navigation\).
 
 ## Standard Navigation Within an App
 
-
-
-### SAP Fiori Elements for OData V2
-
-You can control whether it is possible to navigate to a detail page. It simply depends on whether you keep the predefined definition of a subpage:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```json
-> "sap.ui.generic.app": {
->   "pages": {
->     "MyListReport": {
->       "entitySet": "MyEntitySet",
->       "component": {
->         "name": "sap.suite.ui.generic.template.ListReport",
->         "list": true
->       },
->       // Navigation to detail page: eliminate this block if no navigation is needed
->       "pages": {
->         "MyObjectPageOnFirstLevel":          {
->           "entitySet": "MyEntitySet",
->           "component": {
->             "name": "sap.suite.ui.generic.template.ObjectPage"
->           },
->           "pages": {
->                                    "MyFirstObjectPageOnSecondLevel": {
->               "navigationProperty": "to_MyFirstEntitySet",
->               "entitySet": "MyFirstEntitySet",
->               "component": {
->                 "name": "sap.suite.ui.generic.template.ObjectPage"
->               },
->             }, 
->                                                "MySecondObjectPageOnSecondLevel": {
->               "navigationProperty": "to_MySecondEntitySetNavigation",
->               "entitySet": "MMySecondEntitySet",
->               "component": {
->                 "name": "sap.suite.ui.generic.template.ObjectPage"
->               },
->             }, 
->                                                "MyThirdObjectPageOnSecondLevel": {
->               "navigationProperty": "to_MyThirdEntitySet",
->               "entitySet": "MyThirdEntitySet",
->               "component": {
->                 "name": "sap.suite.ui.generic.template.ObjectPage"
->               }
->             }
->           }
->         }
->       }
->     }
->   }
-> }
-> 
-> ```
-
-The same holds true for the navigation to a second object page. This is possible only when the definition is kept in the manifest. If you want to have multiple subpages on the same level, you need to have multiple definitions.
-
-In addition to an entity set which identifies a subpage, we recommend you to also specify the navigation property which defines the connection between the object page and the subpage.
-
-A chevron indicates the navigation options. The user can navigate by clicking on the line.
-
-> ### Note:  
-> In a non-draft app, if the user is in edit mode on an object page and has made changes before the navigation has been executed, the system displays a message indicating that the changes will be lost if the user navigates without saving first.
-
-The chevron navigation from a list report can also be modified using [onListNavigationExtension](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ListReport.controllerFrameworkExtensions) to navigate to deeper-hierarchy child pages of the same app. However, it is not recommended to do so. For more information about configuring navigation restrictions, refer to [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
-
-**Avoiding Navigation After Executing an Action** 
-
-> ### Note:  
-> This setting is supported only for `DataFieldForAction` annotations in object page tables.
-
-You can disable the navigation to a subobject page using the setting `navigateToInstance` in the `manifest.json` file:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> 
-> "to_Item::com.sap.vocabularies.UI.v1.LineItem": {
->     "tableSettings": {
->     ...
->     },
->     "annotatedActions": {
->         "C_STTA_SalesOrderItem_WD_20Setopportunityid": {
->             "afterExecution": {
->                 "navigateToInstance": false
->             }
->         }
->     }
-> }
-> 
-> ```
-
-**Showing Item List in a List Report and Parent on an Object Page** 
-
-You can enable applications to display item lists in a list report and parent/main object along with its child entities on an object page. To do this, you need to map a child entity to a list report page and enable navigation to the parent/main object.
-
-Add the following configuration in the manifest to direct the *Create* action in a list report to the main entity:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```json
-> 
->   "component": {
->     "name": "sap.suite.ui.generic.template.ListReport",
->     "list": true,
->     "settings": {
->       // Create of parent entity: Provide the parent entity set name.
->       "creationEntitySet": "C_MPPurchasingSource"
->     }
->   }
-> 
-> ```
-
-For more information, see [List Report Elements](list-report-elements-1cf5c7f.md).
-
-**Navigation After Executing an Action** 
-
-When executing an action defined using the `UI.DataFieldForAction` annotation, the navigation is automatically triggered in the following cases:
-
--   If a single instance is returned by the action and the returned instance is not the same as the instance used when the action was triggered.
-
--   If the action was executed successfully and the manifest has navigation defined for the context that is returned.
-
-
-When the user selects multiple contexts for a table or a chart-toolbar action, the navigation is **not** triggered, even if the action returns the context.
-
-
-
-### SAP Fiori Elements for OData V4
-
-In the `manifest.json` file, you define the "navigation" section for each "target". This controls if the navigation is enabled or not. If navigation is enabled, a chevron comes for the record in the table indicating a further navigation to the detail page \(object page or subobject page\).The pages structure of the app should always be a tree, with the root as either a list report or an analytical list page. All the other nodes would be object pages or canvas pages, that are uniquely identified by their entity sets. This means that no two object pages can share the same entity set.
+In the `manifest.json` file, you define the "navigation" section for each "target". This controls if the navigation is enabled or not. If navigation is enabled, a chevron comes for the record in the table indicating a further navigation to the detail page \(object page or subobject page\).The pages structure of the app should always be a tree, with the root as either a list report page or an analytical list page. All the other nodes would be object pages or canvas pages, that are uniquely identified by their entity sets. This means that no two object pages can share the same entity set.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -371,9 +238,7 @@ The following example shows how to use the `DataFieldWithNavigationPath` annotat
 
 
 
-### Additional Features in SAP Fiori Elements for OData V4
-
-**Navigation After Executing an Action**
+### Navigation After Executing an Action
 
 Application developers can disable the navigation using the setting `navigateToInstance` in the manifest:
 

@@ -6,6 +6,11 @@ You can use personalization to modify the settings of a chart.
 
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling Chart Personalization](enabling-chart-personalization-7d41330.md).
+
+
+
 <a name="loio6b87767bb8aa408eaaea17b37b4fa3b5__section_ktk_3zy_swb"/>
 
 ## Filter Option

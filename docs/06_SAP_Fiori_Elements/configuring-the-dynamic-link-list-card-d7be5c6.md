@@ -6,7 +6,12 @@ Allows you to display data such as links, images, and icons in the form of list 
 
 
 
-To display information in the link list card as either standard or carousal type, configure the `listFlavor` property in the card settings.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring the Dynamic Link List Card](configuring-the-dynamic-link-list-card-675c514.md).
+
+
+
+To display information in the link list card as either standard or carousel type, configure the `listFlavor` property in the card settings.
 
 The dynamic link list card also supports the contact annotation as the default annotation without a qualifier, enabling quick view information.
 

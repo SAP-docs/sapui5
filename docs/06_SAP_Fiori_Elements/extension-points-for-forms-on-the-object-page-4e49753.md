@@ -2,20 +2,20 @@
 
 # Extension Points for Forms on the Object Page
 
-On the object page, you can use extension points to extend forms in sections.
+You can use extension points to extend forms in object page sections.
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
 Custom fields, that is, form elements, provide the following features:
 
--   adding arbitrary fields through an `xmlfragment` definition
+-   Adding arbitrary fields through an `xmlfragment` definition
 
--   positioning relative to other fields defined as `FieldGroups` or `Identification`
+-   Positioning relative to other fields defined as `FieldGroups` or `Identification`
 
--   using localized field labels
+-   Using localized field labels
 
 
 

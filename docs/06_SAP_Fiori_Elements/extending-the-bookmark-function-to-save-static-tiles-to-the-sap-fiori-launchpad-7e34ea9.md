@@ -2,11 +2,13 @@
 
 # Extending the Bookmark Function to Save Static Tiles to the SAP Fiori Launchpad
 
-You can extend the standard bookmark function by adding an extension point to the list report or analytical list page controller extension. Static tiles are then saved to the SAP Fiori launchpad instead of dynamic tiles.
+You can extend the standard bookmark function by adding an extension point to the controller extension of the list report page or analytical list page..
 
-Users can use the bookmark function through the *Share* button to make list reports, object pages, or analytical list pages directly accessible from the SAP Fiori launchpad while preserving all filter values they have set before. The bookmark is added as a tile to the SAP Fiori launchpad.
+Extending the bookmark function then saves static tiles to the SAP Fiori launchpad instead of dynamic tiles.
 
-By default, a dynamic tile is created for the list report and the analytical list page. However, there is an exception when the filter bar is configured to consume the semantic date range feature either through manifest settings or by using the custom date range fields. In this case, a static tile is created if any of the semantic date range field\(s\) have been filled with a value. A dynamic tile is created if nothing has been filled.
+Users can use the bookmark function through the *Share* button to make list report pages, object pages, or analytical list pages directly accessible from the SAP Fiori launchpad while preserving all filter values they have set before. The bookmark is added as a tile to the SAP Fiori launchpad.
+
+By default, a dynamic tile is created for the list report page and the analytical list page. However, there is an exception when the filter bar is configured to consume the semantic date range feature either through manifest settings or by using the custom date range fields. In this case, a static tile is created if any of the semantic date range field\(s\) have been filled with a value. A dynamic tile is created if nothing has been filled.
 
 For more details on the configuration settings of the semantic date range, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-c2b916c.md).
 
@@ -19,7 +21,7 @@ For the object page, a static tile is created. Dynamic tiles fetch data from a w
 -   They might be inconsistent if the original tile is static
 
 
-If you want to enforce the creation of a static tile, add the extension point `onSaveAsTileExtension` to the list report or analytical list page controller extension.
+If you want to enforce the creation of a static tile, add the extension point `onSaveAsTileExtension` to the list report page or analytical list page controller extension.
 
 > ### Note:  
 > This extension point can only be used for tiles that are added to the launchpad using the bookmark function.

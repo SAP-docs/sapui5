@@ -4,7 +4,13 @@
 
 You can use generic actions provided by SAP Fiori elements and implement application-specific actions using annotations or extension points.
 
-Application-specific actions either trigger an interaction with the back end, calling an OData service, or they trigger navigation. Depending on where you want to place an action, and how you want to use it, specific attributes, prerequisites, and guidelines apply. The details are described in this topic and in the floorplan-specific sections. For details about navigation, see [Configuring Navigation](configuring-navigation-a424275.md).
+Application-specific actions either trigger an interaction with the back end, calling an OData service, or they trigger navigation. Depending on where you want to place an action, and how you want to use it, specific attributes, prerequisites, and guidelines apply. The details are described in this topic. For details about navigation, see [Configuring Navigation](configuring-navigation-a424275.md).
+
+Even though SAP Fiori elements doesn't apply any special logic based on whether you use a function or an action definition in the back end, you must choose the appropriate option based on your back-end capabilities. For example, functions do not support side effects or state messages.
+
+For more information about actions and functions in RAP-based applications, see [Actions](https://help.sap.com/docs/abap-cloud/abap-rap/actions) and [Functions](https://help.sap.com/docs/abap-cloud/abap-rap/functions).
+
+For more information about actions and functions in CAP-based applications, see [Calling Actions / Functions](https://cap.cloud.sap/docs/guides/providing-services#calling-actions-functions).
 
 
 
@@ -61,9 +67,9 @@ context independent
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Object Page
+Object page
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
 
@@ -72,7 +78,7 @@ Object Page
 <tr>
 <td valign="top">
 
-Overview Page
+Overview page
 
 [Defining Custom Actions on the Overview Page](defining-custom-actions-on-the-overview-page-02fb273.md)
 
@@ -81,11 +87,9 @@ Overview Page
 <tr>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md) \(OData V2\)
-
-[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) \(OData V4\)
+[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) 
 
 </td>
 </tr>
@@ -97,17 +101,12 @@ annotation-based
 </td>
 <td valign="top">
 
--   SAP Fiori elements for OData V2: page content is passed
-
--   SAP Fiori elements for OData V4: dependent on whether action is defined as bound or unbound
-
-
-
+dependent on whether action is defined as bound or unbound
 
 </td>
 <td valign="top">
 
-Object Page
+Object page
 
 [Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md)
 
@@ -133,32 +132,30 @@ annotation-based
 </td>
 <td valign="top" rowspan="3">
 
-depends \(see linked topics\)
+depends \(see linked topic\)
 
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Object Page
+Object page
 
 [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md)
 
-[Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-d27ae99.md)
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Analytical List Page
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md) 
+ 
 
 </td>
 </tr>
@@ -175,9 +172,9 @@ context independent
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Object Page
+Object page
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
 
@@ -186,11 +183,9 @@ Object Page
 <tr>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md) \(OData V2\)
-
-[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) \(OData V4\)
+[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) 
 
 </td>
 </tr>
@@ -296,7 +291,7 @@ depends \(see linked topics\)
 <tr>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
 [Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md)
 
@@ -310,16 +305,14 @@ using `manifest.json` settings
 </td>
 <td valign="top">
 
-depends \(see linked topics\)
+depends \(see linked topic\)
 
 </td>
 <td valign="top">
 
-Analytical List Page
+Analytical list page
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md) \(OData V2\)
-
-[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) \(OData V4\)
+[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) 
 
 </td>
 </tr>
@@ -343,17 +336,12 @@ annotation-based
 </td>
 <td valign="top">
 
--   SAP Fiori elements for OData V2: page content is passed
-
--   SAP Fiori elements for OData V4: dependent on whether action is defined as bound or unbound
-
-
-
+dependent on whether action is defined as bound or unbound
 
 </td>
 <td valign="top">
 
-Object Page
+Object page
 
 [Defining Determining Actions](defining-determining-actions-1743323.md)
 
@@ -367,9 +355,7 @@ available content is passed
 </td>
 <td valign="top">
 
-Analytical List Page
-
-[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md)
+Analytical list page
 
 </td>
 </tr>
@@ -386,7 +372,7 @@ context independent
 </td>
 <td valign="top">
 
-Object Page
+Object page
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
 
@@ -417,7 +403,7 @@ context dependent
 </td>
 <td valign="top">
 
-Overview Page
+Overview page
 
 [Quick View Cards](quick-view-cards-c4bd35e.md)
 
@@ -431,9 +417,9 @@ Overview Page
 </td>
 <td valign="top">
 
-List Report
+List report page
 
-Object Page
+Object page
 
 [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md)
 
@@ -451,9 +437,9 @@ Object Page
 
 ### Generic Actions
 
-In list reports and object pages, standard actions such as *Create* \(+\), *Delete*, and *Edit*, as well as actions that trigger external navigation to related apps, are provided by SAP Fiori elements. You can enable or disable these actions.
+On list report pages and object pages, standard actions such as *Create* \(+\), *Delete*, and *Edit*, as well as actions that trigger external navigation to related apps, are provided by SAP Fiori elements. You can enable or disable these actions.
 
-For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md), [Actions in the List Report](actions-in-the-list-report-993e99e.md), [Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md)
+For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md), [Actions on the List Report Page](actions-on-the-list-report-page-993e99e.md), [Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md)
 
 
 
@@ -485,7 +471,7 @@ There are different ways to configure custom actions.
 
 ### Global Actions
 
-Global actions are placed at the top of the page and refer to the whole page \(for example *Display Log*\). They can be configured either by using annotations \(applicable for the object page only\), or by using manifest entries \(applicable for the list report and object page\).
+Global actions are placed at the top of the page and refer to the whole page \(for example *Display Log*\). They can be configured either by using annotations \(applicable for the object page only\), or by using manifest entries \(applicable for the list report page and the object page\).
 
 
 
@@ -504,7 +490,7 @@ Determining actions are placed in the footer of the app. These actions are also 
 Example: *Save* or *Accept/Reject* in an object page.
 
 > ### Note:  
-> Determining actions aren't appropriate for the list report, since the list report holds several records and the finalizing actions are applicable to the whole page, and not just some selected records of the list report table.
+> Determining actions aren't appropriate for the list report page, since the list report page holds several records and the finalizing actions are applicable to the whole page, and not just some selected records of the list report page table.
 
 
 
@@ -620,9 +606,7 @@ The following coding sample shows the annotations for a context-dependent action
 
 ### Handling Within `UI.DataFieldForAction` Buttons
 
-In SAP Fiori elements for OData V2, you can choose to pass the context when the `UI.DataFieldForAction` button is invoked.
-
-In SAP Fiori elements for OData V4, it depends on the configuration of the `IsBound` property. Context is only passed for actions with `IsBound=true`. For more information, see the [Additional Features in SAP Fiori Elements for OData V4](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__section_ntd_h2l_ylb) section in this topic.
+When the `UI.DataFieldForAction` button is invoked, passing the context depends on the configuration of the `IsBound` property. Context is only passed for actions with `IsBound=true`.
 
 **Grouping of Multiple Invocations of the Same Action Using Multiple Selections in the Table**
 
@@ -691,7 +675,7 @@ UI.OperationGroupingType/Isolated
 </td>
 <td valign="top">
 
-The request for each selected instance is sent in a separate changeset within a single batch.
+The request for each selected instance is sent in a separate change set within a single batch.
 
 Even if an error occurs for a selected instance, the requests for the other selected instances are still executed.
 
@@ -705,7 +689,7 @@ UI.OperationGroupingType/ChangeSet
 </td>
 <td valign="top">
 
--   The request for each selected instance is sent in the same changeset within a single batch.
+-   The request for each selected instance is sent in the same change set within a single batch.
 
 -   Even if only a single selected instance results in an error when an action is executed, none of the selected instances are executed. This means that the action is either executed successfully for all instances, or isn't executed for any of the selected instances.
 
@@ -767,86 +751,9 @@ To achieve this, you must annotate the action with `Common.DefaultValuesFunction
 
 
 
-<a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__section_egb_j2l_ylb"/>
+<a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb"/>
 
-## Additional Features in SAP Fiori Elements for OData V2
-
-> ### Note:  
-> The overview page only supports micro actions, for example, actions in the quick view cards that open when you click the right-hand side of the stack card. For more information, see [Quick View Cards](quick-view-cards-c4bd35e.md) and [Defining Custom Actions on the Overview Page](defining-custom-actions-on-the-overview-page-02fb273.md).
-
-
-
-### App-Specific Actions
-
-You can also implement your own actions by using extension points.
-
-For the analytical list page, you can define actions in the chart toolbar. For more information, see [Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md) and [Defining Custom Actions](defining-custom-actions-c3de5c0.md).
-
-
-
-### Actions Calling OData Function Imports
-
-**Bound Actions \(Context-Dependent\)**
-
-Context-dependent function imports provide an `sap:action-for` annotation defining the entity type for the required context.
-
-> ### Sample Code:  
-> ```
-> <FunctionImport Name="C_STTA_SalesOrder_WD_20Setdisabledstatus"
-> ReturnType="STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrder_WD_20Type"
-> EntitySet="C_STTA_SalesOrder_WD_20" m:HttpMethod="POST" sap:action-for="STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrder_WD_20Type"
-> sap:applicable-path="Setdisabledstatus_ac">
-> ```
-
-**Action Parameters for Bound Actions \(Context-Dependent\)**
-
-Bound actions can have parameters that are defined by the back end. If the name of the parameter matches with any property of the bound entity, then the value of that property is used from the selected row. In case of multi select, the action parameters are not filled with the selected context values.
-
-**Unbound Actions \(Context-Independent\)**
-
-Context-independent function imports don't provide an `sap:action-for` annotation.
-
-> ### Sample Code:  
-> ```
-> <FunctionImport Name="C_STTA_SalesOrder_WD_20Create_simple" 
-> ReturnType="STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrder_WD_20Type" 
-> EntitySet="C_STTA_SalesOrder_WD_20" m:HttpMethod="POST" />
-> ```
-
-Context-independent actions calling OData function imports can be placed in the table and smart chart toolbars of the list report and the object page as determining actions in the list report or in the object page header.
-
-**Action Parameters for Unbound Actions \(Context-Independent\)**
-
-Unbound actions can have parameters that are defined by the back end. All the function import properties are displayed in the action parameter dialog. The action dialog displays a parameter as mandatory if it is marked `'Nullable:false'` in the function import definition.
-
-> ### Note:  
-> You can also call function imports with or without input parameters using multiselection in tables.
-
-
-
-### Prefilling Action Parameter Values Using `DefaultValuesFunction`
-
-The action parameters can be prefilled with the values returned from a default value function.
-
-In case a single record is selected and an action is called that calls the `DefaultValuesFunction` function import, then the default values fetched from the function import gets populated in the parameter dialog, irrespective of the existing value present for the selected record. In case of multiple selections, default values fetched from the `DefaultValuesFunction` gets populated in the parameter dialog and the remaining input parameter remains empty.
-
-For more information, see [Prefilling Fields Using the DefaultValuesFunction](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
-
-
-
-<a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__section_ntd_h2l_ylb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-Even though SAP Fiori elements doesn't apply any special logic based on whether you use a function or an action definition in the back end, you must choose the appropriate option based on your back-end capabilities. For example, functions do not support side effects or state messages.
-
-For more information about actions and functions in RAP-based applications, see [Actions](https://help.sap.com/docs/abap-cloud/abap-rap/actions) and [Functions](https://help.sap.com/docs/abap-cloud/abap-rap/functions).
-
-For more information about actions and functions in CAP-based applications, see [**Calling Actions / Functions**](https://cap.cloud.sap/docs/guides/providing-services#calling-actions-functions).
-
-
-
-### Enabling Custom Actions Defined Using Annotations
+## Enabling Custom Actions Defined Using Annotations
 
 You can use annotations to control the enablement of operations \(annotation-based actions\) – in this case `Core.OperationAvailable`. This property can be set either to a static value \(Boolean `true` or `false`\), or to a dynamic value \(path pointing to a property\).
 
@@ -956,7 +863,9 @@ You can use annotations to control the enablement of operations \(annotation-bas
 
 
 
-### Bound and Unbound Actions
+<a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__BoundUnbound"/>
+
+## Bound and Unbound Actions
 
 Actions can either be classified as bound or unbound. Bound actions are those that need a context from the underlying control. Such actions can't be invoked without passing a context \(usually selected by user actions, such as selecting a row from a table\). In the metadata, these actions are marked with the `IsBound` property.
 
@@ -1081,10 +990,10 @@ The visibility of the action is controlled using the `UI.Hidden` annotation and 
 
 
 
-### Using Singletons to Influence the Visibility of the *Create*, *Delete*, and *Edit* Buttons
+## Using Singletons to Influence the Visibility of the *Create*, *Delete*, and *Edit* Buttons
 
 > ### Tip:  
-> Using singletons to control the visibility of actions is available for the list report, object page, and analytical list page.
+> Using singletons to control the visibility of actions is available for the list report page, object page, and analytical list page.
 
 You can use the `UI.CreateHidden`, `UI.DeleteHidden`, and `UI.UpdateHidden` annotations to point to a singleton property path. The following sample code shows how to do this:
 
@@ -1126,7 +1035,7 @@ The CAP CDS syntax to define such a reference uses the inline `edmJson` mechanis
 
 
 
-### Static Actions
+## Static Actions
 
 Unlike bound actions, where a context must be passed, static actions don't need a user-selected context to be passed. But, in contrast to unbound actions, some context is always passed to static actions, namely the header context of the collection for which the static action is defined.
 
@@ -1197,7 +1106,9 @@ You can see how to refer to the static action defined like this in the following
 
 
 
-### Action Parameters
+<a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__action_parameters_subsection"/>
+
+## Action Parameters
 
 Bound and unbound actions can have associated parameters. The back end that defines the action also defines the parameters associated with the action. Some of these actions might be marked as mandatory, which means that the action can't be invoked without supplying a value for the parameter.
 
@@ -1662,6 +1573,26 @@ The following default values are available:
     2.  If there's no `ParameterDefaultValue` annotation for parameter X, the FLP user default settings are checked. If there's a corresponding value for parameter X there, then this value is used as a default and displayed in the action parameter dialog.
 
 
+-   System Handling of Parameters with No Value Entered
+
+    In cases where app developers haven't defined default values for an action parameter, and the user hasn't entered a value in the action dialog, the system applies a predefined default handling.
+
+    The system checks the definition of the action parameter for the attribute "`nullable`" and applies the following logic:
+
+    -   If the parameter is nullable, the parameter is sent to the back-end system with a "`null`" value.
+
+    -   If the parameter is not nullable, the system assigns a default value based on the parameter's data type:
+
+        -   String parameters: empty string \(`""`\)
+
+        -   Boolean parameters: `false` 
+
+        -   Numeric parameters, for example, `decimal` and `Edm.Int64`: `0`
+
+
+
+    Whether action parameters are nullable or not nullable is determined by the back-end definitions.
+
 
 
 
@@ -1756,7 +1687,9 @@ If all the parameters of an action have been hidden by using the `UI.hidden` ann
 
 
 
-### Grouping Actions as Menu Buttons
+<a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__grouping_actions_subsection"/>
+
+## Grouping Actions as Menu Buttons
 
 Actions that have a similar business purpose can be grouped together and rendered in the form of menu buttons. Listing actions \(custom actions from the manifest and actions from annotations\) in the form of menu buttons is possible for header actions, table toolbar actions, and form actions. The footer action doesn't support menu buttons.
 
@@ -1780,7 +1713,9 @@ If a `DataField` action is named `com.c_salesordermanage_sd.BoundActionWithParam
 
 You can create a menu using annotations and manifest settings.
 
-**Annotation-Based Menus**
+
+
+### Annotation-Based Menus
 
 You can create a menu by using the `DataFieldForActionGroup` annotation, as shown in the following sample code:
 
@@ -1858,9 +1793,11 @@ You can create a menu by using the `DataFieldForActionGroup` annotation, as show
 
 For information about modifying the menu using the `manifest.json` file, see the [Overriding Annotation-Based Action Groups Using the Manifest](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__overriding_action_groups) subsection in this topic.
 
-**Manifest-Based Menus**
 
-To group actions under a menu button for header actions, configure the following settings in the `manifest.json` file
+
+### Manifest-Based Menus
+
+To group actions under a menu button for header actions, configure the following settings in the `manifest.json` file:
 
 > ### Sample Code:  
 > Grouping Header Actions
@@ -1899,7 +1836,7 @@ To group actions under a menu button for header actions, configure the following
 > }
 > ```
 
-To group actions under a menu button for form actions, configure the following settings in the `manifest.json` file
+To group actions under a menu button for form actions, configure the following settings in the `manifest.json` file:
 
 > ### Sample Code:  
 > Grouping Form Actions
@@ -1936,7 +1873,7 @@ To group actions under a menu button for form actions, configure the following s
 > }
 > ```
 
-To group actions under a menu button for table toolbar actions, configure the following settings in the `manifest.json` file
+To group actions under a menu button for table toolbar actions, configure the following settings in the `manifest.json` file:
 
 > ### Sample Code:  
 > Grouping Table Actions
@@ -1991,7 +1928,7 @@ To group actions under a menu button for table toolbar actions, configure the fo
 
 
 
-### Defining a Default Action for a Menu Button
+## Defining a Default Action for a Menu Button
 
 When you define a default action for a menu button, clicking the button triggers the action directly.
 
@@ -2016,7 +1953,7 @@ You can either use an already existing entry from the `"menu"` definition, or us
 
 
 
-### Setting a Priority for Actions
+## Setting a Priority for Actions
 
 You can set a priority for action buttons. It determines the visual importance and overflow behavior of actions in toolbars and headers. The `priority` property is supported for all standard actions and all application-defined actions: header, footer, and form actions, as well as actions in the chart and table toolbars.
 
@@ -2132,7 +2069,7 @@ You can also set the priority for action menus in the same way as described for 
 
 
 
-### Grouping Actions for the Overflow
+## Grouping Actions for the Overflow
 
 You can group actions to define how they're displayed in the toolbar and overflow. When there's not enough space in the toolbar to display all grouped actions, they are moved together into overflow. When there's enough space, they are displayed together in the toolbar.
 
@@ -2181,7 +2118,7 @@ To group actions together, ensure that all the actions belonging to the same gro
 
 
 
-### Enabling Separators for Grouped Actions
+## Enabling Separators for Grouped Actions
 
 You can show a separator before groups of actions in a table toolbar by combining action groups \(`overflowGroup`\) with the `overflowGroups` manifest setting.
 
@@ -2236,7 +2173,7 @@ The separator isn't shown if the group is the first set of actions in the toolba
 
 
 
-### Enabling Separators for Actions in a Subsection
+## Enabling Separators for Actions in a Subsection
 
 Actions in the subsection toolbar can be collected from multiple `UI.FieldGroups`. To configure separators for subsections on an object page, the corresponding `UI.Facet` ID must be used in the `manifest.json` file, as shown in the following sample code:
 
@@ -2371,7 +2308,7 @@ Actions in the subsection toolbar can be collected from multiple `UI.FieldGroups
 
 
 
-### Overriding Annotation-Based Actions Using the Manifest
+## Overriding Annotation-Based Actions Using the Manifest
 
 For the following properties, you can override the annotation-based values using the manifest:
 
@@ -2432,7 +2369,9 @@ To get the key, you need to select the action applicable in your specific scenar
 
 
 
-### Overriding Annotation-Based Action Groups Using the Manifest
+<a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__overriding_action_groups"/>
+
+## Overriding Annotation-Based Action Groups Using the Manifest
 
 To override a `DataFieldForActionGroup` in the manifest, you need to identify its key. The key is formed by combining the prefix `DataFieldForActionGroup::` with the `ID` specified as a parameter in the annotation. For instance, if the `ID` is `groupedActions`, the corresponding key is `DataFieldForActionGroup::groupedActions`. This key is used to address the action group that needs to be overridden.
 
@@ -2447,7 +2386,9 @@ The keys for menu items within a `DataFieldForActionGroup` are formed as follows
     **Example.** If the `SemanticObject` property is `SalesOrder` and the name of the action is `com.c_salesordermanage_sd.SalesOrderManage.Navigation`, its key is `DataFieldForIntentBasedNavigation::SalesOrder::com.c_salesordermanage_sd.SalesOrderManage.Navigation`.
 
 
-**Modifying the Menu**
+
+
+### Modifying the Menu
 
 To modify the menu, define the set of actions in the menu property of the manifest override. This allows you to either add new actions or remove existing ones by explicitly specifying the actions you want, as follows:
 
@@ -2613,14 +2554,12 @@ These action names are used in the following examples that show how to add new a
 
 
 > ### Note:  
-> For information aboutSAP Fiori elements for OData V2, see [Actions](actions-14418d7.md).
+> For information about SAP Fiori elements for OData V2, see [Actions](actions-14418d7.md).
 
 **Related Information**  
 
 
 [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md "You can display a confirmation popover when a user triggers an action.")
 
-[Using Action Control for Context-Dependent Actions](using-action-control-for-context-dependent-actions-5b0b686.md "Action control refers to the ability of applications to be able to configure app-specific actions so that they are only enabled for certain instances of the object, but not others.")
-
-[Configuring Navigation](configuring-navigation-a424275.md "SAP Fiori elements control the navigation within an app (internal navigation) and the navigation to and from an app (external navigation).")
+[Configuring Navigation](configuring-navigation-a424275.md "You can configure the SAP Fiori elements navigation within an app (internal navigation) and the navigation to and from an app (external navigation).")
 

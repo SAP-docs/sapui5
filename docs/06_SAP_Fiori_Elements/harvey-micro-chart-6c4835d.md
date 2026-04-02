@@ -2,9 +2,14 @@
 
 # Harvey Micro Chart
 
+You can render the micro chart as a Harvey Ball micro chart.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Harvey Micro Chart](harvey-micro-chart-de4f8bf.md).
+
 ![](images/Harvey_Micro_Chart_5026048.png)
 
-A single measure value is shown against a maximum value. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.HarveyBallMicroChart).
+The Harvey Ball micro chart visualizes a single value as a portion of a maximum value. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.HarveyBallMicroChart).
 
 
 

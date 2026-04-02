@@ -4,6 +4,9 @@
 
 You can set up the flexible column layout to display just two columns. This is called list-detail mode.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling the List-Detail Mode](enabling-the-list-detail-mode-b890eba.md).
+
 By default, the flexible column layout starts off with one column. The user opens new columns by navigating forward. You can set the layout to display just two columns by adding additional parameters to the flexible column layout entry in the `manifest.json` in your app:
 
 
@@ -54,7 +57,7 @@ If your app has three views and you set `maxColumnsCount` : 2, the third view is
 </td>
 <td valign="top">
 
-Use this parameter to configure what happens if the user deletes an object in the list report, or the entire main object on the object page.
+Use this parameter to configure what happens if the user deletes an object on the list report page, or the entire main object on the object page.
 
 > ### Note:  
 > This parameter does not work for deleting objects within the object page, that is, sub-objects.
@@ -69,7 +72,6 @@ Only the values `true` or `false` are allowed. If you set the parameter to `fals
 > ```
 > 
 > "sap.ui.generic.app": {
->     "_version": "1.1.0",
 >     "settings": {
 >         "flexibleColumnLayout": {
 >             "defaultTwoColumnLayoutType": "TwoColumnsMidExpanded",

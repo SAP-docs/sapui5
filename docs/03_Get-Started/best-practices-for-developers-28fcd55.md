@@ -165,6 +165,10 @@ When creating instances of SAPUI5 controls programmatically \(i.e. not declarati
 
 -   When creating an aggregation binding with a template, explicitly set the `templateShareable` option to either `true` or `false`: Use `true` if your code manages the lifecycle of the template instance, or `false` if you prefer the framework to handle this automatically. For more information, see [Lifecycle of Binding Templates](../04_Essentials/lifecycle-of-binding-templates-3a4a9e5.md).
 
+-   Do **not** use an XML view or fragment as a binding template because cloning a view/fragment runs synchronously, which has the following consequences:
+    -   It eliminates the availability of mandatory asynchronous content, for example, Flexibility changes.
+    -   It does **not** correctly respect runtime changes to the control tree, since the original processing of the view/fragment is repeated.
+
 -   When an [Expression Binding](../04_Essentials/expression-binding-daf6852.md) refers to any of the built-in global symbols `odata.compare`, `odata.fillUriTemplate`, or `odata.uriEncode`, the corresponding modules must be required by the surrounding code \(either via [`template:require`](../04_Essentials/require-263f6e5.md), [`core:require`](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md), or in the controller code\):
 
     -   `odata.compare`: `sap/ui/model/odata/v4/ODataUtils`
@@ -245,13 +249,13 @@ Prevent bundling modules \(`Component-preload.js`\) into strings.
 
 -   Don't use `sap.ui.getCore().byId()` or`Element.getElementById()`. Use `this.byId()` or `this.getView().byId()` to address controls in your views or fragments.
 
--   Don't use native HTML, SVG, or inline CSS style within your XML view or fragment. Instead, consider using the [`sap.ui.core.HTML`](https://ui5.sap.com/#/api/sap.ui.core.HTML) control or your own notepad control. Existing inline CSS must be migrated to an external style sheet.
+-   Don't use native HTML, SVG, or inline CSS style within your XML view or fragment. Instead, consider using the [`sap.ui.core.HTML`](https://ui5.sap.com/#/api/sap.ui.core.HTML) control or your own custom control. Existing inline CSS must be migrated to an external style sheet.
 
 -   Don't use view cloning via `sap.ui.core.mvc.View#clone` as it's deprecated. Instead, call the respective factory function \(e.g. `XMLView.create`\) with the View's name.
 
 -   Use the `loadFragment` method of the `sap.ui.core.mvc.Controller` to load fragments asynchronously.
 
--   Don't use global names in your XML. Ensure that the target function or object is defined as a module and require the defined module via [`core:require` in the XML](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md). Use `template:require` if the XML content needs preprocessing.
+-   Don't use global names in your XML. Ensure that the target function or object is defined as a module and require the defined module via [`core:require` in the XML](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md). If the view or the fragment is used in XML templating scenarios, use `template:require`. For more information, see [XML Templating](../04_Essentials/xml-templating-5ee619f.md).
 
 -   Event handlers must not be referenced by composite global names \(e.g. `my.event.handler`\) as these have to be resolved in the global namespace.
 
@@ -356,13 +360,15 @@ Implement strict error handling to address critical issues.
 
 -   Don't use the global namespace of the library to add types. Use the return value of `Lib.init` instead to add them.
 
+-   Always return the object from `Lib.init()` as the return value of your `library.js` module. This enables consumers of the library to access enums and other exports properly. For more information, see [The library.js File](../09_Developing_Controls/the-library-js-file-bd039ed.md).
 -   Use the library `apiVersion 2`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.init).
 
--   Use [`sap.ui.base.DataType.registerEnum`](https://ui5.sap.com/#/api/sap.ui.base.DataType%23methods/sap.ui.base.DataType.registerEnum) to register enums that shall be usable as a type of control properties.
+-   Use [`sap.ui.base.DataType.registerEnum`](https://ui5.sap.com/#/api/sap.ui.base.DataType%23methods/sap.ui.base.DataType.registerEnum) to register enums that you want to use as types for control properties. Make sure that enum keys and values match, for example: `{Small: "Small", Large: "Large"}`.
 
+-   For enums in nested namespaces, create the namespace object first, before defining the enum, for example `thisLib.cards = thisLib.cards|| {}; thisLib.cards.MyEnum = {...}`. For more information, see [Enumerations and RegEx Types](../09_Developing_Controls/the-library-js-file-bd039ed.md#loiobd039ed5f99e4d3f8d020b0da62f9d85__section_ENUM).
 -   Define the `appData/manifest/i18n` section in the `.library` file or the `sap.app/i18n` section in the `manifest.json`, so that the framework can load resource bundles in advance.
 
--   Properly define library dependencies in all places where it is required. For more information, see [Dependencies to Libraries](../04_Essentials/descriptor-dependencies-to-libraries-and-components-8521ad1.md#loio8521ad1955f340f9a6207d615c88d7fd__section_DEPLIB).
+-   Properly define library dependencies in all places where it is required. For more information, see [Dependencies to Libraries](../04_Essentials/manifest-dependencies-to-libraries-and-components-8521ad1.md#loio8521ad1955f340f9a6207d615c88d7fd__section_DEPLIB).
 
 
 **Additional Information:**

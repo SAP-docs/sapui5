@@ -225,7 +225,7 @@ The composite binding for the `sap.ui.model.odata.type.Currency` and `sap.ui.mod
     core:require="{
         Currency: 'sap/ui/model/odata/type/Currency',
         Decimal: 'sap/ui/model/odata/type/Decimal',
-        StringType: 'sap/ui/model/odata/type/String',
+        EdmString: 'sap/ui/model/odata/type/String',
         Unit: 'sap/ui/model/odata/type/Unit'
     }">
     <VBox>
@@ -250,7 +250,7 @@ The composite binding for the `sap.ui.model.odata.type.Currency` and `sap.ui.mod
                        constraints:{'precision': 13, 'scale': 'variable', 'nullable': false}
                     }, {
                        path: 'WeightUnit', 
-                       type: 'StringType', 
+                       type: 'EdmString', 
                        constraints: {'maxLength': 3, 'nullable': false}
                     }, {
                        mode: 'OneTime',
@@ -267,7 +267,7 @@ The composite binding for the `sap.ui.model.odata.type.Currency` and `sap.ui.mod
                        constraints: {'precision': 15, 'scale': 'variable', 'nullable': false}
                     }, {
                        path: 'CurrencyCode', 
-                       type: 'StringType', 
+                       type: 'EdmString', 
                        constraints: {'maxLength': 5, 'nullable': false}
                     }, {
                        mode: 'OneTime', 

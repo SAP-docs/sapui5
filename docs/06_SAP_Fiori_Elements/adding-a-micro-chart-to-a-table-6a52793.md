@@ -2,15 +2,18 @@
 
 # Adding a Micro Chart to a Table
 
-You can add a micro chart to the column of a responsive table in both the list report and the object page.
+You can add a micro chart to the column of a responsive table on both the list report page and the object page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md).
 
 To add a micro chart to a table, use the `UI.LineItem` annotation and the complex type `DataFieldForAnnotation`. The micro charts are then displayed within the table column, as shown in the following screenshot:
 
   
   
-**Micro Chart in List Report Table**
+**Micro Chart in List Report Page Table**
 
-![](images/Micro_Chart_in_List_Report_Table_b010c13.png "Micro Chart in List Report Table")
+![](images/Micro_Chart_in_List_Report_Table_b010c13.png "Micro Chart in List Report Page Table")
 
 > ### Note:  
 > You cannot sort and filter the measures and dimensions in a micro chart from the column header. These measures and dimensions are available in the *Settings* menu *Sorting and Filtering* menu if they are direct properties of the table entity.

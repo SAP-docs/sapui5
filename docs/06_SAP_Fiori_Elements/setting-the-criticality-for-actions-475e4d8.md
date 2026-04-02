@@ -4,6 +4,9 @@
 
 You can add criticality to an action button by using annotations.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Setting the Criticality for Actions](setting-the-criticality-for-actions-12f2ba2.md).
+
 When you set the criticality to an action, the corresponding action button renders a semantic action button \(positive semantic and negative semantic\).
 
 Criticality of a data field \(`UI.DataFieldForAction`\) can be achieved by setting a value or status for the `Criticality` property in the annotation.
@@ -31,12 +34,12 @@ Actions that are a part of table rows \(inline\), an object page header, and an 
 > 
 > ```
 > 
-> @UI.<lineItem/fieldGroup>: [  
->   {
->     label: 'Positive (Dummy)',
->     dataAction: 'PUSHDOWN:com.c_salesordermanage_sd_aggregate.DummyBoundAction',
->     type: #FOR_ACTION
->   }
+> @UI.<lineItem/fieldGroup>: [
+>     {
+>         label: 'Positive (Dummy)',
+>         dataAction: 'PUSHDOWN:com.c_salesordermanage_sd_aggregate.DummyBoundAction',
+>         type: #FOR_ACTION
+>     }
 > ]  
 > ```
 
@@ -75,7 +78,7 @@ Outcome
 <tr>
 <td valign="top">
 
-UI.CriticalityType/Positive or 3
+`UI.CriticalityType/Positive` or `3`
 
 </td>
 <td valign="top">
@@ -87,7 +90,7 @@ Positive/Green status \(Completed/Available/On Track/Acceptable\)
 <tr>
 <td valign="top">
 
-UI.CriticalityType/Negative or 1
+`UI.CriticalityType/Negative` or `1`
 
 </td>
 <td valign="top">
@@ -101,7 +104,7 @@ Negative/Red status \(Attention/Overload/Alert\)
 > ### Note:  
 > -   `Criticality` is supported only for `DataFieldForAction`.
 > 
-> -   When an action is marked as critical, the previously emphasized buttons \(SAVE, EDIT or APPLY\) no longer appear emphasized.
+> -   When an action is marked as critical, the previously emphasized buttons \(*Save*, *Edit* or *Apply*\) no longer appear emphasized.
 > 
 > -   Emphasized buttons and semantic buttons \(critical actions\) cannot occur together on one page, as there can only be a single primary action \(so either the emphasized or the semantic button\).
 

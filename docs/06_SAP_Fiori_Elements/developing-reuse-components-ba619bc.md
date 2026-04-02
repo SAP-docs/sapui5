@@ -2,7 +2,12 @@
 
 # Developing Reuse Components
 
-Follow these guidelines when developing reuse components that are to be included as sections in object pages.
+You can develop reuse components that are to be included as sections in object pages.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Developing Reuse Components](developing-reuse-components-6314fcd.md).
 
 
 

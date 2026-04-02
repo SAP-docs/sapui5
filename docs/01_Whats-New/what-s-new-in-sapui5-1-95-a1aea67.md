@@ -387,11 +387,11 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   A new extension API is now available that can hook into the live cycle method of the `sap-keep-alive` feature. For more information, see [Refresh Dataset for Back Navigation When sap-keep-alive Is Set to True](../06_SAP_Fiori_Elements/refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md).
 
--   Responsive tables in an object page can now be configured to load more than the default value of 10. For more information, see [Adapting the UI: List Report and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
+-   Responsive tables in an object page can now be configured to load more than the default value of 10. For more information, see [Adapting the UI: List Report Page and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md).
 
 -   The confirmation popup to discard drafts is now enabled by default for draft applications. For more information, see [Confirmation Popups](../06_SAP_Fiori_Elements/confirmation-popups-9a53662.md).
 
--   The creation of an object using a dialog is now supported in multi-view applications. For more information, see [Enabling Object Creation Using the Dialog on the List Report](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-on-the-list-report-ceb9284.md).
+-   The creation of an object using a dialog is now supported in multi-view applications. For more information, see [Enabling Object Creation Using the Dialog on the List Report Page](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-on-the-list-report-page-ceb9284.md).
 
 -   You can now enable the history of recently entered values for any field in the smart filter bar. For more information, see [Enabling the History of Recently Entered Values](../06_SAP_Fiori_Elements/enabling-the-history-of-recently-entered-values-37dbf1f.md).
 
@@ -451,7 +451,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
     -   [Multiple Views on the List Report Page](../06_SAP_Fiori_Elements/multiple-views-on-the-list-report-page-a37df40.md)
 
-    -   [Defining Multiple Views on a List Report Table - Multiple Table Mode](../06_SAP_Fiori_Elements/defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md)
+    -   [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](../06_SAP_Fiori_Elements/defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-37aeed7.md)
 
     -   [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](../06_SAP_Fiori_Elements/defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md)
 
@@ -479,6 +479,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

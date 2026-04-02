@@ -4,9 +4,6 @@
 
 You can override the horizontal alignment of table columns by using manifest settings.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 Make the settings in the `manifest.json` file as follows:
 
 > ### Sample Code:  

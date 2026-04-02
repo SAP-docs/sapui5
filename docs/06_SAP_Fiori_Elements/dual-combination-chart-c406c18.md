@@ -2,7 +2,7 @@
 
 # Dual Combination Chart
 
-A dual combination chart type lets you view individual data points for a particular dimension.
+You can render the chart as a dual combination chart, which lets you view individual data points for a particular dimension.
 
   
   

@@ -2,7 +2,10 @@
 
 # Adding Custom Actions Using Extension Points
 
-You can use extension points to add custom actions to the list report and the object page.
+You can use extension points to add custom actions to the list report page and the object page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
 
 
@@ -17,11 +20,11 @@ You can use extension points to add custom actions to the list report and the ob
 
 You can define custom actions for:
 
--   List reports \(global action\)
+-   List report page \(global action\)
 
-    For global actions, you do not have to select a line in the list report table. This type of action refers to the whole list report, for example, *Display Log*. Global actions are placed in the list report filter bar next to the *Share* button.
+    For global actions, you do not have to select a line in the list report page table. This type of action refers to the whole list report page, for example, *Display Log*. Global actions are placed in the list report page filter bar next to the *Share* button.
 
--   Table toolbar of the list report
+-   Table toolbar of the list report page
 -   Header of the object page
 -   Table toolbar for a specific table on the object page
 -   Form in a section on the object page
@@ -57,7 +60,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
                 onCustomAction2 : function(oEvent) { … },
                 …
             }
-          })
+        })
         
         ```
 
@@ -80,7 +83,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </td>
     <td valign="top">
     
-    Entity set that is displayed on the list report or on the object page \(for example, `SMART_C_Product`\)
+    Entity set that is displayed on the list report page or on the object page \(for example, `SMART_C_Product`\)
 
     > ### Note:  
     > If you use multiple views with different `entity sets` on the list report page, `Actions` need to be defined only for main entity set. It is not possible to execute `Actions` defined for other `entity sets`.
@@ -162,7 +165,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     <tr>
     <td valign="top">
     
-    Relevant only for table toolbar actions in the list report and object page: `<requiresSelection>` \(optional\)
+    Relevant only for table toolbar actions on the list report page and the object page: `<requiresSelection>` \(optional\)
     
     </td>
     <td valign="top">
@@ -174,7 +177,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     <tr>
     <td valign="top">
     
-    Relevant only for list report actions and object page header actions: `<determining>` \(optional\)
+    Relevant only for list report page actions and object page header actions: `<determining>` \(optional\)
     
     </td>
     <td valign="top">
@@ -228,7 +231,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     </table>
     
-    -   Table toolbar action for the list report
+    -   Table toolbar action for the list report page
 
         ```xml
         
@@ -289,7 +292,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
                 `Element.getElementById('__xmlview0-__clone0--host').getComponent()` where `__xmlview0-__clone0--host` is the `ComponentContainer` ID, and `Element` is required from module `sap/ui/core/Element`.
 
 
-            The result is generated in this `<app component prefix>---<local component ID>` format. For example, a`pplication-EPMProduct-manage_st-component---sap.suite.ui.generic.template.ListReport::STTA_C_MP_Product`. You can remove the app component prefix from the string along with the dashes.
+            The result is generated in this `<app component prefix>---<local component ID>` format. For example,`application-EPMProduct-manage_st-component---sap.suite.ui.generic.template.ListReport::STTA_C_MP_Product`. You can remove the app component prefix from the string along with the dashes.
 
 
     -   Action for the object page header
@@ -335,31 +338,37 @@ These custom actions are displayed as buttons on the UI. When the user selects t
 
         ```xml
         
-        ...
         "extends": {
-          "extensions": {
-            "sap.ui.controllerExtensions": {
-              ...
-              "sap.suite.ui.generic.template.ObjectPage.view.Details#my_app::sap.suite.ui.generic.template.ObjectPage.view.Details:: <entity set>":  {
-                "controllerName": "my_app.ext.controller.DetailsExtension",
-                  "sap.ui.generic.app": {
-                    "<entity set>": {
-                      "EntitySet": "<entity set>",
-                      "Sections": {
-                        "<SmartTable Facet ID>": {
-                          "id" : "<SmartTable Facet ID>",
-                          "Actions": {
-                            "<SmartTable Action 1>": {
-                              "id" : "<id>",
-                              "text" : "<button text>",
-                              "press" : "<handler function>",
-                              "applicablePath": <path>,
-                              "requiresSelection": <true|false>
-                            },
-                            "<SmartTable Action 2>": { ... }
-                          }
-        ...
-        
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.suite.ui.generic.template.ObjectPage.view.Details#my_app::sap.suite.ui.generic.template.ObjectPage.view.Details::<entity set>": {
+                        "controllerName": "my_app.ext.controller.DetailsExtension",
+                        "sap.ui.generic.app": {
+                            "<entity set>": {
+                                "EntitySet": "<entity set>",
+                                "Sections": {
+                                    "<SmartTable Facet ID>": {
+                                        "id": "<SmartTable Facet ID>",
+                                        "Actions": {
+                                            "<SmartTable Action 1>": {
+                                                "id": "<id>",
+                                                "text": "<button text>",
+                                                "press": "<handler function>",
+                                                "applicablePath": "<path>",
+                                                "requiresSelection": "<true|false>"
+                                            },
+                                            "<SmartTable Action 2>": {
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         ```
 
     -   Form action for the object page
@@ -367,33 +376,40 @@ These custom actions are displayed as buttons on the UI. When the user selects t
         ```xml
         
         
-        ...
         "extends": {
-          "extensions": {
-            "sap.ui.controllerExtensions": {
-              ...
-              "sap.suite.ui.generic.template.ObjectPage.view.Details": {
-                "controllerName": "my_app.ext.controller.DetailsExtension",
-                  "sap.ui.generic.app": {
-                    "<entity set>": {
-                      "EntitySet": "<entity set>",
-                      "Sections": {
-                        "<Form Facet ID>": {
-                          "id": "<Form Facet ID>",
-                          "Actions": {
-                            "<Action 1>": {
-                              "id" : "<id>",
-                              "text" : "<button text>",
-                              "press" : "<handler function>"
-                              "applicablePath": <path>,
-                            },
-                            "<Action 2>": { ... }
-                          }
-        ...
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+                        "controllerName": "my_app.ext.controller.DetailsExtension",
+                        "sap.ui.generic.app": {
+                            "<entity set>": {
+                                "EntitySet": "<entity set>",
+                                "Sections": {
+                                    "<Form Facet ID>": {
+                                        "id": "<Form Facet ID>",
+                                        "Actions": {
+                                            "<Action 1>": {
+                                                "id": "<id>",
+                                                "text": "<button text>",
+                                                "press": "<handler function>",
+                                                "applicablePath": "<path>"
+                                            },
+                                            "<Action 2>": {
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         
         ```
 
-    -   Footer bar action in the list report:
+    -   Footer bar action on the list report page:
 
         ```xml
         
@@ -461,32 +477,35 @@ These custom actions are displayed as buttons on the UI. When the user selects t
         
         ```
 
-    -   List report \(global action\)
+    -   List report page \(global action\)
 
         ```
         
-        ...
         "extends": {
-           "extensions": {
-              "sap.ui.controllerExtensions": {
-                 "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                    "controllerName": "my_app.ext.controller.ListReportExtension",
-                    "sap.ui.generic.app": {
-                       "<entity set>": {
-                          "EntitySet": "<entity set>",
-                          "Actions": {
-                             "<Action 1>": {
-                                "id" : "<id>",
-                                "text" : "<button text>",
-                                "press" : "<handler function>",
-                             "global": <true|false>
-                             },
-                             "<Action 2>": {
-                                ...
-                             },
-                             ...
-                          }
-                       ...
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+                        "controllerName": "my_app.ext.controller.ListReportExtension",
+                        "sap.ui.generic.app": {
+                            "<entity set>": {
+                                "EntitySet": "<entity set>",
+                                "Actions": {
+                                    "<Action 1>": {
+                                        "id": "<id>",
+                                        "text": "<button text>",
+                                        "press": "<handler function>",
+                                        "global": "<true|false>"
+                                    },
+                                    "<Action 2>": {
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         
         ```
 

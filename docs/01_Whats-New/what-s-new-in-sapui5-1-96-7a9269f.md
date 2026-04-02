@@ -597,9 +597,9 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   The object page header is now collapsed to a summary line when you scroll it on small screen devices. This optimizes the content view.
 
--   In the worklist applications, the options to sort, group, and filter are now available within the table personalization dialog that is consistent with the list report. For more information, see [Worklist](../06_SAP_Fiori_Elements/worklist-d1d588f.md).
+-   In the worklist applications, the options to sort, group, and filter are now available within the table personalization dialog that is consistent with the list report. For more information, see [Worklist Page](../06_SAP_Fiori_Elements/worklist-page-d1d588f.md).
 
--   The persistence mode is now default for List Report/Object Page applications with flexible column layout. For more information, see [Enabling Discovery/Persistence Mode](../06_SAP_Fiori_Elements/enabling-discovery-persistence-mode-7c62084.md).
+-   The persistence mode is now default for List Report/Object Page applications with flexible column layout. For more information, see [Enabling Persistence Mode](../06_SAP_Fiori_Elements/enabling-persistence-mode-7c62084.md).
 
 -   List Report and Object Page tables now have a full screen mode option, enabled by default, when launched on mobile phones. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
 
@@ -740,6 +740,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

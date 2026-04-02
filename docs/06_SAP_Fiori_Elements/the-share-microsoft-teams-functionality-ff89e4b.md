@@ -2,12 +2,18 @@
 
 # The *Share: Microsoft Teams* Functionality
 
-The Share functionality is enhanced with the integration of Microsoft Teams.
+You can integrate Microsoft Teams in the *Share* functionality.
 
 > ### Note:  
 > -   System administrators for SAP S/4HANA Cloud Public Edition can find the required information at [Integrating Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/257ec7408db6420682462cd1d000e744.html).
 > 
 > -   System administrators for SAP S/4HANA can find the required information at [Integration with Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8308e6d301d54584a33cd04a9861bc52/849465e69b7a490a88049fe0b24fb01e.html?version=2023.000).
+> 
+> -   This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> 
+>     -   Properties or methods exposed by the building block
+> 
+>     -   Custom code using extensions
 
 ![](images/Share_Microsoft_Teams_-_All_Options_None_Selected_f6ca832.png)
 

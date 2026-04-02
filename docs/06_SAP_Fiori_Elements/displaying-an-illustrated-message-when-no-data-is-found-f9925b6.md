@@ -2,7 +2,7 @@
 
 # Displaying An Illustrated Message When No Data Is Found
 
-SAP Fiori elements displays an illustrated message when no data is found for a table.
+You can modify the illustrated message displayed when no data is found for a table.
 
 The illustration, the title of the message, and the message description depend on the situation in which they are displayed: no items created within the table, applied filters, or search query.
 
@@ -17,14 +17,6 @@ On the object page in anchor bar mode, the size of the illustrated message is re
 In icon tab bar mode, if the section contains only a table, the size of the illustrated message adapts to the available space for the table similarly to the list report page.
 
 You can override standard illustrated message texts by adding specific keys to the i18n file of the list report page and object page. For a list of the keys, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
-
-
-
-<a name="loiof9925b63da5443afb7d3b50abb932cf2__section_rqr_4qm_vcc"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-You can adapt the description to suit the use case of your application as described in [Maintaining Standard Texts for Tables](maintaining-standard-texts-for-tables-aacfac5.md).
 
 You can use the manifest setting `useTextForNoDataMessages` to display a text instead of an illustrated message on the object page, as shown in the following code sample:
 
@@ -60,9 +52,11 @@ When using this option, the default texts must be overridden by the application 
 
 
 
-### Adding Actions to an Illustrated Message
+<a name="loiof9925b63da5443afb7d3b50abb932cf2__section_rqr_4qm_vcc"/>
 
-You can add additional actions to illustrated messages to guide the end user when no data is displayed within a table. To do so, use the `beforeRebindTable` extension point.
+## Adding Actions to an Illustrated Message
+
+You can add additional actions to illustrated messages to guide the user when no data is displayed within a table. To do so, use the `beforeRebindTable` extension point.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -92,7 +86,7 @@ You can add additional actions to illustrated messages to guide the end user whe
 > }
 > ```
 
-Within the callback function, you can define the illustrated message to include actions to be proposed to the end user. The illustrated message is applied to the table using the `setNoData` method of the table, as shown in the following sample code:
+Within the callback function, you can define the illustrated message to include actions to be proposed to the user. The illustrated message is applied to the table using the `setNoData` method of the table, as shown in the following sample code:
 
 > ### Sample Code:  
 > ```

@@ -2,11 +2,11 @@
 
 # Configuring the Manifest for the Analytical List Page
 
-The `manifest.json` file is an application configuration file that contains valid entries for initializing the analytical list page \(ALP\).
+You can use the ***manifest.json*** file to configure the analytical list page.
 
 
 
-The ALP isn't a separate floorplan, but rather a 'flavor' of the list report. When you configure a list report template, you can choose to create the template using the 'ALP flavor'. You must then add the "views" configuration, as shown in the following sample code:
+The analytical list page \(ALP\) isn't a separate floorplan, but rather a 'flavor' of the list report page. When you configure a list report page template, you can choose to create the template using the 'ALP flavor'. You must then add the "views" configuration, as shown in the following sample code:
 
 
 
@@ -14,30 +14,30 @@ The ALP isn't a separate floorplan, but rather a 'flavor' of the list report. Wh
 > ALP Configuration in `manifest.json`
 > 
 > ```json
+> 
 > "targets": {
->      "BusinessPartnersList": {
->           ………
->           "name": "sap.fe.templates.ListReport",
->           "options": {
->                "settings": {
->                     "contextPath": "/BusinessPartners",
->                     ………
->                     "views": {
->                          "paths": [{
->                               "primary": [{
->                                    "annotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#ProductSalesPV"
->                               }],
->                               "secondary": [{
->                                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem"
->                               }],
->                               "defaultPath": "both"
->                          }]
->                     },
->                     ………
->                     ………
->                }
->           }
->      }
+>     "BusinessPartnersList": {
+>         ...
+>         "name": "sap.fe.templates.ListReport",
+>         "options": {
+>             "settings": {
+>                 "contextPath": "/BusinessPartners",
+>                 ...
+>                 "views": {
+>                     "paths": [{
+>                         "primary": [{
+>                             "annotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#ProductSalesPV"
+>                         }],
+>                         "secondary": [{
+>                             "annotationPath": "com.sap.vocabularies.UI.v1.LineItem"
+>                         }],
+>                         "defaultPath": "both"
+>                     }]
+>                 },
+>                 ...
+>             }
+>         }
+>     }
 > }
 > ```
 
@@ -61,5 +61,5 @@ The secondary annotation path can be either `UI.LineItem`, `UI.PresentationVaria
 **Related Information**  
 
 
-[Analytical List Page](analytical-list-page-3d33684.md "The analytical list page (ALP) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content.")
+[Analytical List Page](analytical-list-page-3d33684.md "You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs (key performance indicators).")
 

@@ -69,12 +69,6 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > }]
 > ```
 
-> ### Note:  
-> This feature is available for reference facets that are implemented under a collection facet.
-
-> ### Restriction:  
-> This feature is applicable only to reference facets that have a `FieldGroup` as their target, for instance, a form representation. This feature isn't applicable to other target types, for instance, reference facets that point to a table or a chart.
-
 
 
 <a name="loio9fcea86d8ffd48459dd053eb5255a046__section_d3n_xzs_qrb"/>

@@ -179,3 +179,94 @@ Complex syntax can be used to add filters and sorters for list binding. One or m
 
 ```
 
+
+
+<a name="loioec79a5d5918f4f7f9cbc2150e66778cc__section_BF"/>
+
+## Bound Filters
+
+Bound filters let you use data binding for the `value1` or `value2` properties of a filter. When a filter value changes through data binding, the system automatically re-evaluates the list or tree binding using the filter and updates the bound control aggregation.
+
+You can specify bound filters initially in the `boundFilters` property of the [aggregation binding info](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject.AggregationBindingInfo%23overview). The following example filters the team members shown in a table by first-name prefix, last-name prefix, and department values defined in a model named "filter":
+
+```xml
+<table:Table id="membersTable" rows="{path: '/teamMembers',
+    boundFilters: [
+        { path: 'firstName', operator: 'StartsWith', value1: '{filter>/firstNamePrefix}' },
+        { path: 'lastName', operator: 'StartsWith', value1: '{filter>/lastNamePrefix}' },
+        { path: 'department', operator: 'EQ', value1: '{filter>/department}' }
+    ]
+}">
+...
+</table:Table>
+```
+
+A bound filter is *neutral* if its bound value is nullish. Neutral filters are not considered when filtering. To filter only by department, set the values for `/firstNamePrefix` and `/lastNamePrefix` to `null` in the filter model of the example above. A binding for a filter value can also be *unresolved* if it has a relative path and no binding context. A bound filter is always neutral if its binding is unresolved because models return a nullish value for these bindings.
+
+The following more comprehensive example shows a table of customers where each row allows for selection of a key account manager for the respective customer. The selection is filtered so that only account managers in the same region as the customer are displayed.
+
+Note that the binding expression `'{region}'` for the filter's `value1` resolves with the binding context of the enclosing customer table row. With this, each `Select` for account managers filters by the corresponding customer region:
+
+```xml
+<table:Table rows="{rows="{/customers}"
+<table:title><Title text="Customers"/></table:title>
+	<table:columns>
+		<table:Column>
+			<Label text="Customer"/>
+			<table:template>
+				<Text text="{name}"/>
+			</table:template>
+		</table:Column>
+		<table:Column>
+			<Label text="Region"/>
+			<table:template>
+				<Text text="{region}"/>
+			</table:template>
+		</table:Column>
+		<table:Column>
+			<Label text="Key Account Manager"/>
+			<table:template>
+				<Select items="{path: '/accountManagers', templateShareable: false,
+						boundFilters: [{
+							path: 'region',
+							operator: 'EQ',
+							value1: '{region}'
+						}]}">
+					<core:Item text="{parts: ['firstName', 'lastName']}" />
+				</Select>
+			</table:template>
+		</table:Column>
+	</table:columns>
+</table:Table>
+```
+
+If your list or tree binding implementation supports bound filters, you can replace them using the `filter` method of the [list binding](https://ui5.sap.com/#/api/sap.ui.model.ListBinding%23methods/filter) or [tree binding](https://ui5.sap.com/#/api/sap.ui.model.TreeBinding%23methods/filter) associated with the control's aggregation.
+
+-   To replace bound filters, use the `ApplicationBound` [filter type](https://ui5.sap.com/#/api/sap.ui.model.FilterType). This filter type corresponds to filters that you initially set using the `boundFilters` property of the [aggregation binding info](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject.AggregationBindingInfo%23overview).
+-   To replace unbound application filters, use the `Application` filter type. These are filters that you initially set using the `filters` property of the [aggregation binding info](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject.AggregationBindingInfo%23overview).
+
+The following example shows a view controller code snippet. It replaces the bound filters from the team members example above with a new filter for the age of the team members:
+
+**Example**: Filter with lower and upper age boundary
+
+```js
+// FilterOperator imported from sap/ui/model/FilterOperator
+// FilterType imported from sap/ui/model/FilterType
+...
+const oListBinding = this.getView().byId("membersTable").getBinding("rows");
+const oAgeFilterFrom = new Filter({path: "age", operator: FilterOperator.GE, value1: "{filter>/fromAge}"}); 
+const oAgeFilterTo = new Filter({path: "age", operator: FilterOperator.LE, value1: "{filter>/toAge}"});
+oListBinding.filter([oAgeFilterFrom, oAgeFilterTo], FilterType.ApplicationBound); 
+...
+```
+
+List and tree bindings created by the [`v4.ODataModel`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel) and all models that are subclasses of [`sap.ui.model.ClientModel`](https://ui5.sap.com/#/api/sap.ui.model.ClientModel) support bound filters. Additionally, [`v2.ODataListBinding`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding) supports them.
+
+To support bound filters, your custom list binding implementations must call the [`computeApplicationFilters`](https://ui5.sap.com/#/api/sap.ui.model.ListBinding%23methods/computeApplicationFilters) method in their implementation of the `filter` method. This method correctly combines bound and unbound filters into the new application filters. You need to make this call before you call [`sap.ui.model.FilterProcessor.combineFilters`](https://ui5.sap.com/#/api/module:sap/ui/model/FilterProcessor%23methods/sap/ui/model/FilterProcessor.combineFilters). This is because `combineFilters` combines application and control filters and also removes neutral filters.
+
+> ### Note:  
+> Binding expressions for the values of bound filters can be any [property binding info](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject.PropertyBindingInfo). However, bound filters in XML views don't support the syntactic binding constructs that are specific to XML views. These constructs are described in the documentation sections under [XML View](xml-view-91f2928.md). For example, the following are not supported:
+> 
+> -   The "`.`" prefix to refer to a formatter function in the view controller, as described in [Handling Events in XML Views](handling-events-in-xml-views-b0fb4de.md).
+> -   A reference to a type that is required as a module in the view, as described in [Require Modules in XML View and Fragment](require-modules-in-xml-view-and-fragment-b11d853.md).
+

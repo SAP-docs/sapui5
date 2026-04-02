@@ -54,9 +54,9 @@ import ResourceModel from "sap/ui/model/resource/ResourceModel";
 * @namespace ui5.walkthrough
 */
 export default class Component extends UIComponent {
-public static metadata = {
-"interfaces": ["sap.ui.core.IAsyncContentCreation"]
-};
+    public static metadata = {
+        "interfaces": ["sap.ui.core.IAsyncContentCreation"]
+    };
     init(): void {
         // call the init function of the parent
         super.init();

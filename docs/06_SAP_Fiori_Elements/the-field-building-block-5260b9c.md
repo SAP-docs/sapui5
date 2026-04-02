@@ -2,7 +2,9 @@
 
 # The `Field` Building Block
 
-The `Field` building block provides an easy way to instantiate a property that was configured as part of the service metadata. The `Field` analyzes the different annotations that are defined for the property to create the most appropriate controls and additionally offers you configuration options for adjusting the behavior to fit your needs.
+You can use the `Field` building block to instantiate a property configured as part of the service metadata.
+
+The `Field` analyzes the different annotations that are defined for the property to create the most appropriate controls and additionally offers you configuration options for adjusting the behavior to fit your needs.
 
 
 
@@ -60,7 +62,7 @@ The following sample code shows an example of a field used inside a dialog:
 
 <a name="loio5260b9ca249f465ab33769b9edb442aa__section_v3v_mjx_dfc"/>
 
-## Configuration Using Manifest Settings
+## Configuring the `Field` Building Block Using Manifest Settings
 
 You can use manifest settings to configure the `Field` building block.
 

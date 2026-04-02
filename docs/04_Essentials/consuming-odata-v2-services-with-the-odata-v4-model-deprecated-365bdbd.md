@@ -19,7 +19,7 @@ Here is an example of a manifest.json file, which shows how to configure your ap
 
 ```
 {
-    "_version" : "1.1.0",
+    ...
     "sap.app" : {
         ...
         "dataSources" : {
@@ -37,7 +37,6 @@ Here is an example of a manifest.json file, which shows how to configure your ap
     "sap.ui5" : {
         ...
         "dependencies" : {
-            "minUI5Version" : "1.49",
             ...
         },
         "models" : {

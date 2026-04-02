@@ -563,7 +563,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4:
 
--   Change in the behavior on the UI of the list report: When an app is started on desktop devices, the filter bar is now expanded, irrespective of initial data load. For more information, see [List Report Elements](../06_SAP_Fiori_Elements/list-report-elements-1cf5c7f.md).
+-   Change in the behavior on the UI of the list report: When an app is started on desktop devices, the filter bar is now expanded, irrespective of initial data load. For more information, see [List Report Page](../06_SAP_Fiori_Elements/list-report-page-1cf5c7f.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.89</sub>
@@ -687,6 +687,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

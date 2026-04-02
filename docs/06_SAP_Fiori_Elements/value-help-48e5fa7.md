@@ -2,10 +2,15 @@
 
 # Value Help
 
-Value help allows end users to either select a value from a value help entity associated with the field or define a condition to retrieve a suitable value for the field from the main entity.
+You can configure value help to assist users in selecting the correct values.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Value Help](value-help-fccb255.md).
 
 > ### Note:  
 > Value help for draft-enabled entities only shows active documents.
+
+Value help allows users to either select a value from a value help entity associated with the field or define a condition to retrieve a suitable value for the field from the main entity.
 
 
 

@@ -2,9 +2,9 @@
 
 # Radial Micro Chart
 
-Radial micro charts displays a single percentage value.
+You can render the micro chart as a radial micro chart.
 
-The chart consists of a colored radial bar with a percentage value inside.
+The radial micro chart displays the relation between two values as a single percentage value.
 
 ![](images/Radial_Micro_Chart_551f7f3.png)
 

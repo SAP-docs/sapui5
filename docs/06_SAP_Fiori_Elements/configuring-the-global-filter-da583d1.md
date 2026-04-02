@@ -2,7 +2,12 @@
 
 # Configuring the Global Filter
 
-The global filter lets end users filter the data displayed on one or more cards.
+You can configure the global filter to allow users to filter the data displayed on one or more cards.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring the Global Filter on the Overview Page](configuring-the-global-filter-on-the-overview-page-73d9693.md).
 
 
 
@@ -12,18 +17,14 @@ You configure the global filter in the `"sap.ovp"` section using the following p
 
 -   `globalFilterModel`: The OData model to use for the global filter.
 
--   `globalFilterEntityType`: The entity type that contains the filterable properties. This property is deprecated since SAPUI5 1.54.
-
--   `globalFilterEntitySet`: The entity set that contains the filterable properties. Use this property from SAPUI5 1.54 onwards.
+-   `globalFilterEntitySet`: The entity set that contains the filterable properties.
 
 
 > ### Sample Code:  
 > ```
 > "sap.ovp": {
->     "_version": "1.1.0",
 >     "globalFilterModel": "ZCD204_EPM_DEMO_SRV",
->     "globalFilterEntityType": "SalesOrder", //Deprecated since SAPUI5 1.54
->     "globalFilterEntitySet": "SalesOrders", //Available from SAPUI5 1.54 onwards
+>     "globalFilterEntitySet": "SalesOrders",
 >     "cards": {
 >         ...
 >     }

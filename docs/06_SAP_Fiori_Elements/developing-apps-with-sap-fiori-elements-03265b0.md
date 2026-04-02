@@ -4,7 +4,7 @@
 
 Develop apps using SAP Fiori elements and benefit from a metadata-driven approach.
 
-The metadata-driven SAP Fiori elements framework provides the optimal combination of productivity and functionality with a sufficient level of flexibility for most enterprise applications. It empowers you to effectively develop scalable, efficient, and modern applications that align with the [SAP Design System](https://www.sap.com/design-system/) guidelines and a user-centric approach.
+The metadata-driven SAP Fiori elements framework provides the optimal combination of productivity and functionality with a sufficient level of flexibility for most enterprise applications. It empowers you to effectively develop scalable, efficient, and modern applications that align with the [SAP Design System](https://www.sap.com/design-system/fiori-design-web/) guidelines and a user-centric approach.
 
 The following overview highlights the key benefits of developing your SAP Fiori apps with SAP Fiori elements:
 

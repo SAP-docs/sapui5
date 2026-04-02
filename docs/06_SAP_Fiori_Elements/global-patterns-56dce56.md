@@ -2,7 +2,7 @@
 
 # Global Patterns
 
-Global patterns provide capabilities across your app, not just individual building blocks.
+Global patterns provide capabilities for the whole app, not just individual building blocks.
 
 Global patterns are app-level capabilities delivered by SAP Fiori elements. They provide out-of-the-box, first-class integration with a variety of services such as AI capabilities, SAP Fiori launchpad, and OData services. This means you don't have to build these capabilities from scratch.
 

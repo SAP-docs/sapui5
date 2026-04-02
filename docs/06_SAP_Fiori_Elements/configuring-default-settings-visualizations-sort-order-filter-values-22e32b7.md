@@ -2,9 +2,12 @@
 
 # Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)
 
-SAP Fiori elements allows you to specify a `UI.SelectionPresentationVariant`.
+You can configure several settings of the main content area, such as sort order or filter values, with `UI.SelectionPresentationVariant`.
 
-You use the `UI.SelectionPresentationVariant` to configure the default visualizations, grouping, and filter values of the main content area when an application is launched using the *Standard* variant. The `UI.SelectionPresentationVariant` must contain references to the `UI.SelectionVariant` and the `UI.PresentationVariant`. You use the `UI.SelectionVariant` to define default filter values, and the `UI.PresentationVariant` can contain the configurations for tables and charts, including, for example, the sort order or grouping.
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md).
+
+You can use the `UI.SelectionPresentationVariant` to configure the default visualizations, grouping, and filter values of the main content area when an application is launched using the *Standard* variant. The `UI.SelectionPresentationVariant` must contain references to the `UI.SelectionVariant` and the `UI.PresentationVariant`. You use the `UI.SelectionVariant` to define default filter values, and the `UI.PresentationVariant` can contain the configurations for tables and charts, including, for example, the sort order or grouping.
 
 SAP Fiori elements uses the `UI.LineItem` annotation and the `UI.Chart` annotation to bring up tables and charts.
 
@@ -473,7 +476,7 @@ The `UI.Chart` annotation is applicable for the following:
 
 -   The main chart in the analytical list page \(ALP\).
 
--   Usage within multiple views for the list report tables. For more information, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
+-   Usage within multiple views for the list report page tables. For more information, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views in a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-in-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
 
 
 
@@ -487,7 +490,7 @@ The `UI.Chart` annotation is applicable for the following:
 > 
 > -   When defining a `PresentationVariant`, the `Visualizations` annotation should be provided and point to a valid visualization.
 > 
-> -   In a multiple view scenario, the following logic is used to fetch the `UI.PresentationVariant` annotation only if it is undefined. For more information about the multiple view configuration, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
+> -   In a multiple view scenario, the following logic is used to fetch the `UI.PresentationVariant` annotation only if it is undefined. For more information about the multiple view configuration, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views in a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-in-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
 
 You can control the default visualization by using a setting in the `manifest.json` file. This setting allows you to define `UI.SelectionPresentationVariant` \(with a qualifier\). When `UI.SelectionPresentationVariant` is defined, you must use the associated annotations such as `UI.SelectionVariant` \(for filter bar defaults\) and `UI.PresentationVariant` \(for default visualization\).
 
@@ -599,8 +602,6 @@ Application developers can also specify the `SelectionVariant` or `PresentationV
 >         Visualizations : ['@UI.LineItem']
 >     }
 > ```
-
-For more information about the `UI.SelectionPresentationVariant`, see the version-specific sections in this topic.
 
 
 
@@ -828,7 +829,7 @@ For more information, see [Configuring Default Filter Values](configuring-defaul
 
 [Configuring Charts](configuring-charts-8f64eb1.md "You can configure the measures and dimensions displayed in charts by setting the role property to the required value for a chart type. Additional definitions apply to all chart types.")
 
-[Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-b736ab6.md "Several factors affect the loading behavior of data on initial launch of the application.")
+[Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-b736ab6.md "You can configure the loading behavior of SAP Fiori apps.")
 
-[Initial Expansion Level for Tables in List Reports & Analytical List Pages](initial-expansion-level-for-tables-in-list-reports-analytical-list-pages-bc05d35.md "You can set the number of expanded levels for tables in List Reports and Analytical List Pages using the initialExpansionLevel property of the PresentationVariant annotation.")
+[Initial Expansion Level for Tables on List Report Pages & Analytical List Pages](initial-expansion-level-for-tables-on-list-report-pages-analytical-list-pages-bc05d35.md "You can set the number of expanded levels for tables on list report pages and analytical list report pages using the initialExpansionLevel property of the PresentationVariant annotation.")
 

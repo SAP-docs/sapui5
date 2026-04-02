@@ -91,7 +91,7 @@ As you know already from the previous steps, we add the `press` event handler `o
 
 ```js
 {
-	"_version": "1.12.0",
+	"_version": "2.6.0",
 	"sap.app": {
 		...
 	},

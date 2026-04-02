@@ -2,11 +2,13 @@
 
 # Configuring the Delete Dialog
 
-You can adapt the text in the delete dialog to match your requirements when deleting an object or item from the tables in the list report or object page.
+You can adapt the text of the delete dialog to match your requirements.
 
-The delete message for the main object \(list report\) does not consider the `UI.HeaderInfo` annotation. This also applies to deletions from any table.
+The delete dialog appears when users are deleting an object or item from tables on the list report page or the object page.
 
--   Delete from list report:
+The delete message for the main object \(list report page\) does not consider the `UI.HeaderInfo` annotation. This also applies to deletions from any table.
+
+-   Delete from list report page:
 
     ![](images/Message_for_Delet_in_List_Report_f70fafe.png)
 

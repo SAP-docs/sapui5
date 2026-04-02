@@ -4,21 +4,28 @@
 
 You can enable lazy loading for the sections you've added using an extension point.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Defining the Loading Behavior of Object Pages](defining-the-loading-behavior-of-object-pages-ac03570.md).
+
 By default, lazy loading is enabled for the standard sections on the object page. For sections added using extension points, you need to enable lazy loading by setting the `enableLazyLoading` parameter to `true` in the `manifest.json` file of your application. To do so, proceed as shown in the following sample code:
 
-```
-"sap.suite.ui.generic.template.ObjectPage.view.Details": {
-  "AfterFacet|STTA_C_MP_Producttext|ProductTextCollectionFacetID":{
-    "className": "sap.ui.core.Fragment",
-    "fragmentName": "STTA_MP.ext.fragments.ApplicationLogBreakout",
-    "type": "XML",
-    "sap.ui.generic.app": {
-      "title": "{{xtit.applicationLog}}",
-      "enableLazyLoading": true
-    }
-  },
-
-```
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+>     "AfterFacet|STTA_C_MP_Producttext|ProductTextCollectionFacetID": {
+>         "className": "sap.ui.core.Fragment",
+>         "fragmentName": "STTA_MP.ext.fragments.ApplicationLogBreakout",
+>         "type": "XML",
+>         "sap.ui.generic.app": {
+>             "title": "{{xtit.applicationLog}}",
+>             "enableLazyLoading": true
+>         }
+>     }
+> }
+> ```
 
 > ### Note:  
 > Set the parameter only for those sections that have no impact on other sections or on the object page header.

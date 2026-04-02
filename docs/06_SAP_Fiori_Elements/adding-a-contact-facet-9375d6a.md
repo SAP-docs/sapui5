@@ -2,7 +2,12 @@
 
 # Adding a Contact Facet
 
-To render a contact list and contact facet, you add a `UI.ReferenceFacet` that points to a contact annotation \(`type`\). It shows the label of the `UI.ReferenceFacet`, and below it, the `fn` property of the contact annotation. If you click on the name, a quick view with the contact details is displayed, as shown here:
+You can add a contact facet to a section of the object page.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Adding a Contact Facet](adding-a-contact-facet-a6a8c0c.md).
+
+To render a contact list and contact facet, add a `UI.ReferenceFacet` that points to a contact annotation \(`type`\). It shows the label of the `UI.ReferenceFacet`, and below it, the `fn` property of the contact annotation. If you click on the name, a quick view with the contact details is displayed, as shown here:
 
   
   

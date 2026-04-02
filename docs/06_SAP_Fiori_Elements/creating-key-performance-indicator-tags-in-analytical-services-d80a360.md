@@ -2,7 +2,7 @@
 
 # Creating Key Performance Indicator Tags in Analytical Services
 
-The key performance indicator \(KPI\) tag is an abbreviated and clickable title with a KPI value.
+You can create key performance indicator tags for the analytical list page.
 
 
 
@@ -12,7 +12,7 @@ The key performance indicator \(KPI\) tag is an abbreviated and clickable title 
 > ### Restriction:  
 > KPIs in analytical services with a parametrized entity set are not supported.
 
-Each KPI can have its own OData source, entity set, and annotation file. The KPI value changes if an action is executed on the transactional content. For example, releasing sales orders affects a related KPI and posting an accounting document affects certain financial KPIs.
+The key performance indicator \(KPI\) tag is an abbreviated and clickable title with a KPI value. Each KPI can have its own OData source, entity set, and annotation file. The KPI value changes if an action is executed on the transactional content. For example, releasing sales orders affects a related KPI and posting an accounting document affects certain financial KPIs.
 
 ![](images/KPI_Tags_Annotation_flowchart-ALP_24faed6.png)
 
@@ -644,7 +644,5 @@ You can override a unit of measure that comes from the back end. For example, th
 **Related Information**  
 
 
-[Configuring the Title Area](configuring-the-title-area-ebdb5da.md "The dynamic area of the analytical list page is the title area.")
-
-[Managing Variants](managing-variants-8ce658e.md "Allows you to manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-8ce658e.md "You can manage variants with different structures in the filter and content areas.")
 

@@ -2,14 +2,14 @@
 
 # Stacked Bar Micro Chart
 
-A stacked bar micro chart displays all the values from the back end for the configured measure as a percentage of the total measure value.
+You can render the micro chart as a stacked bar micro chart.
 
 ![](images/Stacked_Bar_Micro_Chart_606716a.png)
 
 > ### Note:  
 > The chart dimensions and measures cannot be of the same entity; they must be from a 1:n navigation entity.
 
-For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.StackedBarMicroChart).
+A stacked bar micro chart displays all the values from the back end for the configured measure as a percentage of the total measure value. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.StackedBarMicroChart).
 
 
 

@@ -72,7 +72,7 @@ Announcement
 
 **End of Support for Microsoft Internet Explorer 11 after SAPUI5 1.87**
 
-SAPUI5 1.87 is the last version to support Microsoft Internet Explorer 11. For more information, see [SAPUI5 Support Status for Microsoft Internet Explorer 11](../02_Read-Me-First/browser-and-platform-support-74b59ef.md#loio74b59efa0eef48988d3b716bd0ecc933__MS_IE).
+SAPUI5 1.87 is the last version to support Microsoft Internet Explorer 11. For more information, see [Reproducing Support Issues](../02_Read-Me-First/browser-and-platform-support-74b59ef.md#loio74b59efa0eef48988d3b716bd0ecc933__MS_IE).
 
 <sub>Deprecated•Announcement•Info Only•1.87</sub>
 
@@ -927,7 +927,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   If `UI.Importance` is not defined, the default value is set as `None`, except for semantic key fields. Before this release, the default value was set as `High`. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
 
--   In a draft application with a flexible column layout, the subobject page closes and returns to the main object if you click the *Apply* button. For more information, see [Object Page Elements](../06_SAP_Fiori_Elements/object-page-elements-645e27a.md).
+-   In a draft application with a flexible column layout, the subobject page closes and returns to the main object if you click the *Apply* button. For more information, see [Object Page](../06_SAP_Fiori_Elements/object-page-645e27a.md).
 
 -   You can now see tooltips for images in list reports and object pages.
 
@@ -993,7 +993,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Application developers can now selectively enable `DataFieldForIntentBasedNavigation` buttons using the `NavigationAvailable` property of the `DataFieldForIntentBasedNavigation` annotation. For more information, see [Navigation from an App \(Outbound Navigation\)](../06_SAP_Fiori_Elements/navigation-from-an-app-outbound-navigation-d782acf.md).
 
--   Application developers can now overwrite the behavior of the `Common.Text` annotation via the `TextArrangementType` `#TextSeparate`. For more information, see [Further Features of the Field](../06_SAP_Fiori_Elements/further-features-of-the-field-f49a0f7.md).
+-   Application developers can now overwrite the behavior of the `Common.Text` annotation via the `TextArrangementType` `#TextSeparate`. For more information, see [Additional Features of the Field](../06_SAP_Fiori_Elements/additional-features-of-the-field-f49a0f7.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.87</sub>
@@ -1055,6 +1055,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

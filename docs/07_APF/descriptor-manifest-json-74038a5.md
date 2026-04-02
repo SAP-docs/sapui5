@@ -170,14 +170,12 @@ The `sap.app` namespace also contains the title of the application. This "title"
                 "offline": false
         },
         "sap.fiori": {
-                "_version": "1.1.0",
                 "registrationIds": [
                         "<FioriId>"
                 ],
                 "archeType": "analytical"
         },
         "sap.ui": {
-                "_version": "1.1.0",
                 "technology": "UI5",
                 "deviceTypes": {
                         "desktop": true,
@@ -190,7 +188,6 @@ The `sap.app` namespace also contains the title of the application. This "title"
                 ]
         },
         "sap.ui5": {
-                "_version": "1.1.0",
                 "dependencies": {
                         "minUI5Version": "1.38.1",
                         "libs": {

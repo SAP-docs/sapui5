@@ -2,11 +2,15 @@
 
 # Enabling the Full-Screen Mode for Tables
 
-When application developers enable the full-screen mode for tables, a button on the table toolbar is displayed that allows users to open the table in full-screen mode. This provides more space for displaying and working with table entries.
+You can enable full-screen mode for tables.
+
+When the full-screen mode for tables is enabled, a button on the table toolbar allows users to open the table in full-screen mode. This provides more space for displaying and working with table entries.
 
 Make the settings in the `manifest.json` file as follows:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "SalesOrderManageObjectPage": {
 >     "options": {
@@ -24,7 +28,7 @@ Make the settings in the `manifest.json` file as follows:
 > ```
 
 > ### Note:  
-> -   This setting is not available for the list report. If it is configured for a list report, the setting will be ignored during templating.
+> -   This setting is not available for the list report page. If it is configured for a list report, the setting will be ignored during templating.
 > 
 > -   On mobile phones, full-screen mode is enabled by default.
 

@@ -4,9 +4,6 @@
 
 You can interact with and influence any table generated through annotations using all the properties and methods available on the `Table` building block.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 To interact with a table, you need to find the `id` of the `TableAPI` control.
 
 Open the browser's developer tools and search for the `"<ApplicationId>::<PageId>–fe::table::<Entity name or navigation property>::LineItem::Table"` string where:
@@ -23,5 +20,5 @@ Then, you can use any of the `Table` API properties and aggregations.
 
 For more information about the `Table` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table). 
 
-For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableDefault).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
 

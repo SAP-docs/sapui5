@@ -2,6 +2,13 @@
 
 # Key Value Facet
 
+You can render a data point as a key value facet.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Key Value Facet in the Object Page Header](key-value-facet-in-the-object-page-header-c312735.md).
+
 
 
 If you add a `UI.ReferenceFacet` that points to `UI.DataPoint`, the title and value of the `UI.DataPoint` are rendered as follows:

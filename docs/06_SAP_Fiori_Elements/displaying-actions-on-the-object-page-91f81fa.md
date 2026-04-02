@@ -4,6 +4,9 @@
 
 Specific rules apply when displaying actions on the object page.
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Displaying Actions on the Object Page](displaying-actions-on-the-object-page-f65e8b1.md).
+
 
 
 <a name="loio91f81fadc288465495f347e9d8ac1073__section_kxw_bmm_ghc"/>
@@ -59,9 +62,9 @@ You can add criticality to an action button through annotations. For more inform
 
 [Adding Action Buttons to Forms in Sections](adding-action-buttons-to-forms-in-sections-14338ee.md "You can add action buttons to the forms contained in sections. These forms are indicated by com.sap.vocabularies.UI.v1.FieldGroup. A form action button is then displayed in the toolbar of the object page section that contains the form.")
 
-[Defining Determining Actions](defining-determining-actions-ee6c827.md "You can add a determining action button to the footer of the object page, but you must add such a button only in edit mode.")
+[Defining Determining Actions](defining-determining-actions-ee6c827.md "You can add a determining action button to the footer of the object page.")
 
 [Setting the Criticality for Actions](setting-the-criticality-for-actions-475e4d8.md "You can add criticality to an action button by using annotations.")
 
-[Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-510b6af.md "You can use annotations to enable generic actions in tables on the object page.")
+[Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-d27ae99.md "You can use annotations to enable generic actions in tables on the object page.")
 

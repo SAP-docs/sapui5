@@ -2,7 +2,10 @@
 
 # Enabling Semantic Operators in the Filter Bar
 
-You can use semantic date values, such as *Today* or *Last Week*, on the filter bar of list report and analytical list page applications.
+You can use semantic date values, such as *Today* or *Last Week*, on the filter bar of the list report page and analytical list page applications.
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V4, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 
 The semantic date control can be enabled for the fields in the filter bar by setting the `useDateRange` flag to `true` in the manifest. By default, the value is `false` and date picker control is rendered by the filter bar.
 
@@ -154,7 +157,7 @@ The following types of settings exist, either at the property level or at the de
     > 
     > -   If you define the semantic date range feature by providing specific fields, you cannot render the fields from the navigation property of the leading entity set as a semantic date range in the filter bar.
     > 
-    > -   Filter fields with `sap:filter-restriction= "single-value"` or `"multi-value"` are rendered as date pickers in both the list report and the analytical list page.
+    > -   Filter fields with `sap:filter-restriction= "single-value"` or `"multi-value"` are rendered as date pickers on both the list report page and the analytical list page.
 
 -   You can also set a default value for a semantic date range. The default value can be used together with `customdateRangeImplementation`, `filter`, or `selectedValues`. It can also be added without any filters. The default value should be part of the list of values for the field. For example, if you exclude `TOMORROW` as a value for the field `CreatedDate`, do not add `TOMORROW` as a `defaultValue`.
 
@@ -281,7 +284,7 @@ If the category `FIXED` is excluded, then keys such as `TODAY,THISWEEK,THISYEAR,
 
 ## More Information
 
-For more information about configuring filter bars in a list report, see [Adapting the Filter Bar](adapting-the-filter-bar-c7a7ac4.md).
+For more information about configuring filter bars on a list report page, see [Adapting the Filter Bar](adapting-the-filter-bar-c7a7ac4.md).
 
 Depending on the use of the date range filter, the default tile type also varies. For more information about creating tiles for the semantic date range configuration, see [Extending the Bookmark Function to Save Static Tiles to the SAP Fiori Launchpad](extending-the-bookmark-function-to-save-static-tiles-to-the-sap-fiori-launchpad-7e34ea9.md).
 

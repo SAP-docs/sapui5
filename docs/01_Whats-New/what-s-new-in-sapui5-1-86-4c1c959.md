@@ -72,7 +72,7 @@ Announcement
 
 **Preannouncement: End of Support for Microsoft Internet Explorer 11 after SAPUI5 1.87**
 
-SAPUI5 1.87 will be the last version to support Microsoft Internet Explorer 11. For more information, see [SAPUI5 Support Status for Microsoft Internet Explorer 11](../02_Read-Me-First/browser-and-platform-support-74b59ef.md#loio74b59efa0eef48988d3b716bd0ecc933__MS_IE).
+SAPUI5 1.87 will be the last version to support Microsoft Internet Explorer 11. For more information, see [Reproducing Support Issues](../02_Read-Me-First/browser-and-platform-support-74b59ef.md#loio74b59efa0eef48988d3b716bd0ecc933__MS_IE).
 
 <sub>Deprecated•Announcement•Info Only•1.86</sub>
 
@@ -784,7 +784,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   List reports now support default filter values from the `SelectionVariant` annotation. For more information, see [Configuring Default Filter Values](../06_SAP_Fiori_Elements/configuring-default-filter-values-f27ad7b.md).
 
--   The object page now provides an option to retain the tab selection while switching between objects or sub-objects. For more information, see [Enabling Discovery/Persistence Mode](../06_SAP_Fiori_Elements/enabling-discovery-persistence-mode-7c62084.md).
+-   The object page now provides an option to retain the tab selection while switching between objects or sub-objects. For more information, see [Enabling Persistence Mode](../06_SAP_Fiori_Elements/enabling-persistence-mode-7c62084.md).
 
 -   It is now possible to trigger *Edit* from any sub-object page in draft applications.
 
@@ -840,7 +840,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
     -   Application developers can use the new extension method `adaptNavigationContext` to modify \(add/remove/change\) the information available in the navigation context just before the external outbound navigation is triggered. For more information, see [Creating an Extension to Modify Properties in the Navigation Context](../06_SAP_Fiori_Elements/creating-an-extension-to-modify-properties-in-the-navigation-context-199a496.md).
 
-    -   Application developers can use the new extension method `onBeforeNavigation` to selectively change the target when chevron navigation is triggered from a table in list reports and object pages. For more information, see [Example: Replacing Standard Navigation in a Responsive Table on the List Report Page](../06_SAP_Fiori_Elements/example-replacing-standard-navigation-in-a-responsive-table-on-the-list-report-page-a12ad60.md).
+    -   Application developers can use the new extension method `onBeforeNavigation` to selectively change the target when chevron navigation is triggered from a table in list reports and object pages. For more information, see [Replacing Standard Navigation in a Table](../06_SAP_Fiori_Elements/replacing-standard-navigation-in-a-table-a12ad60.md).
 
 
 -   The share functionality has been updated: A static tile is now created if the filter bar contains a semantic date. For more information, see [The Share Functionality](../06_SAP_Fiori_Elements/the-share-functionality-022bf0d.md).
@@ -851,7 +851,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   The annotation `InitialValueIsSignificant` allows you to identify an initial value, for example an empty string, as a valid and significant value for value help IN parameters. For more information, see [Configuring Fields](../06_SAP_Fiori_Elements/configuring-fields-4b50f21.md).
 
--   It is now possible to define whether data in the list report should be only automatically loaded if preset filters are available. For more information, see [List Report Elements](../06_SAP_Fiori_Elements/list-report-elements-1cf5c7f.md).
+-   It is now possible to define whether data in the list report should be only automatically loaded if preset filters are available. For more information, see [List Report Page](../06_SAP_Fiori_Elements/list-report-page-1cf5c7f.md).
 
 -   Application developers can now group the fields of a filter popup for the list report by explicitly defining filter facets or using field groups. For more information, see [Adapting the Filter Bar](../06_SAP_Fiori_Elements/adapting-the-filter-bar-609c39a.md).
 
@@ -923,6 +923,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in SAPUI5 1.143](what-s-new-in-sapui5-1-143-ad08c66.md "With this release SAPUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 

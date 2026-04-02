@@ -2,13 +2,15 @@
 
 # Extending Apps Using a Canvas Page
 
-You can embed content into a canvas page within an app.
+You can embed content in a canvas page within an app.
 
 A canvas page is an empty custom page in a SAP Fiori elements-based app. The content needs to be provided by an embedded implementing component.
 
-The corresponding section in the manifest looks like this:
+See the following sample code for the corresponding section in the manifest file:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > 
 > ...     
@@ -247,7 +249,7 @@ If you want the canvas page to display information that depends on what a user h
 
 In this case, the information about the users' choice can be passed as a parameter in the navigation.
 
-You can place the code in a suitable event handler, as described in the mentioned sample code. Alternatively, if the canvas page is the target of the standard navigation provided in one of the tables displayed on the source page, the `onListNavigationExtension` \(list report, object page\) function is used to place this code.
+You can place the code in a suitable event handler, as described in the mentioned sample code. Alternatively, if the canvas page is the target of the standard navigation provided in one of the tables displayed on the source page, the `onListNavigationExtension` \(list report page, object page\) function is used to place this code.
 
 In this alternative scenario, choose the value of the `routeName` manifest property carefully, based on the following decision options:
 
@@ -291,7 +293,7 @@ The following piece of code shows how the information about the user's choice ca
 > ...
 > ```
 
-You can pass a navigation context from a table row in a list report to a canvas page. It can be used to bind smart controls in a canvas page. See the following sample code from `component.js`:
+You can pass a navigation context from a table row on a list report page to a canvas page. It can be used to bind smart controls in a canvas page. See the following sample code from `component.js`:
 
 > ### Sample Code:  
 > ```
@@ -381,5 +383,5 @@ In the following code sample, the navigation stays on the same canvas page, but 
 **Related Information**  
 
 
-[Developing Reuse Components](developing-reuse-components-ba619bc.md "Follow these guidelines when developing reuse components that are to be included as sections in object pages.")
+[Developing Reuse Components](developing-reuse-components-ba619bc.md "You can develop reuse components that are to be included as sections in object pages.")
 
