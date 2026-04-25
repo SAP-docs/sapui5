@@ -27,5 +27,5 @@ onsapnext: function(events) {
 
 [API Reference: `ControlEvents`](https://ui5.sap.com/#/api/module%3Asap%2Fui%2Fevents%2FControlEvents)
 
-[API Reference: `PseudoEvents`](https://ui5.sap.com/#/api/module%3Asap%2Fui%2Fevents%2FPseudoEvents.events)
+[API Reference: `PseudoEvents`](https://ui5.sap.com/#/api/module%3Asap%2Fui%2Fevents%2FPseudoEvents)
 
