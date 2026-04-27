@@ -19,7 +19,7 @@ For example, the SAPUI5 tools can help you with the following tasks:
 -   Find out how to improve performance
 
 
-To help you practice using the tools, we created an app with errors that we will use throughout the tutorial. You can view and download the app in the Demo Kitat [Troubleshooting](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.troubleshooting/sample/sap.ui.core.tutorial.troubleshooting.01).
+To help you practice using the tools, we created an app with errors that we will use throughout the tutorial. You can view and download the app in the Demo Kit at [Troubleshooting](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.troubleshooting/sample/sap.ui.core.tutorial.troubleshooting.01).
 
 
 
