@@ -34,7 +34,7 @@ Use the following attributes to create the column layout you want:
 
 
 
-End users can expand and collapse the columns using the focus buttons. They can change to full-screen mode by choosing the full-screen button.
+Users can expand and collapse the columns using the focus buttons. They can change to full-screen mode by choosing the full-screen button.
 
 ![](images/FCL_Master_Detail_9ff7dd4.png)
 

@@ -572,7 +572,7 @@ You can use the chart settings in the `manifest.json` file to configure the head
 
 ## Configuring the Selection of Data Points Using Manifest Settings
 
-You can use the `manifest.json` file to configure chart settings that allow end users to perform single, multiple, or no selection of chart data points.
+You can use the `manifest.json` file to configure chart settings that allow users to perform single, multiple, or no selection of chart data points.
 
 > ### Sample Code:  
 > `manifest.json`

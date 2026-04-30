@@ -71,7 +71,7 @@ The different methods used for the instantiation of a fragment have the followin
 -   A controller can be optionally given. Some fragments may require a controller and certain methods to be present in this controller.
 -   An ID can be optionally given.
 
-    If no ID is given, any control IDs specified in the fragment are used as is. The repeated use of a fragment can lead to duplicate IDs. One way to avoid that problem is to specify a unique fragment ID. For more information see [Unique IDs](unique-ids-5da591c.md). This ID will then be used as prefix for all controls in this fragment instance.
+    If no ID is given, any control IDs specified in the fragment are used as is. The repeated use of a fragment can lead to duplicate IDs. One way to avoid that problem is to specify a unique fragment ID. For more information see [ID Handling in SAPUI5: The Complete Guide](../05_Developing_Apps/id-handling-in-sapui5-the-complete-guide-f51dbb7.md). This ID will then be used as prefix for all controls in this fragment instance.
 
 
 > ### Note:  

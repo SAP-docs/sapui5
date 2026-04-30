@@ -27,11 +27,11 @@ The following sharing options are available as part of the *Share* functionality
 
     When the user chooses this option, the corresponding *Save as Tile* dialog is displayed. When they choose the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
 
--   *Share: Microsoft Teams*
+-   *Microsoft Teams*
 
-    Users can collaborate with their co-workers using the *Share: Microsoft Teams* functionality. For more information, see [The Share: Microsoft Teams Functionality](the-share-microsoft-teams-functionality-ff89e4b.md).
+    Users can collaborate with their co-workers using the *Microsoft Teams* functionality. For more information, see [The Share: Microsoft Teams Functionality](the-share-microsoft-teams-functionality-ff89e4b.md).
 
--   *Share: Collaboration Manager*
+-   *Collaboration Manager*
 
     When the user chooses this option, the *SAP Collaboration Manager* dialog opens with the application URL, which includes the page title and the current `iAppState`.
 
@@ -131,25 +131,7 @@ Properties
 </tr>
 </table>
 
-To display these options, the `press` setting must be defined. You can do this at the application or page level.
-
-The following sample code shows how the *Print* option is displayed by defining the `press` setting at the application level:
-
-> ### Sample Code:  
-> Application-level settings in the `manifest.json` file
-> 
-> ```
-> "sap.fe": {
->     "app": {
->         "share": {
->             "print": {
->                 "press": "SalesOrder.ext.CustomHandler.print"
->             }
->         },
->         ...
->     }
-> }
-> ```
+To display these options, the `press` setting must be defined. You can do this at the page level.
 
 The following sample code shows how the *Export to Spreadsheet* option is only displayed in the list report page by defining the `press` setting at the page level:
 
@@ -319,7 +301,7 @@ Properties
 
 This configuration can be done at both application level and page level. If the application-level settings for the share options' visibility is set to `true` \(or is undefined\), then its visibility is inherited from the page-level settings. If the application-level settings for the share options' visibility is set to `false`, then the specific share option is hidden, and the page-level settings aren't considered.
 
-In the following sample code, the *Share: Microsoft Teams* option is hidden by setting `showMsTeamsOptions` to `false`, whereas the `showSendEmail` setting depends on the expression value, which can be either `true` or `false`.
+In the following sample code, the *Microsoft Teams* option is hidden by setting `showMsTeamsOptions` to `false`, whereas the `showSendEmail` setting depends on the expression value, which can be either `true` or `false`.
 
 > ### Sample Code:  
 > Application-level settings in the `manifest.json` file
@@ -340,7 +322,7 @@ In the following sample code, the *Share: Microsoft Teams* option is hidden by s
 
 The following sample code shows you how the share options' visibility setting is configured at page level:
 
-The *Send E-mail*, *Share in SAP Jam*, and *Save as Tile* options are only hidden in the list report page. The *Share: Microsoft Teams* option is displayed on the object page but is conditionally shown in the list report page.
+The *Send E-Mail*, *Share in SAP Jam*, and *Save as Tile* options are only hidden on the list report page. The *Microsoft Teams* option is displayed on the object page but is conditionally shown on the list report page.
 
 > ### Sample Code:  
 > Page-level settings in the `manifest.json` file
@@ -392,7 +374,7 @@ The *Send E-mail*, *Share in SAP Jam*, and *Save as Tile* options are only hidde
 > ```
 
 > ### Note:  
-> The `showMsTeamsOptions` property is applicable only to apps that run on SAP Fiori launchpad, where the integration with *Share: Microsoft Teams* is available. The *Share: Microsoft Teams* option is a part of collaborative ERP \(enterprise resource planning\) within the SAP S/4HANA family of products and requires `ushell` and SAP Fiori launchpad configuration.
+> The `showMsTeamsOptions` property is applicable only to apps that run on SAP Fiori launchpad, where the integration with *Microsoft Teams* is available. The *Microsoft Teams* option is a part of collaborative ERP \(enterprise resource planning\) within the SAP S/4HANA family of products and requires `ushell` and SAP Fiori launchpad configuration.
 
 
 

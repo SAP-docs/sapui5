@@ -1,6 +1,6 @@
 <!-- loio6698b80fc1a543ebb5c07e0781e9b93e -->
 
-# Defining Multiple Views in a List Report Page with Different Entity Sets and Table Settings
+# Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings
 
 You can configure your application to display data for different entity sets and table settings.
 

@@ -15,7 +15,7 @@ For more information about creation using cross-app navigation, see [Handling of
 > 
 > Do not use this feature if the fields are not \(or might not be\) visible to the user.
 
-Applications can define `NewAction` and its parameters to ensure that end users can provide parameter values during creation \(`NewAction` is only supported for the list report page\). For `POST`-based creation, a dialog is still shown if there are any non-computed key fields or immutable fields. For more information, see [Actions](actions-cbf16c5.md).
+Applications can define `NewAction` and its parameters to ensure that users can provide parameter values during creation \(`NewAction` is only supported for the list report page\). For `POST`-based creation, a dialog is still shown if there are any non-computed key fields or immutable fields. For more information, see [Actions](actions-cbf16c5.md).
 
 > ### Sample Code:  
 > ```

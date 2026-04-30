@@ -138,5 +138,5 @@ To define the custom view switch, proceed as follows:
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Custom View Switch](custom-view-switch-be7a236.md).
+> For information about SAP Fiori elements for OData V2, see [Extending Custom View Switch](extending-custom-view-switch-be7a236.md).
 

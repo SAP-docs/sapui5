@@ -78,9 +78,9 @@ You can enable the `singleDraftForCreate` setting in the `manifest.json` file, a
 > }
 > ```
 
-This setting ensures that end users can create a new entity only after they've actively saved the changes they've made to the current entity. Whenever an end user attempts to create a new entity, the application checks for entities with the properties `IsActiveEntity=false` and `HasActiveEntity=false`. If an entity matches these properties, it's considered as a draft and the application displays the entity in edit mode.
+This setting ensures that users can create a new entity only after they've actively saved the changes they've made to the current entity. Whenever a user attempts to create a new entity, the application checks for entities with the properties `IsActiveEntity=false` and `HasActiveEntity=false`. If an entity matches these properties, it's considered as a draft and the application displays the entity in edit mode.
 
-If there are no unsaved entities, the end user can create a new entity.
+If there are no unsaved entities, the user can create a new entity.
 
 
 
@@ -88,5 +88,5 @@ If there are no unsaved entities, the end user can create a new entity.
 
 ## Enabling the `singleDraftForCreate` Setting Using Extensions
 
-You can enable the `singleDraftForCreate` setting using the `EditFlow` controller extension. If the `editFlow.createDocument(ListBinding, {singleDraftForCreate: true})` setting is enabled, it allows end users to create a new entity. The application launches the newly created entity in edit mode only if no unsaved drafts exist. If any unsaved draft exists, the application opens the latest unsaved draft in edit mode instead.
+You can enable the `singleDraftForCreate` setting using the `EditFlow` controller extension. If the `editFlow.createDocument(ListBinding, {singleDraftForCreate: true})` setting is enabled, it allows users to create a new entity. The application launches the newly created entity in edit mode only if no unsaved drafts exist. If any unsaved draft exists, the application opens the latest unsaved draft in edit mode instead.
 

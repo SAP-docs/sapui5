@@ -406,6 +406,18 @@ SAPUI5 Version
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+2.7.0 *or* 1.85.0
+
+</td>
+<td valign="top">
+
+\>=1.147
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version and implications when upgrading, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md).
@@ -1252,9 +1264,9 @@ Mandatory; specifies the external dependencies that are loaded by the SAPUI5 cor
 
 -   `minUI5Version`: Mandatory; Minimum version of SAPUI5 that your component requires; this information ensures that the features of the SAPUI5 runtime version of the component are available. This must be either a specific version or an array of versions where each major version can only be included once. If you specify an array that contains more than one version, and if version 1 is included, it must be at least 1.120.x. As SAPUI5 does not currently enforce use of the correct version, the `minUI5Version` is used for information purposes only. If the minimum SAPUI5 version criteria is not fulfilled, a warning is issued in the console log.
 
--   `libs`: ID \(namespace\) of the libraries that the SAPUI5 core should load for use in the component. If your app requires a minimum version of the lib, specify the `minVersion` for information purposes. Specify `lazy` to indicate that the lib shall be lazy loaded.
+-   `libs`: ID \(namespace\) of the libraries that the SAPUI5 core should load for use in the component. If your app requires a minimum version of the lib, specify the `minVersion` for information purposes.Specify `lazy` to indicate that the lib shall be loaded lazily.
 
--   `components`: ID \(namespace\) of the components that the SAPUI5 core should load for use in your component. If your app requires a minimum version of the component, specify the `minVersion` for information purposes. Specify `lazy` to indicate that the component shall be lazy loaded.
+-   `components`: ID \(namespace\) of the components that the SAPUI5 core should load for use in your component. If your app requires a minimum version of the component, specify the `minVersion` for information purposes. Specify `lazy: true` to indicate that the component shall be loaded lazily.
 
 
 For more information, see [Manifest Dependencies to Libraries and Components](manifest-dependencies-to-libraries-and-components-8521ad1.md).
@@ -1803,7 +1815,7 @@ Current version of the `manifest.json`
 ```
 
 {
-"_version": "1.84.0",
+"_version": "1.85.0",
  
     "start_url": "index.html",
  
@@ -2037,7 +2049,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.146.0",
+            "minUI5Version": "1.147.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

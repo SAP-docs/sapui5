@@ -15,7 +15,7 @@ A chart facet is suitable to use if you wish to present data graphically for ana
 
 ## Configuring Charts on a List Report Page
 
-You can configure a chart to be part of a list report page that has multiple views. For more information, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views in a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-in-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
+You can configure a chart to be part of a list report page that has multiple views. For more information, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
 
 
 

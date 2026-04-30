@@ -23,7 +23,7 @@ In this step, we will look at `SmartTable` without table personalization or view
   
 **Initial Look of the Smart Filter Bar and the Smart Table, and the Results of Firing the Query**
 
-![](images/Smart_Controls_Tutorial_Step_05a_928338e.png "Initial Look of the Smart Filter Bar and the Smart Table, and the Results of
+![A product list table with filter options and columns for product ID, price, name, and category.](images/Smart_Controls_Tutorial_Step_05a_928338e.png "Initial Look of the Smart Filter Bar and the Smart Table, and the Results of
 					Firing the Query ")
 
 When choosing the *Filters* link, you see a popup:
@@ -32,7 +32,7 @@ When choosing the *Filters* link, you see a popup:
   
 **Dialog for Changing the Filter Values and Defining the Fields Displayed in the Filter Bar**
 
-![](images/Smart_Controls_Tutorial_Step_05b_3e467ed.png " Dialog for Changing the Filter Values and Defining the Fields Displayed in
+![Filters dialog showing fields for Company Code and Currency with options to edit and sort.](images/Smart_Controls_Tutorial_Step_05b_3e467ed.png "Dialog for Changing the Filter Values and Defining the Fields Displayed in
 					the Filter Bar")
 
 You can now select *Currency* as an additional field in the filter bar of the first dialog.
@@ -43,7 +43,7 @@ After selecting this additional field, we return to the table with the filter ba
   
 **Query "EUR" Applied**
 
-![](images/Smart_Controls_Tutorial_Step_05e_7f96bda.png "Query "EUR" Applied")
+![A product list with filter options for category and currency at the top.](images/Smart_Controls_Tutorial_Step_05e_7f96bda.png "Query "EUR" Applied")
 
 
 

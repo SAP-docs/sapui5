@@ -12,7 +12,10 @@ onclick: function(oEvent) {
 }
 ```
 
-There are also SAPUI5-specific event handlers, which can be used for reacting on specific situations. These are `onBeforeRendering`, `onAfterRendering`, `onlocalizationChanged` \(note the lower case 'l'\), and `onThemeChanged`.
+There are also SAPUI5-specific event handlers, which can be used for reacting on specific situations. These are `onBeforeRendering`, `onAfterRendering`, and `onlocalizationChanged`.
+
+> ### Caution:  
+> The `onThemeChanged` event handler also exists, but it has been **deprecated** and must not be used anymore. If you need to react to theme changes in your control, attach a handler to the `Theming.applied` event within your control's constructor instead. For more information, see [Listening to the `Theming.applied` Event](../04_Essentials/theme-configuration-and-management-e9fc648.md). Also keep in mind that the `onThemeChanged` hook is **not** executed initially if the theme has already been applied.
 
 Internally used events, which start with "sap", are defined in the `sap/ui/events/PseudoEvent` module. An example is the `sapnext` event, which is triggered by "arrow down" or "arrow right" \(or "arrow left" in right-to-left mode\). The `sapnext` event performs all checks that are required to check whether the user wants to navigate to the next item. The `event` object that is passed to the handler method contains more information. These methods are private methods and must only be called by SAPUI5 core.
 
@@ -27,5 +30,5 @@ onsapnext: function(events) {
 
 [API Reference: `ControlEvents`](https://ui5.sap.com/#/api/module%3Asap%2Fui%2Fevents%2FControlEvents)
 
-[API Reference: `PseudoEvents`](https://ui5.sap.com/#/api/module%3Asap%2Fui%2Fevents%2FPseudoEvents)
+[API Reference: `PseudoEvents`](https://ui5.sap.com/#/api/module%3Asap%2Fui%2Fevents%2FPseudoEvents.events)
 

@@ -4,6 +4,11 @@
 
 You can develop mobile apps as hybrid app consisting of a native app wrapper, for example PhoneGap, and an HTML viewer to display the content on the user interface.
 
+> ### Caution:  
+> Deprecated as of SAPUI5 version 1.147. The hybrid web container approach relies on Apache Cordova/PhoneGap, which is no longer maintained.
+> 
+> Consider building a Progressive Web App \(PWA\) instead.
+
 Hybrid apps have the advantage that you can publish them in app stores. Also, by embedding the application code and the SAPUI5 library files into the hybrid container, the user needs to install the files only once and does **not** need to download them every time he starts the application. But then the library size becomes important, because every user has to install the files, whereas in web applications, the library is deployed on a server and the user only needs to download the required parts of the library at runtime.
 
 To include the resources you need in your hybrid app, you can use the static mobile runtime package `openui5-runtime-mobile*.zip`. The package is **not** contained in SAPUI5, but in the Open Source version OpenUI5.

@@ -6,6 +6,9 @@ You can add vocabularies and annotations to extend OData services and their data
 
 OData annotations are metadata extensions used to enrich OData services with additional semantic information. These annotations enable SAP Fiori elements and other frameworks to automatically generate user interfaces based on the business context. The annotations define UI behavior, layout, and data relationships, such as labels, field groups, and navigation paths, without requiring manual coding for the UI. OData annotations are served with the `$metadata` document or contained in additional XML files.
 
+> ### Note:  
+> You must not remove OData properties from a service that is already in use because this can cause breaking changes.
+
 
 
 <a name="loio83c89ccef12f48ab98f6c3811bd025b3__section_bth_5kw_chc"/>

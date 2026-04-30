@@ -9,7 +9,7 @@ You can enable and disable control-level variant management on the object page.
 ## Context
 
 > ### Note:  
-> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> This topic describes how to use the feature within SAP Fiori elements floorplans. The feature isn't available when you use the building block in custom pages or custom sections, but you can try achieving the functionality through other means, such as the following:
 > 
 > -   Properties or methods exposed by the building block
 > 
@@ -17,7 +17,7 @@ You can enable and disable control-level variant management on the object page.
 
 You can enable and disable variant management for tables.
 
-Variant management is disabled by default. You can enable it on the object page by setting `"ariantManagement"` to `"ontrol"`.
+Variant management is disabled by default. You can enable it on the object page by setting `variantManagement` to `Control`.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -55,7 +55,7 @@ If you've enabled variant management, you can disable it again by setting `varia
 You can turn personalization on or off for each table individually. Personalization is independent of variant management. You can't enable variant management if personalization is turned off.
 
 > ### Note:  
-> Don't change the variant management settings after delivering the application. Making changes to the settings after an application has been delivered results in end users losing their personalization settings.
+> Don't change the variant management settings after delivering the application. Making changes to the settings after an application has been delivered results in users losing their personalization settings.
 
 **Related Information**  
 

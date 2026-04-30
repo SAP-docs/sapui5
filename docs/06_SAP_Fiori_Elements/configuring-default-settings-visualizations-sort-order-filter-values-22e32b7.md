@@ -476,7 +476,7 @@ The `UI.Chart` annotation is applicable for the following:
 
 -   The main chart in the analytical list page \(ALP\).
 
--   Usage within multiple views for the list report page tables. For more information, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views in a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-in-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
+-   Usage within multiple views for the list report page tables. For more information, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
 
 
 
@@ -490,7 +490,7 @@ The `UI.Chart` annotation is applicable for the following:
 > 
 > -   When defining a `PresentationVariant`, the `Visualizations` annotation should be provided and point to a valid visualization.
 > 
-> -   In a multiple view scenario, the following logic is used to fetch the `UI.PresentationVariant` annotation only if it is undefined. For more information about the multiple view configuration, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views in a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-in-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
+> -   In a multiple view scenario, the following logic is used to fetch the `UI.PresentationVariant` annotation only if it is undefined. For more information about the multiple view configuration, see [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md) and [Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
 
 You can control the default visualization by using a setting in the `manifest.json` file. This setting allows you to define `UI.SelectionPresentationVariant` \(with a qualifier\). When `UI.SelectionPresentationVariant` is defined, you must use the associated annotations such as `UI.SelectionVariant` \(for filter bar defaults\) and `UI.PresentationVariant` \(for default visualization\).
 
@@ -502,13 +502,13 @@ Defining the manifest setting is optional. If the setting isn't defined, SAP Fio
 
 -   If `UI.PresentationVariant` **not** is found, SAP Fiori elements checks for a default `UI.LineItem` or `UI.Chart` for the visualization.
 
--   Finally, if neither `UI.PresentationVariant` nor the default `UI.LineItem` or `UI.Chart` is found, the SAP Fiori elements renders an empty table or chart. However, the end users can still use the personalization of the control to render the required table or chart.
+-   Finally, if neither `UI.PresentationVariant` nor the default `UI.LineItem` or `UI.Chart` is found, the SAP Fiori elements renders an empty table or chart. However, users can still use the personalization of the control to render the required table or chart.
 
 
 > ### Note:  
 > -   In all the preceding cases, if a `UI.SelectionPresentationVariant` is found but the associated `UI.PresentationVariant` is **not** found, SAP Fiori elements raises an error and stops loading the application. SAP Fiori elements behaves in the same manner when you define a `UI.SelectionPresentationVariant` correctly, but you miss to define a \(correct\) association to `UI.PresentationVariant`. Hence, you must always ensure to define the correct path for the default selection presentation variant in the manifest and the correct association to `UI.PresentationVariant`.
 > 
-> -   If a`UI.PresentationVariant` is found but the visualization isn't defined, then we fallback to default \(unqualified\) `UI.LineItem` \(or default `UI.Chart`\) annotation. If these annotations are not found, SAP Fiori elements renders an empty table \(or chart\), and the end users can still use the personalization of the control to configure the required table \(or chart\).
+> -   If a`UI.PresentationVariant` is found but the visualization isn't defined, then we fallback to default \(unqualified\) `UI.LineItem` \(or default `UI.Chart`\) annotation. If these annotations are not found, SAP Fiori elements renders an empty table \(or chart\), and users can still use the personalization of the control to configure the required table \(or chart\).
 
 
 

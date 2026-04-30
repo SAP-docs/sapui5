@@ -18,10 +18,10 @@ If you have a specific use case, you can change the default behavior using the `
 > ```
 > <script
 >     id="sap-ui-bootstrap"
->     src=resources/sap-ui-core.js
-> 
+>     src="resources/sap-ui-core.js"
+>     data-sap-ui-async="true"
 >     data-sap-ui-flexibility-services=""
->     data-sap-ui-preload="async" >
+>     data-...="...">
 > </script>
 > ```
 

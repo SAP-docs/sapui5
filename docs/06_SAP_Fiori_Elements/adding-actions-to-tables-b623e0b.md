@@ -1316,7 +1316,7 @@ To pass the field value to an action parameter, use the annotation term `Paramet
 You can also trigger an action that is connected to a field value on a form.
 
 > ### Note:  
-> In applications where links are annotated with `DataFieldWithAction`, the context menu does not show the *Open in New Tab* and *Open in New Window* options when an end user right-clicks on them.
+> In applications where links are annotated with `DataFieldWithAction`, the context menu does not show the *Open in New Tab* and *Open in New Window* options when a user right-clicks on them.
 
 
 

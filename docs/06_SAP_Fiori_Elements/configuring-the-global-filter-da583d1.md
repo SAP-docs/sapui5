@@ -11,7 +11,7 @@ You can configure the global filter to allow users to filter the data displayed 
 
 
 
-The global filter is implemented using the `sap.ui.comp.smartfilterbar.SmartFilterBar` control. This control enables end users to persist their preferred filters and share them with other users. The filter presents filterable properties according to the configured entity type. It's applied to all cards that have the same property name in their entity type. You can also define filters that you want to add to the filter bar by default with the `UI.SelectionFields` configuration in the annotations file.
+The global filter is implemented using the `sap.ui.comp.smartfilterbar.SmartFilterBar` control. This control enables users to persist their preferred filters and share them with other users. The filter presents filterable properties according to the configured entity type. It's applied to all cards that have the same property name in their entity type. You can also define filters that you want to add to the filter bar by default with the `UI.SelectionFields` configuration in the annotations file.
 
 You configure the global filter in the `"sap.ovp"` section using the following properties:
 

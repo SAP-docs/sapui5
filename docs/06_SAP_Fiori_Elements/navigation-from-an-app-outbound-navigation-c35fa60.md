@@ -182,7 +182,7 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     > ### Note:  
     > -   Make sure you define a unique target by specifying both the semantic object and an action. Otherwise, clicking the link will not trigger direct navigation to the target.
     > 
-    > -   In applications where links are annotated with `DataFieldWithIntentBasedNavigation`, the context menu does not display the *Open in New Tab* and *Open in New Window* options when an end user right-clicks on them.
+    > -   In applications where links are annotated with `DataFieldWithIntentBasedNavigation`, the context menu does not display the *Open in New Tab* and *Open in New Window* options when an user right-clicks on them.
 
     > ### Sample Code:  
     > XML Annotation
@@ -284,7 +284,7 @@ Add the following property: `<PropertyValue Property="RequiresContext" Bool="tru
 If `RequiresContext` is `true`, then the button is disabled until a selection is made. If it's `false`, then the button is always enabled. The default value for `RequiresContext` is `false`.
 
 > ### Note:  
-> `RequiresContext` only determines whether the button is enabled based on the end user's selected context. Regardless of its value, any available context is always passed along, following the standard navigation process.
+> `RequiresContext` only determines whether the button is enabled based on the user's selected context. Regardless of its value, any available context is always passed along, following the standard navigation process.
 
 > ### Sample Code:  
 > XML Annotation

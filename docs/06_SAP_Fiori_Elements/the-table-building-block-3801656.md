@@ -56,7 +56,7 @@ You can use the `Table` building block to dynamically create tables at runtime. 
 
 Any personalization done by the user is automatically stored and restored using `iAppState`. For more information about the `iAppState` mechanism, see [Store/Restore the Application State](store-restore-the-application-state-46bf248.md).
 
-If a table doesn't contain any data, users see an illustrated message. For more information, see[Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md) 
+If a table doesn't contain any data, users see an illustrated message. For more information, see [Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md) 
 
 You can use the `Table` building block to add bound and unbound actions, to group actions as menu buttons, to add custom columns, and to specify the create options for the table. For example, you have the following options:
 
@@ -266,4 +266,25 @@ You can trigger the creation of a document within a table by calling the `create
 > ```
 
 For more information and live examples, see the SAP Fiori development portal at [Global Patterns - Draft Handling](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/editFlow).
+
+
+
+## Controlling the Table Initialization
+
+If a table building block is linked to a filter bar which doesn't use the live mode, the table will load data after the filters are filled in.
+
+You can control the data loading behavior using the `initialLoad` parameter as shown in the following sample code:
+
+> ### Sample Code:  
+> ```
+> 
+> {{ <macros:FilterBar metaPath="@com.sap.vocabularies.UI.v1.SelectionFields" id="FilterBar" />}}
+> <macros:Table metaPath="@com.sap.vocabularies.UI.v1.LineItem" id="LineItemTable" filterBar="FilterBar" initialLoad="true"/>
+> ```
+
+The default value of `initialLoad` is `false`.
+
+If set to `false`, the table loads the data after the filter bar is filled.
+
+If `initialLoad` is set to `true`, the table loads the data if the filter bar has no mandatory filters or if the mandatory filters are filled in.
 

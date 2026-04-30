@@ -2,7 +2,7 @@
 
 # Configuring Overview Pages Using Runtime Capabilities
 
-End users can configure their overview pages by rearranging cards and controlling their visibility. They can also apply filters to the displayed information, which affects all relevant cards on the page.
+Users can configure their overview pages by rearranging cards and controlling their visibility. They can also apply filters to the displayed information, which affects all relevant cards on the page.
 
 The following configuration options are available for the overview page:
 

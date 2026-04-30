@@ -24,7 +24,7 @@ When creating non-draft apps, you need to consider the specific features and res
 
 ## Saving Data
 
-In non-draft scenarios, the application does not automatically save data to the back end when an end user changes it on the UI. End users must always save the new or modified data before leaving a page, for example, in the following cases:
+In non-draft scenarios, the application does not automatically save data to the back end when an user changes it on the UI. Users must always save the new or modified data before leaving a page, for example, in the following cases:
 
 -   Creating new subitems.
 
@@ -35,7 +35,7 @@ In non-draft scenarios, the application does not automatically save data to the 
 -   Navigating back to the list report page.
 
 
-The *Save* button is also available on subobject pages. If an end user tries to navigate away from the edit screen with unsaved data, the application displays a data-loss message.
+The *Save* button is also available on subobject pages. If a user tries to navigate away from the edit screen with unsaved data, the application displays a data-loss message.
 
 The following features are also **not** available in non-draft apps:
 
@@ -55,7 +55,7 @@ The following features are also **not** available in non-draft apps:
 
 ## Locking
 
-Non-draft apps do not lock objects when data is being edited. If two end users work on the same object simultaneously, data may be lost, and the data from the last user to save becomes the final version. As a result, the system does not retrieve data again from the back-end when the end user begins editing.
+Non-draft apps do not lock objects when data is being edited. If two users work on the same object simultaneously, data may be lost, and the data from the last user to save becomes the final version. As a result, the system does not retrieve data again from the back-end when the user begins editing.
 
 
 

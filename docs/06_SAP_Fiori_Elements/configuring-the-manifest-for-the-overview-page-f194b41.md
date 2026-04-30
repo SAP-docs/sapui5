@@ -16,7 +16,7 @@ The `manifest.json` file defines static information about the application such a
 > ```
 > "sap.ovp" : { //section for ovp-specific app manifest settings
 >     "globalFilterModel": "ZModelName", //OData model that contains entity definitions relevant for global filters
->     "globalFilterEntitySet": "ZFilterEntitySet", //Represents the entity set to use as a global filter in the smart filter bar control. 
+>     "globalFilterEntitySet": "ZFilterEntitySet", //Represents the entity set to use as a global filter in the filter bar control. 
 >     "containerLayout": "resizable", //Represents the layout of the card container.
 >     "smartVariantRequired": true, //Represents a switch to activate smart variant management in the global filters. The default value is true.
 >     "showDateInRelativeFormat": false, //Represents a switch to enable or disable relative/normal date formatting in OVP applications.
@@ -24,10 +24,9 @@ The `manifest.json` file defines static information about the application such a
 >     "dataLoadSettings": {
 >         "loadDataOnAppLaunch": "ifAnyFilterExist" //Defines the data load behaviour on app launch. Values: 'ifAnyFilterExist'/'always' to auto load data and 'never' to stop the auto data load during application launch.
 >     },
->     "imageSupported": true, //Allows the condensed list card to show images or icons.	
->     "considerAnalyticalParameters": true, //Flag to enable/disable analytical parameter support for the smart filter bar.
+>     "imageSupported": true, //Allows the condensed list card to show images or icons.
 >     "refreshIntervalInMinutes": 2, //Time interval in minutes to auto refresh the card models.
->     "useDateRangeType": true, //Flag to enable or disable the semantic date range control for the smart filter bar. The default value is false.
+>     "useDateRangeType": true, //Flag to enable or disable the semantic date range control for the filter bar. The default value is false.
 >     "enableLazyRendering": true, //Cards in the visible view port get rendered. Additional cards are rendered when scrolling. Default value is false.
 >     
 >     "cards": { //An object of cards 

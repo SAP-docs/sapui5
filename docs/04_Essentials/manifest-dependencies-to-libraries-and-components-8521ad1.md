@@ -25,17 +25,16 @@ For **applications and components**, modify the `manifest.json` as follows:
 "sap.ui5": {
     ...
     "dependencies": {
-      ...
-      "libs": {
-        "sap.m": {},
-        "sap.suite.ui.commons": {
-          "lazy": true
+        ...
+        "libs": {
+            "sap.m": {},
+            "sap.suite.ui.commons": {
+                "lazy": true
+            }
         }
-      }
-      ...
+        ...
     },
     ...
-
 ```
 
 For **libraries**, modify the `.library` file as shown in the following code sample. This file is available because the `manifest.json` for libraries is generated based on this metadata.
@@ -43,11 +42,11 @@ For **libraries**, modify the `.library` file as shown in the following code sam
 ```
 <dependencies>
     <dependency>
-       <libraryName>sap.m</libraryName>
+        <libraryName>sap.m</libraryName>
     </dependency>
     <dependency>
-       <libraryName>sap.suite.ui.commons</libraryName>
-       <lazy>true</lazy>
+        <libraryName>sap.suite.ui.commons</libraryName>
+        <lazy>true</lazy>
     </dependency>
     ...
 ```

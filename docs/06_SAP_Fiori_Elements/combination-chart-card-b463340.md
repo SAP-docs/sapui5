@@ -2,7 +2,7 @@
 
 # Combination Chart Card
 
-A combination chart lets you combine and view two or more chart types in a single chart.
+You can render the chart as a combination chart, which lets you combine and view two or more chart types in a single chart.
 
 
 

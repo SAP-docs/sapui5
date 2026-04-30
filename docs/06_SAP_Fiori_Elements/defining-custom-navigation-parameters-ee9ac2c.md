@@ -1,8 +1,8 @@
 <!-- loioee9ac2c2d1b24450a61eb52698249da1 -->
 
-# Custom Navigation Parameters
+# Defining Custom Navigation Parameters
 
-Add custom parameters for intent-based navigation to the target application.
+You can define custom parameters for intent-based navigation to the target application.
 
 
 
@@ -15,32 +15,101 @@ Add custom parameters for intent-based navigation to the target application.
 
 ## Procedure
 
+To define custom parameters for intent-based navigation, proceed as follows:
+
 1.  Define the `onCustomParams` function in the controller file extension.
 
     > ### Sample Code:  
     > ```
-    >         onCustomParams: function(sCustomParams) {
-    >             if (sCustomParams === "getParameters") {
-    >                 return this.getParameters;
-    >             } else if (sCustomParams === "param2") {
-    >                 return this.param2;
-    >             }
-    >         },
+    > onCustomParams: function(sCustomParams) {
+    >     if (sCustomParams === "getParameters") {
+    >         return this.getParameters;
+    >     } else if (sCustomParams === "param2") {
+    >         return this.param2;
+    >     }
+    > },
     > ```
 
     The custom parameter function inserts URL parameters while navigating to the target application. Configure the following properties:
 
-    -   `path`: Property name
-
-    -   `operator`: Operator to apply. Possible operations are EQ,NE,LE,GE,LT,GT,BT,CP.
-
-    -   `value1`: First operator value applied
-
-    -   `value2`: Second operator value. Use only for a range of operators, such as `BT`. If empty, set the value to null.
-
-    -   `sign`: Specify the current selection to be included or excluded from the filter. Use `I` to include and `E` to exclude.
+    **Configuration Properties**
 
 
+    <table>
+    <tr>
+    <th valign="top">
+
+    Property
+    
+    </th>
+    <th valign="top">
+
+    Description
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `path` 
+    
+    </td>
+    <td valign="top">
+    
+    Defines the property name
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `operator` 
+    
+    </td>
+    <td valign="top">
+    
+    Specifies which operator to apply. Possible values are `EQ`,`NE`,`LE`,`GE`,`LT`,`GT`,`BT`,`CP`.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `value1`: First operator value applied
+    
+    </td>
+    <td valign="top">
+    
+    Defines the first value for the operator.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `value2`: Second operator value. Use only for a range of operators, such as `BT`. If empty, set the value to null.
+    
+    </td>
+    <td valign="top">
+    
+    Defines the second value for the operator. This is used only for range-based operators such as `BT`. The value is set to `null` if not used.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `sign` 
+    
+    </td>
+    <td valign="top">
+    
+    Determines whether the current selection must be included or excluded from the filter. Use `I` to include and `E` to exclude.
+    
+    </td>
+    </tr>
+    </table>
+    
     > ### Sample Code:  
     > ```
     > getParameters: function(oNavigateParams) {
@@ -126,9 +195,9 @@ Add custom parameters for intent-based navigation to the target application.
     > ```
 
     > ### Note:  
-    > `ignoreEmptyString` and `selectionVariant` are deprecated from the 1.54 release. Alternatively, you can use `bIgnoreEmptyString` and `aSelectionVariant`.
+    > `ignoreEmptyString` and `selectionVariant` are deprecated as of SAPUI5 1.54. Use `bIgnoreEmptyString` and `aSelectionVariant` instead.
 
-2.  Add a controller extension and specify the path to the custom controller, in the `manifest.json` file:
+2.  Add a controller extension in the `manifest.json` file, and specify the path to the custom controller, as shown in the following sample code:
 
     ```
     "extends": {
@@ -144,9 +213,9 @@ Add custom parameters for intent-based navigation to the target application.
     ```
 
     > ### Note:  
-    > If a controller file already exists, add the new extension code in the same file.
+    > Add the new extension code in the same file if a controller file already exists.
 
-3.  Configure the `customParams` card setting type to return custom parameters. Enter the name of the custom parameter function defined in your custom controller file.
+3.  To return the custom parameters during navigation, configure the `customParams` setting in the card definition. Include the name of the custom parameter function defined in your custom controller file.
 
     > ### Sample Code:  
     > ```

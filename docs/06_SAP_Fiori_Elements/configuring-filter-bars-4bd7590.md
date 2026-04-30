@@ -78,13 +78,13 @@ The filter bar is available only if the service configured for the application s
 
 ### *Go* Button Mode
 
-In Go button mode, the search isn't invoked and the content area does not refresh when an end user modifies the filter fields unless they explicitly click *Go*. By default, the *Go* button is displayed on the filter bar. You can modify the default content loading behavior during the initial load of the application by configuring the `manifest.json` file. For more information, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
+In Go button mode, the search isn't invoked and the content area does not refresh when a user modifies the filter fields unless they explicitly click *Go*. By default, the *Go* button is displayed on the filter bar. You can modify the default content loading behavior during the initial load of the application by configuring the `manifest.json` file. For more information, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
 
 
 
 ### Live Mode
 
-In live mode, any changes made by an end user to the filter fields automatically invokes a search and refreshes the content area. In this mode, if the variant management feature is enabled, the application does not display the *Apply Automatically* checkbox, as selecting a variant automatically invokes the filter search.
+In live mode, any changes made by a user to the filter fields automatically invokes a search and refreshes the content area. In this mode, if the variant management feature is enabled, the application does not display the *Apply Automatically* checkbox, as selecting a variant automatically invokes the filter search.
 
 This mode is ideal for applications with a small amount of data that have no performance issues from the underlying database layer, such as those requiring complex joins to execute actions.
 

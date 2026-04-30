@@ -134,7 +134,7 @@ In the following we'll focus on crucial aspects of app development, specifically
 
 -   Use asynchronous loading for views, fragments, components, and resource bundles to enhance performance; see, for example, [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md).
 -   Implement the `sap.ui.core.IAsyncContentCreation` marker interface in your [Component.js file](../04_Essentials/component-controller-27ce0e4.md) to allow the content to be created fully asynchronously and for a stricter handling of certain types of errors during its view processing.
--   Make sure that dependent libraries and components are preloaded before modules from the respective preload are accessed. For example, if the `sap.f.FlexibleColumnLayout` control is part of the root view, `"sap.f": {}` should be included in the `sap.ui5/dependencies/libs` section of the `manifest.json`. Avoid setting `{ "lazy": true }` if the application does not intend to preload the bundle manually. For more information, see [Ensure that Library Preloads are Enabled](../05_Developing_Apps/performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads).
+-   Make sure that dependent libraries and components are preloaded before modules from the respective preload are accessed. For example, if the `sap.f.FlexibleColumnLayout` control is part of the root view, `"sap.f": {}` should be included in the `sap.ui5/dependencies/libs` section of the `manifest.json`.Avoid setting `{ "lazy": true }` if the application does not intend to preload the bundle manually. For more information, see [Ensure that Library Preloads are Enabled](../05_Developing_Apps/performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads).
 
 **Additional Information:**
 
@@ -187,6 +187,8 @@ When creating instances of SAPUI5 controls programmatically \(i.e. not declarati
 ### Standalone Apps
 
 -   During SAPUI5 bootstrapping, assign `module:sap/ui/core/ComponentSupport` or a separate JavaScript file to `data-sap-ui-on-init`.
+
+-   Unless a specific theme is mandated, omit `data-sap-ui-theme` from the bootstrap configuration. This allows SAPUI5 to automatically apply the latest default theme based on the [Supported Combinations of Themes and Libraries](../02_Read-Me-First/supported-combinations-of-themes-and-libraries-38ff8c2.md), respecting the user's color scheme preference. For more information, see [Theming - Default Behavior](../04_Essentials/theming-497c27a.md#loio497c27a8ee26426faacd2b8a1751794a__sub_default).
 
 -   Avoid inline scripts or inline styles.
 

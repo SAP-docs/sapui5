@@ -27,9 +27,8 @@ You can define an external navigation using intent-based navigation in the `mani
 > 
 > ```json
 > {
-> …
-> …
->  "sap.app": {
+>     ...
+>     "sap.app": {
 >         "crossNavigation": {
 >             "outbounds": {
 >                 "ProductDetails": {
@@ -38,67 +37,64 @@ You can define an external navigation using intent-based navigation in the `mani
 >                 }
 >             }
 >         }
->  },
-> "sap.ui5": {
->     ....
->     ....
->     ....
->     "routing": {
-> …
-> …
->         "routes": [{
->             "pattern": ":?query:",
->             "name": "ArtistList",
->             "target": "ArtistList"
->         }, {
->             "pattern": "Artists({key}):?query:",
->             "name": "ArtistDetail",
->             "target": "ArtistObjectPage"
->         }],
->         "targets":{
->             "ArtistList": {
->                 "type": "Component",
->                 "id": "ArtistList",
->                 "name": "sap.fe.templates.ListReport",
->                 "options": {
->                     "settings" :{                          
->                         "contextPath": "/Artists",
->                         "navigation": {                              
->                             "Artists": {                                 
->                                 "detail": {                                      
->                                     "route": "ArtistObjectPage" // This triggers the regular internal navigation to OP from LR table record
->                                 }                           
->                             }                          
->                         }
->                     }
+>     },
+>     "sap.ui5": {
+>         ...
+>         "routing": {
+>             ...
+>             "routes": [
+>                 {
+>                     "pattern": ":?query:",
+>                     "name": "ArtistList",
+>                     "target": "ArtistList"
+>                 },
+>                 {
+>                     "pattern": "Artists({key}):?query:",
+>                     "name": "ArtistDetail",
+>                     "target": "ArtistObjectPage"
 >                 }
->             }, // End of ArtistList
->             "ArtistObjectPage": {
->                 "type": "Component",
->                 "id":  "ArtistDetail",                  
->                 "name": "sap.fe.templates.ObjectPage",
->                 "options": {
->                     "settings" : {                          
->                         "contextPath": "/Artists",                          
->                         "_tableType" : "Table",                          
->                         "navigation": {                              
->                             "_Publication": {                                  
->                                 "detail": {                                      
->                                     "outbound": "ProductDetails" // This triggers the external navigation to "ProductDetails" instead of the regular internal navigation to the sub-object page
+>             ],
+>             "targets": {
+>                 "ArtistList": {
+>                     "type": "Component",
+>                     "id": "ArtistList",
+>                     "name": "sap.fe.templates.ListReport",
+>                     "options": {
+>                         "settings": {
+>                             "contextPath": "/Artists",
+>                             "navigation": {
+>                                 "Artists": {
+>                                     "detail": {
+>                                         "route": "ArtistObjectPage" // This triggers the regular internal navigation to OP from LR table record
+>                                     }
 >                                 }
->                             }                          
+>                             }
 >                         }
 >                     }
->                 }
->             } // End of ArtistObjectPage
->         } // End of Targets
->      }, // End of routing
->     .....
->     .....
->     .....
->   } // End of sap.ui
-> …
-> …
+>                 }, // End of ArtistList
+>                 "ArtistObjectPage": {
+>                     "type": "Component",
+>                     "id": "ArtistDetail",
+>                     "name": "sap.fe.templates.ObjectPage",
+>                     "options": {
+>                         "settings": {
+>                             "contextPath": "/Artists",
+>                             "_tableType": "Table",
+>                             "navigation": {
+>                                 "_Publication": {
+>                                     "detail": {
+>                                         "outbound": "ProductDetails" // This triggers the external navigation to "ProductDetails" instead of the regular internal navigation to the sub-object page
+>                                     }
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 } // End of ArtistObjectPage
+>             } // End of Targets
+>         }, // End of routing
+>         ...
+>     } // End of sap.ui
+>     ...
 > }
 > ```
 

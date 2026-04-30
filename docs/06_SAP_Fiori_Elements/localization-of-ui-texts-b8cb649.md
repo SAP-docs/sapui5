@@ -844,7 +844,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-Object deleted.
+Object deleted
 
 </td>
 <td valign="top">
@@ -868,7 +868,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-Objects were deleted.
+Objects deleted
 
 </td>
 <td valign="top">
@@ -1432,7 +1432,7 @@ Applications should overwrite the default text and replace "Item" with the concr
 </td>
 <td valign="top">
 
-The "\{0\}" was loaded
+The "\{0\}" was loaded.
 
 </td>
 <td valign="top">
@@ -1462,7 +1462,7 @@ If no title is defined, we use the following key instead:
 </td>
 <td valign="top">
 
-You've reached the top of the list
+You've reached the top of the list.
 
 </td>
 <td valign="top">
@@ -1486,7 +1486,7 @@ The screen reader program reads the combined text obtained from the `M_PAGINATOR
 </td>
 <td valign="top">
 
-You've reached the end of the list
+You've reached the end of the list.
 
 </td>
 <td valign="top">

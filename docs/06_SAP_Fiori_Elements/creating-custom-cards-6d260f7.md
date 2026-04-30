@@ -132,7 +132,7 @@ To create a custom card, proceed as follows:
 
 ### Using an Extension API to Refresh Custom Card Data
 
-End users can refresh the data on the custom cards. Refreshing the card data is available as an action on the card.
+Users can refresh the data on the custom cards. Refreshing the card data is available as an action on the card.
 
 To enable the refresh action on custom cards, application developers must configure the `onRefresh` extension, as shown in the following sample code:
 

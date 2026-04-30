@@ -16,30 +16,30 @@ A typed view implements its own `View#createContent` method. It must either retu
 
 The following example shows the definition of a view of type `myapp.views.MyView`:
 
-```js
+```
 sap.ui.define([
-  "sap/ui/core/mvc/View",
-  "sap/m/Panel"
+    "sap/ui/core/mvc/View",
+    "sap/m/Panel"
 ], function(View, Panel) {
-  "use strict";
-  return View.extend("myapp.views.MyView", {
-    // define which controller to use
-    getControllerModuleName: function() {
-      return "myapp/controller/Main";
-    },
-    // create view content and return the root control
-    createContent: async function(oController) {
-      // "createContent" allows for asynchronous actions
-      const someControl = await oController.loadFragment(...);
+    "use strict";
+    return View.extend("myapp.views.MyView", {
+        // define which controller to use
+        getControllerModuleName: function() {
+            return "myapp/controller/Main";
+        },
+        // create view content and return the root control
+        createContent: async function(oController) {
+            // "createContent" allows for asynchronous actions
+            const someControl = await oController.loadFragment(/*...*/);
 
-      return new Panel({
-        //create stable id, prefixed with the view id
-        id: this.createId("myPanel"),
-        headerText: "My Panel",
-        content: [someControl, /* ... */]
-      });
-    }
-  });
+            return new Panel({
+                //create stable id, prefixed with the view id
+                id: this.createId("myPanel"),
+                headerText: "My Panel",
+                content: [someControl, /*...*/]
+            });
+        }
+    });
 });
 ```
 
@@ -82,7 +82,7 @@ A typed view in XML can be declared via the class `sap.ui.core.mvc.View`. Using 
 **Example:** View Declaration using class `sap.ui.core.mvc.View`:
 
 ```xml
-<mvc:View viewName="module:myapp/views/MyView" />
+<mvc:View viewName="module:myapp/views/MyView"/>
 ```
 
 
@@ -97,19 +97,19 @@ More information on the `sap.ui5/routing` section can be found in [Routing Confi
 
 ```
 {
-  "sap.ui5": {
-    "rootView": {
-      "viewName": "module:myapp/views/MyView"
-    },
-    "routing": {
-      "targets": {
-        "myHome": {
-          "name": "module:myapp/views/MyHomeView"
-        }
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "module:myapp/views/MyView"
+        },
+        "routing": {
+            "targets": {
+                "myHome": {
+                    "name": "module:myapp/views/MyHomeView"
+                }
+            }
+        },
         /* other views, e.g. XML ... */
-      }
     }
-  }
 }
 ```
 

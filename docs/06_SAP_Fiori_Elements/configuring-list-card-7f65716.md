@@ -6,50 +6,6 @@ You can add and configure various attributes of the list card.
 
 
 
-Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
-
-
-
-<a name="loio7f65716d973b4c50bab37f9302c73afa__section_pds_tdl_2fb"/>
-
-## Adding Smart Links
-
-Define a semantic object for the entity set and its property using the annotation target to add smart links. For example:
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotations Target="GWSAMPLE_BASIC.SalesOrder/SalesOrderID">
-> <Annotation Term="com.sap.vocabularies.Common.v1.SemanticObject" String="OVP" />
-> </Annotations>
-> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> 
-> annotate view SALESORDER with {
->   @Consumption.semanticObject: 'OVP'
->   salesorderid;
-> }
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate GWSAMPLE_BASIC.SalesOrder with {
->   @Common.SemanticObject : 'OVP'
->   SalesOrderID
-> };
-> ```
-
-
-
 <a name="loio7f65716d973b4c50bab37f9302c73afa__section_khq_q32_2fb"/>
 
 ## Text Arrangement in List Area

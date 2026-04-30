@@ -179,7 +179,7 @@ An avatar is rendered instead of the icon and link representation when one of th
 
 To display the image or person avatar as a circle, specify the `Common.IsNaturalPerson` annotation at the entity type or for the `UI.IsImage` annotation of a stream property.
 
-You can set the `imageFitType` of the avatar to determine how an image fits in the avatar's container. You can also set the `enableEnlargeImage` of the avatar to determine if users can open and enlarge the image in a popup. For more information, see [Using Images and Icons](using-images-and-icons-5760b63.md).
+You can set the `imageFitType` property to determine how an image fits in the avatar's container. You can also set the `enableEnlargeImage` property to determine if users can open and enlarge the image in a popup. For more information, see [Using Images and Icons](using-images-and-icons-5760b63.md).
 
 
 

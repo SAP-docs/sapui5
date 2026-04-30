@@ -148,7 +148,7 @@ The following sections contain the most frequently asked questions about the SAP
 
     You can configure your actions using specific annotations. For more information about bound/unbound actions, see the *Context-Dependent and Context-Independent Actions* subsection in [Actions](actions-14418d7.md).
 
--   **How can end users pass additional parameters to the action? Can these action parameters have default values?**
+-   **How can users pass additional parameters to the action? Can these action parameters have default values?**
 
     Yes, the action parameters can have default values. For more information, see [Actions](actions-14418d7.md).
 

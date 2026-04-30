@@ -1,13 +1,8 @@
 <!-- loio31073cac3f5743408272b695f282a93c -->
 
-# Custom Filters
+# Adding Custom Filters
 
-You can add custom filters to your overview page application. This allows end users to filter the data displayed in one or more cards.
-
-
-
-> ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adding Custom Filters to the Overview Page](adding-custom-filters-to-the-overview-page-4739893.md).
+You can add custom filters to your overview page application. This allows users to filter the data displayed in one or more cards.
 
 
 
@@ -18,6 +13,30 @@ You can add custom filters to your overview page application. This allows end us
 To add custom filters, proceed as follows:
 
 1.  Create a view extension fragment.
+
+    The following sample code extends the smart filter bar by adding custom filters:
+
+    > ### Sample Code:  
+    > ```
+    > <core:FragmentDefinition xmlns="sap.m" 
+    >                          xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" 
+    >                          xmlns:core="sap.ui.core">
+    >     <!-- Product ID Filter -->
+    >     <smartfilterbar:ControlConfiguration groupId="_BASIC" key="ProductID" label="Product ID (Extension)" visibleInAdvancedArea="true">
+    >         <smartfilterbar:customControl>
+    >             <Input id="ProductID" type="Text"/>
+    >         </smartfilterbar:customControl>
+    >     </smartfilterbar:ControlConfiguration>
+    > 
+    >     <smartfilterbar:ControlConfiguration groupId="GlobalFilters" key="SalesOrderID" label="Sales Order ID (Extension)" visibleInAdvancedArea="false">
+    >         <smartfilterbar:customControl>
+    >             <Input id="SalesOrderID" type="Text"/>
+    >         </smartfilterbar:customControl>
+    >     </smartfilterbar:ControlConfiguration>
+    > </core:FragmentDefinition>
+    > ```
+
+    The following properties must be defined in the sample code:
 
 
     <table>
@@ -41,12 +60,7 @@ To add custom filters, proceed as follows:
     </td>
     <td valign="top">
     
-    Enter a group ID to associate the custom controller to a group.
-
-    > ### Note:  
-    > If the group ID does not exist, the filter is added to the default group.
-
-
+    Associates the custom controller to a group. If the group ID does not exist, the filter is added to the default group.
     
     </td>
     </tr>
@@ -58,7 +72,7 @@ To add custom filters, proceed as follows:
     </td>
     <td valign="top">
     
-    Enter a property of an entity type to define the filter criteria.
+    A property of an entity type to define the filter criteria.
     
     </td>
     </tr>
@@ -82,34 +96,12 @@ To add custom filters, proceed as follows:
     </td>
     <td valign="top">
     
-    Enter a property of an entity type to define the input criteria.
+    A property of an entity type to define the input criteria.
     
     </td>
     </tr>
     </table>
     
-    > ### Sample Code:  
-    > For example, create a `customFilter.fragment.xml` file and provide the required information.
-    > 
-    > ```
-    > <core:FragmentDefinition xmlns="sap.m" 
-    >                          xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" 
-    >                          xmlns:core="sap.ui.core">
-    >     <!-- Product ID Filter -->
-    >     <smartfilterbar:ControlConfiguration groupId="_BASIC" key="ProductID" label="Product ID (Extension)" visibleInAdvancedArea="true">
-    >         <smartfilterbar:customControl>
-    >             <Input id="ProductID" type="Text"/>
-    >         </smartfilterbar:customControl>
-    >     </smartfilterbar:ControlConfiguration>
-    > 
-    >     <smartfilterbar:ControlConfiguration groupId="GlobalFilters" key="SalesOrderID" label="Sales Order ID (Extension)" visibleInAdvancedArea="false">
-    >         <smartfilterbar:customControl>
-    >             <Input id="SalesOrderID" type="Text"/>
-    >         </smartfilterbar:customControl>
-    >     </smartfilterbar:ControlConfiguration>
-    > </core:FragmentDefinition>
-    > ```
-
 2.  Create a controller extension. For example, create a `customFilter.controller.js` file and define the following functions:
     -   `getCustomFilters()` - To return a filter object.
 

@@ -2,48 +2,7 @@
 
 # Configuring the Table Card
 
-You can configure the content on the table area with smart links, text alignment, filtering or grouping information.
-
-
-
-Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
-
-
-
-## Adding Smart Links
-
-Define a semantic object for the entity set and its property using the annotation target to add smart links. For example:
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotations Target="GWSAMPLE_BASIC.SalesOrder/SalesOrderID">
-> <Annotation Term="com.sap.vocabularies.Common.v1.SemanticObject" String="OVP" />
-> </Annotations>
-> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> annotate view SALESORDER with {
->  @Consumption.semanticObject: 'OVP'
->  salesorderid;
-> }
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate GWSAMPLE_BASIC.SalesOrder with {
->   @Common.SemanticObject : 'OVP'
->   SalesOrderID
-> };
-> ```
+You can configure the content on the table area with text alignment, filtering or grouping information.
 
 
 

@@ -12,14 +12,14 @@ When creating, editing, and saving draft or non-draft records, the users stay on
 
 ## Enabling *Save and Back* and *Create and Back*
 
-You can configure the footer toolbar of the object page to include buttons, which enable users to navigate directly back to the list report page when saving or creating an object.
+You can configure the footer toolbar of the object page to include buttons enabling users to navigate directly back to the list report page when saving or creating an object.
 
 When enabled, this feature adds the following secondary action buttons to the footer toolbar of the object page:
 
 -   *Save and Back*: available on the object page in edit mode
 -   *Create and Back*: available on the object page in create mode
 
-When the users click the *Save and Back* or *Create and Back* button, the draft record is saved, and they are automatically taken back to the list report page.
+When users click the *Save and Back* or *Create and Back* button, the draft record is saved, and the users are automatically taken back to the list report page.
 
 To enable the buttons, set the `enableSaveAndLeave` property to `true` in the `manifest.json` file.
 

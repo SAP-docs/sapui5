@@ -13,7 +13,7 @@ Some of the factors are initial configuration of the variant, initial loading co
 
 -   When navigating from a tile that has no navigation context, or from a tile that has only default values from the user-specific settings of SAP Fiori launchpad, the loading behavior of data depends on the following:
 
-    -   If the default variant is configured, then this variant is launched. The initial data load depends on the configuration of the *Apply Automatically* checkbox for this variant by the end users.
+    -   If the default variant is configured, then this variant is launched. The initial data load depends on the configuration of the *Apply Automatically* checkbox for this variant by the users.
 
     -   If no default variant is configured, then the *Standard* variant is launched along with the default values in the user-specific settings of SAP Fiori launchpad. The initial data load depends on the manifest configuration done by the application developers.
 
@@ -48,11 +48,11 @@ You can change the default loading behavior of data by configuring the `"loadDat
 
 The loading behavior of data based on this setting is as follows:
 
--   `always`: Data for the standard variant is always loaded. End users can override this by deselecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
+-   `always`: Data for the standard variant is always loaded. Users can override this by deselecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
 
--   `never`: Data for the standard variant is not loaded automatically, and the end user has to actively click the *Go* button. They can override this by selecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
+-   `never`: Data for the standard variant is not loaded automatically, and the user has to actively click the *Go* button. They can override this by selecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
 
--   Undefined or set to `ifAnyFilterExist`: Data for the standard variant is loaded only if the default filter values have been defined \(by an administrator or a user, or passed from another app\). This is the default behavior for any newly generated apps. The *Apply Automatically* checkbox is selected but end users can override this by deselecting it in the *Manage Views* dialog.
+-   Undefined or set to `ifAnyFilterExist`: Data for the standard variant is loaded only if the default filter values have been defined \(by an administrator or a user, or passed from another app\). This is the default behavior for any newly generated apps. The *Apply Automatically* checkbox is selected but users can override this by deselecting it in the *Manage Views* dialog.
 
     If there is a mandatory filter field missing, the data load is not triggered irrespective of other non-mandatory filter fields. In this case, the *Apply Automatically* checkbox is deselected.
 

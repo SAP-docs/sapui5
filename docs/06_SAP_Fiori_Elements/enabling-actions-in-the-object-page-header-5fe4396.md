@@ -4,7 +4,7 @@
 
 You can enable generic actions in the object page header.
 
-*Edit*, *Delete* and *Copy* are the generic actions.
+*Edit*, *Delete*, and *Copy* are the generic actions.
 
 All `com.sap.vocabularies.UI.v1.DataFieldForAction` within the unqualified `UI.Identification` are interpreted as actions. The system renders a button in the header displaying the text of the data field label.
 
@@ -79,13 +79,13 @@ The object page context is only passed for bound header actions. For unbound act
 
 The edit action is also available on the subobject page. Its behavior depends on the annotations on both levels:
 
--   The edit button is displayed on the subobject page only if it is also visible on the object page and if the subobject page entity is not annotated to hide it.
+-   The *Edit* button is displayed on the subobject page only if it is also visible on the object page and if the subobject page entity is not annotated to hide it.
 
--   The edit button is enabled on the subobject page only if it is also enabled on the object page and if the subobject page entity is not annotated to disable it.
+-   The *Edit* button is enabled on the subobject page only if it is also enabled on the object page and if the subobject page entity is not annotated to disable it.
 
 
 > ### Note:  
-> Selecting the edit button on the subobject page enables the edit action for the entire object page, not just the subobject page where it was selected.
+> Selecting the *Edit* button on the subobject page enables the edit action for the entire object page, not just the subobject page where it was selected.
 
 
 
@@ -134,7 +134,7 @@ Applications can define a label for this button. If a label is not provided, the
 
 <a name="loio5fe439613f9c4e259015951594c423dc__section_aj2_5wx_qmb"/>
 
-## Edit and Delete Buttons
+## *Edit* and *Delete* Buttons
 
 The *Edit* button allows users to edit the instance of the object page.
 
@@ -195,7 +195,7 @@ The *Delete* button allows users to delete the instance of the object page.
 >     > 
 >     > ```
 > 
->     For more information about the visibility of the *Delete* button, see the [Showing or Hiding the *Delete* Button](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__ShowHideDelete) section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+>     For more information about the visibility of the *Delete* button, see the [Showing or Hiding the Delete Button](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__ShowHideDelete) section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
 
 
@@ -296,7 +296,7 @@ You control the visibility of the custom global actions by using the `UI.Hidden`
 
 You also control the enablement of the `DataFieldForAction` buttons through the `OperationAvailable` mechanism in the same way as described in the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) section in [Actions](actions-cbf16c5.md).
 
-The enablement of intent-based navigation \(IBN\) buttons can be controlled using the `"NavigationAvailable"` property, as described in the [Navigation Using a Button](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__NavigationButton) section in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
+The enablement of intent-based navigation \(IBN\) buttons can be controlled using the `"NavigationAvailable"` property, as described in the [Using a Button](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__NavigationButton) section in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 The `UI.DataFieldForAction` can be bound or unbound actions. For more information, see the [Bound and Unbound Actions](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__BoundUnbound) section in [Actions](actions-cbf16c5.md).
 

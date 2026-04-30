@@ -10,7 +10,7 @@ You can configure filter fields to ensure they only accept either a single value
 
 ## Copying and Pasting Multiple Values in the Filter Bar
 
-End users can copy and paste multiple values in the filter bar in the following use cases:
+Users can copy and paste multiple values in the filter bar in the following use cases:
 
 -   From one filter field to another filter field of the same data type.
 

@@ -753,7 +753,7 @@ Feature
 
 -   UI adaptation at runtime now supports many additional SAPUI5 controls. Find out how to develop apps supporting it \(also whether your app supports it already\) and how to enable apps for it. For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md).
 
--   As stable IDs are an important prerequisite for SAPUI5 flexibility services, and thus for UI adaptation at runtime, we revamped the documentation. Find out why stable IDs are needed and how to use and name them. For more information, see [Stable IDs: All You Need to Know](../05_Developing_Apps/stable-ids-all-you-need-to-know-f51dbb7.md).
+-   As stable IDs are an important prerequisite for SAPUI5 flexibility services, and thus for UI adaptation at runtime, we revamped the documentation. Find out why stable IDs are needed and how to use and name them. For more information, see [ID Handling in SAPUI5: The Complete Guide](../05_Developing_Apps/id-handling-in-sapui5-the-complete-guide-f51dbb7.md).
 
 -   Key users can now also edit UI elements, which are not directly on the UI but are triggered by an action or must be navigated to, such as dialog boxes and popups.
 
@@ -1960,6 +1960,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.145](what-s-new-in-sapui5-1-145-7676a2a.md "With this release SAPUI5 is upgraded from version 1.144 to 1.145.")
 
 [What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
 

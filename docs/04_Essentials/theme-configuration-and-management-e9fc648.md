@@ -1,6 +1,6 @@
 <!-- loioe9fc648661d84ed89360bbec3ae02611 -->
 
-# Setting Themes
+# Theme Configuration and Management
 
 You define which theme is used by your app either by using the `theme` configuration parameter or the `sap/ui/core/Theming.setTheme` method.
 
@@ -25,7 +25,7 @@ You define which theme is used by your app either by using the `theme` configura
     > http://myserver.com/sap/myapp/?sap-ui-theme=my_custom_theme@/sap/public/bc/themes/~client-111
     > ```
     > 
-    > Although a full URL can be specified, the framework will only use the path information of the URL to prevent CSS-based attacks that would otherwise be possible by referencing CSS from a malicious server, unless the origin has been added to `sap-allowed-theme-origins`. For more information, see [Theme Origin Allowlist](setting-themes-e9fc648.md#loioe9fc648661d84ed89360bbec3ae02611__section_TOA). In a more complex landscape, for example, if the infrastructure of the UI theme designer is running on a separate server, a Web dispatcher can be used to combine both servers in one endpoint.
+    > Although a full URL can be specified, the framework will only use the path information of the URL to prevent CSS-based attacks that would otherwise be possible by referencing CSS from a malicious server, unless the origin has been added to `sap-allowed-theme-origins`. For more information, see [Theme Origin Allowlist](theme-configuration-and-management-e9fc648.md#loioe9fc648661d84ed89360bbec3ae02611__section_TOA). In a more complex landscape, for example, if the infrastructure of the UI theme designer is running on a separate server, a Web dispatcher can be used to combine both servers in one endpoint.
 
     > ### Note:  
     > The UI theme designer infrastructure stores themes for multiple technologies in the same location, each in its own subdirectory \(`UI5/` for SAPUI5\). Other SAP products \(such as SAP Enterprise Portal\) append only the common root URL to the `theme` parameter. SAPUI5 therefore appends folder `UI5/` to any given path that is defined in the `theme` parameter.
@@ -128,9 +128,221 @@ sap.ui.require([
 > ### Note:  
 > The handler of the `applied` event will be executed immediately once if all `*.css` files are loaded and there are no further requests pending for the theme.
 > 
-> After that, it will only be executed in case of new `*.css` files, which may happen for a complete theme change or the loading of additional libraries. Keep in mind that the **`onThemeChanged`** hook is not executed initially if the theme has already been applied.
+> After that, it will only be executed in case of new `*.css` files, which might happen for a complete theme change or the loading of additional libraries. Keep in mind that the **`onThemeChanged`** hook is not executed initially if the theme has already been applied.
 
 For more information, see the [API Reference](https://ui5.sap.com/#/api/module:sap/ui/core/Theming%23events/applied).
+
+
+
+## Favicon Configuration
+
+SAPUI5 provides flexible favicon management through the `favicon` configuration parameter and the Theming API.
+
+
+
+### Configuration Options
+
+The `favicon` parameter supports three different values:
+
+-   `undefined` \(default\): No favicon is set by SAPUI5
+-   `true`: Use theme-specific or SAP default favicon
+-   `string`: Path to custom favicon file \(relative paths only\)
+
+
+
+### Basic Favicon Setup
+
+**Bootstrap Configuration:**
+
+```
+<script
+  id="sap-ui-bootstrap"
+  src="/resources/sap-ui-core.js"
+  data-sap-ui-favicon="true">
+</script>
+```
+
+**Programmatic Configuration:**
+
+**JavaScript**:
+
+```
+sap.ui.require(["sap/ui/core/Theming"], function(Theming) {
+  Theming.setFavicon("assets/my-app-favicon.ico");
+});
+```
+
+**TypeScript**:
+
+```
+import Theming from "sap/ui/core/Theming";
+
+Theming.setFavicon("assets/my-app-favicon.ico");
+```
+
+
+
+### Theme-Specific Favicon Behavior
+
+If `favicon` is set to `true`:
+
+**For SAP standard themes:**
+
+-   Uses the SAP logo as favicon
+-   Falls back on any existing favicon already in the DOM
+
+**For custom themes:**
+
+-   Derives favicon from the theme's [sapUiFavicon](configuration-options-and-url-parameters-91f2d03.md) parameter.
+-   Custom themes can define their own favicon through [theme parameters](enhanced-theming-concepts-45df6df.md).
+-   Falls back on SAP logo if no custom favicon has been defined.
+
+
+
+### Security Considerations
+
+-   **Only relative paths are allowed** for favicon URLs
+-   Absolute URLs are rejected to prevent security vulnerabilities
+-   The favicon path is resolved relative to the current page origin
+
+
+
+### Advanced Usage
+
+**Checking Current Favicon:**
+
+**JavaScript**:
+
+```
+sap.ui.require(["sap/ui/core/Theming"], function(Theming) {
+  Theming.getFavicon().then(function(faviconPath) {
+    console.log("Current favicon:", faviconPath);
+  });
+});
+```
+
+**TypeScript**:
+
+```
+import Theming from "sap/ui/core/Theming";
+
+Theming.getFavicon().then((faviconPath: string) => {
+  console.log("Current favicon:", faviconPath);
+});
+```
+
+**Conditional Favicon Setting**:
+
+**JavaScript**:
+
+```
+sap.ui.require(["sap/ui/core/Theming"], function(Theming) {
+  var currentTheme = Theming.getTheme();
+  if (currentTheme.includes("dark")) {
+    Theming.setFavicon("assets/favicon-dark.ico");
+  } else {
+    Theming.setFavicon("assets/favicon-light.ico");
+  }
+});
+```
+
+**TypeScript**:
+
+```
+import Theming from "sap/ui/core/Theming";
+
+const currentTheme = Theming.getTheme();
+if (currentTheme.includes("dark")) {
+  Theming.setFavicon("assets/favicon-dark.ico");
+} else {
+  Theming.setFavicon("assets/favicon-light.ico");
+}
+```
+
+
+
+## Advanced Theme Root Scenarios
+
+Beyond basic theme root configuration, SAPUI5 supports complex scenarios for enterprise deployments and multi-service architectures.
+
+
+
+### Library-Specific Theme Roots
+
+Configure different theme roots for specific libraries:
+
+```
+<script
+  id="sap-ui-bootstrap"
+  src="/resources/sap-ui-core.js"
+  data-sap-ui-theme="myCustomTheme"
+  data-sap-ui-theme-roots='{
+    "myCustomTheme": {
+      "": "https://general.theme.service/",
+      "sap.ui.core": "https://core.theme.service/",
+      "my.custom.lib": "https://custom.lib.service/"
+    }
+  }'>
+</script>
+```
+
+In this configuration, the following applies:
+
+-   Empty string \(`""`\) sets the default theme root for all libraries.
+-   `"sap.ui.core"` overrides the theme root specifically for the core library.
+-   `"my.custom.lib"` sets a dedicated theme root for custom libraries.
+
+
+
+### Complex Multi-Service Setup
+
+For large-scale deployments with multiple theming services:
+
+**JavaScript**:
+
+```
+globalThis["sap-ui-config"] = {
+  "theme": "myEnterpriseTheme",
+  "theme-roots": {
+    "myEnterpriseTheme": {
+      "": "https://cdn.enterprise.com/ui5-themes/",
+      "sap.ui.core": "https://core-themes.enterprise.com/",
+      "sap.m": "https://mobile-themes.enterprise.com/",
+      "company.custom": "https://custom-themes.enterprise.com/"
+    },
+    "myTestTheme": {
+      "": "https://test-themes.enterprise.com/"
+    }
+  }
+};
+```
+
+**TypeScript**:
+
+```
+(globalThis as any)["sap-ui-config"] = {
+  "theme": "myEnterpriseTheme",
+  "theme-roots": {
+    "myEnterpriseTheme": {
+      "": "https://cdn.enterprise.com/ui5-themes/",
+      "sap.ui.core": "https://core-themes.enterprise.com/",
+      "sap.m": "https://mobile-themes.enterprise.com/",
+      "company.custom": "https://custom-themes.enterprise.com/"
+    },
+    "myTestTheme": {
+      "": "https://test-themes.enterprise.com/"
+    }
+  }
+};
+```
+
+
+
+### Theme Root Inheritance and Fallbacks
+
+-   If a specific library can't be found in a library-specific theme root, SAPUI5 falls back on the default theme root \(empty string key\)
+-   If no theme root has been configured for a theme, SAPUI5 uses the default UI5 resource paths
+-   Theme roots are resolved in the following order: library-specific → default \(`""`\) → default paths
 
 **Related Information**  
 

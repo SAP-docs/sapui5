@@ -12,7 +12,7 @@ Fields can have an associated value help, or a dropdown list for several fixed v
 
 ## Value Help
 
-Value help allows end users to either select a value from a value help entity associated with the field or define a condition to retrieve a suitable value from the main entity.
+Value help allows users to either select a value from a value help entity associated with the field or define a condition to retrieve a suitable value from the main entity.
 
 ![](images/Value_help_with_value_help_dialog_82cf6c7.png)
 
@@ -98,7 +98,7 @@ For fields of type `Edm.DateTimeOffset`, a date/time picker is rendered when the
 
 ![](images/Input_Field_Without_a_Timezone_Dialog_b07bbe3.png)
 
-When an end user selects a date or time using the picker, the `DateTimeOffset` field is converted and displayed in the UI's timezone, as determined by SAPUI5. The following screenshot shows an input field without a specified or default timezone:
+When a user selects a date or time using the picker, the `DateTimeOffset` field is converted and displayed in the UI's timezone, as determined by SAPUI5. The following screenshot shows an input field without a specified or default timezone:
 
 ![](images/Input_Field_with_No_Timezone_or_the_Default_Timezone_a2f5fc8.png)
 
@@ -186,7 +186,7 @@ The following screenshot shows an input field where a timezone has been specifie
 
 ## History of Recently Entered Values
 
-Fields can display the history of recently entered values, which is especially helpful when end users frequently select the same entries from a long list. When this feature is enabled, the field saves the values previously entered by end user. Upon focusing on the field, a list of recently entered values is shown. When the user starts typing, the list is filtered based on their input. If there are no previously entered values, the list is not displayed, even if the feature is enabled.
+Fields can display the history of recently entered values, which is especially helpful when users frequently select the same entries from a long list. When this feature is enabled, the field saves the values previously entered by the user. Upon focusing on the field, a list of recently entered values is shown. When the user starts typing, the list is filtered based on their input. If there are no previously entered values, the list is not displayed, even if the feature is enabled.
 
 To enable the history of recently entered values, use the `INPUTFIELD_HISTORY` parameter in SAP Fiori launchpad.
 

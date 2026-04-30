@@ -4,13 +4,6 @@
 
 You can enable input assistance to fill object page fields with recommended values.
 
-> ### Note:  
-> This topic describes how to use the building block within SAP Fiori elements object pages and subobject pages. If the functionality isn't available when you use the building block in other floorplans, custom pages, or custom sections, you can try achieving the functionality through other means, such as the following:
-> 
-> -   Properties or methods exposed by the building block
-> 
-> -   Custom code using extensions
-
 In edit mode, object page fields can include recommendations. The recommendations are shown in the *Recommendations* section in the same order as they are sent from the back end. The back end can also label one of the recommendations as the most fitting recommendation. This recommendation is displayed as a placeholder in the field with a different style to indicate to users that recommendations are available for this field.
 
 Users can click the field and accept the recommended value or ignore the recommendation and choose a different value.
@@ -55,7 +48,9 @@ Input assistance can be modeled using the RESTful Application Programming Model 
 
 ### Input Assistance in RESTful Application Programming Model \(RAP\)
 
-The `UI.Recommendations` annotation is the most important annotation and is defined at entity level. The entity uses back-end recommendations and points to a complex property in the entity.
+The `UI.Recommendations` annotation is the most important annotation and is defined at entity level. For more information about enabling recommendations, see [Adding RAP Recommendations](https://help.sap.com/docs/abap-cloud/abap-rap/defining-and-implementing-rap-recommendations?state=DRAFT).
+
+The entity uses back-end recommendations and points to a complex property in the entity.
 
 > ### Sample Code:  
 > Usage of `UI.Recommendations`
@@ -332,4 +327,6 @@ To simplify, we provide the `onBeforeAcceptRecommendations()` application hook, 
 > }
 > 
 > ```
+
+For more information and live examples, see the SAP Fiori Development Portal at [Global Patterns - Input Assistance](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/inputAssistance).
 

@@ -112,8 +112,6 @@ In this type of list, each list item displays up to three fields. Only use this 
 
 Number of list items displayed: up to 3.
 
-![](images/List_Card_-_Condensed_Bar_789d0c4.png)
-
 
 
 <a name="loio1a3c28c662c94419ad6e64daab05a823__section_ekf_t4r_fhc"/>
@@ -127,7 +125,33 @@ In this type of list, each list item displays up to five fields. The first `Data
 > 
 > Number of list items displayed: up to 5.
 
+
+<table>
+<tr>
+<td valign="top">
+
+![](images/List_Card_-_Condensed_Bar_789d0c4.png)
+
+</td>
+<td valign="top">
+
 ![](images/List_Card_-_Extended_b62df9c.png)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Condensed List Type - Bar Flavor
+
+</td>
+<td valign="top">
+
+Extended List Type - Bar Flavor
+
+</td>
+</tr>
+</table>
 
 
 

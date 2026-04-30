@@ -774,7 +774,7 @@ The overview page has these new features or enhancements:
 
 -   Configuring the `requestAtLeast` property of the `PresentationVariant` annotation lets you receive additional dimensions from the back end. For more information, see [Annotations Used in Overview Pages](../06_SAP_Fiori_Elements/annotations-used-in-overview-pages-65731e6.md).
 
--   Defining the `getCustomMessage` function in the controller file lets you customize success messages \(for no data\) and error scenarios. You can also add an icon for the success scenario. For more information, see [Configuring Custom Messages on the Overview Page](../06_SAP_Fiori_Elements/configuring-custom-messages-on-the-overview-page-b75910f.md).
+-   Defining the `getCustomMessage` function in the controller file lets you customize success messages \(for no data\) and error scenarios. You can also add an icon for the success scenario. For more information, see  <?sap-ot O2O class="- topic/xref " href="b75910f6d7eb48a58d83267be2c71385.xml" text="" desc="" xtrc="xref:36" xtrf="file:/home/builder/src/dita-all/djd1773515644246/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/771f4d5cb01c4b6da7232ef8a841683d.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> .
 
 -   The time series now supports the vertical bullet, stacked column, and scatter charts. For more information, see [Chart Cards Used in Overview Pages](../06_SAP_Fiori_Elements/chart-cards-used-in-overview-pages-68e62ad.md).
 
@@ -867,6 +867,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.145](what-s-new-in-sapui5-1-145-7676a2a.md "With this release SAPUI5 is upgraded from version 1.144 to 1.145.")
 
 [What's New in SAPUI5 1.144](what-s-new-in-sapui5-1-144-ad1c805.md "With this release SAPUI5 is upgraded from version 1.143 to 1.144.")
 

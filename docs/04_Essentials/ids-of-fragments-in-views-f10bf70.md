@@ -4,13 +4,5 @@
 
 For fragments that are used within declarative views, generated IDs are not prefixed.
 
-The following rules apply for given IDs:
-
--   Given IDs are prefixed with only the view ID when no fragment ID was given
--   Given IDs are prefixed with both view ID and fragment ID when a fragment ID was given
-
-**Related Information**  
-
-
-[Example: JS Fragments Used in XML Views](example-js-fragments-used-in-xml-views-faaff35.md "Example of JS fragments used in an XML view")
+This content has moved to [ID Handling in SAPUI5: The Complete Guide](../05_Developing_Apps/id-handling-in-sapui5-the-complete-guide-f51dbb7.md).
 

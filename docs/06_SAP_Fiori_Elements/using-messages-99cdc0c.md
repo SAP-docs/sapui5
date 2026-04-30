@@ -31,9 +31,9 @@ The system generates messages in response to what users do in the SAP system. A 
 
 ## Back-End Validation Messages After a Field Change
 
-Use input validations moderately, as they can slow down the response time and unnecessarily prevent the end user from providing incomplete entries in the draft status.
+Use input validations moderately, as they can slow down the response time and unnecessarily prevent the user from providing incomplete entries in the draft status.
 
-Input must be validated before the draft object is activated, or when the end user uses the Enter button or *Validation* button on mobile devices. The validation process must return state messages for the fields that have invalid values. If there are invalid values in any fields, the draft is not activated and the end user returns to the draft version to correct the values. After the user corrects the value in a field, the back end must validate each changed field again and remove or display a state message corresponding to that field.
+Input must be validated before the draft object is activated, or when the user uses the Enter button or *Validation* button on mobile devices. The validation process must return state messages for the fields that have invalid values. If there are invalid values in any fields, the draft is not activated and the user returns to the draft version to correct the values. After the user corrects the value in a field, the back end must validate each changed field again and remove or display a state message corresponding to that field.
 
 > ### Note:  
 > You can configure multiple targets in a single message rather than configuring each target in multiple messages. This type of configuration must be used only during special scenarios, for example, some fields might be correct individually but are erroneous when considered collectively, like when the start date value surpasses the end date value. Another scenario is while highlighting the unit of measure value of an associated erroneous field. In these scenarios, you must ensure that the fields corresponding to different targets are on the same page in the UI.

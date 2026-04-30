@@ -65,7 +65,7 @@ To disable this filter, you must add the following sample code to your annotatio
 > });
 > ```
 
-If you disable the *Editing Status* filter, end users can no longer filter their objects based on the editing status.
+If you disable the *Editing Status* filter, users can no longer filter their objects based on the editing status.
 
 
 

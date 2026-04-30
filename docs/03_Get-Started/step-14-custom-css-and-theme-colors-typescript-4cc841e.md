@@ -139,7 +139,7 @@ To highlight the output text, we use a `FormattedText` control, which can be sty
 
 [Theme Parameter Toolbox](https://ui5.sap.com/test-resources/sap/m/demokit/theming/webapp/index.html)
 
-[Creating Themable User Interfaces](../04_Essentials/creating-themable-user-interfaces-a2c67ac.md "There are several things you should keep in mind to ensure that an application can actually be themed.")
+[Creating Themable User Interfaces](../04_Essentials/creating-themable-user-interfaces-a2c67ac.md "Best practices for developing SAPUI5 applications and controls that properly adapt to different themes while ensuring an excellent and consistent user experience, good performance, and consistent accessibility standards across all themes.")
 
 [Compatibility Rules](../02_Read-Me-First/compatibility-rules-91f0873.md "The following sections describe what SAP can change in major, minor, and patch releases. Always consider these rules when developing apps, features, or controls with or for SAPUI5.")
 

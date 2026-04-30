@@ -506,9 +506,9 @@ Both actions calling OData function imports \(`UI.DataFieldForAction`\) and acti
 
 When you configure navigation buttons, you have two options:
 
--   Configure the button so that the end user must explicitly select a context \(`RequiresContext=true`\).
+-   Configure the button so that the user must explicitly select a context \(`RequiresContext=true`\).
 
--   Configure the button so that the end user doesn't need to select a context \(`RequiresContext=false`\), meaning that the available context is passed.
+-   Configure the button so that the user doesn't need to select a context \(`RequiresContext=false`\), meaning that the available context is passed.
 
 
 
@@ -707,7 +707,7 @@ You must ensure that the setting for the total number of requests of OData batch
 
 ### Prefilling Action Parameters with Calculated Default Values
 
-You can calculate default values for action parameters through a back-end function. As a result, when an end user opens the action parameter dialog on the UI, the parameter fields are prefilled with the returned values of the back-end function.
+You can calculate default values for action parameters through a back-end function. As a result, when a user opens the action parameter dialog on the UI, the parameter fields are prefilled with the returned values of the back-end function.
 
 To achieve this, you must annotate the action with `Common.DefaultValuesFunction`.
 

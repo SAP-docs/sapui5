@@ -128,57 +128,53 @@ To define custom parameters for intent-based navigation, proceed as follows:
     > Adding parameters during navigation
     > 
     > ```
-    > getParameters: function(oNavigateParams,oSelectionVariantParams) {
-    >  
-    >             // to get the select option property names, make use of this to check what values are available to modify
-    >             var aSelectOptionNames = oSelectionVariantParams.getSelectOptionsPropertyNames();
-    >  
-    >             var oFilter1 = oSelectionVariantParams.getSelectOption("Filter1");
-    >             var oFilter2 = oSelectionVariantParams.getSelectOption("Filter2");
-    >  
-    >              ///
-    >                 Your logic to extract values from oFilter1 and oFilter2
-    >             ///
-    >   
-    >             /// logic to remove Filter1 and Filter2
-    >             /// assigning empty values to Filter1 and Filter2, with ignoreEmptyString as true, this will be removed from the Selection Variant
-    >  
-    >                  var Filter1 = {
-    >                     path: "Filter1",
-    >                     operator: "EQ",
-    >                     value1: "",
-    >                     value2: null,
-    >                     sign: "I"
-    >                 };
-    >  
-    >  
-    >                 var Filter2 = {
-    >                     path: "Filter2",
-    >                     operator: "EQ",
-    >                     value1: "",
-    >                     value2: null,
-    >                     sign: "I"
-    >                 };
-    >  
+    > getParameters: function(oNavigateParams, oSelectionVariantParams) {
+    >     // to get the select option property names, make use of this to check what values are available to modify
+    >     var aSelectOptionNames = oSelectionVariantParams.getSelectOptionsPropertyNames();
     > 
-    >             /// logic to remove Filter1 and Filter2
-    >   
-    >             var aCustomSelectionVariant = [];
-    >             var oFilter3 = {
-    >                 path: "Filter3PropertyName",
-    >                 operator: "EQ",
-    >                 value1: "< Value you want to include >",
-    >                 value2: null,
-    >                 sign: "I"
-    >             };
-    >             aCustomSelectionVariant.push(oFilter3);
-    >             aCustomSelectionVariant.push(oFilter2);
-    >             aCustomSelectionVariant.push(oFilter1);
-    >             return {
-    >                 selectionVariant: aCustomSelectionVariant,
-    >                 ignoreEmptyString: true
-    >             };
-    >         },
+    >     var oFilter1 = oSelectionVariantParams.getSelectOption("Filter1");
+    >     var oFilter2 = oSelectionVariantParams.getSelectOption("Filter2");
+    > 
+    >     ///
+    >     Your logic to extract values from oFilter1 and oFilter2
+    >     ///
+    > 
+    >     /// logic to remove Filter1 and Filter2
+    >     /// assigning empty values to Filter1 and Filter2, with ignoreEmptyString as true, this will be removed from the Selection Variant
+    >     var Filter1 = {
+    >         path: "Filter1",
+    >         operator: "EQ",
+    >         value1: "",
+    >         value2: null,
+    >         sign: "I"
+    >     };
+    > 
+    >     var Filter2 = {
+    >         path: "Filter2",
+    >         operator: "EQ",
+    >         value1: "",
+    >         value2: null,
+    >         sign: "I"
+    >     };
+    > 
+    >     /// logic to remove Filter1 and Filter2
+    > 
+    >     var aCustomSelectionVariant = [];
+    >     var oFilter3 = {
+    >         path: "Filter3PropertyName",
+    >         operator: "EQ",
+    >         value1: "< Value you want to include >",
+    >         value2: null,
+    >         sign: "I"
+    >     };
+    >     aCustomSelectionVariant.push(oFilter3);
+    >     aCustomSelectionVariant.push(oFilter2);
+    >     aCustomSelectionVariant.push(oFilter1);
+    >     return {
+    >         selectionVariant: aCustomSelectionVariant,
+    >         ignoreEmptyString: true
+    >     };
+    > },
     > ```
 
     > ### Note:  
@@ -206,21 +202,22 @@ To define custom parameters for intent-based navigation, proceed as follows:
     > ### Sample Code:  
     > ```
     > "card002_ReorderSoon": {
-    >   "model": "purchaseOrder",
-    >   "template": "sap.ovp.cards.list",
-    >   "settings": {
-    >     "title": "reorder Soon",
-    >     "subTitle": "Less than 10 in stock",
-    >     "listType": "condensed",
-    >     "entitySet": "PurchaseSet",
-    >     "customParams": "<function-name>"    // Depending on the logic you define in step 1, input the function name.
-    >     ...
-    >     ...
+    >     "model": "purchaseOrder",
+    >     "template": "sap.ovp.cards.list",
+    >     "settings": {
+    >         "title": "reorder Soon",
+    >         "subTitle": "Less than 10 in stock",
+    >         "listType": "condensed",
+    >         "entitySet": "PurchaseSet",
+    >         "customParams": "<function-name>"    // Depending on the logic you define in step 1, input the function name.
+    >         ...
+    >     }
+    > }
     > ```
 
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Custom Navigation Parameters](custom-navigation-parameters-ee9ac2c.md).
+> For information about SAP Fiori elements for OData V2, see [Defining Custom Navigation Parameters](defining-custom-navigation-parameters-ee9ac2c.md).
 

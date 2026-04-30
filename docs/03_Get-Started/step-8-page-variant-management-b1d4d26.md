@@ -25,7 +25,7 @@ As a page variant, the view management is now no longer part of the `SmartFilter
   
 **Central View Management**
 
-![](images/Smart_Controls_Tutorial_Step_08a_ac9637a.png "Central View Management")
+![Product table with columns for Product Id, Price, Name, and Category, plus filter options above.](images/Smart_Controls_Tutorial_Step_08a_ac9637a.png "Central View Management")
 
 In addition, the `VariantManagement` control is no longer displayed in the *Filters* dialog of the `SmartFilterBar` control:
 
@@ -33,7 +33,7 @@ In addition, the `VariantManagement` control is no longer displayed in the *Filt
   
 **Filter Dialog Without View Management**
 
-![](images/Smart_Controls_Tutorial_Step_08b_20ef10b.png "Filter Dialog Without View Management")
+![Filters dialog with fields for company code and currency, plus options to add, edit, or sort filters.](images/Smart_Controls_Tutorial_Step_08b_20ef10b.png "Filter Dialog Without View Management")
 
 Other than that, the page variant is just the same as the `VariantManagement` control.
 

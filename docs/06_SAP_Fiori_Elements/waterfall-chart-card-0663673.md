@@ -2,7 +2,7 @@
 
 # Waterfall Chart Card
 
-You use waterfall charts to analyze a cumulative value.
+You can render the chart as a waterfall chart to analyze a cumulative value.
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V4, see [Waterfall Chart](waterfall-chart-e8106e5.md).
@@ -23,7 +23,7 @@ Waterfall charts allow you to see the change in cumulative values from the initi
 
 
 > ### Note:  
-> By default the legend shows the name of the measure mapped to the chart and two groups `<0` and `>0`. If there is more than one measure, all measures are displayed instead of the measure names.
+> By default, the legend shows the name of the measure mapped to the chart and two groups `<0` and `>0`. If there is more than one measure, all measures are displayed instead of the measure names.
 
 > ### Remember:  
 > -   Waterfall charts need at least one measure and one dimension

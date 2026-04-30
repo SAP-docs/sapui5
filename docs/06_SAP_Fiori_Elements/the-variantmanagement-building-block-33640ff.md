@@ -8,7 +8,7 @@ This building block can be applied at two levels:
 
 -   Page level: The variant management feature applies to the entire page, enabling variant management for all linked flex-enabled controls.
 
-    When the page-level variant management is enabled, end users can save all the personalization settings applied to the flex-enabled controls, such as the `FilterBar` building block, the `Table` building block, or the `Chart` building block, into a user-defined variant.
+    When the page-level variant management is enabled, users can save all the personalization settings applied to the flex-enabled controls, such as the `FilterBar` building block, the `Table` building block, or the `Chart` building block, into a user-defined variant.
 
 -   Control level: The variant management feature applies only to the controls that are linked to the `VariantManagement` building block, such as the `FilterBar` building block.
 

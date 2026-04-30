@@ -129,28 +129,27 @@ The default values, however, should be referenced via the correct type value fro
 Define the `library.js` as static dependency and use it as a local variable for convenience:
 
 ```js
-sap.ui.define(["sap/ui/core/Control", "./library"], function(Control, library) {
-    // shortcut on Enum
-    var SizeMode = library.SizeMode;
- 
-    var MyControl = Control.extend("my.lib.MyControl", {
-        metadata : {
-            library : "my.lib",
-            properties : {
-                sizeMode: {type : "my.lib.SizeMode", group : "Appearance", defaultValue : SizeMode.Auto}
-            }
-        }
+sap.ui.define([
+    "sap/ui/core/Control",
+    "./library"
+], (Control, myLib) => {
+    "use strict";
+    const { SizeMode } = myLib;
+
+    return Control.extend("my.lib.MyControl", {
+        metadata: {
+            library: "my.lib",
+            properties: {
+                sizeMode: {
+                    type: "my.lib.SizeMode",
+                    group: "Appearance",
+                    defaultValue: SizeMode.Auto
+                }
+            },
+            // ...
+        },
+        // ...
     });
- 
-    MyControl.prototype.setSizeMode = function (sMode) {
-        switch(sMode) {
-            case SizeMode.Auto: ... break;
-            case SizeMode.Full: ... break;
-            ...
-        }
-    };
- 
-    return MyControl;
 });
 ```
 

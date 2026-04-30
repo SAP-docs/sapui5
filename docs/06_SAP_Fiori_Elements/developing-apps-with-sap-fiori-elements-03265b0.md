@@ -28,7 +28,7 @@ The following overview highlights the key benefits of developing your SAP Fiori 
 
 -   **Enterprise Readiness**
 
-    -   Deliver **high-quality** SAPUI5 applications to end users.
+    -   Deliver **high-quality** SAPUI5 applications to users.
 
     -   Ensure **stable, optimized** UI code out of the box.
 

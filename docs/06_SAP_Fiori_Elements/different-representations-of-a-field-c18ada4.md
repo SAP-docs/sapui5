@@ -79,7 +79,7 @@ A field can be displayed as an amount \(a numerical value\) with a currency or a
 
 To display a currency or a unit of measure, use the `Measures.ISOCurrency` and `Measures.Unit` annotations. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Number with Currency or Unit of Measure](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldNumberWithUnitOrCurrencyAligned).
 
-For more information about displaying fields with a currency or a unit of measure in a table, see [Displaying Amount with Currency or Unit of Measure](displaying-amount-with-currency-or-unit-of-measure-f6cf715.md).
+For more information about displaying fields with a currency or a unit of measure in a table, see [Displaying Amount with Currency or Unit of Measure in Tables](displaying-amount-with-currency-or-unit-of-measure-in-tables-f6cf715.md).
 
 
 
@@ -344,7 +344,7 @@ For more information, see [Navigation from an App \(Outbound Navigation\)](navig
 
 ### Quick View Card
 
-This allows applications to specify additional information that end users can access by clicking on the link. For example, the link shows the status of a document, and clicking on it shows more detailed information.
+This allows applications to specify additional information that users can access by clicking on the link. For example, the link shows the status of a document, and clicking on it shows more detailed information.
 
 For more information, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md).
 
@@ -815,11 +815,11 @@ For more information, see the [Date Picker and Date/Time Picker](field-help-a560
 
 ### Using the `UI.InputMask` Annotation
 
-A field can be rendered as a masked input field, allowing end users to enter values only in the specified format. No other formats are accepted by these fields. Examples of such fields include a postal code, a product activation key, or a phone number with an area code.
+A field can be rendered as a masked input field, allowing users to enter values only in the specified format. No other formats are accepted by these fields. Examples of such fields include a postal code, a product activation key, or a phone number with an area code.
 
 ![](images/Masked_Input_Field_6a86d90.png)
 
-For example, if the mask symbol is `S^AP-AA-999`, the end user input value must be `DE239`. The value displayed on the UI is `SAP-DE-239`. The characters used as mask symbols such as `SAP`, `I`, or special characters such as `()` are only displayed on the UI and not saved in the back end.
+For example, if the mask symbol is `S^AP-AA-999`, the user input value must be `DE239`. The value displayed on the UI is `SAP-DE-239`. The characters used as mask symbols such as `SAP`, `I`, or special characters such as `()` are only displayed on the UI and not saved in the back end.
 
 > ### Sample Code:  
 > XML Annotation
@@ -916,7 +916,7 @@ Certain input fields must be hidden from the UI to protect sensitive data. To ac
 
 ![](images/Masked_Password_Field_4cc5334.png)
 
-In edit mode, the input field masks each character with a dot \(•\), so end users do not see the text they enter as plain text. In display mode, the input field replaces each character with an asterisk \(\*\).
+In edit mode, the input field masks each character with a dot \(•\), so users do not see the text they enter as plain text. In display mode, the input field replaces each character with an asterisk \(\*\).
 
 > ### Sample Code:  
 > XML Annotation

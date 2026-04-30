@@ -41,7 +41,7 @@ The paste action is available for the following scenarios:
 > 
 > -   If new rows are created during the paste action, all these rows are included in a single `POST` batch call. The duration of the `POST` call increases with the number of rows pasted.
 > 
-> -   For new rows created during the paste action, the order of the data copied from a spreadsheet or external application might differ from the order in the table after the end user has inserted it. SAP Fiori elements cannot control this.
+> -   For new rows created during the paste action, the order of the data copied from a spreadsheet or external application might differ from the order in the table after the user has inserted it. SAP Fiori elements cannot control this.
 > -   This feature is not supported in custom tables.
 > 
 > -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available.

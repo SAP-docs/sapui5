@@ -286,7 +286,7 @@ The `template` property points to the custom fragment definition, located at `<P
 > 
 > ```
 
-The `onMultiValueRatingLevels` operator is implemented as a callback function. This function provides a single parameter, including an array of input values provided by the end user.
+The `onMultiValueRatingLevels` operator is implemented as a callback function. This function provides a single parameter, including an array of input values provided by the user.
 
 For any custom operators, application developers must ensure they are added to the `customFilterOperators` property under the `sap.fe` section of the `manifest.json` file. This step is essential to ensure that SAP Fiori elements can recognize and handle the custom operator correctly.
 

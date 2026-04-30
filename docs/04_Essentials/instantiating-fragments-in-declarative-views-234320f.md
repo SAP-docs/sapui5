@@ -28,7 +28,7 @@ The following code example shows an XML view that includes both types of fragmen
 **Related Information**  
 
 
-[Unique IDs](unique-ids-5da591c.md "You can use a unique ID for a fragment that will be used as a prefix for all controls in a fragment instance.")
+[ID Handling in SAPUI5: The Complete Guide](../05_Developing_Apps/id-handling-in-sapui5-the-complete-guide-f51dbb7.md "This guide covers everything you need to know about ID handling in SAPUI5, from stable IDs for controls and components to DOM element IDs and how the framework manages them. Understanding ID handling is essential for building maintainable, testable, and adaptable applications.")
 
 [Using Other Objects Instead of Controllers](using-other-objects-instead-of-controllers-c24ea6d.md "For the instantiation of fragments, the oController object must not necessarily be a controller. It can also be another object.")
 

@@ -56,9 +56,9 @@ If a field is annotated with `FieldControl` set to `mandatory`, an asterisk \(\*
 
 ## Empty Row Mode
 
-When an end user begins adding data to a field in an existing empty row, a new empty row is automatically created. In a responsive table, the empty row appears at the top, while in a grid table, it appears at the bottom. There is no corresponding entry in the draft table for the empty row.
+When a user begins adding data to a field in an existing empty row, a new empty row is automatically created. In a responsive table, the empty row appears at the top, while in a grid table, it appears at the bottom. There is no corresponding entry in the draft table for the empty row.
 
-The automatically added empty row is removed if the end user doesn't add any data. It isn't required to manually remove the empty row.
+The automatically added empty row is removed if the user doesn't add any data. It isn't required to manually remove the empty row.
 
 The empty row mode has the following features:
 
@@ -153,7 +153,7 @@ You can define the `InlineCreationRows` mode as the default creation mode that i
 
 If a field is marked with the `Capabilities.InsertRestrictions.RequiredProperties` annotation, an asterisk \(\*\) is displayed in the column header.
 
-If the end user doesn't enter a value to any of the required fields, an error message is shown. If the required fields aren't a part of the displayed table columns, an error message is displayed asking the end user to add the required fields within the displayed table columns using the table settings.
+If the user doesn't enter a value to any of the required fields, an error message is shown. If the required fields aren't a part of the displayed table columns, an error message is displayed asking the user to add the required fields within the displayed table columns using the table settings.
 
 > ### Note:  
 > As a general guideline for `RequiredProperties`, we recommend that you set the `UI.Importance` to `High` for required properties in a `LineItem` annotation. If you don't set it, the framework still evaluates the `UI.Importance` as `High` so that the columns don't overflow and are hidden on small-screen devices.

@@ -7,18 +7,17 @@ A cache buster allows SAPUI5 to notify the browser to refresh the resources only
 > ### Note:  
 > SAPUI5 supports the cache buster concept for Java and ABAP servers and for SAP Business Technology Platform. SAP HANA XS does **not** support the cache buster concept.
 
-When you want to cache your resources permanently, you simply need to change the URL in the SAPUI5 bootstrap tag from `resources/sap-ui-core.js` to `resources/sap-ui-cachebuster/sap-ui-core.js`.
+When you want to cache your resources permanently, you simply need to change the URL in the SAPUI5 bootstrap tag from `resources/sap-ui-core.js` to <code>resources<b>/sap-ui-cachebuster</b>/sap-ui-core.js</code>.
 
 The cache buster mechanism allows to always put the SAPUI5 resources into the browsers cache until a library or a web application has been changed. The default behavior of the SAPUI5 resource handler is either to cache the resources for a specific amount of time or alternatively in development mode it is using the `304/NOT MODIFIED` mechanism to check the SAPUI5 resources for being up-to-date. Both mechanisms are not optimal in a final, productive scenario - that is the reason for the implementation of the cache buster mechanism. Applications, which want to use the cache buster mechanism, have to explicitly decide to use it.
 
 The cache buster mechanism is part of the resource servlet. In general, requests to JavaScript resources can be handled via the cache buster mechanism. Typically this is used for the initial request for the bootstrap JavaScript:
 
 ```html
-  <script type="text/javascript" 
-  	id="sap-ui-bootstrap"
-  	src="resources/sap-ui-cachebuster/sap-ui-core.js"
-  	data-sap-ui-libs="sap.ui.core,sap.m,sap.ui.table"
-	data-sap-ui-theme="sap_horizon"></script>
+<script id="sap-ui-bootstrap"
+    src="resources/sap-ui-cachebuster/sap-ui-core.js"
+    data-...="..."
+></script>
 ```
 
 The bootstrap JavaScript will be included via the URL `resources/sap-ui-cachebuster/sap-ui-core.js` instead of `resources/sap-ui-core.js`.

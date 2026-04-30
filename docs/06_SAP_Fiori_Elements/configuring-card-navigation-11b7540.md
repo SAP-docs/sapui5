@@ -2,7 +2,7 @@
 
 # Configuring Card Navigation
 
-All cards support navigation, both to a different SAP Fiori application using intent based navigation, and to external applications and websites through a direct URL which opens in a new browser tab. To trigger the navigation, users click or tap on a card header and in some cases, on an item within the card.
+You can configure internal and external navigation in cards.
 
 
 
@@ -10,6 +10,8 @@ All cards support navigation, both to a different SAP Fiori application using in
 > For information about SAP Fiori elements for OData V4, see [Configuring Card Navigation](configuring-card-navigation-530f9e6.md).
 
 
+
+All cards support navigation, both to a different SAP Fiori application using intent based navigation, and to external applications and websites through a direct URL which opens in a new browser tab. To trigger the navigation, users click or tap on a card header and in some cases, on an item within the card.
 
 Navigation information is taken from the `com.sap.vocabularies.UI.v1.Identification`
 
@@ -20,9 +22,9 @@ Navigation information is taken from the `com.sap.vocabularies.UI.v1.Identificat
 
 The recommended way to configure intent-based navigation is to use `DataFieldForIntentBasedNavigation`. However, for navigation to a specific application route that is not configured as target mapping, you can also use `DataFieldWithUrl` to construct the specific application route. The overview page will identify that this is an intent-based navigation and open the application in the relevant context, in the same tab.
 
-Note that information about the single record selected can only be passed on to the navigation destination from list or table cards. To support this option, provide navigation configuration in the `com.sap.vocabularies.UI.v1.LineItem` term used by that specific card.
+Note that information about the single record selected can only be passed to the navigation destination only from list or table cards. To enable this behavior, provide navigation configuration in the `com.sap.vocabularies.UI.v1.LineItem` term used by the specific card.
 
-If more than one navigation record is provided in the `com.sap.vocabularies.UI.v1.Identification` or `com.sap.vocabularies.UI.v1.LineItem` terms, the first one will be used for each term. The navigation records would be sorted according to importance, set in the`com.sap.vocabularies.UI.v1.ImportanceType` annotation, and their order of entry. The `com.sap.vocabularies.UI.v1.Identification` term can be configured in the application manifest file by setting the `identificationAnnotationPath` property with a qualifier, as shown in the following sample code:
+If more than one navigation record is provided in the `com.sap.vocabularies.UI.v1.Identification` or `com.sap.vocabularies.UI.v1.LineItem` terms, the first record is used for each term. The navigation records are sorted according to their importance, set in the`com.sap.vocabularies.UI.v1.ImportanceType` annotation, and their order of entry. The `com.sap.vocabularies.UI.v1.Identification` term can be configured in the `manifest.json` file by setting the `identificationAnnotationPath` property with a qualifier, as shown in the following sample code:
 
 > ### Sample Code:  
 > ```

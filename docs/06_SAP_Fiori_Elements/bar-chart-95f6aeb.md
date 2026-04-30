@@ -2,7 +2,7 @@
 
 # Bar Chart
 
-You can render the chart as a a bar chart to display data, such as total product sales over a period of years in columns.
+You can render the chart as a bar chart to display data, such as total product sales over a period of years in columns.
 
 The number of columns is equal to the number of measures in the annotation file.
 
@@ -70,7 +70,7 @@ The number of columns is equal to the number of measures in the annotation file.
 
 ## Semantic Coloring
 
-The semantic colouring of a bar chart card is based on the target and threshold values.
+The semantic coloring of a bar chart card is based on the target and threshold values.
 
 The target values are taken from the properties such as `ToleranceRangeLowValue`, `ToleranceRangeHighValue`, `DeviationRangeLowValue`, and `DeviationRangeHighValue` of the data point annotations that are associated with the measure and `ImprovementDirection` property.
 
@@ -139,6 +139,8 @@ The measures can be maximizing, minimizing, or target, based on a threhold value
 
     ![](images/Example_of_a_Target_Measure_7626b9d.png "Example of a Target Measure")
 
+
+The following sample code how to define a bar chart:
 
 > ### Sample Code:  
 > ```

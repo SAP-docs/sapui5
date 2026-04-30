@@ -2,7 +2,7 @@
 
 # Overview Page
 
-An overview page is a data-driven SAP FioriSAP Fiori application built using SAPUI5SAPUI5 technology, OData services, and annotations for organizing large amounts of information.
+An overview page is a data-driven SAP Fiori application built using SAPUI5 technology, OData services, and annotations for organizing large amounts of information.
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V4, see [Overview Page](overview-page-c64ef8c.md).
@@ -30,13 +30,5 @@ Overview page application instances consist of a UI component that extends the o
 							layout.](images/Overview_page-_New_theme_0661464.png)
 
 > ### Note:  
-> When you are using more than one overview page application with the `sap-keep-alive` mode, it is recommended to upgrade the UI5 version to 1.96 or above.
-
-
-
-<a name="loio8a069ff6d9b34102980b8b2f1fc14a2b__section_qkz_q3z_ygc"/>
-
-## Related Links
-
-For more information about the overview page plugin, see [Building an App](building-an-app-bc6313e.md).
+> When you are using more than one overview page application with the `sap-keep-alive` mode, it is recommended to upgrade the SAPUI5 version to 1.96 or above.
 

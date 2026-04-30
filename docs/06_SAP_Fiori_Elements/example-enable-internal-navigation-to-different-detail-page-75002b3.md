@@ -10,10 +10,10 @@ The figure below shows a sample navigation scenario:
 
 ![](images/Internal_Navigation_11d89ac.png)
 
-Application developers must ensure that an appropriate route has been defined in the manifest for the detail page. Here's an example:
+Application developers must ensure that an appropriate route has been defined in the `manifest.json` file for the detail page. Here's an example:
 
 > ### Sample Code:  
-> Route defined in manifest
+> Route Defined in the `manifest.json` File
 > 
 > ```
 > "sap.ui5": {

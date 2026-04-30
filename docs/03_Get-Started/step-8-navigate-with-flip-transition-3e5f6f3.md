@@ -118,7 +118,7 @@ Then we change the `Employee.controller.js` file by adding the press handler `on
 
 ```js
 {
-	"_version": "2.6.0",
+	"_version": "2.7.0",
 	"sap.app": {
 		...
 	},

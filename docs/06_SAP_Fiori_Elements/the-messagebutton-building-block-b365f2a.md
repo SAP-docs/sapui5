@@ -31,6 +31,8 @@ If any bound messages remain after hook processing, the `MessageButton` control 
 > ### Note:  
 > You must manage the lifecycle of messages in the message model. For example, you can clear messages that are no longer relevant after an action or change, or ensure that state messages are only added after finalizing actions such as *Save*.
 
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Message Button - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/messageButton/messageButtonDefault).
+
 
 
 <a name="loiob365f2af2e59456e831c7ee98a896d0e__section_htw_sjv_2fc"/>

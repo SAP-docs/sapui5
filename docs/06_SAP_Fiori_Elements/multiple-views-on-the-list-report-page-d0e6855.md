@@ -82,5 +82,5 @@ Tables are displayed by default.
 
 [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-97dfeea.md "You can define multiple views of a table and display them in multiple table mode. Users can switch between views using an icon tab bar.")
 
-[Defining Multiple Views in a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-in-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md "You can configure your application to display data for different entity sets and table settings.")
+[Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md "You can configure your application to display data for different entity sets and table settings.")
 

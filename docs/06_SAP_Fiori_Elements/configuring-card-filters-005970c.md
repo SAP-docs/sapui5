@@ -43,6 +43,11 @@ The following example shows filter configuration in the annotation document. The
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
@@ -67,7 +72,7 @@ The following example shows filter configuration in the annotation document. The
 
 
 
-The preference for displaying the currency type is taken from the SAP Fiori Launchpad user settings in the `DisplayCurrency` field of an application. You can also set filters for SAP Fiori overview page by passing a filter parameter in the URL. Applicable when you launch SAP Fiori overview pages from SAP Fiori Launchpad or from any other application with a filter parameter.
+The preference for displaying the currency type is taken from the SAP Fiori launchpad user settings in the `DisplayCurrency` field of an application. You can also set filters for SAP Fiori overview page by passing a filter parameter in the URL. Applicable when you launch SAP Fiori overview pages from SAP Fiori launchpad or from any other application with a filter parameter.
 
 > ### Note:  
 > You can only pass strings or integers as filter parameters. The filter applies automatically if the filter property exists in the entityset.

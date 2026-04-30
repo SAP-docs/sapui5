@@ -1,6 +1,6 @@
 <!-- loiof6cf7157273845f0ac7c447fe153cd90 -->
 
-# Displaying Amount with Currency or Unit of Measure
+# Displaying Amount with Currency or Unit of Measure in Tables
 
 You can configure the display of decimal values in unit-of-measure fields.
 

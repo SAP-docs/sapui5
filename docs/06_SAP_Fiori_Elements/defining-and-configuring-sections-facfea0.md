@@ -327,9 +327,9 @@ It is mandatory to define an ID for collection facets but optional for reference
 
 ## Tab Representation vs. Anchor Representation
 
-By default, `"Page"` mode is the section layout mode. In this mode, all the sections and subsections are added to the same page. End users can reach the section or subsection by either choosing the corresponding anchor below the header facet, or by simply scrolling down on the page.
+By default, `"Page"` mode is the section layout mode. In this mode, all the sections and subsections are added to the same page. Users can reach the section or subsection by either choosing the corresponding anchor below the header facet, or by simply scrolling down on the page.
 
-Alternatively, application developers can configure the object page using `"Tabs"` mode as the section layout mode. In this mode, the sections are represented as tabs under the header facet. End users can reach the right section or subsection only by choosing the corresponding navigation placeholder \(either by choosing the tab directly, or by choosing a subsection via the navigation placeholder under the tab\).
+Alternatively, application developers can configure the object page using `"Tabs"` mode as the section layout mode. In this mode, the sections are represented as tabs under the header facet. Users can reach the right section or subsection only by choosing the corresponding navigation placeholder \(either by choosing the tab directly, or by choosing a subsection via the navigation placeholder under the tab\).
 
 > ### Note:  
 > We recommend using the tab representation when your page uses the `UI.Table` \(grid table\).

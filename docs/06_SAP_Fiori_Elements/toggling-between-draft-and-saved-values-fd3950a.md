@@ -56,7 +56,7 @@ Navigating to an object page
 </td>
 <td valign="top">
 
-The saved object is displayed with a *Saved Version*/*Draft* button that lets users toggle between the saved version and draft if it exists.
+The saved object is displayed with a *Saved Version* or *Draft* button that lets users toggle between the saved version and draft if it exists.
 
 </td>
 </tr>
@@ -76,7 +76,7 @@ Only the saved objects with their respective data are displayed in the list repo
 
 ![](images/Toggling_Between_Draft_and_Saved_Values_1_6817734.png)
 
-On the object page, the *Saved Version*/*Draft* button is visible if a draft exists. The *Saved Version*/*Draft* button opens a popover that allows you to toggle between the draft and saved version of an object page. The label of the button clearly indicates which version of the object page you're working with.
+On the object page, the *Saved Version* or *Draft* button is visible if a draft exists. The *Saved Version* or *Draft* button opens a popover that allows you to toggle between the draft and saved version of an object page. The label of the button clearly indicates which version of the object page you're working with.
 
 In the following screenshot, the object page displays the *Draft* version with the popover you can use to toggle:
 

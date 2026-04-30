@@ -2,7 +2,7 @@
 
 # Quick View Cards
 
-Quick view cards display detailed information about a single record, in greater depth than would be displayed in a table or list.
+You can configure and assign actions to the quick view cards.
 
 
 
@@ -10,6 +10,8 @@ Quick view cards display detailed information about a single record, in greater 
 > For information about SAP Fiori elements for OData V4, see [Quick View Cards](quick-view-cards-c4bd35e.md).
 
 
+
+Quick view cards display detailed information about a single record, in greater depth than would be displayed in a table or list.
 
 The information displayed in quick view cards is configured in the `com.sap.vocabularies.UI.v1.HeaderInfo` and `com.sap.vocabularies.UI.v1.Facets` terms. The `com.sap.vocabularies.UI.v1.HeaderInfo` term is used to present the entity header information, and the `com.sap.vocabularies.UI.v1.Facets` term is used to present detailed information about the record. Quick view card supports the following properties:
 

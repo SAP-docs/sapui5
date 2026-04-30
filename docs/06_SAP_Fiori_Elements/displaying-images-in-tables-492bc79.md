@@ -131,7 +131,7 @@ You can also use media data of type **binary** instead of **stream**. The local 
 > };
 > ```
 
-You can set the `imageFitType` of the avatar to determine how an image fits in the avatar's container. You can also set the `enableEnlargeImage` of the avatar to determine if users can open and enlarge the image in a popup, as shown in the following sample code:
+You can set the `imageFitType` property to determine how an image fits in the avatar's container. You can also set the `enableEnlargeImage` property to determine if users can open and enlarge the image in a popup, as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`

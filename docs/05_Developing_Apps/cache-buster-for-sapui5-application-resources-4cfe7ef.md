@@ -9,31 +9,6 @@ To avoid the need for end users to clean up the browser cache after a software u
 -   SAPUI5 core resources \(see [Cache Buster for SAPUI5](../04_Essentials/cache-buster-for-sapui5-91f0809.md)\)
 
 
-To activate cache busting on the level of single application resources and cache busting for SAPUI5 core resources, change the script tag with the ID `sap-ui-bootstrap` in the start page of the underlying SAPUI5 app:
-
--   Change the value of the `src` attribute pointing to the SAPUI5 core to `resources/sap-ui-cachebuster/sap-ui-core.js`.
-
--   Add the attribute `data-sap-ui-app-cache-buster="./"`.
-
-
-Example \(snippet from the sample app `/UI5/SIMPLETEST`\):
-
-```html
-
-<html>
-  <head>
-    <script src="resources/sap-ui-cachebuster/sap-ui-core.js"
-      id="sap-ui-bootstrap"
-      data-sap-ui-libs="sap.m"
-      data-sap-ui-theme="sap_horizon"
-      data-sap-ui-app-cache-buster="./">
-    </script>
-  …
-</html>
-```
-
-For more information, see [Application Cache Buster: Enhanced Concept](../04_Essentials/application-cache-buster-enhanced-concept-94e0c33.md).
-
 Both the ICM server cache on the ABAP front-end server as well as the browser cache are used to optimize the performance of your SAPUI5 app. The cache buster mechanisms ensure that all application and core resources are up to date at any time and are requested only if needed.
 
 **Further Technical Information**

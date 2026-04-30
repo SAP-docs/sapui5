@@ -116,10 +116,10 @@ You can use `DataFieldWithURL` with an absolute value for the `Value` property i
 > 
 > ```
 > {
->   $Type : 'UI.DataFieldWithUrl',
->   Url :   'Your URL', //For example: https://www.sap.com
->   Value : 'SAP',
->   Label : 'Company'
+>     $Type : 'UI.DataFieldWithUrl',
+>     Url :   'Your URL', //For example: https://www.sap.com
+>     Value : 'SAP',
+>     Label : 'Company'
 > }
 > ```
 
@@ -139,14 +139,14 @@ You can use the `LinkTarget` property to specify in which window, tab, or frame 
 > 
 > ```xml
 > <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/HTML5.xml">
->       <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+>     <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
 > </edmx:Reference>
 > 
 > <Record Type="UI.DataFieldWithUrl">
->   <PropertyValue Property="Label" String="FLP version 6"/>
->   <PropertyValue Property="Url" String="http://www.example.com"/>
->   <PropertyValue Property="Value" String="Link Target"/>
->   <Annotation Term="HTML5.LinkTarget" String="_blank"/>
+>     <PropertyValue Property="Label" String="FLP version 6"/>
+>     <PropertyValue Property="Url" String="http://www.example.com"/>
+>     <PropertyValue Property="Value" String="Link Target"/>
+>     <Annotation Term="HTML5.LinkTarget" String="_blank"/>
 > </Record>
 > ```
 
@@ -160,11 +160,11 @@ You can use the `LinkTarget` property to specify in which window, tab, or frame 
 > 
 > ```
 > {
->   $Type               : 'UI.DataFieldWithUrl',
->   Label               : 'FLP version 6',
->   Url                 : 'http://www.example.com',
->   Value               : 'Link Target',
->   ![@HTML5.LinkTarget]: '_blank',
+>     $Type               : 'UI.DataFieldWithUrl',
+>     Label               : 'FLP version 6',
+>     Url                 : 'http://www.example.com',
+>     Value               : 'Link Target',
+>     ![@HTML5.LinkTarget]: '_blank',
 > }
 > ```
 
@@ -240,7 +240,7 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     > 
     > ```xml
     > <Annotations Target="myService.SalesorderManage/SoldToParty">
-    >    <Annotation Term="Common.SemanticObject" Path="solToPartySemanticObject"/>
+    >     <Annotation Term="Common.SemanticObject" Path="solToPartySemanticObject"/>
     > </Annotations>
     > ```
 
@@ -254,7 +254,7 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     > 
     > ```
     > SoldToParty: String(10) @(
-    >  Common.SemanticObject: solToPartySemanticObject
+    >     Common.SemanticObject: solToPartySemanticObject
     > );
     > ```
 
@@ -265,7 +265,7 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     > ### Note:  
     > -   Make sure you define a unique target by specifying both the semantic object and an action. Otherwise, clicking the link will not trigger direct navigation to the target.
     > 
-    > -   In applications where links are annotated with `DataFieldWithIntentBasedNavigation`, the context menu does not display the *Open in New Tab* and *Open in New Window* options when an end user right-clicks on them.
+    > -   In applications where links are annotated with `DataFieldWithIntentBasedNavigation`, the context menu does not display the *Open in New Tab* and *Open in New Window* options when a user right-clicks on them.
 
     > ### Sample Code:  
     > XML Annotation
@@ -284,13 +284,13 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     > ABAP CDS Annotation
     > 
     > ```
-    > @UI.<lineItem/fieldGroup>: [ 
-    >   {
-    >     label: 'My Link for navigation',
-    >     value: 'SOMEPATH',
-    >     semanticObjectAction: 'manage',
-    >     type: #WITH_INTENT_BASED_NAVIGATION
-    >   }
+    > @UI.<lineItem/fieldGroup>: [
+    >     {
+    >         label: 'My Link for navigation',
+    >         value: 'SOMEPATH',
+    >         semanticObjectAction: 'manage',
+    >         type: #WITH_INTENT_BASED_NAVIGATION
+    >     }
     > ]
     > @Consumption.semanticObject: 'MySemanticObject'
     > 
@@ -300,13 +300,13 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     > CAP CDS Annotation
     > 
     > ```
-    >     {
-    >         $Type : 'UI.DataFieldWithIntentBasedNavigation',
-    >         Label : 'My Link for navigation',
-    >         Value : SomePath,
-    >         SemanticObject : 'MySemanticObject',
-    >         Action : 'manage',
-    >     },
+    > {
+    >     $Type : 'UI.DataFieldWithIntentBasedNavigation',
+    >     Label : 'My Link for navigation',
+    >     Value : SomePath,
+    >     SemanticObject : 'MySemanticObject',
+    >     Action : 'manage',
+    > },
     > ```
 
     For examples of how to use the `DataFieldWithIntentBasedNavigation` annotation, see the [App-Specific Actions](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__section_ifk_jqb_2nb) section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
@@ -336,12 +336,12 @@ To provide a button for navigation, you annotate a property as a `DataFieldForIn
 > ABAP CDS Annotation
 > 
 > ```
-> @UI.<lineItem/fieldGroup>: [ 
->   {
->     label: 'My Button for navigation',
->     semanticObjectAction: 'manage',
->     type: #FOR_INTENT_BASED_NAVIGATION
->   }
+> @UI.<lineItem/fieldGroup>: [
+>     {
+>         label: 'My Button for navigation',
+>         semanticObjectAction: 'manage',
+>         type: #FOR_INTENT_BASED_NAVIGATION
+>     }
 > ]
 > @Consumption.semanticObject: 'MySemanticObject'
 > ```
@@ -401,12 +401,12 @@ If `NavigationAvailable` is defined as a path for a table toolbar button, the bu
 > 
 > ```
 > {
->         $Type           : 'UI.DataFieldForIntentBasedNavigation',
->         SemanticObject  : 'v4Freestyle',
->         Action          : 'Inbound',
->         Label           : 'IBN',
->         NavigationAvailable : isDeletable,
->         RequiresContext : false
+>     $Type           : 'UI.DataFieldForIntentBasedNavigation',
+>     SemanticObject  : 'v4Freestyle',
+>     Action          : 'Inbound',
+>     Label           : 'IBN',
+>     NavigationAvailable : isDeletable,
+>     RequiresContext : false
 > }
 > ```
 
@@ -419,17 +419,17 @@ Add the following property: `<PropertyValue Property="RequiresContext" Bool="tru
 If `RequiresContext` is `true`, then the button is disabled until a selection is made. If it's `false`, then the button is always enabled. The default value for `RequiresContext` is `false`.
 
 > ### Note:  
-> `RequiresContext` only determines whether the button is enabled based on the end user's selected context. Regardless of its value, any available context is always passed along, following the standard navigation process.
+> `RequiresContext` only determines whether the button is enabled based on the user's selected context. Regardless of its value, any available context is always passed along, following the standard navigation process.
 
 > ### Sample Code:  
 > XML Annotation
 > 
 > ```xml
 > <Record Type="UI.DataFieldForIntentBasedNavigation">
->    <PropertyValue Property="SemanticObject" String="EPMProduct"/>
->    <PropertyValue Property="Action" String="manage_st"/>
->    <PropertyValue Property="Label" String="IBNWithContext"/>
->    <PropertyValue Property="RequiresContext" Bool="true"/>
+>     <PropertyValue Property="SemanticObject" String="EPMProduct"/>
+>     <PropertyValue Property="Action" String="manage_st"/>
+>     <PropertyValue Property="Label" String="IBNWithContext"/>
+>     <PropertyValue Property="RequiresContext" Bool="true"/>
 > </Record>
 > ```
 
@@ -452,11 +452,11 @@ If `RequiresContext` is `true`, then the button is disabled until a selection is
 > 
 > ```
 > {
->    $Type: 'UI.DataFieldForIntentBasedNavigation',
->    SemanticObject: 'SalesOrder',
->    Action: 'manageInline',
->    Label: 'IBNwithcontext',
->    RequiresContext: true
+>     $Type: 'UI.DataFieldForIntentBasedNavigation',
+>     SemanticObject: 'SalesOrder',
+>     Action: 'manageInline',
+>     Label: 'IBNwithcontext',
+>     RequiresContext: true
 > }
 > ```
 
@@ -508,15 +508,15 @@ To do this when using the semantic link-based navigation, use the `SemanticObjec
 > 
 > ```xml
 > <Annotations Target="com.c_salesordermanage_sd.defaultParamsForSalesOrderCreate/SoldToParty">
->      <Annotation Term="Common.SemanticObject" String="Customer"/>
->      <Annotation Term="Common.SemanticObjectMapping">
->           <Collection>
->                <Record Type="Common.SemanticObjectMappingType">
->                     <PropertyValue Property="LocalProperty" PropertyPath="SoldToPartyID"/>
->                     <PropertyValue Property="SemanticObjectProperty" String="CustomerID"/>
->                </Record>
->           </Collection>
->      </Annotation>
+>     <Annotation Term="Common.SemanticObject" String="Customer"/>
+>     <Annotation Term="Common.SemanticObjectMapping">
+>         <Collection>
+>             <Record Type="Common.SemanticObjectMappingType">
+>                 <PropertyValue Property="LocalProperty" PropertyPath="SoldToPartyID"/>
+>                 <PropertyValue Property="SemanticObjectProperty" String="CustomerID"/>
+>             </Record>
+>         </Collection>
+>     </Annotation>
 > </Annotations>
 > ```
 
@@ -583,15 +583,15 @@ For semantic object mapping when navigating using the `DataFieldForIntentBasedNa
 > 
 > ```
 > {
->       type: #FOR_INTENT_BASED_NAVIGATION,
->       semanticObject: 'nameOfSemanticObject',
->       semanticObjectAction: 'nameOfSemanticObjectAction',
->       semanticObjectBinding: [ 
->        {
->         localElement: 'nameOfSourceProperty',
->         element: 'nameOfTargetProperty',
->       } 
->    ]
+>     type: #FOR_INTENT_BASED_NAVIGATION,
+>     semanticObject: 'nameOfSemanticObject',
+>     semanticObjectAction: 'nameOfSemanticObjectAction',
+>     semanticObjectBinding: [
+>         {
+>             localElement: 'nameOfSourceProperty',
+>             element: 'nameOfTargetProperty',
+>         }
+>     ]
 > }
 > ```
 
@@ -640,8 +640,8 @@ During external outbound navigation, the following data is removed from the navi
     > 
     > ```
     > annotate view SALESORDERMANAGE with {
-    >   @Semantics.personalData.isPotentiallySensitive: true
-    >   ID;
+    >     @Semantics.personalData.isPotentiallySensitive: true
+    >     ID;
     > }
     > ```
 
@@ -860,7 +860,6 @@ You can hide actions on semantic objects through the `SemanticObjectUnavailableA
 >         </Collection>
 >     </Annotation>
 >     ...
->     ...
 > </Annotations>
 > ```
 
@@ -899,8 +898,8 @@ The technical keys are always passed, since it is clear what the technical keys 
 > ### Sample Code:  
 > ```
 > Common: {
->         SemanticKey   : [SalesOrder]
->     }
+>     SemanticKey   : [SalesOrder]
+> }
 > 
 > ```
 
@@ -919,21 +918,21 @@ Additionally, the secondary keys maintained using annotations can be linked to t
 > </edmx:Reference>
 > ...
 > <EntityType Name="Product">
->    <Key>
->        <PropertyRef Name="ProductId"/>
->    </Key>
->    <Property Name="ProductId" Type="Edm.Int32" Nullable="false"/>
->    <Property Name="ProductCode" Type="Edm.String" Nullable="false"/>
->    <Property Name="ProductName" Type="Edm.String" Nullable="false"/>
+>     <Key>
+>         <PropertyRef Name="ProductId"/>
+>     </Key>
+>     <Property Name="ProductId" Type="Edm.Int32" Nullable="false"/>
+>     <Property Name="ProductCode" Type="Edm.String" Nullable="false"/>
+>     <Property Name="ProductName" Type="Edm.String" Nullable="false"/>
 > 
->    <!-- Secondary key annotation -->
->    <Annotations>
->        <Annotation Term="Common.SecondaryKey">
->            <Collection>
->                  <PropertyPath>ProductCode</PropertyPath>
->            </Collection>
->        </Annotation>
->    </Annotations>
+>     <!-- Secondary key annotation -->
+>     <Annotations>
+>         <Annotation Term="Common.SecondaryKey">
+>             <Collection>
+>                 <PropertyPath>ProductCode</PropertyPath>
+>             </Collection>
+>         </Annotation>
+>     </Annotations>
 > </EntityType>
 > ```
 
@@ -947,7 +946,7 @@ Additionally, the secondary keys maintained using annotations can be linked to t
 > 
 > ```
 > annotate c_salesordermanage_sd.Product with @(
->   Common.SecondaryKey: ['ProductCode']
+>     Common.SecondaryKey: ['ProductCode']
 > ){}
 > ```
 
@@ -1030,6 +1029,9 @@ After you identify the key, use its value in the page hierarchy to determine the
 > >                     }
 > >                 }
 > >             }
+> >         }
+> >     }
+> > }
 > > 
 > > ```
 

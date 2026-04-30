@@ -137,7 +137,6 @@ You can configure the header area using the annotations and `manifest.json` file
         >     "globalFilterEntitySet": "GlobalFilters",
         >     "showDateInRelativeFormat": false,
         >     "disableTableCardFlexibility": false,
-        >     "considerAnalyticalParameters": true,
         >     "useDateRangeType": false,
         >     "cards": {
         >         "card014": {

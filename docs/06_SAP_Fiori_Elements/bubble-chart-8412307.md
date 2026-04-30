@@ -2,7 +2,7 @@
 
 # Bubble Chart
 
-You can render the chart as a Bubble chart to display up to three measures and two dimensions of data.
+You can render the chart as a bubble chart to display up to three measures and two dimensions of data.
 
 
 

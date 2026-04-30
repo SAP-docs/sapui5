@@ -85,7 +85,7 @@ The **`sap.ui5`** namespace adds SAPUI5-specific configuration parameters that a
 
     -   The `minUI5Version` property is mandatory and specifies the minimum version of SAPUI5 required by the component. Our component requires SAPUI5 version 1.20 as a minimum.
 
-    -   The `libs` settings declare the libraries that the SAPUI5 core should load for use in the component. To benefit from the asynchronous library preload, it's essential to add all obligatory libraries here. You can set the `lazy` parameter to `true` to indicate that the lib shall be lazy-loaded, so that it only gets loaded once needed. If your app requires a minimum version of the lib, you also need to specify the `minVersion` for information purposes. We declare here the two libraries `sap.ui.core` and `sap.m` as dependencies to be loaded directly when starting the component.
+    -   The `libs` settings declare the libraries that the SAPUI5 core should load for use in the component. To benefit from the asynchronous library preload, it's essential to add all obligatory libraries here.You can set the `lazy` parameter to `true` to indicate that the lib shall be lazy-loaded, so that it only gets loaded once needed. If your app requires a minimum version of the lib, you also need to specify the `minVersion` for information purposes. We declare here the two libraries `sap.ui.core` and `sap.m` as dependencies to be loaded directly when starting the component.
 
 
     > ### Note:  
@@ -100,7 +100,7 @@ The **`sap.ui5`** namespace adds SAPUI5-specific configuration parameters that a
 
 ```
 {
-    "_version": "2.6.0",
+    "_version": "2.7.0",
     "sap.app": {
         "id": "ui5.walkthrough",
         "type": "application",
@@ -127,7 +127,7 @@ The **`sap.ui5`** namespace adds SAPUI5-specific configuration parameters that a
     },
     "sap.ui5": {
         "dependencies": {
-            "minUI5Version": "1.146.0",
+            "minUI5Version": "1.147.0",
             "libs": {
                 "sap.ui.core": {},
                 "sap.m": {}

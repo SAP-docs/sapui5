@@ -10,7 +10,7 @@ Some of the factors are initial configuration of the variant, initial loading co
 
 -   When navigating from a tile that has no navigation context, or from a tile that has only default values from the user-specific settings of SAP Fiori launchpad, the loading behavior of data depends on the following:
 
-    -   If the default variant is configured, then this variant is launched. The initial data load depends on the configuration of the *Apply Automatically* checkbox for this variant by the end users.
+    -   If the default variant is configured, then this variant is launched. The initial data load depends on the configuration of the *Apply Automatically* checkbox for this variant by the users.
 
     -   If no default variant is configured, then the *Standard* variant is launched along with the default values in the user-specific settings of SAP Fiori launchpad. The initial data load depends on the manifest configuration done by the application developers.
 
@@ -40,11 +40,11 @@ These settings are only relevant for applications that are initially launched wi
 
 The loading behavior of data based on these settings is as follows:
 
--   `Auto`: An initial load of data only occurs if some default filter values have been set in the filter bar. The *Apply Automatically* checkbox in the *Manage Views* dialog has the following text: *If predefined filter values are available, the content loads automatically.* This is the default setting. End users can override this by deselecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
+-   `Auto`: An initial load of data only occurs if some default filter values have been set in the filter bar. The *Apply Automatically* checkbox in the *Manage Views* dialog has the following text: *If predefined filter values are available, the content loads automatically.* This is the default setting. Users can override this by deselecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
 
--   `Disabled`: An initial load of data does not occur for the standard variant and the end user has to actively click the *Go* button. They can override this by selecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
+-   `Disabled`: An initial load of data does not occur for the standard variant and the user has to actively click the *Go* button. They can override this by selecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
 
--   `Enabled`: An initial load of data occurs for the standard variant. End users can override this by deselecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
+-   `Enabled`: An initial load of data occurs for the standard variant. Users can override this by deselecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
 
 
 

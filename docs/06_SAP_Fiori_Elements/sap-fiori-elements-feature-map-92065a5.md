@@ -2364,7 +2364,7 @@ Filter bar
 
 [Configuring the Global Filter](configuring-the-global-filter-da583d1.md)
 
-[Custom Filters](custom-filters-31073ca.md)
+[Adding Custom Filters](adding-custom-filters-31073ca.md)
 
 [Configuring Filter Bars](configuring-filter-bars-76066e5.md)
 

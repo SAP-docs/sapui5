@@ -2,7 +2,7 @@
 
 # Bar Chart Card
 
-You can use a bar chart to display data, such as total product sales over a period of years in columns.
+You can render the chart as a bar chart to display data, such as total product sales over a period of years in columns.
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V4, see [Bar Chart](bar-chart-95f6aeb.md).
@@ -96,6 +96,8 @@ The measures can be maximizing, minimizing, or target, based on a threshold valu
 
     ![](images/Example_of_a_Target_Measure_7626b9d.png "Example of a Target Measure")
 
+
+The following sample code how to define a bar chart:
 
 > ### Sample Code:  
 > ```

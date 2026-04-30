@@ -128,7 +128,7 @@ When a user is added to the list, the draft appears in their *Own Draft* list.
 > ### Caution:  
 > The collaborative draft uses WebSocket for the synchronization between the participants, which extends the browser session timeout until all users have either navigated away from the draft, closed the session, or closed the application.
 > 
-> Please be aware of this behavior and also inform end users of the app accordingly.
+> Please be aware of this behavior and also inform users of the app accordingly.
 
 > ### Restriction:  
 > -   This feature is only supported when using the ABAP RESTful Application Programming Model \(RAP\).

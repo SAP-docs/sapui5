@@ -322,7 +322,7 @@ The `LocalDataProperty` specifies the property from the main entity set which, i
 
 The `ValueListProperty` specifies the property from the value help entity set that is filtered based on the value coming from the `LocalDataProperty`.
 
-If the user has already entered a value for the `Region` main entity—for example, `RegionID = "ABC"`, and `RegionID` is defined as an `IN` parameter for the *Country* value help, then the value help dialog for `CountryID` filters the records by applying `RegionIdentifier = "ABC"` on the value help entity. As a result, end users can select only those countries that belong to the specified region \(ABC\).
+If the user has already entered a value for the `Region` main entity—for example, `RegionID = "ABC"`, and `RegionID` is defined as an `IN` parameter for the *Country* value help, then the value help dialog for `CountryID` filters the records by applying `RegionIdentifier = "ABC"` on the value help entity. As a result, users can select only those countries that belong to the specified region \(ABC\).
 
 > ### Sample Code:  
 > ```

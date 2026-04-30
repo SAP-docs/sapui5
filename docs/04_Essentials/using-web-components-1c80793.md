@@ -4,9 +4,14 @@
 
 Web Components integrate seamlessly into SAPUI5. A Web Component, especially a UI5 Web Component with its Custom Elements metadata, can be required and used like a regular SAPUI5 control.
 
+**On this page:**
+
+-   [General Concepts Compared to SAPUI5 Controls](using-web-components-1c80793.md#loio1c80793df5bb424091954697fc0b2828__section_GCS)
+-   [Using UI5 Web Components in SAPUI5 Applications](using-web-components-1c80793.md#loio1c80793df5bb424091954697fc0b2828__section_WCSU)
 
 
-<a name="loio1c80793df5bb424091954697fc0b2828__section_BAD4FC9765174E0EB7264A423F7C4ED6"/>
+
+<a name="loio1c80793df5bb424091954697fc0b2828__section_GCS"/>
 
 ## General Concepts Compared to SAPUI5 Controls
 
@@ -154,7 +159,7 @@ Besides the nomenclature for the basic concepts, several additional naming diffe
 
 
 
-<a name="loio1c80793df5bb424091954697fc0b2828__section_798A4B993F764A04BAB08DEAACC5DFA9"/>
+<a name="loio1c80793df5bb424091954697fc0b2828__section_WCSU"/>
 
 ## Using UI5 Web Components in SAPUI5 Applications
 

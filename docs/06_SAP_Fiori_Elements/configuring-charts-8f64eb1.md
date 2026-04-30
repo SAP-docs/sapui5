@@ -460,7 +460,7 @@ A few chart types \(line, bubble, combination, and stacked column\) support colo
 Every object in the `colorPalette` map has two properties: `color`, which defines a specific state, and `legendText`, which provides the corresponding legend text.
 
 > ### Note:  
-> -   Use only the colors listed in the semantic palette that are defined by SAP Fiori guidelines for customizing the column stack card.
+> -   Use only the colors listed in the semantic palette that are defined by SAP Fiori guidelines for configuring the column stack card.
 > 
 > -   All four objects in the color `colorPalette` map are mandatory.
 

@@ -191,7 +191,7 @@ Both `ValueList` and `ValueListMapping` annotations are used in similar contexts
 
 -   `Label`: Determines the title of the value help dialog. For more information, see the [Title](value-help-dialog-3faed83.md#loio3faed838512648b099e14dfec458d847__Title) subsection in [Value Help Dialog](value-help-dialog-3faed83.md).
 
--   `CollectionPath`: Refers to the value help entity that provides the data shown in the value help dialog, allowing end users to select a value.
+-   `CollectionPath`: Refers to the value help entity that provides the data shown in the value help dialog, allowing users to select a value.
 
 -   `SearchSupported`: Determines whether the search bar is displayed in the value help dialog. For more information, see the [Search Field](value-help-dialog-3faed83.md#loio3faed838512648b099e14dfec458d847__searchfield) subsection in [Value Help Dialog](value-help-dialog-3faed83.md).
 
@@ -202,9 +202,9 @@ Both `ValueList` and `ValueListMapping` annotations are used in similar contexts
 
 -   `FetchValues`: Controls the data request for the table within the value help dialog. It can have the following values:
 
-    -   `1`: Data is loaded immediately when the value help dialog is opened, without any input from the end user. This is the default behavior.
+    -   `1`: Data is loaded immediately when the value help dialog is opened, without any input from the user. This is the default behavior.
 
-    -   `2` : Data is loaded only after the end user applies the filters.
+    -   `2` : Data is loaded only after the user applies the filters.
 
 
 

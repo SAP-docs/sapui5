@@ -504,13 +504,13 @@ Defining the manifest setting is optional. If the setting isn't defined, SAP Fio
 
 -   If `UI.PresentationVariant` **not** is found, SAP Fiori elements checks for a default `UI.LineItem` or `UI.Chart` for the visualization.
 
--   Finally, if neither `UI.PresentationVariant` nor the default `UI.LineItem` or `UI.Chart` is found, SAP Fiori elements renders an empty table or chart. However, the end users can still use the personalization of the control to render the required table or chart.
+-   Finally, if neither `UI.PresentationVariant` nor the default `UI.LineItem` or `UI.Chart` is found, SAP Fiori elements renders an empty table or chart. However, users can still use the personalization of the control to render the required table or chart.
 
 
 > ### Note:  
 > -   In all the preceding cases, if a `UI.SelectionPresentationVariant` is found but the associated `UI.PresentationVariant` is **not** found, SAP Fiori elements raises an error and stops loading the application. SAP Fiori elements behaves in the same manner when you define a `UI.SelectionPresentationVariant` correctly, but you miss to define a \(correct\) association to `UI.PresentationVariant`. Hence, you must always ensure to define the correct path for the default selection presentation variant in the manifest and the correct association to `UI.PresentationVariant`.
 > 
-> -   If a`UI.PresentationVariant` is found but the visualization isn't defined, then we fallback to default \(unqualified\) `UI.LineItem` \(or default `UI.Chart`\) annotation. If these annotations are not found, SAP Fiori elements renders an empty table \(or chart\), and the end users can still use the personalization of the control to configure the required table \(or chart\).
+> -   If a`UI.PresentationVariant` is found but the visualization isn't defined, then we fallback to default \(unqualified\) `UI.LineItem` \(or default `UI.Chart`\) annotation. If these annotations are not found, SAP Fiori elements renders an empty table \(or chart\), and users can still use the personalization of the control to configure the required table \(or chart\).
 
 
 
@@ -629,75 +629,6 @@ Make the following settings in the `manifest.json` file to specify the `Selectio
 
 > ### Note:  
 > In this case, the `"defaultTemplateAnnotationPath"` must be a reference to the `SelectionPresentationVariant` and **not** to the `PresentationVariant` or `SelectionVariant`.
-
-
-
-<a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_tnc_ld2_qbc"/>
-
-## Requesting Additional Properties
-
-You can request additional properties for tables and charts even if these properties are not displayed by using the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term and the `RequestAtLeast` property.
-
-> ### Caution:  
-> Including 1:n properties in the `RequestAtLeast` property will result in performance issues and will prevent the export of tables to a spreadsheet.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="ZFAR_CUSTOMER_LINE_ITEMS2_SRV.Item">
->     <Annotation Term="com.sap.vocabularies.UI.v1.PresentationVariant">
->         <Record>
->             <PropertyValue Property="Visualizations">
->                 <Collection>
->                     <AnnotationPath>@UI.LineItem</AnnotationPath>
->                 </Collection>
->             </PropertyValue>
->             <PropertyValue Property="RequestAtLeast">
->                 <Collection>
->                     <PropertyPath>Customer</PropertyPath>
->                     <PropertyPath>CompanyCode</PropertyPath>
->                </Collection>
->             </PropertyValue>
->         </Record>
->     </Annotation>
-> </Annotations>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.PresentationVariant: [
->   {
->     requestAtLeast: [
->       'CUSTOMER',
->       'COMPANYCODE'
->     ],
->     visualizations: [{type: #AS_LINEITEM }]
->   }
-> ]
-> annotate view ITEM with {
->  
-> }
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> annotate ZFAR_CUSTOMER_LINE_ITEMS2_SRV.Item @(
->   com.sap.vocabularies.UI.v1.PresentationVariant : {
->     Visualizations : [
->         '@UI.LineItem'
->     ],
->     RequestAtLeast : [
->         Customer,
->         CompanyCode
->     ]
->   }
-> );
-> ```
 
 
 
@@ -862,4 +793,6 @@ For more information, see [Configuring Default Filter Values](configuring-defaul
 [Configuring Charts](configuring-charts-653ed0f.md "You can add a chart facet to a content section within the list report page and the object page.")
 
 [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md "You can configure the loading behavior of SAP Fiori apps.")
+
+[Requesting Additional Properties](requesting-additional-properties-82e27ff.md "You can request additional OData properties to be fetched with the table's data binding even if these properties are not displayed in the table.")
 

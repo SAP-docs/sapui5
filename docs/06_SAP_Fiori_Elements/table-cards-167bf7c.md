@@ -6,13 +6,6 @@ A table card displays a list of records in a 3-column table layout.
 
 
 
-Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
-
-
-
-> ### Note:  
-> \(Optional\) You can configure smart links in table cards to access quick links.
-
 ![Table card showing purchase forecast with KPI and supplier data.](images/Table_card_-_V4_OVP_5e5d970.png)
 
 
@@ -463,7 +456,6 @@ Description: Configuring this property allows you to define a dropdown list to f
 >     "globalFilterEntitySet": "GlobalFilters",
 >     "showDateInRelativeFormat": false,
 >     "disableTableCardFlexibility": false,
->     "considerAnalyticalParameters": true,
 >     "useDateRangeType": false,
 >     "cards": {
 >         "card014": {
@@ -515,7 +507,6 @@ Description: Configuring this annotation displays the table header title \(`Labe
 >     "globalFilterEntitySet": "GlobalFilters", 
 >     "showDateInRelativeFormat": false,
 >     "disableTableCardFlexibility": false,
->     "considerAnalyticalParameters": true,
 >     "useDateRangeType": false,
 >     "cards": {
 >         "card014": {
@@ -896,180 +887,6 @@ In this example, the first column in the table displays **Product Name**, the se
 >         Target: "@UI.DataPoint#WeightMeasure"
 >     }
 > ]
-> ```
-
-
-
-<a name="loio167bf7ccbb084afab7d846e1fa30b49c__section_ds3_s1l_2bb"/>
-
-## Smart Links
-
-Define a semantic object for the entity set and its property using the annotation target to enable smart links in a table card. For example:
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotations Target="GWSAMPLE_BASIC.SalesOrder/SalesOrderID">
->     <Annotation Term="com.sap.vocabularies.Common.v1.SemanticObject" String="OVP"/>
-> </Annotations>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> annotate view SALESORDER with {
->     @Consumption.semanticObject: 'OVP'
->     salesorderid;
-> }
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> annotate GWSAMPLE_BASIC.SalesOrder with {
->     @Common.SemanticObject: 'OVP'
->     SalesOrderID;
-> }
-> ```
-
-Table cards let you display a list of fields in a table using the `com.sap.vocabularies.UI.v1.LineItem` annotation.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotation Term="com.sap.vocabularies.UI.v1.LineItem" Qualifier="NewSalesOrders">
->     <Collection>
->         <Record Type="com.sap.vocabularies.UI.v1.DataField">
->             <PropertyValue Property="Label" String="Order ID (Company)"/>
->             <PropertyValue Property="Value" Path="SalesOrderID"/>
->         </Record>
->         <Record Type="com.sap.vocabularies.UI.v1.DataFieldForAnnotation">
->             <PropertyValue Property="Label" String="Created by (Role)" />
->             <PropertyValue Property="Target" AnnotationPath="ToBusinessPartner/@com.sap.vocabularies.Communication.v1.Contact" />
->         </Record>
->     </Collection>
-> </Annotation>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.lineItem: [
->     {
->         label: "Order ID (Company)",
->         position: 10,
->         qualifier: "NewSalesOrders"
->     }
-> ] SALESORDERID;
-> 
-> @UI.lineItem: [
->     {
->         label: "Created by (Role)",
->         value: "_BUSINESSPARTNER",
->         type: "#AS_CONTACT",
->         position: 20,
->         qualifier: "NewSalesOrders"
->     }
-> ] PROPERT_NAME;
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> UI.LineItem #NewSalesOrders: [
->     {
->         $Type: "UI.DataField",
->         Label: "Order ID (Company)",
->         Value: "SalesOrderID"
->     },
->     {
->         $Type: "UI.DataFieldForAnnotation",
->         Label: "Created by (Role)",
->         Target: "ToBusinessPartner/@Communication.Contact"
->     }
-> ]
-> ```
-
-Table cards also let you view contact information if you've defined the `com.sap.vocabularies.Communication.v1.Contact` annotation.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotation Term="com.sap.vocabularies.Communication.v1.Contact">
->     <Record>
->         <PropertyValue Property="tel">
->             <Collection>
->                 <Record>
->                     <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.PhoneType/fax"/>
->                     <PropertyValue Property="uri" Path="FaxNumber"/>
->                 </Record>
->                 <Record>
->                     <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.PhoneType/work com.sap.vocabularies.Communication.v1.PhoneType/preferred"/>
->                     <PropertyValue Property="uri" Path="PhoneNumber"/>
->                 </Record>
->             </Collection>
->         </PropertyValue>
->         <PropertyValue Property="email">
->             <Collection>
->                 <Record>
->                     <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.ContactInformationType/preferred com.sap.vocabularies.Communication.v1.ContactInformationType/work"/>
->                     <PropertyValue Property="address" Path="EmailAddress"/>
->                 </Record>
->             </Collection>
->         </PropertyValue>
->     </Record>
-> </Annotation>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> define view VIEWNAME {
->     @Semantics.name.fullName: true 
->     CompanyName,
-> 
->     @Semantics.eMail.address: true 
->     @Semantics.eMail.type: [#WORK] 
->     EmailAddress,
-> 
->     @Semantics.telephone.type: [#FAX] 
->     FaxNumber,
-> 
->     @Semantics.telephone.type: [#WORK] 
->     PhoneNumber
-> }
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> Communication.Contact: {
->     tel: [
->         {
->             type: "#fax",
->             uri: "FaxNumber"
->         },
->         {
->             type: ["#work", "#pref"],
->             uri: "PhoneNumber"
->         }
->     ],
->     email: [
->         {
->             type: ["#pref", "#work"],
->             address: "EmailAddress"
->         }
->     ]
-> }
 > ```
 
 

@@ -537,6 +537,8 @@ Building blocks
 
 [The AINotice Building Block](the-ainotice-building-block-8c6e98b.md)
 
+[The AlwaysEditableField Building Block](the-alwayseditablefield-building-block-67add6d.md)
+
 </td>
 <td valign="top">
 
@@ -2541,8 +2543,6 @@ Filter bar
 [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md)
 
 [Configuring the Global Filter on the Overview Page](configuring-the-global-filter-on-the-overview-page-73d9693.md)
-
-[Adding Custom Filters to the Overview Page](adding-custom-filters-to-the-overview-page-4739893.md)
 
 [Configuring Filter Bars](configuring-filter-bars-4bd7590.md)
 
@@ -4759,12 +4759,15 @@ Notice for AI-generated content
 </td>
 <td valign="top">
 
+-   List report page
 -   Object page
 
 
 
 </td>
 <td valign="top">
+
+[Configuring the AI Notice in a Column Header](configuring-the-ai-notice-in-a-column-header-82856ce.md)
 
 [AI Notice](ai-notice-10a6cda.md)
 
@@ -4778,6 +4781,12 @@ Notice for AI-generated content
 
   
   
+**AI Notice in a Column Header**
+
+![](images/AI_Notice_in_a_Column_Header_e4a1e4b.png "AI Notice in a Column Header")
+
+  
+  
 **AI Notice as a Link**
 
 ![](images/AI_Notice_as_Link_4c1dc81.png "AI Notice as a Link")
@@ -4788,6 +4797,8 @@ Notice for AI-generated content
 ai notice
 
 ai content
+
+ai icon
 
 </td>
 </tr>
@@ -5304,6 +5315,45 @@ getCount
 row-count
 
 number of rows
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Requesting additional properties
+
+</td>
+<td valign="top">
+
+-   Object page
+-   Custom page
+
+
+
+</td>
+<td valign="top">
+
+[Requesting Additional Properties on the Object Page and Custom Page](requesting-additional-properties-on-the-object-page-and-custom-page-c5e38f9.md)
+
+[Requesting Additional Properties](requesting-additional-properties-82e27ff.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+OData properties
+
+fetch properties
 
 </td>
 </tr>

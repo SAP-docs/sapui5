@@ -68,7 +68,7 @@ Object page
 </td>
 <td valign="top">
 
-The same as when user clicks on *Cancel* in the non draft apps and *Discard Draft* in the draft apps.
+The same as when user clicks on *Cancel* in the non-draft apps and *Discard Draft* in the draft apps.
 
 </td>
 </tr>
@@ -156,7 +156,7 @@ Delete page level
 </td>
 <td valign="top">
 
-[CMD\] + [fn\] + [delete\] \(use ← if there is no delete key
+[CMD\] + [Fn\] + [delete\] \(use ← if there is no delete key
 
 </td>
 <td valign="top">
@@ -188,7 +188,7 @@ Delete table entry
 </td>
 <td valign="top">
 
-[Cmd\] + [D\] 
+[CMD\] + [D\]  
 
 </td>
 <td valign="top">

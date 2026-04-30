@@ -2,7 +2,7 @@
 
 # Handling Inconsistent Input
 
-Learn how SAP Fiori apps handle inconsistent input.
+Get to know how SAP Fiori apps handle inconsistent input.
 
 For example, you've entered characters in a number field. Or you've entered more characters than the field length allows. The system behaves as described below.
 

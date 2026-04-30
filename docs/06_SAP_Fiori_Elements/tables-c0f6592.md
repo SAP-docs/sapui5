@@ -164,7 +164,7 @@ You can use the `UI.Importance` annotation to set the importance for table colum
 -   `None` \(default\) and `Medium`: Columns with `None` \(default\) and `Medium` importance settings are hidden automatically when the screen size is reduced.
 
 
-For columns with `Low`, `None`, and `Medium` settings, the *Show More per Row* / *Show Less per Row* buttons appear in the table toolbar only if there's at least one hidden column. When the end user clicks the *Show More per Row* button, the hidden column information appears as a text in the pop-in area. To hide the pop-in area, click the *Show Less per Row* button.
+For columns with `Low`, `None`, and `Medium` settings, the *Show More per Row* / *Show Less per Row* buttons appear in the table toolbar only if there's at least one hidden column. When the user clicks the *Show More per Row* button, the hidden column information appears as a text in the pop-in area. To hide the pop-in area, click the *Show Less per Row* button.
 
 > ### Note:  
 > -   Columns that have no importance setting \(`None`\) but containing a semantic key are considered of `High` importance \(also when used in a `FieldGroup`\).
@@ -856,7 +856,7 @@ You can disable freezing columns using the *Column Settings* dialog with the `di
 
 ## Showing or Hiding the *Copy to Clipboard* Button
 
-By default, the *Copy to Clipboard* button is displayed in the table toolbar if the selection mode, such as single selection or multi selection, is configured for the corresponding table. However, you can also configure the visibility of the *Copy to Clipboard* button by defining the `disableCopyToClipboard` settings in the `manifest.json` file as shown in the following sample code:
+By default, the *Copy to Clipboard* button is displayed in the table toolbar. However, you can also configure the visibility of the *Copy to Clipboard* button by defining the `disableCopyToClipboard` settings in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`

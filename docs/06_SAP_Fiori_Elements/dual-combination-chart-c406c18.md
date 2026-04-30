@@ -23,6 +23,8 @@ Chart area configuration:
 -   Assign at least one role to the category axis. All dimensions with the **Category** role are assigned to the category axis. The **Category** role is the default role.
 
 
+The following sample code how to define a dual combination chart:
+
 > ### Sample Code:  
 > ```
 > <Annotation Term="UI.Chart" Qualifier="Eval_by_CtryCurr_Dual_Combo">

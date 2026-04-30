@@ -116,7 +116,32 @@ If you have defined header facets as stashed in the `manifest.json` file, they a
 
 ### Restricting the Adaptability
 
-You can restrict the adaptability of header facets by using the manifest setting '`flexSettings'/'designtime`'. For example, the value '`not-adaptable-visibility`' disables all actions that influence visibility, meaning 'remove' and 'add' are not possible but 'move' is enabled. For more information, see the [Restrict Adaptation for Certain Controls](../05_Developing_Apps/enabling-ui-adaptation-other-things-to-consider-de9fd55.md#loiode9fd55c69af4b46863f5d26b5d796c4__section_restrictadaptation) section in [Enabling UI Adaptation: Other Things to Consider](../05_Developing_Apps/enabling-ui-adaptation-other-things-to-consider-de9fd55.md).
+You can restrict the adaptability of header facets, object page sections, subsections, forms, and form elements by using the manifest settings `flexSettings` and `designtime`. For example, the value `not-adaptable-visibility` disables all actions that influence visibility, such as *Remove* and *Add*, but keeps '*Move* enabled.
+
+For more information, see the [Restrict Adaptation for Certain Controls](../05_Developing_Apps/enabling-ui-adaptation-other-things-to-consider-de9fd55.md#loiode9fd55c69af4b46863f5d26b5d796c4__section_restrictadaptation) section in [Enabling UI Adaptation: Other Things to Consider](../05_Developing_Apps/enabling-ui-adaptation-other-things-to-consider-de9fd55.md).
+
+The following sample code shows an example for a form and a form element:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "controlConfiguration": {
+>     "@com.sap.vocabularies.UI.v1.FieldGroup#OrderData": {
+>         "flexSettings": {
+>             "designtime": "not-adaptable-visibility"
+>         },
+>         "fields": {
+>             "DataField::SoldToParty": {
+>                 "flexSettings": {
+>                     "designtime": "not-adaptable-visibility"
+>                 }
+>             }
+>         }
+>     }
+> }
+> ```
 
 
 

@@ -31,7 +31,7 @@ Use the following attributes to create the column layout you want:
 
 
 
-End users can expand and collapse the columns using the focus buttons. They can change to full-screen mode by choosing the full-screen button.
+Users can expand and collapse the columns using the focus buttons. They can change to full-screen mode by choosing the full-screen button.
 
 ![](images/FCL_Master_Detail_9ff7dd4.png)
 
@@ -67,7 +67,7 @@ The following screen recording shows how to enable the flexible column layout an
 
 ## Saving Column Resize Information
 
-The flexible column layout allows end users to resize the columns in both 2-column display and 3-column display, with SAP Fiori elements saving this information in the personalization settings. This information is specific to each application and device type, such as desktop, tablet, and phone.
+The flexible column layout allows users to resize the columns in both 2-column display and 3-column display, with SAP Fiori elements saving this information in the personalization settings. This information is specific to each application and device type, such as desktop, tablet, and phone.
 
 
 

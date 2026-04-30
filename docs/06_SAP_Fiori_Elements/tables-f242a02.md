@@ -107,11 +107,11 @@ By default, all standard actions are shown in the context menu. Custom actions a
 To exclude a custom action from the context menu, set `excludeFromContextMenu` to `true`.
 
 > ### Note:  
-> The *Open in New Tab or Window* option isn't available in the context menu, in the following cases, :
+> The *Open in New Tab or Window* option isn’t available in the context menu in the following cases:
 > 
-> -   The list report page or object page extension controller implements the `onListNavigationExtension` method.
+> -   If the list report page table is configured in direct edit mode. For more information about direct edit mode, see [Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-7952b13.md).
 > 
-> -   The list report page table is configured in direct edit mode. For more information about direct edit mode, see [Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-7952b13.md).
+> -   If the list report page or object page implement `onListNavigationExtension` , the *Open in New Tab or Window* option isn’t available by default. To make it available, implement the `onListNavigationExtensionFromContextMenu` method. For information about the `onListNavigationExtensionFromContextMenu` method, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ListReport.controllerFrameworkExtensions%23methods/sap.suite.ui.generic.template.ListReport.controllerFrameworkExtensions.onListNavigationExtensionFromContextMenu).
 
 
 
@@ -136,7 +136,7 @@ You can use the `UI.Importance` annotation to set the importance for table colum
 -   `None` \(default\) and `Medium`: Columns with `None` \(default\) and `Medium` importance settings are hidden automatically when the screen size is reduced.
 
 
-For columns with `Low`, `None`, and `Medium` settings, the *Show More per Row* / *Show Less per Row* buttons appear in the table toolbar only if there's at least one hidden column. When the end user clicks the *Show More per Row* button, the hidden column information appears as a text in the pop-in area. To hide the pop-in area, click the *Show Less per Row* button.
+For columns with `Low`, `None`, and `Medium` settings, the *Show More per Row* / *Show Less per Row* buttons appear in the table toolbar only if there's at least one hidden column. When the user clicks the *Show More per Row* button, the hidden column information appears as a text in the pop-in area. To hide the pop-in area, click the *Show Less per Row* button.
 
 > ### Note:  
 > -   Columns that have no importance setting \(`None`\) but containing a semantic key are considered of `High` importance \(also when used in a `FieldGroup`\).
@@ -634,7 +634,9 @@ To define the vertical alignment for a responsive table, set the `tableColumnVer
 
 ## Showing or Hiding the *Copy to Clipboard* Button
 
-By default, the *Copy to Clipboard* button is displayed in the table toolbar. However, you can also configure the visibility of the *Copy to Clipboard* button by defining the `copy` settings in the `manifest.json` file. If `copy` is set to `true`, the *Copy to Clipboard* button is shown in the table toolbar. If `copy` is set to `false`, the *Copy to Clipboard* button is hidden from the table toolbar.
+By default, the *Copy to Clipboard* button is displayed in the table toolbar, but, you can configure its visibility by defining the `copy` settings in the `manifest.json` file. If `copy` is set to `true`, the *Copy to Clipboard* button is shown in the table toolbar. If `copy` is set to `false`, the *Copy to Clipboard* button is hidden in the table toolbar.
+
+When `copy` is set to `false` at list report page or object page level, the *Copy to Clipboard* button is hidden for all tables on the page. However, if `copy` is set to `true` at table level, the page level setting is overridden.
 
 > ### Sample Code:  
 > Settings for the List Report Page
@@ -716,9 +718,6 @@ By default, the *Copy to Clipboard* button is displayed in the table toolbar. Ho
 > }
 > 
 > ```
-
-> ### Note:  
-> The `copy` settings defined for a table at the section level have a higher priority than the `copy` settings defined for the table at the object page level.
 
 **Related Information**  
 

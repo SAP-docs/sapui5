@@ -13,7 +13,7 @@ If you have fields that contain sensitive personal data, use the `com.sap.vocabu
 
 SAP Fiori elements doesn't store any data of a field in the history if either the property of the main entity set \(on which the value help is defined\), or any of the `ValueList` parameters, is annotated with `com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive`. This ensures that no potentially sensitive information is retained.
 
-End users can delete the history of the recently entered values. For more information, see [Input History](../10_More_About_Controls/input-history-152f84f.md).
+Users can delete the history of the recently entered values. For more information, see [Input History](../10_More_About_Controls/input-history-152f84f.md).
 
 
 

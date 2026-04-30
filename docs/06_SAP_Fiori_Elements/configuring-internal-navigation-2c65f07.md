@@ -86,7 +86,7 @@ The same holds true for the navigation to any level of subobject pages.
 > 
 > In the preceding sample code, under `navigation`, the `_Records` is the navigation path to the navigation entity linked to `ArtistObjectPage`. You must not use `Records` as the navigation target because it is the navigation entity set name.
 
-You can disable the navigation from a table with the `availability` property. You can use the `availability` property in the `manifest.json` file for a specified route either as a simple binding expression, or using a formatter, as shown in the following sample codes:
+You can disable the navigation from a table for specific object instances by using the `availability` property. You can use the `availability` property in the `manifest.json` file for a specified route either as a simple binding expression, or using a formatter, as shown in the following sample codes:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -96,7 +96,7 @@ You can disable the navigation from a table with the `availability` property. Yo
 > "Travel": {
 >     "detail": {
 >         "route": "objectPage",
-> 	    "availability": "{= ${TravelStatus_code} === 'O'}"
+>         "availability": "{= ${TravelStatus_code} === 'O'}"
 >     }
 > }
 > 
@@ -108,14 +108,14 @@ You can disable the navigation from a table with the `availability` property. Yo
 > ```
 > 
 > "Travel": {
-> 	"detail": {
-> 		"route": "objectPage",
-> 		"availability": "{path: 'TravelStatus_code', formatter: '.extension.sap.fe.core.fpmExplorer.customHeaderListReport.LRExtend.isNavigable'}"
-> 	}
+>     "detail": {
+>         "route": "objectPage",
+>         "availability": "{path: 'TravelStatus_code', formatter: '.extension.sap.fe.core.fpmExplorer.customHeaderListReport.LRExtend.isNavigable'}"
+>     }
 > }
 > ...
 > isNavigable: function(travelStatus, context) {
-> 	return travelStatus !== "O"
+>     return travelStatus !== "O"
 > }
 > 
 > ```
@@ -148,35 +148,33 @@ The parameters in the routing pattern of the manifest must be provided as well a
 > 
 > ```json
 > "routing": {
-> "routes": [
->         {                 
->             "pattern": "SalesOrderManage({key}):?query:",                                                                                 
->             "name": "SalesOrderManageObjectPage",                                                                                                 
+>     "routes": [
+>         {
+>             "pattern": "SalesOrderManage({key}):?query:",
+>             "name": "SalesOrderManageObjectPage",
 >             "target": "SalesOrderManageObjectPage"
 >         }
 >     ],
-> "targets": {                
->     "SalesOrderManageObjectPage":
->         {
+>     "targets": {
+>         "SalesOrderManageObjectPage": {
 >             "type": "Component",
 >             "id": "SalesOrderManageObjectPage",
 >             "name": "sap.fe.templates.ObjectPage",
 >             "options": {
 >                 "settings": {
->                     "contextPath":    "/SalesOrderManage",
+>                     "contextPath": "/SalesOrderManage",
 >                     "navigation": {
 >                         "to_SalesOrder": {  // 'Target' of UI.DataFieldWithNavigationPath annotation
 >                             "detail": {
 >                                 "route": "SalesOrderManageObjectPage",
 >                                 "parameters": {
->                                     "key":  "{_ReferencedSalesOrder/ID}"
+>                                     "key": "{_ReferencedSalesOrder/ID}"
 >                                 }
->                            }
->                       }   
->                  }                  
+>                             }
+>                         }
+>                     }
+>                 }
 >             }
->     }
-> }
 >         }
 >     }
 > }
@@ -208,14 +206,14 @@ The following example shows how to use the `DataFieldWithNavigationPath` annotat
 > 
 > ```
 > @UI.fieldGroup: [
->   {
->     targetelement: 'TO_SALESORDER',
->     label: 'Ref. Sales Order',
->     value: 'REFSALESORDERID',
->     type: #WITH_NAVIGATION_PATH,
->     position: 1 ,
->     qualifier: 'NavExample'
->   }
+>     {
+>         targetelement: 'TO_SALESORDER',
+>         label: 'Ref. Sales Order',
+>         value: 'REFSALESORDERID',
+>         type: #WITH_NAVIGATION_PATH,
+>         position: 1 ,
+>         qualifier: 'NavExample'
+>     }
 > ]
 > REFSALESORDERID;
 > ```
@@ -240,6 +238,8 @@ The following example shows how to use the `DataFieldWithNavigationPath` annotat
 
 ### Navigation After Executing an Action
 
+By default, when executing an action defined using the `UI.DataFieldForAction` annotation, navigation is automatically triggered after the action is executed. This happens if a single instance is returned by the action and if the returned instance is not the same as the instance used when the action was triggered. The navigation is only triggered if the action was executed successfully and if the manifest has navigation defined for the context that is returned. In addition, when a user selects multiple contexts for a table or chart toolbar action, the navigation is **not** triggered, even if the action returns the context.
+
 Application developers can disable the navigation using the setting `navigateToInstance` in the manifest:
 
 > ### Sample Code:  
@@ -248,7 +248,6 @@ Application developers can disable the navigation using the setting `navigateToI
 > ```
 > "com.sap.vocabularies.UI.v1.LineItem": {
 >     "tableSettings": {
->         ...,
 >         ...
 >     },
 >     "actions": {
@@ -276,7 +275,6 @@ For inline actions, you must make the following configuration at columns level:
 > ```
 > "com.sap.vocabularies.UI.v1.LineItem": {
 >     "tableSettings": {
->         ...,
 >         ...
 >     },
 >     "columns": {
@@ -288,10 +286,9 @@ For inline actions, you must make the following configuration at columns level:
 >         "DataFieldForAction::com.c_salesordermanage_sd.DummyBoundAction": {
 >             "afterExecution": {
 >                 "navigateToInstance": false
->                 }
 >             }
 >         }
->      }
+>     }
 > }
 > ```
 

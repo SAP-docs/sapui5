@@ -65,7 +65,7 @@ Each action corresponds to an OData function import.
 > ### Note:  
 > Only relevant for list report pages, object pages, worklists, and analytical list pages.
 > 
-> Field controls are omitted from the list report page since it is a read-only page. In a list report page, field controls are considered only if there are custom actions that reference field controls.
+> Field controls are omitted from the list report page since it is a read-only page. On a list report page, field controls are considered only if there are custom actions that reference field controls.
 
 You can use field controls to display a UI field as mandatory or read-only, and to hide the field. Field control information is partly static information and valid for all business document instances. However, most use cases are dynamic and reflect the state of the UI application, business document, or user context and must be controlled by the business logic.
 

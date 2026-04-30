@@ -43,7 +43,7 @@ A constructor is a special type of function that is called to create an object. 
 
 In SAPUI5, control constructors accept the following arguments in the specified order:
 
-1.  An optional unique identifier of type `string` which must either be the first argument, or omitted altogether. If you omit the ID, the SAPUI5 framework automatically computes an ID. Specifying your own identifier allows your application to easily find the control and, for example, retrieve the current user input from it. Alternatively, you can keep a reference to the control in a variable. For more information, see [Stable IDs: All You Need to Know](../05_Developing_Apps/stable-ids-all-you-need-to-know-f51dbb7.md).
+1.  An optional unique identifier of type `string` which must either be the first argument, or omitted altogether. If you omit the ID, the SAPUI5 framework automatically computes an ID. Specifying your own identifier allows your application to easily find the control and, for example, retrieve the current user input from it. Alternatively, you can keep a reference to the control in a variable. For more information, see [ID Handling in SAPUI5: The Complete Guide](../05_Developing_Apps/id-handling-in-sapui5-the-complete-guide-f51dbb7.md).
 2.  A simple object as `mSettings` parameter that defines values for any property, aggregation, association, or event.
 
 The following code snippet shows an example of a constructor that is called to create a new text control saying "Hello World" with the specified tooltip and width:

@@ -26,15 +26,12 @@ The compatibility version configuration worked as follows:
 -   The version flag had to be defined in the SAPUI5 bootstrap tag, either globally \(via `data-sap-ui-compat-version`\) or individually for each feature \(for example `data-sap-ui-compat-version-xyz`\). Example with `compat-version "1.18"`:
 
     ```html
-    <script id="sap-ui-bootstrap" 
-            type="text/javascript"
-            src="resources/sap-ui-core.js"
-            data-sap-ui-theme="sap_horizon"
-            data-sap-ui-libs="sap.m"
-            data-sap-ui-compat-version="1.18"
-            data-sap-ui-compat-version-xyz="1.16"
-            >
-    </script> 
+    <script id="sap-ui-bootstrap"
+        src="resources/sap-ui-core.js"
+        data-sap-ui-compat-version="1.18"
+        data-sap-ui-compat-version-xyz="1.16"
+        data-...="..."
+    ></script> 
     ```
 
 -   If no compatibility version is defined, the default behavior of the feature applies.

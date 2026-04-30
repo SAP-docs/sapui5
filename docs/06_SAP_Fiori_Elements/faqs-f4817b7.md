@@ -155,7 +155,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     You can configure your actions using specific annotations. For more information about bound/unbound actions, see the [Bound and Unbound Actions](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__BoundUnbound) subsection in [Actions](actions-cbf16c5.md).
 
--   **How can end users pass additional parameters to the action? Can these action parameters have default values?**
+-   **How can users pass additional parameters to the action? Can these action parameters have default values?**
 
     Yes, the action parameters can have default values. For more information, see the [Action Parameters](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__action_parameters_subsection) subsection in [Actions](actions-cbf16c5.md).
 

@@ -48,7 +48,7 @@ Applications and controls should not call this method explicitly as the framewor
 
 Use [`Theming.setTheme()`](https://ui5.sap.com/#/api/module:sap/ui/core/Theming%23methods/sap/ui/core/Theming.setTheme) instead. However, this will no longer support providing a new theme root via an "@" symbol. In URL parameters, usage of the "@" symbol is still available.
 
-See [Setting Themes](setting-themes-e9fc648.md) for more details.
+For more information, see [Theme Configuration and Management](theme-configuration-and-management-e9fc648.md).
 
 </td>
 </tr>
@@ -95,7 +95,7 @@ sap.ui.require(["sap/ui/core/Core"], async function(Core) {
         // already in ready state, otherwise it is executed at a later point in time
     });
     // You can also use the ready() function as a Promise, e.g.
-    Core.ready().then(...)
+    Core.ready().then(/*...*/)
     // or await it
     await Core.ready();
 });
@@ -104,11 +104,11 @@ sap.ui.require(["sap/ui/core/Core"], async function(Core) {
 As an alternative to programmatically chaining to the Core's ready state, you can also use a dedicated `on-init` module, which will be required and executed automatically once the Core is ready:
 
 ```
-<script id='sap-ui-bootstrap'
-    data-sap-ui-async='true'
-    data-sap-ui-resource-roots='{"my": "./"}'
-    data-sap-ui-on-init='module:my/initModule'
-    ...>
+<script id="sap-ui-bootstrap"
+    data-sap-ui-async="true"
+    data-sap-ui-resource-roots='{ "my": "./" }'
+    data-sap-ui-on-init="module:my/initModule"
+    data-...="...">
 </script>
 ```
 
@@ -153,7 +153,7 @@ Use [`Localization#attachChange()`](https://ui5.sap.com/#/api/module:sap/base/i1
 Instead of relying on `Localization.attachChange()` and manually attaching an event handler for `localizationChanged`, we recommend to use the generic control hook **`onLocalizationChanged`** on your `sap.ui.core.Element` subclasses instead.
 
 > ### Note:  
-> The generic control hook has been renamed from `onlocalizationChanged` to `onLocalizationChanged` \(mind the capital letter "L"\).
+> The generic control hook has been renamed from `onlocalizationChanged` to `onLocalizationChanged` \(mind the capital letter `L`\).
 > 
 > The generic control hook captures all changes on settings exposed via the `sap/base/i18n/Localization` facade, as well as the changes to settings exposed via the`sap/base/i18n/Formatting` facade.
 
@@ -161,38 +161,41 @@ The old `LocalizationChanged` event was fired on each relevant localization **an
 
 The `change` event of the new `Localization` facade only captures the settings that are changeable via said facade. However, if you are interested in the changes of the format settings, additionally use the `change` event of the `sap/base/i18n/Formatting` facade.
 
-> ### Note:  
-> The Event object has a different API than on the Core facade. There is no more `getParameters()`, but simple properties like the Web API events \(see the sample below\).
-> 
-> See [`Localization$ChangeEvent`](https://ui5.sap.com/#/api/module:sap/base/i18n/Localization$ChangeEvent) or [`Formatting$ChangeEvent`](https://ui5.sap.com/#/api/module:sap/base/i18n/Formatting$ChangeEvent), respectively.
-
-Instead of the former APIs `onlocalizationChanged()` or `attachLocalizationChanged()`, see the following sample:
+Instead of the former APIs `onlocalizationChanged()` or `attachLocalizationChanged()`, see the following examples:
 
 ```
-/// generic control hook
-MyControl.prototype.onLocalizationChanged = function() {};
+// generic control hook in Control development
+MyControl.prototype.onLocalizationChanged = function() {
+    // ...
+};
+```
+
+```
+// generic  Localization API use
+
+// Localization required from "sap/base/i18n/Localization",
+// Formatting required from "sap/base/i18n/Formatting"
+
+Localization.attachChange((oEvent) => {
+    // Note: The event callback has no <this> context anymore,
+    // thus we use an arrow function here
  
-// Localization API
-sap.ui.require([
-    "sap/base/i18n/Localization",
-    "sap/base/i18n/Formatting"
-], (Localization, Formatting) => {
-    Localization.attachChange((oEvent) => {
-        // Note: The event callback has no <this> context anymore,
-        // thus we use an arrow function here
- 
-        // Note: the Event object has a different API than on the Core facade:
-        // no more getParameters(), but simple properties like the Web API events.
-        // Therefore, you can access the newly set "language" like so:
-        const sLanguage = oEvent.language;
-    });
- 
-    // additional setting changes can be captured via the Formatting facade
-    Formatting.attachChange((oEvent) => {
-        // s.a.
-    });
+    // Note: the Event object has a different API than on the Core facade:
+    // no more getParameters(), but simple properties like the Web API events.
+    // Therefore, you can access the newly set "language" like this:
+    const sLanguage = oEvent.language;
+});
+
+// Additional setting changes can be captured via the Formatting facade
+Formatting.attachChange((oEvent) => {
+    // ...
 });
 ```
+
+> ### Note:  
+> The Event object has a different API than on the Core facade. There is no more `getParameters()`, but simple properties like the Web API events.
+> 
+> See [`Localization$ChangeEvent`](https://ui5.sap.com/#/api/module:sap/base/i18n/Localization$ChangeEvent) or [`Formatting$ChangeEvent`](https://ui5.sap.com/#/api/module:sap/base/i18n/Formatting$ChangeEvent), respectively.
 
 
 
@@ -210,23 +213,17 @@ Use [`ManagedObject#attachParseError()`](https://ui5.sap.com/#/api/sap.ui.base.M
 
 Overall, the events `parseError`, `validationError`, `formatError` and `validationSuccess` have been deprecated. Use the corresponding APIs on subclasses of `sap/ui/base/ManagedObject`.
 
-Component-based applications should rather prefer framework controlled validation handling \(manifest flag `"sap.ui5"/"handleValidation"`\).
+Component-based applications should rather prefer framework-controlled validation handling \(e.g. add `"handleValidation": true` in manifest section `sap.ui5`\).
 
 Tests and samples that are not Component-based should attach validation event listeners to a suitable control in the control tree instead.
 
 ```
-sap.ui.require([
-    "sap/ui/core/Component"
-], async (Component) => {
-    const oComponent = await Component.create({
-        name: "my.component"
-    });
-    const fnParseErrorHandler = function () {
-        // Error handling
-    };
-    oComponent.attachParseError(fnParseErrorHandler);
-    oComponent.detachParseError(fnParseErrorHandler);
-});
+// Component required from "sap/ui/core/Component"
+
+const oComponent = await Component.create({name: "my.component"});
+const fnParseErrorHandler = function () {/* ... */};
+oComponent.attachParseError(fnParseErrorHandler, myListener);
+oComponent.detachParseError(fnParseErrorHandler, myListener);
 ```
 
 
@@ -241,15 +238,15 @@ sap.ui.require([
 </td>
 <td valign="top">
 
-For applications and test code, see [`Theming.attachApplied()`](https://ui5.sap.com/#/api/module:sap/ui/core/Theming%23methods/attachApplied) as an alternative. For controls, use the generic control hook **`onThemeChanged`** on your `sap.ui.core.Element` subclasses instead.
+For applications and test code, see [`Theming.attachApplied()`](https://ui5.sap.com/#/api/module:sap/ui/core/Theming%23methods/sap/ui/core/Theming.attachApplied) as an alternative.
 
 > ### Note:  
 > The Event object has a different API than on the Core facade. There is no more `getParameters()`, but simple properties like the Web API events.
 
 > ### Caution:  
-> The handler of the **`applied`** event will be executed immediately once, in case all \*.css files are loaded and there are no further requests pending for the theme.
+> The handler of the **`applied`** event will be executed immediately once, in case all `*.css` files are loaded and there are no further requests pending for the theme.
 > 
-> After that, it will only be executed in case of new \*.css files, which may happen for a complete theme change or loading of additional libraries. Keep in mind that the **`onThemeChanged`** hook is not executed initially in case the theme is already applied.
+> After that, it will only be executed in case of new `*.css` files, which may happen for a complete theme change or loading of additional libraries.
 
 
 
@@ -291,7 +288,7 @@ See related information for `attachParseError()`.
 </td>
 <td valign="top">
 
-Use [`Control#getControlsByFieldGroup()`](https://ui5.sap.com/#/api/sap.ui.core.Control%23methods/getControlsByFieldGroup) instead.
+Use [`Control#getControlsByFieldGroupId()`](https://ui5.sap.com/#/api/sap.ui.core.Control%23methods/getControlsByFieldGroupId) instead.
 
 </td>
 </tr>
@@ -305,13 +302,20 @@ Use [`Control#getControlsByFieldGroup()`](https://ui5.sap.com/#/api/sap.ui.core.
 
 Use [`Element.getElementById()`](https://ui5.sap.com/#/api/sap.ui.core.Element%23methods/sap.ui.core.Element.getElementById) instead.
 
-```
-sap.ui.require(["sap/ui/core/Element"], async function(Element) {
-    const oMyElement = Element.getElementById("myId");
-});
-```
+However, unless explicitly documented otherwise, avoid relying on `Core.byId` or `Element.getElementById` in these cases:
+
+-   When the creation of the target element is outside your project's control.
+
+-   When developing applications that run inside an application container such as the SAP Fiori launchpad.
 
 
+For accessing UI elements in SAP Fiori elements projects, see [Read Before Extending a Generated App](../06_SAP_Fiori_Elements/read-before-extending-a-generated-app-d9c146a.md).
+
+Certain events, such as `routePatternMatched` or `patternMatched` from `sap/ui/core/routing/Route` or `Router` provide a reference to a `View` instance. From there, you can access the target element using [`View#byId`](https://ui5.sap.com/#/api/sap.ui.core.mvc.View%23methods/byId).
+
+When creating a new element programmatically \(e.g., in a Controller\), use one of the applicable [`createId` APIs](https://ui5.sap.com/#/search/createId/?category=apiref) to generate a unique stable ID based on the parent element. This allows accessing the target element using the parent element without relying on `Core.byId` or `Element.getElementById`. See also [ID Handling in SAPUI5: The Complete Guide](../05_Developing_Apps/id-handling-in-sapui5-the-complete-guide-f51dbb7.md).
+
+When possible, consider manipulating the UI through data binding instead of accessing elements via any `byId`. Changes in the model automatically update the UI, and with two-way binding enabled, user input updates the model directly.
 
 </td>
 </tr>
@@ -397,7 +401,7 @@ Use [`IntervalTrigger.removeListener()`](https://ui5.sap.com/#/api/sap.ui.core.I
 </td>
 <td valign="top">
 
-Use [`Localization#detachChange()`](https://ui5.sap.com/#/api/module:sap/base/i18n/Localization%23methods/detachChange) instead.
+Use [`Localization#detachChange()`](https://ui5.sap.com/#/api/module:sap/base/i18n/Localization%23methods/sap/base/i18n/Localization.detachChange) instead.
 
 </td>
 </tr>
@@ -423,7 +427,7 @@ See related information for `attachParseError()`.
 </td>
 <td valign="top">
 
-See [`Theming.detachApplied()`](https://ui5.sap.com/#/api/module:sap/ui/core/Theming%23methods/detachApplied) instead.
+See [`Theming.detachApplied()`](https://ui5.sap.com/#/api/module:sap/ui/core/Theming%23methods/sap/ui/core/Theming.detachApplied) instead.
 
 </td>
 </tr>
@@ -586,19 +590,17 @@ Use [`Element.getElementById()`](https://ui5.sap.com/#/api/sap.ui.core.Element%2
 Use [`EventBus.getInstance()`](https://ui5.sap.com/#/api/sap.ui.core.EventBus%23methods/sap.ui.core.EventBus.getInstance) for global usage instead. However, the global `EventBus` should only be used if there is no other option to communicate between different instances. Whenever possible, you should prefer native control events, View or Component \(lifecycle\) events.
 
 ```
-sap.ui.require([
-    "sap/ui/core/EventBus"
-], (EventBus) => {
-    const oEventBus = EventBus.getInstance();
-});
+// EventBus required from "sap/ui/core/EventBus"
+
+const oEventBus = EventBus.getInstance();
 ```
 
 If needed, a new private `EventBus` instance may be created via the constructor, which decouples it from any other parties subscribed to the global `EventBus`:
 
 ```
 const oMyOwnEventBus = new EventBus();
-oMyEventBus.subscribe("my-channel-id", "my-event-id")
-oMyEventBus.publish("my-channel-id", "my-event-id", { /* data */ })
+oMyOwnEventBus.subscribe("my-channel-id", "my-event-id");
+oMyOwnEventBus.publish("my-channel-id", "my-event-id", {/* data */});
 ```
 
 
@@ -615,17 +617,15 @@ oMyEventBus.publish("my-channel-id", "my-event-id", { /* data */ })
 
 Use [`Lib.getResourceBundleFor()`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.getResourceBundleFor) instead.
 
-Note that the new API may unintentionally still load the ResourceBundle for the given library synchronously, which is to be avoided. Therefore, make sure to always either load the library beforehand or maintain it as a **Component** or **Library** dependency, so that you can prevent such synchronous loading of \*.properties files.
+Note that the new API may unintentionally still load the ResourceBundle for the given library synchronously, which is to be avoided. Therefore, make sure to always either load the library beforehand or maintain it as a **Component** or **Library** dependency **without** `"lazy": true`, so that you can prevent such synchronous loading of `*.properties` or `*.messagebundle` files.
 
 ```
-// Retrieve ResourceBundle when library was already loaded beforehand.
-// This is the case for controls inside their own library
-sap.ui.require(["sap/ui/core/Lib"], async (Library) => {
-    // ensures the library is loaded
-    await Library.load({ name: "sap.m" });
-    // ResourceBundle can be retrieved
-    const oRB = Library.getResourceBundleFor("sap.m")
-});
+// Lib required from "sap/ui/core/Lib"
+
+// Ensure having the target library loaded before accessing its resource bundle, by loading it either via manifest or on-demand with:
+await Lib.load({ name: "sap.m" });
+// ResourceBundle can be retrieved
+const oRB = Lib.getResourceBundleFor("sap.m")
 ```
 
 
@@ -655,15 +655,14 @@ Applications should avoid performing operations on all loaded libraries. This co
 Use [`Messaging`](https://ui5.sap.com/#/api/module:sap/ui/core/Messaging) instead.
 
 ```
-// example, replacing legacy sap.ui.getCore().getMessageManager().addMessage()
-sap.ui.require([
-    "sap/ui/core/Messaging",
-    "sap/ui/core/message/Message
-], (Messaging, Message) => {
-    Messaging.addMessage(new Message({
-        text: "My message text"
-    }));
-});
+// Example, replacing legacy sap.ui.getCore().getMessageManager().addMessage()
+
+// Messaging required from "sap/ui/core/Messaging",
+// Message required from "sap/ui/core/message/Message"
+
+Messaging.addMessage(new Message({
+    text: "My message text"
+}));
 ```
 
 
@@ -717,18 +716,16 @@ Use [`sap/ui/core/ComponentSupport`](https://ui5.sap.com/#/api/module:sap/ui/cor
 Use [`StaticArea.getDomRef()`](https://ui5.sap.com/#/api/module:sap/ui/core/StaticArea%23methods/sap/ui/core/StaticArea.getDomRef) instead. It provides more possibilities, e.g. you can also retrieve the static UIArea directly, if needed.
 
 ```
-sap.ui.require([
-    "sap/ui/core/StaticArea"
-], (StaticArea) => {
-    // Direct replacement
-    const oStaticArea = StaticArea.getDomRef();
+// StaticArea required from "sap/ui/core/StaticArea"
+
+// Direct replacement
+const oStaticArea = StaticArea.getDomRef();
  
-    // Retrieving the static UIArea directly
-    oStaticUIArea = StaticArea.getUIArea();
- 
-    // Check whether the given DOM element is part of the static area
-    const bContainedInArea = StaticArea.contains(myControl.getDomRef())
-});
+// Retrieving the static UIArea directly
+oStaticUIArea = StaticArea.getUIArea();
+
+// Check whether the given DOM element is part of the static area
+const bContainedInArea = StaticArea.contains(myControl.getDomRef());
 ```
 
 
@@ -808,26 +805,25 @@ Use [`Lib.load()`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.co
 Use [`Lib.init()`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.init) instead.
 
 ```
-// the object is no longer passed into sap.ui.getCore().initLibrary()
-sap.ui.require(["sap/ui/core/Lib"], (Library) => {
-    Library.init({
-        name: "my.library",
-        version: "${version}",
-        dependencies: ["sap.ui.core", "..."],
-        types: [
-            ...
-        ],
-        interfaces: [],
-        controls: [
-            ...
-        ],
-        elements: [
-            ...
-        ],
-        extensions: {
-            ...
-        }
-    });
+// Lib required from "sap/ui/core/Lib"
+
+Lib.init({
+    name: "my.library",
+    version: "${version}",
+    dependencies: ["sap.ui.core", "..."],
+    types: [
+        // ...
+    ],
+    interfaces: [],
+    controls: [
+        // ...
+    ],
+    elements: [
+        // ...
+    ],
+    extensions: {
+        // ...
+    }
 });
 ```
 
@@ -843,19 +839,14 @@ sap.ui.require(["sap/ui/core/Lib"], (Library) => {
 </td>
 <td valign="top">
 
-Deprecated without replacement. It should no longer be necessary as it was mainly used to avoid accessing APIs before the Core was ready, but these other Core APIs have been deprecated as well.
+Deprecated without replacement. It should no longer be necessary as it was mainly used to avoid accessing APIs before the `Core` was ready. But these other `Core` APIs have been deprecated as well. Nevertheless, if you still have a need for `isInitialized`, maybe use the [`sap/ui/care/Core.ready`](https://ui5.sap.com/#/api/sap.ui.core.Core%23methods/ready) method:
 
 ```
-// Nevertheless, if you still have a need for isInitialized, maybe use the following
-sap.ui.require(["sap/ui/core/Core"], async function(Core) {
-    let isInitialized = false;
-    Core.ready(() => {
-        isInitialized = true;
-    });
-    if (isInitialized) {
-        ...
-    }
-});
+// Core required from "sap/ui/core/Core"
+
+Core.ready(myCallback);
+// or
+await Core.ready();
 ```
 
 
@@ -906,7 +897,7 @@ Use [`StaticArea.contains()`](https://ui5.sap.com/#/api/module:sap/ui/core/Stati
 </td>
 <td valign="top">
 
-For applications and test code, see [`Theming.attachApplied()`](https://ui5.sap.com/#/api/module:sap/ui/core/Theming%23methods/attachApplied) as an alternative. For controls, use the generic control hook **`onThemeChanged`** on your `sap.ui.core.Element` subclasses instead.
+For applications and test code, see [`Theming.attachApplied()`](https://ui5.sap.com/#/api/module:sap/ui/core/Theming%23methods/sap/ui/core/Theming.attachApplied) as an alternative.
 
 See `attachThemeChanged` for related information.
 
@@ -923,12 +914,9 @@ See `attachThemeChanged` for related information.
 Use [`Lib.load()`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.load) instead.
 
 ```
-// instead of legacy loading via sap.ui.getCore().loadLibrary("my.library")
-sap.ui.require(["sap/ui/core/Lib"], (Library) => {
-    Library.load({
-        name: "my.library"
-    });
-});
+// Lib required from "sap/ui/core/Lib"
+
+await Lib.load({ name: "my.library" });
 ```
 
 
@@ -967,7 +955,7 @@ Use [`Theming.notifyContentDensityChanged()`](https://ui5.sap.com/#/api/module:s
 </td>
 <td valign="top">
 
-Albeit plugins are not meant for public usage, the common need to access the set of all controls/elements or all components can now be achieved using the [`sap.ui.core.Element.registry`](https://ui5.sap.com/#/api/sap.ui.core.Element.registry) or [`sap.ui.core.Component.registry`](https://ui5.sap.com/#/api/sap.ui.core.Component.registry) APIs, respectively.
+Albeit plugins are not meant for public usage, the common need to access the set of all controls/elements or all components can now be achieved using the [`sap/ui/core/ElementRegistry`](https://ui5.sap.com/#/api/module:sap/ui/core/ElementRegistry) or [`sap/ui/core/ComponentRegistry`](https://ui5.sap.com/#/api/module:sap/ui/core/ComponentRegistry) APIs, respectively.
 
 </td>
 </tr>
@@ -1031,7 +1019,7 @@ Use [`oControl.placeAt(oDomRef, "only")`](https://ui5.sap.com/#/api/sap.ui.core.
 </td>
 <td valign="top">
 
-Theme roots should not be changed at runtime. Instead, provide the corresponding `sap-ui-theme-roots` configuration option via either the bootstrap, meta tag, or an URL parameter. See [Setting Themes](setting-themes-e9fc648.md) for more details.
+Theme roots should not be changed at runtime. Instead, provide the corresponding `sap-ui-theme-roots` configuration option via either the bootstrap, meta tag, or an URL parameter. See [Theme Configuration and Management](theme-configuration-and-management-e9fc648.md) for more details.
 
 </td>
 </tr>

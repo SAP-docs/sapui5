@@ -2,7 +2,7 @@
 
 # Dual Combination Chart Card
 
-A dual combination chart type lets you view individual data points for a particular dimension.
+You can render the chart as a dual combination chart, which lets you view individual data points for a particular dimension.
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V4, see [Dual Combination Chart](dual-combination-chart-c406c18.md).
@@ -25,6 +25,8 @@ Chart area configuration:
 
 -   Assign at least one role to the category axis. All dimensions with the **Category** role are assigned to the category axis. The **Category** role is the default role.
 
+
+The following sample code how to define a dual combination chart:
 
 > ### Sample Code:  
 > ```

@@ -28,7 +28,7 @@ The specific version allows you to select a particular fixed version for bootstr
 
 ```html
 <script id="sap-ui-bootstrap"
-    src="https://ui5.sap.com/1.146.0/resources/sap-ui-core.js"
+    src="https://ui5.sap.com/1.147.0/resources/sap-ui-core.js"
     data-sap-ui-async="true"
     data-...="...">
 </script>

@@ -2,15 +2,15 @@
 
 # Sharing Overview Pages
 
-Share your application as a tile on the SAP Fiori launchpad or by sending an email link.
+Users can share their application as a tile on SAP Fiori launchpad or by sending an email link.
 
 
 
 ## SAP Fiori Launchpad
 
-The current state of the filter bar in your application is stored as a tile on the SAP Fiori launchpad.
+The current state of the filter bar in the application is stored as a tile on SAP Fiori launchpad.
 
-To save the application, on the filter bar, click *Share* \> *Save As Tile* \> *Fill required fields* \> *Ok*.
+To save the application, on the filter bar, click *Share* \> *Save As Tile* \> *Fill required fields* \> *OK*.
 
 
 
@@ -18,7 +18,7 @@ To save the application, on the filter bar, click *Share* \> *Save As Tile* \> *
 
 ## Email
 
-You can also share the current state of a overview page by email, which contains a link to your application.
+Users can also share the current state of an overview page by email, which contains a link to their application.
 
 To send an email link, on the filter bar, click *Share* \> *Send Email*.
 

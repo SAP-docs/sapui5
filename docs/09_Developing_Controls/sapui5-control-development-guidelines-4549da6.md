@@ -105,3 +105,40 @@ With regard to the renderer, the following guidelines apply:
 -   `RenderManager.writeClasses()` must be called in the root HTML element of a control; otherwise `addStyleClass` does not work. this does not need to be used in subelements.
 
 
+
+
+## Theming and CSS
+
+For theming and CSS-related development, follow the comprehensive guidelines provided in the main theming documentation:
+
+-   [Theming](../04_Essentials/theming-497c27a.md) 
+
+-   [Creating Themable User Interfaces](../04_Essentials/creating-themable-user-interfaces-a2c67ac.md) 
+
+    This topic elaborates on best practices for theme-aware control development, including the following:
+
+    -   Using CSS custom properties for theme parameters
+
+    -   Proper CSS class naming conventions
+
+    -   Container context considerations
+
+    -   Local parameter naming guidelines
+
+
+-   [Enhanced Theming Concepts](../04_Essentials/enhanced-theming-concepts-45df6df.md) 
+
+    This topic elaborates on advanced theming features, such as the `Parameters` API and CSS math functions
+
+
+**Key Points for Control Developers**:
+
+-   Use CSS custom properties \(for example, `var(--sapButton_Background)`\) instead of hard-coded values
+
+-   Follow semantic CSS class naming conventions with proper prefixes
+
+-   Ensure theme-aware styling that works across all SAPUI5 themes
+
+-   Test controls with different themes to verify proper appearance
+
+

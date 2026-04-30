@@ -32,6 +32,10 @@ This topic provides a list of the annotations used in overview pages. They are a
 
 
 
+### For Internal Use Only!
+
+
+
 <a name="loio2204fcbbc6a1465d93900bbf59022731__section_gfq_bfw_2hc"/>
 
 ## `com.sap.vocabularies.UI.v1.HeaderInfo`

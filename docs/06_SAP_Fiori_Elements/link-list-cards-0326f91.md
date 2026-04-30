@@ -6,15 +6,8 @@ Displays a list of links with a title, picture, icon, or subtitle.
 
 
 
-Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
+A link list card supports quick view to display contact annotation information.
 
-
-
-A link list card supports the following:
-
--   Quick view to display contact annotation information.
-
--   `SmartLink` control to display semantic object information.
 
 
 ![](images/LLC_88688ca.png)

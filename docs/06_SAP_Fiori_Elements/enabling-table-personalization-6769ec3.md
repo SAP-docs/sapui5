@@ -7,7 +7,7 @@ You can use table personalization to modify table settings.
 > ### Note:  
 > For information about SAP Fiori elements for OData V4, see [Enabling Table Personalization](enabling-table-personalization-3e2b4d2.md).
 
-You can control the table personalization options that end users see.
+You can control the table personalization options that users see.
 
 
 
@@ -31,7 +31,7 @@ The default settings for filtering are as follows:
 
 ## Enabling Table Filters
 
-In harmonized variant management, by default, end users cannot set a filter in the table personalization settings. To enable filtering for users, set the `enableTableFilterInPageVariant` property in the manifest. If `smartVariantManagement` is set to `false`, then table filter is enabled by default.
+In harmonized variant management, by default, users cannot set a filter in the table personalization settings. To enable filtering for users, set the `enableTableFilterInPageVariant` property in the manifest. If `smartVariantManagement` is set to `false`, then table filter is enabled by default.
 
 > ### Sample Code:  
 > `manifest.json`

@@ -1,8 +1,8 @@
 <!-- loiobe7a23670d7d499094030ad1c1b1c915 -->
 
-# Custom View Switch
+# Extending Custom View Switch
 
-Extend view switch so it reacts based on filter conditions or custom configuration.
+You can extend view switch so it responds dynamically based on filter conditions or custom configuration settings.
 
 
 
@@ -15,19 +15,54 @@ Extend view switch so it reacts based on filter conditions or custom configurati
 
 ## Procedure
 
-To define the custom view switch:
+To define the custom view switch, proceed as follows:
 
-1.  Create a controller extension \(example, `customViewswitch.controller.js` file\) and define the `onBeforeRebindPageExtension` function with these input parameters:
-
-    -   `aCards` \[Type: Array\]: List of all visible cards
-
-    -   `oSelectionvariant` \[Type: Object\]: Object containing filter values
+1.  Create a controller extension file, `customViewswitch.controller.js`, for example, and define the `onBeforeRebindPageExtension` function with the following input parameters:
 
 
-2.  Define `setTabIndex()` method to pass *<Cardid\>* and *<TabIndex\>* as parameters. For example, var`oTabIndexList = {"card1" : 2, "card2": 1};`
+    <table>
+    <tr>
+    <th valign="top">
+
+    Input Parameters
+    
+    </th>
+    <th valign="top">
+
+    Description
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `aCards` 
+    
+    </td>
+    <td valign="top">
+    
+    Contains a list of all visible cards in an array.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `oSelectionvariant` 
+    
+    </td>
+    <td valign="top">
+    
+    \[Type: Object\]: Object containing filter values
+    
+    </td>
+    </tr>
+    </table>
+    
+2.  Define `setTabIndex()` method to pass `Cardid` and `TabIndex` as parameters. For example, var`oTabIndexList = {"card1" : 2, "card2": 1};`
 
     > ### Note:  
-    > The *<TabIndex\>* starts with the value 1 and must not be greater than the length of tabs.
+    > The value for `TabIndex` starts with `1` and must not be greater than the length of tabs.
 
     Configure the key value according to your filter values and pass the `oTabIndexList` object to `this.setTabIndex(oTabIndexList)`, as shown in the following sample code:
 

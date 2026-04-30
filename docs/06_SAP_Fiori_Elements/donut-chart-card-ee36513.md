@@ -2,7 +2,7 @@
 
 # Donut Chart Card
 
-A donut chart displays data as the differently colored sections of a donut.
+You can render the chart as a donut chart, which displays data as the differently colored sections of a donut.
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V4, see [Donut Chart](donut-chart-87a17eb.md).

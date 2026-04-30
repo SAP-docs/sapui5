@@ -47,7 +47,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Routing
 
 ```js
 {
-	"_version": "2.6.0",
+	"_version": "2.7.0",
 	"sap.app": {
 		...
 	},

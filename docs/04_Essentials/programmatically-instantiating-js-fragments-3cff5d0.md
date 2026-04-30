@@ -40,7 +40,7 @@ This button can now be used as if it had been created in a standard way.
 > ### Note:  
 > The `await` operator can only be used inside an `async` function. Please be aware that there are certain limitations in SAPUI5 when using `async` functions as event handlers. For more information, see [ECMAScript Support](../02_Read-Me-First/ecmascript-support-0cb44d7.md).
 
-For fragments that are used several times, an ID for the fragment can be given optionally, see [Unique IDs](unique-ids-5da591c.md):
+For fragments that are used several times, an ID for the fragment can be given optionally, see [ID Handling in SAPUI5: The Complete Guide](../05_Developing_Apps/id-handling-in-sapui5-the-complete-guide-f51dbb7.md):
 
 ```js
 

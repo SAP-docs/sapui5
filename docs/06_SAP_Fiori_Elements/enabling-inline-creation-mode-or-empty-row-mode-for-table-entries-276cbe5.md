@@ -10,7 +10,7 @@ You can enable the inline creation mode or empty row mode for table entries in a
 > ### Tip:  
 > We recommend that you use the inline creation mode or empty row mode only for tables that don't have a large number of columns. For complex tables, use create page instead.
 > 
-> The create page is the default mode to create new objects. In this mode, when the end user clicks *Create*, the application opens a new page where they can input their values.
+> The create page is the default mode to create new objects. In this mode, when the user clicks *Create*, the application opens a new page where they can input their values.
 
 The behavior of the available modes is as follows:
 
@@ -18,9 +18,9 @@ The behavior of the available modes is as follows:
 
     By default, a new entry is created and the system automatically navigates to the item's object page.
 
--   **Empty Row Mode**: When an end user begins adding data to a field in an existing empty row, a new empty row is automatically created. In a responsive table, the empty row appears at the top, while in a grid table, it appears at the bottom. There is no corresponding entry in the draft table for the empty row.
+-   **Empty Row Mode**: When a user begins adding data to a field in an existing empty row, a new empty row is automatically created. In a responsive table, the empty row appears at the top, while in a grid table, it appears at the bottom. There is no corresponding entry in the draft table for the empty row.
 
-    The automatically added empty row is removed if the end user doesn't add any data. It isn't required to manually remove the empty row.
+    The automatically added empty row is removed if the user doesn't add any data. It isn't required to manually remove the empty row.
 
     The empty row mode has the following features:
 
@@ -43,7 +43,7 @@ The behavior of the available modes is as follows:
     > ### Note:  
     > In `creationRows` mode, if a field in a row is modified, then this empty row is converted to draft only after an interval of 20 seconds. This behavior is similar to that of generic draft handling. For more information, see [Draft Handling](draft-handling-b0eb3cc.md).
     > 
-    > Once the data is entered in an empty row, it is immediately converted to a draft row only if a structural side effect is defined on the corresponding table or if the end user explicitly presses [Enter\].
+    > Once the data is entered in an empty row, it is immediately converted to a draft row only if a structural side effect is defined on the corresponding table or if the user explicitly presses [Enter\].
 
     > ### Sample Code:  
     > `manifest.json`
@@ -200,9 +200,9 @@ The behavior of the available modes is as follows:
 
 ### Changing the Default Sort Order for New Inline Rows
 
-By default, the table rows of the object page are sorted according to the sort order defined in the back end. End users can define their own sort order using the table personalization settings. You can also modify the sort order using API extensions. For more information about the API extension, see [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ObjectPage.controllerFrameworkExtensions%23methods/Summary).
+By default, the table rows of the object page are sorted according to the sort order defined in the back end. Users can define their own sort order using the table personalization settings. You can also modify the sort order using API extensions. For more information about the API extension, see [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ObjectPage.controllerFrameworkExtensions%23methods/Summary).
 
-In edit mode, the newly created inline rows are placed at the top of the table by default, irrespective of the existing sort order defined for the table. This default sort order allows easy access to the new inline row for the end users. You can turn off this feature by setting `disableDefaultInlineCreateSort` to `true` in the `manifest.json` file as shown in the following sample code:
+In edit mode, the newly created inline rows are placed at the top of the table by default, irrespective of the existing sort order defined for the table. This default sort order allows easy access to the new inline row for the users. You can turn off this feature by setting `disableDefaultInlineCreateSort` to `true` in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
@@ -240,7 +240,7 @@ The `disableDefaultInlineCreateSort` setting is evaluated only if the `"createMo
 
 An empty row is converted to a draft row only if all the fields annotated with `RequiredProperties` have a value.
 
-If the end user doesn't enter a value for any of the required fields, then an error message is displayed. If the required fields aren't a part of the displayed table columns, then an error message is displayed asking the end user to add the required fields within the displayed table columns using the table settings.
+If the user doesn't enter a value for any of the required fields, then an error message is displayed. If the required fields aren't a part of the displayed table columns, then an error message is displayed asking the user to add the required fields within the displayed table columns using the table settings.
 
 **Defining Custom Error Messages for the Empty `Required` Field**
 

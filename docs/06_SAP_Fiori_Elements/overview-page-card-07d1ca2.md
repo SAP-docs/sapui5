@@ -17,7 +17,7 @@ Each card is bound to a single entity set in a data source, and its configuratio
 
 The card ID is the property name, and the card configuration is provided as a value in the object. At runtime, the cards are displayed in the order that they appear in the application descriptor.
 
-For more information on cards and its areas, see [Card](https://experience.sap.com/fiori-design-web/cards/).
+For more information on cards and its areas, see [SAP Design System guidelines](https://experience.sap.com/fiori-design-web/cards/).
 
 
 
@@ -131,13 +131,15 @@ Card actions are available as of SAPUI5 1.110. You can access and perform the ca
 
 <a name="loio07d1ca276f5048b58d910c27ae8a0100__section_qhh_dkw_z5b"/>
 
-## Cards in *Insights*
+## *Insights* Cards
 
-You can add and use the analytical, list and table cards within the *Insights* section of **My Home** in SAP S/4HANA Cloud Public Edition. The objective of displaying cards on the entry page is to visualize charts, KPI´s and counters in the form of insights cards.
+You can add and use the analytical, list and table cards within the *Insights* section of **My Home**. The objective of displaying cards on the entry page is to visualize charts, KPIs and counters in the form of insights cards.
 
 To add a card to the *Insights* section, select the *More* option from the card and choose *Add Card to Insights*. In the subsequent dialog box, you can update the card's *Title* and the *Subtitle*. Click *Add* to display the card in the *Insights* section.
 
-Note that only eight cards at a time can be displayed in the *Insights* section. If the maximum number of cards is already displayed on the entry page, the selected card is added to the *Edit Insights* dialog box. You can choose to select or deselect cards by editing the *Insights* section. For more information, see [**My Home** in SAP S/4HANA Cloud Public Edition](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html).
+You can select a maximum of 10 cards to be displayed in the *Insights* section. If the maximum number of cards is already displayed on the entry page, the selected card is added to the *Edit Insights* dialog box. You can choose to select or deselect cards by editing the *Insights* section.
+
+For more information, see [**My Home** in SAP S/4HANA Cloud Public Edition](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html) for [**My Home** in SAP S/4HANA](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/8a60279e8d2041b5ad8d3455fab0f3ef.html) in SAP S/4HANA Cloud Private Edition and SAP S/4HANA.
 
 
 

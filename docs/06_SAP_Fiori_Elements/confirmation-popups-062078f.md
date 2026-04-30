@@ -15,7 +15,7 @@ You can configure confirmation popups for various list report page and object pa
 
 ## Confirmation Popup for Critical Actions
 
-You can configure actions as critical, and when these actions are triggered, a confirmation popup is displayed for end users before the action is executed. For more information, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-2315b07.md).
+You can configure actions as critical, and when these actions are triggered, a confirmation popup is displayed for users before the action is executed. For more information, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-2315b07.md).
 
 
 
@@ -23,7 +23,7 @@ You can configure actions as critical, and when these actions are triggered, a c
 
 ## Confirmation Popup for Activating a Draft
 
-When end users create or edit an object page in a draft-enabled application and choose to leave the page without saving, the following popup is displayed:
+When users create or edit an object page in a draft-enabled application and choose to leave the page without saving, the following popup is displayed:
 
   
   
@@ -65,7 +65,7 @@ You can configure a confirmation popup for the following actions by sending an H
 > ### Restriction:  
 > You can't configure 412 confirmation popups for a deletion triggered from a table in an object page.
 
-If an end user wants to perform an action on multiple selected items, some of the selected items can result in a warning message. In such cases, the action processing fails and the end user is asked to perform the action on individual objects.
+If a user wants to perform an action on multiple selected items, some of the selected items can result in a warning message. In such cases, the action processing fails and the user is asked to perform the action on individual objects.
 
 The flow is as follows:
 
@@ -78,15 +78,15 @@ The flow is as follows:
     -   If the preference is known, you can configure the back end to send a 412 message \("Precondition Failed" message\).
 
 
--   For SAP Fiori elements, the 412 message indicates that there are warnings that block the processing of the action, but end users can still trigger the action if they choose to ignore the warnings and continue.
+-   For SAP Fiori elements, the 412 message indicates that there are warnings that block the processing of the action, but users can still trigger the action if they choose to ignore the warnings and continue.
 
 -   The application displays a confirmation popup containing the message from the back end.
 
--   If end users choose *Confirm*, the application sends the request again, this time **without** `Prefer:handling=strict` in the header.
+-   If users choose *Confirm*, the application sends the request again, this time **without** `Prefer:handling=strict` in the header.
 
 -   The back end executes the action and responds with either a success or a failure message. If it sends the same message again, it is suppressed and not shown on the UI.
 
--   If end users choose *Cancel*, the operation is terminated.
+-   If users choose *Cancel*, the operation is terminated.
 
 
 The following image shows an example of such a popup:

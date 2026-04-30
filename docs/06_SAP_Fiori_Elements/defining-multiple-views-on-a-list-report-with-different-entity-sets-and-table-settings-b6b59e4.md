@@ -270,7 +270,7 @@ For example, if you add the filter *Property S3* to the first tab, which is not 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Defining Multiple Views in a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-in-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
+> For information about SAP Fiori elements for OData V2, see [Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
 
 **Related Information**  
 

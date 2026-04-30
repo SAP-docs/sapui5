@@ -74,37 +74,44 @@ If you listen to the `init` event as part of your `index.html` page, make sure t
 
 <a name="loio676b636446c94eada183b1218a824717__section_RootViewRoutingConfiguration"/>
 
-## Ensure that Root View and Routing are Configured to Load Targets Asynchronously
+## Use Manifest Version 2 for the Component
 
-Please check the `rootView` of the application's `manifest.json` file for an `async=true` parameter. This allows the root view to be loaded asynchronously.
-
-To configure the targets for asynchronous loading, please also check the [Routing Configuration](../04_Essentials/routing-configuration-9023130.md) for the `async=true` parameter.
+Starting with SAPUI5 1.136, Manifest Version 2 \(`"_version": "2.x.y"`\) enforces asynchronous loading by default. With Manifest Version 2, synchronous root view creation and routing configuration are no longer supported. The `async` flag for both the `rootView` and the `routing` configuration is implicitly set to `true` and no longer needs to be specified.
 
 ```json
-"sap.ui5": {
-    "rootView": {
-        "viewName": "my.app.view.App",
-        "type": "XML",
-        "id": "app",
-        "async": true
+{
+    "_version": "2.7.0",
+    "sap.app": {
+        "id": "my.app",
+        "type": "application",
+        ...
     },
-    "routing": {
-        "config": {
-            "routerClass": "sap.m.routing.Router",
-            "viewType": "XML",
-            "path": "my.app.view",
-            "controlId": "app",
-            "controlAggregation": "pages",
-            "async": true
-        }
-    },
-    ...
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "my.app.view.App",
+            "type": "XML",
+            "id": "app"
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "path": "my.app.view",
+                "controlId": "app",
+                "controlAggregation": "pages"
+            }
+        },
+        ...
+    }
 }
 ```
 
+By using Manifest Version 2 you ensure that you follow best practices and are prepared for the future. It also enables stricter error handling for views and fragments — syntactical errors \(e.g. broken binding strings\) will lead to errors being thrown.
+
 **Additional Information:**
 
--   Set the rootView and routing to async via [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.com/#/api/sap.ui.core.IAsyncContentCreation)
+-   [Manifest Version 2](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_manifest2)
+-   [Migration Information for Upgrading the Manifest File](../04_Essentials/migration-information-for-upgrading-the-manifest-file-a110f76.md)
 
 
 

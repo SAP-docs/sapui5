@@ -469,11 +469,11 @@ Defines whether a favicon is used. If set to `true`, a favicon, defined as part 
 
 [Type](configuration-options-and-url-parameters-91f2d03.md#loio91f2d03b6f4d1014b6dd926db0e91070__section_TVT): `string`
 
-Default value: The default theme of the used UI5 version
+Default value: The default theme of the used UI5 version. For more information, see [Theming - Default Behavior](theming-497c27a.md#loio497c27a8ee26426faacd2b8a1751794a__sub_default).
 
 Defines the theme that shall be used.
 
-**Theme Root:** When the theme string contains an at-sign \(`@`\), anything before the `@` is assumed to denote the ID of the theme, while anything after the `@` is assumed to represent the URL location of the theme. To defend against XSS attacks, only origins maintained in `sap-allowed-theme-origins` are accepted. For more information, see [Theme Origin Allowlist](setting-themes-e9fc648.md#loioe9fc648661d84ed89360bbec3ae02611__section_TOA).
+**Theme Root:** When the theme string contains an at-sign \(`@`\), anything before the `@` is assumed to denote the ID of the theme, while anything after the `@` is assumed to represent the URL location of the theme. To defend against XSS attacks, only origins maintained in `sap-allowed-theme-origins` are accepted. For more information, see [Theme Origin Allowlist](theme-configuration-and-management-e9fc648.md#loioe9fc648661d84ed89360bbec3ae02611__section_TOA).
 
 </td>
 <td valign="top">

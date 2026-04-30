@@ -1,13 +1,8 @@
 <!-- loio4b41fed6d4994601841a329b9d7891d9 -->
 
-# Custom Messages
+# Configuring Custom Messages
 
 You can customize messages for success, success with no data, and error scenarios. Additionally, you can add an icon for success scenarios. For error scenarios, a default icon is displayed.
-
-
-
-> ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring Custom Messages on the Overview Page](configuring-custom-messages-on-the-overview-page-b75910f.md).
 
 
 

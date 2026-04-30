@@ -27,6 +27,10 @@ This topic provides a list of the annotations used in overview pages. They are a
 
 
 
+### For Internal Use Only!
+
+
+
 ## `com.sap.vocabularies.UI.v1.HeaderInfo`
 
 The following properties are supported:
@@ -444,7 +448,7 @@ The `DataPoint` term is used to display fields with special formatting. The foll
 > 	<Record Type="UI.DataPointType">
 > 		<PropertyValue Property="Title" String="Sales India - Line Card" />
 > 		<PropertyValue Property="Value" Path="Sales" />
-> 		<PropertyValue Property="NumberValueFormat">
+> 		<PropertyValue Property="ValueFormat">
 > 			<Record>
 > 				<PropertyValue Property="ScaleFactor" IntDecimal="0" />
 > 				<PropertyValue Property="NumberOfFractionalDigits"

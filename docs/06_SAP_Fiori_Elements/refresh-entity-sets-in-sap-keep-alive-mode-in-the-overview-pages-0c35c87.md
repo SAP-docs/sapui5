@@ -18,7 +18,7 @@ The entity set `self` is automatically refreshed when users return to the source
 > ```
 > "sap.ovp": {
 >         "globalFilterModel": "salesOrder",
->         "globalFilterEntitySet": "ZFilterEntitySet", //Represents the entity set used as a global filter in the smart filter bar control. 
+>         "globalFilterEntitySet": "ZFilterEntitySet", //Represents the entity set used as a global filter in the filter bar control. 
 >         "smartVariantRequired": true,
 >         "enableLiveFilter": true,
 >         "containerLayout": "resizable",

@@ -32,7 +32,7 @@ You can view and download all files at [Flexible Column Layout App - Step 2](htt
 
 ```json
 {
-	"_version": "2.6.0",
+	"_version": "2.7.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -48,7 +48,7 @@ You can view and download all files at [Flexible Column Layout App - Step 2](htt
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.146.0",
+			"minUI5Version": "1.147.0",
 			"libs": {
 				"sap.f": {},
 				"sap.ui.core": {}
@@ -89,7 +89,7 @@ We create a new **`App.view.xml`** that contains an instance of the `sap.f.Flexi
 
 ```json
 {
-	"_version": "2.6.0",
+	"_version": "2.7.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -105,7 +105,7 @@ We create a new **`App.view.xml`** that contains an instance of the `sap.f.Flexi
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.146.0",
+			"minUI5Version": "1.147.0",
 			"libs": {
 				"sap.f": {},
 				"sap.ui.core": {}

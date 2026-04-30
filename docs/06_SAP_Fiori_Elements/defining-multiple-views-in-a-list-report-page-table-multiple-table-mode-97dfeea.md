@@ -439,7 +439,7 @@ If you use charts in multiple table mode, you can implement the following featur
     > ### Remember:  
     > Ensure that the service/entity configured for the chart is **not** draft enabled or a read-only service/entity. For more information, see [Configuring Charts](configuring-charts-8f64eb1.md).
 
-    On each tab, you can also display data for different entity sets with different table types and other settings, for example, a sales order or a supplier. To do so, add the entity set and/or table settings to the corresponding tab in the manifest. For more information, see [Defining Multiple Views in a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-in-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
+    On each tab, you can also display data for different entity sets with different table types and other settings, for example, a sales order or a supplier. To do so, add the entity set and/or table settings to the corresponding tab in the manifest. For more information, see [Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
 
 
 

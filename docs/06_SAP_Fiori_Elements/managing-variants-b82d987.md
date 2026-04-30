@@ -26,7 +26,7 @@ Use page-level variant management to capture filter selection, filter mode, view
 > ### Note:  
 > You can define variants for specific selections of data on the user interface, for example, based on filter settings. In the definition dialog, these variants are called views, however, the feature is called variant management. Therefore, for clarity, we use the term variant management in this section.
 
-You can use either control-level variant management or page-level variant management for your list report page and analytical list page. Providing both options simultaneously can confuse end users.
+You can use either control-level variant management or page-level variant management for your list report page and analytical list page. Providing both options simultaneously can confuse users.
 
 For more information about how to the enable the control-level variant in the object page, see [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-ca0eb16.md).
 
@@ -36,13 +36,13 @@ For more information about how to the enable the control-level variant in the ob
 
 ## Which Variant Is Loaded on Initial Load?
 
-For table and chart control variants, SAP Fiori elements always loads the variant which end users have marked as their default variant.
+For table and chart control variants, SAP Fiori elements always loads the variant which users have marked as their default variant.
 
 For the filter control variant or the page variant, the following behavior applies:
 
--   When the SAP Fiori elements application is launched through external navigation with a navigation context \(either by using URL parameters or in `xAppState`\), the incoming navigation context is applied, and the filter values of the end user's default variant are overridden. As a result, the variant name is displayed as *Standard\** in the filter bar where "\*" indicates that the variant isn't in a clean state. However, the personalization settings for tables or charts from the end user's default variant are retained.
+-   When the SAP Fiori elements application is launched through external navigation with a navigation context \(either by using URL parameters or in `xAppState`\), the incoming navigation context is applied, and the filter values of the user's default variant are overridden. As a result, the variant name is displayed as *Standard\** in the filter bar where "\*" indicates that the variant isn't in a clean state. However, the personalization settings for tables or charts from the user's default variant are retained.
 
--   SAP Fiori elements loads the end user's default variant \(if configured\) when navigation to the list report page template is triggered with **no** navigation context. If no end user default variant is found, the standard variant is used as the fallback option. Only in this case does SAP Fiori elements apply the end user default values of FLP.
+-   SAP Fiori elements loads the user's default variant \(if configured\) when navigation to the list report page template is triggered with **no** navigation context. If no user default variant is found, the standard variant is used as the fallback option. Only in this case does SAP Fiori elements apply the user default values of FLP.
 
 
 For more information, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-b736ab6.md).

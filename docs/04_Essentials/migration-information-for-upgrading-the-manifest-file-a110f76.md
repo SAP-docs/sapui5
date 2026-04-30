@@ -790,20 +790,20 @@ For performance reasons, we recommend to always use the `async` setting. This re
 </td>
 <td valign="top">
 
-`sap.ui5/dependencies/components/<componentname>/lazy` and `dependencies/libs/<libname>/lazy` 
+`sap.ui5/dependencies/components/<componentname>/lazy`and `dependencies/libs/<libname>/lazy` 
 
 </td>
 <td valign="top">
 
-If `dependencies/components/<componentname>/lazy` and `dependencies/libs/<libname>/lazy` are set to `true`, the attribute indicates in an SAP Fiori app that a dependency shall be lazy loaded \(default is `false`\), see the example for `manifest.json` for the SAP Fiori app.
+If `dependencies/components/<componentname>/lazy`and `dependencies/libs/<libname>/lazy` are set to `true`, the attribute indicates in an SAP Fiori app that a dependency shall be lazy loaded \(default is `false`\), see the example for `manifest.json` for the SAP Fiori app.
 
 Example for `manifest.json` for the SAP Fiori app:
 
 ```
 "sap.ui5": {
    "_version": "1.2.0",
-   ...
-   "dependencies": {
+    ...
+    "dependencies": {
         "minUI5Version": "1.34.0",
         "libs": {
             "sap.m": {

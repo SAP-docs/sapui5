@@ -41,7 +41,7 @@ If you want to make additional libraries known in your app, without directly loa
 ```json
 "sap.ui5": {
 	"dependencies": {
-		"minUI5Version": "1.146.0",
+		"minUI5Version": "1.147.0",
 		"libs": {
 			"sap.ui.core": {},
 			"sap.m": {},
