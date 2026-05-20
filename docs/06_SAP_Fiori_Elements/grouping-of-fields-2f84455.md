@@ -5,7 +5,7 @@
 You can group fields that should be shown together, such as various address fields \(street name, house number, and postal code\).
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Grouping of Fields](grouping-of-fields-cb1748e.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Grouping of Fields](grouping-of-fields-cb1748e.md).
 
 The grouping can be done in several ways, depending on the use case.
 

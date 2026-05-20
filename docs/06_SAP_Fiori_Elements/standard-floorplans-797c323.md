@@ -4,7 +4,7 @@
 
 You can create apps using SAP Fiori elements floorplans: predefined templates for common application use cases.
 
-You can create apps using the following  floorplans:
+You can create apps using the following  floorplans in SAP Fiori elements for OData V4:
 
 -   [List Report Page](list-report-page-1cf5c7f.md)
 

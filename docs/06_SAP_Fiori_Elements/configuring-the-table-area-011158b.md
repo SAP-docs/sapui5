@@ -7,7 +7,7 @@ You can configure the table header title \(`label` property\) and the correspond
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Table Area](configuring-the-table-area-b408bfb.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Table Area](configuring-the-table-area-b408bfb.md).
 
 
 

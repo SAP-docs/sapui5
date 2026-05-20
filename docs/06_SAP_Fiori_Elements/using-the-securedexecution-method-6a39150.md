@@ -2,7 +2,7 @@
 
 # Using the `SecuredExecution` Method
 
-You can use the `securedExecution` method to extend SAP Fiori elements applications.
+You can use the `securedExecution` method to extend applications in SAP Fiori elements for OData V4.
 
 Use the `securedExecution` method whenever one of the following operations should be performed by extension coding:
 

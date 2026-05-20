@@ -655,7 +655,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now use the `getCount()` method to retrieve the number of rows loaded in a table and display the number in a tile or any data field. For more information, see [Influencing the Request Dynamically](../06_SAP_Fiori_Elements/influencing-the-request-dynamically-2cc6c03.md).
 
--   You can now set multi-input fields to read-only or mandatory. For more information, see [Using the Multi-Input Field on the Object Page](../06_SAP_Fiori_Elements/using-the-multi-input-field-on-the-object-page-04ff5b1.md).
+-   You can now set multi-input fields to read-only or mandatory. For more information, see [Using the Multi-Input Field](../06_SAP_Fiori_Elements/using-the-multi-input-field-04ff5b1.md).
 
 -   You can now use the `determineContextNavigationType` method to ensure that the paginator buttons behave correctly when some records in the table on the object page are configured for either external navigation or no navigation to the detail view. For more information, see [Example: Replacing Standard Navigation in a Responsive Table on the Object Page](../06_SAP_Fiori_Elements/example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md).
 
@@ -760,6 +760,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.146](what-s-new-in-sapui5-1-146-6ccfe05.md "With this release SAPUI5 is upgraded from version 1.145 to 1.146.")
 
 [What's New in SAPUI5 1.145](what-s-new-in-sapui5-1-145-7676a2a.md "With this release SAPUI5 is upgraded from version 1.144 to 1.145.")
 

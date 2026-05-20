@@ -5,7 +5,7 @@
 You can define table columns with `UI.LineItem` annotations.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Defining Line Items](defining-line-items-f0e1e17.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Defining Line Items](defining-line-items-f0e1e17.md).
 
 To define the line items of a table, use `com.sap.vocabularies.UI.v1.LineItem` as shown in the code samples below. The rendering result is as follows:
 

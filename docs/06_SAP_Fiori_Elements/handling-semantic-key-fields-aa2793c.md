@@ -2,7 +2,7 @@
 
 # Handling Semantic Key Fields
 
-You can add semantic keys to a table.
+You can add semantic keys to a table in SAP Fiori elements for OData V4.
 
 Semantic key fields are available on list report pages and object pages, including subobject pages.
 

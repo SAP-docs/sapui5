@@ -2,7 +2,7 @@
 
 # Analytical List Page
 
-You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs \(key performance indicators\).
+You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs \(key performance indicators\) using SAP Fiori elements for OData V4.
 
 The analytical list page \(ALP\) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content.
 
@@ -33,7 +33,7 @@ For more information about the analytical list page, see [Building an App](build
 **Related Information**  
 
 
-[Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md "You can use the manifest.json file to configure the analytical list page.")
+[Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md "You can use the manifest.json file to configure the analytical list page in SAP Fiori elements for OData V4.")
 
-[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page.")
+[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page in SAP Fiori elements for OData V4.")
 

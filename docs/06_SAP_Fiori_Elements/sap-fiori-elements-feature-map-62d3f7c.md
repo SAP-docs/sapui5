@@ -2,7 +2,7 @@
 
 # SAP Fiori Elements Feature Map
 
-See the list of UI elements, controls, and features supported by SAP Fiori elements.
+See the list of UI elements, controls, and features supported by SAP Fiori elements for OData V4.
 
 You can search, filter, and sort content in the table below. Use your mouse to hover over the links in the *Developer Documentation* column to display a short description of the feature.
 
@@ -4534,7 +4534,7 @@ Multi-input field
 </td>
 <td valign="top">
 
-[Using the Multi-Input Field on the Object Page](using-the-multi-input-field-on-the-object-page-04ff5b1.md)
+[Using the Multi-Input Field](using-the-multi-input-field-04ff5b1.md)
 
 </td>
 <td valign="top">
@@ -5881,6 +5881,8 @@ Side effects
 
 [Side Effects](side-effects-18b17bd.md)
 
+[Event-Driven Side Effects](event-driven-side-effects-27c9c3b.md)
+
 </td>
 <td valign="top">
 
@@ -6679,7 +6681,7 @@ Token
 
 [Field Help](field-help-a5608ea.md)
 
-[Using the Multi-Input Field on the Object Page](using-the-multi-input-field-on-the-object-page-04ff5b1.md)
+[Using the Multi-Input Field](using-the-multi-input-field-04ff5b1.md)
 
 </td>
 <td valign="top">

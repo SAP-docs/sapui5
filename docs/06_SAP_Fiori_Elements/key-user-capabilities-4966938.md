@@ -2,7 +2,7 @@
 
 # Key User Capabilities
 
-A key user can adapt the UI of the overview page application.
+A key user can adapt the UI of the overview page application in SAP Fiori elements for OData V4.
 
 
 
@@ -39,7 +39,7 @@ SAP Business Technology Platform
 <tr>
 <td valign="top">
 
-SAP S/4HANA
+SAP S/4HANA \(on-premise\)
 
 </td>
 <td valign="top">
@@ -181,6 +181,18 @@ Adapt Variants
 <td valign="top">
 
 Renames an existing view, saves a view, saves the current view as a new view, and manages views.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Wrap Text
+
+</td>
+<td valign="top">
+
+Enables wrapping of text in the content area of table cards and list cards.
 
 </td>
 </tr>

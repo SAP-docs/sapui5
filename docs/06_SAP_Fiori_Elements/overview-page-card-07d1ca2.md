@@ -2,12 +2,12 @@
 
 # Overview Page Card
 
-You can use the card smart component, which uses a UI annotation to render its content.
+A card is a smart component that uses UI annotation to render its content. It contains a header area and a footer area. You can use the card smart component, which uses a UI annotation to render its content.
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Overview Page Card](overview-page-card-74332d5.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Overview Page Card](overview-page-card-74332d5.md).
 
 
 

@@ -5,7 +5,7 @@
 You can enable internal navigation to a different detail page \(that is, using different entity sets\) for a list report page or an object page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md).
 
 In the extension function, you can define the logic or condition that triggers the navigation to the detail page. If none of the conditions mentioned in the extension are met, navigation to the default detail page is triggered.
 
@@ -113,9 +113,9 @@ You can implement the `onChildOpenedExtension` function within the list report p
 **Related Information**  
 
 
-[Example: Replacing Standard Navigation in a Responsive Table in the List Report](example-replacing-standard-navigation-in-a-responsive-table-on-the-list-report-page-5ae7b0c.md "You can replace standard list report table navigation with custom navigation to external or internal targets using controller extensions.")
+[Example: Replacing Standard Navigation in a Responsive Table in the List Report](example-replacing-standard-navigation-in-a-responsive-table-on-the-list-report-page-5ae7b0c.md "You can replace standard list report table navigation with custom navigation to external or internal targets using controller extensions in SAP Fiori elements for OData V2.")
 
-[Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md "You can replace standard object page table navigation with custom navigation to external or internal targets using controller extensions.")
+[Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md "You can replace standard object page table navigation with custom navigation to external or internal targets using controller extensions in SAP Fiori elements for OData V2.")
 
 [Configuring Internal Navigation](configuring-internal-navigation-666b503.md "You can configure internal navigation within an SAP Fiori elements app.")
 

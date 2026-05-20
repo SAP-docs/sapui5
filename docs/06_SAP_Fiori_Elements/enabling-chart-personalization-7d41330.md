@@ -2,10 +2,10 @@
 
 # Enabling Chart Personalization
 
-You can use personalization to modify the settings of a chart.
+You can use personalization to modify the settings of a chart in SAP Fiori elements for OData V4.
 
 > ### Note:  
-> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> This topic describes how to use the feature within SAP Fiori elements floorplans. The feature isn't available when you use the building block in custom pages or custom sections, but you can try achieving the functionality through other means, such as the following:
 > 
 > -   Properties or methods exposed by the building block
 > 

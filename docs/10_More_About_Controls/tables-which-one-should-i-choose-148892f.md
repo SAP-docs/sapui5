@@ -102,17 +102,17 @@ Phone
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -129,17 +129,17 @@ Responsive \(hide column, popin support\)
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -178,7 +178,7 @@ Condensed density
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
@@ -232,12 +232,12 @@ Summarized cell
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
@@ -247,7 +247,7 @@ Summarized cell
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -259,17 +259,17 @@ Hierarchical data
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)<sup>3</sup> 
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)<sup>3</sup> 
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
@@ -286,7 +286,7 @@ Large number of rows \(\> 200\)<sup>2</sup>
 </td>
 <td valign="top">
 
-![Partly](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif)
+![Partly](../04_Essentials/images/Yellow_Led_3ea53dc.gif)
 
 </td>
 <td valign="top">
@@ -318,7 +318,7 @@ Grouping
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)<sup>3</sup> 
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)<sup>3</sup> 
 
 </td>
 <td valign="top">
@@ -328,7 +328,7 @@ Grouping
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)<sup>3</sup> 
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)<sup>3</sup> 
 
 </td>
 </tr>
@@ -340,7 +340,7 @@ Freeze columns
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
@@ -367,7 +367,7 @@ Horizontal scrolling
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
@@ -399,17 +399,17 @@ Merge duplicates
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -453,17 +453,17 @@ Row-based
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -475,7 +475,7 @@ Column-based
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
@@ -554,7 +554,7 @@ Cell selection
 
 -   ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif): Feature is supported for this table type
 
--   ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif): Feature is not supported for this table type
+-   ![No](../03_Get-Started/images/Red_Led_5befb5a.gif): Feature is not supported for this table type
 
 
 1\) `Text`, `Label`, `ObjectStatus`, `Icon`, `Button`, `Input`, `DatePicker`, `Select`, `ComboBox`, `MultiComboBox`, `CheckBox`, `Link`, `Currency`, `RatingIndicator`, `ProgressIndicator`as well as the `StackedBarMicroChart`, `ComparisonMicroChart` , and `BulletMicroChart` controls \(of responsive or extra small size\); To keep the control height always stable, the `wrapping` and `renderWhitespace` properties in the `sap.m.Text` control, for example, must be set to `false`. For more information, search for cell level in the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).

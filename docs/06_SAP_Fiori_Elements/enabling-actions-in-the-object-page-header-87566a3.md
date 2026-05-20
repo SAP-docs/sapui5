@@ -5,7 +5,7 @@
 You can enable generic actions in your object header.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md).
 
 *Edit*, *Delete* and *Copy* are the generic actions.
 

@@ -2,7 +2,7 @@
 
 # Creating an Extension to Modify Properties in the Navigation Context
 
-You can use this extension to modify \(add/remove/change\) the information available in the navigation context just before the external outbound navigation is triggered.
+You can use this extension to modify \(add/remove/change\) the information available in the navigation context just before the external outbound navigation is triggered in SAP Fiori elements for OData V4.
 
 
 

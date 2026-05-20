@@ -5,7 +5,7 @@
 You can disable table grouping or define default table groups in different table types.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Table Groupings](table-groupings-d344c5a.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Table Groupings](table-groupings-d344c5a.md).
 
 SAP Fiori elements handles table groupings automatically.
 

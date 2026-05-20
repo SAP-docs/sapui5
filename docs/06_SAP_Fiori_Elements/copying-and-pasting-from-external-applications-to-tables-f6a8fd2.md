@@ -2,7 +2,7 @@
 
 # Copying and Pasting from External Applications to Tables
 
-Users can copy and paste from external applications to tables.
+Users can copy and paste from external applications to tables in SAP Fiori elements for OData V4.
 
 Users can copy and paste data from external applications or other SAP Fiori elements apps to tables that are editable.
 

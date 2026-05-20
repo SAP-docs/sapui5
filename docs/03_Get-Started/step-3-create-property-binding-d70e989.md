@@ -31,7 +31,7 @@ Assign the `text` property of the `sap.m.Text` control to the value `{/greetingT
 **Related Information**  
 
 
-[Binding Types](../04_Essentials/binding-types-91f0d8a.md "Depending on the different use cases, you can use different binding types: Propety binding, context binding, and list binding.")
+[Binding Types](../04_Essentials/binding-types-91f0d8a.md "Depending on the different use cases, you can use different binding types: property binding, context binding, list binding, and tree binding.")
 
 [Property Binding](../04_Essentials/property-binding-91f0652.md "With property binding, you can initialize properties of a control automatically and update them based on the data of the model.")
 

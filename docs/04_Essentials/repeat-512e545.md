@@ -5,7 +5,7 @@
 The `<template:repeat` instruction iterates the `sap.ui.model.ListBinding` given by the `list` attribute.
 
 > ### Note:  
-> Sorting and filtering is already supported by the list binding via an extended syntax. For more information, see [Sorting, Grouping, and Filtering for List Binding](sorting-grouping-and-filtering-for-list-binding-ec79a5d.md).
+> Sorting and filtering is already supported by the list binding via an extended syntax. For more information, see [Sorting, Grouping, and Filtering for List Binding and Tree Binding](sorting-grouping-and-filtering-for-list-binding-and-tree-binding-ec79a5d.md).
 
 The `var` attribute holds the name of the loop variable which can be used to access the current list element in a child element of `repeat`. In the preprocessing, `repeat` is replaced by multiple clones of its content, one clone per list element, with each clone again preprocessed as if it were contained in a `with` instruction defining the loop variable.
 

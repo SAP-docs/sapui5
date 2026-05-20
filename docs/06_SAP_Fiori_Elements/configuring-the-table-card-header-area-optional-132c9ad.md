@@ -7,7 +7,7 @@ You can configure the header area using the annotations and `manifest.json` file
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-05887bd.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-05887bd.md).
 
 
 
@@ -32,8 +32,10 @@ You can configure the header area using the annotations and `manifest.json` file
         >        "title": "Sales Forecast",
         >        "subTitle": "per Supplier",
         >        "entitySet": "SalesShare",
+        >        "enableTextWrapping": true //The default value is false
         >     ...
         >     ...
+        > 
         >       }
         >     ]
         >   }
@@ -153,6 +155,7 @@ You can configure the header area using the annotations and `manifest.json` file
         >                 "subTitle": "per Supplier",
         >                 "valueSelectionInfo": "Value Selection Info",
         >                 "entitySet": "SalesShare",
+        >                 "enableTextWrapping": true //The default value is false
         >                 "tabs": [
         >                     {
         >                         "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
@@ -178,37 +181,174 @@ You can configure the header area using the annotations and `manifest.json` file
         > ```
 
 
-2.  Define the `DataPoint` annotation to complete configuring KPI information on the card header area. The following are the annotation properties:
+2.  Define the `DataPoint` annotation to complete configuring KPI information on the card header area. The following annotation properties are added:
 
-    -   Add `Title` property to configure the table column name, and also to display as a title on the KPI header
+    -   `Title` - Configure the table column name, and also to display as a title on the KPI header.
 
-    -   Add `Value` property to display KPI measure
+    -   `Value` - Displays KPI measure.
 
-    -   Add `ValueFormat` to define number format
+    -   `ValueFormat` - Defines number format.
 
-    -   Add criticality to highlight the KPI measure value. You can define criticality as a path or enum value. The supported enum values are:
-
-        -   `com.sap.vocabularies.UI.v1.CriticalityType/Neutral` - default neutral color is considered
-
-        -   `com.sap.vocabularies.UI.v1.CriticalityType/Negative` - Red is considered
-
-        -   `com.sap.vocabularies.UI.v1.CriticalityType/Critical` - Orange is considered
-
-        -   `com.sap.vocabularies.UI.v1.CriticalityType/Positive` - Green is considered
+    -   Criticality - Highlights the KPI measure value. You can define criticality as a path or `enum` value.
 
 
-
-    You can also define criticality using a path property that returns value:
-
-    -   0 for Neutral – default neutral color is considered
-
-    -   1 for Negative – Red is considered
-
-    -   2 for Critical – Orange is considered
-
-    -   3 for Positive – Green is considered
+    **Criticality using enum values**
 
 
+    <table>
+    <tr>
+    <th valign="top">
+
+    Enum Value
+    
+    </th>
+    <th valign="top">
+
+    Color
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `com.sap.vocabularies.UI.v1.CriticalityType/Neutral`
+    
+    </td>
+    <td valign="top">
+    
+    Default neutral color
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `com.sap.vocabularies.UI.v1.CriticalityType/Negative`
+    
+    </td>
+    <td valign="top">
+    
+    Red
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `com.sap.vocabularies.UI.v1.CriticalityType/Negative`
+    
+    </td>
+    <td valign="top">
+    
+    Orange
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `com.sap.vocabularies.UI.v1.CriticalityType/Negative`
+    
+    </td>
+    <td valign="top">
+    
+    Green
+    
+    </td>
+    </tr>
+    </table>
+    
+    **Criticality using a path property**
+
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    Return Value
+    
+    </th>
+    <th valign="top">
+
+    Criticality
+    
+    </th>
+    <th valign="top">
+
+    Color
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `0`
+    
+    </td>
+    <td valign="top">
+    
+    Neutral
+    
+    </td>
+    <td valign="top">
+    
+    Default neutral color
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `1`
+    
+    </td>
+    <td valign="top">
+    
+    Negative
+    
+    </td>
+    <td valign="top">
+    
+    Red
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `2`
+    
+    </td>
+    <td valign="top">
+    
+    Critical
+    
+    </td>
+    <td valign="top">
+    
+    Orange
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `3`
+    
+    </td>
+    <td valign="top">
+    
+    Positive
+    
+    </td>
+    <td valign="top">
+    
+    Green
+    
+    </td>
+    </tr>
+    </table>
+    
 
 
 

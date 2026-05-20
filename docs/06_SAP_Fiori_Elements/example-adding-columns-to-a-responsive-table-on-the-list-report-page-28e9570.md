@@ -2,7 +2,7 @@
 
 # Example: Adding Columns to a Responsive Table on the List Report Page
 
-You can add custom columns to the responsive table of your list report page by implementing two extension points for column definitions and cell content.
+You can add custom columns to the responsive table of your list report page by implementing two extension points for column definitions and cell content in SAP Fiori elements for OData V2.
 
 
 

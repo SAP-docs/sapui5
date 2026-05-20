@@ -2,7 +2,7 @@
 
 # Field Help
 
-You can associate a field with a helper control, depending on how the field is configured.
+You can associate a field with a helper control in SAP Fiori elements for OData V4.
 
 Fields can have an associated value help, or a dropdown list for several fixed values. They can also include a date or date-time picker. This topic provides information about the supported types of associations and how applications can enable them.
 

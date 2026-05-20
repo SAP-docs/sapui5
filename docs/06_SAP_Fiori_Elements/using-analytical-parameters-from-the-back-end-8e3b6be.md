@@ -2,7 +2,7 @@
 
 # Using Analytical Parameters from the Back End
 
-You can use analytical parameters defined in the back end on the list report page and the object page.
+You can use analytical parameters defined in the back end on the list report page and the object page in SAP Fiori elements for OData V4.
 
 Parameters are values that are passed to the back end and that influence the way the back end processes the incoming request. Typically, parameters are used to normalize entries that have different units of measure \(UoM\). If your app uses currency values \(for example in the *Sales Amount* field\), it is possible that these sales amount values are stored in different currencies in the back end. Users can only see the overall sales amount if the back end can aggregate it - and to do so all the values must have the same currency. Since the actual data in the back end of your app has different currencies and should not be altered, you can configure "`Currency`" as a parameter to convert the sales amount values into the desired currency at runtime. When a user now enters EUR, for example, as a value in the *Sales Amount* field, all entries in the back end are converted automatically to this currency when the data is fetched.
 

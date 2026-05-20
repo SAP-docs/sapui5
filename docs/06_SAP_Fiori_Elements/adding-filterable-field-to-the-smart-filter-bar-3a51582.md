@@ -2,7 +2,7 @@
 
 # Adding Filterable Field to the Smart Filter Bar
 
-You can add an additional filter to the smart filter bar on the list report page.
+You can add an additional filter to the smart filter bar on the list report page in SAP Fiori elements for OData V2.
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).

@@ -2,7 +2,7 @@
 
 # Enabling Stream Support
 
-You can enable users to upload, download, and delete files.
+You can enable users to upload, download, and delete files in SAP Fiori elements for OData V4-based applications.
 
 > ### Note:  
 > To prevent security issues and protect data from being created or processed with malicious content, you must ensure the following security measures are in place:

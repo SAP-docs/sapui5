@@ -2,7 +2,7 @@
 
 # Adapting Texts for Confirmation Dialog Box When Deleting Lines in a Table
 
-You can adapt the default texts of the confirmation dialog that appears when users delete a table line.
+You can adapt the default texts of the confirmation dialog that appears when users delete a table line in SAP Fiori elements for OData V4.
 
 Only the keys given below are allowed to be overridden in the custom i18n file for deleting lines in a table:
 

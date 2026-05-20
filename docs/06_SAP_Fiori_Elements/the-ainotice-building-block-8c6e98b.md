@@ -2,7 +2,7 @@
 
 # The `AINotice` Building Block
 
-You must use the `AINotice` building block to display information related to AI features.
+You must use the `AINotice` building block to display information related to AI features in SAP Fiori elements for OData V4.
 
 This allows users to make an informed decision regarding the handling of AI-generated data. This information is rendered either as a link if the aggregation `popoverContent` is defined, or as a text if there is no aggregation `popoverContent`.
 

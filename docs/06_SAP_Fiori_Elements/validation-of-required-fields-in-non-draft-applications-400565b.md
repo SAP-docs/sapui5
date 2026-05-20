@@ -2,7 +2,7 @@
 
 # Validation of Required Fields in Non-draft Applications
 
-You can enable the validation of required fields in non-draft applications.
+You can enable the validation of required fields in non-draft applications in SAP Fiori elements for OData V2.
 
 During object creation, before a request is sent to back end, the fields annotated with `RequiredProperties` under `InsertRestrictions` are validated to ensure that they are not empty. If these fields are empty, an error message is displayed in the message popover of the corresponding page with a link that navigates to the error field.
 

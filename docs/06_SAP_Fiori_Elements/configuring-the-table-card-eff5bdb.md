@@ -7,7 +7,7 @@ You can configure the content on the table area with smart links, text alignment
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Table Card](configuring-the-table-card-9bc298e.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Table Card](configuring-the-table-card-9bc298e.md).
 
 
 

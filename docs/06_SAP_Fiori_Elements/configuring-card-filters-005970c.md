@@ -7,7 +7,7 @@ You can add filters to all card types, by using the `com.sap.vocabularies.UI.v1.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring Card Filters](configuring-card-filters-ecde99f.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring Card Filters](configuring-card-filters-ecde99f.md).
 
 
 

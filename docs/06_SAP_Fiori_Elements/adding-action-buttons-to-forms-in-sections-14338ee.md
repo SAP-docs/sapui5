@@ -2,10 +2,10 @@
 
 # Adding Action Buttons to Forms in Sections
 
-You can add action buttons to the forms contained in sections. These forms are indicated by `com.sap.vocabularies.UI.v1.FieldGroup`. A form action button is then displayed in the toolbar of the object page section that contains the form.
+You can add action buttons to the forms contained in sections.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adding Action Buttons to Forms in Sections](adding-action-buttons-to-forms-in-sections-e64efda.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adding Action Buttons to Forms in Sections](adding-action-buttons-to-forms-in-sections-e64efda.md).
 
 These forms are indicated by `com.sap.vocabularies.UI.v1.FieldGroup`. A form action button is then displayed in the toolbar of the object page section that contains the form.
 

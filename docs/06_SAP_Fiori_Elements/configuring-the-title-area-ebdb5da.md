@@ -2,11 +2,11 @@
 
 # Configuring the Title Area
 
-The dynamic area of the analytical list page is the title area.
+You can configure the title area of the analytical list page in SAP Fiori elements for OData V2.
 
 
 
-In the header area, you can choose any of the following built-in SAP Fiori elements features to:
+The dynamic area of the analytical list page is the title area. In the header area, you can choose any of the following built-in SAP Fiori elements features to:
 
 -   Define or manage page variants
 

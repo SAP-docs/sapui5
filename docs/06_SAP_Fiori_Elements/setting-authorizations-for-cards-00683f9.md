@@ -2,7 +2,7 @@
 
 # Setting Authorizations for Cards
 
-By setting authorization on cards, you can ensure that a user only sees cards or a preview of content from an application for which they have the proper authorization.
+In SAP Fiori elements for OData V4, you can set authorization on cards to ensure that users only see cards or content previews for applications for which they have the required authorization.
 
 An overview page provides users a comprehensive view of the business data in a specific domain, allowing them to interact with it directly. Users can perform key actions, such as clicking a card to navigate to another application. However, if a user attempts an intent-based navigation to another application without the necessary authorization, they may encounter an access error.
 

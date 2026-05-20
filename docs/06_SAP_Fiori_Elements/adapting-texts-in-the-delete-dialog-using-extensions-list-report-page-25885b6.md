@@ -2,7 +2,7 @@
 
 # Adapting Texts in the Delete Dialog Using Extensions \(List Report Page\)
 
-You can adapt the text of the *Delete* dialog that appears when users delete items from the list report page.
+You can adapt the text of the *Delete* dialog that appears when users delete items from the list report page in SAP Fiori elements for OData V2.
 
 
 

@@ -5,7 +5,7 @@
 Check out the learning resources we've provided for you.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [SAP Fiori Elements Tutorials, Courses, and Blogs](sap-fiori-elements-tutorials-courses-and-blogs-7715a01.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [SAP Fiori Elements Tutorials, Courses, and Blogs](sap-fiori-elements-tutorials-courses-and-blogs-7715a01.md).
 
 The list is continually growing. Our learning resources are provided on the following different channels:
 

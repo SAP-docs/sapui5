@@ -7,7 +7,7 @@ You can extend view switch so it responds dynamically based on filter conditions
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Extending Custom View Switch](extending-custom-view-switch-ecd9f10.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Extending Custom View Switch](extending-custom-view-switch-ecd9f10.md).
 
 
 

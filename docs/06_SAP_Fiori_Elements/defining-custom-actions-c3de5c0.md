@@ -2,7 +2,7 @@
 
 # Defining Custom Actions
 
-You can define custom actions by using extensions in the `manifest.json` file.
+You can define custom actions by using extensions in the `manifest.json` file in SAP Fiori elements for OData V2.
 
 
 
@@ -295,7 +295,7 @@ onClickActionSTTA_C_SO_SalesOrder_ND1: function(oEvent) {
 **Related Information**  
 
 
-[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your app.")
+[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your SAP Fiori elements for OData V2 app.")
 
-[Smart Table Extensions](smart-table-extensions-4117ef9.md "You can define custom actions for tables by configuring the annotation and manifest.json files.")
+[Smart Table Extensions](smart-table-extensions-4117ef9.md "You can define custom actions for tables by configuring the annotation and manifest.json files in SAP Fiori elements for OData V2.")
 

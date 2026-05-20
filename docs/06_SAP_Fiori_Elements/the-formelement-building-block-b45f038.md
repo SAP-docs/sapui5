@@ -2,7 +2,7 @@
 
 # The `FormElement` Building Block
 
-You can use the `FormElement` building block to add a label and visibility control to a field inside a form.
+You can use the `FormElement` building block to add a label and visibility control to a field inside a form in SAP Fiori elements for OData V4.
 
 The label can either be set manually, or the building block will get the label automatically from the annotations.
 

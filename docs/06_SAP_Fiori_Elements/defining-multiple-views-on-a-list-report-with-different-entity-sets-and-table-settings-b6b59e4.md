@@ -2,7 +2,7 @@
 
 # Defining Multiple Views on a List Report with Different Entity Sets and Table Settings
 
-You can configure your application to display data for different entity sets and table settings.
+You can configure your application to display data for different entity sets and table settings in SAP Fiori elements for OData V4.
 
 The configuration steps are the same as in [Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-37aeed7.md). In addition, the manifest property `entitySet` must be added to the definition of tables and charts that are based on an entity set different from the main entity set of the list report page. Note that, in this case, the corresponding property `annotationPath` must specify an annotation for that entity set.
 
@@ -275,5 +275,5 @@ For example, if you add the filter *Property S3* to the first tab, which is not 
 **Related Information**  
 
 
-[Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md "You can enable internal navigation to a different detail page (that is, using different entity sets) for a list report or an object page.")
+[Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md "You can enable internal navigation to a different detail page (that is, using different entity sets) for a list report or an object page in SAP Fiori elements for OData V4.")
 

@@ -7,7 +7,7 @@ You can use this extension to add, remove, or change the information available i
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Creating an Extension to Modify Properties in the Navigation Context](creating-an-extension-to-modify-properties-in-the-navigation-context-199a496.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Creating an Extension to Modify Properties in the Navigation Context](creating-an-extension-to-modify-properties-in-the-navigation-context-199a496.md).
 
 
 

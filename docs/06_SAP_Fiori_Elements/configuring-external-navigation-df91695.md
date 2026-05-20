@@ -5,7 +5,7 @@
 You can make use of configuration options for navigating from an app \(outbound\) and navigating to an app \(inbound\).
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring External Navigation](configuring-external-navigation-1d4a0f9.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring External Navigation](configuring-external-navigation-1d4a0f9.md).
 
 -   [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-c35fa60.md)
 

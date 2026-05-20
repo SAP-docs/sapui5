@@ -2,10 +2,10 @@
 
 # Adding a Contact Facet
 
-You can use the `Field` building block to render a contact facet.
+You can use the `Field` building block to render a contact facet in SAP Fiori elements for OData V4.
 
 > ### Note:  
-> This topic describes how to use the building block within SAP Fiori elements object pages. If the functionality isn't available when you use the building block in other floorplans, custom pages, or custom sections, you can try achieving the functionality through other means, such as the following:
+> This topic describes how to use the feature within SAP Fiori elements object pages. The feature isn't available when you use the building block in other floorplans, custom pages, or custom sections, but you can try achieving the functionality through other means, such as the following:
 > 
 > -   Properties or methods exposed by the building block
 > 

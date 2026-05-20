@@ -2,7 +2,7 @@
 
 # Configuring the Object Page Header Title and Description
 
-You can use annotations to adapt the object page header title and description.
+You can use annotations to adapt the object page header title and description in SAP Fiori elements for OData V2.
 
 
 

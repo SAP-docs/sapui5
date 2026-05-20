@@ -2,7 +2,7 @@
 
 # Enabling Simple Header Facets
 
-You can enable the simple header facet if you want to display more content in your header facet.
+You can enable the simple header facet if you want to display more content in your header facet in SAP Fiori elements for OData V2.
 
 To do so, you must add the `simpleHeaderFacets:true` flag manually in the app's `manifest.json` file.
 

@@ -2,7 +2,7 @@
 
 # Store/Restore the Application State
 
-SAP Fiori elements uses the `iAppState` mechanism for storing or restoring the application state.
+SAP Fiori elements for OData V4 uses the `iAppState` mechanism for storing or restoring the application state.
 
 This mechanism enables a smooth user experience when navigating back and forth between apps developed using SAP Fiori elements and other apps.
 

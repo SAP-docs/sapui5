@@ -2,7 +2,7 @@
 
 # Developing Reuse Components
 
-You can extend the `ReuseComponent` \(`sap.fe.core.ReuseComponent`\) base class to implement reuse components.
+You can extend the `ReuseComponent` \(`sap.fe.core.ReuseComponent`\) base class to implement reuse components in SAP Fiori elements for OData V4.
 
 You can extend `ReuseComponent` to do the following:
 

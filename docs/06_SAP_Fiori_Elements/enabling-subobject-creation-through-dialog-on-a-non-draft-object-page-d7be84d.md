@@ -2,7 +2,7 @@
 
 # Enabling Subobject Creation Through Dialog on a Non-draft Object Page
 
-You can enable the creation of subobjects with a dialog.
+You can enable the creation of subobjects with a dialog in SAP Fiori elements for OData V2.
 
 ![](images/Enabling_Non-draft_Sub-object_Creation_Through_Dialog_dbe00fd.png)
 

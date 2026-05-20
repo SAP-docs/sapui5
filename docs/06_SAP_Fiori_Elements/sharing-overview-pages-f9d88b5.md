@@ -2,7 +2,7 @@
 
 # Sharing Overview Pages
 
-Users can share their application as a tile on SAP Fiori launchpad or by sending an email link.
+In In SAP Fiori elements for OData V4, users can share their application as a tile on SAP Fiori launchpad or by sending an email link.
 
 
 

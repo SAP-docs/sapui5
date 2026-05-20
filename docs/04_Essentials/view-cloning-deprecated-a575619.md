@@ -25,5 +25,5 @@ In scenarios where the above clone approach still leads to undesirable behavior,
 **Related Information**  
 
 
-[List Binding \(Aggregation Binding\)](list-binding-aggregation-binding-91f0577.md "List binding (or aggregation binding) is used to automatically create child controls according to model data.")
+[List Binding and Tree Binding \(Aggregation Binding\)](list-binding-and-tree-binding-aggregation-binding-91f0577.md "List binding and tree binding are both also referred to as aggregation binding. List binding binds to a flat list and is used to automatically create child controls according to model data. Tree binding works the same way but binds to hierarchical data.")
 

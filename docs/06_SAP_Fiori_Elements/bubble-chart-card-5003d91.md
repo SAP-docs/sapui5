@@ -7,7 +7,7 @@ You can render the chart as a bubble chart to display up to three measures and t
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Bubble Chart](bubble-chart-8412307.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Bubble Chart](bubble-chart-8412307.md).
 
 
 

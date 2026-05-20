@@ -2,7 +2,7 @@
 
 # Setting the Default Column Width
 
-You can customize the width of a column defined in a line item using the `com.sap.vocabularies.HTML5.v1.CssDefaults` UI annotation.
+You can customize the width of a column defined in a line item using the `com.sap.vocabularies.HTML5.v1.CssDefaults` UI annotation in SAP Fiori elements for OData V4.
 
 SAP Fiori elements automatically calculates the default width of columns. The calculation algorithm takes into account numerous metadata parameters such as type, column label, referenced properties and text arrangement. Providing a more precise `maxLength` value for the String type or `Precision` value for numeric types can help this algorithm to produce better results. The lower limit is set to 3 rem and the upper limit is set to 20 rem.
 
@@ -167,7 +167,7 @@ Charts
 
 For more information about how to find the right key for a column, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
 
-For information about custom columns in list reports and object pages, see [Extension Points for Tables](extension-points-for-tables-d525522.md).
+For information about custom columns on list report pages and object pages, see [Extension Points for Tables](extension-points-for-tables-d525522.md).
 
 
 

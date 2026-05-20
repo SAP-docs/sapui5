@@ -7,7 +7,7 @@ You can display images in a table.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Displaying Images in Tables](displaying-images-in-tables-492bc79.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Displaying Images in Tables](displaying-images-in-tables-492bc79.md).
 
 
 

@@ -5,7 +5,7 @@
 An overview page is a data-driven SAP Fiori application built using SAPUI5 technology, OData services, and annotations for organizing large amounts of information.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Overview Page](overview-page-c64ef8c.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Overview Page](overview-page-c64ef8c.md).
 
 Overview pages provide quick access to vital business information at a glance, in the form of visual, actionable cards. The user-friendly experience makes viewing, filtering, and acting upon data quick and simple. Business users can see the big picture at a glance, and also focus on the most important tasks, enabling faster decision making as well as immediate action.
 

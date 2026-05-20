@@ -2,7 +2,7 @@
 
 # Adapting Texts in the Delete Dialog \(Object Page Header\)
 
-You can adapt the text of the *Delete* dialog that appears when users delete the entire object page.
+You can adapt the text of the *Delete* dialog that appears when users delete the entire object page in SAP Fiori elements for OData V2.
 
 
 

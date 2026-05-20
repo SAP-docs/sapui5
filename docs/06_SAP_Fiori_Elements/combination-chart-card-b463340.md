@@ -7,7 +7,7 @@ You can render the chart as a combination chart, which lets you combine and view
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Combination Chart](combination-chart-5871393.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Combination Chart](combination-chart-5871393.md).
 
 
 

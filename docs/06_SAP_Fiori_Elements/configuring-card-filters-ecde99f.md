@@ -2,7 +2,7 @@
 
 # Configuring Card Filters
 
-You can add filters to all card types, by using the `com.sap.vocabularies.UI.v1.SelectionVariant` annotation term or by passing filter parameter in the URL.
+In SAP Fiori elements for OData V4, you can add filters to all card types, by using the `com.sap.vocabularies.UI.v1.SelectionVariant` annotation term or by passing filter parameter in the URL.
 
 
 

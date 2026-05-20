@@ -2,7 +2,7 @@
 
 # Navigation from Header Facet Title
 
-You can configure header facets to allow users to perform both internal navigation and external navigation.
+You can configure header facets to allow users to perform both internal navigation and external navigation in SAP Fiori elements for OData V4.
 
 
 

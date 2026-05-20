@@ -5,7 +5,7 @@
 When users create a new entity, you can prefill the fields with specific values.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md).
 
 If the entity is draft-enabled, the relevant service implementation can be used to prefill the fields.
 

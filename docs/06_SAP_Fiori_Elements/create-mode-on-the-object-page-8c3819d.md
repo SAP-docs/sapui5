@@ -2,7 +2,7 @@
 
 # Create Mode on the Object Page
 
-Users can edit tables on the object page in create mode.
+Users can edit tables in create mode on the object page in SAP Fiori elements for OData V4.
 
 Create mode is available as follows:
 

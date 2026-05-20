@@ -5,7 +5,7 @@
 You can add a determining action button to the footer of the object page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Defining Determining Actions](defining-determining-actions-1743323.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Defining Determining Actions](defining-determining-actions-1743323.md).
 
 Determining actions are used to trigger actions directly using the context of the page in the object page. You can only add the determining action button in edit mode
 

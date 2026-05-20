@@ -2,7 +2,7 @@
 
 # Adapting Logic Before Save Operation
 
-You can use an extension API to execute any logic before the save operation.
+You can use an extension API to execute any logic before the save operation in SAP Fiori elements for OData V2.
 
 The extension API is triggered just before starting the save operations.
 

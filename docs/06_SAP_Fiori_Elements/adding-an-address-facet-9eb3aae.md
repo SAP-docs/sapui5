@@ -2,7 +2,7 @@
 
 # Adding an Address Facet
 
-You can add an address facet to a section of the object page.
+You can add an address facet to a section of the object page in SAP Fiori elements for OData V2.
 
 If you add a `UI.ReferenceFacet` that points to an address annotation, an address facet is displayed in the object page sections or in a quick view. It shows the label of the `UI.ReferenceFacet` and, below, only the label property of the address annotation. This is why the label property must contain the whole formatted address, with `\n` for new lines.
 

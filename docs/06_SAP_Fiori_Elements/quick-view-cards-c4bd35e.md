@@ -2,7 +2,7 @@
 
 # Quick View Cards
 
-You can configure and assign actions to the quick view cards
+You can configure and assign actions to the quick view cards in SAP Fiori elements for OData V4.
 
 
 

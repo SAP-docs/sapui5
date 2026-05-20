@@ -2,7 +2,7 @@
 
 # Security Configuration
 
-Get to know app security and sensitive data protection.
+Get to know app security and sensitive data protection in SAP Fiori elements for OData V4.
 
 Security has always been an important element for the complete product life cycle of all SAP products, including product development, planning, and quality assurance. SAP takes care of some of the security focus areas, while others have to be handled by you.
 

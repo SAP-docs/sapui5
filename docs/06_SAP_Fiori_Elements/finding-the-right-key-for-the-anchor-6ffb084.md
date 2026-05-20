@@ -2,9 +2,7 @@
 
 # Finding the Right Key for the Anchor
 
-Learn how to find the right key for the anchor in different UI elements.
-
-You need to identify an anchor element using the browser's developer tools to correctly position the custom elements.
+You can identify an anchor element using the browser's developer tools to correctly position the custom elements in SAP Fiori elements for OData V4.
 
 To open the browser's developer tools, choose [CTRL\] + [SHIFT\] + [I\]  on Windows, and [CMD\] + [OPT\] + [I\]  on macOS.
 

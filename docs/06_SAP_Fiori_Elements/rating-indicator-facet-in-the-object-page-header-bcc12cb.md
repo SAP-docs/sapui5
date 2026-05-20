@@ -2,7 +2,7 @@
 
 # Rating Indicator Facet in the Object Page Header
 
-You can add a read-only rating indicator to the object page header.
+You can add a read-only rating indicator to the object page header in SAP Fiori elements for OData V4.
 
 The rating indicator allows you to visually represent the rating types described below.
 
@@ -257,5 +257,5 @@ ABAP CDS Annotation
 **Related Information**  
 
 
-[Header Facets](header-facets-17dbd5b.md "You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.")
+[Header Facets](header-facets-17dbd5b.md "You can add various types of facets to your object page header in SAP Fiori elements for OData V4.")
 

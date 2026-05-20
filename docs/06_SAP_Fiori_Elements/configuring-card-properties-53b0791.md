@@ -2,7 +2,7 @@
 
 # Configuring Card Properties
 
-This section provides the configuration items relevant for all overview page cards.
+This section provides the configuration items relevant for all overview page cards in SAP Fiori elements for OData V4.
 
 
 

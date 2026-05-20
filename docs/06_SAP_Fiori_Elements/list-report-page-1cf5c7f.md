@@ -4,7 +4,7 @@
 
 Users can make use of the list report page to work with a large list of items.
 
-The list report page combines powerful functions for filtering large lists with different ways of displaying the resulting item list.
+The list report page in SAP Fiori elements for OData V4 combines powerful functions for filtering large lists with different ways of displaying the resulting item list.
 
 
 

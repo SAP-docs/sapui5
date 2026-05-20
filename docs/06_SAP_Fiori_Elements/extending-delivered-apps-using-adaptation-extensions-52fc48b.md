@@ -2,7 +2,7 @@
 
 # Extending Delivered Apps Using Adaptation Extensions
 
-Key users and developers can extend and configure SAP Fiori applications by adapting the UI.
+Key users and developers can adapt the UI to extend and configure applications in SAP Fiori elements for OData V4.
 
 
 

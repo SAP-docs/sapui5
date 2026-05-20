@@ -7,7 +7,7 @@ See some examples of configuring quick views.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Quick Views: Further Configuration Examples](quick-views-further-configuration-examples-1083035.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Quick Views: Further Configuration Examples](quick-views-further-configuration-examples-1083035.md).
 
 
 

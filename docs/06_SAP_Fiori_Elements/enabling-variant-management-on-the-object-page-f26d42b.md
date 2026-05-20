@@ -2,7 +2,7 @@
 
 # Enabling Variant Management on the Object Page
 
-You can enable and disable control-level variant management on the object page.
+You can enable and disable control-level variant management on the object page in SAP Fiori elements for OData V4.
 
 
 
@@ -60,7 +60,7 @@ You can turn personalization on or off for each table individually. Personalizat
 **Related Information**  
 
 
-[Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-094fe8c.md "You can create a list report page app without variant management.")
+[Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-094fe8c.md "You can create a list report page app without variant management in SAP Fiori elements for OData V4.")
 
 <a name="concept_ech_15p_c3c"/>
 

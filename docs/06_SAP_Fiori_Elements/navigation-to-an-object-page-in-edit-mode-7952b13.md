@@ -5,7 +5,7 @@
 You can configure the navigation to an object page to open directly in edit mode.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-8665847.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-8665847.md).
 
 You can use the `editFlow` annotation in the `manifest.json` file to configure navigation, as shown in the following sample code:
 

@@ -2,7 +2,7 @@
 
 # Generic Action Buttons in Tables on the Object Page: Additional Considerations
 
-You can use annotations to enable generic actions in tables on the object page.
+You can use annotations to enable generic actions in tables on the object page in SAP Fiori elements for OData V2.
 
 For more information, see [Adding Actions to Tables](adding-actions-to-tables-c909f6b.md).
 
@@ -74,5 +74,5 @@ The *Create* button is only displayed in the table toolbar when the object page 
 **Related Information**  
 
 
-[Example: Adding Custom Filter Fields in Table Toolbar](example-adding-custom-filter-fields-in-table-toolbar-e34f78f.md "You can add custom filter fields like selects, combo boxes, or date pickers to your object page table toolbar using view extensions.")
+[Example: Adding Custom Filter Fields in Table Toolbar](example-adding-custom-filter-fields-in-table-toolbar-e34f78f.md "You can add custom filter fields like selects, combo boxes, or date pickers to your object page table toolbar using view extensions in SAP Fiori elements for OData V2.")
 

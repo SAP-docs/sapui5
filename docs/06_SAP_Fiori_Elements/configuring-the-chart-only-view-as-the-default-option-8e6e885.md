@@ -2,7 +2,7 @@
 
 # Configuring the Chart-Only View as the Default Option
 
-You can display data on the analytical list page in a chart format.
+You can display data on the analytical list page in a chart format in SAP Fiori elements for OData V2.
 
 
 
@@ -476,7 +476,7 @@ For more information, see [Defining Determining Actions on the List Report Page]
 **Related Information**  
 
 
-[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "You can visualize data from the main entity set and seamlessly navigate to an application.")
+[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "You can visualize data from the main entity set and seamlessly navigate to an SAP Fiori elements for OData V2 app.")
 
 [Defining Actions in the Chart Toolbar](defining-actions-in-the-chart-toolbar-b13196e.md "You can add action buttons to the chart toolbar by defining the Actions property in the annotation term UI.Chart.")
 

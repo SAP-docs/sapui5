@@ -7,7 +7,7 @@ You can configure the measures and dimensions displayed in charts by setting the
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring Charts on the Overview Page](configuring-charts-on-the-overview-page-c7c5a82.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring Charts on the Overview Page](configuring-charts-on-the-overview-page-c7c5a82.md).
 
 
 

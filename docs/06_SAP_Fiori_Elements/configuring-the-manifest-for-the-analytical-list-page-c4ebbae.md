@@ -5,7 +5,7 @@
 You can use the `manifest.json` file to configure the analytical list page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
 
 > ### Note:  
 > The analytical list page works only for analytical services.

@@ -2,12 +2,12 @@
 
 # Configuring Dependencies to SAPUI5 Libraries
 
-You can define dependencies to SAPUI5 libraries required by your app to improve the loading time.
+You can define dependencies to SAPUI5 libraries required by your app to improve the loading time
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring Dependencies to SAPUI5 Libraries](configuring-dependencies-to-sapui5-libraries-ef5f16b.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring Dependencies to SAPUI5 Libraries](configuring-dependencies-to-sapui5-libraries-ef5f16b.md).
 
 
 

@@ -2,7 +2,7 @@
 
 # Configuring Features of the Object Page
 
-You can use annotations to set up various elements on the object page, such as the header and sections.
+You can use annotations to set up various elements on the object page, such as the header and sections in SAP Fiori elements for OData V2.
 
 **Related Information**  
 

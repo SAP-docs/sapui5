@@ -2,7 +2,7 @@
 
 # Enabling an App for Key User Adaptation
 
-You can enable key users to make adaptations on the list report page and the object page.
+You can enable key users to make adaptations on the list report page and the object page in SAP Fiori elements for OData V4.
 
 To enable an app for key user adaptation, you must set `flexEnabled` to 'true' in the `manifest.json` file. For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md).
 
@@ -104,7 +104,7 @@ To stash header facets or restrict their adaptability, you must reference header
 > 
 > ```
 
-For the first facet, the ID is "`ProgressIndicator`", and for the second facet, it is generated from the annotation path, in this case, "`DataPoint::Rating`".
+For the first facet, the ID is `ProgressIndicator`, and for the second facet, it is generated from the annotation path, in this case, `DataPoint::Rating`.
 
 
 
@@ -116,11 +116,11 @@ If you have defined header facets as stashed in the `manifest.json` file, they a
 
 ### Restricting the Adaptability
 
-You can restrict the adaptability of header facets, object page sections, subsections, forms, and form elements by using the manifest settings `flexSettings` and `designtime`. For example, the value `not-adaptable-visibility` disables all actions that influence visibility, such as *Remove* and *Add*, but keeps '*Move* enabled.
+You can restrict the adaptability of header facets, object page sections, subsections, forms, and form elements by using the `flexSettings` and `designtime` manifest settings. For example, the `not-adaptable-visibility` value disables all actions that influence visibility, such as *Remove* and *Add*, but keeps *Move* enabled.
 
 For more information, see the [Restrict Adaptation for Certain Controls](../05_Developing_Apps/enabling-ui-adaptation-other-things-to-consider-de9fd55.md#loiode9fd55c69af4b46863f5d26b5d796c4__section_restrictadaptation) section in [Enabling UI Adaptation: Other Things to Consider](../05_Developing_Apps/enabling-ui-adaptation-other-things-to-consider-de9fd55.md).
 
-The following sample code shows an example for a form and a form element:
+The following sample code shows the usage of `flexSettings` and `designtime` settings in a form and a form element:
 
 > ### Sample Code:  
 > `manifest.json`

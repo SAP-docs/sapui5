@@ -2,7 +2,7 @@
 
 # The `Share` Building Block
 
-You can use the `Share` building block to add the *Share* functionality to your app.
+You can use the `Share` building block to add the *Share* functionality to an app in SAP Fiori elements for OData V4.
 
 The *Share* functionality allows users to share the current application state using the options *Send Email*, *Share to Microsoft Teams*, *Save as Tile*, and *Share in SAP Jam* \(on platforms that are integrated with SAP Jam\). For more information, see [The Share Functionality](the-share-functionality-022bf0d.md).
 

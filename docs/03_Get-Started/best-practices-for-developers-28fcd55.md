@@ -188,7 +188,7 @@ When creating instances of SAPUI5 controls programmatically \(i.e. not declarati
 
 -   During SAPUI5 bootstrapping, assign `module:sap/ui/core/ComponentSupport` or a separate JavaScript file to `data-sap-ui-on-init`.
 
--   Unless a specific theme is mandated, omit `data-sap-ui-theme` from the bootstrap configuration. This allows SAPUI5 to automatically apply the latest default theme based on the [Supported Combinations of Themes and Libraries](../02_Read-Me-First/supported-combinations-of-themes-and-libraries-38ff8c2.md), respecting the user's color scheme preference. For more information, see [Theming - Default Behavior](../04_Essentials/theming-497c27a.md#loio497c27a8ee26426faacd2b8a1751794a__sub_default).
+-   Unless a specific theme is mandated, omit `data-sap-ui-theme` from the bootstrap configuration. This allows SAPUI5 to automatically apply the latest default theme based on the [Supported Themes](../02_Read-Me-First/supported-themes-38ff8c2.md), respecting the user's color scheme preference. For more information, see [Theming - Default Behavior](../04_Essentials/theming-497c27a.md#loio497c27a8ee26426faacd2b8a1751794a__sub_default).
 
 -   Avoid inline scripts or inline styles.
 

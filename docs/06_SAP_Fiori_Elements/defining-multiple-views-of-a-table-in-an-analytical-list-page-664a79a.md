@@ -2,7 +2,7 @@
 
 # Defining Multiple Views of a Table in an Analytical List Page
 
-You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.
+You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button in SAP Fiori elements for OData V2.
 
 
 

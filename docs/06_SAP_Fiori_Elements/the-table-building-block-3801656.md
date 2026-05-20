@@ -2,7 +2,7 @@
 
 # The `Table` Building Block
 
-You can use the `Table` building block to instantiate a table based on an `entitySet` or a specific navigation property.
+You can use the `Table` building block to instantiate a table based on an `entitySet` or a specific navigation property in SAP Fiori elements for OData V4.
 
 
 
@@ -271,20 +271,60 @@ For more information and live examples, see the SAP Fiori development portal at 
 
 ## Controlling the Table Initialization
 
-If a table building block is linked to a filter bar which doesn't use the live mode, the table will load data after the filters are filled in.
+If the `Table` building block is linked to a filter bar which doesn't use live mode, the table loads the data after the filters are filled.
 
 You can control the data loading behavior using the `initialLoad` parameter as shown in the following sample code:
 
 > ### Sample Code:  
+> `initialLoad`
+> 
 > ```
 > 
-> {{ <macros:FilterBar metaPath="@com.sap.vocabularies.UI.v1.SelectionFields" id="FilterBar" />}}
+> <macros:FilterBar metaPath="@com.sap.vocabularies.UI.v1.SelectionFields" id="FilterBar" />
 > <macros:Table metaPath="@com.sap.vocabularies.UI.v1.LineItem" id="LineItemTable" filterBar="FilterBar" initialLoad="true"/>
 > ```
 
-The default value of `initialLoad` is `false`.
+See the following table for the supported values of the `initialLoad` parameter and their behavior:
 
-If set to `false`, the table loads the data after the filter bar is filled.
+**Behavior of the InitialLoad Parameter**
 
-If `initialLoad` is set to `true`, the table loads the data if the filter bar has no mandatory filters or if the mandatory filters are filled in.
+
+<table>
+<tr>
+<th valign="top">
+
+Value
+
+</th>
+<th valign="top">
+
+Behavior
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`false` \(default\)
+
+</td>
+<td valign="top">
+
+The table loads the data only after the filter bar is filled.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`true`
+
+</td>
+<td valign="top">
+
+The table loads the data if the filter bar has no mandatory filters or if the mandatory filters are filled.
+
+</td>
+</tr>
+</table>
 

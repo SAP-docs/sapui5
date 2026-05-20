@@ -184,7 +184,7 @@ Supported Controls
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -201,7 +201,7 @@ Supported Controls
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
@@ -211,12 +211,12 @@ Supported Controls
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -233,22 +233,22 @@ Supported Controls
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -312,7 +312,7 @@ Supported Controls
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -329,22 +329,22 @@ Supported Controls
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -361,7 +361,7 @@ Supported Controls
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
@@ -371,12 +371,12 @@ Supported Controls
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>

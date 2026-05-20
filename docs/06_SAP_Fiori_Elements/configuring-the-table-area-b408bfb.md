@@ -2,7 +2,7 @@
 
 # Configuring the Table Area
 
-You can configure the table header title \(`label` property\) and the corresponding values \(`value` property\) for the column items with the `LineItem` annotation.
+In SAP Fiori elements for OData V4, you can configure the table header title \(`label` property\) and the corresponding values \(`value` property\) for the column items with the `LineItem` annotation.
 
 
 

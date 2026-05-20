@@ -2,7 +2,7 @@
 
 # Enabling Object Creation Using the Dialog on the Object Page
 
-You can enable the creation of objects using a dialog on the object page.
+You can enable the creation of objects using a dialog on the object page in SAP Fiori elements for OData V4.
 
 You can enable this feature by configuring the `creationMode` property in the `manifest.json` file as shown in the following sample code:
 

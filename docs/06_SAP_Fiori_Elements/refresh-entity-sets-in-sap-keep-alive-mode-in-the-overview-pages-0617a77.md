@@ -5,7 +5,7 @@
 You can use the `sap-keep-alive` feature in SAP Fiori launchpad to ensure that a view is not destroyed in the view cache when navigating away from the source app.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Refresh Entity Sets in sap-keep-alive Mode in the Overview Pages](refresh-entity-sets-in-sap-keep-alive-mode-in-the-overview-pages-0c35c87.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Refresh Entity Sets in sap-keep-alive Mode in the Overview Pages](refresh-entity-sets-in-sap-keep-alive-mode-in-the-overview-pages-0c35c87.md).
 
 This feature enhances performance by preserving the view state, allowing the same view to reload upon returning to the source application.
 

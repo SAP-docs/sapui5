@@ -2,7 +2,7 @@
 
 # Creating a List Report Page Without Variant Management
 
-You can create a list report page app without variant management.
+You can create a list report page app without variant management in SAP Fiori elements for OData V4.
 
 
 
@@ -11,7 +11,7 @@ You can create a list report page app without variant management.
 ## Context
 
 > ### Note:  
-> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> This topic describes how to use the feature within SAP Fiori elements floorplans. The feature isn't available when you use the building block in custom pages or custom sections, but you can try achieving the functionality through other means, such as the following:
 > 
 > -   Properties or methods exposed by the building block
 > 
@@ -98,7 +98,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
 **Related Information**  
 
 
-[Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md "You can enable and disable control-level variant management on the object page.")
+[Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md "You can enable and disable control-level variant management on the object page in SAP Fiori elements for OData V4.")
 
 <a name="concept_xqz_shb_c3c"/>
 

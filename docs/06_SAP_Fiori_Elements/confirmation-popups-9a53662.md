@@ -2,7 +2,7 @@
 
 # Confirmation Popups
 
-You can configure confirmation popups for various use cases on the list report page and the object page.
+You can configure confirmation popups for various use cases on the list report page and the object page in SAP Fiori elements for OData V4.
 
 
 

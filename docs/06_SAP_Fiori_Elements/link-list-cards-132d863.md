@@ -2,12 +2,12 @@
 
 # Link List Cards
 
-Displays a list of links with a title, picture, icon, or subtitle.
+You can use a link list card to display a list of links with a title, picture, icon, or subtitle.
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Link List Cards](link-list-cards-0326f91.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Link List Cards](link-list-cards-0326f91.md).
 
 
 

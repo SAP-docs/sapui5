@@ -2,7 +2,7 @@
 
 # The `KPITag` Building Block
 
-You can use the `KPITag` building block to add a key performance indicator \(KPI\) to your application.
+You can use the `KPITag` building block to add a key performance indicator \(KPI\) to an application based on SAP Fiori elements for OData V4.
 
 > ### Sample Code:  
 > The `KPITag` building block

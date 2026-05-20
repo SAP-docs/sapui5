@@ -2,7 +2,7 @@
 
 # The `Field` Building Block
 
-You can use the `Field` building block to instantiate a property configured as part of the service metadata.
+You can use the `Field` building block to instantiate a property configured as part of the service metadata in SAP Fiori elements for OData V4.
 
 The `Field` analyzes the different annotations that are defined for the property to create the most appropriate controls and additionally offers you configuration options for adjusting the behavior to fit your needs.
 
@@ -78,7 +78,7 @@ The following settings are available:
     -   `textExpandBehaviorDisplay`
     -   `textMaxLength`
 
-    For more information about using the `formatOptions` settings, see the [Manifest-Based Definition](different-representations-of-a-field-c18ada4.md#loioc18ada4bc56e427a9a2df2d1898f28a5__ManifestBasedDefinition) subsection in [Different Representations of a Field](different-representations-of-a-field-c18ada4.md).
+    For more information about using the `formatOptions` settings, see [Multi-Line Text Fields](multi-line-text-fields-b502146.md).
 
 
 > ### Restriction:  

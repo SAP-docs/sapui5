@@ -2,7 +2,7 @@
 
 # Passing Variant IDs as URL Parameters
 
-You can pass the variant ID as part of the navigation context \(or as a URL parameter\) while navigating from an application to the analytical list page or to the list report page, or the other way around.
+You can pass the variant ID as part of the navigation context \(or as a URL parameter\) while navigating from an application to the analytical list page or to the list report page, or the other way around in SAP Fiori elements for OData V4.
 
 The URL parameter value should be an ID of the variant that exists in the target app. Ensure that the variant name is not passed as the URL parameter.
 
@@ -79,5 +79,5 @@ You can pass the variant ID as the URL parameter by updating the `manifest.json`
 **Related Information**  
 
 
-[Managing Variants](managing-variants-8ce658e.md "You can manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-8ce658e.md "You can manage variants with different structures in the filter and content areas in SAP Fiori elements for OData V4.")
 

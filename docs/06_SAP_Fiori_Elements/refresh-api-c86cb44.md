@@ -2,7 +2,7 @@
 
 # Refresh API
 
-You can use the `refreshBinding` function \(in `Component.js`\) to refresh the header, filter, and content area elements.
+You can use the `refreshBinding` function \(in `Component.js`\) to refresh the header, filter, and content area elements in SAP Fiori elements for OData V2.
 
 
 
@@ -26,5 +26,5 @@ This helps you to reload the data for all components configured in ALP without t
 **Related Information**  
 
 
-[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your app.")
+[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your SAP Fiori elements for OData V2 app.")
 

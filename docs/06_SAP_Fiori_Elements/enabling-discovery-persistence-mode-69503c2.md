@@ -5,7 +5,7 @@
 You can configure the mode in which the state of the object page is stored/restored using `iAppState`.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enabling Persistence Mode](enabling-persistence-mode-7c62084.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enabling Persistence Mode](enabling-persistence-mode-7c62084.md).
 
 There are two different modes that you can use for configuring object pages. Both modes deal with the response by the object page to the personalization changes made by the user. Examples of such personalization changes are applying filters on a chart or table, displaying hidden columns, or selecting a specific tab.
 

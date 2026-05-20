@@ -2,7 +2,7 @@
 
 # Additional Features of the Field
 
-You can control important field features.
+You can control important field features in SAP Fiori elements for OData V4.
 
 
 

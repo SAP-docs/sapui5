@@ -7,7 +7,7 @@ You can enrich the popovers for link navigation with additional information to d
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md).
 
 
 

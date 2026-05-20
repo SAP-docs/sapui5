@@ -2,7 +2,7 @@
 
 # Configuring Default Filter Values
 
-You can set default filter values for filter bar fields, for example.
+You can set default filter values in SAP Fiori elements for OData V4.
 
 For the *Standard Variant*, application developers can configure default filter field values by using the `UI.SelectionVariant` annotation or the `Common.FilterDefaultValue` annotation.
 
@@ -234,7 +234,7 @@ User-defined default values are applied and combined with the values from the st
 **Related Information**  
 
 
-[Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md "You can adapt the filter bar using additional annotations or configuring the manifest.json file.")
+[Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md "You can adapt the filter bar using additional annotations or configuring the manifest.json file in SAP Fiori elements for OData V4.")
 
-[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page.")
+[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page in SAP Fiori elements for OData V4.")
 

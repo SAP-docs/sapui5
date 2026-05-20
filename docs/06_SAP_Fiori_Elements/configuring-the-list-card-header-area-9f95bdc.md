@@ -2,7 +2,7 @@
 
 # Configuring the List Card Header Area
 
-You can configure various properties of a list card header.
+In SAP Fiori elements for OData V4, you can configure various properties of a list card header.
 
 
 
@@ -16,25 +16,27 @@ You can configure the title and subtitle of a list card in the `manifest.json` f
 > `manifest.json`
 > 
 > ```
-> "sap.ovp": {
-> 		"globalFilterModel": "salesOrder",
-> 		"globalFilterEntitySet": "GlobalFilters",
+> 
+>   "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntitySet": "GlobalFilters",
 >               ...
 >               ...
-> 		"cards": {
->           "sap.ovp.test_card.card002": {
->             "model": "salesOrder",
->             "template": "sap.ovp.cards.v4.list",
->             "settings": {
->               "title": "Purchase History",
->               "subTitle": "SubTitle",
->               "entitySet": "SalesOrderSet",
->               ...
->               ...
->                 }
->               ]
->             }
+>     "cards": {
+>       "sap.ovp.test_card.card002": {
+>         "model": "salesOrder",
+>         "template": "sap.ovp.cards.v4.list",
+>         "settings": {
+>           "title": "Purchase History",
+>           "subTitle": "SubTitle",
+>           "entitySet": "SalesOrderSet"
+>           "enableTextWrapping": true //The default value is false
+> 
 >         }
+>       }
+>     }
+>   }
+> }
 > ```
 
 
@@ -435,6 +437,7 @@ You can configure the view switch using the ***tabs*** property in the manifest 
 >           "listFlavor": "bar",
 >           "listType": "extended",
 >           "entitySet": "SalesOrderSet",
+>           "enableTextWrapping": true //The default value is false
 >           "tabs": [
 >                 {
 >                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
@@ -473,7 +476,7 @@ You can configure the navigation \(from the header and content area\) within an 
 **Related Information**  
 
 
-[Configuring List Card](configuring-list-card-7f65716.md "You can add and configure various attributes of the list card.")
+[Configuring the List Card](configuring-the-list-card-7f65716.md "You can add and configure various attributes of the list card in SAP Fiori elements for OData V4.")
 
-[Configuring the List Area](configuring-the-list-area-f57373d.md "You can add values and navigation properties to the list area.")
+[Configuring the List Area](configuring-the-list-area-f57373d.md "You can add values and navigation properties to the list area in SAP Fiori elements for OData V4.")
 

@@ -2,7 +2,7 @@
 
 # Harvey Micro Chart
 
-You can render the micro chart as a Harvey Ball micro chart.
+You can render the micro chart as a Harvey Ball micro chart in SAP Fiori elements for OData V4.
 
 ![](images/Harvey_Micro_Chart_5026048.png)
 

@@ -5,7 +5,7 @@
 You can add a reuse component instance to the object page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Placing Reuse Component Instances on the Object Page](placing-reuse-component-instances-on-the-object-page-1ba7f88.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Placing Reuse Component Instances on the Object Page](placing-reuse-component-instances-on-the-object-page-1ba7f88.md).
 
 Each reuse component instance defined for an object page belonging to an SAP Fiori elements-based app is realized by a section that contains a subsection which in turn contains the content of the reuse component. By default, these sections are added to the end of the object page in the same order as the reuse component instances are defined in the manifest. You can use the Adaptation Editor to move these sections.
 

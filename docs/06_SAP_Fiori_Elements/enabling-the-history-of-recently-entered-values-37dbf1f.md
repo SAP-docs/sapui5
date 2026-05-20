@@ -2,7 +2,7 @@
 
 # Enabling the History of Recently Entered Values
 
-You can enable the history of the most recently entered values for any field.
+You can enable the history of the most recently entered values for any field in SAP Fiori elements for OData V4.
 
 You can view the field history by moving the cursor back to the field. It's enabled by default for some of the controls that are used as a filter, such as for multi-input fields. However, it may not be enabled for controls such as a dropdown list.
 
@@ -53,5 +53,5 @@ Here, `<propertyPath>` refers to the property path in the OData service.
 **Related Information**  
 
 
-[Configuring Filter Bars](configuring-filter-bars-4bd7590.md "You can configure the filter bar on the list report page and the analytical list page.")
+[Configuring Filter Bars](configuring-filter-bars-4bd7590.md "You can configure the filter bar on the list report page and the analytical list page in SAP Fiori elements for OData V4.")
 

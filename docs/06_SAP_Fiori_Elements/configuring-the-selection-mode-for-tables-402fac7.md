@@ -5,7 +5,7 @@
 You can configure single or multiple selection in tables while triggering table toolbar actions that require context.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md).
 
 Single selection in tables is enabled by default. You can enable multiple selection in tables, if necessary.
 

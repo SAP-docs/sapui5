@@ -2,7 +2,7 @@
 
 # Hybrid View
 
-You can view both analytical data \(chart format\) and transactional data \(table format\) using the hybrid view.
+You can view both analytical data \(chart format\) and transactional data \(table format\) using the hybrid view in SAP Fiori elements for OData V2.
 
 
 
@@ -33,5 +33,5 @@ Make the following setting:
 **Related Information**  
 
 
-[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "You can visualize data from the main entity set and seamlessly navigate to an application.")
+[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "You can visualize data from the main entity set and seamlessly navigate to an SAP Fiori elements for OData V2 app.")
 

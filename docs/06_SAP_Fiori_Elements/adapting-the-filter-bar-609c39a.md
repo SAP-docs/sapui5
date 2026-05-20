@@ -2,7 +2,7 @@
 
 # Adapting the Filter Bar
 
-You can adapt the filter bar using additional annotations or configuring the `manifest.json` file.
+You can adapt the filter bar using additional annotations or configuring the `manifest.json` file in SAP Fiori elements for OData V4.
 
 The filter bar only shows filter fields defined using the `@com.sap.vocabularies.UI.v1.SelectionFields` annotation. Additional fields available for adaptation are all direct simple properties of the current entity type.
 
@@ -227,7 +227,7 @@ For more information about other possible values for the `availability` property
 **Related Information**  
 
 
-[Enabling the Search Function](enabling-the-search-function-3cdebee.md "You can enable the Search function on the list report page.")
+[Enabling the Search Function](enabling-the-search-function-3cdebee.md "You can enable the Search function on the list report page in SAP Fiori elements for OData V4.")
 
-[Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md "You can use semantic date values, such as Today or Last Week, on the filter bar of list report page and analytical list page applications.")
+[Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md "You can use semantic date values, such as Today or Last Week, on the filter bar of list report page and analytical list page applications in SAP Fiori elements for OData V4.")
 

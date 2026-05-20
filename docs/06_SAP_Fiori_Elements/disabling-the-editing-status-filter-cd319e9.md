@@ -5,7 +5,7 @@
 You can disable the *Editing Status* filter.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Disabling the Editing Status Filter](disabling-the-editing-status-filter-8eb695a.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Disabling the Editing Status Filter](disabling-the-editing-status-filter-8eb695a.md).
 
 The *Editing Status* filter is enabled by default on the list report page of draft-enabled applications.
 

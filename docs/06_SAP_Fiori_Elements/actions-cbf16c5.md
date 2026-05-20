@@ -2,7 +2,7 @@
 
 # Actions
 
-You can use generic actions provided by SAP Fiori elements and implement application-specific actions using annotations or extension points.
+You can use generic actions provided by SAP Fiori elements for OData V4 and implement application-specific actions using annotations or extension points.
 
 Application-specific actions either trigger an interaction with the back end, calling an OData service, or they trigger navigation. Depending on where you want to place an action, and how you want to use it, specific attributes, prerequisites, and guidelines apply. The details are described in this topic. For details about navigation, see [Configuring Navigation](configuring-navigation-a424275.md).
 
@@ -1214,11 +1214,11 @@ When an action with parameters is invoked, an action parameter dialog opens up s
 
 ### Grouping Action Parameters in the Action Parameter Dialog
 
-The action parameters in the action parameter dialog can be grouped based on specific titles using the `UI.OperationalParameterFacets` annotation.
+The action parameters in the action parameter dialog can be grouped based on specific titles using the `UI.OperationParameterFacets` annotation.
 
 The layout of the action parameter dialog is defined by `sap.ui.layout.form.SimpleForm` and is configured as `ColumnLayout` with two columns.
 
-The group titles displayed in the dialog are derived from the labels defined in `UI.OperationalParameterFacets`.
+The group titles displayed in the dialog are derived from the labels defined in `UI.OperationParameterFacets`.
 
 ![](images/Grouping_Action_Parameters_4f9c7c6.png)
 
@@ -1928,6 +1928,8 @@ To group actions under a menu button for table toolbar actions, configure the fo
 
 
 
+<a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__section_ofh_r3j_1jc"/>
+
 ## Defining a Default Action for a Menu Button
 
 When you define a default action for a menu button, clicking the button triggers the action directly.
@@ -2559,7 +2561,7 @@ These action names are used in the following examples that show how to add new a
 **Related Information**  
 
 
-[Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md "You can display a confirmation popover when a user triggers an action.")
+[Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md "You can display a confirmation popover when a user triggers an action in SAP Fiori elements for OData V4.")
 
-[Configuring Navigation](configuring-navigation-a424275.md "You can configure the SAP Fiori elements navigation within an app (internal navigation) and the navigation to and from an app (external navigation).")
+[Configuring Navigation](configuring-navigation-a424275.md "You can configure the navigation within an app (internal navigation) and the navigation to and from an app (external navigation) in SAP Fiori elements for OData V4.")
 

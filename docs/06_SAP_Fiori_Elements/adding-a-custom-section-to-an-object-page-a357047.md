@@ -4,7 +4,7 @@
 
 # Adding a Custom Section to an Object Page
 
-You can add custom sections to your object page, as described in this document.
+You can add custom sections to your object page in SAP Fiori elements for OData V4.
 
 
 

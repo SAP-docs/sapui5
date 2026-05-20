@@ -2,7 +2,7 @@
 
 # Configuring the Delete Dialog
 
-You can adapt the text of the delete dialog to match your requirements.
+You can adapt the text of the delete dialog to match your requirements in SAP Fiori elements for OData V4.
 
 The delete dialog appears when users are deleting an object or item from tables on the list report page or the object page.
 

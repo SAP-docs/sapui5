@@ -1,6 +1,6 @@
 <!-- loio293eb945f0e945aaa776812481b4c533 -->
 
-# Development for Hybrid Web Containers
+# Development for Hybrid Web Containers \(deprecated\)
 
 You can develop mobile apps as hybrid app consisting of a native app wrapper, for example PhoneGap, and an HTML viewer to display the content on the user interface.
 

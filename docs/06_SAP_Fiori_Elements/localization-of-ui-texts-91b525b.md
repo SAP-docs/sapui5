@@ -2,10 +2,10 @@
 
 # Localization of UI Texts
 
-You can replace standard UI texts for apps you've created with SAP Fiori elements.
+You can replace standard UI texts for apps you've created with SAP Fiori elements for OData V2.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
 
 Standard texts are available in the generic framework \(for example, the button texts for draft concepts\) and belong to the template components \(for example, the list report page and the object page\). The following sections describe how you can replace the texts in your generated apps.
 

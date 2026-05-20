@@ -5,7 +5,7 @@
 You can use the `preferredMode` parameter to configure the mode in which the object page is initially launched.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md).
 
 The `preferredMode` parameter supports multiple values that allow you to specify the mode in which the object page is launched.
 

@@ -2,7 +2,7 @@
 
 # Details of Extension Functions Used for Extending Delivered Apps
 
-You can use extension functions to extend apps.
+You can use extension functions to extend apps in SAP Fiori elements for OData V2.
 
 **Extension functions of the list report page, the object page and the overview page**
 

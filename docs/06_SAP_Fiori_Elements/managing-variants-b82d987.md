@@ -7,7 +7,7 @@ You can manage variants with different structures in the filter and content area
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Managing Variants](managing-variants-8ce658e.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Managing Variants](managing-variants-8ce658e.md).
 
 
 

@@ -2,7 +2,7 @@
 
 # Interacting with a Table Using the API
 
-You can interact with and influence any table generated through annotations using all the properties and methods available on the `Table` building block.
+You can interact with and influence any table generated through annotations using all the properties and methods available on the `Table` building block in SAP Fiori elements for OData V4.
 
 To interact with a table, you need to find the `id` of the `TableAPI` control.
 

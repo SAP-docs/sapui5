@@ -677,7 +677,7 @@ SAP Fiori Elements
 
 -   SAP Fiori Elements has enhanced the initial no data text for charts in analytical list page floorplans, and users can now configure them.
 
--   SAP Fiori Elements now provides an option to choose fields to be displayed based on the device type and the importance of the field. For example, applications can be set to show only fields of high importance when viewed on small screens. For more information, see [Displaying Fields in Smartforms on Small-Screen Devices](../06_SAP_Fiori_Elements/displaying-fields-in-smartforms-on-small-screen-devices-0096cd2.md).
+-   SAP Fiori Elements now provides an option to choose fields to be displayed based on the device type and the importance of the field. For example, applications can be set to show only fields of high importance when viewed on small screens. For more information, see [Displaying Fields in Smart Forms on Small-Screen Devices](../06_SAP_Fiori_Elements/displaying-fields-in-smart-forms-on-small-screen-devices-0096cd2.md).
 
 -   Object page tables and chart variants can now be enabled through a manifest setting. For more information, see [Enabling Variant Management on the Object Page](../06_SAP_Fiori_Elements/enabling-variant-management-on-the-object-page-f26d42b.md).
 
@@ -706,6 +706,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.146](what-s-new-in-sapui5-1-146-6ccfe05.md "With this release SAPUI5 is upgraded from version 1.145 to 1.146.")
 
 [What's New in SAPUI5 1.145](what-s-new-in-sapui5-1-145-7676a2a.md "With this release SAPUI5 is upgraded from version 1.144 to 1.145.")
 

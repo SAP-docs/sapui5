@@ -7,7 +7,7 @@ This topic provides a list of the annotations used in overview pages. They are a
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Annotations Used in Overview Pages](annotations-used-in-overview-pages-65731e6.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Annotations Used in Overview Pages](annotations-used-in-overview-pages-65731e6.md).
 
 
 

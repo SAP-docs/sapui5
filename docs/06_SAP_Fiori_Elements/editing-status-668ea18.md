@@ -2,7 +2,7 @@
 
 # Editing Status
 
-The editing status reflects the state of the object or entry in terms of the processing cycle.
+The editing status reflects the state of the object or entry in terms of the processing cycle in an app based on SAP Fiori elements for OData V4.
 
 For example, it can give the user information about whether the item can be accessed, or about its level of completion.
 
@@ -14,11 +14,18 @@ For example, it can give the user information about whether the item can be acce
 
 Users can view the editing status of the objects displayed on the list report page. On a list report page with a responsive table, the editing status is shown in the key column \(the first column displayed with a semantic key\). On a list report page with a grid table, a tree table, or an analytical table, the editing status is shown in a separate column which is placed in the second position and doesn't have a label. The editing status is calculated from the draft administrative data that is provided by the back end.
 
-**Editing Status Visualization on a List Report Page with a Responsive Table**
+> ### Note:  
+> You can't override the header label of the editing status column.
+
+
+
+### Editing Status Visualization on a List Report Page with a Responsive Table
 
 ![](images/Draft_Administrative_Data_Visualization_in_List_Report_Page_with_Responsive_Table_f66fced.png)
 
-**Editing Status Visualization on a List Report Page with a Grid Table**
+
+
+### Editing Status Visualization on a List Report Page with a Grid Table
 
 ![](images/Draft_Administrative_Data_Visualization_in_List_Report_Page_with_Grid_Table_4b053c1.png)
 
@@ -137,5 +144,5 @@ If desired, the editing status filter can be disabled after you generate your ap
 **Related Information**  
 
 
-[Handling Semantic Key Fields](handling-semantic-key-fields-aa2793c.md "You can add semantic keys to a table.")
+[Handling Semantic Key Fields](handling-semantic-key-fields-aa2793c.md "You can add semantic keys to a table in SAP Fiori elements for OData V4.")
 

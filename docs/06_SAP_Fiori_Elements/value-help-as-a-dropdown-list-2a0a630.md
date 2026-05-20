@@ -2,7 +2,7 @@
 
 # Value Help as a Dropdown List
 
-You can configure value help as a dropdown list.
+You can configure value help as a dropdown list in SAP Fiori elements for OData V4.
 
 If the entity set of a value help has a fairly stable number of instances, you can render an input field with a value help and dropdown list box \(`sap.m.ComboBox` and in cases of multi selection a `sap.m.MultiComboBox`\) using the annotation `Common.ValueListWithFixedValues`.
 

@@ -2,14 +2,27 @@
 
 # Requesting Additional Properties
 
-You can request additional OData properties to be fetched with the table's data binding even if these properties are not displayed in the table.
+You can request additional OData properties to be fetched with the table's data binding even if these properties aren't displayed in the table in SAP Fiori elements for OData V4.
 
-This is useful when you need property values to be available at runtime, for example, for custom actions, conditional formatting, or calculations without exposing them as visible columns.
+The additional property values are available at runtime but aren't exposed as visible columns. For example, this is useful for custom actions, conditional formatting, or calculations.
 
-Additional properties for tables can be requested by using the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term and the `RequestAtLeast` property.
+To request additional properties at the table level, use any of the following:
 
-> ### Caution:  
-> Including 1:n properties in the `RequestAtLeast` property results in performance issues and prevents exporting tables to a spreadsheet.
+-   ​The `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term and the `RequestAtLeast` property
+
+-   The `additionalProperties` parameter
+
+
+> ### Note:  
+> You can request direct and navigation properties using the `additionalProperties` parameter, but you can't request 1:n navigation properties or use an absolute path to a singleton.
+
+You can also request additional properties at the page level. For more information, see [Requesting Additional Properties on the Object Page and Custom Page](requesting-additional-properties-on-the-object-page-and-custom-page-c5e38f9.md).
+
+
+
+## Using the `com.sap.vocabularies.UI.v1.PresentationVariant` Annotation Term and the `RequestAtLeast` Property
+
+Use the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term and the `RequestAtLeast` property to request additional properties for tables, as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -47,9 +60,6 @@ Additional properties for tables can be requested by using the `com.sap.vocabula
 >     visualizations: [{type: #AS_LINEITEM }]
 >   }
 > ]
-> annotate view ITEM with {
->  
-> }
 > ```
 
 > ### Sample Code:  
@@ -69,17 +79,19 @@ Additional properties for tables can be requested by using the `com.sap.vocabula
 > );
 > ```
 
-If you cannot use the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation, additional properties can also be requested using the `additionalProperties` parameter.
+> ### Caution:  
+> Including 1:n properties in the `RequestAtLeast` property results in performance issues and prevents exporting tables to a spreadsheet.
 
-> ### Note:  
-> You can request direct and navigation properties but you cannot request 1:n navigation properties or use an absolute path to a singleton.
+
+
+## Using the `additionalProperties` Parameter
 
 You can request additional properties using the `additionalProperties` parameter in the following ways:
 
 -   In the `Table` building block
 -   In the `manifest.json` file
 
-In the following sample code, the `Upvotes` and `Ratings` direct properties and the `_Downvotes/count` navigation property are fetched in the table request of the `Table` building block even if the properties are not displayed as columns in the `LineItem` annotation:
+In the following sample code, the `Upvotes` and `Ratings` direct properties and the `_Downvotes/count` navigation property are fetched in the table request of the `Table` building block even if the properties aren't displayed as columns in the `LineItem` annotation:
 
 > ### Sample Code:  
 > Requesting Additional Properties in the `Table` Building Block
@@ -124,6 +136,4 @@ In the following sample code, the `Upvotes` direct property and `_Downvotes/coun
 >     }
 > }
 > ```
-
-You can also request additional properties at the page level. For more information, see [Requesting Additional Properties on the Object Page and Custom Page](requesting-additional-properties-on-the-object-page-and-custom-page-c5e38f9.md).
 

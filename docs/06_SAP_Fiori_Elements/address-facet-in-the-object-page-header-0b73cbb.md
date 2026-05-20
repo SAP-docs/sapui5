@@ -2,16 +2,16 @@
 
 # Address Facet in the Object Page Header
 
-You can add an address facet to the object page header with the `UI.ReferenceFacet` annotation.
+You can add an address facet to the object page header with the `UI.ReferenceFacet` annotation in SAP Fiori elements for OData V4.
 
 To display an address facet in the object page header, add a `UI.ReferenceFacet` that points to an address annotation. The address facet shows the label of the `UI.ReferenceFacet` and, below, only the label property of the address annotation. This is why the label property needs to contain the whole formatted address, with `\n` for new lines.
 
 > ### Note:  
 > Other properties of the address annotation are not interpreted and rendered.
 
-For example, the value for the label property: `Mail Drop: TNE QB\n123 Main Street\nAny Town, CA 91921-1234\nU.S.A.` is shown as follows:
+For example, the value for the label property `Mail Drop: TNE QB\n123 Main Street\nAny Town, CA 91921-1234\nU.S.A.` is shown as follows:
 
-![](images/Address_Facet_8d92094.png)
+![A screenshot of a field labeled Shipping Address. The address is displayed in four lines.](images/Address_Facet_8d92094.png)
 
 
 
@@ -62,5 +62,5 @@ For example, the value for the label property: `Mail Drop: TNE QB\n123 Main Stre
 **Related Information**  
 
 
-[Header Facets](header-facets-17dbd5b.md "You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.")
+[Header Facets](header-facets-17dbd5b.md "You can add various types of facets to your object page header in SAP Fiori elements for OData V4.")
 

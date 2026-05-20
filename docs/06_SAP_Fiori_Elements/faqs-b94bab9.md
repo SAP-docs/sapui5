@@ -5,7 +5,7 @@
 Get answers to the most frequently asked questions.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [FAQs](faqs-f4817b7.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [FAQs](faqs-f4817b7.md).
 
 The following sections contain the most frequently asked questions about the SAP Fiori elements features and troubleshooting suggestions for common issues.
 

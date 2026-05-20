@@ -2,7 +2,7 @@
 
 # Configuring Overview Pages Using Runtime Capabilities
 
-Users can configure their overview pages by rearranging cards and controlling their visibility. They can also apply filters to the displayed information, which affects all relevant cards on the page.
+Users can configure their overview pages by rearranging cards and controlling their visibility in SAP Fiori elements for OData V4. They can also apply filters to the displayed information, which affects all relevant cards on the page.
 
 The following configuration options are available for the overview page:
 

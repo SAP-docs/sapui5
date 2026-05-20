@@ -2,7 +2,7 @@
 
 # Choosing Filter Modes on the Analytical List Page
 
-You can choose to set filters from the compact and visual filter modes on the analytical list page.
+You can choose to set filters from the compact and visual filter modes on the analytical list page in SAP Fiori elements for OData V4.
 
 
 
@@ -34,7 +34,7 @@ Analytical List Page lets you toggle between the visual filter and compact filte
 **Related Information**  
 
 
-[Managing Variants](managing-variants-8ce658e.md "You can manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-8ce658e.md "You can manage variants with different structures in the filter and content areas in SAP Fiori elements for OData V4.")
 
-[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md "You can specify a value help entity for a field and maintain the value help configuration with a ValueList annotation.")
+[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md "You can specify a value help entity for a field and maintain the value help configuration with a ValueList annotation in SAP Fiori elements for OData V4.")
 

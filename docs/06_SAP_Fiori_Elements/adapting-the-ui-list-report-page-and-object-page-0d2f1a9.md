@@ -2,7 +2,7 @@
 
 # Adapting the UI: List Report Page and Object Page
 
-You can extend and configure specific features of the list report page and object page.
+You can extend and configure specific features of the list report page and object page in SAP Fiori elements for OData V2.
 
 We recommend that you use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to adapt the list report page and object page.
 

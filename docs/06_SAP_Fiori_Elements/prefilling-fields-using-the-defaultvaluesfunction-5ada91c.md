@@ -2,7 +2,7 @@
 
 # Prefilling Fields Using the `DefaultValuesFunction`
 
-You can provide default values with `DefaultValuesFunction` when creating a new entity or when prefilling action parameters, you can provide default values.
+You can provide default values with `DefaultValuesFunction` when creating a new entity or when prefilling action parameters in SAP Fiori elements for OData V4.
 
 > ### Note:  
 > This topic is only applicable to draft applications in the empty row mode. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
@@ -48,5 +48,5 @@ For more information, see [Prefilling Fields When Creating a New Entity](prefill
 **Related Information**  
 
 
-[Actions](actions-cbf16c5.md "You can use generic actions provided by SAP Fiori elements and implement application-specific actions using annotations or extension points.")
+[Actions](actions-cbf16c5.md "You can use generic actions provided by SAP Fiori elements for OData V4 and implement application-specific actions using annotations or extension points.")
 

@@ -2,7 +2,7 @@
 
 # Using a Custom Root View
 
-The root view is the view that is loaded when the app is started.
+You can use a custom root view in SAP Fiori elements for OData V4.
 
 The root view is the view that is loaded when the application is started. For more information, see [App Overview: The Basic Files of Your App](../05_Developing_Apps/app-overview-the-basic-files-of-your-app-28b59ca.md).
 

@@ -5,7 +5,7 @@
 You can add a plain text facet to the object page header.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Plain Text Facet in the Object Page Header](plain-text-facet-in-the-object-page-header-1da0926.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Plain Text Facet in the Object Page Header](plain-text-facet-in-the-object-page-header-1da0926.md).
 
 This type of facet is suitable if you wish to add a single field or block of text with a title, such as a description.
 

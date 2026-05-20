@@ -2,7 +2,7 @@
 
 # Defining Multiple Views in a List Report Page Table - Single Table Mode
 
-You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.
+You can define multiple views of a table and display them in single table mode in SAP Fiori elements for OData V4. Users can switch between views using a segmented button.
 
 
 
@@ -240,7 +240,7 @@ To define multiple views using single table mode, perform the following steps:
 **Related Information**  
 
 
-[Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md "You can add segmented buttons to the toolbar to enable switching between the table content using a selection variant annotation.")
+[Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md "You can add segmented buttons to the toolbar in SAP Fiori elements for OData V4.")
 
 <a name="concept_my4_l3b_c3c"/>
 

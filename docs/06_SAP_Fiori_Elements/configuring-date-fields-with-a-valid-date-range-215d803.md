@@ -2,7 +2,7 @@
 
 # Configuring `Date` Fields with a Valid Date Range
 
-You can use annotations to configure a valid date range for `Date` fields.
+You can use annotations to configure a valid date range for `Date` fields in SAP Fiori elements for OData V4.
 
 Using the `Validation.Minimum` and `Validation.Maximum` annotations, you can disable the invalid date values in the date picker, allowing end users to only select dates within the valid date range.
 

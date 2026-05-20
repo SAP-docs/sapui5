@@ -1,17 +1,17 @@
 <!-- loio4e69fd347d0f4c3a8d776d958f862563 -->
 
-# Using the Multi-Input Field on the Object Page
+# Using the Multi-Input Field
 
-You can render a multi-input field on the object page.
+You can render a multi-input field on the object page and the list report page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Using the Multi-Input Field on the Object Page](using-the-multi-input-field-on-the-object-page-04ff5b1.md).
+> This topic is only relevant for SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Using the Multi-Input Field](using-the-multi-input-field-04ff5b1.md).
 
-If the system identifies a 1:n association of a `DataField` on an object page, the multi-input field is activated automatically.
+If the system identifies a 1:n association of a `DataField`, the multi-input field is activated automatically for a form and table on an object page, and a table on a list report page.
 
 You must define a 1:n association in the data model.
 
-In the following example, `"_supportedMaterial"` is a one-to-many `navigationProperty` pointing to the `"SupportedMaterial"` entity:
+In the following example, `_supportedMaterial` is a one-to-many `navigationProperty` pointing to the `SupportedMaterial` entity:
 
 > ### Sample Code:  
 > ABAP CDS Annotation
@@ -27,7 +27,7 @@ In the following example, `"_supportedMaterial"` is a one-to-many `navigationPro
 > _SupportedMaterials : Composition of many SupportedMaterial on _SupportedMaterials.owner = $self;
 > ```
 
-You can use the navigation property inside a `UI.DataField` to display the values of the target entity. The following example shows how to display the `"material"` property of every associated `"SupportedMaterial"`:
+You can use the navigation property inside a `UI.DataField` to display the values of the target entity. The following example shows how to display the `material` property of every associated `SupportedMaterial`:
 
 > ### Sample Code:  
 > XML Annotation

@@ -2,7 +2,7 @@
 
 # Extending Custom View Switch
 
-You can extend view switch so it responds dynamically based on filter conditions or custom configuration settings.
+In SAP Fiori elements for OData V4, you can extend view switch so it responds dynamically based on filter conditions or custom configuration settings.
 
 
 

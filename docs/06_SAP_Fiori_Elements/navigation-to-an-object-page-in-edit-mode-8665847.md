@@ -2,20 +2,24 @@
 
 # Navigation to an Object Page in Edit Mode
 
-You can configure the navigation to an object page so that it opens directly in edit mode.
+You can configure the navigation to an object page so that it opens directly in edit mode in SAP Fiori elements for OData V4.
 
-You can set `openInEditMode` to `true` in the `manifest.json` file to configure navigation, as shown in the following sample code:
+You can configure navigation in the `manifest.json` file. To do so, set `openInEditMode` to `true` for the target object page, as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`
 > 
 > ```
 > 
-> "options": {
->     "settings": {
->         "entitySet": "LineItems",
->         ...
->         "openInEditMode": true
+> "TravelObjectPage": {
+>     "type": "Component",
+>     "id": "TravelObjectPage",
+>     "name": "sap.fe.templates.ObjectPage",
+>     "options": {
+>         "settings": {
+>             "entitySet": "Travel",
+>             "openInEditMode": true
+>         }
 >     }
 > }
 > ```

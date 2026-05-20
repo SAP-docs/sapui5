@@ -2,12 +2,12 @@
 
 # Adding the OData Select Parameter
 
-OData supports the `select` parameter, allowing you to specify a list of properties that are required by the application. This prevents unnecessary properties from being returned by the OData request.
+You can use the `select` parameter to specify the list of properties required by the application. This prevents unnecessary properties from being returned by the OData request.
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adding the OData Select Parameter](adding-the-odata-select-parameter-be12099.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adding the OData Select Parameter](adding-the-odata-select-parameter-be12099.md).
 
 
 

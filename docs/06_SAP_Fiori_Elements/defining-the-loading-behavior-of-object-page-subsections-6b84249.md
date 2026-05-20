@@ -2,7 +2,7 @@
 
 # Defining the Loading Behavior of Object Page Subsections
 
-You can define the loading behavior of subsections in an object page in the manifest settings.
+You can define the loading behavior of subsections in an object page in the manifest settings in SAP Fiori elements for OData V2.
 
 To define the loading behavior, identify the `id` of the subsection, and add the following settings under the respective object page or subobject page property:
 
@@ -70,5 +70,5 @@ You can use the `waitForHeaderData` and `waitForViewportEnter` properties to def
 **Related Information**  
 
 
-[Rebinding a Table with Each Instance Change on an Object Page](rebinding-a-table-with-each-instance-change-on-an-object-page-a6946a8.md "You can rebind a table on an object page on each instance change.")
+[Rebinding a Table with Each Instance Change on an Object Page](rebinding-a-table-with-each-instance-change-on-an-object-page-a6946a8.md "You can rebind a table on an object page on each instance change in SAP Fiori elements for OData V2.")
 

@@ -2,7 +2,7 @@
 
 # The `AlwaysEditableField` Building Block
 
-You can use the `AlwaysEditableField` building block to define a field that is always displayed in edit mode, regardless of OData metadata and field controls.
+You can use the `AlwaysEditableField` building block to define a field that is always displayed in edit mode, regardless of OData metadata and field controls, in SAP Fiori elements for OData V4.
 
 > ### Sample Code:  
 > The `AlwaysEditableField Building Block`
@@ -15,12 +15,13 @@ You can use the `AlwaysEditableField` building block to define a field that is a
 >     description="{dialogModel>/currencyDescription}" />
 > ```
 
-Using the `value` property to bind to a JSON model is not supported for the following fields:
+Using the `value` property to bind a field to a JSON model isn't supported for the following fields:
 
 -   Rating indicator fields
 -   `dateTime` fields
--   Amount fields with an associated currency or unit of measure
--   Quantity fields with an associated currency or unit of measure
+-   Measure fields with an associated currency or unit-of-measure field
+
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Always Editable Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/alwaysEditableField).
 
 
 

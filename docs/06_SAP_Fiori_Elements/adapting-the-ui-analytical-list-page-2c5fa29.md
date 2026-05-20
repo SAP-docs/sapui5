@@ -2,7 +2,7 @@
 
 # Adapting the UI: Analytical List Page
 
-You can extend and customize specific features of the analytical list page.
+You can extend and customize specific features of the analytical list page in SAP Fiori elements for OData V2.
 
 
 

@@ -2,7 +2,7 @@
 
 # Adaptation Extension Example: Adding a Button to the Table Toolbar on the List Report Page
 
-You can add a button to the table toolbar on the list report page and extend it to filter only the records which have a price that is greater than or equal to 1000.
+You can add a button to the table toolbar on the list report page and extend it to filter only the records which have a price that is greater than or equal to 1000 in SAP Fiori elements for OData V2.
 
 
 

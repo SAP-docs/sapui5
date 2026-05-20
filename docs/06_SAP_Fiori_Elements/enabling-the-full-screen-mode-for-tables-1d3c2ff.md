@@ -2,7 +2,7 @@
 
 # Enabling the Full-Screen Mode for Tables
 
-You can enable full-screen mode for tables.
+You can enable full-screen mode for tables in SAP Fiori elements for OData V4.
 
 When the full-screen mode for tables is enabled, a button on the table toolbar allows users to open the table in full-screen mode. This provides more space for displaying and working with table entries.
 

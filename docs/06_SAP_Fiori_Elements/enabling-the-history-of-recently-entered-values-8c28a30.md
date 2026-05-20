@@ -5,7 +5,7 @@
 You can enable the history of the most recently entered values for any field.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-37dbf1f.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-37dbf1f.md).
 
 You can view the field history by moving the cursor back to the field. It's enabled by default for some of the controls that are used as a filter, such as for multi-input fields. However, it may not be enabled for controls such as a dropdown list.
 

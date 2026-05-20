@@ -2,7 +2,7 @@
 
 # Refresh Dataset for Back Navigation When `sap-keep-alive` Is Set to `True`
 
-You can add a custom code to perform a refresh of specific data.
+You can add a custom code to perform a refresh of specific data in SAP Fiori elements for OData V4.
 
 When `sap-keep-alive` is set to true, and the user navigates from one application to another, modifies some common data and navigates back to the source app, the data isn't refreshed automatically. You can add a custom code to perform a refresh of specific data.
 

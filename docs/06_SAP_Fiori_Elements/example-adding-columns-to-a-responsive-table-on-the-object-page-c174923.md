@@ -2,7 +2,7 @@
 
 # Example: Adding Columns to a Responsive Table on the Object Page
 
-You can add custom columns to your object page responsive table by implementing two extension points for column definitions and cell content.
+You can add custom columns to your object page responsive table by implementing two extension points for column definitions and cell content in SAP Fiori elements for OData V2.
 
 
 

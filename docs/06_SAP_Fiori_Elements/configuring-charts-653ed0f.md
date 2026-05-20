@@ -2,7 +2,7 @@
 
 # Configuring Charts
 
-You can add a chart facet to a content section within the list report page and the object page.
+You can add a chart facet to a content section within the list report page and the object page in SAP Fiori elements for OData V4.
 
 A chart facet is suitable to use if you wish to present data graphically for analysis.
 

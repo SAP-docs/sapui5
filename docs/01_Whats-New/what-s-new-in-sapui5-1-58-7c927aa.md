@@ -1587,7 +1587,7 @@ The sticky toolbar is now enabled by default in list reports. It is visible even
 
 **Object Page View**
 
--   For fields where users can enter more than one value, the `SmartMultiInput` control is rendered on the object page if specific conditions are met. For more information, see [Using the Multi-Input Field on the Object Page](../06_SAP_Fiori_Elements/using-the-multi-input-field-on-the-object-page-04ff5b1.md).
+-   For fields where users can enter more than one value, the `SmartMultiInput` control is rendered on the object page if specific conditions are met. For more information, see [Using the Multi-Input Field](../06_SAP_Fiori_Elements/using-the-multi-input-field-04ff5b1.md).
 
 -   You can now add titles to tables on the object page. For more information, see [Adding Titles to Object Page Tables](../06_SAP_Fiori_Elements/adding-titles-to-object-page-tables-d9a4539.md).
 
@@ -1761,6 +1761,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.146](what-s-new-in-sapui5-1-146-6ccfe05.md "With this release SAPUI5 is upgraded from version 1.145 to 1.146.")
 
 [What's New in SAPUI5 1.145](what-s-new-in-sapui5-1-145-7676a2a.md "With this release SAPUI5 is upgraded from version 1.144 to 1.145.")
 

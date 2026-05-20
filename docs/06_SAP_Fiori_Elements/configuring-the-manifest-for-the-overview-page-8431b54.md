@@ -5,7 +5,7 @@
 You can use the `manifest.json` file for initializing an overview page application.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md).
 
 It defines static information about the application such as its name and the location of various files, and contains configuration parameters that control the application’s behavior, layout, and data handling.
 
@@ -57,6 +57,7 @@ It defines static information about the application such as its name and the loc
 >                 "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Eval_by_Currency_Scatter",
 >                 "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Currency_ColumnStacked",
 >                 "navigation": "noHeaderNav" //Allows you to disable navigation from the analytical list card header area.
+>                 "enableTextWrapping": true //The default value is false
 >             }
 >         }
 >     }
@@ -66,19 +67,26 @@ It defines static information about the application such as its name and the loc
 > ### Note:  
 > To improve the performance of overview page applications, you can enable lazy loading of cards by setting the URL parameter `sap-fe-xx-lazyloadingtest=true`. This parameter mimics the behavior of setting `"enableLazyRendering": true` in the manifest configuration.
 
-The `containerLayout` parameter can be set to either `fixed` or `resizable`, depending on the required card layout.
 
-In the fixed card layout, the cards have a fixed width. You can configure them to load with specific size requirements by defining a default size within each card definition. The grid supports up to four columns, determining how many cards can be displayed side by side.
 
-> ### Note:  
-> Fixed card layout has been deprecated as of SAPUI5 1.142.
 
-In contrast, in a resizable card layout, end users can adjust the size of cards by expanding or contracting them both horizontally and vertically within the grid-based layout. Application developers can enable this flexibility by setting `"containerLayout": "resizable"`.
 
-When switching apps with the fixed card layout to the resizable card layout, the following changes made in the fixed card layout are not retained:
+### Configuring the Overview Page Layout
 
--   Cards arrangements modified by end users using drag and drop.
+The following layouts are available for the overview pages:
 
--   Cards order changes made by key users using cut and paste.
+-   Fixed card layout - Set the `containerLayout` parameter to `fixed` to enable this layout. In this layout, the cards have a fixed width. You can configure them to load with specific size requirements by defining a default size within each card definition. The grid supports up to four columns, determining how many cards can be displayed side by side.
+
+    > ### Note:  
+    > The fixed card layout has been deprecated as of SAPUI5 1.142.
+
+-   Resizable card layout - Set the `containerLayout` parameter to `resizable` to enable this layout. End users can adjust the size of cards by expanding or contracting them both horizontally and vertically within the grid-based layout.
+
+
+When switching from fixed card layout to resizable card layout in an application, the following changes made in the fixed card layout are not retained:
+
+-   Card arrangements modified by end users using drag and drop.
+
+-   Card order changes made by key users using cut and paste.
 
 

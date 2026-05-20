@@ -5,7 +5,7 @@
 You can integrate Microsoft Teams in the *Share* functionality.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [The Share: Microsoft Teams Functionality](the-share-microsoft-teams-functionality-ff89e4b.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [The Share: Microsoft Teams Functionality](the-share-microsoft-teams-functionality-ff89e4b.md).
 
 > ### Note:  
 > -   System administrators for SAP S/4HANA Cloud Public Edition can find the required information at [Integrating Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/257ec7408db6420682462cd1d000e744.html).

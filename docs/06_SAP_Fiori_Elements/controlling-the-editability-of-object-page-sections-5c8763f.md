@@ -2,7 +2,7 @@
 
 # Controlling the Editability of Object Page Sections
 
-You can control the editability of the fields of a child entity.
+You can control the editability of the fields of a child entity in SAP Fiori elements for OData V4.
 
 
 

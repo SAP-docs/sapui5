@@ -2,7 +2,9 @@
 
 # Vertical Bullet Chart
 
-You can render the chart as vertical bullet charts, which accepts at least one measure and one dimension.
+You can render the chart as a vertical bullet chart in SAP Fiori elements for OData V4.
+
+A vertical bullet chart displays at least one measure and one dimension.
 
   
   

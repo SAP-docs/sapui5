@@ -5,7 +5,7 @@
 You can adapt the text in the delete dialog to match your requirements when deleting an object or item from the tables on the list report page or the object page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Delete Dialog](configuring-the-delete-dialog-84e4f89.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Delete Dialog](configuring-the-delete-dialog-84e4f89.md).
 
 The delete dialog derives its text from the `Title` and `Description` properties of the `UI.HeaderInfo` annotation, which is defined in the entity set bound to the table. The table can be on the list report page, the object page, and the subobject page.
 

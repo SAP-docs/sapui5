@@ -5,7 +5,7 @@
 Get to know the UI elements of the list report page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [List Report Page](list-report-page-1cf5c7f.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [List Report Page](list-report-page-1cf5c7f.md).
 
 The list report page allows users to work with a large list of items. It combines powerful functions for filtering large lists with different ways of displaying the resulting item list.
 

@@ -2,7 +2,7 @@
 
 # Managing Variants
 
-You can manage variants with different structures in the filter and content areas.
+You can manage variants with different structures in the filter and content areas in SAP Fiori elements for OData V4.
 
 
 
@@ -11,7 +11,7 @@ You can manage variants with different structures in the filter and content area
 ## Context
 
 > ### Note:  
-> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> This topic describes how to use the feature within SAP Fiori elements floorplans. The feature isn't available when you use the building block in custom pages or custom sections, but you can try achieving the functionality through other means, such as the following:
 > 
 > -   Properties or methods exposed by the building block
 > 

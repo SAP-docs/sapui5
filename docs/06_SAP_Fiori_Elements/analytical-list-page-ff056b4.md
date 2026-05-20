@@ -5,7 +5,7 @@
 You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs \(key performance indicators\).
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Analytical List Page](analytical-list-page-3d33684.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Analytical List Page](analytical-list-page-3d33684.md).
 
 The analytical list page \(ALP\) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content.
 
@@ -33,11 +33,11 @@ For more information about the analytical list page, see [Building an App](build
 
 [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-c4ebbae.md "You can use the manifest.json file to configure the analytical list page.")
 
-[Configuring the Title Area](configuring-the-title-area-ebdb5da.md "The dynamic area of the analytical list page is the title area.")
+[Configuring the Title Area](configuring-the-title-area-ebdb5da.md "You can configure the title area of the analytical list page in SAP Fiori elements for OData V2.")
 
 [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-b44fe77.md "You can configure the visual filter bar on the analytical list page.")
 
-[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "You can visualize data from the main entity set and seamlessly navigate to an application.")
+[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "You can visualize data from the main entity set and seamlessly navigate to an SAP Fiori elements for OData V2 app.")
 
-[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your app.")
+[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your SAP Fiori elements for OData V2 app.")
 

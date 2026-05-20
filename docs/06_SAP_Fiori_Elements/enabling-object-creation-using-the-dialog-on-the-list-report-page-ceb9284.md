@@ -2,7 +2,7 @@
 
 # Enabling Object Creation Using the Dialog on the List Report Page
 
-You can enable the creation of objects that have a maximum of eight data fields using a dialog on the list report page.
+You can enable the creation of objects that have a maximum of eight data fields using a dialog on the list report page in SAP Fiori elements for OData V4.
 
 You can enable this feature for the list report page by configuring the `creationMode` property in the `manifest.json` file, as shown in the following sample code:
 

@@ -2,7 +2,7 @@
 
 # Keyboard Shortcuts
 
-Users can make use of various keyboard shortcuts for basic operations.
+Users can make use of various keyboard shortcuts for basic operations in SAP Fiori elements for OData V4.
 
 See the following table for a list of available keyboard shortcuts:
 

@@ -2,7 +2,7 @@
 
 # Adding Multiple Fields to One Column in Responsive Tables
 
-You can add multiple IDs, descriptions, and action buttons to one column in a responsive table.
+You can add multiple IDs, descriptions, and action buttons to one column in a responsive table in SAP Fiori elements for OData V4.
 
 
 

@@ -2,16 +2,38 @@
 
 # Requesting Additional Properties on the Object Page and Custom Page
 
-You can request additional OData properties to be fetched when the page loads.
+You can request additional properties to be fetched when the page loads in SAP Fiori elements for OData V4.
 
-By default, SAP Fiori elements for OData V4 only requests the visible properties displayed on a page. You can request additional properties at the page level on an object page and a custom page which uses the `sap.fe.core.fpm` component with a binding context. This is useful when you need property values to be available across multiple controls, for example, for conditional logic in controller extensions or custom actions.
+By default, SAP Fiori elements for OData V4 only requests properties which are required to display the UI, that is, properties used for the content, visibility, or enablement of the UI.
 
-You can request additional properties at the page level in the following ways:
+> ### Note:  
+> Properties used for a UI feature which is statically hidden aren't requested.
 
--   ​Using the `Common.SecondaryKey` annotation
--   Using the `additionalProperties` parameter
+If you require property values to be available across multiple controls, you can request additional properties. For example, this is useful for conditional logic in both controller extensions and custom actions.
 
-You can request additional properties using the `Common.SecondaryKey` annotation, as shown in the following sample code:
+You can request additional properties at the page level with the following floorplans:
+
+-   An object page
+-   A custom page which uses the `sap.fe.core.fpm` component with a binding context
+
+You can also request additional properties at the table level. For more information, see [Requesting Additional Properties](requesting-additional-properties-82e27ff.md).
+
+This is useful when you need property values to be available across multiple controls, for example, for conditional logic in both controller extensions and custom actions.
+
+To request additional properties at the page level, use any of the following:
+
+-   ​The `Common.SecondaryKey` annotation
+-   The `additionalProperties` parameter
+
+    > ### Note:  
+    > Using the `additionalProperties` parameter, you can request navigation properties, but you can't request 1:n navigation properties.
+
+
+
+
+## Using `Common.SecondaryKey` Annotation
+
+Use the `Common.SecondaryKey` annotation as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -47,13 +69,12 @@ You can request additional properties using the `Common.SecondaryKey` annotation
 > ```
 > annotate c_salesordermanage_sd.Product with @(
 >     Common.SecondaryKey: ['ProductCode']
-> ){}
+> );
 > ```
 
-You can also request additional properties using the `additionalProperties` parameter.
 
-> ### Note:  
-> You can request navigation properties but you cannot request 1:n navigation properties.
+
+## Using the `additionalProperties` Parameter
 
 In the following sample code, the `StockQuantity`, `ReorderLevel`, `LeadTimeDays`, and `Supplier/Name` properties and the `_quantity/stock` navigation property are fetched when the object page loads, regardless of whether they appear in a control:
 
@@ -77,6 +98,4 @@ In the following sample code, the `StockQuantity`, `ReorderLevel`, `LeadTimeDays
 >     }
 > }
 > ```
-
-You can also request additional properties at the table level. For more information, see [Requesting Additional Properties](requesting-additional-properties-82e27ff.md).
 

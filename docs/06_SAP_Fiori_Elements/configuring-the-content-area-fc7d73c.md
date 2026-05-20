@@ -2,7 +2,7 @@
 
 # Configuring the Content Area
 
-You can visualize data from the main entity set and seamlessly navigate to an application.
+You can visualize data from the main entity set and seamlessly navigate to an SAP Fiori elements for OData V2 app.
 
 Define a valid `UI.Chart` or `UI.LineItem` annotation to render content for the chart area and table area. For more information, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-c4ebbae.md).
 
@@ -37,11 +37,11 @@ The dynamic page header is pinnable when the app has a responsive table in deskt
 
 [Analytical List Page](analytical-list-page-ff056b4.md "You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs (key performance indicators).")
 
-[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md "You can display data on the analytical list page in a table format.")
+[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md "You can display data on the analytical list page in a table format in SAP Fiori elements for OData V2.")
 
-[Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md "You can display data on the analytical list page in a chart format.")
+[Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md "You can display data on the analytical list page in a chart format in SAP Fiori elements for OData V2.")
 
-[Hybrid View](hybrid-view-6615668.md "You can view both analytical data (chart format) and transactional data (table format) using the hybrid view.")
+[Hybrid View](hybrid-view-6615668.md "You can view both analytical data (chart format) and transactional data (table format) using the hybrid view in SAP Fiori elements for OData V2.")
 
 [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-22e32b7.md "You can configure several settings of the main content area, such as sort order or filter values, with UI.SelectionPresentationVariant.")
 

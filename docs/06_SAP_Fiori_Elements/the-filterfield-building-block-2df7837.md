@@ -2,7 +2,7 @@
 
 # The `FilterField` Building Block
 
-You can use the `FilterField` building block to add custom XML fragments as filter fields.
+You can use the `FilterField` building block to add custom XML fragments as filter fields in SAP Fiori elements for OData V4.
 
 You can add XML fragments as filter fields to the `FilterBar` building block as shown in the following sample code:
 

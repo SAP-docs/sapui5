@@ -2,7 +2,7 @@
 
 # Checking Folder Structure and Project Artifacts
 
-Get to know the folder structure and project artifacts of a SAP Fiori elements app.
+Get to know the folder structure and project artifacts of a SAP Fiori elements for OData V2 app.
 
 The new app or component reuses the views and controllers from `sap.suite.ui.generic.template`. The resource links and route definitions for navigation are in the app descriptor file \(`manifest.json`\). You can find the destination configuration for preview in the `ui5*.yaml` files.
 

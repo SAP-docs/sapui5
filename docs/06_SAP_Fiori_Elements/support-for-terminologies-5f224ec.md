@@ -2,7 +2,7 @@
 
 # Support for Terminologies
 
-You can switch an app from one scenario or industry to another one by defining terminologies together with additional resource bundles.
+You can switch an app from one scenario or industry to another one by defining terminologies together with additional resource bundles in SAP Fiori elements for OData V4.
 
 To use the concept of terminologies provided by SAPUI5, the "model" definition in the app descriptor must first be enhanced with the terminologies:
 

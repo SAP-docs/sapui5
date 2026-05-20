@@ -2,12 +2,12 @@
 
 # Configuring the Static Link List Card
 
-Allows you to display static data such as static links, images, and icons in the form of list items.
+You can configure a static link list card to display static data, such as links, images, and icons, as list items.
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Static Link List Card](configuring-the-static-link-list-card-4e81b77.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Static Link List Card](configuring-the-static-link-list-card-4e81b77.md).
 
 
 

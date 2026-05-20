@@ -5,7 +5,7 @@
 You can use extension points to add additional header facets to the object page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Extension Points for Object Page Header Facets](extension-points-for-object-page-header-facets-61cf0ee.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Extension Points for Object Page Header Facets](extension-points-for-object-page-header-facets-61cf0ee.md).
 
 You define application-specific header facets using annotations, but in some cases it might be necessary to integrate components in the front end that are not available with annotations.
 

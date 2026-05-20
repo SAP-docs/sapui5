@@ -2,7 +2,7 @@
 
 # Defining Filter Facets
 
-You can use `FilterFacets` annotations to display filter groups in the *Adapt Filter* dialog.
+You can use `FilterFacets` annotations to display filter groups in the *Adapt Filter* dialog in SAP Fiori elements for OData V4.
 
 For an example of a `FilterFacets` annotation on the target entity type, see the following sample code:
 

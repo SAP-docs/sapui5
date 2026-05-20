@@ -2,7 +2,7 @@
 
 # Overview Page Card
 
-Cards are components that use UI annotation to render their content. They contain a header area and a footer area.
+Cards in SAP Fiori elements for OData V4 are components that use UI annotation to render their content. They contain a header area and a footer area.
 
 
 

@@ -5,7 +5,7 @@
 You can adapt the default texts of the confirmation dialog that appears when users delete a table line.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adapting Texts for Confirmation Dialog Box When Deleting Lines in a Table](adapting-texts-for-confirmation-dialog-box-when-deleting-lines-in-a-table-0d1fbf4.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adapting Texts for Confirmation Dialog Box When Deleting Lines in a Table](adapting-texts-for-confirmation-dialog-box-when-deleting-lines-in-a-table-0d1fbf4.md).
 
 When a user deletes a line in a table on the object page, a confirmation dialog is displayed. To adapt the default texts for every table, you have to provide these custom texts in the application's i18n file, under the respective `entitySet`. This is the key for those texts:
 

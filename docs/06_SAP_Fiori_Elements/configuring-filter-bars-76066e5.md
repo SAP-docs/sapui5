@@ -5,7 +5,7 @@
 You can configure the filter bar on the list report page and the analytical list page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 
 By default, only the fields included in `UI.SelectionFields`, along with all mandatory filter fields, are displayed in the filter bar. The *Editing Status* filter is added automatically if you have a draft service.
 

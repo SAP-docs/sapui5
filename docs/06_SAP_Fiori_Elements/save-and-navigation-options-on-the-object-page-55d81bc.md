@@ -2,7 +2,7 @@
 
 # Save and Navigation Options on the Object Page
 
-You can configure navigation options on the object page.
+You can configure navigation options on the object page in SAP Fiori elements for OData V4.
 
 When creating, editing, and saving draft or non-draft records, the users stay on the object page by default. However, you can configure additional navigation options.
 

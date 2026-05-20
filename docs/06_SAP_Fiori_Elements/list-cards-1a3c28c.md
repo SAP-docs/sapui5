@@ -2,12 +2,12 @@
 
 # List Cards
 
-List cards display lists of records according to the configuration in the `com.sap.vocabularies.UI.v1.LineItem` term. List cards display up to six fields of data in each list item.
+You can use list cards to display lists of records according to the configuration in the `com.sap.vocabularies.UI.v1.LineItem` term. List cards display up to six fields of data in each list item.
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [List Cards](list-cards-56f39e0.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [List Cards](list-cards-56f39e0.md).
 
 
 
@@ -43,6 +43,7 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the applicat
 >                 "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#bar",
 >                 "category": "{{card04_category}}",
 >                 "entitySet": "Products"
+>                 "enableTextWrapping": true //The default value is false
 >             }
 >         },
 >         ...
@@ -53,6 +54,8 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the applicat
 By default, the fields in the list card are mapped to the `com.sap.vocabularies.UI.v1.LineItem` annotation. Any other collection of `DataFieldAbstract` can be used by setting the `annotationPath` property. `LineItem` is a collection of `DataFieldAbstract` records. You can use different `com.sap.vocabularies.UI.v1.LineItem` annotations for different card instances of the same entity type by using different qualifiers and setting the `annotationPath` property with the qualifier in the card configuration. For example `com.sap.vocabularies.UI.v1.LineItem#Qualifier1`.
 
 At runtime, the `DataField` records are sorted according to the optional `Importance (com.sap.vocabularies.UI.v1.ImportanceType)` annotation. `DataField` entries are sorted according to importance and their order of entry.
+
+You can control how text is displayed in list cards by using the `enableTextWrapping` property. If you set `"enableTextWrapping" : true`, then at runtime, text in the table area is wrapped instead of being truncated. The default value is `false`. This property can be defined at the card level in the `manifest.json` file. You can also enable the text wrapping feature using the *Adapt UI* option.
 
 
 

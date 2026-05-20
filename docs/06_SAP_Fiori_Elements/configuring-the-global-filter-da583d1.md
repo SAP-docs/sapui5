@@ -7,7 +7,7 @@ You can configure the global filter to allow users to filter the data displayed 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Global Filter on the Overview Page](configuring-the-global-filter-on-the-overview-page-73d9693.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Global Filter on the Overview Page](configuring-the-global-filter-on-the-overview-page-73d9693.md).
 
 
 

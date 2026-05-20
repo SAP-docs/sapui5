@@ -2,7 +2,7 @@
 
 # Progress Indicator Facet in the Object Page Header
 
-You can add a progress indicator to a header facet on the object page.
+You can add a progress indicator to a header facet on the object page in SAP Fiori elements for OData V4.
 
 The progress indicator allows you to visually represent the level of completion of a goal or target, such as a project's progress, sales progress for the current year's goal, the development stage of a product, stock availability, and so on. The image below shows a progress indicator within the object page header.
 
@@ -297,5 +297,5 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 **Related Information**  
 
 
-[Header Facets](header-facets-17dbd5b.md "You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.")
+[Header Facets](header-facets-17dbd5b.md "You can add various types of facets to your object page header in SAP Fiori elements for OData V4.")
 

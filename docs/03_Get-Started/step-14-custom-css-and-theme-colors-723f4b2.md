@@ -106,7 +106,7 @@ In the `resources` section of the `sap.ui5` namespace, additional resources for 
 									width="60%"/>
 								<FormattedText
 									htmlText="Hello {/recipient/name}"
-									class="sapUiSmallMarginmyCustomText"/>
+									class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
 							</content>
 						</Panel>
 					</content>

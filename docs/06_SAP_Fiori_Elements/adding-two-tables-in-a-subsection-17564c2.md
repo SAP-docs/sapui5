@@ -2,7 +2,7 @@
 
 # Adding Two Tables in a Subsection
 
-You can add two tables adjacent to each other in a subsection of an object page.
+You can add two tables adjacent to each other in a subsection of an object page in SAP Fiori elements for OData V2.
 
 To achieve this, add the annotations as shown below:
 

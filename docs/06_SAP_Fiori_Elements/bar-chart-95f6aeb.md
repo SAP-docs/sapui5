@@ -2,7 +2,9 @@
 
 # Bar Chart
 
-You can render the chart as a bar chart to display data, such as total product sales over a period of years in columns.
+You can render the chart as a bar chart in SAP Fiori elements for OData V4.
+
+Use the bar chart to display data such as product sales over a period of years in columns.
 
 The number of columns is equal to the number of measures in the annotation file.
 

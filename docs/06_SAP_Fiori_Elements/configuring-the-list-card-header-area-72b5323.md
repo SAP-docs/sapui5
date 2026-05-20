@@ -7,7 +7,7 @@ You can configure various properties of a list card header.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the List Card Header Area](configuring-the-list-card-header-area-9f95bdc.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the List Card Header Area](configuring-the-list-card-header-area-9f95bdc.md).
 
 
 
@@ -34,6 +34,7 @@ You can configure the title and subtitle of a list card in the `manifest.json` f
 >                 "title": "Purchase History",
 >                 "subTitle": "SubTitle",
 >                 "entitySet": "SalesOrderSet",
+>                 "enableTextWrapping": true //The default value is false
 >                 ...
 >                 ...
 >             }
@@ -440,6 +441,7 @@ You can configure the view switch using the ***tabs*** property in the manifest 
 >           "listFlavor": "bar",
 >           "listType": "extended",
 >           "entitySet": "SalesOrderSet",
+>           "enableTextWrapping": true //The default value is false
 >           "tabs": [
 >                 {
 >                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
@@ -468,7 +470,7 @@ You can configure the view switch using the ***tabs*** property in the manifest 
 You can configure the navigation \(from the header and content area\) within an application using the identification annotation.
 
 > ### Note:  
-> In case of list area navigation, the navigation settings configured using the ***LineItem*** annotation takes precedence over the navigation settings configured using the identification annotation.
+> In case of list area navigation, the navigation settings configured using the `LineItem` annotation takes precedence over the navigation settings configured using the identification annotation.
 
 
 

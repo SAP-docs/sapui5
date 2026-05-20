@@ -2,7 +2,7 @@
 
 # Bullet Micro Chart
 
-You can render the micro chart as a bullet micro chart.
+You can render the micro chart as a bullet micro chart in SAP Fiori elements for OData V4.
 
 The bullet chart displays the evaluation of a single, primary value compared against one or more data point values. For example, a current year-to-date revenue is displayed as below the target revenue for the same period.
 

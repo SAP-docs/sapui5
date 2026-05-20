@@ -2,7 +2,7 @@
 
 # Loading Behavior of Data on Initial Launch of the Application
 
-You can configure the loading behavior of SAP Fiori apps.
+You can configure the loading behavior of apps using SAP Fiori elements for OData V4.
 
 Some of the factors are initial configuration of the variant, initial loading configuration for the *Standard* variant as specified in the manifest by the application developers, or initial launch of the application with a navigation context.
 
@@ -55,5 +55,5 @@ The loading behavior of data based on these settings is as follows:
 **Related Information**  
 
 
-[The VariantManagement Building Block](the-variantmanagement-building-block-33640ff.md "You can use the VariantManagement building block to enable variant management for any flex-enabled control.")
+[The VariantManagement Building Block](the-variantmanagement-building-block-33640ff.md "You can use the VariantManagement building block to enable variant management for any flex-enabled control in SAP Fiori elements for OData V4.")
 

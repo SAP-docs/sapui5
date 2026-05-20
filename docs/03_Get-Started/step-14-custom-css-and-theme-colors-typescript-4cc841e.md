@@ -112,7 +112,7 @@ The actual color now depends on the selected theme, which ensures that the color
                                     width="60%"/>
                                 <FormattedText
                                     htmlText="Hello {/recipient/name}"
-                                    class="sapUiSmallMarginmyCustomText"/>
+                                    class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
                             </content>
                         </Panel>
                     </content>

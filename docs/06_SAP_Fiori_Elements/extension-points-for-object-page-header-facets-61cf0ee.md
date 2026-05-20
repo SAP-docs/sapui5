@@ -2,7 +2,7 @@
 
 # Extension Points for Object Page Header Facets
 
-You can define application-specific header facets using annotations, but in some cases it might be necessary to integrate components in the front end that are not available with annotations.
+You can define application-specific header facets using annotations, but in some cases it might be necessary to integrate components in the front end that are not available with annotations in SAP Fiori elements for OData V4.
 
 
 

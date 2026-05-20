@@ -2,10 +2,10 @@
 
 # Keyboard Shortcuts
 
-Learn about keyboard shortcuts for basic operations in SAP Fiori elements.
+Users can make use of various keyboard shortcuts for basic operations.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Keyboard Shortcuts](keyboard-shortcuts-0cd318c.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Keyboard Shortcuts](keyboard-shortcuts-0cd318c.md).
 
 The table shows the available keyboard shortcuts.
 
@@ -106,6 +106,43 @@ Object page
 <td valign="top">
 
 The same as when a user chooses *Create*.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Create and Back
+
+> ### Note:  
+> Only available when configured. For more information, see [Save and Navigation Options on the Object Page](save-and-navigation-options-on-the-object-page-9c63472.md).
+
+
+
+</td>
+<td valign="top">
+
+[Ctrl\] + [F3\] 
+
+</td>
+<td valign="top">
+
+[CMD\] + [F3\] 
+
+</td>
+<td valign="top">
+
+The object page is in create mode.
+
+</td>
+<td valign="top">
+
+Object page
+
+</td>
+<td valign="top">
+
+The object is created and the user is taken back to the list report page.
 
 </td>
 </tr>
@@ -298,7 +335,7 @@ Go
 </td>
 <td valign="top">
 
-The focus is set anywhere on the SmartFilterBar.
+The focus is set anywhere on the smart filter bar.
 
 </td>
 <td valign="top">
@@ -409,6 +446,45 @@ Object page
 <td valign="top">
 
 The same as when a user chooses *Save* on the object page
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Save and Back
+
+> ### Note:  
+> Only available when configured. For more information, see [Save and Navigation Options on the Object Page](save-and-navigation-options-on-the-object-page-9c63472.md).
+
+
+
+</td>
+<td valign="top">
+
+[Ctrl\] + [F3\]  \(display mode\)
+
+[Ctrl\] + [S\]  \(direct edit mode\)
+
+</td>
+<td valign="top">
+
+[CMD\] + [F3\] 
+
+</td>
+<td valign="top">
+
+The object page is in edit mode.
+
+</td>
+<td valign="top">
+
+Object page
+
+</td>
+<td valign="top">
+
+The draft is saved and the user is taken back to the list report page.
 
 </td>
 </tr>

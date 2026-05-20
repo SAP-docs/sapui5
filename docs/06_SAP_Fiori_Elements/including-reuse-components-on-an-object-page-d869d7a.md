@@ -2,7 +2,7 @@
 
 # Including Reuse Components on an Object Page
 
-You can embed a reuse component as a section in the object page of your app.
+You can embed a reuse component as a section in the object page of your app in SAP Fiori elements for OData V4.
 
 A reuse component is an encapsulated UI area that can be included \(embedded\) into an SAP Fiori elements-based application. Reuse components are mainly used for reusable UIs which are used consistently across several applications, for example, output management or attachment services. However, you can also create a one-time reuse component which is used in only one application on one page.
 

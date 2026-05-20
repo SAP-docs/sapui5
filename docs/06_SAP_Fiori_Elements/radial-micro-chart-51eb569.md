@@ -2,7 +2,7 @@
 
 # Radial Micro Chart
 
-You can render the micro chart as a radial micro chart.
+You can render the micro chart as a radial micro chart in SAP Fiori elements for OData V4.
 
 The radial micro chart displays the relation between two values as a single percentage value.
 

@@ -2,7 +2,7 @@
 
 # Influencing the Request Dynamically
 
-You can retrieve and add table configuration before a table rebind.
+You can retrieve and add table configuration before a table rebind in SAP Fiori elements for OData V4.
 
 Before a table rebind, you can retrieve the sorters and filters applied to the table as well as the complete binding information. You can also add sorters, filters, and additional properties using the methods on the [`CollectionBindingInfo`](https://ui5.sap.com/#/api/sap.fe.macros.CollectionBindingInfo%23overview) object.
 

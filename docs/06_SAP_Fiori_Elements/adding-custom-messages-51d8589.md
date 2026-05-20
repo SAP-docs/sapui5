@@ -5,7 +5,7 @@
 You can use the `securedExecution` method to add and display custom messages.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adding Custom Messages](adding-custom-messages-5a9a2a0.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adding Custom Messages](adding-custom-messages-5a9a2a0.md).
 
 This concept for message handling is based on the SAPUI5 Messaging. For more information, see the API Reference for [Messaging](https://ui5.sap.com/#/api/module:sap/ui/core/Messaging).
 

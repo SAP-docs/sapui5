@@ -2,7 +2,7 @@
 
 # Configuring Sort Properties
 
-All cards support sorting using the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term.
+You can use the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term to enable sorting for all card types in SAP Fiori elements for OData V4.
 
 
 

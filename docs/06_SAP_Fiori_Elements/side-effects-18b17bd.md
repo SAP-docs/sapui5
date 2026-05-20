@@ -2,7 +2,7 @@
 
 # Side Effects
 
-You can annotate side effects to prevent UI showing outdated data.
+You can annotate side effects to prevent UI showing outdated data in SAP Fiori elements for OData V4.
 
 If a user changes the content of a field or performs another activity, this change can potentially influence other fields on the UI. This system behavior is called a side effect. Side effects are performed in the back end. However, you need to annotate the side effects implemented in the back end using side effect annotations to "inform" the front end which fields on the UI are influenced by a change, so that the front end can request new data for these fields. Otherwise, the UI may still display outdated data.
 
@@ -411,7 +411,7 @@ You can explore and work with the coding yourself. For more information about si
 **Related Information**  
 
 
-[Side Effect Annotations: Examples](side-effect-annotations-examples-61cf21d.md "See some examples about annotating side effects.")
+[Side Effect Annotations: Examples](side-effect-annotations-examples-61cf21d.md "See some examples about annotating side effects in SAP Fiori elements for OData V4.")
 
-[Using Global Side Effects](using-global-side-effects-955ae31.md "You can configure global side effects.")
+[Using Global Side Effects](using-global-side-effects-955ae31.md "You can configure global side effects in SAP Fiori elements for OData V4.")
 

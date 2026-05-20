@@ -5,7 +5,7 @@
 You can use the `sap-keep-alive` feature to ensure that a view persists in the view cache when navigating away from the application.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Refresh Entity Sets in sap-keep-alive Mode](refresh-entity-sets-in-sap-keep-alive-mode-3c65f2c.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Refresh Entity Sets in sap-keep-alive Mode](refresh-entity-sets-in-sap-keep-alive-mode-3c65f2c.md).
 
 The feature ensures improved performance when you reload the same view again once you navigate back to the application. For more information, see [Keeping SAPUI5 Apps Alive](https://help.sap.com/viewer/a7b390faab1140c087b8926571e942b7/202009.002/en-US/921e7e2e45494f9a87ae70624155fd7c.html).
 

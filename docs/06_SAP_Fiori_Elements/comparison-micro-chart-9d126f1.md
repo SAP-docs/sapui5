@@ -2,7 +2,7 @@
 
 # Comparison Micro Chart
 
-You can render the micro chart as a comparison micro chart.
+You can render the micro chart as a comparison micro chart in SAP Fiori elements for OData V4.
 
 In the following screenshot, the values on the left \(10, 40 and 70\) represent the dimension values, which are the IDs of the sales order items.
 

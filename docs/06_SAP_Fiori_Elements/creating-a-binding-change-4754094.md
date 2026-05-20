@@ -2,7 +2,7 @@
 
 # Creating a Binding Change
 
-You can create property binding changes manually by using the Page Editor. You can use a property only if its data has already been retrieved by the model.
+You can create property binding changes manually by using the Page Editor. You can use a property only if its data has already been retrieved by the model in SAP Fiori elements for OData V2.
 
 
 

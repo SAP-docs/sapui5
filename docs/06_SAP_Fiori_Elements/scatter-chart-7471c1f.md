@@ -2,7 +2,9 @@
 
 # Scatter Chart
 
-You can render the chart as a a scatter chart, which allows you visualize the distribution of data points over two measures.
+You can render the chart as a a scatter chart in SAP Fiori elements for OData V4.
+
+A scatter chart allows you to visualize the distribution of data points over two measures.
 
 
 

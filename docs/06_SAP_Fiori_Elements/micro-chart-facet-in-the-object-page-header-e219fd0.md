@@ -2,7 +2,7 @@
 
 # Micro Chart Facet in the Object Page Header
 
-You can add a `MicroChart` control to a facet within the header area of the object page.
+You can add a `MicroChart` control to a facet within the header area of the object page in SAP Fiori elements for OData V4.
 
 A micro chart facet contains a title, subtitle, `MicroChart` control, and a footer. The `MicroChart` control supports several types of micro charts in the object page header, as shown in the following image:
 
@@ -449,21 +449,21 @@ You can apply a sort order to the micro chart data using the `UI.PresentationVar
 **Related Information**  
 
 
-[Area Micro Chart](area-micro-chart-1467f2b.md "You can render the micro chart as an area micro chart.")
+[Area Micro Chart](area-micro-chart-1467f2b.md "You can render the micro chart as an area micro chart in SAP Fiori elements for OData V4.")
 
-[Bullet Micro Chart](bullet-micro-chart-b915166.md "You can render the micro chart as a bullet micro chart.")
+[Bullet Micro Chart](bullet-micro-chart-b915166.md "You can render the micro chart as a bullet micro chart in SAP Fiori elements for OData V4.")
 
-[Radial Micro Chart](radial-micro-chart-51eb569.md "You can render the micro chart as a radial micro chart.")
+[Radial Micro Chart](radial-micro-chart-51eb569.md "You can render the micro chart as a radial micro chart in SAP Fiori elements for OData V4.")
 
-[Line Micro Chart](line-micro-chart-e5cb2af.md "You can render the micro chart as a line micro chart.")
+[Line Micro Chart](line-micro-chart-e5cb2af.md "You can render the micro chart as a line micro chart in SAP Fiori elements for OData V4.")
 
-[Column Micro Chart](column-micro-chart-1a4ecb8.md "You can render the micro chart as a column micro chart")
+[Column Micro Chart](column-micro-chart-1a4ecb8.md "You can render the micro chart as a column micro chart in SAP Fiori elements for OData V4.")
 
-[Harvey Micro Chart](harvey-micro-chart-de4f8bf.md "You can render the micro chart as a Harvey Ball micro chart.")
+[Harvey Micro Chart](harvey-micro-chart-de4f8bf.md "You can render the micro chart as a Harvey Ball micro chart in SAP Fiori elements for OData V4.")
 
-[Stacked Bar Micro Chart](stacked-bar-micro-chart-9c93837.md "You can render the micro chart as a stacked bar micro chart.")
+[Stacked Bar Micro Chart](stacked-bar-micro-chart-9c93837.md "You can render the micro chart as a stacked bar micro chart in SAP Fiori elements for OData V4.")
 
-[Comparison Micro Chart](comparison-micro-chart-9d126f1.md "You can render the micro chart as a comparison micro chart.")
+[Comparison Micro Chart](comparison-micro-chart-9d126f1.md "You can render the micro chart as a comparison micro chart in SAP Fiori elements for OData V4.")
 
-[Header Facets](header-facets-17dbd5b.md "You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.")
+[Header Facets](header-facets-17dbd5b.md "You can add various types of facets to your object page header in SAP Fiori elements for OData V4.")
 

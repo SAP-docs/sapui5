@@ -7,7 +7,7 @@ You can configure internal navigation within an SAP Fiori elements app.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring Internal Navigation](configuring-internal-navigation-2c65f07.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring Internal Navigation](configuring-internal-navigation-2c65f07.md).
 
 
 

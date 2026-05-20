@@ -2,7 +2,7 @@
 
 # Defining Custom Navigation Parameters
 
-You can define custom parameters for intent-based navigation to the target application.
+You can define custom parameters for intent-based navigation to the target application in SAP Fiori elements for OData V4.
 
 
 

@@ -5,7 +5,7 @@
 You can show your custom texts in the message strip above the table.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adding a Custom Message Strip to List Report Page, Analytical List Page and Object Page](adding-a-custom-message-strip-to-list-report-page-analytical-list-page-and-object-page-0fdbefb.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adding a Custom Message Strip to List Report Page, Analytical List Page and Object Page](adding-a-custom-message-strip-to-list-report-page-analytical-list-page-and-object-page-0fdbefb.md).
 
 For the list report page and analytical list page, you can choose to add a custom message as shown here:
 
@@ -102,7 +102,7 @@ To add a custom message to the object page table, you must add the table ID as s
 **Related Information**  
 
 
-[Extending List Reports and Object Pages Using App Extensions](extending-list-report-pages-and-object-pages-using-app-extensions-a892eb8.md "You can extend list report pages and object pages using app extensions.")
+[Extending List Reports and Object Pages Using App Extensions](extending-list-report-pages-and-object-pages-using-app-extensions-a892eb8.md "You can extend list report pages and object pages using app extensions in SAP Fiori elements for OData V2.")
 
-[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your app.")
+[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your SAP Fiori elements for OData V2 app.")
 

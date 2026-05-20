@@ -5,7 +5,7 @@
 Get to know the UI elements of the object page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Object Page](object-page-645e27a.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Object Page](object-page-645e27a.md).
 
 The object page allows users to create, edit, and display objects, as well as save drafts. It is suitable for both simple objects and more complex, multi-faceted objects. The object page view gives you optimal support for multiple devices.
 

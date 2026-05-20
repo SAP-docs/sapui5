@@ -2,7 +2,7 @@
 
 # Input Assistance
 
-You can enable input assistance to fill object page fields with recommended values.
+You can enable input assistance to fill object page fields with recommended values in SAP Fiori elements for OData V4.
 
 In edit mode, object page fields can include recommendations. The recommendations are shown in the *Recommendations* section in the same order as they are sent from the back end. The back end can also label one of the recommendations as the most fitting recommendation. This recommendation is displayed as a placeholder in the field with a different style to indicate to users that recommendations are available for this field.
 

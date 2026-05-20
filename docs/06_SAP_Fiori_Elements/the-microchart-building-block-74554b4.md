@@ -2,7 +2,7 @@
 
 # The `MicroChart` Building Block
 
-You can use the `MicroChart` building block to render different types of micro charts.
+You can use the `MicroChart` building block to render different types of micro charts in SAP Fiori elements for OData V4.
 
 You can use the `MicroChart` building block stand alone in any container as shown in the following sample code:
 

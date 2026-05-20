@@ -2,7 +2,7 @@
 
 # Actions on the List Report Page
 
-You can configure various action buttons on the list report page.
+You can configure various action buttons on the list report page in SAP Fiori elements for OData V4.
 
 
 

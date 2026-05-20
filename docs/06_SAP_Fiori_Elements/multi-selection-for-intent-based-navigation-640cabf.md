@@ -2,7 +2,7 @@
 
 # Multi-Selection for Intent-Based Navigation
 
-Get to know multi-selection for intent-based navigation.
+Get to know multi-selection for intent-based navigation in SAP Fiori elements for OData V4.
 
 By default, multi-selection for intent-based navigation is enabled.
 

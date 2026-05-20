@@ -5,7 +5,7 @@
 You can render the chart as a donut chart, which displays data as the differently colored sections of a donut.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Donut Chart](donut-chart-87a17eb.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Donut Chart](donut-chart-87a17eb.md).
 
   
   

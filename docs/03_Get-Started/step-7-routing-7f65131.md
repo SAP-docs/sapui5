@@ -271,7 +271,7 @@ We initialize the router and bind to its `onBeforeRouteMatched` event, and we in
 
 ```json
 {
-	"_version": "2.7.0",
+	"_version": "2.8.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -287,7 +287,7 @@ We initialize the router and bind to its `onBeforeRouteMatched` event, and we in
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.147.0",
+			"minUI5Version": "1.148.0",
 			"libs": {
 				"sap.f": {},
 				"sap.m": {},

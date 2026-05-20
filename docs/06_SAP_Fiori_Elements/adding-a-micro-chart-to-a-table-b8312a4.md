@@ -2,7 +2,7 @@
 
 # Adding a Micro Chart to a Table
 
-You can add a micro chart to the column of a responsive table on the list report page and the object page.
+You can add a micro chart to the column of a responsive table on the list report page and the object page in SAP Fiori elements for OData V4.
 
 To add a micro chart to a table, use the `UI.LineItem` annotation and the complex type `DataFieldForAnnotation`. The micro charts are then displayed within the table column, as shown in the following screenshot:
 

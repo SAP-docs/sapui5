@@ -5,7 +5,7 @@
 You can define sections and subsections of the object page with `com.sap.vocabularies.UI.v1.Facets` annotations.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md).
 
 Different facets have been defined to display important information in the content area sections.
 

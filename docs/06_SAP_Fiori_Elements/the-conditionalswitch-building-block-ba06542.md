@@ -2,9 +2,9 @@
 
 # The `ConditionalSwitch` Building Block
 
-You can use the `ConditionalSwitch` building block in tables or forms to display different controls.
+You can use the `ConditionalSwitch` building block in tables or forms in SAP Fiori elements for OData V4.
 
-The displayed controls are based on the data of the current row or on the context determined at runtime.
+The `ConditionalSwitch` enables you to display different controls based on the data of the current row or on the context determined at runtime.
 
 The building block requires a list of properties to bind to and watch.
 

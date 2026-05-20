@@ -2,7 +2,7 @@
 
 # Example: Custom State Handling
 
-You can implement inner app -state handling for custom UI elements.
+You can implement inner app -state handling for custom UI elements in SAP Fiori elements for OData V2.
 
 The custom UI shows a map containing two state information items:
 

@@ -5,7 +5,7 @@
 You can use generic actions provided by SAP Fiori elements and implement application-specific actions using annotations or extension points.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Actions](actions-cbf16c5.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Actions](actions-cbf16c5.md).
 
 Application-specific actions either trigger an interaction with the back end, calling an OData service, or they trigger navigation. Depending on where you want to place an action, and how you want to use it, specific attributes, prerequisites, and guidelines apply. The details are described in this topic and in the floorplan-specific sections. For details about navigation, see [Configuring Navigation](configuring-navigation-1a6c395.md).
 
@@ -800,7 +800,7 @@ For more information, see [Prefilling Fields Using the DefaultValuesFunction](pr
 
 [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-2315b07.md "You can display a confirmation popover when the user triggers an action.")
 
-[Using Action Control for Context-Dependent Actions](using-action-control-for-context-dependent-actions-5b0b686.md "You can use action control to display actions by adding the sap:action-for and sap:applicable-path terms to your action or function import.")
+[Using Action Control for Context-Dependent Actions](using-action-control-for-context-dependent-actions-5b0b686.md "You can use action control to display actions by adding the sap:action-for and sap:applicable-path terms to your action or function import in SAP Fiori elements for OData V2.")
 
 [Configuring Navigation](configuring-navigation-1a6c395.md "You can configure the SAP Fiori elements navigation within an app (internal navigation) and the navigation to and from an app (external navigation).")
 

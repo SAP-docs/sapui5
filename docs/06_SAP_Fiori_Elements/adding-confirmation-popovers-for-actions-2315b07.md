@@ -5,7 +5,7 @@
 You can display a confirmation popover when the user triggers an action.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md).
 
 > ### Tip:  
 > Confirmation popovers are only supported on actions without an action parameter dialog.

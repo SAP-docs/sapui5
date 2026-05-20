@@ -5,7 +5,7 @@
 SAP Fiori elements provides generative AI features to enhance user experience.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Generative AI Features](generative-ai-features-0ec03d4.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Generative AI Features](generative-ai-features-0ec03d4.md).
 
 **Prerequisites**
 

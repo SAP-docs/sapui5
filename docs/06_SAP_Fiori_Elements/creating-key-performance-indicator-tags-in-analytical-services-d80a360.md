@@ -2,7 +2,7 @@
 
 # Creating Key Performance Indicator Tags in Analytical Services
 
-You can create key performance indicator tags for the analytical list page.
+You can create key performance indicator tags for the analytical list page in SAP Fiori elements for OData V4.
 
 
 
@@ -644,5 +644,5 @@ You can override a unit of measure that comes from the back end. For example, th
 **Related Information**  
 
 
-[Managing Variants](managing-variants-8ce658e.md "You can manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-8ce658e.md "You can manage variants with different structures in the filter and content areas in SAP Fiori elements for OData V4.")
 

@@ -2,9 +2,12 @@
 
 # Adding Dynamic Side Content to Object Page Sections
 
-Sometimes it might be necessary to add additional information that is not available with annotations to object page sections or subsections.
-
 You can use extension points to add additional content to sections.
+
+> ### Note:  
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adding Dynamic Side Content to Object Page Sections](adding-dynamic-side-content-to-object-page-sections-8e01a46.md).
+
+Sometimes it might be necessary to add additional information that is not available with annotations to object page sections or subsections.
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).
@@ -29,25 +32,28 @@ To enable the equal split mode \(50:50 percent for main content vs. side content
 If `"equalSplit"` is set to `false` or is not defined, the percentage of main content and side content depends on the device on which the app is running.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
+> 
 > "extends": {
->    "extensions": {
->          "sap.ui.viewExtensions": {
->                  "sap.suite.ui.generic.template.ObjectPage.view.Details": {
->                            "AfterMainContent|STTA_C_MP_Product|GeneralInformationForm":{
->                "className": "sap.ui.core.Fragment",
->                "fragmentName": "STTA_MP.ext.fragments.SideContentExtension",
->                "type": "XML",
-> 		"equalSplit": true
->                },
-> "BeforeMainContent|STTA_C_MP_Product|to_ProductSalesData::com.sap.vocabularies.UI.v1.Chart":{
->               "className": "sap.ui.core.Fragment",
->               "fragmentName": "STTA_MP.ext.fragments.SideContentExtension",
->               "type": "XML"
->                }
->                         }
->            }
->      }
+>     "extensions": {
+>         "sap.ui.viewExtensions": {
+>             "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+>                 "AfterMainContent|STTA_C_MP_Product|GeneralInformationForm":{
+>                     "className": "sap.ui.core.Fragment",
+>                     "fragmentName": "STTA_MP.ext.fragments.SideContentExtension",
+>                     "type": "XML",
+>                     "equalSplit": true
+>                 },
+>                 "BeforeMainContent|STTA_C_MP_Product|to_ProductSalesData::com.sap.vocabularies.UI.v1.Chart":{
+>                     "className": "sap.ui.core.Fragment",
+>                     "fragmentName": "STTA_MP.ext.fragments.SideContentExtension",
+>                     "type": "XML"
+>                 }
+>             }
+>         }
+>     }
 > }
 > 
 > ```

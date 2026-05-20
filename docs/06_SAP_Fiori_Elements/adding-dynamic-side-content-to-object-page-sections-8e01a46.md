@@ -2,7 +2,7 @@
 
 # Adding Dynamic Side Content to Object Page Sections
 
-You can use extension points to add additional content to sections.
+You can use extension points to add additional content to sections in SAP Fiori elements for OData V4.
 
 Sometimes it might be necessary to add additional information that is not available with annotations to object page sections or subsections.
 

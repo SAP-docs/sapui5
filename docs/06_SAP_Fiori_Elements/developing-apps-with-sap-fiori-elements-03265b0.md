@@ -6,6 +6,13 @@ Develop apps using SAP Fiori elements and benefit from a metadata-driven approac
 
 The metadata-driven SAP Fiori elements framework provides the optimal combination of productivity and functionality with a sufficient level of flexibility for most enterprise applications. It empowers you to effectively develop scalable, efficient, and modern applications that align with the [SAP Design System](https://www.sap.com/design-system/fiori-design-web/) guidelines and a user-centric approach.
 
+> ### Note:  
+> For new applications, we recommend using SAP Fiori elements for OData V4. It offers reusable building blocks in addition to the standard floorplans. This lets you extend our floorplans, create custom pages, and combine building blocks with freestyle SAPUI5 coding.
+> 
+> To choose the best development approach and learn how to combine SAP Fiori elements with freestyle SAPUI5, see [Developing Apps with Modern Concepts: Guidance for Developers](../02_Read-Me-First/developing-apps-with-modern-concepts-guidance-for-developers-4cb54eb.md).
+> 
+> SAP Fiori elements for OData V2 remains fully supported.
+
 The following overview highlights the key benefits of developing your SAP Fiori apps with SAP Fiori elements:
 
 -   **Developer Productivity**

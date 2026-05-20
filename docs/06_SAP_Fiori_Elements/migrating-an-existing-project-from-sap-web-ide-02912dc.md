@@ -2,7 +2,7 @@
 
 # Migrating an Existing Project from SAP Web IDE
 
-You can migrate your SAP Fiori projects using SAP Web IDE projects to SAP Business Application Studio or Visual Studio Code.
+You can migrate your SAP Fiori elements for OData V2 projects using SAP Web IDE projects to SAP Business Application Studio or Visual Studio Code.
 
 For more information, see [Migration](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/70d41f3ee29d453a90efab3ce025d450.html).
 

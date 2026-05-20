@@ -2,7 +2,7 @@
 
 # The `Status` Building Block
 
-You can use the `Status` building block to display a status and criticality.
+You can use the `Status` building block to display a status and criticality in SAP Fiori elements for OData V4.
 
 The `Status` building block is based on the `ObjectStatus` used in SAPUI5, allowing you to define an annotation-based object status.
 

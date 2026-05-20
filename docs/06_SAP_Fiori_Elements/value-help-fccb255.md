@@ -2,7 +2,7 @@
 
 # Value Help
 
-You can configure value help to assist users in selecting the correct values.
+You can configure value help to assist users in selecting the correct values in SAP Fiori elements for OData V4-based apps.
 
 > ### Note:  
 > Value help for draft-enabled entities only shows active documents.
@@ -479,6 +479,108 @@ In the following sample code, `InitialValueIsSignificant` is used to consider an
 
 > ### Restriction:  
 > Parameterized value help service isn't supported.
+
+
+
+## Multi Value Fields in Value Help Tables
+
+You can use the `MultiValueField` to display all values in a column when a `DisplayOnly` parameter in a value list is a property that supports multi values.
+
+> ### Note:  
+> Multi value fields can display up to 100 values.
+
+In the following sample code, the `RootElements` entity set contains the `Country` property, with a `ValueList` defined in the `Country` entity. The value list includes a `ValueListParameterDisplayOnly` parameter, which retrieves values from the navigation property `city/name`.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> 
+> <Annotations Target="sap.fe.core.ValueHelpBasic.RootElement/Country">
+>     <Annotation Term="Common.Label" String="Country with MVF" />
+>     <Annotation Term="Common.ValueListWithFixedValues" Bool="false" />
+>     <Annotation Term="Common.ValueList">
+>         <Record Type="Common.ValueListType">
+>             <PropertyValue Property="Label" String="ValueHelp for Countries" />
+>             <PropertyValue Property="CollectionPath" String="Country" />
+>             <PropertyValue Property="Parameters">
+>                 <Collection>
+>                     <Record Type="Common.ValueListParameterInOut">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="Country" />
+>                         <PropertyValue Property="ValueListProperty" String="code" />
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterDisplayOnly">
+>                         <PropertyValue Property="ValueListProperty" String="name" />
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterDisplayOnly">
+>                         <PropertyValue Property="ValueListProperty" String="city/name" />
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> Country: String @(Common: {
+>     Label                : 'Country with MVF',
+>     ValueListWithFixedValues: false,
+>     ValueList            : {
+>         Label           : 'ValueHelp for Countries',
+>         CollectionPath  : 'Country',
+>         Parameters      : [
+>             {
+>                 $Type             : 'Common.ValueListParameterInOut',
+>                 LocalDataProperty : Country,
+>                 ValueListProperty : 'code'
+>             },
+>             {
+>                 $Type             : 'Common.ValueListParameterDisplayOnly',
+>                 ValueListProperty : 'name'
+>             },
+>             {
+>                 $Type             : 'Common.ValueListParameterDisplayOnly',
+>                 ValueListProperty : 'city/name'
+>             }
+>         ]
+>     }
+> });
+> ```
+
+The `city` definition in the `Country` entity has an association to many to the `city` property in the `City` entity:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> 
+> <EntitySet Name="Country" EntityType="sap.fe.core.ValueHelpBasic.Country"> 
+>     <NavigationPropertyBinding Path="city" Target="City"/> 
+> </EntitySet> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> city  : Association to many City 
+>     on city.countryCode = code; 
+> ```
 
 
 

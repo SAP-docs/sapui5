@@ -2,7 +2,7 @@
 
 # Setting the Table Header
 
-You can set the header of the table with `com.sap.vocabularies.UI.v1.HeaderInfo TypeNamePlural`.
+You can set the header of the table with `com.sap.vocabularies.UI.v1.HeaderInfo TypeNamePlural` in SAP Fiori elements for OData V4.
 
   
   

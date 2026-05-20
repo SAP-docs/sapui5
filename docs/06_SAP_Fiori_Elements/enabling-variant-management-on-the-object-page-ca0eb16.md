@@ -5,7 +5,7 @@
 You can enable and disable variant management for tables, charts, objects, and subobjects on the object page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md).
 
 Variant management is enabled by default for tables and charts on the object page. To disable variant management for all tables and charts on an object page, make these manifest settings on component level:
 

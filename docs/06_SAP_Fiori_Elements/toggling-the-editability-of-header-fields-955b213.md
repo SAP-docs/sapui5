@@ -2,10 +2,10 @@
 
 # Toggling the Editability of Header Fields
 
-You can make the object page header content editable.
+You can make the object page header content editable .
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Toggling the Editability of Header Fields](toggling-the-editability-of-header-fields-c8a9a40.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Toggling the Editability of Header Fields](toggling-the-editability-of-header-fields-c8a9a40.md).
 
 To make the object page header content editable, set the manifest property `editableHeaderContent` to `true`. Note that the editability of individual header fields and facets depends on their type and properties. For example, micro chart facets aren't editable in general, and neither are text fields set to `ReadOnly` .
 

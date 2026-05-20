@@ -2,9 +2,11 @@
 
 # Header Facets
 
-You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.
+You can add various types of facets to your object page header in SAP Fiori elements for OData V4.
 
-You can use the annotation term `UI.HeaderFacets` to define which information is displayed in the header. The `UI.HeaderFacets` annotation contains a collection of `UI.ReferenceFacet`, with each reference facet, corresponding to a header element displayed on the UI. The following sample code shows such a structure:
+Header facets enable you to display contact data or a rating indicator, for example.
+
+Use the annotation term `UI.HeaderFacets` to define which information is displayed in the header. The `UI.HeaderFacets` annotation contains a collection of `UI.ReferenceFacet`, with each reference facet, corresponding to a header element displayed on the UI. The following sample code shows such a structure:
 
 > ### Sample Code:  
 > XML Annotation
@@ -101,21 +103,21 @@ For more information, see [Extending Delivered Apps With Key User Adaptation](ex
 **Related Information**  
 
 
-[Plain Text Facet in the Object Page Header](plain-text-facet-in-the-object-page-header-1da0926.md "You can add a plain text facet to the object page header.")
+[Plain Text Facet in the Object Page Header](plain-text-facet-in-the-object-page-header-1da0926.md "You can add a plain text facet to the object page header in SAP Fiori elements for OData V4.")
 
-[Adding a Contact Facet](adding-a-contact-facet-a6a8c0c.md "You can use the Field building block to render a contact facet.")
+[Adding a Contact Facet](adding-a-contact-facet-a6a8c0c.md "You can use the Field building block to render a contact facet in SAP Fiori elements for OData V4.")
 
-[Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md "You can add a MicroChart control to a facet within the header area of the object page.")
+[Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md "You can add a MicroChart control to a facet within the header area of the object page in SAP Fiori elements for OData V4.")
 
-[Form Facet in the Object Page Header](form-facet-in-the-object-page-header-ff0ae0b.md "You can add a form facet to the object page header.")
+[Form Facet in the Object Page Header](form-facet-in-the-object-page-header-ff0ae0b.md "You can add a form facet to the object page header in SAP Fiori elements for OData V4.")
 
-[Data Points](data-points-c2a389a.md "You can use the Field building block to render data points.")
+[Data Points](data-points-c2a389a.md "You can use the Field building block to render data points in SAP Fiori elements for OData V4.")
 
-[Rating Indicator Facet in the Object Page Header](rating-indicator-facet-in-the-object-page-header-bcc12cb.md "You can add a read-only rating indicator to the object page header.")
+[Rating Indicator Facet in the Object Page Header](rating-indicator-facet-in-the-object-page-header-bcc12cb.md "You can add a read-only rating indicator to the object page header in SAP Fiori elements for OData V4.")
 
-[Progress Indicator Facet in the Object Page Header](progress-indicator-facet-in-the-object-page-header-3b5e01c.md "You can add a progress indicator to a header facet on the object page.")
+[Progress Indicator Facet in the Object Page Header](progress-indicator-facet-in-the-object-page-header-3b5e01c.md "You can add a progress indicator to a header facet on the object page in SAP Fiori elements for OData V4.")
 
-[Key Value Facet in the Object Page Header](key-value-facet-in-the-object-page-header-c312735.md "You can render a data point as a key value facet.")
+[Displaying a Field as a Key Value Facet or a Key Performance Indicator \(KPI\)](displaying-a-field-as-a-key-value-facet-or-a-key-performance-indicator-kpi-c312735.md "You can render a field as a key value facet in an object page header or a key performance indicator in SAP Fiori elements for OData V4.")
 
-[Address Facet in the Object Page Header](address-facet-in-the-object-page-header-0b73cbb.md "You can add an address facet to the object page header with the UI.ReferenceFacet annotation.")
+[Address Facet in the Object Page Header](address-facet-in-the-object-page-header-0b73cbb.md "You can add an address facet to the object page header with the UI.ReferenceFacet annotation in SAP Fiori elements for OData V4.")
 

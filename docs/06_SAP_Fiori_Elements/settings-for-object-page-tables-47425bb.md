@@ -2,5 +2,5 @@
 
 # Settings for Object Page Tables
 
-You can set up various aspects of the object page tables through the `manifest.json` file, as described in the sections that follow.
+You can set up various aspects of the object page tables in SAP Fiori elements for OData V2 through the `manifest.json` file, as described in the sections that follow.
 

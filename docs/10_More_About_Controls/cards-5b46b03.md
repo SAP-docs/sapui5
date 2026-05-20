@@ -128,7 +128,7 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -160,7 +160,7 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -192,7 +192,7 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -214,17 +214,17 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -241,22 +241,22 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -320,7 +320,7 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>

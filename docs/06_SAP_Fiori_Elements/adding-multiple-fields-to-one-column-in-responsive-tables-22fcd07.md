@@ -7,7 +7,7 @@ You can add multiple IDs, descriptions, and action buttons to one column in a re
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adding Multiple Fields to One Column in Responsive Tables](adding-multiple-fields-to-one-column-in-responsive-tables-d318e42.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adding Multiple Fields to One Column in Responsive Tables](adding-multiple-fields-to-one-column-in-responsive-tables-d318e42.md).
 
 
 

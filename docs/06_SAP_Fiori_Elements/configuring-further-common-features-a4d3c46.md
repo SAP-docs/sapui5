@@ -2,5 +2,5 @@
 
 # Configuring Further Common Features
 
-You can use annotations to set up various elements that are common to the list report page and the object page, such as status colors and navigation.
+You can use annotations to set up various elements that are common to the list report page and the object page, such as status colors and navigation in SAP Fiori elements for OData V2.
 

@@ -2,10 +2,10 @@
 
 # Configuring the Visual Filter Bar
 
-You can enable and configure the visual filter bar on the analytical list page.
+You can enable and configure the visual filter bar on the analytical list page in SAP Fiori elements for OData V4.
 
 > ### Note:  
-> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> This topic describes how to use the feature within SAP Fiori elements floorplans. The feature isn't available when you use the building block in custom pages or custom sections, but you can try achieving the functionality through other means, such as the following:
 > 
 > -   Properties or methods exposed by the building block
 > 
@@ -115,9 +115,9 @@ You can also define charts against a draft-enabled entity. In this case only act
 **Related Information**  
 
 
-[Analytical List Page](analytical-list-page-3d33684.md "You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs (key performance indicators).")
+[Analytical List Page](analytical-list-page-3d33684.md "You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs (key performance indicators) using SAP Fiori elements for OData V4.")
 
-[Visual Filters](visual-filters-1714720.md "You can configure visual filters by enhancing the ValueList annotation associated with the filter field.")
+[Visual Filters](visual-filters-1714720.md "You can configure visual filters by enhancing the ValueList annotation associated with the filter field in SAP Fiori elements for OData V4.")
 
-[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md "You can specify a value help entity for a field and maintain the value help configuration with a ValueList annotation.")
+[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md "You can specify a value help entity for a field and maintain the value help configuration with a ValueList annotation in SAP Fiori elements for OData V4.")
 

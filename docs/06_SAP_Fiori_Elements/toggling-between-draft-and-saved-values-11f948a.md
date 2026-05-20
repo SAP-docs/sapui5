@@ -5,7 +5,7 @@
 You can toggle between draft and saved values.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-fd3950a.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-fd3950a.md).
 
 The draft-enabled applications have an additional entry, *All \(Hiding Drafts\)*, in the *Editing Status* filter field on the list report page.
 

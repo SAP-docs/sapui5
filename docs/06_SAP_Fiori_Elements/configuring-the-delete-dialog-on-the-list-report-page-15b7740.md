@@ -5,7 +5,7 @@
 You can adapt the text of the *Delete* dialog on the list report page to match your requirements.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Delete Dialog](configuring-the-delete-dialog-84e4f89.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Delete Dialog](configuring-the-delete-dialog-84e4f89.md).
 
 When a user deletes a record from the list report page, the delete dialog displays the text *"Delete Object 500000000?"* to indicate that object 500000000 is being deleted.
 
@@ -55,7 +55,7 @@ The context displayed in the *Delete* dialog is taken from the `Title` property 
 **Related Information**  
 
 
-[Adapting Texts in the Delete Dialog Using Extensions \(List Report Page\)](adapting-texts-in-the-delete-dialog-using-extensions-list-report-page-25885b6.md "You can adapt the text of the Delete dialog that appears when users delete items from the list report page.")
+[Adapting Texts in the Delete Dialog Using Extensions \(List Report Page\)](adapting-texts-in-the-delete-dialog-using-extensions-list-report-page-25885b6.md "You can adapt the text of the Delete dialog that appears when users delete items from the list report page in SAP Fiori elements for OData V2.")
 
 [Adapting Texts for Confirmation Dialog Box When Deleting Lines in a Table](adapting-texts-for-confirmation-dialog-box-when-deleting-lines-in-a-table-5b6538c.md "You can adapt the default texts of the confirmation dialog that appears when users delete a table line.")
 

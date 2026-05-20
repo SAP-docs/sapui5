@@ -7,7 +7,7 @@ You can display the unit of measure next to numeric values by providing the `sap
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Setting Units of Measure](setting-units-of-measure-0d6c1d5.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Setting Units of Measure](setting-units-of-measure-0d6c1d5.md).
 
 
 

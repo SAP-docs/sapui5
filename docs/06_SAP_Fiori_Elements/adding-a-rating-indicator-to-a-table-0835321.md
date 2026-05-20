@@ -7,7 +7,7 @@ You can add a read-only rating indicator to a table.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adding a Rating Indicator to a Table](adding-a-rating-indicator-to-a-table-a797173.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adding a Rating Indicator to a Table](adding-a-rating-indicator-to-a-table-a797173.md).
 
 
 

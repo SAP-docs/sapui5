@@ -5,7 +5,7 @@
 You can render the chart as a waterfall chart to analyze a cumulative value.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Waterfall Chart](waterfall-chart-e8106e5.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Waterfall Chart](waterfall-chart-e8106e5.md).
 
   
   

@@ -5,7 +5,7 @@
 You can provide default values with `DefaultValuesFunction` when creating a new entity or when prefilling action parameters, you can provide default values.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Prefilling Fields Using the DefaultValuesFunction](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Prefilling Fields Using the DefaultValuesFunction](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
 
 > ### Note:  
 > This topic is only applicable to the following cases:

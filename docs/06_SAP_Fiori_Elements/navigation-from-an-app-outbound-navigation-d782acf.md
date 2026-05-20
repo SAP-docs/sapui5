@@ -2,7 +2,7 @@
 
 # Navigation from an App \(Outbound Navigation\)
 
-You can either specify a URL or associate a semantic object \(intent-based navigation\) for external navigation targets.
+You can either specify a URL or associate a semantic object \(intent-based navigation\) for external navigation targets in SAP Fiori elements for OData V4.
 
 
 
@@ -540,10 +540,9 @@ To do this when using the semantic link-based navigation, use the `SemanticObjec
 > });
 > ```
 
-> ### Note:  
-> Navigation properties cannot be used within the annotation as mapping properties.
+You can use navigation properties within the annotation as mapping properties. To pass navigation properties, ensure that the `LocalProperty` refers to the navigation property as shown in the following example.
 
-For semantic object mapping when navigating using the `DataFieldForIntentBasedNavigation` button, use the `Mapping` property in the `DataFieldForIntentBasedNavigation` annotation.
+For semantic object mapping when navigating using the `DataFieldForIntentBasedNavigation` button, use the `Mapping` property in the `DataFieldForIntentBasedNavigation` annotation. You can use a similar approach with the `DataFieldWithIntentBasedNavigation` annotation.
 
   
   
@@ -559,7 +558,7 @@ For semantic object mapping when navigating using the `DataFieldForIntentBasedNa
 >     <Record Type="UI.FieldGroupType">
 >         <PropertyValue Property="Data">
 >             <Collection>
->                 <Record Type="UI.DataFieldWithIntentBasedNavigation">
+>                 <Record Type="UI.DataFieldForIntentBasedNavigation">
 >                     <PropertyValue Property="Label" String="Approve Travel"/>
 >                     <PropertyValue Property="SemanticObject" String="Description"/>
 >                     <PropertyValue Property="Action" String="maintain"/>
@@ -581,19 +580,7 @@ For semantic object mapping when navigating using the `DataFieldForIntentBasedNa
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> ```
-> {
->     type: #FOR_INTENT_BASED_NAVIGATION,
->     semanticObject: 'nameOfSemanticObject',
->     semanticObjectAction: 'nameOfSemanticObjectAction',
->     semanticObjectBinding: [
->         {
->             localElement: 'nameOfSourceProperty',
->             element: 'nameOfTargetProperty',
->         }
->     ]
-> }
-> ```
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -746,7 +733,7 @@ When the navigation context is prepared, the information from the specific contr
 > 
 >     OP page context has: "SO.SalesOrder"="123" | "SO.Price"="400 EUR" | "\_ReferenceSO.SalesOrder"="456" | "\_ReferenceSO.SalesCategory"="Resale".
 > 
->     Selected table \(\_Item\) context: "\_Item.ItemNumber"="10" | "\_Item.Price" = "20 EUR" | "\_Item.\_ReferenceSO.SalesOrder"="789" | "\_Item.\_ReferenceSO.OrderType" = "Standard".
+>     Selected table \(\_Items\) context: "\_Item.ItemNumber"="10" | "\_Item.Price" = "20 EUR" | "\_Item.\_ReferenceSO.SalesOrder"="789" | "\_Item.\_ReferenceSO.OrderType" = "Standard".
 > 
 >     Merged context: "SalesOrder"="123" | "ItemNumber"="10" | "Price"="20 EUR" | "SO.Price"="400 EUR" | "SO.\_Item.Price"="20 EUR".
 > 
@@ -758,7 +745,7 @@ When the navigation context is prepared, the information from the specific contr
 > 
 >     OP page context has: "SO.SalesOrder"="123" | "\_ReferenceOrder.OrderType"="Express".
 > 
->     Selected table \(\_Item\) context: "\_Item.ItemNumber"="10" | "SO.OrderType" = "Standard" | "\_Item.OrderType" = "InHouse" | "\_ReferenceOrder.OrderType"="Outsource".
+>     Selected table \(\_Items\) context: "\_Item.ItemNumber"="10" | "SO.OrderType" = "Standard" | "\_Item.OrderType" = "InHouse" | "\_ReferenceOrder.OrderType"="Outsource".
 > 
 >     Merged context: "SalesOrder"="123" | "ItemNumber"="10" | "OrderType"="InHouse".
 > 
@@ -769,7 +756,7 @@ When the navigation context is prepared, the information from the specific contr
 > 
 >     Sub-OP page \(\_Item page\) context has: "\_Item.ItemNumber"="10".
 > 
->     Selected table \(\_SubItem\) context: "\_SubItem.ItemNumber"="101" | "\_Item.ItemNumber"="10" | "\_ReferenceItem.ItemNumber"="200".
+>     Selected table \(\_SubItems\) context: "\_SubItem.ItemNumber"="101" | "\_Item.ItemNumber"="10" | "\_ReferenceItem.ItemNumber"="200".
 > 
 >     Merged context: "ItemNumber"="101" | "SO.\_Item.ItemNumber"="10" | "SO.\_Item.\_SubItem.ItemNumber"="101".
 > 
@@ -786,8 +773,6 @@ By default, only the information from the entity set, which is bound to each con
 -   The page context in object pages
 
 Information from a navigation entity, relative to each control that provides information to the navigation context, is passed if there is a `SemanticObjectMapping` defined against the navigation property. For more information, see the [Semantic Object Mapping](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__semantic_object_mapping_subsection) section in this topic.
-
-Any information from the table that comes from a navigation entity defined against the table entity is ignored. Similarly, any information in the filter bar \(for list report pages\) or the page context \(for object pages\) that comes from a navigation entity defined against the main entity is ignored.
 
 For example, an object page which displays information from the `SO` main entity set but also has information which comes from the `_PO` navigation entity set, contains different information in the navigation context depending on whether there's a semantic mapping. When there's a semantic mapping defined against `_PO.Status`, then the `_PO.Status` is added to the navigation context. If the mapping specifies a different name to be used in the target using the `SemanticObjectProperty` property, then this name is used instead of `_PO.Status`.
 

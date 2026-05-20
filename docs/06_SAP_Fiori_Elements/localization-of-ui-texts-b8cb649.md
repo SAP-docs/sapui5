@@ -4,7 +4,7 @@
 
 # Localization of UI Texts
 
-You can replace standard UI texts for apps that you have created with SAP Fiori elements.
+You can replace standard UI texts for apps that you have created with SAP Fiori elements for OData V4.
 
 Standard texts are available in the generic framework \(for example, the button texts for draft concepts\) and belong to the template components \(for example, the list report page and the object page\). The following sections describe how you can replace the texts in your generated apps.
 
@@ -2287,6 +2287,30 @@ Applications can use the key in combination with the entity name and the action 
 Example:
 
 `C_COMMON_SUCCESS_MESSAGE|SalesOrder|CreateWithSalesOrderType`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`RECOMMENDATIONS_DATA_INFO`
+
+</td>
+<td valign="top">
+
+Recommendation based on your business data.
+
+</td>
+<td valign="top">
+
+Text used in the recommendations menu. For more information, see [Input Assistance](input-assistance-1a6324d.md).
+
+</td>
+<td valign="top">
+
+Applications can choose to overwrite the default text with a more specific one.
+
+Example: `RECOMMENDATIONS_DATA_INFO| SalesOrderItems=CustomText` 
 
 </td>
 </tr>

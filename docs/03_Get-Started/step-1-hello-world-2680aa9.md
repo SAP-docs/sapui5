@@ -4,9 +4,26 @@
 
 As you know SAPUI5 is all about HTML5. Let's get started with building a first "Hello World" with only HTML.
 
+We first introduce you to the basic development paradigms like *Model-View-Controller* and establish a best-practice structure of our application. We'll do this along the classic example of "Hello World" and start a new app from scratch. Next, we'll introduce the fundamental data binding concepts of SAPUI5 and extend our app to show a list of invoices. We'll continue to add more functionality by adding navigation, extending controls, and making our app responsive. Finally we'll look at the testing features and the built-in support tools of SAPUI5.
 
 
-## Preview
+
+## Preview Walkthrough Tutorial App \(JavaScript\)
+
+![Preview of the UI5 application that is going to be built in this tutorial. Contains a Hello World header with buttons and a text input field. The lower part shows a list of invoices with details, grouped by vendor names.](images/UI5_Walkthrough_Step_38_fb12cea.png)
+
+
+
+> ### Tip:  
+> You don't have to do all tutorial steps sequentially, you can also jump directly to any step you want. Just download the code from the previous step and make sure that the application runs as intended; for detailed instructions, see [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download).
+> 
+> You can view and download the samples for all steps in the Demo Kit at [Walkthrough](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough).
+> 
+> For more information, see the overview page: [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
+
+
+
+## Preview Step 1
 
 ![The browser shows the text "Hello World"](images/UI5_Walkthrough_Step_01_1dd4563.png)
 
@@ -75,7 +92,7 @@ You can view and download all files at [Walkthrough - Step 1](https://ui5.sap.co
 
     ```
     {
-      "_version": "2.7.0",
+      "_version": "2.8.0",
       "sap.app": {
         "id": "ui5.walkthrough"
       }

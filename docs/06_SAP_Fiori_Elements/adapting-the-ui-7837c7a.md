@@ -5,7 +5,7 @@
 App developers and key users can extend and configure the app UI.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Extending Delivered Apps With Key User Adaptation](extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Extending Delivered Apps With Key User Adaptation](extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
 
 **UI Adaptation**
 

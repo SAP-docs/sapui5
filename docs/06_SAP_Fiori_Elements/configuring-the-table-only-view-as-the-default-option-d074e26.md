@@ -2,7 +2,7 @@
 
 # Configuring the Table-Only View as the Default Option
 
-You can display data on the analytical list page in a table format.
+You can display data on the analytical list page in a table format in SAP Fiori elements for OData V2.
 
 
 
@@ -49,7 +49,7 @@ For more information, see [Defining Determining Actions on the List Report Page]
 **Related Information**  
 
 
-[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "You can visualize data from the main entity set and seamlessly navigate to an application.")
+[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "You can visualize data from the main entity set and seamlessly navigate to an SAP Fiori elements for OData V2 app.")
 
 [Setting the Table Type](setting-the-table-type-5d27054.md "You can control which table type is rendered on the list report page and on the object page by configuring the manifest.json file and by using annotations.")
 

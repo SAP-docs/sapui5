@@ -5,7 +5,7 @@
 You can enable actions added to the list report page and the object page using extension points through certain settings in the `manifest.json` file.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enabling Actions Added Using Extension Points](enabling-actions-added-using-extension-points-dd78aca.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enabling Actions Added Using Extension Points](enabling-actions-added-using-extension-points-dd78aca.md).
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).

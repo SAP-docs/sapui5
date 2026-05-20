@@ -2,7 +2,7 @@
 
 # Adapting Texts in the Delete Dialog \(Object Page with Nested Smart Table\)
 
-You can adapt the text in the *Delete* dialog that appears when users delete items from nested smart tables on the object page.
+You can adapt the text in the *Delete* dialog that appears when users delete items from nested smart tables on the object page in SAP Fiori elements for OData V2.
 
 
 

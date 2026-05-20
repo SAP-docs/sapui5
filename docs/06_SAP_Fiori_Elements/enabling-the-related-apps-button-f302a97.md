@@ -5,7 +5,7 @@
 You can enable the *Related Apps* button on the object page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md).
 
 By default, the *Related Apps* button is disabled on object pages created with the object page template. When enabled, the button allows you to provide a link to any of the semantic object's navigation targets.
 

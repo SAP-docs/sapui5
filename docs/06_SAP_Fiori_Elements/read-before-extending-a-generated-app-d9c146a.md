@@ -2,7 +2,7 @@
 
 # Read Before Extending a Generated App
 
-Review the extension guidelines before modifying your SAP Fiori elements app.
+Review the extension guidelines before modifying your SAP Fiori elements for OData V4 app.
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).

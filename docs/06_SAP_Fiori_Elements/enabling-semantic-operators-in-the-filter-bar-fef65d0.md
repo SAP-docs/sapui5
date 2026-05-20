@@ -2,7 +2,7 @@
 
 # Enabling Semantic Operators in the Filter Bar
 
-You can use semantic date values, such as *Today* or *Last Week*, on the filter bar of list report page and analytical list page applications.
+You can use semantic date values, such as *Today* or *Last Week*, on the filter bar of list report page and analytical list page applications in SAP Fiori elements for OData V4.
 
 Semantic operators are enabled by default for the following fields:
 

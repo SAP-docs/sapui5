@@ -2,11 +2,11 @@
 
 # Defining Actions in the Chart Toolbar
 
-You can add action buttons to the chart toolbar by defining the `Actions` property in the annotation term `UI.Chart`.
+You can add action buttons to the chart toolbar in SAP Fiori elements for OData V4.
 
 
 
-The `Actions` property must be a collection of the types `UI.DataFieldForAction` and `UI.DataFieldForIntentBasedNavigation`.
+To add an action to the chart toolbar, define the `Actions` property in the `UI.Chart` annotation term. The `Actions` property must be a collection of the types `UI.DataFieldForAction` and `UI.DataFieldForIntentBasedNavigation`.
 
 > ### Note:  
 > -   To make the button visible in the chart toolbar, the properties `Determining` and `Inline` for `UI.DataFieldForAction` and `UI.DataFieldForIntentBasedNavigation` must be set to `false` or must not be defined.

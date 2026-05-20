@@ -5,7 +5,7 @@
 You can add semantic highlights to line items in tables, based on their criticality.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Highlighting Line Items Based on Criticality](highlighting-line-items-based-on-criticality-0d501b1.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Highlighting Line Items Based on Criticality](highlighting-line-items-based-on-criticality-0d501b1.md).
 
 The figure below shows an example of this:
 

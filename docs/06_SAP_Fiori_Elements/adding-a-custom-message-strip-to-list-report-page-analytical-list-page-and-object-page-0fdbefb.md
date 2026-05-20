@@ -2,7 +2,7 @@
 
 # Adding a Custom Message Strip to List Report Page, Analytical List Page and Object Page
 
-You can show a custom text in a message strip.
+You can show a custom text in a message strip in SAP Fiori elements for OData V4.
 
 On list report pages and analytical list pages, the message strip is displayed above the table. On object pages, you can choose in which message strip the custom text is displayed:
 

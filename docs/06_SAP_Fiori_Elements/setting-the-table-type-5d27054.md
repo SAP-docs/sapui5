@@ -5,7 +5,7 @@
 You can control which table type is rendered on the list report page and on the object page by configuring the `manifest.json` file and by using annotations.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Setting the Table Type](setting-the-table-type-7f844f1.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Setting the Table Type](setting-the-table-type-7f844f1.md).
 
 The following `type` properties are available within `tableSettings`:
 

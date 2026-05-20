@@ -2,7 +2,7 @@
 
 # Adapting the Form
 
-You can include navigation properties in form fields to be available in key user adaptation.
+You can include navigation properties in form fields to be available in key user adaptation in SAP Fiori elements for OData V4.
 
 
 

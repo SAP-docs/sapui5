@@ -2,7 +2,7 @@
 
 # Configuring the Manifest for the Overview Page
 
-You can use the `manifest.json` file for initializing an overview page application.
+You can use the `manifest.json` file for initializing an overview page application in SAP Fiori elements for OData V4.
 
 
 
@@ -56,7 +56,8 @@ The `manifest.json` file defines static information about the application such a
 >                 "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SalesShareBubble",
 >                 "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Eval_by_Currency_Scatter",
 >                 "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Currency_ColumnStacked",
->                 "navigation": "noHeaderNav" //Allows you to disable navigation from the analytical list card header area.
+>                 "navigation": "noHeaderNav", //Allows you to disable navigation from the analytical list card header area.
+>                 "enableTextWrapping": true   //The default value is false
 >             }
 >         }
 >     }

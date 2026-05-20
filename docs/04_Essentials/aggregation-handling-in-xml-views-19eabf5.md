@@ -80,5 +80,5 @@ If an aggregation of **cardinality `0..1`** has an alternative type and if you w
 > </tr>
 > </table>
 
-You can also use attributes to define binding information for aggregations with cardinality `0..n`. For more information, see *Declarative List Binding in XML Views* under [List Binding \(Aggregation Binding\)](list-binding-aggregation-binding-91f0577.md).
+You can also use attributes to define binding information for aggregations with cardinality `0..n`. For more information, see *Declarative List Binding in XML Views* under [List Binding and Tree Binding \(Aggregation Binding\)](list-binding-and-tree-binding-aggregation-binding-91f0577.md).
 

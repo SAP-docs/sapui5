@@ -2,7 +2,7 @@
 
 # Grouping of Fields
 
-You can group fields that should be shown together, such as various address fields \(street name, house number, and postal code\).
+You can group fields that should be shown together, such as various address fields \(street name, house number, and postal code\), in SAP Fiori elements for OData V4.
 
 The grouping can be done in several ways, depending on the use case.
 
@@ -564,6 +564,8 @@ When this setting is enabled, only the section or subsection title is displayed.
 > ```
 
 
+
+<a name="loiocb1748ea9b984251addc03718d98df35__Grouping_Checkboxes"/>
 
 ## Grouping Checkboxes
 

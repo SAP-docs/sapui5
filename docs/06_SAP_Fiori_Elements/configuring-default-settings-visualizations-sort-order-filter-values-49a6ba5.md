@@ -2,10 +2,10 @@
 
 # Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)
 
-You can configure several settings of the main content area, such as sort order or filter values, with `UI.SelectionPresentationVariant`.
+You can configure several settings of the main content area, such as sort order or filter values, with `UI.SelectionPresentationVariant` in SAP Fiori elements for OData V4.
 
 > ### Note:  
-> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> This topic describes how to use the feature within SAP Fiori elements floorplans. The feature isn't available when you use the building block in custom pages or custom sections, but you can try achieving the functionality through other means, such as the following:
 > 
 > -   Properties or methods exposed by the building block
 > 
@@ -788,11 +788,11 @@ For more information, see [Configuring Default Filter Values](configuring-defaul
 **Related Information**  
 
 
-[Configuring Tables](configuring-tables-f4eb70f.md "You can use the annotations and entries in the manifest.json file to control various aspects of tables.")
+[Configuring Tables](configuring-tables-f4eb70f.md "You can use the annotations and entries in the manifest.json file to control various aspects of tables in SAP Fiori elements for OData V4.")
 
-[Configuring Charts](configuring-charts-653ed0f.md "You can add a chart facet to a content section within the list report page and the object page.")
+[Configuring Charts](configuring-charts-653ed0f.md "You can add a chart facet to a content section within the list report page and the object page in SAP Fiori elements for OData V4.")
 
-[Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md "You can configure the loading behavior of SAP Fiori apps.")
+[Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md "You can configure the loading behavior of apps using SAP Fiori elements for OData V4.")
 
-[Requesting Additional Properties](requesting-additional-properties-82e27ff.md "You can request additional OData properties to be fetched with the table's data binding even if these properties are not displayed in the table.")
+[Requesting Additional Properties](requesting-additional-properties-82e27ff.md "You can request additional OData properties to be fetched with the table's data binding even if these properties aren't displayed in the table in SAP Fiori elements for OData V4.")
 

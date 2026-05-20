@@ -2,7 +2,7 @@
 
 # FAQs
 
-You can get answers to the most frequently asked questions we receive from our users, get to know more about SAP Fiori elements features, and troubleshoot common issues.
+You can get answers to the most frequently asked questions we receive from our users, get to know more about features available in SAP Fiori elements for OData V4, and troubleshoot common issues.
 
 
 
@@ -41,7 +41,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **What is draft handling and can I disable it for apps built on SAP Fiori elements for OData V4?**
 
-    SAP Fiori elements for OData V4 supports an edit-based scenario \(create/edit/delete\) only for a draft-enabled service. You can use non-draft services only for pure read-only applications where the user isn't expected to perform any create/edit/delete operations. For more information about draft handling, see [Draft Handling](draft-handling-ed9aa41.md). Additionally, if you want to know the general information about tool support and the back end, see [Prerequisites for Using SAP Fiori Elements](prerequisites-for-using-sap-fiori-elements-f2344b5.md).
+    SAP Fiori elements for OData V4 supports an edit-based scenario \(create/edit/delete\) only for a draft-enabled service. You can use non-draft services only for pure read-only applications where the user isn't expected to perform any create/edit/delete operations. For more information about draft handling, see [Draft Handling](draft-handling-ed9aa41.md). Additionally, if you want to know the general information about tool support and the back end, see [Prerequisites for Using SAP Fiori Elements for OData V4](prerequisites-for-using-sap-fiori-elements-for-odata-v4-f2344b5.md).
 
 -   **Where can I find the right annotations for some of the commonly used UI elements?**
 

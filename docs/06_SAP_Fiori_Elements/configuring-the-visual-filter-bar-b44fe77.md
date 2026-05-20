@@ -7,7 +7,7 @@ You can configure the visual filter bar on the analytical list page.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md).
 
 
 

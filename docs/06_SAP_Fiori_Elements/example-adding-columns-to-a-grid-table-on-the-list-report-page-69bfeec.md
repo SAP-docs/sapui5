@@ -2,7 +2,7 @@
 
 # Example: Adding Columns to a Grid Table on the List Report Page
 
-You can add custom columns to the grid table of your list report page using view extensions.
+You can add custom columns to the grid table of your list report page using view extensions in SAP Fiori elements for OData V2.
 
 
 

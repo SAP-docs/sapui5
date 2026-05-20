@@ -2,7 +2,7 @@
 
 # Extending List Report Pages and Object Pages Using App Extensions
 
-You can extend list report pages and object pages using app extensions.
+You can extend list report pages and object pages using app extensions in SAP Fiori elements for OData V2.
 
 Various framework extension points are available for the list report page and the object page. Make sure you have read the following information: [Read Before Extending a Generated App](read-before-extending-a-generated-app-a5d985e.md).
 

@@ -2,7 +2,7 @@
 
 # Enabling Standard List Items and Object List Items
 
-You can configure standard list items and object list items on the list report page.
+You can configure standard list items and object list items on the list report page in SAP Fiori elements for OData V2.
 
 Both list items can display standard, numeric, and date fields.
 

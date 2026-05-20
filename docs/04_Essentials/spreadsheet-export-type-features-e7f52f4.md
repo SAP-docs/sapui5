@@ -134,7 +134,7 @@ The location of the user exporting a file is taken into account, and the content
 </td>
 <td valign="top">
 
-![Partially supported](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif)
+![Partially supported](images/Yellow_Led_3ea53dc.gif)
 
 Column headers in the exported file can be shown in the user's language as defined in the back-end system and might differ from what the user sees on the UI.
 
@@ -210,7 +210,7 @@ Office Open XML spreadsheets support various types of data that have a different
 </td>
 <td valign="top">
 
-![Partially supported](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif)
+![Partially supported](images/Yellow_Led_3ea53dc.gif)
 
 The types `text`, `number`, `date`, `time`, and `boolean` are supported.
 
@@ -245,7 +245,7 @@ If configured, Read Access Logging tracks who has access to which data at which 
 </tr>
 </table>
 
-![](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) = Supported, ![](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif) = Partially supported, ![](../02_Read-Me-First/images/Red_Led_5befb5a.gif) = Not supported
+![](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) = Supported, ![](images/Yellow_Led_3ea53dc.gif) = Partially supported, ![](../03_Get-Started/images/Red_Led_5befb5a.gif) = Not supported
 
 **Related Information**  
 

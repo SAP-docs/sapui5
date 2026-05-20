@@ -5,7 +5,7 @@
 You can use vocabularies and annotations to extend the OData services.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Working With OData Annotations](working-with-odata-annotations-83c89cc.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Working With OData Annotations](working-with-odata-annotations-83c89cc.md).
 
 For a general introduction to vocabularies and annotations, see the following links:
 

@@ -2,7 +2,7 @@
 
 # Smart Table Extensions
 
-You can define custom actions for tables by configuring the annotation and `manifest.json` files.
+You can define custom actions for tables by configuring the annotation and `manifest.json` files in SAP Fiori elements for OData V2.
 
 
 
@@ -127,7 +127,7 @@ ALP allows applications to do conditional navigation using the `onListNavigation
 **Related Information**  
 
 
-[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your app.")
+[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your SAP Fiori elements for OData V2 app.")
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md "You can define custom actions by using extensions in the manifest.json file.")
+[Defining Custom Actions](defining-custom-actions-c3de5c0.md "You can define custom actions by using extensions in the manifest.json file in SAP Fiori elements for OData V2.")
 

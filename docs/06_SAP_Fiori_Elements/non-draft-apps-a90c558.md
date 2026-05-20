@@ -2,7 +2,7 @@
 
 # Non-Draft Apps
 
-You can create non-draft apps for simple scenarios without complex flows.
+You can create non-draft apps for simple scenarios without complex flows in SAP Fiori elements for OData V2.
 
 For general information about draft handling, see [Draft Handling](draft-handling-b0eb3cc.md) and SAP Fiori web design guidelines for [Draft Handling](https://experience.sap.com/fiori-design-web/draft-handling/).
 

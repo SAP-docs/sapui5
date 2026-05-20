@@ -2,7 +2,7 @@
 
 # DeprecatedConfiguration Options
 
-The following tables show deprecatedconfiguration options.
+The following table shows deprecated configuration options.
 
 > ### Note:  
 > In earlier framework versions, the configuration options available in SAPUI5 could be found in the [API Reference via the `sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration). This legacy module has been deprecated with SAPUI5 1.120 and replaced by a modular, future-proof solution for configuration handling.

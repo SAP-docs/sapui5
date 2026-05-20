@@ -4,7 +4,7 @@
 
 # Using the Application Preview Generator
 
-You can generate integration and adaptive cards in SAP Fiori elements.
+You can generate integration and adaptive cards in SAP Fiori elements for OData V4.
 
 You can use cards to provide a preview of the data of the object page. Cards can be shared using SAP Collaboration Manager, Microsoft Teams, or any other platform where the integration card or the adaptive card can be hosted.
 

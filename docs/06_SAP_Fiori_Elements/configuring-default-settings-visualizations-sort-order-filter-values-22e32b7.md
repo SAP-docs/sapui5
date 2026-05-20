@@ -5,7 +5,7 @@
 You can configure several settings of the main content area, such as sort order or filter values, with `UI.SelectionPresentationVariant`.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md).
 
 You can use the `UI.SelectionPresentationVariant` to configure the default visualizations, grouping, and filter values of the main content area when an application is launched using the *Standard* variant. The `UI.SelectionPresentationVariant` must contain references to the `UI.SelectionVariant` and the `UI.PresentationVariant`. You use the `UI.SelectionVariant` to define default filter values, and the `UI.PresentationVariant` can contain the configurations for tables and charts, including, for example, the sort order or grouping.
 
@@ -831,5 +831,5 @@ For more information, see [Configuring Default Filter Values](configuring-defaul
 
 [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-b736ab6.md "You can configure the loading behavior of SAP Fiori apps.")
 
-[Initial Expansion Level for Tables on List Report Pages & Analytical List Pages](initial-expansion-level-for-tables-on-list-report-pages-analytical-list-pages-bc05d35.md "You can set the number of expanded levels for tables on list report pages and analytical list report pages using the initialExpansionLevel property of the PresentationVariant annotation.")
+[Initial Expansion Level for Tables on List Report Pages & Analytical List Pages](initial-expansion-level-for-tables-on-list-report-pages-analytical-list-pages-bc05d35.md "You can set the number of expanded levels for tables on list report pages and analytical list report pages using the initialExpansionLevel property of the PresentationVariant annotation in SAP Fiori elements for OData V2.")
 

@@ -5,7 +5,7 @@
 You can add semantic keys to a table.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Handling Semantic Key Fields](handling-semantic-key-fields-aa2793c.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Handling Semantic Key Fields](handling-semantic-key-fields-aa2793c.md).
 
 Semantic key fields in tables are displayed with a special logic. You can add a semantic key to a list report page as shown in the following sample code:
 
@@ -69,5 +69,5 @@ On list report pages, semantic key fields are displayed in tables using the foll
 **Related Information**  
 
 
-[Settings for List Report Page Tables](settings-for-list-report-page-tables-4c2d17a.md "You can configure various aspects of the list report page table through annotations and in the manifest.json file.")
+[Settings for List Report Page Tables](settings-for-list-report-page-tables-4c2d17a.md "You can configure various aspects of the list report page table through annotations and in the manifest.json file in SAP Fiori elements for OData V2.")
 

@@ -7,7 +7,7 @@ You can choose to set filters from the compact and visual filter modes on the an
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Choosing Filter Modes on the Analytical List Page](choosing-filter-modes-on-the-analytical-list-page-00c19e1.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Choosing Filter Modes on the Analytical List Page](choosing-filter-modes-on-the-analytical-list-page-00c19e1.md).
 
 
 
@@ -38,7 +38,7 @@ In visual filter mode, you can change the chart type, sort order, and measure ac
 **Related Information**  
 
 
-[Configuring the Title Area](configuring-the-title-area-ebdb5da.md "The dynamic area of the analytical list page is the title area.")
+[Configuring the Title Area](configuring-the-title-area-ebdb5da.md "You can configure the title area of the analytical list page in SAP Fiori elements for OData V2.")
 
 [Managing Variants](managing-variants-b82d987.md "You can manage variants with different structures in the filter and content areas.")
 

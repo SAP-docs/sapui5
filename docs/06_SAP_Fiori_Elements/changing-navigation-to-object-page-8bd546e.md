@@ -2,7 +2,7 @@
 
 # Changing Navigation to Object Page
 
-You can disable the navigation from the list report page to the object page or replace it with external navigation.
+You can disable the navigation from the list report page to the object page or replace it with external navigation in SAP Fiori elements for OData V4.
 
 Navigation from the list report page to the object page in the same app is enabled by default. If required, you can disable this navigation or replace it with navigation to another app \(external navigation\).
 
@@ -125,5 +125,5 @@ You can also use a `display` section within the `navigation` section instead of 
 **Related Information**  
 
 
-[Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md "You can use the preferredMode parameter to configure the mode in which the object page is initially launched.")
+[Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md "You can use the preferredMode parameter to configure the mode in which the object page is initially launched in SAP Fiori elements for OData V4.")
 

@@ -2,7 +2,7 @@
 
 # Line Micro Chart
 
-You can render the micro chart as a line micro chart.
+You can render the micro chart as a line micro chart in SAP Fiori elements for OData V4.
 
 The line chart displays information as a series of data points connected by a line.
 

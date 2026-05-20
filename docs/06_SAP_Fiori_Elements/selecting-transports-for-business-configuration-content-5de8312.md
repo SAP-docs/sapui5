@@ -5,7 +5,7 @@
 Users can select a transport request for the document they're editing with the *Select Transport Request* feature.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Selecting Transports for Business Configuration Content](selecting-transports-for-business-configuration-content-29cd194.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Selecting Transports for Business Configuration Content](selecting-transports-for-business-configuration-content-29cd194.md).
 
 Business configuration content follows a controlled deployment process. Rather than making changes directly in a production environment, content is created in dedicated development environments. These environments can be specialized content development systems for standard configurations or development systems/clients for customer-specific content. The content is then systematically transported through test environments before final deployment to production.
 

@@ -5,7 +5,7 @@
 You can configure the appearance, interactivity, and loading behavior of tables.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Tables](tables-c0f6592.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Tables](tables-c0f6592.md).
 
 The following table types are available:
 
@@ -618,7 +618,7 @@ Key users can configure the `threshold` property using the UI adaptation mode. F
 
 [Smart multi input](../10_More_About_Controls/smart-multi-input-5644169.md) is automatically rendered as a column in responsive and grid tables if a 1:n relationship exists in the association for the given column.
 
-To configure smart multi-input fields on an object page, see [Using the Multi-Input Field on the Object Page](using-the-multi-input-field-on-the-object-page-4e69fd3.md).
+To configure smart multi-input fields on an object page, see [Using the Multi-Input Field](using-the-multi-input-field-4e69fd3.md).
 
 
 

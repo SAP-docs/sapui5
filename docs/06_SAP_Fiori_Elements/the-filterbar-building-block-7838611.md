@@ -2,7 +2,7 @@
 
 # The `FilterBar` Building Block
 
-You can user the `FilterBar` building block to add a filter bar to your application.
+You can user the `FilterBar` building block to add a filter bar to your application in SAP Fiori elements for OData V4.
 
 > ### Sample Code:  
 > The `FilterBar` Building Block

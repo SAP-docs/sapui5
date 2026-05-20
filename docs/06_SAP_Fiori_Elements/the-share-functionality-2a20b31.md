@@ -5,7 +5,7 @@
 Users can share the current application state with the *Share* functionality.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [The Share Functionality](the-share-functionality-022bf0d.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [The Share Functionality](the-share-functionality-022bf0d.md).
 
 The following sharing options are available as part of the *Share* functionality:
 

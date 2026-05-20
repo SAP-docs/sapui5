@@ -2,7 +2,7 @@
 
 # Configuring Overview Page App Extensions
 
-Lets you customize the card and filter area to design a robust application.
+You can configure the card and filter area to design a robust application.
 
 
 

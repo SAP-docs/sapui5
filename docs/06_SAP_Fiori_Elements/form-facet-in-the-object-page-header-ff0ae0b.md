@@ -2,7 +2,7 @@
 
 # Form Facet in the Object Page Header
 
-You can add a form facet to the object page header.
+You can add a form facet to the object page header in SAP Fiori elements for OData V4.
 
 To do this, add a `UI.ReferenceFacet` to the `UI.HeaderFacets` that points to `UI.FieldGroup` or `UI.Identification`. If you provide a label in the `UI.ReferenceFacet`, it is used as the title of the form. For example, the figure below shows the following fields within the *Sales Area* section \(created with a header facet\):
 
@@ -158,5 +158,5 @@ To do this, add a `UI.ReferenceFacet` to the `UI.HeaderFacets` that points to `U
 **Related Information**  
 
 
-[Header Facets](header-facets-17dbd5b.md "You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.")
+[Header Facets](header-facets-17dbd5b.md "You can add various types of facets to your object page header in SAP Fiori elements for OData V4.")
 

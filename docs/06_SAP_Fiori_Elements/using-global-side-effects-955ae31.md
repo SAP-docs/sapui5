@@ -2,7 +2,7 @@
 
 # Using Global Side Effects
 
-You can configure global side effects.
+You can configure global side effects in SAP Fiori elements for OData V4.
 
 > ### Note:  
 > Global side effects are only applicable to draft-enabled applications.
@@ -60,5 +60,5 @@ The following CAP CDS sample code shows the global side effect with target field
 **Related Information**  
 
 
-[Draft Handling](draft-handling-ed9aa41.md "You can configure how your SAP Fiori elements app handles drafts.")
+[Draft Handling](draft-handling-ed9aa41.md "You can configure how your app handles drafts in SAP Fiori elements for OData V4.")
 

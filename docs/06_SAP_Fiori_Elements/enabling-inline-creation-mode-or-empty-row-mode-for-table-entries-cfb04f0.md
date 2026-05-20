@@ -2,7 +2,7 @@
 
 # Enabling Inline Creation Mode or Empty Row Mode for Table Entries
 
-You can enable the inline creation mode or empty row mode for table entries in apps that use draft handling.
+You can enable the inline creation mode or empty row mode for table entries in apps that use draft handling in SAP Fiori elements for OData V4.
 
 > ### Tip:  
 > We recommend that you use the inline creation mode or empty row mode only for tables that don't have a large number of columns. For complex tables, use create page instead.

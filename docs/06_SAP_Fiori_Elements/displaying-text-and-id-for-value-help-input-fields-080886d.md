@@ -2,7 +2,7 @@
 
 # Displaying Text and ID for Value Help Input Fields
 
-You can configure object pages to show both text and ID for input fields of value help in the edit and create modes.
+You can configure object pages to show both text and ID for input fields of value help in the edit and create modes in SAP Fiori elements for OData V2.
 
 
 

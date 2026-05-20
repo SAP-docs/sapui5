@@ -2,7 +2,7 @@
 
 # Hiding Features Using the `UI.Hidden` Annotation
 
-You can use the `UI.Hidden` annotation to hide or display specific features on the object page.
+You can use the `UI.Hidden` annotation to hide or display specific features on the object page in SAP Fiori elements for OData V4.
 
 The default value of the `UI.Hidden` annotation is `true`, that is, a feature using the `UI.Hidden` annotation term isn't visible on the UI. These are the values you can set:
 

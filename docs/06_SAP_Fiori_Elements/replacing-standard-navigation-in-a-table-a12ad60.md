@@ -2,7 +2,7 @@
 
 # Replacing Standard Navigation in a Table
 
-You can replace the standard navigation from the list report page to the object page with your own navigation to an external or internal target.
+You can replace the standard navigation from the list report page to the object page with your own navigation to an external or internal target in SAP Fiori elements for OData V4.
 
 
 
@@ -102,6 +102,9 @@ You can selectively change the target when chevron navigation is triggered from 
 <!-- concept\_j2y\_twp\_c3c -->
 
 ## 
+
+> ### Note:  
+> When replacing the standard navigation for any record by configuring it to navigate to an external application or suppressing the navigation option, you must implement the `determineContextNavigationType()` method. This ensures that SAP Fiori elements for OData V4 recognizes this special navigation flow configured for such contexts and enables the correct behavior while using paginator buttons in the detailed view. Contexts that return `ContextNavigationType.None` or `ContextNavigationType.External` are skipped when using paginators. For information about the `determineContextNavigationType` method, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.Paginator%23methods/determineContextNavigationType).
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V2, see [Example: Replacing Standard Navigation in a Responsive Table on the List Report Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-list-report-page-5ae7b0c.md).

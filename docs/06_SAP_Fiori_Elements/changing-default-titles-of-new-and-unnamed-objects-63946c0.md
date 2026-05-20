@@ -2,7 +2,7 @@
 
 # Changing Default Titles of New and Unnamed Objects
 
-You can change the default titles of table items.
+You can change the default titles of table items in SAP Fiori elements for OData V4.
 
 On list report pages and object pages, the default title for a newly created object in a table is *New Object*. If users save the object without modifying this title, it's automatically updated to 'Unnamed Object'. If the title is editable, users can modify this new title as needed. If the users clear the title, it reverts to the default title *Unnamed Object*.
 

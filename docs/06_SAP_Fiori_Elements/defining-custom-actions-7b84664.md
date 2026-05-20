@@ -7,7 +7,7 @@ You can assign custom actions to quick view cards that open in the object stream
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Defining Custom Actions on the Overview Page](defining-custom-actions-on-the-overview-page-02fb273.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Defining Custom Actions on the Overview Page](defining-custom-actions-on-the-overview-page-02fb273.md).
 
 
 

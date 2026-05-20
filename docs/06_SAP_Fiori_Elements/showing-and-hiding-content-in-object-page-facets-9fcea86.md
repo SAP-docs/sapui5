@@ -2,7 +2,7 @@
 
 # Showing and Hiding Content in Object Page Facets
 
-You can show or hide reference facets on the UI using the *Show More* and *Show Less* buttons, and show or hide fields inside reference facets using the *Show Details* and *Hide Details* buttons.
+You can show or hide reference facets on the UI using the *Show More* and *Show Less* buttons, and show or hide fields inside reference facets using the *Show Details* and *Hide Details* buttons in SAP Fiori elements for OData V4.
 
 
 

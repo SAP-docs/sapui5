@@ -2,9 +2,11 @@
 
 # The `Page` Building Block
 
-You can use the `Page` building block to create a custom page with a predefined layout. The `Page` building block is based on the `sap.f.DynamicPage`. The generated page is preconfigured with the appropriate margins and padding wherever this is technically possible.
+You can use the `Page` building block to create a custom page with a predefined layout in SAP Fiori elements for OData V4.
 
-You can configure the content of the building block based on your needs. For example, in the following sample code, two panels containing a text element have been configured:
+The `Page` building block is based on the `sap.f.DynamicPage`. The generated page is preconfigured with the appropriate margins and padding wherever this is technically possible.
+
+You can configure the content of the building block based on your needs. For example, in the following sample code, two panels have been configured:
 
 > ### Sample Code:  
 > ```
@@ -13,7 +15,7 @@ You can configure the content of the building block based on your needs. For exa
 >         <Text text="This is the first content of the page" />
 >     </Panel>
 >     <Panel headerText="Second content" id="secondContent">
->         <Text text="This is the second content, it is properly padded" />
+>         <macros:Table metaPath="/Travel/@com.sap.vocabularies.UI.v1.LineItem" />
 >     </Panel>
 > </macros:Page>
 > 

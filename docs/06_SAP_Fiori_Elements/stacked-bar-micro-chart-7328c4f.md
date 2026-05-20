@@ -5,7 +5,7 @@
 You can render the micro chart as a stacked bar micro chart.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Stacked Bar Micro Chart](stacked-bar-micro-chart-9c93837.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Stacked Bar Micro Chart](stacked-bar-micro-chart-9c93837.md).
 
 ![](images/Stacked_Bar_Micro_Chart_606716a.png)
 

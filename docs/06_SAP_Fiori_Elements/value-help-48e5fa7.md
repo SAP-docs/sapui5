@@ -5,7 +5,7 @@
 You can configure value help to assist users in selecting the correct values.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Value Help](value-help-fccb255.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Value Help](value-help-fccb255.md).
 
 > ### Note:  
 > Value help for draft-enabled entities only shows active documents.

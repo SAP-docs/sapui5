@@ -2,7 +2,7 @@
 
 # Creating Key Performance Indicators
 
-You can add key performance indicators \(KPI\) in SAP Fiori elements.
+You can add key performance indicators \(KPI\) in SAP Fiori elements for OData V4.
 
 The key performance indicator \(KPI\) tag is an abbreviated and clickable title with a KPI value.
 

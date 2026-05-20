@@ -5,7 +5,7 @@
 You can use framework extension points to extend your generated app during the creation process.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Extending Generated Apps Using App Extensions](extending-generated-apps-using-app-extensions-340cdb2.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Extending Generated Apps Using App Extensions](extending-generated-apps-using-app-extensions-340cdb2.md).
 
 The extensions are made, for example, using manifest changes or SAPUI5 extension points, depending on the floorplan.
 

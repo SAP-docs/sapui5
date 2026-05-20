@@ -2,7 +2,7 @@
 
 # The `Chart` Building Block
 
-You can use the `Chart` building block to render a chart based on an `entitySet` or a specific navigation property.
+You can use the `Chart` building block to render a chart based on an `entitySet` or a specific navigation property in SAP Fiori elements for OData V4.
 
 
 

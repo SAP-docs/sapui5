@@ -2,7 +2,7 @@
 
 # Enabling Table Personalization
 
-You can use table personalization to modify the settings of a table.
+You can use table personalization to modify the settings of a table in SAP Fiori elements for OData V4.
 
 You can control the table personalization options that users see.
 
@@ -144,7 +144,7 @@ Table personalization is provided by default for all tables. Options for adding 
 
 ## Choosing Personalization Settings
 
-By default, table personalization provides options for adding or removing columns, filtering, sorting, and grouping. Use the `personalization` setting in the`manifest.json` file to change the default behavior.
+By default, table personalization provides options for adding or removing columns, filtering, sorting, and grouping. Use the `personalization` setting in the `manifest.json` file to change the default behavior.
 
 > ### Sample Code:  
 > `manifest.json`

@@ -2,7 +2,7 @@
 
 # Tree Tables
 
-You can use tree tables in the list report and the object page.
+You can use tree tables on the list report page and the object page in SAP Fiori elements for OData V4.
 
 SAP Fiori elements for OData V4 supports displaying a tree table on the list report page with a draft-enabled service with the following behavior:
 

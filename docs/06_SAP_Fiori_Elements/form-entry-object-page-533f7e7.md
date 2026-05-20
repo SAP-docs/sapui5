@@ -2,7 +2,7 @@
 
 # Form Entry Object Page
 
-You can use the form entry object page as an alternative to a list report page when you only want to provide a page for data entry.
+You can use the form entry object page as an alternative to a list report page when you only want to provide a page for data entry in SAP Fiori elements for OData V4.
 
 The form entry object page is a variation of the standard object page layout in which the header and navigation bar aren't displayed.
 

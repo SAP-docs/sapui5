@@ -5,7 +5,7 @@
 See some examples of responsiveness options.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Responsiveness Options: Example](responsiveness-options-example-69efbe7.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Responsiveness Options: Example](responsiveness-options-example-69efbe7.md).
 
 When using SAP Fiori elements, you can make use of specific responsiveness options.
 

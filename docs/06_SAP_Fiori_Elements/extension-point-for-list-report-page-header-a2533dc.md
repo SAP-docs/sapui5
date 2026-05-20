@@ -5,7 +5,7 @@
 You can use an extension point to add custom content to the header of the list report page. Extensions are added above the filter bar.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Extension Point for List Report Page Header](extension-point-for-list-report-page-header-1ab83e6.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Extension Point for List Report Page Header](extension-point-for-list-report-page-header-1ab83e6.md).
 
 You can specify separate fragments in the `manifest.json` file for the expanded header and the collapsed header as shown in the following sample code:
 

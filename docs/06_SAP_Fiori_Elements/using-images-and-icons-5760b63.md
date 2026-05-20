@@ -2,7 +2,7 @@
 
 # Using Images and Icons
 
-You can use images, initials, and icons in SAP Fiori elements.
+You can use images, initials, and icons in SAP Fiori elements for OData V4.
 
 You can display a field as an avatar by using the following annotations:
 

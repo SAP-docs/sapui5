@@ -358,7 +358,7 @@ Description
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
@@ -380,7 +380,7 @@ Defines the type of the data service that provides the data. If it is an OData s
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
@@ -402,7 +402,7 @@ Request URL that is needed to request the data with all the filters and its orde
 </td>
 <td valign="top">
 
-![Partially](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif)
+![Partially](images/Yellow_Led_3ea53dc.gif)
 
 </td>
 <td valign="top">
@@ -478,7 +478,7 @@ If set to `true`, the export library will use OData batch requests. Once batch r
 </td>
 <td valign="top">
 
-![Partially](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif)
+![Partially](images/Yellow_Led_3ea53dc.gif)
 
 </td>
 <td valign="top">

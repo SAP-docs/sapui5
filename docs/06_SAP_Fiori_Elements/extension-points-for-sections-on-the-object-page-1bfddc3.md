@@ -5,7 +5,7 @@
 You can use extension points to add additional sections to the object page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md).
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).

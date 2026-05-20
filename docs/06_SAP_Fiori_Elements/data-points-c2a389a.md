@@ -2,7 +2,7 @@
 
 # Data Points
 
-You can use the `Field` building block to render data points.
+You can use the `Field` building block to render data points in SAP Fiori elements for OData V4.
 
 A data point represents a single point of data. It is typically a number but can also be textual, for example, a status value.
 
@@ -380,5 +380,5 @@ You can define the property `NumberOfFractionalDigits` of annotation `NumberForm
 **Related Information**  
 
 
-[Header Facets](header-facets-17dbd5b.md "You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.")
+[Header Facets](header-facets-17dbd5b.md "You can add various types of facets to your object page header in SAP Fiori elements for OData V4.")
 

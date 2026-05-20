@@ -2,7 +2,7 @@
 
 # Setting Up the Object Page Header
 
-You can configure the object page header in different ways.
+You can configure the object page header in different ways in SAP Fiori elements for OData V4.
 
 The object page supports the dynamic header. See also [Object Page Header](../10_More_About_Controls/object-page-header-6e340c1.md).
 

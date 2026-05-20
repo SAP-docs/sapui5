@@ -2,7 +2,9 @@
 
 # Column Chart
 
-You can render the chart as a column chart to display data, such as total product sales over a period of years in columns.
+You can render the chart as a column chart in SAP Fiori elements for OData V4.
+
+Use a column chart to display data such as total product sales over a period of years in columns.
 
   
   

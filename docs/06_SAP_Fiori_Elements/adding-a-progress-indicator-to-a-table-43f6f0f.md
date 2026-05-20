@@ -2,7 +2,7 @@
 
 # Adding a Progress Indicator to a Table
 
-You can add a progress indicator to a table.
+You can add a progress indicator to a table in SAP Fiori elements for OData V4.
 
 The progress indicator allows you to visually represent the level of completion of a project or a goal, for example.
 

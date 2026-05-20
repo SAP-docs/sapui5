@@ -558,7 +558,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now provide a *Search* field in analytical list page apps. For more information, see [Setting the Table Type](../06_SAP_Fiori_Elements/setting-the-table-type-7f844f1.md).
 
--   You can now use a multi-input field within a table on the object page. For more information, see [Using the Multi-Input Field on the Object Page](../06_SAP_Fiori_Elements/using-the-multi-input-field-on-the-object-page-04ff5b1.md).
+-   You can now use a multi-input field within a table on the object page. For more information, see [Using the Multi-Input Field](../06_SAP_Fiori_Elements/using-the-multi-input-field-04ff5b1.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.99</sub>
@@ -579,6 +579,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.146](what-s-new-in-sapui5-1-146-6ccfe05.md "With this release SAPUI5 is upgraded from version 1.145 to 1.146.")
 
 [What's New in SAPUI5 1.145](what-s-new-in-sapui5-1-145-7676a2a.md "With this release SAPUI5 is upgraded from version 1.144 to 1.145.")
 

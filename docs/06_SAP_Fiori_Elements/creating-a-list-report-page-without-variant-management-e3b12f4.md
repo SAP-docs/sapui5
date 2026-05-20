@@ -5,7 +5,7 @@
 You can create a list report page app without variant management.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-094fe8c.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-094fe8c.md).
 
 SAP Fiori elements-based applications include the variant management option by default. However, you can also choose to create one without variant management.
 

@@ -5,7 +5,7 @@
 You can render the chart as a dual combination chart, which lets you view individual data points for a particular dimension.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Dual Combination Chart](dual-combination-chart-c406c18.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Dual Combination Chart](dual-combination-chart-c406c18.md).
 
   
   

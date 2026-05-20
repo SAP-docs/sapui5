@@ -2,7 +2,7 @@
 
 # Migration Information for Upgrading the Manifest File
 
-Information how to add new attributes of manifest \(also known as descriptor\) versions higher than V2 \(SAPUI5 1.30\) to the manifest file.
+Use the following table to identify manifest attribute incompatibilities that are relevant to your target manifest version.
 
 
 <table>

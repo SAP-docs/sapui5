@@ -2,7 +2,7 @@
 
 # Adding Actions to Tables
 
-You can add different buttons to tables.
+You can add different buttons to tables in SAP Fiori elements for OData V4.
 
 The table control offers the possibility to show generic actions, such as *Create* and *Delete*, as well as app-specific actions.
 
@@ -899,13 +899,16 @@ The following types of actions are supported:
 
 -   Actions that trigger navigation, for example to a different app, represented by the complex type `DataFieldForIntentBasedNavigation`. For more information, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
-Annotation-based actions can be inline actions. Inline actions are used to trigger actions directly for a single table row. Such an action shows up within the table control as a separate column. To set an action as an inline action, set the `Inline` property to `true`. The line item actions are then displayed as shown in the following screenshot:
+Annotation-based actions can be inline actions. Inline actions are used to trigger actions directly for a single table row. Such an action shows up within the table control as a separate column without a label. To set an action as an inline action, set the `Inline` property to `true`. The line item actions are then displayed as shown in the following screenshot:
 
   
   
 **Example: Actions in the Table Toolbar**
 
 ![](images/Actions_in_the_Table_Toolbar_856c5a4.png "Example: Actions in the Table Toolbar")
+
+> ### Note:  
+> You can't override the header label of an inline action column.
 
 
 

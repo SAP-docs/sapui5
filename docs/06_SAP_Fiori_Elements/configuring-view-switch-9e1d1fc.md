@@ -2,12 +2,12 @@
 
 # Configuring View Switch
 
-Configuring this property lets you define a drop-down list to filter/view data at the card level.
+You can configure view switch to define a dropdown list to filter or view data at the card level.
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring View Switch](configuring-view-switch-931f92d.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring View Switch](configuring-view-switch-931f92d.md).
 
 
 

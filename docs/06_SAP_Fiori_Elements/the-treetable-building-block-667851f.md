@@ -2,7 +2,7 @@
 
 # The `TreeTable` Building Block
 
-You can use the `TreeTable` building block to create tables with hierarchical data.
+You can use the `TreeTable` building block to create tables with hierarchical data in SAP Fiori elements for OData V4.
 
 You can use the `TreeTable` building block to avoid exposing parameters that are specific to tree tables in the main `Table` building block.
 

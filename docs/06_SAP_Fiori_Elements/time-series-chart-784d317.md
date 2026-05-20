@@ -2,7 +2,9 @@
 
 # Time Series Chart
 
-You can render the chart as a time series chart, which contains a time axis instead of a categorical axis.
+You can render the chart as a time series chart in SAP Fiori elements for OData V4.
+
+A time series chart contains a time axis instead of a categorical axis.
 
   
   
@@ -12,12 +14,7 @@ You can render the chart as a time series chart, which contains a time axis inst
 
 This chart type represents a time-based dimension that is more responsive to a change in card size.
 
-The time axis is automatically enabled for a chart when its dimension is one of the following types:
-
--   `Edm.Date`
-
--   `Edm.DateTimeOffset`
-
+The time axis is automatically enabled for a chart when its dimension is `Edm.Date`.
 
 Additionally, the time axis is enabled when the dimension is of type `String` and is annotated with one of the following annotations:
 

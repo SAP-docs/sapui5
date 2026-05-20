@@ -2,7 +2,7 @@
 
 # Enabling Quick Views for Link Navigation
 
-You can enrich the popovers for link navigation with additional information to display quick views.
+You can enrich the popovers for link navigation with additional information to display quick views in SAP Fiori elements for OData V4.
 
 
 

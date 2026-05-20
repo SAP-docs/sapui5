@@ -2,7 +2,7 @@
 
 # Enhancing `ValueList` Annotations for Visual Filters
 
-You can specify a value help entity for a field and maintain the value help configuration with a `ValueList` annotation.
+You can specify a value help entity for a field and maintain the value help configuration with a `ValueList` annotation in SAP Fiori elements for OData V4.
 
 
 
@@ -136,9 +136,9 @@ After selecting the region chart, if you select a bar in the country chart then 
 **Related Information**  
 
 
-[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page.")
+[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page in SAP Fiori elements for OData V4.")
 
-[Choosing Filter Modes on the Analytical List Page](choosing-filter-modes-on-the-analytical-list-page-00c19e1.md "You can choose to set filters from the compact and visual filter modes on the analytical list page.")
+[Choosing Filter Modes on the Analytical List Page](choosing-filter-modes-on-the-analytical-list-page-00c19e1.md "You can choose to set filters from the compact and visual filter modes on the analytical list page in SAP Fiori elements for OData V4.")
 
-[Value Help](value-help-fccb255.md "You can configure value help to assist users in selecting the correct values.")
+[Value Help](value-help-fccb255.md "You can configure value help to assist users in selecting the correct values in SAP Fiori elements for OData V4-based apps.")
 

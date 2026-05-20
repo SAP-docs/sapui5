@@ -2,7 +2,7 @@
 
 # Types of Cards
 
-Overview pages may contain transactional cards, such as table, list, stack, quick view cards, and analytical chart cards such as line, bubble, donut, column, and bullet chart cards.
+Overview pages in SAP Fiori elements for OData V4 may contain transactional cards, such as table, list, stack, quick view cards, and analytical chart cards such as line, bubble, donut, column, and bullet chart cards.
 
 
 

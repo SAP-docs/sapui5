@@ -5,7 +5,7 @@
 You can use extension points to add custom actions to the list report page and the object page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
 
 

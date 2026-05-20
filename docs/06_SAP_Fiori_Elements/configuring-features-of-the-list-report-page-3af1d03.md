@@ -2,5 +2,5 @@
 
 # Configuring Features of the List Report Page
 
-You can set up various elements of the list report page, such as table type and filter bar, with annotations and configurations.
+You can set up various elements of the list report page, such as table type and filter bar, with annotations and configurations in SAP Fiori elements for OData V2.
 

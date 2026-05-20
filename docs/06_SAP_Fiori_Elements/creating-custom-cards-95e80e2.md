@@ -2,12 +2,12 @@
 
 # Creating Custom Cards
 
-In overview pages, you can create custom cards and integrate them into the overview page application.
+You can create custom cards and integrate them into the overview page application.
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Creating Custom Cards](creating-custom-cards-6d260f7.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Creating Custom Cards](creating-custom-cards-6d260f7.md).
 
 
 

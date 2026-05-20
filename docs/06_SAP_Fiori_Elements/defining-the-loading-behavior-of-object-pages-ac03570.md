@@ -2,7 +2,7 @@
 
 # Defining the Loading Behavior of Object Pages
 
-You can configure the loading behavior of object pages using request groups and lazy loading.
+You can configure the loading behavior of object pages using request groups and lazy loading in SAP Fiori elements for OData V4.
 
 
 

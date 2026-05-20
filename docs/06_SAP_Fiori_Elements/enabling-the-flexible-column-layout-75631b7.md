@@ -5,7 +5,7 @@
 You can use the flexible column layout to show two or three columns on a single page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md).
 
 In a flexible column layout, a list of items can be shown in the first column, and when you choose an item to see its details, the related object page is shown in the second or third column. You can expand the column you want to focus on, switch between different layouts, and view the column on the right-hand side in full-screen mode.
 

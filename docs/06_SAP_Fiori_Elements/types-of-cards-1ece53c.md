@@ -7,7 +7,7 @@ Overview pages may contain transactional cards, such as table, list, stack, quic
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Types of Cards](types-of-cards-8ed3f76.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Types of Cards](types-of-cards-8ed3f76.md).
 
 
 

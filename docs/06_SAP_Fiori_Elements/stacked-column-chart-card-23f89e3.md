@@ -5,7 +5,7 @@
 You can render the chart as a stacked column chart. Similar to a column chart, its measures are stacked on top of each other irrespective of role.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Stacked Column Chart](stacked-column-chart-c54b815.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Stacked Column Chart](stacked-column-chart-c54b815.md).
 
   
   

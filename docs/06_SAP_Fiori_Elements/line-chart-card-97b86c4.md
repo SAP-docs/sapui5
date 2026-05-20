@@ -2,10 +2,10 @@
 
 # Line Chart Card
 
-Line charts display information as a series of data points connected by straight-line segments.
+You can render the chart as a line chart to display information as a series of data points connected by straight-line segments.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Line Chart](line-chart-3e8c6ff.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Line Chart](line-chart-3e8c6ff.md).
 
   
   

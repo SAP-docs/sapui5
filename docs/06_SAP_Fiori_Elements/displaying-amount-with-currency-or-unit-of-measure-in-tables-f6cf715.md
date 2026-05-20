@@ -2,7 +2,7 @@
 
 # Displaying Amount with Currency or Unit of Measure in Tables
 
-You can configure the display of decimal values in unit-of-measure fields.
+You can configure the display of decimal values in unit-of-measure fields in SAP Fiori elements for OData V4.
 
 In a table in display mode, amounts with a currency or a unit of measure are aligned as follows:
 

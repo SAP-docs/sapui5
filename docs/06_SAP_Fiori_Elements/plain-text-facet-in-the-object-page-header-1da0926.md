@@ -2,10 +2,10 @@
 
 # Plain Text Facet in the Object Page Header
 
-You can add a plain text facet to the object page header.
+You can add a plain text facet to the object page header in SAP Fiori elements for OData V4.
 
 > ### Note:  
-> This topic describes how to use the building block within SAP Fiori elements object pages. If the functionality isn't available when you use the building block in other floorplans, custom pages, or custom sections, you can try achieving the functionality through other means, such as the following:
+> This topic describes how to use the feature within SAP Fiori elements object pages. The feature isn't available when you use the building block in other floorplans, custom pages, or custom sections, but you can try achieving the functionality through other means, such as the following:
 > 
 > -   Properties or methods exposed by the building block
 > 
@@ -23,7 +23,7 @@ This is displayed as shown below within the object page header:
   
 **Plain Text Facet in Object Header**
 
-![](images/Object_Page_Header_Plain_Text_Facet_c2970f8.png "Plain Text Facet in Object Header")
+![Screenshot of an object page header with multiple facets. A frame surrounds a facet labeled Product Description with two lines of plain text below, saying Optimum Hi-Resolution max. 1920 x 1080 @ 85Hz, Dot Pitch: 0.27mm.](images/Object_Page_Header_Plain_Text_Facet_c2970f8.png "Plain Text Facet in Object Header")
 
 
 
@@ -77,7 +77,7 @@ The following code samples show an example of how to create your annotations for
 
 
 
-### **UI.FieldGroup**
+### `UI.FieldGroup`
 
 > ### Sample Code:  
 > XML Annotation
@@ -131,7 +131,7 @@ The following code samples show an example of how to create your annotations for
 
 ### `UI.MultilineText`
 
-In addition, you must include a property annotation to indicate that this property contains a multiline text, as shown below:
+If you want to configure a text field for multi-line text, use the `UI.MultilineText` annotation as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -172,27 +172,29 @@ In addition, you must include a property annotation to indicate that this proper
 
 ### CDS Annotations
 
-If desired, you can set this up using a CDS annotation, as shown below:
+If desired, you can set this up using a CDS annotation as shown below:
 
-**CDS Annotation Definition**
+> ### Sample Code:  
+> CDS Annotation Definition
+> 
+> ```xml
+> 
+> //@Scope: #ELEMENT
+> 
+> multiLineText: Boolean default true;
+> 
+> ```
 
-```xml
-
-//@Scope: #ELEMENT
-
-multiLineText: Boolean default true;
-
-```
-
-**CDS Source**
-
-```xml
-
-@UI.multiLineText
-
-Description: String;
-
-```
+> ### Sample Code:  
+> CDS Source
+> 
+> ```xml
+> 
+> @UI.multiLineText
+> 
+> Description: String;
+> 
+> ```
 
 
 
@@ -202,5 +204,5 @@ Description: String;
 **Related Information**  
 
 
-[Header Facets](header-facets-17dbd5b.md "You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.")
+[Header Facets](header-facets-17dbd5b.md "You can add various types of facets to your object page header in SAP Fiori elements for OData V4.")
 

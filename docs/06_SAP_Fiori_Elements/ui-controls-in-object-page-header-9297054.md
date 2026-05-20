@@ -2,5 +2,5 @@
 
 # UI Controls in Object Page Header
 
-You can use annotations to set up UI controls in the object page header.
+You can use annotations to set up UI controls in the object page header in SAP Fiori elements for OData V2.
 

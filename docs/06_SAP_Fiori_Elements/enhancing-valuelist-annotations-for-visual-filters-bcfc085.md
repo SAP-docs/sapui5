@@ -7,11 +7,11 @@ You can specify a value help entity for a field and maintain the value help conf
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md).
 
 
 
-These annotations can be used to control the rendering of the value help, such as the fields shown inside the value help, or the filters that act upon the value help. For more information, see[In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-32bfc09.md).
+These annotations can be used to control the rendering of the value help, such as the fields shown inside the value help, or the filters that act upon the value help. For more information, see [In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-32bfc09.md).
 
 You must enhance the value list annotation corresponding to a filter field with `PresentationVariantQualifier` as shown in the sample code below to ensure that the value list annotation \(and therefore the filter field\) is considered for the visual filter rendering. The value for this term must point to a `UI.PresentationVariant` that contains the `UI.Chart` annotation required to render the visual filter.
 

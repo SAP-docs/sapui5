@@ -190,5 +190,5 @@ This highlights the *Price* column in our example table, as shown below:
 
 ## Grouping in a Table
 
-For more information about the related data binding, see [Sorting, Grouping, and Filtering for List Binding](../04_Essentials/sorting-grouping-and-filtering-for-list-binding-ec79a5d.md).
+For more information about the related data binding, see [Sorting, Grouping, and Filtering for List Binding](../04_Essentials/sorting-grouping-and-filtering-for-list-binding-and-tree-binding-ec79a5d.md).
 

@@ -2,7 +2,7 @@
 
 # Handling of the `preferredMode` Parameter
 
-You can use the `preferredMode` parameter to configure the mode in which the object page is initially launched.
+You can use the `preferredMode` parameter to configure the mode in which the object page is initially launched in SAP Fiori elements for OData V4.
 
 The `preferredMode` parameter supports multiple values that allow you to specify the mode in which the object page is launched. For more information, see the separate sections in this topic.
 
@@ -170,9 +170,9 @@ If an application is configured with the startup parameter `preferredMode=edit` 
 **Related Information**  
 
 
-[Actions on the List Report Page](actions-on-the-list-report-page-993e99e.md "You can configure various action buttons on the list report page.")
+[Actions on the List Report Page](actions-on-the-list-report-page-993e99e.md "You can configure various action buttons on the list report page in SAP Fiori elements for OData V4.")
 
-[Actions](actions-cbf16c5.md "You can use generic actions provided by SAP Fiori elements and implement application-specific actions using annotations or extension points.")
+[Actions](actions-cbf16c5.md "You can use generic actions provided by SAP Fiori elements for OData V4 and implement application-specific actions using annotations or extension points.")
 
-[Configuring Navigation](configuring-navigation-a424275.md "You can configure the SAP Fiori elements navigation within an app (internal navigation) and the navigation to and from an app (external navigation).")
+[Configuring Navigation](configuring-navigation-a424275.md "You can configure the navigation within an app (internal navigation) and the navigation to and from an app (external navigation) in SAP Fiori elements for OData V4.")
 

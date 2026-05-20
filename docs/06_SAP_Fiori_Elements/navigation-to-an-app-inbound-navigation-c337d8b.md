@@ -2,7 +2,7 @@
 
 # Navigation to an App \(Inbound Navigation\)
 
-You can configure navigation to an SAP Fiori elements floorplan \(inbound navigation\).
+You can configure navigation to a floorplan \(inbound navigation\) in SAP Fiori elements for OData V4.
 
 When navigating to an SAP Fiori elements application that has a filter bar \(with the exception of the overview page\), the incoming context is processed and the filter bar populated. This overrides the default variant/filter settings of the SAP Fiori elements application.
 

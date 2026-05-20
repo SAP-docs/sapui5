@@ -7,7 +7,7 @@ You can add and configure various attributes of the list card.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring List Card](configuring-list-card-7f65716.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the List Card](configuring-the-list-card-7f65716.md).
 
 
 

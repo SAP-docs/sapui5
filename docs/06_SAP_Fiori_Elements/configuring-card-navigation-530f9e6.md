@@ -2,7 +2,7 @@
 
 # Configuring Card Navigation
 
-You can configure internal and external navigation in cards.
+In SAP Fiori elements for OData V4, you can configure internal and external navigation in cards.
 
 
 

@@ -140,7 +140,7 @@ You can create a completely new theme by writing CSS files if you meet the follo
 
 
 
-### Don'ts ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+### Don'ts ![No](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 -   **Don't hard-code colors** or metrics in custom CSS
 -   **Don't use deprecated LESS features** in new development
@@ -158,7 +158,7 @@ For detailed implementation guidance, see the specialized topics below this topi
 
 [Available Themes](available-themes-da0d2e7.md "Provides a list of themes and their names.")
 
-[Supported Combinations of Themes and Libraries](../02_Read-Me-First/supported-combinations-of-themes-and-libraries-38ff8c2.md "This chapter gives an overview of the possible combinations of themes and libraries for the SAPUI5 versions that are still in maintenance.")
+[Supported Themes](../02_Read-Me-First/supported-themes-38ff8c2.md "This chapter gives an overview of the supported themes.")
 
 [UI Theme Designer](https://help.sap.com/viewer/product/UI_THEME_DESIGNER/Cloud/en-US)
 

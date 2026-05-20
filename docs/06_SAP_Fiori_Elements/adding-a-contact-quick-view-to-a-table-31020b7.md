@@ -5,7 +5,7 @@
 You can enable a contact quick view in a table with the `@Communication.Contact` annotation.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adding a Contact Quick View to a Table](adding-a-contact-quick-view-to-a-table-677fbde.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adding a Contact Quick View to a Table](adding-a-contact-quick-view-to-a-table-677fbde.md).
 
 The quick view can be displayed from the list report page and the object page, as shown in the following screenshot:
 

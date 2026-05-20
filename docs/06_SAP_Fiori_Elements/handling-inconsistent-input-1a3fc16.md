@@ -5,7 +5,7 @@
 Get to know how SAP Fiori apps handle inconsistent input.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Handling Inconsistent Input](handling-inconsistent-input-486e5b5.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Handling Inconsistent Input](handling-inconsistent-input-486e5b5.md).
 
 Users might enter data that is so inconsistent that the system cannot store it. For example, if they entered characters in a number field or entered more characters than the field length allows. The system behavior is described in the following sections.
 

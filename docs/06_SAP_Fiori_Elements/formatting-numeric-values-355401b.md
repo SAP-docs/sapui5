@@ -7,7 +7,7 @@ You can configure the number of displayed decimal points by using information pr
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Formatting Numeric Values](formatting-numeric-values-735e518.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Formatting Numeric Values](formatting-numeric-values-735e518.md).
 
 
 

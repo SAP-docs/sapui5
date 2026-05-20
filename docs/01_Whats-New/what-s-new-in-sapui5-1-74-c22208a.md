@@ -1186,7 +1186,7 @@ SAP Fiori Elements
 
 -   **Smart Multi-Input Control in Smart Tables** 
 
-    It is now possible to include a smart multi-input field in a smart table on an object page. For more information, see [Using the Multi-Input Field on the Object Page](../06_SAP_Fiori_Elements/using-the-multi-input-field-on-the-object-page-04ff5b1.md).
+    It is now possible to include a smart multi-input field in a smart table on an object page. For more information, see [Using the Multi-Input Field](../06_SAP_Fiori_Elements/using-the-multi-input-field-04ff5b1.md).
 
 -   **Flexible Column Layout: Displayed Item on Object Page Highlighted in Master List**
 
@@ -1268,6 +1268,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.146](what-s-new-in-sapui5-1-146-6ccfe05.md "With this release SAPUI5 is upgraded from version 1.145 to 1.146.")
 
 [What's New in SAPUI5 1.145](what-s-new-in-sapui5-1-145-7676a2a.md "With this release SAPUI5 is upgraded from version 1.144 to 1.145.")
 

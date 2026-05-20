@@ -2,7 +2,7 @@
 
 # Analytical Cards
 
-You can use the analytical cards to view data in a variety of chart formats.
+In SAP Fiori elements for OData V4, you can use the analytical cards to view data in a variety of chart formats.
 
 
 

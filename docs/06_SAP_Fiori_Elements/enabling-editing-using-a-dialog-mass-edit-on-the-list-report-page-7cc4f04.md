@@ -2,7 +2,7 @@
 
 # Enabling Editing Using a Dialog \(Mass Edit\) on the List Report Page
 
-You can edit a single object or multiple objects using a dialog on the list report page.
+You can edit a single object or multiple objects using a dialog on the list report page in SAP Fiori elements for OData V2.
 
 > ### Note:  
 > For general information about enabling **Mass Edit**, see [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-e67782c.md).

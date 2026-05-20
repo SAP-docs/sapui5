@@ -7,7 +7,7 @@ You can develop reuse components that are to be included as sections in object p
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Developing Reuse Components](developing-reuse-components-6314fcd.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Developing Reuse Components](developing-reuse-components-6314fcd.md).
 
 
 

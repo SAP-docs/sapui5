@@ -40,6 +40,6 @@ To solve the issue, you have the following options:
 
     If this does not solve the issue, check for inline styles that are applied to the element in the HTML code. You can also try to isolate the control from the app to see whether there is an issue with the control instead of a collision of styles.
 
--   Check whether the theme you that you are using is supported in combination with the libraries that you are using in your app. For more information, see [Supported Combinations of Themes and Libraries](../02_Read-Me-First/supported-combinations-of-themes-and-libraries-38ff8c2.md) and [Deprecated Themes and Libraries](../02_Read-Me-First/deprecated-themes-and-libraries-a87ca84.md).
+-   Check whether the theme you that you are using is supported in combination with the libraries that you are using in your app. For more information, see [Supported Themes](../02_Read-Me-First/supported-themes-38ff8c2.md) and [Deprecated Themes and Libraries](../02_Read-Me-First/deprecated-themes-and-libraries-a87ca84.md).
 
 

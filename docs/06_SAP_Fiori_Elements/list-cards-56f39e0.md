@@ -2,7 +2,7 @@
 
 # List Cards
 
-List cards display lists of records according to the configuration in the `com.sap.vocabularies.UI.v1.LineItem` term. List cards display up to six fields of data in each list item.
+In SAP Fiori elements for OData V4, you can use list cards to display lists of records according to the configuration in the `com.sap.vocabularies.UI.v1.LineItem` term. List cards display up to six fields of data in each list item.
 
 
 
@@ -23,6 +23,8 @@ For each of these types you can choose from two flavors:
 The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the application manifest file by setting the `annotationPath` property with a qualifier, as shown in the example below. If the `annotationPath` property is not configured, the `com.sap.vocabularies.UI.v1.LineItem` term, without a qualifier, is used.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "sap.ovp": {
 >     ...
@@ -37,7 +39,8 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the applicat
 >                 "listFlavor": "bar",
 >                 "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#bar",
 >                 "category": "{{card04_category}}",
->                 "entitySet": "Products"
+>                 "entitySet": "Products",
+>                 "enableTextWrapping": true //The default value is false
 >             }
 >         },
 >         ...
@@ -48,6 +51,8 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the applicat
 By default, the fields in the list card are mapped to the `com.sap.vocabularies.UI.v1.LineItem` annotation. Any other collection of `DataFieldAbstract` can be used by setting the `annotationPath` property. `LineItem` is a collection of `DataFieldAbstract` records. You can use different `com.sap.vocabularies.UI.v1.LineItem` annotations for different card instances of the same entity type by using different qualifiers and setting the `annotationPath` property with the qualifier in the card configuration. For example `com.sap.vocabularies.UI.v1.LineItem#Qualifier1`.
 
 At runtime, the `DataField` records are sorted according to the optional `Importance (com.sap.vocabularies.UI.v1.ImportanceType)` annotation. `DataField` entries are sorted according to importance and their order of entry.
+
+You can control how text is displayed in list cards by using the `enableTextWrapping` property. If you set `"enableTextWrapping" : true`, then at runtime, text in the table area is wrapped instead of being truncated. The default value is `false`. This property can be defined at the card level in the `manifest.json` file. You can also enable the text wrapping feature using the *Adapt UI* option.
 
 
 
@@ -194,7 +199,7 @@ To display images or icons in the condensed list card, set the property `"imageS
 **Related Information**  
 
 
-[Configuring List Card](configuring-list-card-7f65716.md "You can add and configure various attributes of the list card.")
+[Configuring the List Card](configuring-the-list-card-7f65716.md "You can add and configure various attributes of the list card in SAP Fiori elements for OData V4.")
 
-[Configuring the List Area](configuring-the-list-area-f57373d.md "You can add values and navigation properties to the list area.")
+[Configuring the List Area](configuring-the-list-area-f57373d.md "You can add values and navigation properties to the list area in SAP Fiori elements for OData V4.")
 

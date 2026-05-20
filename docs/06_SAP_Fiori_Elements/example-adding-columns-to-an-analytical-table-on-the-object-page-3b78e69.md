@@ -2,7 +2,7 @@
 
 # Example: Adding Columns to an Analytical Table on the Object Page
 
-You can add custom columns to your object page analytical table using view extensions.
+You can add custom columns to your object page analytical table using view extensions in SAP Fiori elements for OData V2.
 
 
 

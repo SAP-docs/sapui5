@@ -2,7 +2,7 @@
 
 # Configuring Tables
 
-You can use the annotations and entries in the `manifest.json` file to control various aspects of tables.
+You can use the annotations and entries in the `manifest.json` file to control various aspects of tables in SAP Fiori elements for OData V4.
 
 
 
@@ -90,7 +90,7 @@ You can use the `UI.LineItem` annotation to configure a table. It can also be pa
 **Related Information**  
 
 
-[Setting the Default Column Width](setting-the-default-column-width-a765253.md "You can customize the width of a column defined in a line item using the com.sap.vocabularies.HTML5.v1.CssDefaults UI annotation.")
+[Setting the Default Column Width](setting-the-default-column-width-a765253.md "You can customize the width of a column defined in a line item using the com.sap.vocabularies.HTML5.v1.CssDefaults UI annotation in SAP Fiori elements for OData V4.")
 
-[Extension Points for Tables](extension-points-for-tables-d525522.md "You can use extension points to enhance tables in SAP Fiori elements-based apps.")
+[Extension Points for Tables](extension-points-for-tables-d525522.md "You can use extension points to enhance tables in apps based on SAP Fiori elements for OData V4.")
 

@@ -2,7 +2,7 @@
 
 # Example: Applying Custom Logic When a Table is Loaded or Refreshed
 
-You can apply custom logic when loading or refreshing tables using the `onBeforeRebindTableExtension` controller extension point.
+You can apply custom logic when loading or refreshing tables using the `onBeforeRebindTableExtension` controller extension point in SAP Fiori elements for OData V2.
 
 
 

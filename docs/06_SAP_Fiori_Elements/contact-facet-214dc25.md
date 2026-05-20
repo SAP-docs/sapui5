@@ -2,7 +2,7 @@
 
 # Contact Facet
 
-You can use the `@Communication.Contact` annotation to enable a quick view contact in the header form facet.
+You can use the `@Communication.Contact` annotation to enable a quick view contact in the header form facet in SAP Fiori elements for OData V2.
 
 ![](images/Object_Page_Header_Facet_abf0b26.jpg)
 

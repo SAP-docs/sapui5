@@ -5,7 +5,7 @@
 You can render header fields as data points.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Data Points](data-points-c2a389a.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Data Points](data-points-c2a389a.md).
 
 A data point represents a single point of data. It is typically a number but can also be textual, for example, a status value.
 

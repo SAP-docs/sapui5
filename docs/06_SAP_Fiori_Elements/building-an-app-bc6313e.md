@@ -2,10 +2,10 @@
 
 # Building an App
 
-You can build UI apps with SAP Fiori elements.
+You can build UI apps with SAP Fiori elements for OData V2.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Building an App](building-an-app-9834a0a.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Building an App](building-an-app-9834a0a.md).
 
 You can build your apps using [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code.
 

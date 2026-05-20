@@ -7,7 +7,7 @@ You can render a data point as a key value facet.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Key Value Facet in the Object Page Header](key-value-facet-in-the-object-page-header-c312735.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Displaying a Field as a Key Value Facet or a Key Performance Indicator \(KPI\)](displaying-a-field-as-a-key-value-facet-or-a-key-performance-indicator-kpi-c312735.md).
 
 
 

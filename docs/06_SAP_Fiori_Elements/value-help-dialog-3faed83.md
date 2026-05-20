@@ -2,7 +2,7 @@
 
 # Value Help Dialog
 
-You can configure the components of the value help dialog.
+You can configure the components of the value help dialog in SAP Fiori elements for OData V4.
 
 A field configured with value help typically allows users to select values using a value help dialog. A value help dialog is useful when the associated value help entity contains a large dataset \(for example, more than 1000 items\), or when users need to search using multiple attributes, such as city and company name.
 

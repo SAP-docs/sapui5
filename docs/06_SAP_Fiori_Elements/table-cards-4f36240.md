@@ -2,19 +2,19 @@
 
 # Table Cards
 
-A table card displays a list of records in a 3-column table layout.
+You can use a table card to display a list of records in a 3-column table layout.
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Table Cards](table-cards-167bf7c.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Table Cards](table-cards-167bf7c.md).
 
 
 
 > ### Note:  
 > \(Optional\) You can configure smart links in table cards to access quick links.
 
-![](images/Table_Cards_200eb7f.jpg)
+![](images/Table_Cards_200eb7f.png)
 
 
 
@@ -84,36 +84,37 @@ You can display the unit of measure next to numeric values by providing the `sap
 
 Use one of the following options:
 
-Option 1: Define `sap:unit` in the metadata
+-   Option 1: Define `sap:unit` in the metadata
 
-```
-<Property 
-    Name="CurrencyCode" 
-    Type="Edm.String" 
-    MaxLength="5" 
-    sap:label="Currency" 
-    sap:updatable="false" 
-    sap:semantics="currency-code" 
-/>
-<Property 
-    Name="GrossAmount" 
-    Type="Edm.Decimal" 
-    Precision="16" 
-    Scale="3" 
-    sap:unit="CurrencyCode" 
-    sap:label="Gross Amt." 
-    sap:creatable="false" 
-    sap:updatable="false" 
-/>
-```
+    ```
+    <Property 
+        Name="CurrencyCode" 
+        Type="Edm.String" 
+        MaxLength="5" 
+        sap:label="Currency" 
+        sap:updatable="false" 
+        sap:semantics="currency-code" 
+    />
+    <Property 
+        Name="GrossAmount" 
+        Type="Edm.Decimal" 
+        Precision="16" 
+        Scale="3" 
+        sap:unit="CurrencyCode" 
+        sap:label="Gross Amt." 
+        sap:creatable="false" 
+        sap:updatable="false" 
+    />
+    ```
 
-Option 2: Define `Org.OData.Measures.V1.ISOCurrency` in annotations
+-   Option 2: Define `Org.OData.Measures.V1.ISOCurrency` in annotations
 
-```
-<Annotations Target="GWSAMPLE_BASIC.SalesOrder/GrossAmount">
-    <Annotation Term="Org.OData.Measures.V1.ISOCurrency" Path="CurrencyCode"/>
-</Annotations> 
-```
+    ```
+    <Annotations Target="GWSAMPLE_BASIC.SalesOrder/GrossAmount">
+        <Annotation Term="Org.OData.Measures.V1.ISOCurrency" Path="CurrencyCode"/>
+    </Annotations> 
+    ```
+
 
 
 
@@ -508,7 +509,7 @@ Annotation: `LineItem`
 Description: Configuring this annotation displays the table header title \(`Label` property\) and the corresponding values \(`Value` property\) for the row items.
 
 > ### Sample Code:  
-> Manifest Settings
+> `manifest.json`
 > 
 > ```
 > "sap.ovp": {
@@ -527,6 +528,7 @@ Description: Configuring this annotation displays the table header title \(`Labe
 >                 "subTitle": "per Supplier",
 >                 "valueSelectionInfo": "Value Selection Info",
 >                 "entitySet": "SalesShare",
+>                 "enableTextWrapping": true //The default value is false
 >                 "tabs": [
 >                     {
 >                         "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
@@ -535,7 +537,7 @@ Description: Configuring this annotation displays the table header title \(`Labe
 >                         "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line",
 >                         "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
 >                         "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
->                         "value": "{{dropdown_value2}}"
+>                         "value": "{{dropdown_value2}}",
 >                     },
 >                     {
 >                         "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
@@ -703,7 +705,8 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the `manifes
 >             "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line_without_trend",
 >             "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#line1",
 >             "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
->             "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line"
+>             "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line",
+>             "enableTextWrapping": true //The default value is false
 >         }
 >     },
 >     ...
@@ -720,6 +723,8 @@ If you set `"disableTableCardFlexibility": false`, then at runtime, table column
 
 > ### Note:  
 > If a `DataField` record points to a path that exists in a `DataPoint` target, it is skipped so that the property is not displayed more than once in the same table.
+
+You can control how text is displayed in table cards by using the `enableTextWrapping` property. If you set `"enableTextWrapping" : true`, then at runtime, text in the table area is wrapped instead of being truncated. The default value is `false`. This property can be defined at the card level in the `manifest.json` file. You can also enable the text wrapping feature using the *Adapt UI* option.
 
 
 

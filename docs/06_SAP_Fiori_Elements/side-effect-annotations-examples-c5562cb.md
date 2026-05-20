@@ -5,7 +5,7 @@
 See some examples about annotating side effects.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Side Effect Annotations: Examples](side-effect-annotations-examples-61cf21d.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Side Effect Annotations: Examples](side-effect-annotations-examples-61cf21d.md).
 
 > ### Example:  
 > Using `TriggerAction` to calculate the `GrossPrice` and `NetPriceIncludingTax` through the function import `CalculatePriceIncludingRegionalTax`, when the source property `UnitPrice` or `ProductQuantity` is modified. The side effect is triggered only when `UnitPrice` and `ProductQuantity` are successfully validated.

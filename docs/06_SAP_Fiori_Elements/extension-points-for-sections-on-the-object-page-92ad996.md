@@ -2,7 +2,7 @@
 
 # Extension Points for Sections on the Object Page
 
-You define application-specific sections in the form of annotations. However, in some cases you might need to integrate components into the front end, for example charts or attachments.
+You define application-specific sections using annotations. However, if needed, you can also integrate components such as charts or attachments into the front end inSAP Fiori elements for OData V4.
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).
@@ -121,7 +121,7 @@ Description
 <tr>
 <td valign="top">
 
-template
+`template`
 
 </td>
 <td valign="top">
@@ -131,14 +131,14 @@ template
 </td>
 <td valign="top">
 
-Defining the target fragment follows the syntax of defining a fragment through Fragment.load
+Defining the target fragment follows the syntax of defining a fragment through `Fragment.load`.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-title\*
+`title`\*
 
 </td>
 <td valign="top">
@@ -148,14 +148,14 @@ title\*
 </td>
 <td valign="top">
 
-Title of the section \(usually a binding path to an i18n text\)
+Title of the section \(usually a binding path to an i18n text\).
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-position
+`position`
 
 </td>
 <td valign="top">
@@ -172,24 +172,24 @@ Defines the position of the section relative to other sections.
 <tr>
 <td valign="top">
 
-position.placement
+`position.placement`
 
 </td>
 <td valign="top">
 
-"Before" | "After"
+`"Before"` | `"After"`
 
 </td>
 <td valign="top">
 
-Defines the placement: either "Before" or "After" \(default\) the anchor section.
+Defines the placement: either `"Before"` or `"After"` \(default\) the anchor section.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-position.anchor\*
+`position.anchor`\*
 
 </td>
 <td valign="top">
@@ -206,7 +206,7 @@ The key of another section to be used as the placement anchor. Sections defined 
 <tr>
 <td valign="top">
 
-visible
+`visible`
 
 </td>
 <td valign="top">
@@ -216,14 +216,14 @@ Boolean | Binding Expression
 </td>
 <td valign="top">
 
-Defines if the section is displayed in the body of the object page. The default setting is true.
+Defines if the section is displayed in the body of the object page. The default setting is `true`.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-actions
+`actions`
 
 </td>
 <td valign="top">
@@ -240,17 +240,17 @@ Allows you to add actions placed by the framework to the custom \(sub-\)sections
 <tr>
 <td valign="top">
 
-isPartOfPreview
+`isPartOfPreview`
 
 </td>
 <td valign="top">
 
-true | false
+`true` | `false`
 
 </td>
 <td valign="top">
 
-Defines if the section is hidden and the Show More and Show Less buttons are displayed as described in [Showing and Hiding Content in Object Page Facets](showing-and-hiding-content-in-object-page-facets-9fcea86.md). The default setting is true and the section is displayed.
+Defines if the section is hidden and the *Show More* and *Show Less* buttons are displayed as described in [Showing and Hiding Content in Object Page Facets](showing-and-hiding-content-in-object-page-facets-9fcea86.md). The default setting is `true` and the section is displayed.
 
 </td>
 </tr>

@@ -120,5 +120,5 @@ Technical Name
 </tr>
 </table>
 
-For more information about the support of themes, see [Supported Combinations of Themes and Libraries](../02_Read-Me-First/supported-combinations-of-themes-and-libraries-38ff8c2.md).
+For more information about the support of themes, see [Supported Themes](../02_Read-Me-First/supported-themes-38ff8c2.md).
 

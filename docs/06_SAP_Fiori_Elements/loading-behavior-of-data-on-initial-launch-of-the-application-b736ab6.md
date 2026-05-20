@@ -5,7 +5,7 @@
 You can configure the loading behavior of SAP Fiori apps.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
 
 Some of the factors are initial configuration of the variant, initial loading configuration for the *Standard* variant as specified in the manifest by the application developers, or initial launch of the application with a navigation context.
 

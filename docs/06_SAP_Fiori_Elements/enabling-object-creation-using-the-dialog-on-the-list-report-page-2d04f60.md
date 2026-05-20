@@ -5,7 +5,7 @@
 You can enable the creation of objects with a dialog.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enabling Object Creation Using the Dialog on the List Report Page](enabling-object-creation-using-the-dialog-on-the-list-report-page-ceb9284.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enabling Object Creation Using the Dialog on the List Report Page](enabling-object-creation-using-the-dialog-on-the-list-report-page-ceb9284.md).
 
 ![](images/Create_Object_Dialog_in_List_Report_ac4a875.png)
 

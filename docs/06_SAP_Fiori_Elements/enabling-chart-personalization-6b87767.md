@@ -7,7 +7,7 @@ You can use personalization to modify the settings of a chart.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enabling Chart Personalization](enabling-chart-personalization-7d41330.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enabling Chart Personalization](enabling-chart-personalization-7d41330.md).
 
 
 

@@ -5,7 +5,7 @@
 You can modify the illustrated message displayed when no data is found for a table or a chart.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md).
 
 The illustration, the title of the message, and its description depend on the situation in which they are displayed: no items created within the table or chart, no applied filters, or search query.
 

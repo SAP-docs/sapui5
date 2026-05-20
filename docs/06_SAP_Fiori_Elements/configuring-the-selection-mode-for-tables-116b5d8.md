@@ -2,7 +2,7 @@
 
 # Configuring the Selection Mode for Tables
 
-You can configure single or multiple selection in tables while triggering table toolbar actions that require context.
+You can configure single or multiple selection in tables while triggering table toolbar actions that require context in SAP Fiori elements for OData V4.
 
 You can make the table rows selectable or non-selectable based on specific settings. You can also allow single selection or multiple selection of rows in a table by setting appropriate values for the `selectionMode` property. The following values are possible:
 

@@ -5,7 +5,7 @@
 You can configure global side effects.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Using Global Side Effects](using-global-side-effects-955ae31.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Using Global Side Effects](using-global-side-effects-955ae31.md).
 
 > ### Note:  
 > Global side effects are only applicable to draft-enabled applications.

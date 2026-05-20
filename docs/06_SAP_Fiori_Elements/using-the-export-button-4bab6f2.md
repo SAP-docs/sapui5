@@ -2,7 +2,7 @@
 
 # Using the *Export* Button
 
-You can export a table into a spreadsheet or to PDF.
+You can export a table into a spreadsheet or to PDF when using SAP Fiori elements for OData V4.
 
 
 

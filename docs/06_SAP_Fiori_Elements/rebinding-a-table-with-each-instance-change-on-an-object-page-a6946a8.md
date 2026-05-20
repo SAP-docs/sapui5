@@ -2,7 +2,7 @@
 
 # Rebinding a Table with Each Instance Change on an Object Page
 
-You can rebind a table on an object page on each instance change.
+You can rebind a table on an object page on each instance change in SAP Fiori elements for OData V2.
 
 
 
@@ -97,5 +97,5 @@ With the above steps, the table rebinds every time the object page instance is s
 **Related Information**  
 
 
-[Defining the Loading Behavior of Object Page Subsections](defining-the-loading-behavior-of-object-page-subsections-6b84249.md "You can define the loading behavior of subsections in an object page in the manifest settings.")
+[Defining the Loading Behavior of Object Page Subsections](defining-the-loading-behavior-of-object-page-subsections-6b84249.md "You can define the loading behavior of subsections in an object page in the manifest settings in SAP Fiori elements for OData V2.")
 

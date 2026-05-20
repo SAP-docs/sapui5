@@ -5,7 +5,7 @@
 You can enable the mass edit feature to allow users to simultaneously change multiple objects that share the same editable properties.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md).
 
 Mass editing allows users to simultaneously change multiple objects that share the same editable properties. The values that are changed within the mass edit dialog are applied to all selected records that are editable.
 

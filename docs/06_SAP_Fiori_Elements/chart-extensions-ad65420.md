@@ -2,7 +2,7 @@
 
 # Chart Extensions
 
-You can define custom actions for a chart by configuring the annotation and `manifest.json` file.
+You can define custom actions for a chart by configuring the annotation and `manifest.json` file in SAP Fiori elements for OData V2.
 
 
 
@@ -51,5 +51,5 @@ sap.ui.define([], function() {
 **Related Information**  
 
 
-[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your app.")
+[Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "You can make use of advanced configurations and extensions in your SAP Fiori elements for OData V2 app.")
 

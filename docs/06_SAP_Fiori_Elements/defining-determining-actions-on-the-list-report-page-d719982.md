@@ -2,7 +2,7 @@
 
 # Defining Determining Actions on the List Report Page
 
-You can add a determining action button to the footer of the list report page.
+You can add a determining action button to the footer of the list report page in SAP Fiori elements for OData V2.
 
 > ### Recommendation:  
 > Using determining actions on the list report page is deprecated. SAP Fiori elements supports this feature only for compatibility reasons.

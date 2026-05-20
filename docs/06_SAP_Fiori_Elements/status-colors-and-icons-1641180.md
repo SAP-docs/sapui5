@@ -2,7 +2,7 @@
 
 # Status Colors and Icons
 
-You can define status colors and icons.
+You can define status colors and icons in SAP Fiori elements for OData V4.
 
 
 

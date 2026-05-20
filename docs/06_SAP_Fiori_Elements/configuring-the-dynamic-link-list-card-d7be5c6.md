@@ -2,12 +2,12 @@
 
 # Configuring the Dynamic Link List Card
 
-Allows you to display data such as links, images, and icons in the form of list items.
+You can configure a dynamic link list card to display data such as links, images, and icons in the form of list items.
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring the Dynamic Link List Card](configuring-the-dynamic-link-list-card-675c514.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring the Dynamic Link List Card](configuring-the-dynamic-link-list-card-675c514.md).
 
 
 

@@ -2,7 +2,7 @@
 
 # Tables
 
-You can configure the appearance, interactivity, and loading behavior of tables..
+You can configure the appearance, interactivity, and loading behavior of tables in SAP Fiori elements for OData V4.
 
 The following table types are available:
 
@@ -896,11 +896,11 @@ The `Table` building block also supports the copy to clipboard option. For more 
 **Related Information**  
 
 
-[Configuring Tables](configuring-tables-f4eb70f.md "You can use the annotations and entries in the manifest.json file to control various aspects of tables.")
+[Configuring Tables](configuring-tables-f4eb70f.md "You can use the annotations and entries in the manifest.json file to control various aspects of tables in SAP Fiori elements for OData V4.")
 
-[Setting the Table Type](setting-the-table-type-7f844f1.md "You can control which table type is rendered on the list report page and on the object page by configuring the manifest.json file and by using annotations.")
+[Setting the Table Type](setting-the-table-type-7f844f1.md "You can control which table type is rendered on the list report page and on the object page by configuring the manifest.json file and by using annotations in SAP Fiori elements for OData V4.")
 
 [Tables: Which One Should I Choose?](../10_More_About_Controls/tables-which-one-should-i-choose-148892f.md "The libraries provided by SAPUI5 contain various different table controls that are suitable for different use cases. The table below outlines which table controls are available, and what features are supported by each one.")
 
-[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md "You can configure single or multiple selection in tables while triggering table toolbar actions that require context.")
+[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md "You can configure single or multiple selection in tables while triggering table toolbar actions that require context in SAP Fiori elements for OData V4.")
 

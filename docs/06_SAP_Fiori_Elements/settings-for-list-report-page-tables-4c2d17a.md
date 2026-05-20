@@ -2,7 +2,7 @@
 
 # Settings for List Report Page Tables
 
-You can configure various aspects of the list report page table through annotations and in the `manifest.json` file.
+You can configure various aspects of the list report page table through annotations and in the `manifest.json` file in SAP Fiori elements for OData V2.
 
 
 

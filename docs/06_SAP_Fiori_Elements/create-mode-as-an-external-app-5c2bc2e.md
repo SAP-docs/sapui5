@@ -2,7 +2,7 @@
 
 # Create Mode as an External App
 
-You can enable the *Create* button to trigger navigation to an external SAP Fiori launchpad-based app which manages the creation of business objects.
+You can enable the *Create* button to trigger navigation to an external SAP Fiori launchpad-based app which manages the creation of business objects in SAP Fiori elements for OData V4.
 
 You can enable the *Create* button in the table settings by setting the creation mode to `External` and providing the outbound parameter as shown in the following sample code:
 

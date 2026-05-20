@@ -2,7 +2,7 @@
 
 # Refresh Entity Sets in `sap-keep-alive` Mode
 
-You can use the `sap-keep-alive` feature to ensure that a view persists in the view cache when navigating away from the application.
+You can use the `sap-keep-alive` feature to ensure that a view persists in the view cache when navigating away from the application in SAP Fiori elements for OData V4.
 
 The feature ensures improved performance when you reload the same view again once you navigate back to the application. For more information, see [Keeping SAPUI5 Apps Alive](https://help.sap.com/viewer/a7b390faab1140c087b8926571e942b7/202009.002/en-US/921e7e2e45494f9a87ae70624155fd7c.html).
 
@@ -184,5 +184,5 @@ This does **not** affect the default refresh behavior of the table entity set wh
 **Related Information**  
 
 
-[Refresh Dataset for Back Navigation when `sap-keep-alive` is Set to `True`](refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md "You can add a custom code to perform a refresh of specific data.")
+[Refresh Dataset for Back Navigation when `sap-keep-alive` is Set to `True`](refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md "You can add a custom code to perform a refresh of specific data in SAP Fiori elements for OData V4.")
 

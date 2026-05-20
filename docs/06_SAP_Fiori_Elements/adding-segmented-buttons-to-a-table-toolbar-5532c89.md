@@ -2,7 +2,9 @@
 
 # Adding Segmented Buttons to a Table Toolbar
 
-You can add segmented buttons to the toolbar to enable switching between the table content using a selection variant annotation.
+You can add segmented buttons to the toolbar in SAP Fiori elements for OData V4.
+
+Segmented buttons enable switching between the table content using a selection variant annotation.
 
 You can associate every button of the segmented buttons \(or every list item in the select box\) with a selection variant that filters the table according to the selection variant filters once a user has clicked it. This means that the user has multiple views in a single table of the object page. You can enable this feature for any table on the object page.
 
@@ -229,5 +231,5 @@ To hide the title of the table and show only the segmented buttons or the `selec
 **Related Information**  
 
 
-[Defining Multiple Views in a List Report Page Table - Single Table Mode](defining-multiple-views-in-a-list-report-page-table-single-table-mode-0d390fe.md "You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.")
+[Defining Multiple Views in a List Report Page Table - Single Table Mode](defining-multiple-views-in-a-list-report-page-table-single-table-mode-0d390fe.md "You can define multiple views of a table and display them in single table mode in SAP Fiori elements for OData V4. Users can switch between views using a segmented button.")
 

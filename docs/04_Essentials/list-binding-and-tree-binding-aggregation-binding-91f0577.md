@@ -1,33 +1,33 @@
 <!-- loio91f057786f4d1014b6dd926db0e91070 -->
 
-# List Binding \(Aggregation Binding\)
+# List Binding and Tree Binding \(Aggregation Binding\)
 
-List binding \(or aggregation binding\) is used to automatically create child controls according to model data.
+List binding and tree binding are both also referred to as aggregation binding. List binding binds to a flat list and is used to automatically create child controls according to model data. Tree binding works the same way but binds to hierarchical data.
 
-Let's say we would like to display the following JSON model data in a `sap.m.List`:
+Let's say we would like to display the following JSON model data in an `sap.m.List`:
 
 ```json
 {
-	companies : [
-		{
-			name : "Acme Inc.",
-			city: "Belmont",
-			state: "NH",
-			county: "Belknap",
-			revenue : "123214125.34"  
-		},{
-			name : "Beam Hdg.",
-			city: "Hancock",
-			state: "NH",
-			county: "Belknap",
-			revenue : "3235235235.23"  
-		},{
-			name : "Carot Ltd.",
-			city: "Cheshire",
-			state: "NH",
-			county: "Sullivan",
-			revenue : "Not Disclosed"  
-		}]
+    companies : [
+        {
+            name : "Acme Inc.",
+            city: "Belmont",
+            state: "NH",
+            county: "Belknap",
+            revenue : "123214125.34"  
+        },{
+            name : "Beam Hdg.",
+            city: "Hancock",
+            state: "NH",
+            county: "Belknap",
+            revenue : "3235235235.23"  
+        },{
+            name : "Carot Ltd.",
+            city: "Cheshire",
+            state: "NH",
+            county: "Sullivan",
+            revenue : "Not Disclosed"  
+        }]
 }
 ```
 
@@ -39,26 +39,26 @@ Let's say we would like to display the following JSON model data in a `sap.m.Lis
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.sample.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<List id="companyList" items="{
-		path: '/companies', 
-		templateShareable: false
-	}">
-		<items>
-			<StandardListItem
-				title="{name}"
-				description="{city}"
-			/>
-		</items>
-	</List>
+    controllerName="sap.ui.sample.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <List id="companyList" items="{
+        path: '/companies', 
+        templateShareable: false
+    }">
+        <items>
+            <StandardListItem
+                title="{name}"
+                description="{city}"
+            />
+        </items>
+    </List>
 </mvc:View>
 ```
 
 The `List` element has both an `items` attribute and a nested `items` element:
 
--   The attribute `items="{path: '/companies', templateShareable:false}"` binds the children of our json model's `companies` array to the list. This by itself is not enough to display the companies, instead it sets the parent path for the binding of all contained list items and their descendants. In addition you need to declare a nested element.
+-   The attribute `items="{path: '/companies', templateShareable:false}"` binds the children of our JSON model's `companies` array to the list. This by itself is not enough to display the companies, instead it sets the parent path for the binding of all contained list items and their descendants. In addition, you need to declare a nested element.
 
 -   The nested `items` element in our case contains a `StandardListItem`. This serves as a template for creating the individual list rows.
 
@@ -88,20 +88,22 @@ For more examples and details on when to use which list item control, see the va
 
 
 
-## List Binding in the JavaScript Code
+## List Binding in JavaScript Code
 
 You can define list binding directly in JavaScript either in the `settings` object in the constructor or by calling the `bindAggregation` method. List binding requires the definition of a template, which is cloned for each bound entry of the list. For each clone that is created, the binding context is set to the respective list entry, so that all bindings of the template are resolved relative to the entry. The aggregated elements are destroyed and recreated whenever the bound list in the data model is changed.
 
 To bind a list, you create a template or provide a factory function, which is then passed when defining the list binding itself. In the `settings` object, this looks as follows:
 
 ```js
-var oItemTemplate = new sap.ui.core.ListItem({text:"{name}"});
-oComboBox = new sap.m.ComboBox({
-	items: {
-		path: "/companies",      //no curly brackets here!
-		template: oItemTemplate,
-		templateShareable: false
-	}
+// ListItem imported from sap/ui/core/ListItem
+// ComboBox imported from sap/m/ComboBox
+const oItemTemplate = new ListItem({text:"{name}"});
+const oComboBox = new ComboBox({
+    items: {
+        path: "/companies",      //no curly brackets here!
+        template: oItemTemplate,
+        templateShareable: false
+    }
 });
 ```
 
@@ -110,18 +112,17 @@ A template is not necessarily a single control as shown in the example above, bu
 You can also define the list binding by using the `bindAggregation` method of a control:
 
 ```js
-var oItemTemplate = new sap.ui.core.ListItem({text:"{name}"});
 oComboBox.bindAggregation("items", {
-path: "/companies",
-template: oItemTemplate,
-templateShareable: false
+    path: "/companies",
+    template: oItemTemplate,
+    templateShareable: false
 });
 ```
 
 In addition, some controls have a typed binding method for lists that are likely to be bound by the application:
 
 ```js
-var oComboBox.bindItems("/companies", oItemTemplate);
+oComboBox.bindItems("/companies", oItemTemplate);
 ```
 
 To remove a list binding, you can use the `unbindAggregation` method:

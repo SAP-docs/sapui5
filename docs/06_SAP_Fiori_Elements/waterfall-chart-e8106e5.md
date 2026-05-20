@@ -2,7 +2,9 @@
 
 # Waterfall Chart
 
-You can render the chart as a waterfall chart to analyze a cumulative value.
+You can render the chart as a waterfall chart in SAP Fiori elements for OData V4.
+
+A waterfall chart lets you analyze a cumulative value.
 
   
   

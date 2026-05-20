@@ -7,7 +7,7 @@ You can render the chart as a a scatter chart, which allows you visualize the di
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Scatter Chart](scatter-chart-7471c1f.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Scatter Chart](scatter-chart-7471c1f.md).
 
 
 

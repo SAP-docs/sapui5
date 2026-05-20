@@ -5,7 +5,7 @@
 You can use the worklist page floorplan to display a collection of items that the user must process.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Worklist Page](worklist-page-d1d588f.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Worklist Page](worklist-page-d1d588f.md).
 
 Working through the item list usually involves reviewing details of the list items and taking action. In most cases, the user has to either complete or delegate a work item.
 

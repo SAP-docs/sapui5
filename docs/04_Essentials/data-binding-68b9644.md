@@ -144,7 +144,7 @@ ODataMetaModel V4
 </td>
 <td valign="top">
 
-![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![Not supported](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -161,12 +161,12 @@ ODataMetaModel
 </td>
 <td valign="top">
 
-![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![Not supported](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
-![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![Not supported](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
@@ -232,7 +232,7 @@ Resource model
 </td>
 <td valign="top">
 
-![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![Not supported](../03_Get-Started/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>

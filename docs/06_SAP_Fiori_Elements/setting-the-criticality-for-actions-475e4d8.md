@@ -5,7 +5,7 @@
 You can add criticality to an action button by using annotations.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Setting the Criticality for Actions](setting-the-criticality-for-actions-12f2ba2.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Setting the Criticality for Actions](setting-the-criticality-for-actions-12f2ba2.md).
 
 When you set the criticality to an action, the corresponding action button renders a semantic action button \(positive semantic and negative semantic\).
 

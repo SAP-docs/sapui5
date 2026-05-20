@@ -4,6 +4,9 @@
 
 To keep your apps future proof and up to date with the latest improvements, you should only use artifacts \(such as features, APIs, themes, etc.\) that are still actively developed.
 
+> ### Tip:  
+> Use [UI5 linter](https://github.com/SAP/ui5-linter) to detect deprecated API usage in your projects. UI5 linter is a static code analysis tool that checks your JavaScript, TypeScript, XML, and JSON files for issues preventing compatibility with SAPUI5 2.x. UI5 linter also provides autofixes for a selected number of issues. For more information, see [Scope of Autofix](https://github.com/SAP/ui5-linter/blob/main/docs/Scope-of-Autofix.md).
+
 
 
 <a name="loioa8bd1a8c4183412fb5ed6abb434a9ed2__section_dd2_pfb_rzb"/>
@@ -34,12 +37,18 @@ Feel free to test those features, but **do not** use experimental features or co
 
 APIs that have been flagged as experimental can be found in the API Reference: [API Reference: `experimental`](https://ui5.sap.com/#/api/experimental).
 
+For a comprehensive overview of all deprecated APIs, controls, and patterns, along with their modern replacements, see our [Modernization Guide](../02_Read-Me-First/modernization-guide-db49236.md).
+
 **Related Information**  
 
+
+[Modernization Guide](../02_Read-Me-First/modernization-guide-db49236.md "This guide helps you modernize your SAPUI5 applications by providing a consolidated overview of all deprecated APIs, controls, themes, libraries, and patterns, along with their modern replacements.")
 
 [Compatibility Rules](../02_Read-Me-First/compatibility-rules-91f0873.md "The following sections describe what SAP can change in major, minor, and patch releases. Always consider these rules when developing apps, features, or controls with or for SAPUI5.")
 
 [Deprecated Themes and Libraries](../02_Read-Me-First/deprecated-themes-and-libraries-a87ca84.md "As SAPUI5 evolves over time, some of the UI controls are replaced by others, or their concepts abandoned entirely. This chapter gives an overview of the most important deprecations at theme and library level. Individual control deprecations and more information about the controls replacing them can be found in the API reference within the Demo Kit.")
 
 [Upgrading](../02_Read-Me-First/upgrading-9638e4f.md "The following sections describe what you have to consider when upgrading to a new version of SAPUI5.")
+
+[Deprecated View Types and Patterns](../04_Essentials/deprecated-view-types-and-patterns-ea87c42.md "As of SAPUI5 version 1.120, XML views and Typed Views are the only recommended view types. All other view types and related patterns are deprecated.")
 

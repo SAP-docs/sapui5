@@ -2,7 +2,7 @@
 
 # Configuring the Content of Quick Views
 
-You can configure the content area of the quick views to display specific data.
+You can configure the content area of the quick views to display specific data in SAP Fiori elements for OData V4.
 
 The content area, consisting of a title and additional information, for example, a field group, has a default behavior and can be adapted to your needs.
 

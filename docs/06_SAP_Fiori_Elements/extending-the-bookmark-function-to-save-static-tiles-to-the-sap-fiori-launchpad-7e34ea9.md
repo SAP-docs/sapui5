@@ -2,7 +2,7 @@
 
 # Extending the Bookmark Function to Save Static Tiles to the SAP Fiori Launchpad
 
-You can extend the standard bookmark function by adding an extension point to the controller extension of the list report page or analytical list page..
+You can extend the standard bookmark function by adding an extension point to the controller extension of the list report page or analytical list page in SAP Fiori elements for OData V2.
 
 Extending the bookmark function then saves static tiles to the SAP Fiori launchpad instead of dynamic tiles.
 

@@ -5,7 +5,7 @@
 You can use SAP Fiori elements to prepare, build, and extend applications.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [How to Use SAP Fiori Elements](how-to-use-sap-fiori-elements-20de950.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [How to Use SAP Fiori Elements for OData V4](how-to-use-sap-fiori-elements-for-odata-v4-20de950.md).
 
 Creating an app with SAP Fiori elements generally consists of the following steps:
 

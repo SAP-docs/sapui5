@@ -4,7 +4,7 @@
 
 # Multiple Views on the List Report Page
 
-You can define multiple views of a table and add a chart.
+You can define multiple views of a table and add a chart to a list report page in SAP Fiori elements for OData V4.
 
 
 
@@ -159,11 +159,11 @@ Find out how to add multiple views to a list report page using SAP Fiori tools.
 **Related Information**  
 
 
-[Defining Multiple Views in a List Report Page Table - Single Table Mode](defining-multiple-views-in-a-list-report-page-table-single-table-mode-0d390fe.md "You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.")
+[Defining Multiple Views in a List Report Page Table - Single Table Mode](defining-multiple-views-in-a-list-report-page-table-single-table-mode-0d390fe.md "You can define multiple views of a table and display them in single table mode in SAP Fiori elements for OData V4. Users can switch between views using a segmented button.")
 
-[Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-37aeed7.md "You can define multiple views of a table and display them in multiple table mode. Users can switch between views using an icon tab bar.")
+[Defining Multiple Views in a List Report Page Table - Multiple Table Mode](defining-multiple-views-in-a-list-report-page-table-multiple-table-mode-37aeed7.md "You can define multiple views of a table and display them in multiple table mode in SAP Fiori elements for OData V4. Users can switch between views using an icon tab bar.")
 
-[Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md "You can configure your application to display data for different entity sets and table settings.")
+[Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md "You can configure your application to display data for different entity sets and table settings in SAP Fiori elements for OData V4.")
 
-[Extension Points for Views on the List Report Page](extension-points-for-views-on-the-list-report-page-eb37203.md "You can use extension points to enhance views on the list report page in SAP Fiori elements apps.")
+[Extension Points for Views on the List Report Page](extension-points-for-views-on-the-list-report-page-eb37203.md "You can use extension points to enhance views on the list report page in SAP Fiori elements for OData V4.")
 

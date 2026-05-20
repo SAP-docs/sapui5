@@ -1,8 +1,8 @@
 <!-- loiof2344b5e78164b2b9c27ef8b068f295c -->
 
-# Prerequisites for Using SAP Fiori Elements
+# Prerequisites for Using SAP Fiori Elements for OData V4
 
-Get to know the prerequisites for creating an application using SAP Fiori elements.
+Get to know the prerequisites for creating an application using SAP Fiori elements for OData V4.
 
 SAP Fiori elements only supports a single service as the service behind the data for all its controls.
 

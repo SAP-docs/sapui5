@@ -2,15 +2,18 @@
 
 # Binding Types
 
-Depending on the different use cases, you can use different binding types: Propety binding, context binding, and list binding.
+Depending on the different use cases, you can use different binding types: property binding, context binding, list binding, and tree binding.
 
 
 
 -   **Property binding** allows properties of the control to get automatically initialized and updated from model data. You can only bind control properties to model properties of a matching type, or you use a formatter or a data type to parse and convert the data as needed For more information, see [Formatting, Parsing, and Validating Data](formatting-parsing-and-validating-data-07e4b92.md).
 
--   **Context binding** \(or **"element binding"**\) allows to bind elements to a specific object in the model that creates a binding context and allows relative binding within the control and all of its children. This is especially helpful in list-detail scenarios.
+-   **Context binding** \(or **element binding**\) allows to bind elements to a specific object in the model that creates a binding context and allows relative binding within the control and all of its children. This is especially helpful in list-detail scenarios.
 
--   **List binding** \(or **"aggregation binding"**\) can be used to automatically create child controls according to model. This can be done either by cloning a template control, or by using a factory function. Aggregations can only be bound to lists defined in the model, that is, to arrays in a JSON model or a collection in the OData model.
+-   **Aggregation binding** \(**list binding** or **tree binding**\) is used to automatically create child controls according to model data, either by cloning a template control or by using a factory function:
+
+    -   **List binding** binds to a flat list, for example an array in a JSON model or a flat collection in an OData model.
+    -   **Tree binding** binds to hierarchical data, for example a nested array in a JSON model or a hierarchical collection in an OData model. It is typically used with tree controls such as `sap.ui.table.TreeTable`.
 
     > ### Note:  
     > The model has a default size limit to avoid too much data being rendered on the UI. This size limit determines the number of entries used for the list bindings. The default size limit is 100 entries.

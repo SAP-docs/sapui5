@@ -5,7 +5,7 @@
 The editing status reflects the state of the object or entry in terms of the processing cycle.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Editing Status](editing-status-668ea18.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Editing Status](editing-status-668ea18.md).
 
 For example, it can give the user information about whether the item can be accessed, or about its level of completion.
 
@@ -137,5 +137,5 @@ If desired, the editing status filter can be disabled after you generate your ap
 
 [Handling Semantic Key Fields](handling-semantic-key-fields-94c1856.md "You can add semantic keys to a table.")
 
-[Settings for List Report Page Tables](settings-for-list-report-page-tables-4c2d17a.md "You can configure various aspects of the list report page table through annotations and in the manifest.json file.")
+[Settings for List Report Page Tables](settings-for-list-report-page-tables-4c2d17a.md "You can configure various aspects of the list report page table through annotations and in the manifest.json file in SAP Fiori elements for OData V2.")
 

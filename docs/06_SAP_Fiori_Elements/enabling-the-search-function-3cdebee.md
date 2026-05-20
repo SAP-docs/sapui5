@@ -2,7 +2,7 @@
 
 # Enabling the Search Function
 
-You can enable the *Search* function on the list report page.
+You can enable the *Search* function on the list report page in SAP Fiori elements for OData V4.
 
 The search is restricted to 1000 characters.
 

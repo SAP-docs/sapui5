@@ -2,7 +2,7 @@
 
 # The `FlexibleColumnLayoutActions` Building Block
 
-You can use the `FlexibleColumnLayoutActions` to instantiate the flexible column layout buttons.
+You can use the `FlexibleColumnLayoutActions` to instantiate the flexible column layout buttons in SAP Fiori elements for OData V4.
 
 The `FlexibleColumnLayoutActions` building block provides an easy way to instantiate the *Close*, *Enter Full Screen* and *Exit Full Screen* buttons that appear in the top right-hand corner in an application using the flexible column layout.
 

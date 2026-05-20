@@ -2,7 +2,9 @@
 
 # Configuring Filter Fields
 
-You can configure filter fields to ensure they only accept either a single value, multiple values, or a range of values. You can achieve this by configuring the filter restriction annotation.
+You can configure filter fields to accept only a single value, multiple values, or a range of values in SAP Fiori elements for OData V4.
+
+To configure filter fields, use the filter restriction annotation.
 
 
 

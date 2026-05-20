@@ -2,9 +2,9 @@
 
 # Enabling the List-Detail Mode
 
-You can set up the flexible column layout to display just two columns. This is called list-detail mode.
+You can set up the flexible column layout to display just two columns in SAP Fiori elements for OData V4.
 
-By default, the flexible column layout starts off with one column. The user opens new columns by navigating forward. You can set the layout to display just two columns by adding additional parameters to the flexible column layout entry in the `manifest.json` file in your app:
+By default, the flexible column layout starts off with one column. The user opens new columns by navigating forward. You can set the layout to display just two columns. This is called list-detail mode. To set it up, add additional parameters to the flexible column layout entry in the `manifest.json` file in your app:
 
 
 <table>

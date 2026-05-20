@@ -2,11 +2,11 @@
 
 # Reducing Entity Sets in Metadata Using a Feature Toggle
 
-You can reduce entity sets from the application metadata using a feature toggle.
+You can reduce entity sets from the application metadata using a feature toggle in SAP Fiori elements for OData V2.
 
 To do so, create the feature toggle in the back-end system and place `@feature:'Toggle_Name'` in the corresponding CDS view. Depending on the state of the feature toggle \(*Activated* or *Deactivated*\), the entity information may be present or absent from the application metadata. If the state of the feature toggle is set as *Deactivated*, the entity will be removed from the application metadata.
 
-In list reports with multiple tabs, reducing an entity set results in the removal of tabs corresponding to that entity. Similarly, for an object page, reducing an entity set results in the removal of the corresponding section from the object page.
+On list report pages with multiple tabs, reducing an entity set results in the removal of tabs corresponding to that entity. Similarly, for an object page, reducing an entity set results in the removal of the corresponding section from the object page.
 
   
   

@@ -4,6 +4,9 @@
 
 You can add custom filters to your overview page application. This allows users to filter the data displayed in one or more cards.
 
+> ### Note:  
+> This topic is relevant to SAP Fiori elements for OData V2.
+
 
 
 <a name="loio31073cac3f5743408272b695f282a93c__section_uhm_ptp_zy"/>

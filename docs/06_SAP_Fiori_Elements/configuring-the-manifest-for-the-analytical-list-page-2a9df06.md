@@ -2,7 +2,7 @@
 
 # Configuring the Manifest for the Analytical List Page
 
-You can use the ***manifest.json*** file to configure the analytical list page.
+You can use the ***manifest.json*** file to configure the analytical list page in SAP Fiori elements for OData V4.
 
 
 
@@ -61,5 +61,5 @@ The secondary annotation path can be either `UI.LineItem`, `UI.PresentationVaria
 **Related Information**  
 
 
-[Analytical List Page](analytical-list-page-3d33684.md "You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs (key performance indicators).")
+[Analytical List Page](analytical-list-page-3d33684.md "You can build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs (key performance indicators) using SAP Fiori elements for OData V4.")
 

@@ -7,7 +7,7 @@ You can define multiple views of a table and display them in single table mode. 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Defining Multiple Views in a List Report Page Table - Single Table Mode](defining-multiple-views-in-a-list-report-page-table-single-table-mode-0d390fe.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Defining Multiple Views in a List Report Page Table - Single Table Mode](defining-multiple-views-in-a-list-report-page-table-single-table-mode-0d390fe.md).
 
 
 

@@ -4,7 +4,7 @@
 
 # Inline Edit
 
-You can enable the inline edit feature, which allows the users to edit specific fields or field groups without switching the entire object to draft.
+You can enable the inline edit feature in SAP Fiori elements for OData V4.
 
 SAP Fiori elements for OData V4 supports inline edit on the list report page and on the object page as of SAPUI5 1.136. With this feature, users can directly edit a field or a group of fields in the active version without switching the entire object to draft. Inline edit supports the same features as the regular edit mode.
 

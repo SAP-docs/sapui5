@@ -5,7 +5,7 @@
 You can disable the navigation from the list report page to the object page or replace it with external navigation.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Changing Navigation to Object Page](changing-navigation-to-object-page-8bd546e.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Changing Navigation to Object Page](changing-navigation-to-object-page-8bd546e.md).
 
 Navigation from the list report page to the object page in the same app is enabled by default. If required, you can disable this navigation or replace it with navigation to another app \(external navigation\).
 

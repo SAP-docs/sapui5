@@ -5,7 +5,7 @@
 You can set the content density to `condensed` for `ui.table` in list report page and object page applications.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Using the Condensed Table Layout](using-the-condensed-table-layout-f3cc057.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Using the Condensed Table Layout](using-the-condensed-table-layout-f3cc057.md).
 
 To apply the condensed style to a table in a specific section, in the `manifest.json` file within the relevant section, set `"condensedTableLayout"` to `true` in the `manifest.json`. This setting ensures that the table in the specified section adapts to the condensed layout.
 

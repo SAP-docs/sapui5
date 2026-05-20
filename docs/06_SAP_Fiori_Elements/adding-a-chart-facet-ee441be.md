@@ -5,7 +5,7 @@
 You can add a chart facet to a section of the object page.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adding a Chart Facet to an Object Page](adding-a-chart-facet-to-an-object-page-6495eab.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adding a Chart Facet to an Object Page](adding-a-chart-facet-to-an-object-page-6495eab.md).
 
 A chart facet is suitable to use if you wish to present data graphically for analysis.
 

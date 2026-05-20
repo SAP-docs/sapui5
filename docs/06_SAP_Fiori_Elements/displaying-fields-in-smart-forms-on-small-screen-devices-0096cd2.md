@@ -1,8 +1,8 @@
 <!-- loio0096cd2e7abb4c3fb11cf4dedc9fa740 -->
 
-# Displaying Fields in Smartforms on Small-Screen Devices
+# Displaying Fields in Smart Forms on Small-Screen Devices
 
-You can display fields on small-screen devices based on their importance.
+You can display fields on small-screen devices based on their importance in SAP Fiori elements for OData V2.
 
 Using the `UI.Importance` annotation, you can set the importance of a field. Based on the value set for this annotation, namely `High`, `Medium`, or `Low`, the fields are shown or hidden depending on the screen size.
 
@@ -180,5 +180,5 @@ The field is visible in desktops and tablets.
 > ```
 
 > ### Note:  
-> You cannot use the `UI.Importance` annotation to hide the entire `FieldGroup` and `Identification` on small screens. You have to set the `UI.Importance` for each of the data fields within a group. It is important to note that data fields rendered within the smartform are impacted by the `UI.Importance` settings.
+> You cannot use the `UI.Importance` annotation to hide the entire `FieldGroup` and `Identification` on small screens. You have to set the `UI.Importance` for each of the data fields within a group. It is important to note that data fields rendered within the smart form are impacted by the `UI.Importance` settings.
 

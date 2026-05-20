@@ -2,7 +2,7 @@
 
 # Configuring the Global Filter on the Overview Page
 
-You can configure the global filter to allow users to filter the data displayed on one or more cards.
+You can configure the global filter in SAP Fiori elements for OData V4 to allow users to filter the data displayed on one or more cards.
 
 
 

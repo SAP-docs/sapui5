@@ -2,7 +2,7 @@
 
 # Using Action Control for Context-Dependent Actions
 
-You can use action control to display actions by adding the `sap:action-for` and `sap:applicable-path` terms to your action or function import.
+You can use action control to display actions by adding the `sap:action-for` and `sap:applicable-path` terms to your action or function import in SAP Fiori elements for OData V2.
 
 Action control refers to the ability of applications to be able to configure app-specific actions so that they are only enabled for certain instances of the object, but not others.
 

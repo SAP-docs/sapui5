@@ -2,7 +2,7 @@
 
 # Initial Expansion Level for Tables on List Report Pages & Analytical List Pages
 
-You can set the number of expanded levels for tables on list report pages and analytical list report pages using the `initialExpansionLevel` property of the `PresentationVariant` annotation.
+You can set the number of expanded levels for tables on list report pages and analytical list report pages using the `initialExpansionLevel` property of the `PresentationVariant` annotation in SAP Fiori elements for OData V2.
 
 
 
@@ -74,7 +74,7 @@ The `initialExpansionLevel` should never exceed the number of grouped columns.
 
 ## Defining Initial Expansion Level in `PresentationVariant` 
 
-For `initialExpansionLevel` to be supported, `PresentationVariant` annotations must exist for the content area on analytical list pages and list reports pages, and for multiple tabs on list report pages.
+For `initialExpansionLevel` to be supported, `PresentationVariant` annotations must exist for the content area on analytical list pages and list report pages, and for multiple tabs on list report pages.
 
 > ### Note:  
 > If tabs are not defined for a list report page, the default `PresentationVariant` \(without the qualifier\) is considered.
@@ -227,7 +227,7 @@ If the content area in analytical list pages and tabs on the list report pages a
 
 [Configuring Tables](configuring-tables-3695931.md "You can use the annotations and entries in manifest.json to control various aspects of tables.")
 
-[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md "You can display data on the analytical list page in a table format.")
+[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md "You can display data on the analytical list page in a table format in SAP Fiori elements for OData V2.")
 
 [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-22e32b7.md "You can configure several settings of the main content area, such as sort order or filter values, with UI.SelectionPresentationVariant.")
 

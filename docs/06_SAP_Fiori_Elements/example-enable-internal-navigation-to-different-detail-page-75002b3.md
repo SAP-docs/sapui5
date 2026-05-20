@@ -2,7 +2,7 @@
 
 # Example: Enable Internal Navigation to Different Detail Page
 
-You can enable internal navigation to a different detail page \(that is, using different entity sets\) for a list report or an object page.
+You can enable internal navigation to a different detail page \(that is, using different entity sets\) for a list report or an object page in SAP Fiori elements for OData V4.
 
 In the extension function, you can define the logic or condition that triggers the navigation to the detail page. If none of the conditions mentioned in the extension are met, navigation to the default detail page is triggered.
 
@@ -139,7 +139,7 @@ In addition, here's an example for the object page:
 **Related Information**  
 
 
-[Replacing Standard Navigation in a Table](replacing-standard-navigation-in-a-table-a12ad60.md "You can replace the standard navigation from the list report page to the object page with your own navigation to an external or internal target.")
+[Replacing Standard Navigation in a Table](replacing-standard-navigation-in-a-table-a12ad60.md "You can replace the standard navigation from the list report page to the object page with your own navigation to an external or internal target in SAP Fiori elements for OData V4.")
 
-[Configuring Internal Navigation](configuring-internal-navigation-2c65f07.md "You can configure internal navigation within an SAP Fiori elements app.")
+[Configuring Internal Navigation](configuring-internal-navigation-2c65f07.md "You can configure internal navigation within an app using SAP Fiori elements for OData V4.")
 

@@ -2,7 +2,7 @@
 
 # Adding Custom Messages
 
-You can use the `securedExecution` method from the API for developers of template extensions to add and display custom messages.
+You can use the `securedExecution` method from the API for developers of template extensions to add and display custom messages in SAP Fiori elements for OData V4.
 
 This concept for message handling is based on the SAPUI5 Messaging. For more information, see the API Reference for [Messaging](https://ui5.sap.com/#/api/module:sap/ui/core/Messaging).
 
@@ -46,7 +46,7 @@ For general information about messages, see [Using Messages](using-messages-239b
 **Related Information**  
 
 
-[Using the SecuredExecution Method](using-the-securedexecution-method-6a39150.md "You can use the securedExecution method to extend SAP Fiori elements applications.")
+[Using the SecuredExecution Method](using-the-securedexecution-method-6a39150.md "You can use the securedExecution method to extend applications in SAP Fiori elements for OData V4.")
 
-[Using Messages](using-messages-239b192.md "Get to know the message types supported by SAP Fiori elements.")
+[Using Messages](using-messages-239b192.md "Get to know the message types supported by SAP Fiori elements for OData V4.")
 

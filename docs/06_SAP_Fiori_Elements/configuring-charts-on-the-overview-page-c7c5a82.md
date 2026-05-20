@@ -2,7 +2,7 @@
 
 # Configuring Charts on the Overview Page
 
-You can configure the measures and dimensions displayed in charts by setting the `role` property to the required value for a chart type. Additional definitions apply to all chart types.
+In SAP Fiori elements for OData V4, you can configure the measures and dimensions displayed in charts by setting the `role` property to the required value for a chart type. Additional definitions apply to all chart types.
 
 
 

@@ -5,7 +5,7 @@
 You can configure how your SAP Fiori elements app handles drafts.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Draft Handling](draft-handling-ed9aa41.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Draft Handling](draft-handling-ed9aa41.md).
 
 A draft is an interim version of a business entity that has not yet been explicitly saved as an active version.SAP Fiori elements supports the creation of apps that use draft handling.
 

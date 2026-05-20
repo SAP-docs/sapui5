@@ -2,10 +2,10 @@
 
 # Using SAP Fiori Elements Floorplans
 
-You can create apps using SAP Fiori elements floorplans: predefined templates for common application use cases.
+You can create apps using SAP Fiori elements for OData V2 floorplans: predefined templates for common application use cases.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Standard Floorplans](standard-floorplans-797c323.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Standard Floorplans](standard-floorplans-797c323.md).
 
 You can create apps using the following SAP Fiori elements floorplans:
 

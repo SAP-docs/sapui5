@@ -1,10 +1,10 @@
 <!-- loio04ff5b1a81344a8e8169ea99630ff4e5 -->
 
-# Using the Multi-Input Field on the Object Page
+# Using the Multi-Input Field
 
-You can render a multi-input field on the object page.
+You can render a multi-input field on the object page and the list report page in SAP Fiori elements for OData V4.
 
-If the system identifies a 1:n association of a `DataField`, the multi-input field is activated automatically.
+If the system identifies a 1:n association of a `DataField`, the multi-input field is activated automatically for a form and table on an object page, and a table on a list report page.
 
 You must define a 1:n association in the data model.
 
@@ -144,10 +144,10 @@ When you set the `Common.fieldControl` annotation to `Mandatory`, a red asterisk
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Using the Multi-Input Field on the Object Page](using-the-multi-input-field-on-the-object-page-4e69fd3.md).
+> For information about SAP Fiori elements for OData V2, see [Using the Multi-Input Field](using-the-multi-input-field-4e69fd3.md).
 
 **Related Information**  
 
 
-[Tables](tables-c0f6592.md "You can configure the appearance, interactivity, and loading behavior of tables..")
+[Tables](tables-c0f6592.md "You can configure the appearance, interactivity, and loading behavior of tables in SAP Fiori elements for OData V4.")
 

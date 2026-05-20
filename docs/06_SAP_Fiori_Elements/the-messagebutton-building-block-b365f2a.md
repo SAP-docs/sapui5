@@ -2,7 +2,7 @@
 
 # The `MessageButton` Building Block
 
-You can use the `MessageButton` building block to show bound messages.
+You can use the `MessageButton` building block to show bound messages in SAP Fiori elements for OData V4.
 
 The `MessageButton` building block allows you to collect and display all relevant bound messages using a `MessageButton` control. This behavior is similar to how messages are handled in the footer of the object page.
 

@@ -7,7 +7,7 @@ You can create key performance indicator tags for the analytical list page.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Creating Key Performance Indicator Tags in Analytical Services](creating-key-performance-indicator-tags-in-analytical-services-d80a360.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Creating Key Performance Indicator Tags in Analytical Services](creating-key-performance-indicator-tags-in-analytical-services-d80a360.md).
 
 
 
@@ -687,7 +687,7 @@ If `CriticalityCalculation` is defined in the annotations, filterable KPIs are u
 **Related Information**  
 
 
-[Configuring the Title Area](configuring-the-title-area-ebdb5da.md "The dynamic area of the analytical list page is the title area.")
+[Configuring the Title Area](configuring-the-title-area-ebdb5da.md "You can configure the title area of the analytical list page in SAP Fiori elements for OData V2.")
 
 [Managing Variants](managing-variants-b82d987.md "You can manage variants with different structures in the filter and content areas.")
 

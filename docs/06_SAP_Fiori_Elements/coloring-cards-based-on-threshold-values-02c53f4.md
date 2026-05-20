@@ -2,7 +2,7 @@
 
 # Coloring Cards Based on Threshold Values
 
-With overview pages, column chart cards can be semantically colored based on threshold values.
+In SAP Fiori elements for OData V4, you can semantically color column chart cards in overview pages based on threshold values.
 
 The threshold values used to semantically color column charts come from the data point annotation that is associated with the measure used in the analytic card. We recommend to only use one measure in the chart if you intend to use this feature.
 

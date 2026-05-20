@@ -2,7 +2,7 @@
 
 # Extension Points for Pages
 
-You can use extension points to enhance pages in SAP Fiori elements apps.
+You can use extension points to enhance pages in apps based on SAP Fiori elements for OData V4.
 
 
 

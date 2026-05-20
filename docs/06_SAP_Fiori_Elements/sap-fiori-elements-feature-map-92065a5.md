@@ -2,10 +2,10 @@
 
 # SAP Fiori Elements Feature Map
 
-See the list of UI elements, controls, and features supported by SAP Fiori elements.
+See the list of UI elements, controls, and features supported by SAP Fiori elements for OData V2.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [SAP Fiori Elements Feature Map](sap-fiori-elements-feature-map-62d3f7c.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [SAP Fiori Elements Feature Map](sap-fiori-elements-feature-map-62d3f7c.md).
 
 You can search, filter, and sort content in the table below. Use your mouse to hover over the links in the *Developer Documentation* column to display a short description of the feature.
 
@@ -4038,7 +4038,7 @@ Multi-input field
 </td>
 <td valign="top">
 
-[Using the Multi-Input Field on the Object Page](using-the-multi-input-field-on-the-object-page-4e69fd3.md)
+[Using the Multi-Input Field](using-the-multi-input-field-4e69fd3.md)
 
 </td>
 <td valign="top">
@@ -4819,6 +4819,42 @@ Save
 onBeforeSave
 
 on before save
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Save and navigate to the list report page
+
+</td>
+<td valign="top">
+
+Object page
+
+</td>
+<td valign="top">
+
+[Save and Navigation Options on the Object Page](save-and-navigation-options-on-the-object-page-9c63472.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Save and Back**
+
+![](images/Save_and_Back_48dcd40.png "Save and Back")
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -5713,7 +5749,7 @@ Token
 </td>
 <td valign="top">
 
-[Using the Multi-Input Field on the Object Page](using-the-multi-input-field-on-the-object-page-4e69fd3.md) 
+[Using the Multi-Input Field](using-the-multi-input-field-4e69fd3.md) 
 
 </td>
 <td valign="top">

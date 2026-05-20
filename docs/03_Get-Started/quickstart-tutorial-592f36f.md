@@ -4,23 +4,10 @@
 
 Unleash your SAPUI5 skills with this simple three-step tutorial. We start with a simple "Hello World" example, and convert it to a minimalist two-page app.
 
-We create an app with two pages and a navigation button to navigate between the pages.
+This tutorial has been moved.
 
-
-
-## Preview
-
-  
-  
-**Ready...Steady...Go!**
-
-![](images/Tutorial_Quick_Start_Preview_443918d.png "Ready...Steady...Go!")
-
-> ### Tip:  
-> If you want to skip one or more steps, you can jump directly to the step you're interested in. Then simply download the code from the previous step, and start learning from there. You can download the code for each step in the [Quick Start Sample](https://ui5.sap.com/#/entity/sap.m.tutorial.quickstart). 
-
-> ### Note:  
-> All you need to build your app, is a Web browser, a Web server, and a development environment of your choice. For more information, see the links below.
+-   For a JavaScript version, see [JavaScript Quickstart Tutorial on GitHub](https://ui5.github.io/tutorials/quickstart/?lang=js).
+-   For a TypeScript version, see [TypeScript Quickstart Tutorial on GitHub](https://ui5.github.io/tutorials/quickstart/?lang=ts).
 
 **Related Information**  
 

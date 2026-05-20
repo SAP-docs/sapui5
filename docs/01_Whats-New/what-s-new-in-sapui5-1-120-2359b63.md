@@ -524,7 +524,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now add Key Performance Indicators \(KPI\) in non-analytical services. For more information, see [Creating Key Performance Indicators](../06_SAP_Fiori_Elements/creating-key-performance-indicators-8874399.md).
 
--   You can now edit a multi-input field in a table on the object page. For more information, see [Using the Multi-Input Field on the Object Page](../06_SAP_Fiori_Elements/using-the-multi-input-field-on-the-object-page-04ff5b1.md).
+-   You can now edit a multi-input field in a table on the object page. For more information, see [Using the Multi-Input Field](../06_SAP_Fiori_Elements/using-the-multi-input-field-04ff5b1.md).
 
 -   As of 1.120.2, we recalculate the default values in empty row mode when refreshing the table using a side effect. For more information, see [Prefilling Fields Using the DefaultValuesFunction](../06_SAP_Fiori_Elements/prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
 
@@ -1394,6 +1394,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.146](what-s-new-in-sapui5-1-146-6ccfe05.md "With this release SAPUI5 is upgraded from version 1.145 to 1.146.")
 
 [What's New in SAPUI5 1.145](what-s-new-in-sapui5-1-145-7676a2a.md "With this release SAPUI5 is upgraded from version 1.144 to 1.145.")
 

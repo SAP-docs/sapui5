@@ -2,7 +2,7 @@
 
 # Navigation to the Next Level
 
-You can use the table chevron navigation to navigate from the table that lists the entries from an associated entity set.
+You can use the table chevron navigation to navigate from the table that lists the entries from an associated entity set in SAP Fiori elements for OData V4.
 
 You can configure an object page and subobject page to enable normal navigation from a list report page to an object page, and from an object page to a subobject page, as shown in the following sample code:
 

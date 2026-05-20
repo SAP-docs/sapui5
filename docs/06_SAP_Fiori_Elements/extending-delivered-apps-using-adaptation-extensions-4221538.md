@@ -5,7 +5,7 @@
 You can create adaptation projects on top of SAP Fiori elements-based applications by using the Adaptation Editor in SAP Business Application Studio.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md).
 
 You can implement extension functions as part of a UI adaptation project by using the Adaptation Editor in SAP Business Application Studio. The adaptation project references the applications delivered by SAP as base or parent applications.
 

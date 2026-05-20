@@ -5,7 +5,7 @@
 You can render the micro chart as an area micro chart.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Area Micro Chart](area-micro-chart-1467f2b.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Area Micro Chart](area-micro-chart-1467f2b.md).
 
 The area micro chart is a trend chart, which displays the actual and target values for a specific time range.
 

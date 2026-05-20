@@ -5,7 +5,7 @@
 You can adapt the filter bar using additional annotations or configuring the `manifest.json` file.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md).
 
 For information about setting the default filter value, see [Configuring Default Filter Values](configuring-default-filter-values-b221ce0.md).
 

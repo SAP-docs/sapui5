@@ -2,12 +2,12 @@
 
 # Visual Filters
 
-You can configure visual filters by enhancing the `ValueList` annotation associated with the filter field.
+You can configure visual filters by enhancing the `ValueList` annotation associated with the filter field in SAP Fiori elements for OData V4.
 
 
 
 > ### Note:  
-> This topic describes how to use the building block within SAP Fiori elements floorplans. If the functionality isn't available when you use the building block in custom pages or custom sections, you can try achieving the functionality through other means, such as the following:
+> This topic describes how to use the feature within SAP Fiori elements floorplans. The feature isn't available when you use the building block in custom pages or custom sections, but you can try achieving the functionality through other means, such as the following:
 > 
 > -   Properties or methods exposed by the building block
 > 
@@ -997,5 +997,5 @@ Don't
 **Related Information**  
 
 
-[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page.")
+[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "You can enable and configure the visual filter bar on the analytical list page in SAP Fiori elements for OData V4.")
 

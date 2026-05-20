@@ -2,7 +2,7 @@
 
 # Custom State Handling for Extended Apps
 
-You can perform inner app-state handling for custom UI elements.
+You can perform inner app-state handling for custom UI elements in SAP Fiori elements for OData V4.
 
 An app state reflects the state of its views. Each view takes care of its own view-state handling - supported by the `ViewState` controller extension. To create an app state, the view state of the app components root view is requested.
 

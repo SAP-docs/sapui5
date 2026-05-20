@@ -2,961 +2,448 @@
 
 # Different Representations of a Field
 
-You can control how the field is represented by using annotations or metadata.
+You can control how the field is represented by using annotations or metadata in SAP Fiori elements for OData V4.
 
+The following representations of a field are supported:
 
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_q1y_fvf_k4b"/>
-
-## Representation as a Simple Plain Text Facet
-
-A field can be displayed as a simple plain text facet, which shows up in the key-value format:
-
-![](images/Representation_as_a_Simple_Plain_Text_Facet_52e34f4.png)
-
-To be represented in this manner, you must initialize the OData field with an annotation that has a `UI.DataField` wrapped within `UI.FieldGroup`, as shown in the sample code below:
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotation Term="UI.FieldGroup" Qualifier="PlainText">
->      <Record>
->           <PropertyValue Property="Data">
->                 <Collection>
->                      <Record Type="UI.DataField">
->                            <PropertyValue Property="Value" Path="description" />
->                        </Record>
->                  </Collection>
->           </PropertyValue>
->       </Record>
-> </Annotation>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.fieldGroup: [
->   {
->     value: 'DESCRIPTION',
->     type: #STANDARD,
->     qualifier: 'PlainText'
->   }
-> ];
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> UI.FieldGroup #PlainText: {
-> Data : [{
->               $Type : 'UI.DataField',
->                Value : description
->        }]
-> }
-> 
-> ```
-
-> ### Tip:  
-> If the "Path" has a `sap:label()` associated to it, then first the label is displayed, followed by the value pointed to by the path \(separated by a colon\).
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_mfy_msc_pgc"/>
-
-## Representation as an Amount with a Currency or a Unit of Measure
-
-A field can be displayed as an amount \(a numerical value\) with a currency or a unit of measure:
-
-  
-  
-**Fields with a Currency and a Unit of Measure**
-
-![](images/Fields_used_with_Currency_and_Unit_of_Measure_812e7b0.png "Fields with a Currency and a Unit of Measure")
-
-To display a currency or a unit of measure, use the `Measures.ISOCurrency` and `Measures.Unit` annotations. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Number with Currency or Unit of Measure](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldNumberWithUnitOrCurrencyAligned).
-
-For more information about displaying fields with a currency or a unit of measure in a table, see [Displaying Amount with Currency or Unit of Measure in Tables](displaying-amount-with-currency-or-unit-of-measure-in-tables-f6cf715.md).
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_ihr_jvf_k4b"/>
-
-## Representation as Part of a Form
-
-You can group multiple fields together into a form-based representation:
-
-![](images/Representation_as_Part_of_a_Form_5ab0639.png)
-
-For more information about the required annotations, see [Grouping of Fields](grouping-of-fields-cb1748e.md).
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_w4r_lvf_k4b"/>
-
-## Representation as a Key Value Facet or a Key Performance Indicator \(KPI\)
-
-A field can be represented as a key value facet or render a KPI:
-
-![](images/Representation_as_a_Key_Value_Facet_or_KPI_902d530.png)
-
-The underlying annotation for this is the `UI.DataPoint` annotation:
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotation Term="UI.DataPoint" Qualifier="Availability">
->       <Record Type="UI.DataPointType">
->            <PropertyValue Property="Title" String="Availability" />
->            <PropertyValue Property="Value" Path="stock/availability" />
->            <PropertyValue Property="Criticality" Path="stock/availability"/>
->        </Record>
-> </Annotation>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.dataPoint: {
->   title: 'Availability',
->   criticality: 'availability'
-> }
-> availability;
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> UI.DataPoint #Availability                               : {
->         Value                : stock.availability,
->         Title                : 'Availability',
->        Criticality         :  stock.availability
-> }
-> 
-> ```
-
-Apart from its usage in the object page header, the KPI could also be a `DataField` that is marked with criticality. In such cases, SAP Fiori elements brings up the object status control.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Record Type="SAP__UI.DataField">
->     <PropertyValue Property="Criticality" Path="OvrlDeliveryStatusCriticality"/>
->     <PropertyValue Property="CriticalityRepresentation" EnumMember="SAP__UI.CriticalityRepresentationType/WithoutIcon"/>
->     <PropertyValue Property="Value" Path="OverallDeliveryStatus"/>
->     <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
-> </Record>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.dataPoint: {
->   criticality: 'OvrlDeliveryStatusCriticality',
->   criticalityRepresentation: #WITHOUT_ICON
-> }
-> OverallDeliveryStatus;
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> {
->         $Type : 'UI.DataField',
->         Value : OverallDeliveryStatus,
->        Criticality :  OvrlDeliveryStatusCriticality,
->              ![@UI.CriticalityRepresentation ]        :  #WithoutIcon 
-> }
-> 
-> ```
-
-This could render 3 KPIs, as shown in the image below:
-
-![](images/Representation_as_Three_KPIs_423321f.png)
-
-> ### Tip:  
-> If you add a semantic object annotation to the value field of the `DataPoint`, the value is shown as a link but does not show any criticality information. For more information about adding the semantic object annotation, see the [Options for Intent-Based Navigation](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__optionsIBN) subsection in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_tff_4vf_k4b"/>
-
-## Representation as a Rating Indicator
-
-A field can be displayed as a rating indicator:
-
-![](images/Representation_as_a_Rating_Indicator_6d4af36.png)
-
-This requires a `UI.DataPoint` annotation with the visualization type "Rating":
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotation Term="UI.DataPoint" Qualifier="averageRating">
->       <Record>
->            <PropertyValue Property="Value" Path="averageRating" />
->             <PropertyValue Property="TargetValue" Decimal="5" />
->             <PropertyValue Property="Visualization"EnumMember="UI.VisualizationType/Rating" />
->       </Record>
-> </Annotation>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.dataPoint: {
->   targetValue: 5,
->   visualization: #RATING
-> }
-> averageRating;
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> DataPoint #averageRating               : {
->         Value         : averageRating,
->         TargetValue   : 5.0,
->         Visualization : #Rating
-> }
-> 
-> ```
-
-> ### Tip:  
-> When used within a table, the rating indicator is shown without a label.
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_mw1_qvf_k4b"/>
-
-## Representation as a Progress Indicator
-
-A field can be displayed as a progress indicator:
-
-![](images/Representation_as_Progress_Indicator_f63b611.png)
-
-This requires a `UI.DataPoint` annotation with the visualization type "Progress":
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotation Term="UI.DataPoint" Qualifier="quantity">
->       <Record>
->            <PropertyValue Property="Value" Path="stock/quantity" />
->             <PropertyValue Property="TargetValue" Decimal="100" />
->             <PropertyValue Property="Visualization"EnumMember="UI.VisualizationType/Progress" />
->        </Record>
-> </Annotation>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.dataPoint: {
->   targetValue: 100,
->   visualization: #PROGRESS
-> }
-> quantity;
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> DataPoint #quantity               : {
->         Value         : stock.quantity,
->         TargetValue   : 100.0,
->         Visualization : #Progress
-> }
-> 
-> ```
-
-> ### Tip:  
-> When used within a table, the progress indicator is shown without a label.
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_qjc_35f_k4b"/>
-
-## Representation as a Link
-
-A field can be displayed as a link. The link can then be used in one of the scenarios described below.
-
-![](images/Representation_as_a_Link_d3b1eac.png)
-
-
-
-### Semantic Link
-
-If the field is associated with a semantic object, it is rendered as a link - provided that the semantic object is a valid one in SAP Fiori launchpad. All the actions configured for this semantic object are displayed when users click on the link. If there is only one navigation target, the user is directly navigated upon clicking the link.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotations Target="clouds.products.CatalogService.Products/SoldToParty">
->     <Annotation Term="Common.SemanticObject" String="supplier"/>
-> </Annotations>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> annotate view PRODUCTS.CATALOGSERVICE.PRODUCTS with {
-> @Consumption.semanticObject: 'supplier'
-> soldtoparty;
-> }
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> SoldToParty                   : String(10)                            @(Common : {
-> SemanticObject                  : 'supplier'
-> });
-> 
-> ```
-
-For more information, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
-
-
-
-### Quick View Card
-
-This allows applications to specify additional information that users can access by clicking on the link. For example, the link shows the status of a document, and clicking on it shows more detailed information.
-
-For more information, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md).
-
-
-
-### Contact Card
-
-This allows applications to specify more details on the contact information displayed in the link field. For example, the link field shows the name of the supplier and clicking on the link shows additional information about the supplier. The additional information is shown in a popup.
-
-For more information, see [Adding a Contact Facet](adding-a-contact-facet-a6a8c0c.md). The topic describes how a contact facet can be added to an object page form field. Similarly, you can add a table field by adding a reference to the `Communication.Contact` annotation in the `UI.LineItem` annotation: `UI.DataFieldForAnnotation`
-
-> ### Sample Code:  
-> ```
-> <Annotations Target="clouds.products.CatalogService.Products">
->     <Annotation Term="UI.LineItem">
->         <Collection>
->             <Record Type="UI.DataFieldForAnnotation">
->                 <PropertyValue Property="Label" String="Supplier"/>
->                 <PropertyValue Property="Target" AnnotationPath="supplier/@Communication.Contact"/>
->             </Record>
->         </Collection>
->     </Annotation>
-> </Annotations>
-> 
-> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.Supplier/phoneNumber">
->     <Annotation Term="Common.Label" String="Mobile"/>
->     <Annotation Term="Communication.IsPhoneNumber" Bool="true"/>
-> </Annotations>
-> 
-> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.Supplier/emailAddress">
->     <Annotation Term="Common.Label" String="Email"/>
->     <Annotation Term="Communication.IsEmailAddress" Bool="true"/>
-> </Annotations>
-> XML
-> 					Annotation
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> annotate view PRODUCTS.CATALOGSERVICE.PRODUCTS with {
-> @UI.lineItem: [
->   {
->     label: 'Supplier',
->     value: 'SUPPLIER',
->     type: #AS_CONTACT,
->     position: 1 
->   }
-> ]
-> SupplierID; 
-> }
-> 
-> annotate view FE.MANAGEITEMS.TECHNICALTESTINGSERVICE.SUPPLIER with { 
->     @Semantics.eMail.address: true
->     @EndUserText.label: 'EMail'
->     emailAddress;
->     @Semantics.telephone.type:  [ #CELL ]
->     @EndUserText.label: 'Mobile'
->     phoneNumber;
-> }
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> UI.LineItem                         : [
->     {
->         $Type  : 'UI.DataFieldForAnnotation',
->         Target : 'supplier/@Communication.Contact',
->         Label  : 'Supplier'
->     }
-> ]
-> phoneNumber             : String(15)         @(
->             title     : 'Mobile',
->             Communication.IsPhoneNumber
-> );
-> emailAddress             : String(241)         @(
->             title     : 'Email',
->             Communication.IsEmailAddress
-> );
-> 
-> ```
-
-
-
-### Contact Links
-
-Application developers can specify links for phone numbers or email addresses by using the annotations `Communication.IsPhoneNumber` and `Communication.IsEmailAddress`. The links are tagged with the prefix "mailto:" or "tel:". When users click the link, the browser redirects to the operating system \(for example Android, iOS, or Windows\) and directly performs the corresponding action, such as opening an email app.
-
-```xml
-<Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/phoneNumber">
-    <Annotation Term="Common.Label" String="Mobile"/>
-    <Annotation Term="Communication.IsPhoneNumber" Bool="true"/>
-</Annotations>
-```
-
-```xml
-XML<Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/emailAddress">
-    <Annotation Term="Common.Label" String="Email"/>
-    <Annotation Term="Communication.IsEmailAddress" Bool="true"/>
-</Annotations>
-```
-
-
-
-### Basic Links
-
-Application developers can display basic link with an optional icon or image using `DataFieldWithUrl`.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotation Term="UI.FieldGroup" Qualifier="DataFieldUrl">
->     <Record Type="UI.FieldGroupType">
->         <PropertyValue Property="Data">
->             <Collection>
->                 <Record Type="UI.DataFieldWithUrl">
->                     <PropertyValue Property="Url" String="www.sap.com"/>
->                     <PropertyValue Property="Value" String="This is an URL"/>
->                     <PropertyValue Property="IconUrl" String="sap-icon://arrow-right"/>
->                 </Record>
->                 <Record Type="UI.DataFieldWithUrl">
->                     <PropertyValue Property="Url" String="www.sap.com"/>
->                     <PropertyValue Property="Value" String=""/>
->                     <PropertyValue Property="IconUrl" Path="oneIcon"/>
->                 </Record>
->                 <Record Type="UI.DataFieldWithUrl">
->                     <PropertyValue Property="Url" Path="oneUrl"/>
->                     <PropertyValue Property="Value" String="This is an URL three"/>
->                     <PropertyValue Property="IconUrl" String="sap-icon://arrow-right"/>
->                 </Record>
->             </Collection>
->         </PropertyValue>
->     </Record>
-> </Annotation>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.fieldGroup: [
->   {
->     iconUrl: 'sap-icon://arrow-right'
->     type: #WITH_URL,
->     position: 1 ,
->     qualifier: 'DataFieldUrl'
->   },
->   {
->     url: 'ONEURL',
->     value: 'ONEURL',
->     type: #WITH_URL,
->     position: 2 ,
->     qualifier: 'DataFieldUrl'
->   }
-> ]
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> UI.FieldGroup #DataFieldUrl: {
-> Data : [{
->               $Type : 'UI.DataFieldWithUrl',
->               Url   : 'www.sap.com',
->               Value : 'This is an URL',
->               IconUrl: 'sap-icon://arrow-right',
->        },
->        {
->               $Type  : 'UI.DataFieldWithUrl',
->               Url    : oneDisplay,
->               Value  : oneUrl,
->               IconUrl: oneIcon
-> }
-> }]
-> 
-> ```
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_exz_w5f_k4b"/>
-
-## Representation as a `TextArea` or `ExpandableText`
-
-You can display a field as a `TextArea` in edit mode or as an `ExpandableText` in display mode by annotating the property associated to the field with `UI.MultiLineText`.
-
-![](images/Representation_as_a_TextArea_1744ef6.png)
-
-```xml
-<Annotations Target="com.c_salesordermanage_sd.SalesOrderManage">
-    <Annotation Term="Common.Label" String="Customer Reference"/>
-    <Annotation Term="UI.MultiLineText" Bool="true"/>
-</Annotations>
-```
-
-
-
-### Default Length in Edit Mode
-
-The default number of lines of a text area is 4, but you can change this in the `manifest.json` file. If the content exceeds the maximum number of lines for a given text area, then – depending on whether or not you are in edit mode – a scrollbar is shown. You can configure a text area in edit mode to grow and shrink, depending on its content.
-
-
-
-### Default Length in Display Mode
-
-The text is cut off after 100 characters and a *More* link is shown, allowing users to display the full text. By default, the text is expanded `"InPlace"`, but you can change this in the `manifest.json` file by setting the expand behavior to `"Popover"`.
-
-
-
-### Custom Length
-
-You can specify the maximum number of characters a text area can have using `textMaxLength`. When enabled, an indicator at the bottom of the text area shows the remaining number of characters. When it is exceeded, the user will see a notification.
-
-
-
-### Manifest-Based Definition
-
-If you need to define your own custom length in a `FieldGroup` or a `LineItem`, their `controlConfiguration` has to be extended with a `"fields"` block or `"columns"` block in a structure, as shown in the following sample code:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "sap.ui5": {
->     "routing": {
->         "targets": {
->             "SalesOrderManageObjectPage": {
->                 "options": {
->                     "settings": {
->                         "controlConfiguration": {
->                             "@com.sap.vocabularies.UI.v1.FieldGroup#myQualifier": {
->                                 "fields": {
->                                     "DataField::myFormTextField": {
->                                         "formatOptions": {
->                                             "textLinesEdit": "6",
->                                             "textMaxCharactersDisplay": "Infinity"
->                                         }
->                                     }
->                                  }
->                              },
->                             "myEntity/@com.sap.vocabularies.UI.v1.LineItem": {
->                                 "columns": {
->                                     "DataField::myTableTextField": {
->                                         "formatOptions": {                                         
->                                             "textLinesEdit": "3",
->                                             "textMaxLines": "5",
->                                             "textMaxCharactersDisplay": "400",
->                                             "textExpandBehaviorDisplay" : "Popover"
->                                         }
->                                     }
->                                 }
->                             }
->                          }
->                      }
->                  }
->              }
->         }
->     }
->  }
-> ```
-
-> ### Note:  
-> Fields annotated with `UI.MultiLineText` are not supported in grid tables, tree tables, and analytical tables.
-
-The following table provides an overview of the parameters that are allowed in `formatOptions`:
+**Representations of a Field**
 
 
 <table>
 <tr>
 <th valign="top">
 
-Parameter
+Field Representation
 
 </th>
 <th valign="top">
 
-Type
+Documentation
 
 </th>
 <th valign="top">
 
-Description
+Screenshot
 
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-`textLinesEdit`
+Plain text facet
 
 </td>
 <td valign="top">
 
-String | Integer
+[Plain Text Facet in the Object Page Header](plain-text-facet-in-the-object-page-header-1da0926.md) 
 
 </td>
 <td valign="top">
 
-An integer value or a string containing an integer value that defines the number of lines the text area can show when it is editable before a scrollbar is shown. If you use it together with `textMaxLines`, this parameter defines the minimum number of lines the field can shrink to.
+  
+  
+**Plain Text Facet in the Object Page Header**
 
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`textMaxLines`
-
-</td>
-<td valign="top">
-
-String | Integer
-
-</td>
-<td valign="top">
-
-An integer value or a string containing an integer value that defines the maximum number of lines that the text area can grow to when it is editable before a scrollbar is shown. If this value is not given or if it is not larger than `textLinesEdit`, the text area does not grow or shrink.
+![Screenshot of an object page header with numbered facets. In Facet 1, under the label Description, a frame surrounds a line of plain text saying Corded Ergonomic Keyboard with special keys for Media Usability, USB.](images/Representation_as_a_Simple_Plain_Text_Facet_52e34f4.png "Plain Text Facet in the Object Page Header ")
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`textMaxCharactersDisplay`
+Amount with a currency or unit of measure
 
 </td>
 <td valign="top">
 
-String | Integer
+[Setting Units of Measure](setting-units-of-measure-0d6c1d5.md) 
 
 </td>
 <td valign="top">
 
-An integer value or a string containing an integer value that defines the number of characters to be displayed before the text is cut off and a *More* link is shown. If you set this value to `"Infinity"`, the text is shown completely.
+  
+  
+**Fields with a Unit of Measure and a Currency**
 
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`textExpandBehaviorDisplay`
-
-</td>
-<td valign="top">
-
-String
-
-</td>
-<td valign="top">
-
-Defines how the full text is displayed: either `"InPlace"` or `"Popover"`.
+![Screenshot of two fields. The first field has the label Requested Quantity and the value 1.000 pt The second field has the label Net Value and the value 10.00 EUR.](images/Fields_used_with_Currency_and_Unit_of_Measure_812e7b0.png "Fields with a Unit of Measure and a Currency")
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`textMaxLength`
+Field as part of a form
 
 </td>
 <td valign="top">
 
-String | Integer
+[Grouping of Fields](grouping-of-fields-cb1748e.md)
+
+[The Form Building Block](the-form-building-block-391aad2.md)
+
+[Form Facet in the Object Page Header](form-facet-in-the-object-page-header-ff0ae0b.md)
 
 </td>
 <td valign="top">
 
-An integer value or a string containing an integer value that defines the maximum number of characters that can be entered in the text area. When this number is exceeded for a multi-line text field, the user sees a notification. When this number is reached for an input field, the user is unable to enter more characters than the defined length. If this value is not given, the maximum number of characters is not restricted.
+  
+  
+**Form Facet in the Object Page Header**
+
+![Screenshot of an object page header with multiple facets. A frame surrounds a facet labeled Sales Area that has three fields: a text field labeled Sales Organization, a link field labeled Division, and a file download field labeled Document.](images/Representation_as_Part_of_a_Form_5ab0639.png "Form Facet in the Object Page Header ")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Key value facet or key performance indicator \(KPI\)
+
+</td>
+<td valign="top">
+
+[The KPITag Building Block](the-kpitag-building-block-a256bff.md)
+
+[Displaying a Field as a Key Value Facet or a Key Performance Indicator \(KPI\)](displaying-a-field-as-a-key-value-facet-or-a-key-performance-indicator-kpi-c312735.md)
+
+</td>
+<td valign="top">
+
+  
+  
+**Key Value Facet in the Object Page Header**
+
+![Screenshot of an object page header with multiple facets. A frame surrounds a facet labeled Net Amount with the value 170.00 EUR displayed in large green font.](images/Representation_as_a_Key_Value_Facet_or_KPI_902d530.png "Key Value Facet in the Object Page Header")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Rating indicator
+
+</td>
+<td valign="top">
+
+[Adding a Rating Indicator to a Table](adding-a-rating-indicator-to-a-table-a797173.md)
+
+[Rating Indicator Facet in the Object Page Header](rating-indicator-facet-in-the-object-page-header-bcc12cb.md)
+
+</td>
+<td valign="top">
+
+  
+  
+**Rating Indicator in the Object Page Header**
+
+![Screenshot of an object page header with multiple facets. A frame surrounds a facet labeled Rating with five stars in a row; two of the stars are yellow, and the rest are gray, indicating a two-star rating.](images/Representation_as_a_Rating_Indicator_6d4af36.png "Rating Indicator in the Object Page Header")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Progress indicator
+
+</td>
+<td valign="top">
+
+[Adding a Progress Indicator to a Table](adding-a-progress-indicator-to-a-table-43f6f0f.md)
+
+[Progress Indicator Facet in the Object Page Header](progress-indicator-facet-in-the-object-page-header-3b5e01c.md)
+
+</td>
+<td valign="top">
+
+  
+  
+**Progress Indicator in the Object Page Header**
+
+![Screenshot of an object page header with multiple facets. A frame surrounds a facet labeled Order Progress with a partially filled progress bar.](images/Representation_as_Progress_Indicator_f63b611.png "Progress Indicator in the Object Page Header")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Link
+
+</td>
+<td valign="top">
+
+[Link Fields](link-fields-1695504.md) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Contact Info in the Object Page Header**
+
+![Screenshot of an object page header with multiple facets. In the Contact Info facet, a frame surrounds a field labeled Contact Info with a link Domestic Customer MZ 1.](images/Representation_as_a_Link_d3b1eac.png "Contact Info in the Object Page Header")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Multi-line text
+
+</td>
+<td valign="top">
+
+[Multi-Line Text Fields](multi-line-text-fields-b502146.md) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Multi-Line Text Field in Edit Mode and Display Mode**
+
+![Screenshot of a multi-line text field in edit mode with a scroll bar and in display mode. The display mode has two variations: collapsed with the text cut off and a link saying More and expanded with the full text and a link saying Less.](images/Representation_as_a_TextArea_1744ef6.png "Multi-Line Text Field in Edit Mode and Display
+										Mode")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Micro chart
+
+</td>
+<td valign="top">
+
+[The MicroChart Building Block](the-microchart-building-block-74554b4.md)
+
+[Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
+
+[Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+
+</td>
+<td valign="top">
+
+  
+  
+**Micro Chart Facets in the Object Page Header**
+
+![Screenshot of an object page header with multiple facets. Frames surround four facets with different micro charts: a bullet micro cart, a comparison micro chart, a radial micro chart, and a stacked bar micro chart.](images/Representation_as_a_Micro_Chart_9ed960f.png "Micro Chart Facets in the Object Page Header")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+File upload and download
+
+</td>
+<td valign="top">
+
+[Enabling Stream Support](enabling-stream-support-b236d32.md) 
+
+</td>
+<td valign="top">
+
+  
+  
+**File Upload and Download Field**
+
+![Screenshot of a field labeled Note File. Under the label, it displays a file icon, the file name, an Upload file button, and a Delete file button.](images/File_Upload_and_Download_Field_2531609.png "File Upload and Download Field")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Checkbox
+
+</td>
+<td valign="top">
+
+[Fields Representing Boolean Properties](fields-representing-boolean-properties-36ef70d.md)
+
+[Grouping Checkboxes](grouping-of-fields-cb1748e.md#loiocb1748ea9b984251addc03718d98df35__Grouping_Checkboxes) section in [Grouping of Fields](grouping-of-fields-cb1748e.md)
+
+</td>
+<td valign="top">
+
+  
+  
+**Checkbox**
+
+![Screenshot of a field label Approved and a ticked checkbox under it.](images/Checkbox_caaf23f.png "Checkbox")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Radio button group
+
+</td>
+<td valign="top">
+
+[Fields Representing Boolean Properties](fields-representing-boolean-properties-36ef70d.md) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Radio Button Group**
+
+![Screenshot of a label Payment Method with three radio buttons, labeled Bank Transfer, Credit Card, and Invoice. The first radio button is selected, the other two are unselected.](images/Radio_Button_Group_920310d.png "Radio Button Group")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Timestamp with timezone information
+
+</td>
+<td valign="top">
+
+[Date Picker and Date/Time Picker](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__section_jxp_rtv_s4b) section in [Field Help](field-help-a5608ea.md) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Timestamp Fields with Timezone**
+
+![Screenshot of a timestamp field with timezone in display mode and edit mode. The display mode displays all information as text, whereas the edit mode provides a date/time picker.](images/Timestamp_with_Timezone_cb85f47.png "Timestamp Fields with Timezone")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Multi-input field
+
+</td>
+<td valign="top">
+
+[Using the Multi-Input Field](using-the-multi-input-field-04ff5b1.md) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Multi-Input Field**
+
+![Screenshot of a field with two values: Sunshine Travel and Fly High. A Delete button is displayed next to each value.](images/Multi-Input_Field_9ba1332.png "Multi-Input Field")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Masked input field
+
+</td>
+<td valign="top">
+
+[Masked Input Fields](masked-input-fields-de89aec.md) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Masked Input Field**
+
+![Screenshot of a field labeled Credit Card Number with the numbers 540 entered. The numbers are followed by underscores and hyphens in the pattern expected for a credit card number, and an error message is displayed below, saying Please enter a valid value for the field.](images/Masked_Input_Field_2f83769.png "Masked Input Field")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Field with a masked value
+
+</td>
+<td valign="top">
+
+[Masking Fields To Hide Sensitive Data](masking-fields-to-hide-sensitive-data-6e46232.md) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Field with a Masked Value**
+
+![Screenshot of a field labeled Masked Field. Instead of the value, it shows a row of asterisks.](images/Masked_Password_Field_4cc5334.png "Field with a Masked Value")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Avatar
+
+</td>
+<td valign="top">
+
+[Using Images and Icons](using-images-and-icons-5760b63.md) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Avatar in the Object Page Header**
+
+![Screenshot of an object page header with multiple facets. A frame surrounds an image placed below the title of the object page.](images/Avatar_in_the_Object_Page_Header_10ab905.png "Avatar in the Object Page Header")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Address facet
+
+</td>
+<td valign="top">
+
+[Address Facet in the Object Page Header](address-facet-in-the-object-page-header-0b73cbb.md) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Address Facet**
+
+![Screenshot of a field labeled Shipping Address. The address is displayed in four lines.](images/Address_Facet_8d92094.png "Address Facet")
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Contact facet
+
+</td>
+<td valign="top">
+
+[Adding a Contact Facet](adding-a-contact-facet-a6a8c0c.md)
+
+[Adding a Contact Quick View to a Table](adding-a-contact-quick-view-to-a-table-677fbde.md)
+
+</td>
+<td valign="top">
+
+  
+  
+**Contact Facet in the Object Page Header**
+
+![Screenshot of an object page header with multiple facets. In the Contact Information facet, a frame surrounds a field labeled Contact Info with a link Domestic Customer MZ 1. Another frame surrounds the contact popover which contains more details about the customer.](images/Contact_Card_with_Smart_Links_7282872.jpg "Contact Facet in the Object Page Header")
 
 </td>
 </tr>
 </table>
-
-You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Multi-Line Text](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldMultiLineText).
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_kl4_2qs_r4b"/>
-
-## Representation as a Micro Chart
-
-You can render a field as a micro chart to show additional information like critical measures, or criticality.
-
-![](images/Representation_as_a_Micro_Chart_9ed960f.png)
-
-For more information, see [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md) and [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md).
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_k33_55z_tqb"/>
-
-## Representation as File Upload and Download \(`Edm.Stream`\)
-
-SAP Fiori elements allows you to enable stream support so that users can upload and download files. You can add `Edm.Stream` fields \(file upload\) to a form on the object page. For more information, see [Enabling Stream Support](enabling-stream-support-b236d32.md).
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_ob2_zfp_tgc"/>
-
-## Representation of Boolean Properties
-
-SAP Fiori elements allows you to render a Boolean property as a checkbox.
-
-For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Checkbox](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldCheckbox).
-
-Instead of a checkbox, you can render a Boolean property as a radio button group with two options \(*Yes* / *No*\). Use this approach when users need to trigger an immediate change, such as when choosing an option that updates the data on the screen immediately without needing to press *Submit*.
-
-To render a Boolean property as a group of radio buttons, use the field `formatOptions` either in your XML view or in the `manifest.json` file:
-
-> ### Sample Code:  
-> XML View
-> 
-> ```
-> 
-> <macros:Field metaPath="BooleanProperty" >
->     <macros:formatOptions>
->         <macrosF:FieldFormatOptions useRadioButtonsForBoolean="true"/>
->     </macros:formatOptions>
-> </macros:Field>
-> 
-> ```
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> 
-> "controlConfiguration": {
->     "@com.sap.vocabularies.UI.v1.FieldGroup#GeneralInformation": {
->         "fields": {
->             "DataField::booleanField": {
->                 "formatOptions": {
->                     "useRadioButtonsForBoolean": true
->                 }
->             }
->         }
->     }
-> }
-> 
-> ```
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_ajd_pfs_gxb"/>
-
-## Representation as a Timestamp with Timezone Information
-
-You can display a timestamp together with a timezone.
-
-If you annotate a property that contains a timezone code with `@Common.IsTimezone`, the UI in display mode shows the timezone as a text.
-
-![](images/Timestamp_with_Timezone_cb85f47.png)
-
-For more information, see the [Date Picker and Date/Time Picker](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__section_jxp_rtv_s4b) section in [Field Help](field-help-a5608ea.md).
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_hkn_33r_wbc"/>
-
-## Representation as a Masked Input Field
-
-
-
-### Using the `UI.InputMask` Annotation
-
-A field can be rendered as a masked input field, allowing users to enter values only in the specified format. No other formats are accepted by these fields. Examples of such fields include a postal code, a product activation key, or a phone number with an area code.
-
-![](images/Masked_Input_Field_6a86d90.png)
-
-For example, if the mask symbol is `S^AP-AA-999`, the user input value must be `DE239`. The value displayed on the UI is `SAP-DE-239`. The characters used as mask symbols such as `SAP`, `I`, or special characters such as `()` are only displayed on the UI and not saved in the back end.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotations Target="sap.fe.core.MaskInputMassEdit.MainEntity/MaskedInputPhone"> 
->           <Annotation Term="UI.InputMask"> 
->               <Record> 
->                    <PropertyValue Property="Mask" String="(***) *** ******"/> 
->                    <PropertyValue Property="PlaceholderSymbol" String="_"/> 
->               </Record> 
->           </Annotation> 
->           <Annotation Term="UI.Placeholder" String="Enter twelve-digit number"/> 
-> </Annotations> 
-> 
-> <Annotations Target="sap.fe.core.MaskInputMassEdit.MainEntity/MaskedInputRegistration"> 
->           <Annotation Term="UI.InputMask"> 
->                 <Record> 
->                    <PropertyValue Property="Mask" String="I____-__"/> 
->                    <PropertyValue Property="PlaceholderSymbol" String="_"/> 
->                    <PropertyValue Property="Rules"> 
->                         <Collection> 
->                                   <Record> 
->                                        <PropertyValue Property="MaskSymbol" String="_"/> 
->                                        <PropertyValue Property="RegExp" String="[0-9]"/> 
->                                   </Record> 
->                         </Collection> 
->                    </PropertyValue> 
->                </Record> 
->           </Annotation> 
-> 
-> 
-> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> MaskedInputPhone   : String          @( 
->       UI.InputMask  : { 
->          Mask       : '(***) *** ******', 
->          PlaceholderSymbol: '_', 
->       }, 
->       UI.Placeholder: 'Enter twelve-digit number' 
->       ); 
->      MaskedInputRegistration    : String          @( 
->       UI.InputMask  : { 
->         Mask       : 'I****-**', 
->         PlaceholderSymbol: '_', 
->         Rules      : [{ 
->          MaskSymbol: '*', 
->          RegExp    : '[0-9]' 
->         }] 
->       }, 
->       UI.Placeholder: 'Enter digits registration number' 
-> ); 
->      MaskedInputSAP            : String          @(
->   UI.InputMask  : {
->     Mask             : 'S^AP-AA-999',
->     PlaceholderSymbol: '_',
->     Rules            : [
->       {
->         MaskSymbol: '9',
->         RegExp    : '[0-9]'
->       },
->       {
->         MaskSymbol: 'A',
->         RegExp    : '[A-Z]'
->       }
->     ]
->   },
->   UI.Placeholder: 'Starts with SAP followed by two uppercase letter and three digits'
-> );
-> ```
-
-> ### Note:  
-> You must ensure that placeholder symbols do not match the mask symbols.
-> 
-> The mask characters normally correspond to an existing rule \(one rule per unique character\). Characters which don't, are considered immutable characters \(for example, the mask `2099`, where `9` corresponds to a rule for digits, has the characters `2` and `0` as immutable\). You can use the special escape character `^` called "Caret" directly before a rule character to make it immutable.
-
-For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Input Fields - Input Mask](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldInputMask).
-
-
-
-### Using the `Common.Masked` Annotation
-
-Certain input fields must be hidden from the UI to protect sensitive data. To achieve this, you can use the `Common.Masked` annotation to prevent data from being displayed in plain text.
-
-![](images/Masked_Password_Field_4cc5334.png)
-
-In edit mode, the input field masks each character with a dot \(•\), so users do not see the text they enter as plain text. In display mode, the input field replaces each character with an asterisk \(\*\).
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotations Target="sap.fe.core.FieldDisplayStyles.RootEntity/MaskedField"> 
->         <Annotation Term="Common. Masked" Bool="true"/> 
-> </Annotations>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> MaskedField  : String  @Common : {Masked: true};
-> ```
-
-For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Masked Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldMasked).
-
-This feature only provides casual visual protection against shoulder surfing and doesn't influence how data is transferred to the back end. The data is transferred to the client like any other property in plain text without masking.
-
-Therefore, sensitive or high-security data must never be delivered from the back end in an unmasked or unencrypted state. In addition to using the `Common.Masked` annotation, we strongly recommend masking sensitive values in the back end before sending them to the client.
-
-For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
-
-
-
-<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__represent_avatar"/>
-
-## Representation as an Avatar
-
-Fields of type `Edm.String` can be displayed as an avatar using the `UI.IsImageUrl` annotation. For more information and live examples, see [Using Images and Icons](using-images-and-icons-5760b63.md) and the SAP Fiori development portal at [Building Blocks - Field - Avatar](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldAvatar).
-
-**Related Information**  
-
-
-[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md "You can configure value help as a dropdown list.")
 

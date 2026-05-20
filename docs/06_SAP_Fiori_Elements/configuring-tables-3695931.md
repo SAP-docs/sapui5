@@ -5,7 +5,7 @@
 You can use the annotations and entries in `manifest.json` to control various aspects of tables.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Configuring Tables](configuring-tables-f4eb70f.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring Tables](configuring-tables-f4eb70f.md).
 
 For information about smart tables, see[`sap.ui.comp.smarttable.SmartTable`](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable) and [Tables: Which One Should I Choose?](../10_More_About_Controls/tables-which-one-should-i-choose-148892f.md).
 

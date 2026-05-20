@@ -5,7 +5,7 @@
 Get to know the message types supported by SAP Fiori elements.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Using Messages](using-messages-239b192.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Using Messages](using-messages-239b192.md).
 
 The system generates messages in response to what users do in the SAP system. A message presents information, an instruction, or a warning to users in a given situation. Back-end systems can generate either a state message or a transition message.
 

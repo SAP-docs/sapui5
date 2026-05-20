@@ -2,7 +2,7 @@
 
 # Enabling the Upload Functionality
 
-You can enable users to upload files to a server.
+You can enable users to upload files to a server in SAP Fiori elements for OData V4.
 
 When the upload functionality is enabled, the user can do the following:
 

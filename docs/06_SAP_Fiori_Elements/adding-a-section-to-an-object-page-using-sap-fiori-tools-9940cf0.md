@@ -4,7 +4,7 @@
 
 # Adding a Section to an Object Page Using SAP Fiori Tools
 
-You can add a section to an object page using SAP Fiori tools.
+You can use SAP Fiori tools to add a section to an object page in SAP Fiori elements for OData V4.
 
 
 

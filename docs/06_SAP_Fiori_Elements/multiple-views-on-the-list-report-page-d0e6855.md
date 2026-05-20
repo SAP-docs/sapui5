@@ -7,7 +7,7 @@ You can define multiple views of a table and add a chart.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Multiple Views on the List Report Page](multiple-views-on-the-list-report-page-a37df40.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Multiple Views on the List Report Page](multiple-views-on-the-list-report-page-a37df40.md).
 
 
 

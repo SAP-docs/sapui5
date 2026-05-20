@@ -2,7 +2,9 @@
 
 # Extending Delivered Apps Using Adaptation Projects
 
-You can extend delivered apps based on SAP Fiori elements by using the Adaptation Studio in SAP Business Application Studio. The Adaptation Editor allows you to create adaptation projects on top of delivered apps.
+You can extend delivered apps based on SAP Fiori elements for OData V4 by using the Adaptation Studio in SAP Business Application Studio.
+
+The Adaptation Editor allows you to create adaptation projects on top of delivered apps.
 
 > ### Tip:  
 > While SAP Fiori elements supports table type modifications through adaptation projects, we cannot guarantee compatibility across all applications and scenarios. Table type modifications may behave differently depending on factors such as the specific application, OData version, and existing configurations.

@@ -2,7 +2,7 @@
 
 # Extending Apps Using a Canvas Page
 
-You can embed content in a canvas page within an app.
+You can embed content in a canvas page within an app in SAP Fiori elements for OData V2.
 
 A canvas page is an empty custom page in a SAP Fiori elements-based app. The content needs to be provided by an embedded implementing component.
 

@@ -2,9 +2,11 @@
 
 # `In`/`Out` Mappings in the `ValueList` Annotation
 
-You can use the `IN`/`OUT` parameters within the value help definition to establish a link between the fields in the main entity and the fields in the value help entity.
+You can use the `IN`/`OUT` parameters within the value help definition in SAP Fiori elements for OData V4.
 
 
+
+By using these parameters, you establish a link between the fields in the main entity and the fields in the value help entity.
 
 **Annotation Terms**
 

@@ -5,7 +5,7 @@
 You can use `extensionAPI` to extend your application.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Using the ExtensionAPI](using-the-extensionapi-bd2994b.md).
 
 The `extensionAPI` consists of several elements that are described below. It can be used for the list report page, the analytical list page, and the object page.
 

@@ -2,7 +2,7 @@
 
 # Adding Custom Input Fields to the Mass Edit Dialog
 
-You can add custom input fields to the mass edit dialog by defining them in the manifest.
+You can add custom input fields to the mass edit dialog in SAP Fiori elements for OData V4.
 
 You can add a custom fragment to the *Mass Edit* dialog by defining the `customFragment` property in the `manifest.json` file.
 

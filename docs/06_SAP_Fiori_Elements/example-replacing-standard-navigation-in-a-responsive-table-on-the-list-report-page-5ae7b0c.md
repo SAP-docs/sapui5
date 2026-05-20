@@ -2,7 +2,7 @@
 
 # Example: Replacing Standard Navigation in a Responsive Table on the List Report Page
 
-You can replace standard list report table navigation with custom navigation to external or internal targets using controller extensions.
+You can replace standard list report table navigation with custom navigation to external or internal targets using controller extensions in SAP Fiori elements for OData V2.
 
 
 

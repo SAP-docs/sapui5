@@ -2,12 +2,12 @@
 
 # Stack Cards
 
-Stack cards aggregate a set of cards of the same type, which are based on a common topic or action. When clicked, up to 20 stacked cards can be displayed in the object stream.
+You can use stack cards to group multiple cards of the same type that are related to a common topic or action. When clicked, the object stream can display up to 20 stacked cards.
 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V4, see [Stack Cards](stack-cards-756c49c.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Stack Cards](stack-cards-756c49c.md).
 
 
 

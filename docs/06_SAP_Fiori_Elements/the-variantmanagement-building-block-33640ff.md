@@ -2,7 +2,7 @@
 
 # The `VariantManagement` Building Block
 
-You can use the `VariantManagement` building block to enable variant management for any flex-enabled control.
+You can use the `VariantManagement` building block to enable variant management for any flex-enabled control in SAP Fiori elements for OData V4.
 
 This building block can be applied at two levels:
 

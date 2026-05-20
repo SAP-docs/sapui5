@@ -2,7 +2,9 @@
 
 # Bubble Chart
 
-You can render the chart as a bubble chart to display up to three measures and two dimensions of data.
+You can render the chart as a bubble chart in SAP Fiori elements for OData V4.
+
+A bubble chart displays up to three measures and two dimensions of data.
 
 
 

@@ -2,7 +2,7 @@
 
 # Replacing the Standard Save Functionality in the Mass Edit Dialog
 
-You can enable custom save functionality for the mass edit dialog.
+You can enable custom save functionality for the mass edit dialog in SAP Fiori elements for OData V4.
 
 In the extension function, you can define the logic to save the data provided in the mass edit dialog. The default save functionality is executed by the framework if the extension is not defined. Clean-up tasks, such as closing the dialog, are performed by the framework after the extension logic is executed.
 
@@ -54,5 +54,5 @@ You can implement the `customMassEditSave` function within the list report page 
 **Related Information**  
 
 
-[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "You can enable the mass edit feature to allow users to simultaneously change multiple objects that share the same editable properties.")
+[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "You can enable the mass edit feature to allow users to simultaneously change multiple objects that share the same editable properties in SAP Fiori elements for OData V4.")
 
