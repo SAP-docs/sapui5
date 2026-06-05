@@ -19,6 +19,9 @@ on:
     branches: [main]
     paths: 'docs/**'
 
+permissions:
+  contents: read
+
 jobs:
   main:
     if: contains(github.repositoryUrl, 'github.com')
