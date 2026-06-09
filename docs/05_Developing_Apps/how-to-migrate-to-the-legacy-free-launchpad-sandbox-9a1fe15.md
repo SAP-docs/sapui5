@@ -201,7 +201,7 @@ Manual initialization
             data-sap-ui-resource-roots='{
                 "my.app": "../"
             }'>
-  < /script>
+  </script>
 </head>
 <body class="sapUiBody">
 	<div id="canvas"></div>
