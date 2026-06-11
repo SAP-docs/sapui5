@@ -229,5 +229,5 @@ For more information about other possible values for the `availability` property
 
 [Enabling the Search Function](enabling-the-search-function-3cdebee.md "You can enable the Search function on the list report page in SAP Fiori elements for OData V4.")
 
-[Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md "You can use semantic date values, such as Today or Last Week, on the filter bar of list report page and analytical list page applications in SAP Fiori elements for OData V4.")
+[Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md "You can use semantic date values, such as Today or Last Week, on the filter bar of list report page, analytical list page, and overview page applications in SAP Fiori elements for OData V4.")
 

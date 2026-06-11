@@ -6,7 +6,7 @@ You can configure the navigation within an app \(internal navigation\) and the n
 
 
 
-General navigation aspects are listed in the [Navigation](https://experience.sap.com/fiori-design/concept/navigation/) section of the SAP Fiori Design Guidelines.
+General navigation aspects are listed in the [Navigation](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/navigation/navigation) section of the SAP Design System guidelines.
 
 With SAP Fiori elements, the following navigation options are available and can be configured:
 

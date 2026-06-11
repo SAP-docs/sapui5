@@ -89,11 +89,39 @@ The chevron navigation from a list report page can also be modified using [onLis
 
 
 
+### Avoiding Navigation After Executing an Action
+
+> ### Note:  
+> This setting is supported only for `DataFieldForAction` annotations in object page tables.
+
+You can disable the navigation to a subobject page using the setting `navigateToInstance` in the `manifest.json` file:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "to_Item::com.sap.vocabularies.UI.v1.LineItem": {
+>     "tableSettings": {
+>         ...,
+>         ...
+>     },
+>     "annotatedActions": {
+>         "C_STTA_SalesOrderItem_WD_20Setopportunityid": {
+>             "afterExecution": {
+>                 "navigateToInstance": false
+>             }
+>         }
+>     }
+> }
+> ```
+
+
+
 ### Showing Item List on a List Report Page and Parent on an Object Page
 
 You can enable applications to display item lists on a list report page and parent/main object along with its child entities on an object page. To do this, you need to map a child entity to a list report page and enable navigation to the parent/main object.
 
-Add the following configuration in the manifest to direct the *Create* action on a list report oage to the main entity:
+Add the following configuration in the manifest to direct the *Create* action on a list report page to the main entity:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -123,55 +151,6 @@ You can link entities within an app. This allows users to navigate between the e
 
 > ### Note:  
 > This feature is available only on the object page.
-
-
-
-### Determining the Navigation Target
-
-As shown in the manifest example, the `"navigation"` section of the routing target points to the UI5 route you want to navigate to.
-
-The appropriate navigation target is identified by the `'Target'` property of the `UI.DataFieldWithNavigationPath` annotation.
-
-The parameters in the routing pattern are resolved using the relative binding paths defined in the navigation target.
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```json
-> "routing": {
-> "routes": [
->         {                 
->             "pattern": "SalesOrderManage({key}):?query:",                                                                                 
->             "name": "SalesOrderManageObjectPage",                                                                                                 
->             "target": "SalesOrderManageObjectPage"
->         }
->     ],
-> "targets": {                
->     "SalesOrderManageObjectPage":
->         {
->             "type": "Component",
->             "id": "SalesOrderManageObjectPage",
->             "name": "sap.fe.templates.ObjectPage",
->             "options": {
->                 "settings": {
->                     "contextPath":    "/SalesOrderManage",
->                     "navigation": {
->                         "to_SalesOrder": {  // 'Target' of UI.DataFieldWithNavigationPath annotation
->                             "detail": {
->                                 "route": "SalesOrderManageObjectPage",
->                                 "parameters": {
->                                     "key":  "{_ReferencedSalesOrder/ID}"
->                                 }
->                            }
->                       }   
->                  }                  
->             }
->     }
-> }
->         }
->     }
-> }
-> ```
 
 The following example shows how to use the `DataFieldWithNavigationPath` annotation to link entities:
 

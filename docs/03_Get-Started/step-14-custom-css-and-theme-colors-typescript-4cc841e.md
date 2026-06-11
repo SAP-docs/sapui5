@@ -24,7 +24,7 @@ Sometimes we need to define some more fine-granular layouts and this is when we 
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 14: Custom CSS and Theme Colors](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/14) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-14.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

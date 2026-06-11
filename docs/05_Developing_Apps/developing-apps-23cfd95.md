@@ -22,7 +22,7 @@ Before you start developing apps with SAPUI5, you start by setting up the develo
 
 ## Development
 
-When faced with developing an app, you have several ways to get started ranging from app templates or a make-em-completely-from-scratch approach. But which approach is right for your situation? In most cases, it's your level of expertise or need for flexibility and freedom that will decide.
+When faced with developing an app, you have several ways to get started ranging from app templates or a make-em-completely-from-scratch approach. But which approach is right for your situation? In most cases, it's your level of expertise or need for flexibility and freedom that will decide. To help you decide on the best development approach, please see [Developing Apps with Modern Concepts: Guidance for Developers](../02_Read-Me-First/developing-apps-with-modern-concepts-guidance-for-developers-4cb54eb.md).
 
 An easy start to app development are app templates offered by SAP Fiori Tools. Think of app templates as a kind of best practice for app development. They incorporate current recommendations and can be used as a starting point for developing apps according to the SAP Design System guidelines. They include generic application functionality and tests that can be easily extended with custom functionality if needed. The templates are introduced under [Developing Apps with SAP Fiori Tools](developing-apps-with-sap-fiori-tools-a460a73.md).
 
@@ -44,4 +44,11 @@ For example, it's quite easy to deploy an app to SAP Business Technology Platfor
 
 > ### Note:  
 > For more information about packaging apps, read the blog post [Optimizing OpenUI5/SAPUI5 Apps](https://blogs.sap.com/2015/02/18/optimizing-openui5-apps/).
+
+**Related Information**  
+
+
+[Developing Apps with SAP Fiori Elements](../06_SAP_Fiori_Elements/developing-apps-with-sap-fiori-elements-03265b0.md "Develop apps using SAP Fiori elements and benefit from a metadata-driven approach.")
+
+[Developing Apps with Modern Concepts: Guidance for Developers](../02_Read-Me-First/developing-apps-with-modern-concepts-guidance-for-developers-4cb54eb.md "This guidance explains how you can balance development efficiency, maintenance costs, and design flexibility when building enterprise-ready applications with SAP Fiori elements and freestyle SAPUI5.")
 

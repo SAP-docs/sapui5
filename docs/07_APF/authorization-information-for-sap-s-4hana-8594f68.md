@@ -6,12 +6,7 @@
 
 ## Configuration Persistence on the Front-End Server
 
-Authorization object /UIF/LREP must be added to any role. Depending on what you want to do, select one of the following values for the field /UIF/ROLE of this authorization object:
-
--   To create configurations using the APF Configuration Modeler and to execute them, select APFADMIN.
-
--   To run a configuration, select APFUSER
-
+The authorization object /UIF/LREP must be added to any role. To create configurations using the APF Configuration Modeler and to execute them, assign the value APFADMIN to the field /UIF/ROLE of this authorization object.
 
 
 

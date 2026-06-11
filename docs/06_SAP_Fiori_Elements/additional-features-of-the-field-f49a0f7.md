@@ -215,6 +215,11 @@ The following code snippets show a `Common.ExternalID` annotation at the `myGuid
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation. For more information, see [Value Lists](../04_Essentials/value-lists-ab267a6.md).
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
@@ -224,7 +229,7 @@ The following code snippets show a `Common.ExternalID` annotation at the `myGuid
 
 The `Common.Text` and `Common.TextArrangement` annotations are evaluated only for the readable ID property instead of the `GUID` property. However, while the `GUID` property is not visible on the UI, it is a part of the field as a technical identifier of an item or for filter fields.
 
-Value helps for a field with an `ExternalID` property are to be defined at the `Edm.Guid` property. The entity type that is shown in the value help \(defined in the `collectionPat`h of the `Common.ValueList` annotation\) can have `Edm.Guid` properties pointing to the readable ID properties.
+Value helps for a field with an `ExternalID` property are to be defined at the `Edm.Guid` property. For more information, see [Value Help Dialog](value-help-dialog-3faed83.md).
 
 
 

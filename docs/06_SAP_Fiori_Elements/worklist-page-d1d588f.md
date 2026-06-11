@@ -18,7 +18,7 @@ From a technical perspective, a worklist page is a simplified list report page w
 
 
 
-For general information about the worklist page floorplan, see the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
+For general information about the worklist page floorplan, see the [SAP Design System guidelines.](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/work-list)
 
 
 

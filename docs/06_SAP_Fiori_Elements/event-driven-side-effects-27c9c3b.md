@@ -124,7 +124,7 @@ You can also define different interaction types for specific events, as shown in
 
 ## Adding Custom Logic Using a Controller Extension Hook
 
-If you require programmatic control over event processing, for example, to run custom logic, override the interaction type at runtime, or stop the default processing, you can implement the `onEventDrivenSideEffectsReceived` hook in a controller extension, as shown in the following sample code:
+If you require programmatic control over event processing, for example, to override the interaction type at runtime or stop the default processing, you can implement the `onEventDrivenSideEffectsReceived` hook in a controller extension as shown in the following sample code:
 
 > ### Sample Code:  
 > Controller Extension
@@ -159,15 +159,73 @@ The hook is defined on the `SideEffects` controller extension and is called once
 
 The hook receives an `mParameters` object with the following properties:
 
--   `sideEffectEventName`: The name of the side-effects event, which matches the value in the `SourceEvents` annotation.
--   `sideEffectSource`: The OData path of the entity instance that triggered the event.
+-   `sideEffectEventName`: The name of the side-effect event, which matches the value in the `SourceEvents` annotation.
+-   `sideEffectSource`: The OData path of the entity instance that triggers the event.
 
-The return value of the hook determines what happens next, as one of the following outcomes:
+The return value of the hook determines what happens next as shown in the following table:
 
--   If the promise from the hook resolves as `{}`, the interaction type from the `manifest.json` file is used or the default interaction type.
--   If the promise from the hook resolves as `interactionType: "Confirmation"`, `interactionType: "Notification"`, or `interactionType: "None"`, then the value of `interactionType` overrides the manifest setting.
--   If the promise from the hook is rejected, processing is stopped, that is, no data refresh, no confirmation dialog, and no notification toast. You can use this to execute custom logic instead of the default refresh workflow.
+
+<table>
+<tr>
+<th valign="top">
+
+Return Value
+
+</th>
+<th valign="top">
+
+Behavior
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`Promise.resolve({})`
+
+</td>
+<td valign="top">
+
+The interaction type from the `manifest.json` file or the default interaction type is used.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Promise.resolve({ interactionType: "Confirmation" })`
+
+`Promise.resolve({ interactionType: "Notification" })`
+
+`Promise.resolve({ interactionType: "None" })`
+
+</td>
+<td valign="top">
+
+The value of `interactionType` overrides the manifest setting.
+
+-   `Confirmation`: Displays a confirmation dialog
+-   `Notification:` Displays a notification toast
+-   `None:` Silent refresh
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Promise.reject()`
+
+</td>
+<td valign="top">
+
+Stops all processing.
+
+</td>
+</tr>
+</table>
 
 > ### Note:  
-> When multiple pages are visible simultaneously, for example in a flexible column layout, the hook is called once per visible page. If multiple pages return an `interactionType` override, the value from the last resolved page takes effect. If any page rejects the promise, processing is stopped.
+> When multiple pages are visible simultaneously, for example, in a flexible column layout, the hook is called once per visible page. If multiple pages return an `interactionType` override, the value from the last resolved page takes effect. If any page rejects the promise, processing is stopped.
 

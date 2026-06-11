@@ -30,5 +30,5 @@ By default, lazy loading is enabled for the standard sections on the object page
 > ### Note:  
 > Set the parameter only for those sections that have no impact on other sections or on the object page header.
 
-For more information about lazy loading, see the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/object-page/#structure) and the *API Reference* for [`ObjectPageLayout`](https://ui5.sap.com/#/api/sap.uxap.ObjectPageLayout).
+For more information about lazy loading, see the [SAP Design System guidelines](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/object-page#components) and the *API Reference* for [`ObjectPageLayout`](https://ui5.sap.com/#/api/sap.uxap.ObjectPageLayout).
 

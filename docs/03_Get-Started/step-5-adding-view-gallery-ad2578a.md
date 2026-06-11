@@ -129,7 +129,7 @@ Update the `manifest.json` file so that it references the correct files.
     "sap.ui5": {
         "rootView": "viewportScenetreeStepnav.view.App",
         "dependencies": {
-            "minUI5Version": "1.148.0",
+            "minUI5Version": "1.149.0",
             "libs": {
                 "sap.m": {}
             }

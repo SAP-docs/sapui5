@@ -177,7 +177,7 @@ You must now link the `UI.FieldGroup` configured above to the `UI.ReferenceFacet
 For more information, see [Configuring External Navigation](configuring-external-navigation-1d4a0f9.md).
 
 > ### Tip:  
-> SAP recommends applications to place the action that is most important on the very left. For more information, see [Action Placement](https://experience.sap.com/fiori-design-web/action-placement/).
+> SAP recommends applications to place the action that is most important on the very left. For more information, see the [SAP Design System guidelines](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/action-placement).
 
 
 

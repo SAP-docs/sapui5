@@ -65,7 +65,7 @@ Amount with a currency or unit of measure
   
 **Fields with a Unit of Measure and a Currency**
 
-![Screenshot of two fields. The first field has the label Requested Quantity and the value 1.000 pt The second field has the label Net Value and the value 10.00 EUR.](images/Fields_used_with_Currency_and_Unit_of_Measure_812e7b0.png "Fields with a Unit of Measure and a Currency")
+![Screenshot of two fields. The first field has the label Requested Quantity and the value 1.000 pt. The second field has the label Net Value and the value 10.00 EUR.](images/Fields_used_with_Currency_and_Unit_of_Measure_812e7b0.png "Fields with a Unit of Measure and a Currency")
 
 </td>
 </tr>
@@ -180,7 +180,7 @@ Link
   
 **Contact Info in the Object Page Header**
 
-![Screenshot of an object page header with multiple facets. In the Contact Info facet, a frame surrounds a field labeled Contact Info with a link Domestic Customer MZ 1.](images/Representation_as_a_Link_d3b1eac.png "Contact Info in the Object Page Header")
+![Screenshot of an object page header with multiple facets. A frame surrounds a field labeled Contact Info with a link Domestic Customer MZ 1.](images/Representation_as_a_Link_d3b1eac.png "Contact Info in the Object Page Header")
 
 </td>
 </tr>
@@ -227,7 +227,7 @@ Micro chart
   
 **Micro Chart Facets in the Object Page Header**
 
-![Screenshot of an object page header with multiple facets. Frames surround four facets with different micro charts: a bullet micro cart, a comparison micro chart, a radial micro chart, and a stacked bar micro chart.](images/Representation_as_a_Micro_Chart_9ed960f.png "Micro Chart Facets in the Object Page Header")
+![Screenshot of an object page header with multiple facets. Frames surround four facets with different micro charts: a bullet micro chart, a comparison micro chart, a radial micro chart, and a stacked bar micro chart.](images/Representation_as_a_Micro_Chart_9ed960f.png "Micro Chart Facets in the Object Page Header")
 
 </td>
 </tr>
@@ -334,7 +334,7 @@ Multi-input field
   
 **Multi-Input Field**
 
-![Screenshot of a field with two values: Sunshine Travel and Fly High. A Delete button is displayed next to each value.](images/Multi-Input_Field_9ba1332.png "Multi-Input Field")
+![Screenshot of a field with two values: Sunshine Travel and Fly High. A Delete icon is displayed next to each value.](images/Multi-Input_Field_9ba1332.png "Multi-Input Field")
 
 </td>
 </tr>

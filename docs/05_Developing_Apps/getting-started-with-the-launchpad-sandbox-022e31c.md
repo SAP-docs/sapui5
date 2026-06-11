@@ -8,9 +8,9 @@ Learn how to quickly set up and use the SAP Fiori launchpad sandbox for local de
 
 ## Prerequisites
 
--   SAPUI5 1.147 or higher \(UI5 2.x is recommended\)
+-   SAPUI5 1.147 or higher
 
--   SAP Fiori application with a valid manifest.json
+-   SAP Fiori application with a valid `manifest.json`
 
 -   local development server \(for example, ui5 serve\)
 
@@ -21,131 +21,32 @@ Learn how to quickly set up and use the SAP Fiori launchpad sandbox for local de
 
 1.  Create the sandbox HTML file
 
-    Create a file named `sandbox.html` \(or `flpSandbox.html`\) in your application's test folder. The following bootstrap is compatible with **both UI5 1.x and UI5 2.x**:
+    Create a file named `sandbox.html` \(or `flpSandbox.html`\) in your application's test folder:
 
     ```
-    {
-    
-        "tiles": [
-    
-            {
-    
-                "semanticObject": "SalesOrder",
-    
-                "action": "display",
-    
-                "rootPath": "../sales-order-app/"
-    
-            },
-    
-            {
-    
-                "semanticObject": "SalesOrder",
-    
-                "action": "create",
-    
-                "rootPath": "../sales-order-create-app/"
-    
-            },
-    
-            {
-    
-                "semanticObject": "Product",
-    
-                "action": "manage",
-    
-                "rootPath": "../product-management-app/"
-    
-            }
-    
-        ]
-    
-    }
+    <!DOCTYPE html>
+    <html>
+        <head>
+          <meta charset="utf-8" />
+          <title>My App - FLP Sandbox</title>
+          <script src="resources/sap/ushell/sandbox/SandboxBootTask.js"></script>
+          <script
+              id="sap-ui-bootstrap"
+              src="resources/sap-ui-core.js"
+              data-sap-ui-async="true"
+              data-sap-ui-compat-version="edge"
+              data-sap-ui-boot-manifest="sap/ushell/sandbox/sandboxManifest.json"
+              data-sap-ui-theme="sap_horizon"
+              data-sap-ui-resource-roots='{
+                  "my.app": "../"
+              }'
+          ></script>
+        </head>
+        <body class="sapUiBody">
+          <div id="canvas"></div>
+        </body>
+    </html>
     ```
-
-    > ### Note:  
-    > `<div id="canvas">` is optional. The sandbox automatically creates it if it's not present. However, keeping it in the HTML avoids a flash of unstyled content during startup.
-    > 
-    > How the bootstrap works:
-    > 
-    > 
-    > <table>
-    > <tr>
-    > <th valign="top">
-    > 
-    > Attribute/Script
-    > 
-    > </th>
-    > <th valign="top">
-    > 
-    > UI5 1.x
-    > 
-    > </th>
-    > <th valign="top">
-    > 
-    > UI5 2.x
-    > 
-    > </th>
-    > </tr>
-    > <tr>
-    > <td valign="top">
-    > 
-    > `SandboxBootTask.js`
-    > 
-    > </td>
-    > <td valign="top">
-    > 
-    > Registers boot task to load ConfigurationProvider
-    > 
-    > </td>
-    > <td valign="top">
-    > 
-    > Ignored \(no effect\)
-    > 
-    > </td>
-    > </tr>
-    > <tr>
-    > <td valign="top">
-    > 
-    > `data-sap-ui-boot-manifest`
-    > 
-    > </td>
-    > <td valign="top">
-    > 
-    > Ignored
-    > 
-    > </td>
-    > <td valign="top">
-    > 
-    > Loads sandboxManifest.json which registers ConfigurationProvider
-    > 
-    > </td>
-    > </tr>
-    > <tr>
-    > <td valign="top">
-    > 
-    > `data-sap-ui-compat-version="edge"`
-    > 
-    > </td>
-    > <td valign="top">
-    > 
-    > Required — omitting it causes failures with modern APIs
-    > 
-    > </td>
-    > <td valign="top">
-    > 
-    > Optional
-    > 
-    > </td>
-    > </tr>
-    > </table>
-
-    > ### Note:  
-    > `SandboxBootTask.js` is deprecated since 1.136. The boot-manifest approach \(`data-sap-ui-boot-manifest`\) is recommended for UI5 2.x. However, `SandboxBootTask.js` must still be included for 1.x compatibility when targeting both versions.
-    > 
-    > Important for UI5 1.x: Always include `data-sap-ui-compat-version="edge"` when running against UI5 1.x. Omitting it will cause silent failures with modern APIs used by the sandbox.
-    > 
-    > The ConfigurationProvider automatically sets `data-sap-ui-on-init` to `module:sap/ushell/sandbox/SandboxModule`. you don't need to specify it manually.
 
 2.  Start your development server
 
@@ -159,10 +60,11 @@ Learn how to quickly set up and use the SAP Fiori launchpad sandbox for local de
     # http://localhost:8080/test/sandbox.html
     ```
 
+3.  In your launchpad sandbox, check if you see an orange bar at the top saying "SAP Fiori Launchpad Sandbox - For Testing Purposes Only!". Your app appears as a tile on the page \(with semantic object "MyApp" and action "display" if no configuration file is provided\).
 
 
 
-That's it! Your application should now be running in the FLP sandbox with sensible defaults.
+That's it! Your application should now be running in the sandbox.
 
 
 
@@ -170,7 +72,7 @@ That's it! Your application should now be running in the FLP sandbox with sensib
 
 The sandbox works out of the box without additional configuration. However, for most scenarios, you should customize the behavior by creating a `fioriSandboxAppConfig.json` file.
 
-See for all available options and default values.
+See [How to Configure the Launchpad Sandbox](how-to-configure-the-launchpad-sandbox-e6151c1.md) for all available options and default values.
 
 
 
@@ -197,111 +99,18 @@ my-app/
 
 The sandbox automatically provides:
 
--   **Fiori 2.0 Shell**: Complete shell with header, navigation, and footer
--   **Spaces & Pages**: Modern spaces-based navigation enabled by default
+-   **Launchpad Shell**: Complete shell with header and navigation
+-   **Spaces & Pages**: Spaces and pages layout
 -   **User Menu**: Theme selection, user settings, about dialog
 -   **Personalization**: Local storage-based personalization
--   **RTA Support**: Runtime Authoring plugin pre-configured
+-   **RTA Support**: Pre-configured Runtime Authoring plug-in
 -   **Sample App**: NavigationSample app for testing cross-app navigation
 -   **Orange Info Bar**: Clear indication that you're in sandbox mode
-
-
-
-## Multiple Apps
-
-The example shows how to configure multiple apps:
-
-```
-{
-
-    "tiles": [
-
-        {
-
-            "semanticObject": "SalesOrder",
-
-            "action": "display",
-
-            "rootPath": "../sales-order-app/"
-
-        },
-
-        {
-
-            "semanticObject": "SalesOrder",
-
-            "action": "create",
-
-            "rootPath": "../sales-order-create-app/"
-
-        },
-
-        {
-
-            "semanticObject": "Product",
-
-            "action": "manage",
-
-            "rootPath": "../product-management-app/"
-
-        }
-
-    ]
-
-}
-```
-
-
-
-## Adding Startup Parameters
-
-Pass parameters to your application at startup:
-
-```
-{
-    "tiles": [{
-        "semanticObject": "MyApp",
-        "action": "display",
-        "parameters": {
-            "orderId": "12345",
-            "mode": "edit"
-        }
-    }]
-}
-```
-
-Access them in your Component.js:
-
-`init:function(){const oStartupParams =this.getComponentData().startupParameters;const sOrderId = oStartupParams.orderId?.[0];// "12345"}`
-
-
-
-## Setting the Root Intent
-
-Specify which app should open by default:
-
-```
-{
-    "tiles": [{
-        "semanticObject": "MyApp",
-        "action": "display"
-    }],
-    "rootIntent": "MyApp-display"
-}
-```
-
-
-
-## Verifying Your Setup
-
-1.  Check the info bar: You should see an orange bar at the top saying "SAP Fiori Launchpad Sandbox - For Testing Purposes Only!"
-2.  Check the console: Look for any errors in the browser console. A common issue is that the manifest for the application could not be loaded from default path. Verify if your app's manifest.json is accessible.
-3.  Check the tile: Your application should appear as a tile on the FLP home page \(with semantic object "MyApp" and action "display" if no configuration file is provided\)
 
 **Related Information**  
 
 
 [How to Configure the Launchpad Sandbox](how-to-configure-the-launchpad-sandbox-e6151c1.md "Here's a complete reference of all configuration options available in the launchpad sandbox.")
 
-[How to Migrate to the Legacy-Free Launchpad Sandbox](how-to-migrate-to-the-legacy-free-launchpad-sandbox-9a1fe15.md "Learn how to migrate from the legacy SAP Fiori launchpad sandbox to the new 1.x-legacy-free sandbox (also known as sandbox 2.0). The migration is designed to be straightforward with minimal changes required.")
+[How to Migrate to the Legacy-Free Launchpad Sandbox](https://help.sap.com/viewer/c442e2a74263451f845549bdbcdebe7b/1.149_SAPUI5_Internal/en-US/9a1fe151094946098352abbc4b0e3fdc.html "Learn how to migrate from the legacy SAP Fiori launchpad sandbox to the new legacy-free sandbox. The migration is designed to be straightforward with minimal changes required.") :arrow_upper_right:
 

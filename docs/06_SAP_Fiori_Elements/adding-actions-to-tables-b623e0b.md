@@ -1161,7 +1161,7 @@ The text for the inline `DataFieldForAction` and the `DataFieldForIntentBasedNav
 > 
 > -   The feature is supported only for inline table actions and navigation buttons, not for buttons used elsewhere.
 > 
-> -   Use icon buttons only for basic standard icon metaphors. For more information, see [Button Content in SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/button/#text-or-icon).
+> -   Use icon buttons only for basic standard icon metaphors. For more information, see the [SAP Design System guidelines](https://www.sap.com/design-system/fiori-design-web/ui-elements/button).
 
 `DataFieldForAction`
 

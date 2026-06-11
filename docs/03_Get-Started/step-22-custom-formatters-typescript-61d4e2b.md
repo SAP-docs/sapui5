@@ -20,7 +20,7 @@ If we want to do a more complex logic for formatting properties of our data mode
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 22: Custom Formatters](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/22) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-22.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

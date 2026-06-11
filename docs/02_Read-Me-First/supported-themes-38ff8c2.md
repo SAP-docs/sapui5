@@ -8,7 +8,7 @@ This chapter gives an overview of the supported themes.
 
 ## Supported Themes in SAPUI5 Versions
 
-The following table shows the [Available Themes](../04_Essentials/available-themes-da0d2e7.md) for the supported SAPUI5 libraries and the versions in which they were introduced and ceased to be supported.
+The following table shows the [Available Themes](../04_Essentials/available-themes-da0d2e7.md) for the active SAPUI5 libraries and the versions in which they were introduced and ceased to be supported.
 
 > ### Note:  
 > For more information about the *Quartz Dark* theme, see SAP Note [2982978](https://me.sap.com/notes/2982978).

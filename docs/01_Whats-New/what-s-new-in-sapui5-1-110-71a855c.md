@@ -786,7 +786,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   The `UI.DataFieldWithUrl` annotation now supports the `IconUrl` property. For more information, see [Different Representations of a Field](../06_SAP_Fiori_Elements/different-representations-of-a-field-c18ada4.md).
 
--   In apps using the flexible column layout, the state of the object page is now stored/restored using `iAppState`. For more information, see [Enabling Persistence Mode](../06_SAP_Fiori_Elements/enabling-persistence-mode-7c62084.md).
+-   In apps using the flexible column layout, the state of the object page is now stored/restored using `iAppState`. For more information, see [Persistence Mode](../06_SAP_Fiori_Elements/persistence-mode-7c62084.md).
 
 -   You can now add a *Clear* button to the filter bar in the list report, enabling users to clear all filter fields, by making the required settings in the `manifest.json`. For more information, see [Adapting the Filter Bar](../06_SAP_Fiori_Elements/adapting-the-filter-bar-609c39a.md).
 
@@ -963,7 +963,7 @@ The new version of SAPUI5 introduces the following formatting features:
 
 -   You can now use the `sap-timezone` URL parameter for testing an application in a different time zone by specifying an IANA time zone, such as "America/New\_York". We do not recommend using this parameter in a productive environment. For more information, see [Configuration Options and URL Parameters](../04_Essentials/configuration-options-and-url-parameters-91f2d03.md) .
 -   We have restricted the use of fallback patterns without delimiters in `DateFormat`. Successful parsing now requires that the length matches, as only then year, month, and day values can reliably be attributed.
--   We have updated the SAPUI5 locale data to Version 41 of the Unicode Common Locale Data Repository \(CLDR\). With this upgrade, unit keys have changed incompatibly in the CLDR. A legacy unit mapping ensures that previous unit keys are still supported when formatting. Parsing of user input will provide the current unit keys. For more information, see [Legacy Unit Mapping](../04_Essentials/unit-formatting-8e618a8.md#loio8e618a8d93cb4f92adc911b96047eb8d__section_LUM).
+-   We have updated the SAPUI5 locale data to Version 41 of the Unicode Common Locale Data Repository \(CLDR\). With this upgrade, unit keys have changed incompatibly in the CLDR. A legacy unit mapping ensures that previous unit keys are still supported when formatting. Parsing of user input will provide the current unit keys.For more information, see [Legacy Unit Mapping](../04_Essentials/unit-formatting-8e618a8.md#loio8e618a8d93cb4f92adc911b96047eb8d__section_LUM).
 
 <sub>Changed•Feature•Info Only•1.110</sub>
 
@@ -1029,6 +1029,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.147](what-s-new-in-sapui5-1-147-88df9d3.md "With this release SAPUI5 is upgraded from version 1.146 to 1.147.")
 
 [What's New in SAPUI5 1.146](what-s-new-in-sapui5-1-146-6ccfe05.md "With this release SAPUI5 is upgraded from version 1.145 to 1.146.")
 

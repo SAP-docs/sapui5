@@ -20,7 +20,7 @@ In this step, we replace the text with a button and show the "Hello World" messa
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 5: Controllers](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/05) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-05.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

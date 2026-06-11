@@ -22,7 +22,7 @@ Instead of manually adding CSS to the controls, we will use the standard classes
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 13: Margins and Paddings](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/13) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-13.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

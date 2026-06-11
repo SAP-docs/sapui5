@@ -18,7 +18,7 @@ The state of the application is preserved when users refresh or navigate away fr
 
 -   Any change in a chosen variant. The chosen variant is always restored and the fallback to the *Standard* variant only happens when the chosen variant isn't available at the time of the restore.
 
--   Object page details such as tab selection, personalization of chart/table. For more information about object page handling, see [Enabling Persistence Mode](enabling-persistence-mode-7c62084.md).
+-   Object page details such as tab selection, personalization of chart/table. For more information about object page handling, see [Persistence Mode](persistence-mode-7c62084.md).
 
 -   Data from custom UI elements. For more information, see [Custom State Handling for Extended Apps](custom-state-handling-for-extended-apps-89fa878.md).
 

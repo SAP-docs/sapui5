@@ -567,8 +567,6 @@ You can use one of the following two approaches:
 > ### Restriction:  
 > -   Parameter support is only available for read-only services. For editable services, parameter support is unavailable because of back-end restrictions.
 > 
-> -   Parameters aren't supported if multiple view mode is used – unless single-table mode is used, where the data from all views comes from the same table that is part of the main entity set.
-> 
 > -   None of the navigation entity sets associated with the main entity set can be parameterized.
 > 
 > -   Sort restrictions aren't supported for first-level navigation entity sets when used within parameterized scenarios \(meaning when a root node is a parameterized entity\).

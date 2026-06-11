@@ -45,7 +45,7 @@ We will use the worklist template as a starting point for this tutorial and add 
 **Related Information**  
 
 
-[SAP Design System guidelines: Worklist Floorplans](https://experience.sap.com/fiori-design/floorplans/work-list/)
+[SAP Design System guidelines: Worklist Floorplans](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/work-list)
 
 [Developing Apps with SAP Fiori Tools](../05_Developing_Apps/developing-apps-with-sap-fiori-tools-a460a73.md "SAP Fiori tools is a set of extensions for SAP Business Application Studio and Visual Studio Code that makes it faster and easier to develop basic SAP Fiori apps.")
 

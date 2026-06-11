@@ -7,6 +7,155 @@ When developing apps, searching for bugs is an inevitable part of the process. T
 > ### Note:  
 > For information on browser debugging for ABAP developers, see [Browser Debugging for ABAP Developers](../05_Developing_Apps/browser-debugging-for-abap-developers-1e52fde.md).
 
+<a name="loio81526aa4f21944109eef190bc06767b1"/>
+
+<!-- loio81526aa4f21944109eef190bc06767b1 -->
+
+## Experimental Debug Tools
+
+SAPUI5 provides a set of built-in debug utilities that expose a global `ui5` object in the browser console. This object offers convenient access to modules, controls, and framework internals for interactive inspection and debugging.
+
+> ### Caution:  
+> The debug tools described here are **experimental**. They may be changed or removed in future versions without notice. Don't use these tools in productive scenarios.
+
+
+
+<a name="loio81526aa4f21944109eef190bc06767b1__section_activation"/>
+
+## Activation
+
+Activate the debug tools using one of the following URL parameters:
+
+-   `sap-ui-debug=true` – Activates both the debug sources \(see section below\) **and** the debug tools
+
+-   `sap-ui-debug-tools=true` – Activates **only** the debug tools without loading the debug sources. This is useful for debugging against the minified production code.
+
+
+After the page has loaded, the `ui5` object is available in the browser's developer console.
+
+
+
+<a name="loio81526aa4f21944109eef190bc06767b1__section_usage"/>
+
+## Usage
+
+Once activated, you can interact with the `ui5` object directly in the console.
+
+The `ui5` object always exposes a set of base commands. Libraries can contribute additional functionality, so the tools available to you can differ depending on the libraries used in your project.
+
+The most important base commands are:
+
+-   `ui5.require(module)` – Loads one or more modules asynchronously, for example `ui5.require('sap/m/Button')`
+
+-   `ui5.control($0)` – Gets the SAPUI5 control for the currently selected DOM element in the *Elements* tab
+
+-   `ui5.byId(id)` – Gets an SAPUI5 element by its ID
+
+-   `ui5.spy(context, fn, callback)` – Spies on a function to intercept calls and inspect arguments
+
+-   `ui5.config` – Accesses configuration APIs, such as `Localization`, `Formatting`, and `Security`
+
+-   `ui5.device` – Accesses the device detection API
+
+
+> ### Tip:  
+> Type `ui5.help()` in the browser console to display a complete, up-to-date list of all available commands, including any library-specific tools, which are omitted here for brevity.
+
+
+
+<a name="loio81526aa4f21944109eef190bc06767b1__section_loading_runtime"/>
+
+## Loading Debug Tools at Runtime
+
+If you need to activate the debug tools during a running session without reloading with URL parameters, you can lazily load the `DebugLoader` module:
+
+```
+sap.ui.require(["sap/ui/core/support/debug/DebugLoader"], function() {
+    // The global "ui5" object is now available in the console
+});
+```
+
+This loads the debug facade and any library-specific extensions into the current page without requiring a page reload.
+
+
+
+<a name="loio81526aa4f21944109eef190bc06767b1__section_contributing_tools"/>
+
+## Contributing Library-Specific Tools
+
+Libraries can contribute their own commands and help entries to the global `ui5` object. When a library opts in, its tools are merged into the `ui5` namespace alongside the base tools.
+
+To add library-specific tools, follow these steps:
+
+1.  **Opt in via the library manifest**
+
+    In your library's `library.js` in the `extensions` section, set `sap.ui.debug` to `true`:
+
+    ```
+    Lib.init({
+        name: "my.lib",
+        // ...
+        extensions: {
+            "sap.ui.debug": true
+        }
+    });
+    ```
+
+    The `DebugLoader` watches for libraries that declare this extension and loads their debug tools.
+
+2.  **Provide a `debug-tools.js` module**
+
+    By convention, the module must live at `<library-path>/support/debug/debug-tools.js`. For a library named `my.lib`, this resolves to `my/lib/support/debug/debug-tools.js`.
+
+    The module must return an object whose properties are merged into the global `ui5` namespace:
+
+    ```
+    sap.ui.define([
+        "sap/ui/core/support/debug/UI5Debug",
+        "my/lib/SomeClass"
+    ], function(UI5Debug, SomeClass) {
+        "use strict";
+    
+        // scope() is a helper function to create a clean empty object without a prototype chain (see tip below)
+        const { scope } = UI5Debug;
+    
+        return {
+            // Help entries shown by "ui5.help()" (see Step 3)
+            __help: [
+                { cmd: "ui5.mylib.doSomething()", text: "description of your command" }
+            ],
+    
+            // Tools are merged into the global "ui5" object
+            // IMPORTANT: Always group your library tools under a dedicated sub-namespace to avoid
+            // name clashes with the base tools or other libraries
+            mylib: scope({
+                doSomething: function() {
+                    // e.g. evaluate and log the state of some controls
+                }
+            })
+        };
+    });
+    ```
+
+    > ### Tip:  
+    > Use `UI5Debug.scope()` to create sub-namespaces. This helper returns objects without `Object.prototype`, which keeps the console output of the `ui5` object clean and free of inherited members.
+
+3.  **Register help entries**
+
+    The optional `__help` property is an array of `{ cmd, text }` entries. The `DebugLoader` extracts these entries and registers them with `ui5.help()`, where they appear under a dedicated section for your library. The `__help` property itself is removed from the returned object before the tools are merged, so it doesn't appear in the `ui5` namespace.
+
+4.  **Naming conflicts**
+
+    If a tool name already exists on the target namespace \(because another library or the base tools registered the same name\), the new entry is registered under a prefixed key `<library-name>:<tool-name>` and a warning is written to the log. To avoid this, group your tools under a library-specific sub-namespace as shown above.
+
+5.  **Spying on framework APIs**
+
+    `UI5Debug.spy(context, functionName, subscriber)` lets you intercept calls to a function, for example, to track all created views or to inspect arguments at runtime. The subscriber receives `{ originalFunction, args }` and may either let the original call run or short-circuit it by returning `{ preventDefault: true, returnValue: ... }`. See the `sap.ui.core` library's [debug-tools.js](https://github.com/SAP/openui5/blob/master/src/sap.ui.core/src/sap/ui/core/support/debug/debug-tools.js) for an example that spies on view creation.
+
+
+> ### Note:  
+> The `debug-tools.js` module is loaded asynchronously **after** the library has been initialized. This means it can safely depend on its own library's modules without causing dependency cycles during library bootstrapping. However, this also means you can't spy on any functions that are executed before or during the evaluation of your `library.js` and its dependencies.
+
 <a name="loio1ed4b5f9f18848b1badee9b72d4ac261"/>
 
 <!-- loio1ed4b5f9f18848b1badee9b72d4ac261 -->

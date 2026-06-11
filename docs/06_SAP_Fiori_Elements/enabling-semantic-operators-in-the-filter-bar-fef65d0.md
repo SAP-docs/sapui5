@@ -2,13 +2,13 @@
 
 # Enabling Semantic Operators in the Filter Bar
 
-You can use semantic date values, such as *Today* or *Last Week*, on the filter bar of list report page and analytical list page applications in SAP Fiori elements for OData V4.
+You can use semantic date values, such as *Today* or *Last Week*, on the filter bar of list report page, analytical list page, and overview page applications in SAP Fiori elements for OData V4.
 
 Semantic operators are enabled by default for the following fields:
 
--   `Edm.Date`-based fields for which `FilterRestrictions.AllowedExpressions` is set to `SingleRange` or `SingleValue`.
+-   `Edm.Date`-based fields for which `FilterRestrictions.AllowedExpressions` is set to `SingleRange` or `SingleValue`
 
--   `Edm.DateTimeOffset`-based fields for which `FilterRestrictions.AllowedExpressions` is set to `SingleRange`.
+-   `Edm.DateTimeOffset`-based fields for which `FilterRestrictions.AllowedExpressions` is set to `SingleRange`
 
 
 You can set the `FilterRestrictions` to `SingleRange` as shown in the following sample code:
@@ -73,10 +73,12 @@ You can set the `FilterRestrictions` to `SingleRange` as shown in the following 
 
 ## Setting a Default Value for a Semantic Date Field
 
-Extend the manifest for the filter field as follows to set a default value for a semantic date:
+You can define default values for semantic date fields in the `manifest.json` file.
+
+For list report page and analytical list page applications, configure the filter field in the `controlConfiguration` section, as shown in the following sample code:
 
 > ### Sample Code:  
-> Default value for semantic date field
+> `manifest.json` 
 > 
 > ```
 > "settings" : {  
@@ -100,9 +102,47 @@ Extend the manifest for the filter field as follows to set a default value for a
 > 
 > ```
 
-The value set to `operator` is set as the default operator for the semantic date field. In this case, the default value is `"YESTERDAY"`.
+For overview page applications, configure the `sap.ovp.controlConfiguration` section, as shown in the following sample code:
 
-Here's a list of fully supported operators:
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.ovp": {
+>    "controlConfiguration": {
+>       "@com.sap.vocabularies.UI.v1.SelectionFields": {
+>          "filterFields": {
+>             "stock_date": {
+>                "settings": {
+>                   "defaultValues": [
+>                      {
+>                         "operator": "LASTYEARSINCLUDED",
+>                         "values": [6]
+>                      }
+>                   ],
+>                   "operatorConfiguration": [
+>                      {
+>                         "path": "key",
+>                         "equals": "TOMORROW",
+>                         "exclude": false
+>                      },
+>                      {
+>                         "path": "key",
+>                         "equals": "DATE,FROM,TO,DATERANGE,TODAY,YESTERDAY,TODAYFROMTO,LASTDAYS,NEXTDAYS,THISWEEK,LASTWEEK,LASTWEEKS,NEXTWEEK,NEXTWEEKS,SPECIFICMONTH,THISMONTH,LASTMONTH,LASTMONTHS,NEXTMONTH,NEXTMONTHS,THISQUARTER,LASTQUARTER,LASTQUARTERS,NEXTQUARTER,NEXTQUARTERS,QUARTER1,QUARTER2,QUARTER3,QUARTER4,THISYEAR,LASTYEAR,NEXTYEAR,NEXTYEARS,YEARTODATE,DATETOYEAR",
+>                         "exclude": true
+>                      }
+>                   ]
+>                }
+>             }
+>          }
+>       }
+>    }
+> }
+> ```
+
+The `operator` property defines the default value for the semantic date field. In this code sample, the default value is `"YESTERDAY"`.
+
+Semantic date fields supports both single date-based operators and date range-based operators. The following operators are available:
 
 -   Single date-based operators
 
@@ -192,18 +232,18 @@ Here's a list of fully supported operators:
 
 
 > ### Note:  
-> -   Default values coming from the `SelectionVariant` for the semantic date fields are ignored – only the manifest-based default values are considered.
+> -   For semantic date fields, only default values defined in the `manifest.json` file are applied. Default values defined through `SelectionVariant` are ignored.
 > 
-> -   When using the default operators, check what the operator you're using evaluates to on the UI to ensure it matches your use case.
+> -   Semantic date operators are evaluated based on a fixed calendar definition.
 > 
 >     > ### Example:  
->     > The standard fiscal quarter `"QUARTER1"` evaluates to the period between January and March. If you're using non-standard fiscal quarters, the default value won't be suitable for you.
+>     > The standard fiscal quarter `"QUARTER1"` represents the first quarter of the calendar year: January to March. If you're using a non-standard fiscal calendar, the default evaluation won't suit you.
 
 
 
 ## Defining Default Values for Operators That Require Parameters
 
-If applications want to provide a default value for the semantic date field that requires an operator that needs a parameter value \(for example, an application developer wants to set NEXT "X" DAYS as the default operator and a default value for "X"\), the manifest must be configured accordingly. The following table provides the manifest settings for the various operators that need a parameter value:
+For semantic date operators that require parameters for example, setting `NEXTXDAYS` as the default operator with a default value for `X`, you must specify both the operator and the corresponding parameter values in the `manifest.json` file. The following table shows the manifest settings for operators that require parameter values.
 
 **Defining Default Values for Operators That Require Parameters**
 
@@ -229,7 +269,7 @@ Comment
 <tr>
 <td valign="top">
 
-DATE
+`DATE` 
 
 </td>
 <td valign="top">
@@ -260,7 +300,7 @@ Required date format: YYYY-MM-DD
 <tr>
 <td valign="top">
 
-FROM
+`FROM` 
 
 </td>
 <td valign="top">
@@ -291,7 +331,7 @@ Required date format: YYYY-MM-DD
 <tr>
 <td valign="top">
 
-TO
+`TO` 
 
 </td>
 <td valign="top">
@@ -320,7 +360,7 @@ Required date format: YYYY-MM-DD
 <tr>
 <td valign="top">
 
-DATERANGE
+`DATERANGE` 
 
 </td>
 <td valign="top">
@@ -350,7 +390,7 @@ Required date format: YYYY-MM-DD
 <tr>
 <td valign="top">
 
-TODAYFROMTO
+`TODAYFROMTO` 
 
 </td>
 <td valign="top">
@@ -372,7 +412,7 @@ TODAYFROMTO
 </td>
 <td valign="top">
 
-First value: days before TODAY
+First value: Days before TODAY
 
 Second value: Number of days after TODAY
 
@@ -381,7 +421,7 @@ Second value: Number of days after TODAY
 <tr>
 <td valign="top">
 
-LastXDays / LastXWeeks / LastXMonths / LastXQuarters / LastXYears
+`LastXDays` / `LastXWeeks` / `LastXMonths` / `LastXQuarters` / `LastXYears` 
 
 </td>
 <td valign="top">
@@ -410,7 +450,7 @@ LastXDays / LastXWeeks / LastXMonths / LastXQuarters / LastXYears
 <tr>
 <td valign="top">
 
-NextXDays / NextXWeeks / NextXMonths / NextXQuarters / NextXYears
+`NextXDays` / `NextXWeeks` / `NextXMonths` / `NextXQuarters` / `NextXYears` 
 
 </td>
 <td valign="top">
@@ -441,7 +481,7 @@ NextXDays / NextXWeeks / NextXMonths / NextXQuarters / NextXYears
 <tr>
 <td valign="top">
 
-LastXDaysIncluded
+`LastXDaysIncluded` 
 
 </td>
 <td valign="top">
@@ -465,14 +505,14 @@ LastXDaysIncluded
 </td>
 <td valign="top">
 
-The range contains the last X days including the current one.
+The range contains the last X days, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-NextXDaysIncluded
+`NextXDaysIncluded` 
 
 </td>
 <td valign="top">
@@ -496,14 +536,14 @@ NextXDaysIncluded
 </td>
 <td valign="top">
 
-The range contains the next X days including the current one.
+The range contains the next X days, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-LastXWeeksIncluded
+`LastXWeeksIncluded` 
 
 </td>
 <td valign="top">
@@ -527,14 +567,14 @@ LastXWeeksIncluded
 </td>
 <td valign="top">
 
-The range contains the last X weeks including the current one.
+The range contains the last X weeks, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-NextXWeeksIncluded
+`NextXWeeksIncluded` 
 
 </td>
 <td valign="top">
@@ -558,14 +598,14 @@ NextXWeeksIncluded
 </td>
 <td valign="top">
 
-The range contains the next X weeks including the current one.
+The range contains the next X weeks, including the current days.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-LastXMonthsIncluded
+`LastXMonthsIncluded` 
 
 </td>
 <td valign="top">
@@ -589,14 +629,14 @@ LastXMonthsIncluded
 </td>
 <td valign="top">
 
-The range contains the last X months including the current one.
+The range contains the last X months, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-NextXMonthsIncluded
+`NextXMonthsIncluded` 
 
 </td>
 <td valign="top">
@@ -620,14 +660,14 @@ NextXMonthsIncluded
 </td>
 <td valign="top">
 
-The range contains the next X months including the current one.
+The range contains the next X months, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-LastXQuartersIncluded
+`LastXQuartersIncluded` 
 
 </td>
 <td valign="top">
@@ -651,14 +691,14 @@ LastXQuartersIncluded
 </td>
 <td valign="top">
 
-The range contains the last X quarters including the current one.
+The range contains the last X quarters, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-NextXQuartersIncluded
+`NextXQuartersIncluded` 
 
 </td>
 <td valign="top">
@@ -682,14 +722,14 @@ NextXQuartersIncluded
 </td>
 <td valign="top">
 
-The range contains the next X quarters including the current one.
+The range contains the next X quarters, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-LastXYearsIncluded
+`LastXYearsIncluded` 
 
 </td>
 <td valign="top">
@@ -713,14 +753,14 @@ LastXYearsIncluded
 </td>
 <td valign="top">
 
-The range contains the last X years including the current one.
+The range contains the last X years, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-NextXYearsIncluded
+`NextXYearsIncluded` 
 
 </td>
 <td valign="top">
@@ -744,14 +784,16 @@ NextXYearsIncluded
 </td>
 <td valign="top">
 
-The range contains the next X years including the current one.
+The range contains the next X years, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-SpecificMonth
+`SpecificMonth`
+
+``
 
 </td>
 <td valign="top">
@@ -781,10 +823,10 @@ The numeric assignment is zero \(for example, January is 0\)
 </table>
 
 > ### Tip:  
-> If the semantic filter field is from a navigation entity set, you must specify the filter field name in the `"<navigationProperty>::<filterField>"` format. In the following example, the `"SalesOrderDate"` comes from a navigation entity set where `"_Item"` is the name of the associated navigation property:
+> If the semantic filter field originates from a navigation entity set, specify the name of the filter field in the `"<navigationProperty>::<filterField>"` format. In the following code sample, `"SalesOrderDate"` comes from a navigation entity set where `"_Item"` is the name of the associated navigation property:
 > 
 > > ### Sample Code:  
-> > Semantic filter field from navigation entity set
+> > `manifest.json`
 > > 
 > > ```
 > > "@com.sap.vocabularies.UI.v1.SelectionFields": {
@@ -807,211 +849,210 @@ The numeric assignment is zero \(for example, January is 0\)
 
 ## Excluding Certain Date Range Types
 
-You can use the `operatorConfiguration` settings to include and exclude specific date range values. Applications can use this setting for more complex and detailed configuration.
+You can use the `operatorConfiguration` setting to include and exclude specific date range values. Applications can use this setting for more complex and detailed configuration.
 
--   Example 1
+> ### Example:  
+> To remove `"TODAY"` from the date range, proceed as shown in the following sample code:
+> 
+> > ### Sample Code:  
+> > ```
+> > "filterFields": {
+> >     "SalesOrderDate": {
+> >        "settings": {
+> >            "operatorConfiguration": [
+> >                  {
+> >                      "path": "key",
+> >                       "equals": "TODAY",
+> >                       "exclude": true
+> >                   } // TODAY filter will be removed
+> >             ]
+> >        }
+> >     }
+> >  }
+> > ```
+> 
+> The following screenshot shows the result:
+> 
+> ![](images/Date_Range_1_e0b551e.png)
 
-    To remove `"TODAY"` from the date range, proceed as shown in the following sample code:
+> ### Example:  
+> To include `"TODAY"` and exclude "Today -X/+Y Days", proceed as shown in the following sample code:
+> 
+> > ### Sample Code:  
+> > ```
+> > "filterFields": {
+> >     "SalesOrderDate": {
+> >        "settings": {
+> >            "operatorConfiguration": [
+> >                  {
+> >                      "path": "key",
+> >                       "equals": "TODAY",
+> >                       "exclude": false
+> >                   },
+> >                   {
+> >                     "path": "key",
+> >                      "equals": "TODAYXYDAYS",
+> >                      "exclude": true
+> >                   }
+> >             ]
+> >        }
+> >     }
+> >  }
+> > ```
+> 
+> The following screenshot shows the result:
+> 
+> ![](images/Date_Range_2_a9217ea.png)
 
-    > ### Sample Code:  
-    > ```
-    > "filterFields": {
-    >     "SalesOrderDate": {
-    >        "settings": {
-    >            "operatorConfiguration": [
-    >                  {
-    >                      "path": "key",
-    >                       "equals": "TODAY",
-    >                       "exclude": true
-    >                   } // TODAY filter will be removed
-    >             ]
-    >        }
-    >     }
-    >  }
-    > ```
+The following list shows all supported operators for the `"exclude"` configuration:
 
-    You can see the result in the following screenshot:
+-   `"DATE"`
 
-    ![](images/Date_Range_1_e0b551e.png)
+-   `"FROM"`
 
--   Example 2
+-   `"TO"`
 
-    To include `"TODAY"` and exclude "Today -X/+Y Days", proceed as shown in the following sample code:
+-   `"DATERANGE"`
 
-    > ### Sample Code:  
-    > ```
-    > "filterFields": {
-    >     "SalesOrderDate": {
-    >        "settings": {
-    >            "operatorConfiguration": [
-    >                  {
-    >                      "path": "key",
-    >                       "equals": "TODAY",
-    >                       "exclude": false
-    >                   },
-    >                   {
-    >                     "path": "key",
-    >                      "equals": "TODAYXYDAYS",
-    >                      "exclude": true
-    >                   }
-    >             ]
-    >        }
-    >     }
-    >  }
-    > ```
+-   `"TODAY"`
 
-    You can see the result in the following screenshot:
+-   `"YESTERDAY"`
 
-    ![](images/Date_Range_2_a9217ea.png)
+-   `"TOMORROW"`
 
-    You can find all supported operators for the `"exclude"` configuration in the following list:
+-   `"TODAYFROMTO"`
 
-    -   `"DATE"`
+-   `"LASTDAYS"`
 
-    -   `"FROM"`
+-   `"NEXTDAYS"`
 
-    -   `"TO"`
+-   `"THISWEEK"`
 
-    -   `"DATERANGE"`
+-   `"LASTWEEK"`
 
-    -   `"TODAY"`
+-   `"LASTWEEKS"`
 
-    -   `"YESTERDAY"`
+-   `"NEXTWEEK"`
 
-    -   `"TOMORROW"`
+-   `"NEXTWEEKS"`
 
-    -   `"TODAYFROMTO"`
+-   `"SPECIFICMONTH"`
 
-    -   `"LASTDAYS"`
+-   `"THISMONTH"`
 
-    -   `"NEXTDAYS"`
+-   `"LASTMONTH"`
 
-    -   `"THISWEEK"`
+-   `"LASTMONTHS"`
 
-    -   `"LASTWEEK"`
+-   `"NEXTMONTH"`
 
-    -   `"LASTWEEKS"`
+-   `"NEXTMONTHS"`
 
-    -   `"NEXTWEEK"`
+-   `"THISQUARTER"`
 
-    -   `"NEXTWEEKS"`
+-   `"LASTQUARTER"`
 
-    -   `"SPECIFICMONTH"`
+-   `"LASTQUARTERS"`
 
-    -   `"THISMONTH"`
+-   `"NEXTQUARTER"`
 
-    -   `"LASTMONTH"`
+-   `"NEXTQUARTERS"`
 
-    -   `"LASTMONTHS"`
+-   `"QUARTER1"`
 
-    -   `"NEXTMONTH"`
+-   `"QUARTER2"`
 
-    -   `"NEXTMONTHS"`
+-   `"QUARTER3"`
 
-    -   `"THISQUARTER"`
+-   `"QUARTER4"`
 
-    -   `"LASTQUARTER"`
+-   `"THISYEAR"`
 
-    -   `"LASTQUARTERS"`
+-   `"LASTYEAR"`
 
-    -   `"NEXTQUARTER"`
+-   `"LASTYEARS"`
 
-    -   `"NEXTQUARTERS"`
+-   `"NEXTYEAR"`
 
-    -   `"QUARTER1"`
+-   `"NEXTYEARS"`
 
-    -   `"QUARTER2"`
+-   `"YEARTODATE"`
 
-    -   `"QUARTER3"`
+-   `"DATETOYEAR"`
 
-    -   `"QUARTER4"`
-
-    -   `"THISYEAR"`
-
-    -   `"LASTYEAR"`
-
-    -   `"LASTYEARS"`
-
-    -   `"NEXTYEAR"`
-
-    -   `"NEXTYEARS"`
-
-    -   `"YEARTODATE"`
-
-    -   `"DATETOYEAR"`
-
-    -   `"Empty"`
+-   `"Empty"`
 
 
-    > ### Note:  
-    > -   Excluding specific semantic operators is only allowed for `SingleRange`-based *Date* fields.
-    > 
-    > -   When you exclude an operator for a filter field that's based on a semantic date and comes from a navigation entity set, ensure that you specify the `filterField` using the following format:
-    > 
-    >     ```
-    >     "<navigationProperty>::<propertyName>"
-    >     ```
-    > 
-    >     > ### Example:  
-    >     > If `"_Items"` is the navigation property and `"DispatchDate"` is the property, then the `filterField` for which `"settings"` is defined will be `"_Items::DispatchDate"`.
-
+> ### Note:  
+> -   Excluding specific semantic operators is allowed only for `SingleRange`-based *Date* fields.
+> 
+> -   When you exclude an operator for a filter field that's based on a semantic date and comes from a navigation entity set, specify the `filterField` using the following format:
+> 
+>     ```
+>     "<navigationProperty>::<propertyName>"
+>     ```
+> 
+>     > ### Example:  
+>     > If `"_Items"` is the navigation property and `"DispatchDate"` is the property, the `filterField` for which `"settings"` is defined is `"_Items::DispatchDate"`.
 
 
 
 ## Enabling Additional Date Range Operators
 
-You can now use additional date range operators for single range-based fields of type `Edm.Date` or `Edm.DateTimeOffset`. Using these operators, you can combine the single value date operators, such as `TODAY` or `TOMORROW,` with the *FROM* or *TO* operations.
+You can use additional date range operators for single range-based fields of type `Edm.Date` or `Edm.DateTimeOffset`. Using these operators, you can combine single value date operators, such as `TODAY` or `TOMORROW,` with the *FROM* or *TO* operations.
 
 The following additional operators are available:
 
--   "FROMTODAY"
+-   `"FROMTODAY"`
 
--   "FROMTOMORROW"
+-   `"FROMTOMORROW"`
 
--   "FROMYESTERDAY"
+-   `"FROMYESTERDAY"`
 
--   "FROMFIRSTDAYWEEK"
+-   `"FROMFIRSTDAYWEEK"`
 
--   "FROMLASTDAYWEEK"
+-   `"FROMLASTDAYWEEK"`
 
--   "FROMFIRSTDAYMONTH"
+-   `"FROMFIRSTDAYMONTH"`
 
--   "FROMLASTDAYMONTH"
+-   `"FROMLASTDAYMONTH"`
 
--   "FROMFIRSTDAYQUARTER"
+-   `"FROMFIRSTDAYQUARTER"`
 
--   "FROMLASTDAYQUARTER"
+-   `"FROMLASTDAYQUARTER"`
 
--   "FROMFIRSTDAYYEAR"
+-   `"FROMFIRSTDAYYEAR"`
 
--   "FROMLASTDAYYEAR"
+-   `"FROMLASTDAYYEAR"`
 
--   "TOTODAY"
+-   `"TOTODAY"`
 
--   "TOTOMORROW"
+-   `"TOTOMORROW"`
 
--   "TOYESTERDAY"
+-   `"TOYESTERDAY"`
 
--   "TOFIRSTDAYWEEK"
+-   `"TOFIRSTDAYWEEK"`
 
--   "TOLASTDAYWEEK"
+-   `"TOLASTDAYWEEK"`
 
--   "TOFIRSTDAYMONTH"
+-   `"TOFIRSTDAYMONTH"`
 
--   "TOLASTDAYMONTH"
+-   `"TOLASTDAYMONTH"`
 
--   "TOFIRSTDAYQUARTER"
+-   `"TOFIRSTDAYQUARTER"`
 
--   "TOLASTDAYQUARTER"
+-   `"TOLASTDAYQUARTER"`
 
--   "TOFIRSTDAYYEAR"
-
--   "TOLASTDAYYEAR"
+-   `"TOLASTDAYYEAR"`
 
 
-These additional semantic date operators are not available by default. To enable them, you can extend the manifest configuration as shown in the following sample code:
+These additional semantic date operators aren't available by default. To enable them, extend the `manifest.json` file.
+
+For list report page and analytical list page applications, configure the filter field in the `controlConfiguration` section, as shown in the following sample code:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "targets": {
 >    "SalesOrderManageList": {
@@ -1040,10 +1081,42 @@ These additional semantic date operators are not available by default. To enable
 >                  }
 > ```
 
+For overview page applications, configure the filter field in the `sap.ovp.controlConfiguration` section, as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.ovp": {
+>    "controlConfiguration": {
+>       "@com.sap.vocabularies.UI.v1.SelectionFields": {
+>          "filterFields": {
+>             "SalesOrderDate": {
+>                "settings": {
+>                   "operatorConfiguration": [
+>                      {
+>                         "path": "key",
+>                         "equals": "FROMTODAY",
+>                         "exclude": false
+>                      },
+>                      {
+>                         "path": "key",
+>                         "equals": "TOYESTERDAY",
+>                         "exclude": false
+>                      }
+>                   ]
+>                }
+>             }
+>          }
+>       }
+>    }
+> }
+> ```
+
 You can also use these additional semantic date range operators as default values for the filter fields.
 
 > ### Note:  
-> These operators are not available when using the `Filter Bar` building block. They are also not available as filters in the table or chart within the object page.
+> These operators aren't available when using the `FilterBar` building block. They're also not available as filters in the table or chart within the object page.
 
 
 
@@ -1052,4 +1125,6 @@ You can also use these additional semantic date range operators as default value
 ## More Information
 
 For more information about configuring filter bars on a list report page, see [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md).
+
+For more information about configuring global filter on the overview page, see [Configuring the Global Filter on the Overview Page](configuring-the-global-filter-on-the-overview-page-73d9693.md).
 

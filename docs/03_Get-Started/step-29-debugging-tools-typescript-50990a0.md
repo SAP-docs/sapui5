@@ -24,7 +24,7 @@ Luckily, SAPUI5 provides a couple of debugging tools that we can use within the 
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 29: Debugging Tools](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/29) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-29.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

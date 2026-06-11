@@ -20,7 +20,7 @@ Now that we have integrated the dialog, it's time to add some user interaction. 
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 17: Fragment Callbacks](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/17) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-17.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

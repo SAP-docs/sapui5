@@ -56,50 +56,6 @@ Details
 <tr>
 <td valign="top">
 
-**JS View** \(`sap.ui.core.mvc.JSView`\)
-
-</td>
-<td valign="top">
-
-1.90
-
-</td>
-<td valign="top">
-
-[Typed View](typed-view-e6bb33d.md) via `View.extend()`
-
-</td>
-<td valign="top">
-
-Define view class in JavaScript using `sap.ui.core.mvc.View.extend()`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**HTML View** \(`sap.ui.core.mvc.HTMLView`\)
-
-</td>
-<td valign="top">
-
-1.108
-
-</td>
-<td valign="top">
-
-[XML View](xml-view-91f2928.md)
-
-</td>
-<td valign="top">
-
-No more known usages as HTML syntax brings no advantages over XML
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 **Declarative Support** \(`sap.ui.core.plugin.DeclarativeSupport`\)
 
 </td>
@@ -116,28 +72,6 @@ No more known usages as HTML syntax brings no advantages over XML
 <td valign="top">
 
 [Declarative Support \(deprecated\)](declarative-support-deprecated-91f1301.md)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**Template View** \(`sap.ui.core.mvc.TemplateView`\)
-
-</td>
-<td valign="top">
-
-1.56
-
-</td>
-<td valign="top">
-
-[XML View](xml-view-91f2928.md) or [Typed View](typed-view-e6bb33d.md)
-
-</td>
-<td valign="top">
-
-Include Handlebars template support
 
 </td>
 </tr>
@@ -210,6 +144,50 @@ External CSS file
 <tr>
 <td valign="top">
 
+**HTML View** \(`sap.ui.core.mvc.HTMLView`\)
+
+</td>
+<td valign="top">
+
+1.108
+
+</td>
+<td valign="top">
+
+[XML View](xml-view-91f2928.md)
+
+</td>
+<td valign="top">
+
+No more known usages as HTML syntax brings no advantages over XML
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**JS View** \(`sap.ui.core.mvc.JSView`\)
+
+</td>
+<td valign="top">
+
+1.90
+
+</td>
+<td valign="top">
+
+[Typed View](typed-view-e6bb33d.md) via `View.extend()`
+
+</td>
+<td valign="top">
+
+Define view class in JavaScript using `sap.ui.core.mvc.View.extend()`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 **XML Composite Controls** \(`sap.ui.core.XMLComposite`\)
 
 </td>
@@ -225,7 +203,29 @@ External CSS file
 </td>
 <td valign="top">
 
-[XML Composite Controls (deprecated)](https://help.sap.com/viewer/c442e2a74263451f845549bdbcdebe7b/1.148_SAPUI5_Internal/en-US/b83a4dcb7d0e46969027345b8d32fd44.html "An XML composite control allows you to define a composite control that clearly separates the behavior of the control from the visual part.") :arrow_upper_right:
+[XML Composite Controls (deprecated)](https://help.sap.com/viewer/c442e2a74263451f845549bdbcdebe7b/1.149_SAPUI5_Internal/en-US/b83a4dcb7d0e46969027345b8d32fd44.html "An XML composite control allows you to define a composite control that clearly separates the behavior of the control from the visual part.") :arrow_upper_right:
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Template View** \(`sap.ui.core.mvc.TemplateView`\)
+
+</td>
+<td valign="top">
+
+1.56
+
+</td>
+<td valign="top">
+
+[XML View](xml-view-91f2928.md) or [Typed View](typed-view-e6bb33d.md)
+
+</td>
+<td valign="top">
+
+Include Handlebars template support
 
 </td>
 </tr>

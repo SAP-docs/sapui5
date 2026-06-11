@@ -140,7 +140,7 @@ Not set
 
 
 
-### tiles
+### Defining tiles
 
 Defines the apps that should be available in the sandbox.
 
@@ -304,7 +304,7 @@ Defines the apps that should be available in the sandbox.
     }
     ```
 
-    With parameters:
+    Adding startup parameters:
 
     ```
     {
@@ -322,7 +322,7 @@ Defines the apps that should be available in the sandbox.
 
 
 
-### rootIntent
+### Setting the rootIntent
 
 Sets the initial navigation intent when the sandbox starts.
 
@@ -345,7 +345,7 @@ This will directly open the SalesOrder-display app instead of showing the home p
 
 
 
-### appStateMode
+### Configuring the appStateMode
 
 Configures whether AppState should be transient \(not persisted\).
 
@@ -366,12 +366,12 @@ Configures whether AppState should be transient \(not persisted\).
 
 
 
-### plugins
+### Adding plugins
 
 Configures additional bootstrap plugins to load.
 
 -   **Type**: `Object`
--   **Default**`{}`: \(only RuntimeAuthoringPlugin is loaded by default\)
+-   **Default**:`{}` \(only RuntimeAuthoringPlugin is loaded by default\)
 -   **Example**:
 
     ```
@@ -390,9 +390,9 @@ Configures additional bootstrap plugins to load.
 
 
 
-### rta
+### Configuring the rta
 
-Configures Runtime Adaptation with a fake LREP connector.
+Configures Runtime Adaptation with predefined adaptation data that is applied to the app.
 
 -   **Type**: `String` \(path to JSON file\)
 -   **Default**: Not set \(only LocalStorageConnector is used\)
@@ -400,13 +400,11 @@ Configures Runtime Adaptation with a fake LREP connector.
 
     ```
     {
-        "rta": "localService/fakeLrep.json"
+        "rta": "localService/runtimeAdaptations.json"
     }
     ```
 
-    This adds an `ObjectPathConnector` with the specified path to the flexibility services configuration.
-
--   **Fake LREP JSON Structure**:
+-   **runtimeAdaptations.json structure**:
 
     ```
     {
@@ -421,7 +419,7 @@ Configures Runtime Adaptation with a fake LREP connector.
 
 ### beforeFlpStart
 
-Specifies a module to execute before the FLP starts.
+Specifies a module to execute before the launchpad starts.
 
 -   **Type**: `String` \(module path with `module:` prefix\)
 -   **Default**: Not set
@@ -433,18 +431,28 @@ Specifies a module to execute before the FLP starts.
     }
     ```
 
--   **Hook Module Requirements**:
+-   **Module Requirements**:
     -   Must export an `execute` function
     -   May return a Promise \(sandbox waits for resolution\)
 
--   **Example of a Hook Module**:
+-   **Example of a module**
 
     ```
     // myapp/test/mockServer.js
-    sap.ui.define(["sap/ui/core/util/MockServer"],(MockServer)=>{return{execute:async()=>{const oMockServer =newMockServer({rootUri:"/sap/opu/odata/sap/MY_SERVICE/"});
-                oMockServer.simulate("localService/metadata.xml",{sMockdataBaseUrl:"localService/mockdata"});
+    sap.ui.define([
+        "sap/ui/core/util/MockServer"
+    ], (
+        MockServer
+    ) => {
+        return {
+            execute: async () => {
+                const oMockServer = newMockServer({ rootUri: "/sap/opu/odata/sap/MY_SERVICE/" });
+                oMockServer.simulate("localService/metadata.xml", { sMockdataBaseUrl: "localService/mockdata" });
                 oMockServer.start();
-                console.log("Mock server started");}};});
+                console.log("Mock server started");
+            }
+        };
+    });
     ```
 
 
@@ -479,8 +487,8 @@ Specifies a module to execute before the FLP starts.
     "rta": "localService/fakeLrep.json",
     "beforeFlpStart": "module:myapp/test/initMockServer",
     "plugins": {
-        "UsageAnalytics": {
-            "component": "sap.ushell.plugins.usageAnalytics"
+        "CustomPlugin": {
+            "component": "custom.plugins.customPlugin"
         }
     }
 }
@@ -492,116 +500,37 @@ Specifies a module to execute before the FLP starts.
 
 
 
-### Recommended Bootstrap \(UI5 1.x and 2.x compatible\)
+### Bootstrap
 
-Use this bootstrap for compatibility with both UI5 versions:
+Use this bootstrap:
 
 ```
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>My App - FLP Sandbox</title>
-    <!– Boot task for UI5 1.x (ignored in 2.x) →
-    <!– Note: SandboxBootTask.js is deprecated since 1.136, but still required for 1.x bootstrap →
-    <script src="resources/sap/ushell/sandbox/SandboxBootTask.js"></script>
-    <!– UI5 bootstrap →
-    <script
-        id="sap-ui-bootstrap"
-        src="resources/sap-ui-core.js"
-        data-sap-ui-async="true"
-        data-sap-ui-compat-version="edge"
-        data-sap-ui-boot-manifest="sap/ushell/sandbox/sandboxManifest.json"
-        data-sap-ui-theme="sap_horizon"
-        data-sap-ui-resource-roots='{
-            "my.app": "../"
-        }'
-    ></script>
-</head>
-<body class="sapUiBody">
-    <div id="canvas"></div>
-</body>
+    <head>
+      <meta charset="utf-8" />
+      <title>My App - FLP Sandbox</title>
+      <script src="resources/sap/ushell/sandbox/SandboxBootTask.js"></script>
+      <script
+          id="sap-ui-bootstrap"
+          src="resources/sap-ui-core.js"
+          data-sap-ui-async="true"
+          data-sap-ui-compat-version="edge"
+          data-sap-ui-boot-manifest="sap/ushell/sandbox/sandboxManifest.json"
+          data-sap-ui-theme="sap_horizon"
+          data-sap-ui-resource-roots='{
+              "my.app": "../"
+          }'
+      ></script>
+    </head>
+    <body class="sapUiBody">
+      <div id="canvas"></div>
+    </body>
 </html>
 ```
 
-
-
-### How the Bootstrap Works
-
-
-<table>
-<tr>
-<th valign="top">
-
-Element
-
-</th>
-<th valign="top">
-
-UI5 1.x Behavior
-
-</th>
-<th valign="top">
-
-UI5 2.x Behavior
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-`SandboxBootTask.js`
-
-</td>
-<td valign="top">
-
-Registers `xx-bootTask` which loads ConfigurationProvider
-
-</td>
-<td valign="top">
-
-Script has no effect
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`data-sap-ui-boot-manifest`
-
-</td>
-<td valign="top">
-
-Attribute is ignored
-
-</td>
-<td valign="top">
-
-Loads `sandboxManifest.json` which registers ConfigurationProvider
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`data-sap-ui-compat-version="edge"`
-
-</td>
-<td valign="top">
-
-Required for modern APIs
-
-</td>
-<td valign="top">
-
-Optional
-
-</td>
-</tr>
-</table>
-
 > ### Note:  
-> Do NOT specify `data-sap-ui-on-init` manually. The ConfigurationProvider automatically provides `sapUiOnInit` pointing to `module:sap/ushell/sandbox/SandboxModule`.
+> Do not specify `data-sap-ui-on-init` manually. The launchpad bootstrap script sets it internally.
 
 
 
@@ -639,7 +568,7 @@ Yes
 </td>
 <td valign="top">
 
-Must be `"true"` for async loading
+Must be `"true"`.
 
 </td>
 </tr>
@@ -651,12 +580,12 @@ Must be `"true"` for async loading
 </td>
 <td valign="top">
 
-Yes \(1.x\)
+Yes
 
 </td>
 <td valign="top">
 
-Set to `"edge"` for modern APIs
+Must be `"edge"`.
 
 </td>
 </tr>
@@ -673,7 +602,7 @@ Yes
 </td>
 <td valign="top">
 
-Path to `sap/ushell/sandbox/sandboxManifest.json`
+Path to `sap/ushell/sandbox/sandboxManifest.json`. Necessary for compatibility with future SAPUI5 versions.
 
 </td>
 </tr>
@@ -734,7 +663,7 @@ Additional libraries to preload
 
 <a name="loioe6151c12b51649dbb873802861d2a06c__information-extracted-from-manifestjson"/>
 
-## Information Extracted from manifest.json
+## Information extracted from the app's manifest.json
 
 The sandbox automatically reads these values from your app's `manifest.json`:
 
@@ -845,7 +774,7 @@ All devices enabled
 </table>
 
 > ### Note:  
-> i18n placeholders \(e.g., `{{title}}`\) are automatically resolved.
+> i18n placeholders \(for example, `{{title}}`\) are automatically resolved.
 
 
 
@@ -855,23 +784,17 @@ All devices enabled
 
 
 
-### Invalid JSON syntax
+### App not appearing on launchpad
 
-**Solution**: Validate your JSON at [jsonlint.com](https://jsonlint.com/)
-
-
-
-### App not appearing on home page
-
-1.  Check `rootPath` points to the correct location
-2.  Verify `manifest.json` is accessible
-3.  Check browser console for errors
+1.  Check that the root path is relative to the HTML file location.
+2.  Verify `manifest.json` is accessible at `{rootPath}/manifest.json`.
+3.  Check browser console for loading errors.
 
 
 
 ### Conflicting configuration error
 
-**Error message**: "It's not allowed to configure the sandbox providing configuration directly to the ushell config object 'sap-ushell-config'. Please provide sandbox specific configuration using 'fioriSandboxAppConfig.json'."
+If the following error message is shown: "It's not allowed to configure the sandbox providing configuration directly to the ushell config object 'sap-ushell-config'. Please provide sandbox-specific configuration using 'fioriSandboxAppConfig.json'."
 
-**Solution**: Remove any `window["sap-ushell-config"]` assignments from your HTML or scripts.
+Then remove any `window["sap-ushell-config"]` assignments from your HTML or scripts.
 

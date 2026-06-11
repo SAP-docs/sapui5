@@ -126,7 +126,7 @@ You can click on the document link to open the content of the stream property. S
 
 -   The link text is "Open File". Two conditions must be fulfilled:
 
-    -   For the stream property, there's either no `Core.ContentDisposition/Filename` annotation, or a `Core.ContentDisposition/Filename` annotation pointing to an empty file name.
+    -   For the stream property, there's either no `Core.ContentDisposition/Filename` annotation, a `Core.ContentDisposition/Filename` annotation pointing to an empty file name, or the file name property is annotated with `UI.Hidden`.
 
     -   The stream property is not empty. This means the back end either returns an `odata.mediaContentType` annotation with a value that is not `null`, or does not return an `odata.mediaContentType` annotation.
 

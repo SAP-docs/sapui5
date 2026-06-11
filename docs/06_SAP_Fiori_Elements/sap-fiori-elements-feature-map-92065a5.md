@@ -87,7 +87,7 @@ Analytical card
 </td>
 <td valign="top">
 
-[Analytical Card](https://experience.sap.com/fiori-design-web/analytical-card/)
+[Analytical Card](https://www.sap.com/design-system/fiori-design-web/ui-elements/analytical-card)
 
 </td>
 <td valign="top">
@@ -140,7 +140,7 @@ Add column to a table
 </td>
 <td valign="top">
 
-[Table Overview](https://experience.sap.com/fiori-design-web/table-overview/)
+[Table Overview](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/table-overview)
 
 </td>
 <td valign="top">
@@ -250,7 +250,7 @@ Add custom column
 </td>
 <td valign="top">
 
-[Table Overview](https://experience.sap.com/fiori-design-web/table-overview/)
+[Table Overview](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/table-overview)
 
 </td>
 <td valign="top">
@@ -335,7 +335,7 @@ Analytical table
 </td>
 <td valign="top">
 
-[Analytical Table \(ALV\)](https://experience.sap.com/fiori-design-web/analytical-table-alv/)
+[Analytical Table \(ALV\)](https://www.sap.com/design-system/fiori-design-web/ui-elements/analytical-table-alv)
 
 </td>
 <td valign="top">
@@ -381,7 +381,7 @@ Area micro chart
 </td>
 <td valign="top">
 
-[Area Micro Chart](https://experience.sap.com/fiori-design-web/area-micro-chart/)
+[Area Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/area-micro-chart)
 
 </td>
 <td valign="top">
@@ -430,7 +430,7 @@ Avatar
 </td>
 <td valign="top">
 
-[Avatar](https://experience.sap.com/fiori-design-web/avatar/)
+[Avatar](https://www.sap.com/design-system/fiori-design-web/ui-elements/avatar)
 
 </td>
 <td valign="top">
@@ -473,7 +473,7 @@ Breadcrumb
 </td>
 <td valign="top">
 
-[Breadcrumb](https://experience.sap.com/fiori-design-web/breadcrumb/)
+[Breadcrumb](https://www.sap.com/design-system/fiori-design-web/ui-elements/breadcrumb)
 
 </td>
 <td valign="top">
@@ -513,7 +513,7 @@ Bullet chart
 </td>
 <td valign="top">
 
-[Bullet Chart](https://experience.sap.com/fiori-design-web/bullet-chart/)
+[Bullet Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/bullet-chart)
 
 </td>
 <td valign="top">
@@ -559,7 +559,7 @@ Bullet micro chart
 </td>
 <td valign="top">
 
-[Bullet Micro Chart](https://experience.sap.com/fiori-design-web/bullet-micro-chart/)
+[Bullet Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/bullet-micro-chart)
 
 </td>
 <td valign="top">
@@ -608,7 +608,7 @@ Busy indicator
 </td>
 <td valign="top">
 
-[Busy Indicator](https://experience.sap.com/fiori-design-web/busy-indicator/)
+[Busy Indicator](https://www.sap.com/design-system/fiori-design-web/ui-elements/busy-indicator)
 
 </td>
 <td valign="top">
@@ -651,7 +651,7 @@ Button/Action
 </td>
 <td valign="top">
 
-[Button](https://experience.sap.com/fiori-design-web/button/)
+[Button](https://www.sap.com/design-system/fiori-design-web/ui-elements/button)
 
 </td>
 <td valign="top">
@@ -803,9 +803,9 @@ Chart/Smart chart
 </td>
 <td valign="top">
 
-[Chart](https://experience.sap.com/fiori-design-web/chart/)
+[Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/chart)
 
-[Smart Chart](https://experience.sap.com/fiori-design-web/smart-chart/)
+[Smart Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/smart-chart)
 
 </td>
 <td valign="top">
@@ -846,7 +846,7 @@ Checkbox
 </td>
 <td valign="top">
 
-[Checkbox](https://experience.sap.com/fiori-design-web/checkbox/)
+[Checkbox](https://www.sap.com/design-system/fiori-design-web/ui-elements/checkbox)
 
 </td>
 <td valign="top">
@@ -929,7 +929,7 @@ Column chart
 </td>
 <td valign="top">
 
-[Column Chart](https://experience.sap.com/fiori-design-web/column-chart/)
+[Column Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/column-chart)
 
 </td>
 <td valign="top">
@@ -1046,7 +1046,7 @@ Combo box
 </td>
 <td valign="top">
 
-[Combo Box](https://experience.sap.com/fiori-design-web/combo-box/)
+[Combo Box](https://www.sap.com/design-system/fiori-design-web/ui-elements/combo-box)
 
 </td>
 <td valign="top">
@@ -1137,7 +1137,7 @@ Context-dependent value help
 </td>
 <td valign="top">
 
-[Value Help Dialog](https://experience.sap.com/fiori-design-web/value-help-dialog/)
+[Value Help Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/value-help-dialog)
 
 </td>
 <td valign="top">
@@ -1294,7 +1294,7 @@ Cumulation \(Waterfall chart\)
 </td>
 <td valign="top">
 
-[Cumulation \(Waterfall Chart\)](https://experience.sap.com/fiori-design-web/waterfall-chart/)
+[Cumulation \(Waterfall Chart\)](https://www.sap.com/design-system/fiori-design-web/ui-elements/waterfall-chart)
 
 </td>
 <td valign="top">
@@ -1335,7 +1335,7 @@ Currency
 </td>
 <td valign="top">
 
-[Currency](https://experience.sap.com/fiori-design-web/currency/)
+[Currency](https://www.sap.com/design-system/fiori-design-web/ui-elements/currency)
 
 </td>
 <td valign="top">
@@ -1455,7 +1455,7 @@ List report page
 </td>
 <td valign="top">
 
-[Filter Bar](https://experience.sap.com/fiori-design-web/filter-bar/)
+[Filter Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/filter-bar)
 
 </td>
 <td valign="top">
@@ -1500,7 +1500,7 @@ Custom action
 </td>
 <td valign="top">
 
-[Action Placement](https://experience.sap.com/fiori-design-web/action-placement/)
+[Action Placement](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/action-placement)
 
 </td>
 <td valign="top">
@@ -1548,8 +1548,8 @@ Custom header facet
 </td>
 <td valign="top">
 
--   [List Report Floorplan](https://experience.sap.com/fiori-design-web/list-report-floorplan-sap-fiori-element/)
--   [Object Page Floorplan](https://experience.sap.com/fiori-design-web/object-page/)
+-   [List Report Floorplan](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/list-report-floorplan-sap-fiori-element)
+-   [Object Page Floorplan](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/object-page)
 
 
 
@@ -1607,7 +1607,7 @@ Object page
 </td>
 <td valign="top">
 
-[Form / Simple Form](https://experience.sap.com/fiori-design-web/form/)
+[Form / Simple Form](https://www.sap.com/design-system/fiori-design-web/ui-elements/form)
 
 </td>
 <td valign="top">
@@ -1645,7 +1645,7 @@ Object page
 </td>
 <td valign="top">
 
-[Object Page Floorplan](https://experience.sap.com/fiori-design-web/object-page/)
+[Object Page Floorplan](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/object-page)
 
 </td>
 <td valign="top">
@@ -1683,7 +1683,7 @@ Object page
 </td>
 <td valign="top">
 
-[Object Page Floorplan](https://experience.sap.com/fiori-design-web/object-page/)
+[Object Page Floorplan](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/object-page)
 
 </td>
 <td valign="top">
@@ -1721,7 +1721,7 @@ Object page
 </td>
 <td valign="top">
 
-[Dynamic Side Content](https://experience.sap.com/fiori-design-web/dynamic-side-content/)
+[Dynamic Side Content](https://www.sap.com/design-system/fiori-design-web/ui-elements/dynamic-side-content)
 
 </td>
 <td valign="top">
@@ -1764,7 +1764,7 @@ Date/time picker
 </td>
 <td valign="top">
 
-[Date/Time Picker](https://experience.sap.com/fiori-design-web/datetime-picker/)
+[Date/Time Picker](https://www.sap.com/design-system/fiori-design-web/ui-elements/datetime-picker)
 
 </td>
 <td valign="top">
@@ -1821,7 +1821,7 @@ Date picker
 </td>
 <td valign="top">
 
-[Date Picker](https://experience.sap.com/fiori-design-web/date-picker/)
+[Date Picker](https://www.sap.com/design-system/fiori-design-web/ui-elements/date-picker)
 
 </td>
 <td valign="top">
@@ -1866,7 +1866,7 @@ Date range selection
 </td>
 <td valign="top">
 
-[Date Range Selection](https://experience.sap.com/fiori-design-web/date-range-selection/)
+[Date Range Selection](https://www.sap.com/design-system/fiori-design-web/ui-elements/date-range-selection)
 
 </td>
 <td valign="top">
@@ -1962,7 +1962,7 @@ Default values for action parameter dialog
 </td>
 <td valign="top">
 
-[Dialog](https://experience.sap.com/fiori-design-web/dialog/)
+[Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/dialog)
 
 </td>
 <td valign="top">
@@ -2003,7 +2003,7 @@ Defining the order of standard actions
 </td>
 <td valign="top">
 
-[Action Placement](https://experience.sap.com/fiori-design-web/action-placement/)
+[Action Placement](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/action-placement)
 
 </td>
 <td valign="top">
@@ -2049,7 +2049,7 @@ Dialog box
 </td>
 <td valign="top">
 
-[Dialog](https://experience.sap.com/fiori-design-web/dialog/)
+[Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/dialog)
 
 </td>
 <td valign="top">
@@ -2145,7 +2145,7 @@ Draft handling
 </td>
 <td valign="top">
 
-[Draft Handling](https://experience.sap.com/fiori-design-web/draft-handling/)
+[Draft Handling](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/object-handling/draft-handling)
 
 </td>
 <td valign="top">
@@ -2195,7 +2195,7 @@ Dynamic page layout
 </td>
 <td valign="top">
 
-[Dynamic Page Layout](https://experience.sap.com/fiori-design-web/dynamic-page-layout/)
+[Dynamic Page Layout](https://www.sap.com/design-system/fiori-design-web/page-types/page-layouts/dynamic-page-layout)
 
 </td>
 <td valign="top">
@@ -2385,7 +2385,7 @@ Filter bar
 </td>
 <td valign="top">
 
-[Filter Bar](https://experience.sap.com/fiori-design-web/filter-bar/)
+[Filter Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/filter-bar)
 
 </td>
 <td valign="top">
@@ -2457,7 +2457,7 @@ Flexible column layout
 </td>
 <td valign="top">
 
-[Flexible Column Layout \(Layout + SAP Fiori Elements\)](https://experience.sap.com/fiori-design-web/flexible-column-layout/)
+[Flexible Column Layout](https://www.sap.com/design-system/fiori-design-web/page-types/page-layouts/flexible-column-layout)
 
 </td>
 <td valign="top">
@@ -2500,7 +2500,7 @@ Footer toolbar
 </td>
 <td valign="top">
 
-[Footer Toolbar](https://experience.sap.com/fiori-design-web/footer-toolbar/)
+[Footer Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/footer-toolbar)
 
 </td>
 <td valign="top">
@@ -2544,7 +2544,7 @@ Form
 </td>
 <td valign="top">
 
-[Form](https://experience.sap.com/fiori-design-web/form/)
+[Form](https://www.sap.com/design-system/fiori-design-web/ui-elements/form)
 
 </td>
 <td valign="top">
@@ -2640,7 +2640,7 @@ Freeze the first column in a table
 </td>
 <td valign="top">
 
-[Table Overview](https://experience.sap.com/fiori-design-web/table-overview/)
+[Table Overview](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/table-overview)
 
 </td>
 <td valign="top">
@@ -2677,7 +2677,7 @@ Generative AI Features
 </td>
 <td valign="top">
 
-[Designing for Generative AI](https://experience.sap.com/fiori-design-web/generative-ai-design/)
+ 
 
 </td>
 <td valign="top">
@@ -2719,7 +2719,7 @@ Analytical list page
 </td>
 <td valign="top">
 
-[Generic Tag](https://experience.sap.com/fiori-design-web/generic-tag/)
+[Generic Tag](https://www.sap.com/design-system/fiori-design-web/ui-elements/generic-tag)
 
 </td>
 <td valign="top">
@@ -2761,7 +2761,7 @@ Grid table
 </td>
 <td valign="top">
 
-[Grid Table](https://experience.sap.com/fiori-design-web/grid-table/)
+[Grid Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/grid-table)
 
 </td>
 <td valign="top">
@@ -2810,7 +2810,7 @@ Header toolbar
 </td>
 <td valign="top">
 
-[Header Toolbar](https://experience.sap.com/fiori-design-web/header-toolbar/)
+[Header Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/header-toolbar)
 
 </td>
 <td valign="top">
@@ -2944,7 +2944,7 @@ Icon tab bar
 </td>
 <td valign="top">
 
-[Icon Tab Bar](https://experience.sap.com/fiori-design-web/icontabbar/)
+[Icon Tab Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/icontabbar)
 
 </td>
 <td valign="top">
@@ -2984,7 +2984,7 @@ Illustrated message
 </td>
 <td valign="top">
 
-[Illustrated Message](https://experience.sap.com/fiori-design-web/illustrated-message/)
+[Illustrated Message](https://www.sap.com/design-system/fiori-design-web/ui-elements/illustrated-message)
 
 </td>
 <td valign="top">
@@ -3065,7 +3065,7 @@ Input field
 </td>
 <td valign="top">
 
-[Input Field](https://experience.sap.com/fiori-design-web/input-field/)
+[Input Field](https://www.sap.com/design-system/fiori-design-web/ui-elements/input-field)
 
 </td>
 <td valign="top">
@@ -3101,7 +3101,7 @@ Analytical list page
 </td>
 <td valign="top">
 
-[Interactive Chart](https://experience.sap.com/fiori-design-web/interactive-chart/)
+[Interactive Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/interactive-chart)
 
 </td>
 <td valign="top">
@@ -3264,7 +3264,7 @@ Label
 </td>
 <td valign="top">
 
-[Label](https://experience.sap.com/fiori-design-web/label/)
+[Label](https://www.sap.com/design-system/fiori-design-web/ui-elements/label)
 
 </td>
 <td valign="top">
@@ -3339,7 +3339,7 @@ Line chart
 </td>
 <td valign="top">
 
-[Line Chart](https://experience.sap.com/fiori-design-web/line-chart/)
+[Line Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/line-chart)
 
 </td>
 <td valign="top">
@@ -3385,7 +3385,7 @@ Line micro chart
 </td>
 <td valign="top">
 
-[Line Micro Chart](https://experience.sap.com/fiori-design-web/line-micro-chart/)
+[Line Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/line-micro-chart)
 
 </td>
 <td valign="top">
@@ -3432,7 +3432,7 @@ Link
 </td>
 <td valign="top">
 
-[Link](https://experience.sap.com/fiori-design-web/link/)
+[Link](https://www.sap.com/design-system/fiori-design-web/ui-elements/link)
 
 </td>
 <td valign="top">
@@ -3468,7 +3468,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Link List Card](https://experience.sap.com/fiori-design-web/overview-page-list-cards/#link-list-card)
+[Link List Card](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/overview-page-ovp/cards/overview-page-list-cards#link-list-card)
 
 </td>
 <td valign="top">
@@ -3628,7 +3628,7 @@ Overview page
 </td>
 <td valign="top">
 
-[List Cards](https://experience.sap.com/fiori-design-web/overview-page-list-cards/)
+[List Cards](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/overview-page-ovp/cards/overview-page-list-cards)
 
 </td>
 <td valign="top">
@@ -3704,7 +3704,7 @@ Mass edit
 </td>
 <td valign="top">
 
-[Enabling Editing Using a Dialog in the List Report](https://experience.sap.com/fiori-design-web/mass-editing/)
+[Object Handling – Mass Edit](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/object-handling/mass-editing)
 
 </td>
 <td valign="top">
@@ -3757,7 +3757,7 @@ Menu button
 </td>
 <td valign="top">
 
-[Menu Button](https://experience.sap.com/fiori-design-web/menu-button/)
+[Menu Button](https://www.sap.com/design-system/fiori-design-web/ui-elements/button#menu-button)
 
 </td>
 <td valign="top">
@@ -3802,7 +3802,7 @@ Message box
 </td>
 <td valign="top">
 
-[Message Box](https://experience.sap.com/fiori-design-web/message-box/)
+[Message Box](https://www.sap.com/design-system/fiori-design-web/ui-elements/message-box)
 
 </td>
 <td valign="top">
@@ -3857,7 +3857,7 @@ Message popover
 </td>
 <td valign="top">
 
-[Message Popover](https://experience.sap.com/fiori-design-web/message-popover/)
+[Message Popover](https://www.sap.com/design-system/fiori-design-web/ui-elements/message-popover)
 
 </td>
 <td valign="top">
@@ -3916,7 +3916,7 @@ Message toast
 </td>
 <td valign="top">
 
-[Message Toast](https://experience.sap.com/fiori-design-web/message-toast/)
+[Message Toast](https://www.sap.com/design-system/fiori-design-web/ui-elements/message-toast)
 
 </td>
 <td valign="top">
@@ -3960,7 +3960,7 @@ Micro chart/Smart micro chart
 </td>
 <td valign="top">
 
-[Micro Chart](https://experience.sap.com/fiori-design-web/micro-chart/)
+[Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/micro-chart)
 
 </td>
 <td valign="top">
@@ -4002,7 +4002,7 @@ Multi-combo box
 </td>
 <td valign="top">
 
-[Multi-Combo Box](https://experience.sap.com/fiori-design-web/multi-combobox/)
+[Multi-Combo Box](https://www.sap.com/design-system/fiori-design-web/ui-elements/multi-combobox)
 
 </td>
 <td valign="top">
@@ -4181,7 +4181,7 @@ Navigation
 </td>
 <td valign="top">
 
-[Navigation](https://experience.sap.com/fiori-design-web/navigation/)
+[Navigation](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/navigation/navigation)
 
 </td>
 <td valign="top">
@@ -4277,7 +4277,7 @@ P13n dialog
 </td>
 <td valign="top">
 
-[P13n Dialog](https://experience.sap.com/fiori-design-web/p13n-dialog/)
+[P13n Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/p13n-dialog-popup)
 
 </td>
 <td valign="top">
@@ -4320,7 +4320,7 @@ Popover
 </td>
 <td valign="top">
 
-[Popover](https://experience.sap.com/fiori-design-web/popover/)
+[Popover](https://www.sap.com/design-system/fiori-design-web/ui-elements/popover)
 
 </td>
 <td valign="top">
@@ -4407,7 +4407,7 @@ Progress indicator
 </td>
 <td valign="top">
 
-[Progress Indicator](https://experience.sap.com/fiori-design-web/progress-indicator/)
+[Progress Indicator](https://www.sap.com/design-system/fiori-design-web/ui-elements/progress-indicator)
 
 </td>
 <td valign="top">
@@ -4443,7 +4443,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Quick View](https://experience.sap.com/fiori-design-web/quickview/)
+[Quick View](https://www.sap.com/design-system/fiori-design-web/ui-elements/quickview)
 
 </td>
 <td valign="top">
@@ -4532,7 +4532,7 @@ Radial micro chart
 </td>
 <td valign="top">
 
-[Radial Micro Chart](https://experience.sap.com/fiori-design-web/radial-micro-chart/)
+[Radial Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/radial-micro-chart)
 
 </td>
 <td valign="top">
@@ -4574,7 +4574,7 @@ Rating indicator
 </td>
 <td valign="top">
 
-[Rating Indicator](https://experience.sap.com/fiori-design-web/rating-indicator/)
+[Rating Indicator](https://www.sap.com/design-system/fiori-design-web/ui-elements/rating-indicator)
 
 </td>
 <td valign="top">
@@ -4691,7 +4691,7 @@ Responsive table
 </td>
 <td valign="top">
 
-[Responsive Table](https://experience.sap.com/fiori-design-web/responsive-table/)
+[Responsive Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/responsive-table)
 
 </td>
 <td valign="top">
@@ -4881,7 +4881,7 @@ Search
 </td>
 <td valign="top">
 
-[Search](https://experience.sap.com/fiori-design-web/search/)
+[Search](https://www.sap.com/design-system/fiori-design-web/ui-elements/search)
 
 </td>
 <td valign="top">
@@ -4917,7 +4917,7 @@ Object page
 </td>
 <td valign="top">
 
-[Segmented Buttons](https://experience.sap.com/fiori-design-web/button/#segmented-button)
+[Segmented Buttons](https://www.sap.com/design-system/fiori-design-web/ui-elements/button#segmented-button)
 
 </td>
 <td valign="top">
@@ -5068,7 +5068,7 @@ Share to Microsoft Teams
 </td>
 <td valign="top">
 
-[Header Toolbar](https://experience.sap.com/fiori-design-web/header-toolbar/)
+[Header Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/header-toolbar)
 
 </td>
 <td valign="top">
@@ -5113,7 +5113,7 @@ Smart link
 </td>
 <td valign="top">
 
-[Smart Link](https://experience.sap.com/fiori-design-web/smart-link/)
+[Smart Link](https://www.sap.com/design-system/fiori-design-web/ui-elements/smart-link)
 
 </td>
 <td valign="top">
@@ -5166,7 +5166,7 @@ Smart table
 </td>
 <td valign="top">
 
-[Smart Table](https://experience.sap.com/fiori-design-web/smart-table/)
+[Smart Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/smart-table)
 
 </td>
 <td valign="top">
@@ -5234,7 +5234,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Stack Card](https://experience.sap.com/fiori-design-web/overview-page-stack-card-quick-view-card/)
+[Stack Card](https://www.sap.com/design-system/fiori-design-web/ui-elements/quickview)
 
 </td>
 <td valign="top">
@@ -5280,7 +5280,7 @@ Stacked bar micro chart
 </td>
 <td valign="top">
 
-[Stacked Bar Micro Chart](https://experience.sap.com/fiori-design-web/stacked-bar-micro-chart/)
+[Stacked Bar Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/stacked-bar-micro-chart)
 
 </td>
 <td valign="top">
@@ -5448,7 +5448,7 @@ Table personalization
 </td>
 <td valign="top">
 
-[Table Personalization \(Overview\)](https://experience.sap.com/fiori-design-web/overview-table-personalization/)
+[Table Personalization \(Overview\)](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/overview-table-personalization)
 
 </td>
 <td valign="top">
@@ -5503,13 +5503,13 @@ Tables
 </td>
 <td valign="top">
 
-[Tree Table](https://experience.sap.com/fiori-design-web/tree-table/)
+[Tree Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/tree-table)
 
-[Responsive Table](https://experience.sap.com/fiori-design-web/responsive-table/)
+[Responsive Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/responsive-table)
 
-[Grid Table](https://experience.sap.com/fiori-design-web/grid-table/)
+[Grid Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/grid-table)
 
-[Analytical Table \(ALV\)](https://experience.sap.com/fiori-design-web/analytical-table-alv/)
+[Analytical Table \(ALV\)](https://www.sap.com/design-system/fiori-design-web/ui-elements/analytical-table-alv)
 
 </td>
 <td valign="top">
@@ -5551,7 +5551,7 @@ Table toolbar
 </td>
 <td valign="top">
 
-[Table Toolbar](https://experience.sap.com/fiori-design-web/table-bar/)
+[Table Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/table-bar)
 
 </td>
 <td valign="top">
@@ -5596,8 +5596,8 @@ Text
 </td>
 <td valign="top">
 
--   [Text](https://experience.sap.com/fiori-design-web/text/)
--   [Plain Text Facet](https://experience.sap.com/fiori-design-web/object-page/#plain-text-facet/)
+-   [Text](https://www.sap.com/design-system/fiori-design-web/ui-elements/text)
+-   [Plain Text Facet](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/object-page#plain-text-facet)
 
 
 
@@ -5640,7 +5640,7 @@ Text area
 </td>
 <td valign="top">
 
-[Text Area](https://experience.sap.com/fiori-design-web/text-area/)
+[Text Area](https://www.sap.com/design-system/fiori-design-web/ui-elements/text-area)
 
 </td>
 <td valign="top">
@@ -5693,7 +5693,7 @@ Title
 </td>
 <td valign="top">
 
-[Title](https://experience.sap.com/fiori-design-web/title/)
+[Title](https://www.sap.com/design-system/fiori-design-web/ui-elements/title)
 
 </td>
 <td valign="top">
@@ -5754,7 +5754,7 @@ Token
 </td>
 <td valign="top">
 
-[Token](https://experience.sap.com/fiori-design-web/token/)
+[Token](https://www.sap.com/design-system/fiori-design-web/ui-elements/token)
 
 </td>
 <td valign="top">
@@ -5796,7 +5796,7 @@ Tree table
 </td>
 <td valign="top">
 
-[Tree Table](https://experience.sap.com/fiori-design-web/tree-table/)
+[Tree Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/tree-table)
 
 </td>
 <td valign="top">
@@ -5871,7 +5871,7 @@ Value help
 </td>
 <td valign="top">
 
-[Value Help Dialog](https://experience.sap.com/fiori-design-web/value-help-dialog/)
+[Value Help Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/value-help-dialog)
 
 </td>
 <td valign="top">
@@ -5926,7 +5926,7 @@ Variant management
 </td>
 <td valign="top">
 
-[Variant Management](https://experience.sap.com/fiori-design-web/variant-management/)
+[Variant Management](https://www.sap.com/design-system/fiori-design-web/ui-elements/variant-management)
 
 </td>
 <td valign="top">
@@ -5968,7 +5968,7 @@ Analytical list page
 </td>
 <td valign="top">
 
-[Visual Filter Bar](https://experience.sap.com/fiori-design-web/visual-filter-bar/)
+[Visual Filter Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/visual-filter-bar)
 
 </td>
 <td valign="top">
@@ -6012,7 +6012,7 @@ Worklist page
 </td>
 <td valign="top">
 
-[Worklist](https://experience.sap.com/fiori-design-web/work-list/)
+[Worklist](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/work-list)
 
 </td>
 <td valign="top">

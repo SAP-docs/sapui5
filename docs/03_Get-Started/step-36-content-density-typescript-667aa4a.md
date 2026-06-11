@@ -19,7 +19,7 @@ In this step of our Walkthrough tutorial, we adjust the content density based on
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 36: Content Density](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/36) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-36.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

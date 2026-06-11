@@ -45,7 +45,7 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
   },
   "sap.ui5": {
 	"dependencies": {
-	  "minUI5Version": "1.148.0",
+	  "minUI5Version": "1.149.0",
 	  "libs": {
 		"sap.ui.core": {},
 		"sap.m": {}

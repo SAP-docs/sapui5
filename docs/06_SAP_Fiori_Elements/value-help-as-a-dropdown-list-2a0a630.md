@@ -177,7 +177,7 @@ By default, the radio button group is rendered in a vertical layout. You can als
 > -   We don't recommend the use of radio button group for non-mandatory fields because of their default selection behavior.
 
 > ### Tip:  
-> We recommend the use of a radio button group for fields with a value list that has no more than 8 values. For more information about radio buttons, see the [SAP Design System](https://experience.sap.com/fiori-design-web/radio-button/#do-not-use-the-radio-button-if) guidelines.
+> We recommend the use of a radio button group for fields with a value list that has no more than 8 values. For more information about radio buttons, see the [SAP Design System guidelines](https://www.sap.com/design-system/fiori-design-web/ui-elements/radio-button-web-component).
 
 > ### Restriction:  
 > -   Radio buttons don't support multiple value lists and value lists within the `ValueListRelevantQualifiers` annotation.

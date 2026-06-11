@@ -15,7 +15,7 @@ In a table in display mode, amounts with a currency or a unit of measure are ali
 
 ![](images/Alignment_of_Values_with_Currency_f477f12.png "Alignment of Amount with Currency")
 
-To ensure a correct alignment of the amount, a default decimal padding of 5 is used for currencies and 3 for units of measure. You can change this decimal padding for your app. To do so, use the dedicated manifest keys `currency` and `unitOfMeasure` as shown in the following sample code:
+To ensure a correct alignment of the amount, a default decimal padding of 3 is used for units of measure. For currencies, the currency codelist is used to determine the optimal number of decimals between 2 and 5. You can change this decimal padding for your app. To do so, use the dedicated manifest keys `currency` and `unitOfMeasure` as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -34,6 +34,9 @@ To ensure a correct alignment of the amount, a default decimal padding of 5 is u
 >     }
 > }
 > ```
+
+> ### Note:  
+> For CAP back ends, the currency entity must be exposed and annotated with the `@Common.UnitSpecificScale` annotation on the property for the currency code. If no `UnitSpecificScale` is found a default of 5 decimals is used.
 
 You can preserve the exact decimal places returned from the back end for currency values with `peserveDecimalsForCurrency`, as shown in the following sample code:
 

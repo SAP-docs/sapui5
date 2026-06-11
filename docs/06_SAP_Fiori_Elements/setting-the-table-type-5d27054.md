@@ -32,7 +32,7 @@ The following logic is used to determine the table type of an analytical list pa
 
 
 > ### Tip:  
-> For more information about the guidelines and restrictions that apply to grid tables, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/grid-table/).
+> For more information about the guidelines and restrictions that apply to grid tables, see the [SAP Design System guidelines](https://www.sap.com/design-system/fiori-design-web/ui-elements/grid-table).
 
 In addition to using the `manifest.json` file, you can also use annotations to control which table type is rendered on the list report page and on the object page.
 

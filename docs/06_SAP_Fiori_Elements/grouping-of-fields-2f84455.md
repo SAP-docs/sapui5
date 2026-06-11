@@ -445,5 +445,5 @@ Semantically connected fields are displayed side by side to reflect their data r
 
 ## Related Links
 
-For more information, see the section about [forms and form groups](https://experience.sap.com/fiori-design-web/form/), and about [forms in the object page](https://experience.sap.com/fiori-design-web/object-page/#forms) in the SAP Design System guidelines.
+For more information, see the section about [forms and form groups](https://www.sap.com/design-system/fiori-design-web/ui-elements/form-web-component) and about [forms in the object page](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/object-page#forms-within-the-object-page) in the SAP Design System guidelines.
 

@@ -21,7 +21,7 @@ Our panel content is getting more and more complex and now it is time to move th
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 15: Nested Views](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/15) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-15.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

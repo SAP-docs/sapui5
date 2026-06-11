@@ -20,7 +20,7 @@ In this step, we improve the responsiveness of our app. SAPUI5 applications can 
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 34: Responsiveness](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/34) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-34.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

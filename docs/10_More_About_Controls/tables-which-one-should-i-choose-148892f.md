@@ -557,7 +557,7 @@ Cell selection
 -   ![No](../03_Get-Started/images/Red_Led_5befb5a.gif): Feature is not supported for this table type
 
 
-1\) `Text`, `Label`, `ObjectStatus`, `Icon`, `Button`, `Input`, `DatePicker`, `Select`, `ComboBox`, `MultiComboBox`, `CheckBox`, `Link`, `Currency`, `RatingIndicator`, `ProgressIndicator`as well as the `StackedBarMicroChart`, `ComparisonMicroChart` , and `BulletMicroChart` controls \(of responsive or extra small size\); To keep the control height always stable, the `wrapping` and `renderWhitespace` properties in the `sap.m.Text` control, for example, must be set to `false`. For more information, search for cell level in the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
+1\) `Text`, `Label`, `ObjectStatus`, `Icon`, `Button`, `Input`, `DatePicker`, `Select`, `ComboBox`, `MultiComboBox`, `CheckBox`, `Link`, `Currency`, `RatingIndicator`, `ProgressIndicator`as well as the `StackedBarMicroChart`, `ComparisonMicroChart` , and `BulletMicroChart` controls \(of responsive or extra small size\); To keep the control height always stable, the `wrapping` and `renderWhitespace` properties in the `sap.m.Text` control, for example, must be set to `false`. For more information, search for cell level in the [SAP Fiori Design Guidelines](https://www.sap.com/design-system/fiori-design-web).
 
 2\) To optimize perfomance, we recommend to show no more than 200 items at once in the responsive table. For a larger number of items \(up to 1000\), use the growing feature to limit the number of displayed items and make sure the user can filter the data. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Table) for the growing\* properties. 
 
@@ -574,7 +574,7 @@ Cell selection
 > 
 > -   The browser being used
 
-For more information, search for loading items and performance in the responsive table section in the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
+For more information, search for loading items and performance in the responsive table section in the [SAP Fiori Design Guidelines](https://www.sap.com/design-system/fiori-design-web).
 
 3\) To use grouping and hierarchical data features of the list binding within the OData V4 model for tables in `sap.ui.table`, use the `ODataV4Aggregation` and `ODataV4Hierarchy` plugins.
 

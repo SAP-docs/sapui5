@@ -68,6 +68,32 @@ When a user edits an object, the system behavior of the *Apply* button is as fol
 
 
 
+### Triggering Immediate Navigation with the *Apply* Button
+
+When the users select the *Apply* button, the application waits for any draft-related processes to complete before navigating to the detail page.
+
+You can override this behavior by configuring `applyButtonNavigatesImmediately` in the `manifest.json` file as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "sap.ui.generic.app": {
+>     "settings": {
+>         “applyButtonNavigatesImmediately” : true
+>     }
+> }
+> 
+> ```
+
+When `applyButtonNavigatesImmediately` is set to `true`, selecting the *Apply* button triggers an immediate navigation to the detail page. All draft-related processes, such as draft validation, are executed in the background.
+
+> ### Caution:  
+> Immediate navigation can impact processes such as side effects and error handling. Proceed with caution.
+
+
+
 <a name="loiob0eb3cc0e69a46ef99735c58566a7bf8__section_ysr_zrm_mtb"/>
 
 ## Switching Between the Draft and Saved Version
@@ -126,7 +152,7 @@ The side effects, if configured, are also triggered upon pressing [Enter\]. The 
 **Related Information**  
 
 
-[https://experience.sap.com/fiori-design-web/draft-handling/](https://experience.sap.com/fiori-design-web/draft-handling/)
+[SAP Design System guidelines](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/object-handling/draft-handling)
 
 [https://help.sap.com/docs/SAP\_NETWEAVER\_AS\_ABAP\_752/cc0c305d2fab47bd808adcad3ca7ee9d/d36820f082c84085b6634be4576e351a.html](https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/cc0c305d2fab47bd808adcad3ca7ee9d/d36820f082c84085b6634be4576e351a.html)
 

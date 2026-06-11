@@ -20,7 +20,7 @@ To make our list of invoices even more user-friendly, we sort it alphabetically 
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 24: Sorting and Grouping](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/24) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-24.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

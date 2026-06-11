@@ -251,7 +251,7 @@ For more information, see the [API Reference: `Opa5`](https://ui5.sap.com/#/api/
 
 Starting the app can be a slow operation so it is not recommended to do this for every test. However, it is good practice to group tests in modules and restart the app in every module to enable faster debugging of larger suites.
 
-Loading an iFrame is significantly slower than loading a component. It requires a separate page, in which the mocked app is started in an SAP Fiori Launchpad sandbox. This is useful as it allows debugging of unmocked data requests and mock app issues in isolation from the OPA test. It is easy to migrate to the component launcher once the test suite grows and the app is proven to be correctly mocked.
+Loading an iFrame is significantly slower than loading a component. It requires a separate page, in which the mocked app is started in an [SAP Fiori Launchpad Sandbox](../05_Developing_Apps/sap-fiori-launchpad-sandbox-9307656.md). This is useful as it allows debugging of unmocked data requests and mock app issues in isolation from the OPA test. It is easy to migrate to the component launcher once the test suite grows and the app is proven to be correctly mocked.
 
 SAPUI5 and OPA code \(for example, autoWaiter, UI5 plugin, QUnitUtils\) is injected asynchronously in the iFrame on launch. The iFrame will be considered launched when all of the scripts are loaded. These scripts will communicate the app state to the test code. Errors in the iFrame will also be logged in the test. If OPA code is already loaded by the app, the newly injected code will be used instead to ensure version compatibility.
 

@@ -48,7 +48,7 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="13">
+<td valign="top" rowspan="16">
 
 `actions: <object>` \(mandatory\)
 
@@ -75,7 +75,7 @@ Describes the actions that can be applied to the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="12">
+<td valign="top" rowspan="15">
 
 `"annotation": <object> | <function>`
 
@@ -97,7 +97,7 @@ Provides or computes the design-time metadata specific to the *annotation* actio
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="11">
+<td valign="top" rowspan="14">
 
 `<key> | <object>` 
 
@@ -235,6 +235,48 @@ The delegate is responsible to fetch the available properties, the service url, 
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`validators: <object> | <string> []`\(optional\)
+
+</td>
+<td valign="top">
+
+The validator definition can only be provided through the *annotation rename* action.
+
+The validators in the array are triggered when the key user attempts to rename an item. If the input is invalid, a message box appears explaining why the rename operation failed. Note that if multiple validators fail, only the first error message is displayed.
+
+*Predefined validators* require a type `string` value, while *custom validators* must be objects implementing the following two properties:
+
+Current validators: `noEmptyText`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`validators.validatorFunction: <function>`
+
+</td>
+<td valign="top">
+
+A function that is called with the new text.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`validators.errorMessage: <string>`
+
+</td>
+<td valign="top">
+
+Text that displays in the message box after an invalid input.
+
+</td>
+</tr>
 </table>
 
 Here is an example:
@@ -289,8 +331,20 @@ Here is an example:
 >                     type: AnnotationTypes.ValueListType,
 >                     delegate: oTestDelegate
 >                 },
->                 annotation2: { ... }
->             }
+>                 annotation2: { ... },
+>                 rename: {
+>                     ...
+>                     validators: [
+>                         "noEmptyText",
+>                         {
+>                             validatorFunction(sText) {
+>                               return sText !== "forbidden";
+>                             },
+>                             errorMessage: "Thats a forbidden label, choose another one!"
+>                         }
+>                     ]
+>                 }
+>             }            
 >         }
 >     };
 > 

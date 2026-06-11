@@ -50,7 +50,9 @@ The `setCustomMessage` function can have the following optional parameters:
 
 To add a custom message to the object page in the page-level message strip, you can use the `showMessages` API. For information about the `showMessages` API, see the [API Reference](https://sapui5.hana.ondemand.com/#/api/sap.fe.templates.ObjectPage.ExtensionAPI%23methods/showMessages).
 
-To add a custom message to a table on the object page, in the table-level message strip, you can use the `addMessage` function on the Table building block.
+To add a custom message to the list report page in the page-level message strip, you can use the `showMessages` API. For information about the `showMessages` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ListReport.ExtensionAPI).
+
+To add a custom message to a table on the object page, in the table-level message strip, you can use the `addMessage` function in the `Table` building block.
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
 

@@ -20,7 +20,7 @@ Sometimes the predefined types of SAPUI5 are not flexible enough and you want to
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 21: Expression Binding](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/21) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-21.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

@@ -850,6 +850,41 @@ You can use the following patterns:
 <tr>
 <td valign="top">
 
+`debug-tools`
+
+</td>
+<td valign="top">
+
+[Type](configuration-options-and-url-parameters-91f2d03.md#loio91f2d03b6f4d1014b6dd926db0e91070__section_TVT): `boolean`
+
+Default value: `false`
+
+If set to `true`, the experimental debug tools are activated **without** loading the debug sources. After the page has loaded, a global `ui5` object is available in the browser's developer console that exposes commands for inspecting modules, controls, and framework internals.
+
+In contrast to `sap-ui-debug=true`, this parameter does not switch the runtime to debug sources, which makes it useful when debugging against minified production code.
+
+For more information, see [Debugging](debugging-c9b0f8c.md#loioc9b0f8cca852443f9b8d3bf8ba5626ab).
+
+> ### Caution:  
+> The debug tools are **experimental**. They may change or be removed in future versions without notice and must not be used in productive scenarios.
+
+
+
+</td>
+<td valign="top">
+
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
+
+</td>
+<td valign="top">
+
+![NO](images/Cancel_dfb38de.png)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `ignore-url-params`
 
 </td>
@@ -1138,7 +1173,7 @@ For more information, see [Compatibility Version Information](compatibility-vers
 
 Default value: `false`
 
-A compatibility layer restores several incompatibly changed APIs in jQuery v3 back to their old behavior in jQuery v2. It may be excluded via this setting. For more information, see [Upgrading from a Version Below 1.82](../02_Read-Me-First/upgrading-from-a-version-below-1-82-147eef9.md).
+A compatibility layer restores several incompatibly changed APIs in jQuery v3 back to their old behavior in jQuery v2. It may be excluded via this setting.For more information, see [Upgrading from a Version Below 1.82](../02_Read-Me-First/upgrading-from-a-version-below-1-82-147eef9.md).
 
 </td>
 <td valign="top">

@@ -21,7 +21,7 @@ The SAP Fiori launchpad acts as an application container and instantiates the ap
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 10: Descriptor for Applications](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/10) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-10.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 
@@ -127,7 +127,7 @@ The **`sap.ui5`** namespace adds SAPUI5-specific configuration parameters that a
     },
     "sap.ui5": {
         "dependencies": {
-            "minUI5Version": "1.148.0",
+            "minUI5Version": "1.149.0",
             "libs": {
                 "sap.ui.core": {},
                 "sap.m": {}

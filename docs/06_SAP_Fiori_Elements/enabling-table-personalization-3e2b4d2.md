@@ -2,7 +2,7 @@
 
 # Enabling Table Personalization
 
-You can use table personalization to modify the settings of a table in SAP Fiori elements for OData V4.
+Users can use table personalization to modify the settings of a table in SAP Fiori elements for OData V4.
 
 You can control the table personalization options that users see.
 

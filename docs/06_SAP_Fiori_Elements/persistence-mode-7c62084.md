@@ -1,12 +1,10 @@
 <!-- loio7c620843ed5946d69e2f932f8d17ac8b -->
 
-# Enabling Persistence Mode
+# Persistence Mode
 
-You can configure the mode in which the state of the object page is stored/restored using `iAppState` in SAP Fiori elements for OData V4.
+Learn about the default mode in SAP Fiori elements for OData V4-based apps that use the flexible column layout.
 
-You can use persistence mode for configuring object pages. It deals with the response by the object page to the personalization changes made by the user. Examples of such personalization changes are applying filters on a chart or table, displaying hidden columns, or selecting a specific tab.
-
-This is the default mode for applications that use the flexible column layout. In this mode, changes made to the underlying controls affect the current object and an object at the same level when you navigate to another object using a paginator button, for example.
+Persistence mode is the default mode for apps that use the flexible column layout. In the persistence mode, changes made to the underlying controls affect the current object and an object at the same level when you navigate to another object using a paginator button, for example.
 
 Consider the following use cases:
 

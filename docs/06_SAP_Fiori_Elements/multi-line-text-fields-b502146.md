@@ -24,6 +24,8 @@ In display mode, the text is cut off after 100 characters, and a *More* link is 
 
 
 
+<a name="loiob5021469ca58446ea4e6cf73635dd5d3__configuring-multi-line-text-fields"/>
+
 ## Configuring Multi-Line Text Fields
 
 You can configure the multi-line field by using the following parameters in `formatOptions`:

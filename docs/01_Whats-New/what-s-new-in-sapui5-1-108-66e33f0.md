@@ -427,7 +427,7 @@ Feature
 
 To become more independent from specific jQuery functionality, we now provide the new `sap.ui.core.Element#closestTo` method as a replacement for the `jQuery.fn.control` extension function, which is commonly used to retrieve the nearest SAPUI5 control that wraps a given DOM element. The new method returns a single SAPUI5 element instead of the array of SAPUI5 elements returned by `jQuery.fn.control`. You might therefore need to add an outer loop when migrating your code to the new API.
 
-For more information, see [Replacement of Deprecated jQuery APIs](../04_Essentials/replacement-of-deprecated-jquery-apis-a075ed8.md)and the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Element/methods/sap.ui.core.Element.closestTo).
+For more information, see [Replacement of Deprecated jQuery APIs](../04_Essentials/replacement-of-deprecated-jquery-apis-a075ed8.md) andthe [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Element/methods/sap.ui.core.Element.closestTo).
 
 <sub>Changed•Feature•Info Only•1.108</sub>
 
@@ -732,6 +732,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.147](what-s-new-in-sapui5-1-147-88df9d3.md "With this release SAPUI5 is upgraded from version 1.146 to 1.147.")
 
 [What's New in SAPUI5 1.146](what-s-new-in-sapui5-1-146-6ccfe05.md "With this release SAPUI5 is upgraded from version 1.145 to 1.146.")
 

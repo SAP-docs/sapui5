@@ -47,7 +47,7 @@ Open a terminal and install UI5 CLI globally on your machine by executing the fo
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 1: Hello World!](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/01) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-01.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 Create a folder on your local machine which will contain all the sources of the app we're going to build. We refer to this folder as the "app root directory".
 

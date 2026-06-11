@@ -27,7 +27,7 @@ To achieve this, we will add ARIA attributes. ARIA attributes are used by screen
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 37: Accessibility](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/37) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-37.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 One part of the ARIA attribute set are the so-called landmarks. You can compare landmarks to maps in that they help the user navigate through an app. For this step, we will use Google Chrome with a free [landmark navigation extension](https://chrome.google.com/webstore/detail/landmark-navigation-via-k/ddpokpbjopmeeiiolheejjpkonlkklgp) We will now add meaningful landmarks to our code.
 

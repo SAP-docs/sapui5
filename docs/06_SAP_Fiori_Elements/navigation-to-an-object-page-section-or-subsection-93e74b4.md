@@ -2,9 +2,9 @@
 
 # Navigation to an Object Page Section or Subsection
 
-You can enable navigation from a table row to a specific section or subsection on an object page.
+You can enable navigation from a table row to a specific section or subsection on an object page in SAP Fiori elements for OData V4.
 
-To define the table you want to navigate from, add the `targetControlId` property to the table's `navigation` object in the `manifest.json` file. The `targetControlId` value must be the ID of the target section or subsection, for example, `fe::FacetSection::SectionId` for a section or `fe::FacetSubSection::SubSectionId` for a subsection. The ID corresponds to the section or subsection ID generated from the annotations in the object page.
+To define the table you want to navigate from, add the `targetControlId` property to the table's `navigation` object in the `manifest.json` file. The `targetControlId` value must be the ID of the target section or subsection, for example, `fe::FacetSection::SectionId` for a section or `fe::FacetSubSection::SubSectionId` for a subsection. The ID corresponds to the section or subsection ID generated from the annotations of the object page.
 
 > ### Note:  
 > Use the `route` property for internal navigation within the same app, or the `outbound` property for cross-app navigation to external apps. For external apps, the `outbound` must also be defined in the `crossNavigation` object.

@@ -20,7 +20,7 @@ Now that we have established a good structure for our app, it's time to add some
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 19: Aggregation Binding](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/19) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-19.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

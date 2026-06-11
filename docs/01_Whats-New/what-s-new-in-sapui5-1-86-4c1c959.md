@@ -784,7 +784,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   List reports now support default filter values from the `SelectionVariant` annotation. For more information, see [Configuring Default Filter Values](../06_SAP_Fiori_Elements/configuring-default-filter-values-f27ad7b.md).
 
--   The object page now provides an option to retain the tab selection while switching between objects or sub-objects. For more information, see [Enabling Persistence Mode](../06_SAP_Fiori_Elements/enabling-persistence-mode-7c62084.md).
+-   The object page now provides an option to retain the tab selection while switching between objects or sub-objects. For more information, see [Persistence Mode](../06_SAP_Fiori_Elements/persistence-mode-7c62084.md).
 
 -   It is now possible to trigger *Edit* from any sub-object page in draft applications.
 
@@ -923,6 +923,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.147](what-s-new-in-sapui5-1-147-88df9d3.md "With this release SAPUI5 is upgraded from version 1.146 to 1.147.")
 
 [What's New in SAPUI5 1.146](what-s-new-in-sapui5-1-146-6ccfe05.md "With this release SAPUI5 is upgraded from version 1.145 to 1.146.")
 

@@ -98,7 +98,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 1](h
     	},
     	"sap.ui5": {
     		"dependencies": {
-    			"minUI5Version": "1.148.0",
+    			"minUI5Version": "1.149.0",
     			"libs": {
     				"sap.m": {},
     				"sap.ui.core": {}

@@ -5,7 +5,7 @@
 Analysis Path Framework \(APF\) provides reuse components that allow you to build and enhance interactive analytical Web applications.
 
 > ### Caution:  
-> Deprecated as of SAPUI5 version 1.140. Analysis Path Framework \(APF\) is still officially supported, but will receive no further improvements or new features, and we do not recommend using it any longer. Consider using SAP Smart Business to cover the charts, facet filters, smart filter, and APF modeler functionalities APF used to offer.We recommend switching to SAP Smart Business as soon as possible.
+> Deprecated as of SAPUI5 version 1.136. Analysis Path Framework \(APF\) is still officially supported but will receive no further improvements or new features. Consider using SAP Smart Business to cover the charts, facet filters, smart filter, and modeler functionalities offered by APF. We recommend switching to SAP Smart Business as soon as possible.
 
 You can use APF-based applications to explore KPIs and their influencing factors by drilling down into multidimensional representations of data, such as charts or tables.
 

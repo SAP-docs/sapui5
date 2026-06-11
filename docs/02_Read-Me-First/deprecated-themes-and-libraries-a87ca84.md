@@ -168,8 +168,6 @@ Replacement
 </tr>
 </table>
 
-For a list of the available themes, see [Available Themes](../04_Essentials/available-themes-da0d2e7.md).
-
 
 
 ## Deprecated Libraries
@@ -208,7 +206,7 @@ Replacement
 </td>
 <td valign="top">
 
-No replacement
+No direct replacement. Consider using SAP Smart Business to cover the charts, facet filters, smart filter, and modeler functionalities offered by APF.
 
 </td>
 </tr>
@@ -229,10 +227,7 @@ No replacement
 </td>
 <td valign="top">
 
-> ### Remember:  
-> Removed as of 1.147, see [this blog post](https://community.sap.com/t5/frontend-ui5-sap-fiori-blog-posts/removal-of-legacy-sap-ui-webc-web-component-ui-libraries-from-sapui5/ba-p/14358564). Modern usage of native web components in SAPUI5 is documented in [Using Web Components](../04_Essentials/using-web-components-1c80793.md).
-
-
+No direct replacement. Removed as of 1.147. For native web component usage in SAPUI5, see [Using Web Components](../04_Essentials/using-web-components-1c80793.md). See also the removal [blog post](https://community.sap.com/t5/frontend-ui5-sap-fiori-blog-posts/removal-of-legacy-sap-ui-webc-web-component-ui-libraries-from-sapui5/ba-p/14358564).
 
 </td>
 </tr>
@@ -266,7 +261,7 @@ No replacement
 </td>
 <td valign="top">
 
-No replacement \(removed as of 1.120\)
+No replacement. Removed as of 1.120.
 
 </td>
 </tr>
@@ -311,9 +306,39 @@ No replacement
 <tr>
 <td valign="top">
 
-`sap.ui.commons`
+`sap.ui.commons` 
+
+</td>
+<td valign="top">
+
+1.38
+
+</td>
+<td valign="top">
+
+Replaced by `sap.m`, `sap.ui.unified`, and `sap.tnt` controls
+
+</td>
+</tr>
+<tr>
+<td valign="top">
 
 `sap.ui.ux3`
+
+</td>
+<td valign="top">
+
+1.38
+
+</td>
+<td valign="top">
+
+Replaced by `sap.uxap` and `sap.ui.layout` controls
+
+</td>
+</tr>
+<tr>
+<td valign="top">
 
 `sap.makit`
 
@@ -325,7 +350,7 @@ No replacement
 </td>
 <td valign="top">
 
-Replaced by `sap.m` and `sap.ui.layout` controls
+Replaced by `sap.viz` and the `vizFrame` control
 
 </td>
 </tr>
@@ -342,7 +367,24 @@ Replaced by `sap.m` and `sap.ui.layout` controls
 </td>
 <td valign="top">
 
-No replacement
+Replaced by `sap.ui.unified` and `sap.m` controls
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.viz.ui5` \(individual chart controls\)
+
+</td>
+<td valign="top">
+
+1.32
+
+</td>
+<td valign="top">
+
+Replaced by `sap.viz.ui.controls.VizFrame` 
 
 </td>
 </tr>
@@ -359,13 +401,11 @@ No replacement
 </td>
 <td valign="top">
 
-No replacement
+Replaced by `sap.m` controls, `sap.ui.core.format` formats, and `sap.ui.model.type` types
 
 </td>
 </tr>
 </table>
-
-To find out whether these libraries have been replaced by other content, check them at [API Reference: `deprecated`](https://ui5.sap.com/#/api/deprecated).
 
 **Related Information**  
 

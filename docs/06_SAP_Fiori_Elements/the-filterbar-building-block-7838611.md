@@ -30,6 +30,53 @@ For more information about adding custom filter fields to the `FilterBar` buildi
 
 
 
+## Creating the `FilterBar` Building Block Dynamically
+
+You can use the `FilterBar` building block to dynamically create the filter bar at runtime. You can use this building block inside controllers for more flexibility and a wider variety of use cases. The following sample code shows an example of a filter bar inside a dialog:
+
+> ### Sample Code:  
+> ```
+> 
+> createFilteredTableDialog: function () {
+>     const filterBar = new FilterBar({
+>         contextPath: "/Entities",
+>         metaPath: "to_subEntities/@com.sap.vocabularies.UI.v1.SelectionFields",
+>         id: this.getView().createId("dialogFilterBar")
+>     });
+> 
+>     // The table is wired to the FilterBar via the `filterBar` property,
+>     const table = new Table({
+>         contextPath: "/Entities",
+>         metaPath: "to_subEntities/@com.sap.vocabularies.UI.v1.LineItem",
+>         filterBar: filterBar.getId()
+>     });
+> 
+>     const newDialog = new Dialog({
+>         title: "Filtered Sub-Entities",
+>         content: [filterBar, table],
+>         beginButton: new Button({
+>             text: "OK",
+>             press: function () {
+>                 newDialog.close();
+>             }
+>         }),
+>         endButton: new Button({
+>             text: "Cancel",
+>             press: function () {
+>                 newDialog.close();
+>             }
+>         })
+>     });
+> 
+>     newDialog.setBindingContext(context);
+>     newDialog.addStyleClass("sapUiContentPadding");
+>     this.getExtensionAPI().addDependent(newDialog);
+>     newDialog.open();
+> }
+> ```
+
+
+
 ## Configuring the `FilterBar` Building Block Using Manifest Settings
 
 You can use manifest settings to configure the `FilterBar` building block.

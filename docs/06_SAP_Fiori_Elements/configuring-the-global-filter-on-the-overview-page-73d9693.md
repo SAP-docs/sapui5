@@ -29,6 +29,8 @@ You configure the global filter in the `"sap.ovp"` section using the following p
 > 
 > ```
 
+You can also use semantic operators in filter fields to define relative date values. For more information, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
+
 
 
 <a name="loio73d96937ae94468da04cf0d32eb4c6ee__section_bfb_ykp_k2b"/>

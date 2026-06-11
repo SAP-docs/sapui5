@@ -68,5 +68,5 @@ For more information about any worklist page configuration options, see [List Re
 
 
 
-For general information about the worklist page floorplan, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
+For general information about the worklist page floorplan, see the [SAP Design System guidelines.](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/work-list).
 

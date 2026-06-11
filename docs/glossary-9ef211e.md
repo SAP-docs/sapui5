@@ -778,7 +778,7 @@ SAP Fiori
 
 [http://help.sap.com/fiori](http://help.sap.com/fiori)
 
-[https://experience.sap.com/fiori/](https://experience.sap.com/fiori/)
+[https://www.sap.com/design-system](https://www.sap.com/design-system)
 
 </td>
 </tr>

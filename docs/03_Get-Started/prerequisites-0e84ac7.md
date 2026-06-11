@@ -148,7 +148,7 @@ Open a terminal and install UI5 CLI globally on your machine by executing the fo
     		"async": true
     	},
     	"dependencies": {
-    	  "minUI5Version": "1.148.0",
+    	  "minUI5Version": "1.149.0",
     	  "libs": {
     	    "sap.m": {},
     	    "sap.ui.comp": {},

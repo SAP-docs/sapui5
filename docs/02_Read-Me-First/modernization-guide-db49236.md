@@ -6,8 +6,6 @@ This guide helps you modernize your SAPUI5 applications by providing a consolida
 
 Each of the following sections groups topics by library, listing the deprecated API, its modern replacement, and guidance on how to modernize your code. For detailed steps, follow the links to the dedicated pages.
 
-For the full list of all deprecated APIs, see the [API Reference: `deprecated`](https://ui5.sap.com/#/api/deprecated).
-
 > ### Tip:  
 > Use [UI5 linter](https://github.com/SAP/ui5-linter) to detect deprecated API usage in your projects. UI5 linter is a static code analysis tool that checks your JavaScript, TypeScript, XML, and JSON files for issues. UI5 linter also provides autofixes for a selected number of issues. For more information, see [Scope of Autofix](https://github.com/SAP/ui5-linter/blob/main/docs/Scope-of-Autofix.md).
 > 
@@ -20,13 +18,12 @@ For the full list of all deprecated APIs, see the [API Reference: `deprecated`](
 -   [Core Framework API Migration](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_CFM)
 -   [jQuery.sap Module Migration](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_JMM)
 -   [Deprecated View Types and Features](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_DVT)
--   [Deprecated Controls by Library](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_DCL)
+-   [Deprecated Controls by Supported Library](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_DCL)
 -   [Deprecated Core Classes](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_DCC)
--   [OData and Model Migration](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_OMM)
+-   [Deprecated OData Model Patterns](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_OMM)
 -   [Manifest and Component Metadata Migration](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_MCM)
 -   [SAP Fiori Elements Migration](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_FEM)
 -   [Version-Specific Upgrade Notes](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_VSU)
--   [Analysis Path Framework](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_APF)
 -   [Hybrid Web Container](modernization-guide-db49236.md#loiodb492368adbe490fa5d4ec7ebd98b187__section_HWC)
 
 
@@ -195,8 +192,6 @@ Replacement
 </tr>
 </table>
 
-For a list of the available themes, see [Available Themes](../04_Essentials/available-themes-da0d2e7.md).
-
 
 
 <a name="loiodb492368adbe490fa5d4ec7ebd98b187__section_DLS"/>
@@ -237,7 +232,7 @@ Replacement
 </td>
 <td valign="top">
 
-No replacement
+No direct replacement. Consider using SAP Smart Business to cover the charts, facet filters, smart filter, and modeler functionalities offered by APF.
 
 </td>
 </tr>
@@ -258,10 +253,7 @@ No replacement
 </td>
 <td valign="top">
 
-> ### Remember:  
-> Removed as of 1.147, see [this blog post](https://community.sap.com/t5/frontend-ui5-sap-fiori-blog-posts/removal-of-legacy-sap-ui-webc-web-component-ui-libraries-from-sapui5/ba-p/14358564). Modern usage of native web components in SAPUI5 is documented in [Using Web Components](../04_Essentials/using-web-components-1c80793.md).
-
-
+No direct replacement. Removed as of 1.147. For native web component usage in SAPUI5, see [Using Web Components](../04_Essentials/using-web-components-1c80793.md). See also the removal [blog post](https://community.sap.com/t5/frontend-ui5-sap-fiori-blog-posts/removal-of-legacy-sap-ui-webc-web-component-ui-libraries-from-sapui5/ba-p/14358564).
 
 </td>
 </tr>
@@ -295,7 +287,7 @@ No replacement
 </td>
 <td valign="top">
 
-No replacement \(removed as of 1.120\)
+No replacement. Removed as of 1.120.
 
 </td>
 </tr>
@@ -340,9 +332,39 @@ No replacement
 <tr>
 <td valign="top">
 
-`sap.ui.commons`
+`sap.ui.commons` 
+
+</td>
+<td valign="top">
+
+1.38
+
+</td>
+<td valign="top">
+
+Replaced by `sap.m`, `sap.ui.unified`, and `sap.tnt` controls
+
+</td>
+</tr>
+<tr>
+<td valign="top">
 
 `sap.ui.ux3`
+
+</td>
+<td valign="top">
+
+1.38
+
+</td>
+<td valign="top">
+
+Replaced by `sap.uxap` and `sap.ui.layout` controls
+
+</td>
+</tr>
+<tr>
+<td valign="top">
 
 `sap.makit`
 
@@ -354,7 +376,7 @@ No replacement
 </td>
 <td valign="top">
 
-Replaced by `sap.m` and `sap.ui.layout` controls
+Replaced by `sap.viz` and the `vizFrame` control
 
 </td>
 </tr>
@@ -371,7 +393,24 @@ Replaced by `sap.m` and `sap.ui.layout` controls
 </td>
 <td valign="top">
 
-No replacement
+Replaced by `sap.ui.unified` and `sap.m` controls
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.viz.ui5` \(individual chart controls\)
+
+</td>
+<td valign="top">
+
+1.32
+
+</td>
+<td valign="top">
+
+Replaced by `sap.viz.ui.controls.VizFrame` 
 
 </td>
 </tr>
@@ -388,13 +427,11 @@ No replacement
 </td>
 <td valign="top">
 
-No replacement
+Replaced by `sap.m` controls, `sap.ui.core.format` formats, and `sap.ui.model.type` types
 
 </td>
 </tr>
 </table>
-
-To find out whether these libraries have been replaced by other content, check them at [API Reference: `deprecated`](https://ui5.sap.com/#/api/deprecated).
 
 
 
@@ -500,50 +537,6 @@ Details
 <tr>
 <td valign="top">
 
-**JS View** \(`sap.ui.core.mvc.JSView`\)
-
-</td>
-<td valign="top">
-
-1.90
-
-</td>
-<td valign="top">
-
-[Typed View](../04_Essentials/typed-view-e6bb33d.md) via `View.extend()`
-
-</td>
-<td valign="top">
-
-Define view class in JavaScript using `sap.ui.core.mvc.View.extend()`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**HTML View** \(`sap.ui.core.mvc.HTMLView`\)
-
-</td>
-<td valign="top">
-
-1.108
-
-</td>
-<td valign="top">
-
-[XML View](../04_Essentials/xml-view-91f2928.md)
-
-</td>
-<td valign="top">
-
-No more known usages as HTML syntax brings no advantages over XML
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 **Declarative Support** \(`sap.ui.core.plugin.DeclarativeSupport`\)
 
 </td>
@@ -560,28 +553,6 @@ No more known usages as HTML syntax brings no advantages over XML
 <td valign="top">
 
 [Declarative Support \(deprecated\)](../04_Essentials/declarative-support-deprecated-91f1301.md)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**Template View** \(`sap.ui.core.mvc.TemplateView`\)
-
-</td>
-<td valign="top">
-
-1.56
-
-</td>
-<td valign="top">
-
-[XML View](../04_Essentials/xml-view-91f2928.md) or [Typed View](../04_Essentials/typed-view-e6bb33d.md)
-
-</td>
-<td valign="top">
-
-Include Handlebars template support
 
 </td>
 </tr>
@@ -654,6 +625,50 @@ External CSS file
 <tr>
 <td valign="top">
 
+**HTML View** \(`sap.ui.core.mvc.HTMLView`\)
+
+</td>
+<td valign="top">
+
+1.108
+
+</td>
+<td valign="top">
+
+[XML View](../04_Essentials/xml-view-91f2928.md)
+
+</td>
+<td valign="top">
+
+No more known usages as HTML syntax brings no advantages over XML
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**JS View** \(`sap.ui.core.mvc.JSView`\)
+
+</td>
+<td valign="top">
+
+1.90
+
+</td>
+<td valign="top">
+
+[Typed View](../04_Essentials/typed-view-e6bb33d.md) via `View.extend()`
+
+</td>
+<td valign="top">
+
+Define view class in JavaScript using `sap.ui.core.mvc.View.extend()`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 **XML Composite Controls** \(`sap.ui.core.XMLComposite`\)
 
 </td>
@@ -669,7 +684,29 @@ External CSS file
 </td>
 <td valign="top">
 
-[XML Composite Controls (deprecated)](https://help.sap.com/viewer/c442e2a74263451f845549bdbcdebe7b/1.148_SAPUI5_Internal/en-US/b83a4dcb7d0e46969027345b8d32fd44.html "An XML composite control allows you to define a composite control that clearly separates the behavior of the control from the visual part.") :arrow_upper_right:
+[XML Composite Controls (deprecated)](https://help.sap.com/viewer/c442e2a74263451f845549bdbcdebe7b/1.149_SAPUI5_Internal/en-US/b83a4dcb7d0e46969027345b8d32fd44.html "An XML composite control allows you to define a composite control that clearly separates the behavior of the control from the visual part.") :arrow_upper_right:
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Template View** \(`sap.ui.core.mvc.TemplateView`\)
+
+</td>
+<td valign="top">
+
+1.56
+
+</td>
+<td valign="top">
+
+[XML View](../04_Essentials/xml-view-91f2928.md) or [Typed View](../04_Essentials/typed-view-e6bb33d.md)
+
+</td>
+<td valign="top">
+
+Include Handlebars template support
 
 </td>
 </tr>
@@ -679,9 +716,9 @@ External CSS file
 
 <a name="loiodb492368adbe490fa5d4ec7ebd98b187__section_DCL"/>
 
-## Deprecated Controls by Library
+## Deprecated Controls by Supported Library
 
-This section lists high-impact control deprecations that must be replaced.
+This section lists high-impact control deprecations that must be replaced. The containing libraries are not deprecated.
 
 
 
@@ -707,29 +744,73 @@ Replacement
 </th>
 <th valign="top">
 
-Migration Notes
+Details
 
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-`sap.m.UploadCollection`
+`sap.m.upload.UploadSet`, `UploadSetItem`, `UploadSetToolbarPlaceholder`, `Uploader`
 
 </td>
 <td valign="top">
 
-1.88
+1.129
 
 </td>
 <td valign="top">
 
-`sap.m.plugins.UploadSetwithTable`
+`sap.m.plugins.UploadSetwithTable`, `sap.m.upload.UploadItem`, `sap.m.upload.ActionsPlaceholder`, `sap.m.upload.UploaderTableItem`
 
 </td>
 <td valign="top">
 
-[Upload Collection \(deprecated\)](../10_More_About_Controls/upload-collection-deprecated-124ee13.md). The original replacement `sap.m.upload.UploadSet` is itself deprecated since 1.129; use `sap.m.plugins.UploadSetwithTable` directly.
+Intermediate replacement between `UploadCollection` \(1.88\) and `UploadSetwithTable`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.m.P13nFilterPanel`, `sap.m.P13nConditionPanel`
+
+</td>
+<td valign="top">
+
+1.124
+
+</td>
+<td valign="top">
+
+`sap.m.p13n` artifacts
+
+</td>
+<td valign="top">
+
+All remaining `sap.m.P13n*` items, helpers, and panels deprecated since 1.120-1.124 \(16+ P13n classes in total\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.m.MultiEditField`
+
+</td>
+<td valign="top">
+
+1.120
+
+</td>
+<td valign="top">
+
+No replacement
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -752,6 +833,50 @@ Migration Notes
 <td valign="top">
 
 [Table Personalization \(deprecated\)](../10_More_About_Controls/table-personalization-deprecated-1c60212.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.m.MessagePage`
+
+</td>
+<td valign="top">
+
+1.112
+
+</td>
+<td valign="top">
+
+`sap.m.IllustratedMessage`
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.m.ActionSelect`
+
+</td>
+<td valign="top">
+
+1.111
+
+</td>
+<td valign="top">
+
+No replacement \(concept discarded\)
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -846,61 +971,39 @@ Part of the old P13n framework; the entire `sap.m.P13n*` class family is depreca
 <tr>
 <td valign="top">
 
-`sap.m.P13nFilterPanel`, `sap.m.P13nConditionPanel`
+`sap.m.UploadCollection`
 
 </td>
 <td valign="top">
 
-1.124
+1.88
 
 </td>
 <td valign="top">
 
-`sap.m.p13n` artifacts
+`sap.m.plugins.UploadSetwithTable`
 
 </td>
 <td valign="top">
 
-All remaining `sap.m.P13n*` items, helpers, and panels deprecated since 1.120-1.124 \(16+ P13n classes in total\)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.m.MessagePage`
-
-</td>
-<td valign="top">
-
-1.112
-
-</td>
-<td valign="top">
-
-`sap.m.IllustratedMessage`
-
-</td>
-<td valign="top">
-
- 
+[Upload Collection \(deprecated\)](../10_More_About_Controls/upload-collection-deprecated-124ee13.md). The original replacement `sap.m.upload.UploadSet` is itself deprecated since 1.129; use `sap.m.plugins.UploadSetwithTable` directly.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap.m.MultiEditField`
+`sap.m.Tile`, `sap.m.StandardTile`, `sap.m.CustomTile`, `sap.m.TileContainer`
 
 </td>
 <td valign="top">
 
-1.120
+1.50
 
 </td>
 <td valign="top">
 
-No replacement
+`sap.m.GenericTile`
 
 </td>
 <td valign="top">
@@ -931,72 +1034,6 @@ Functionality is built into the router itself
 
 </td>
 </tr>
-<tr>
-<td valign="top">
-
-`sap.m.Tile`, `sap.m.StandardTile`, `sap.m.CustomTile`, `sap.m.TileContainer`
-
-</td>
-<td valign="top">
-
-1.50
-
-</td>
-<td valign="top">
-
-`sap.m.GenericTile`
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.m.ActionSelect`
-
-</td>
-<td valign="top">
-
-1.111
-
-</td>
-<td valign="top">
-
-No replacement \(concept discarded\)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.m.upload.UploadSet`, `UploadSetItem`, `UploadSetToolbarPlaceholder`, `Uploader`
-
-</td>
-<td valign="top">
-
-1.129
-
-</td>
-<td valign="top">
-
-`sap.m.plugins.UploadSetwithTable`, `sap.m.upload.UploadItem`, `sap.m.upload.ActionsPlaceholder`, `sap.m.upload.UploaderTableItem`
-
-</td>
-<td valign="top">
-
-Intermediate replacement between `UploadCollection` \(1.88\) and `UploadSetwithTable`
-
-</td>
-</tr>
 </table>
 
 
@@ -1021,23 +1058,6 @@ Deprecated as of
 Replacement
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.f.Avatar`
-
-</td>
-<td valign="top">
-
-1.73
-
-</td>
-<td valign="top">
-
-`sap.m.Avatar`
-
-</td>
 </tr>
 <tr>
 <td valign="top">
@@ -1073,6 +1093,23 @@ Replacement
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`sap.f.Avatar`
+
+</td>
+<td valign="top">
+
+1.73
+
+</td>
+<td valign="top">
+
+`sap.m.Avatar`
+
+</td>
+</tr>
 </table>
 
 
@@ -1097,6 +1134,23 @@ Deprecated as of
 Replacement
 
 </th>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.ui.table.Table` row-mode properties \(`visibleRowCount`, `visibleRowCountMode`, `fixedRowCount`, `fixedBottomRowCount`, `minAutoRowCount`, `rowHeight`\) and enum `VisibleRowCountMode`
+
+</td>
+<td valign="top">
+
+1.119
+
+</td>
+<td valign="top">
+
+`rowMode` aggregation with `sap.ui.table.rowmodes.Auto`, `.Fixed`, `.Interactive`
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -1146,23 +1200,6 @@ Replacement
 <td valign="top">
 
 `sap.m.p13n.Engine`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.ui.table.Table` row-mode properties \(`visibleRowCount`, `visibleRowCountMode`, `fixedRowCount`, `fixedBottomRowCount`, `minAutoRowCount`, `rowHeight`\) and enum `VisibleRowCountMode`
-
-</td>
-<td valign="top">
-
-1.119
-
-</td>
-<td valign="top">
-
-`rowMode` aggregation with `sap.ui.table.rowmodes.Auto`, `.Fixed`, `.Interactive`
 
 </td>
 </tr>
@@ -1270,12 +1307,12 @@ Replacement
 <tr>
 <td valign="top">
 
-`sap.ui.layout.form.GridLayout`, `GridContainerData`, `GridElementData`
+`sap.ui.layout.form.ResponsiveLayout`
 
 </td>
 <td valign="top">
 
-1.67
+1.93
 
 </td>
 <td valign="top">
@@ -1287,12 +1324,12 @@ Replacement
 <tr>
 <td valign="top">
 
-`sap.ui.layout.form.ResponsiveLayout`
+`sap.ui.layout.form.GridLayout`, `GridContainerData`, `GridElementData`
 
 </td>
 <td valign="top">
 
-1.93
+1.67
 
 </td>
 <td valign="top">
@@ -1381,17 +1418,17 @@ Replacement
 <tr>
 <td valign="top">
 
-`sap.ui.mdc.enum.*` \(14 enums\)
+`sap.ui.mdc.filterbar.aligned.FilterContainer`
 
 </td>
 <td valign="top">
 
-1.115
+1.144
 
 </td>
 <td valign="top">
 
-`sap.ui.mdc.enums.*` \(renamed namespace\)
+`sap.ui.mdc.filterbar.FilterContainer`
 
 </td>
 </tr>
@@ -1426,23 +1463,6 @@ Replacement
 <td valign="top">
 
 `sap.ui.mdc.valuehelp.CollectiveSearchSelect`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.ui.mdc.filterbar.aligned.FilterContainer`
-
-</td>
-<td valign="top">
-
-1.144
-
-</td>
-<td valign="top">
-
-`sap.ui.mdc.filterbar.FilterContainer`
 
 </td>
 </tr>
@@ -1514,6 +1534,23 @@ Replacement
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`sap.ui.mdc.enum.*` \(14 enums\)
+
+</td>
+<td valign="top">
+
+1.115
+
+</td>
+<td valign="top">
+
+`sap.ui.mdc.enums.*` \(renamed namespace\)
+
+</td>
+</tr>
 </table>
 
 
@@ -1542,23 +1579,6 @@ Deprecated as of
 Replacement
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.ui.core.message.MessageManager`
-
-</td>
-<td valign="top">
-
-1.118
-
-</td>
-<td valign="top">
-
-`sap/ui/core/Messaging`
-
-</td>
 </tr>
 <tr>
 <td valign="top">
@@ -1614,74 +1634,6 @@ No replacement. Superseded by `sap.ui.core.Control` native busy indication \(ref
 <tr>
 <td valign="top">
 
-`sap.ui.core.ScrollBar`
-
-</td>
-<td valign="top">
-
-1.56
-
-</td>
-<td valign="top">
-
-No replacement
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.ui.core.util.Export`, `ExportCell`, `ExportColumn`, `ExportRow`, `ExportType`, `ExportTypeCSV`
-
-</td>
-<td valign="top">
-
-1.73
-
-</td>
-<td valign="top">
-
-`sap.ui.export.Spreadsheet` \(SAPUI5 only\) or third-party export solutions
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.ui.core.tmpl.Template`, `HandlebarsTemplate`, `DOMElement`, `DOMAttribute`, `TemplateControl`
-
-</td>
-<td valign="top">
-
-1.56
-
-</td>
-<td valign="top">
-
-XML View or Typed View. Refer to [Deprecated View Types and Patterns](../04_Essentials/deprecated-view-types-and-patterns-ea87c42.md).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.ui.core.format.DateFormatTimezoneDisplay`
-
-</td>
-<td valign="top">
-
-1.101
-
-</td>
-<td valign="top">
-
-`DateFormat.getDateTimeWithTimezoneInstance()` with `showDate`, `showTime`, `showTimezone` options
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `sap.ui.core.CalendarType`
 
 </td>
@@ -1730,13 +1682,98 @@ XML View or Typed View. Refer to [Deprecated View Types and Patterns](../04_Esse
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`sap.ui.core.message.MessageManager`
+
+</td>
+<td valign="top">
+
+1.118
+
+</td>
+<td valign="top">
+
+`sap/ui/core/Messaging`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.ui.core.format.DateFormatTimezoneDisplay`
+
+</td>
+<td valign="top">
+
+1.101
+
+</td>
+<td valign="top">
+
+`DateFormat.getDateTimeWithTimezoneInstance()` with `showDate`, `showTime`, `showTimezone` options
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.ui.core.util.Export`, `ExportCell`, `ExportColumn`, `ExportRow`, `ExportType`, `ExportTypeCSV`
+
+</td>
+<td valign="top">
+
+1.73
+
+</td>
+<td valign="top">
+
+`sap.ui.export.Spreadsheet` or third-party export solutions
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.ui.core.tmpl.Template`, `HandlebarsTemplate`, `DOMElement`, `DOMAttribute`, `TemplateControl`
+
+</td>
+<td valign="top">
+
+1.56
+
+</td>
+<td valign="top">
+
+XML View or Typed View. Refer to [Deprecated View Types and Patterns](../04_Essentials/deprecated-view-types-and-patterns-ea87c42.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.ui.core.ScrollBar`
+
+</td>
+<td valign="top">
+
+1.56
+
+</td>
+<td valign="top">
+
+No replacement
+
+</td>
+</tr>
 </table>
 
 
 
 <a name="loiodb492368adbe490fa5d4ec7ebd98b187__section_OMM"/>
 
-## OData and Model Migration
+## Deprecated OData Model Patterns
 
 
 <table>
@@ -1756,31 +1793,21 @@ Deprecated as of
 Replacement
 
 </th>
-<th valign="top">
-
-Details
-
-</th>
 </tr>
 <tr>
 <td valign="top">
 
-OData V2 consumption with an OData V4 model
+Consuming OData V2 Services with the OData V4 Model
 
 </td>
 <td valign="top">
 
-\-
+1.143
 
 </td>
 <td valign="top">
 
-Native OData V4 service
-
-</td>
-<td valign="top">
-
-[Consuming OData V2 Services with the OData V4 Model \(deprecated\)](../04_Essentials/consuming-odata-v2-services-with-the-odata-v4-model-deprecated-365bdbd.md)
+Migrate to a native OData V4 service
 
 </td>
 </tr>
@@ -1797,36 +1824,7 @@ Native OData V4 service
 </td>
 <td valign="top">
 
-OData V4 data aggregation
-
-</td>
-<td valign="top">
-
-See [Data Aggregation and Recursive Hierarchy](../04_Essentials/data-aggregation-and-recursive-hierarchy-7d91431.md)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-OData V1:
-
-`sap.ui.model.odata.ODataModel`, `sap.ui.model.odata.ODataListBinding`, `sap.ui.model.odata.ODataContextBinding`, `sap.ui.model.odata.ODataTreeBinding`, `sap.ui.model.odata.ODataAnnotations`, `sap.ui.model.odata.Filter`
-
-</td>
-<td valign="top">
-
-1.48
-
-</td>
-<td valign="top">
-
-`sap.ui.model.odata.v2.ODataModel` or `sap.ui.model.odata.v4.ODataModel`
-
-</td>
-<td valign="top">
-
-The OData V1 model has been deprecated. Migrate to V2 or V4 model.
+No direct replacement within OData V2. Migrate the back-end service to OData V4 first, then use the OData V4 Model's data aggregation feature. See [Transition from OData V2 to OData V4](../04_Essentials/upgrading-your-odata-model-cda632b.md#loiocda632b01c1e4a988ccecab759d19380__section_OD2OD4) and [Data Aggregation](../04_Essentials/data-aggregation-and-recursive-hierarchy-7d91431.md).
 
 </td>
 </tr>
@@ -1843,12 +1841,41 @@ The OData V1 model has been deprecated. Migrate to V2 or V4 model.
 </td>
 <td valign="top">
 
-OData V4 recursive hierarchy functionality
+No direct replacement within OData V2. Migrate the back-end service to OData V4 first, then use the OData V4 Model's recursive hierarchy feature. See [Transition from OData V2 to OData V4](../04_Essentials/upgrading-your-odata-model-cda632b.md#loiocda632b01c1e4a988ccecab759d19380__section_OD2OD4) and [Recursive Hierarchy](../04_Essentials/data-aggregation-and-recursive-hierarchy-7d91431.md#loio7d914317c0b64c23824bf932cc8a4ae1__section_RCH).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.ui.model.odata.ODataModel` 
 
 </td>
 <td valign="top">
 
-See [Data Aggregation and Recursive Hierarchy](../04_Essentials/data-aggregation-and-recursive-hierarchy-7d91431.md)
+1.48
+
+</td>
+<td valign="top">
+
+`sap.ui.model.odata.v2.ODataModel`. For a full modernization, migrate the back-end service to OData V4 and use the `sap.ui.model.odata.v4.ODataModel`. See [Transition from OData V2 to OData V4](../04_Essentials/upgrading-your-odata-model-cda632b.md#loiocda632b01c1e4a988ccecab759d19380__section_OD2OD4).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.ui.model.odata.Filter`
+
+</td>
+<td valign="top">
+
+1.22
+
+</td>
+<td valign="top">
+
+`sap.ui.model.Filter`
 
 </td>
 </tr>
@@ -1999,34 +2026,17 @@ Details
 <tr>
 <td valign="top">
 
-Below 1.38
+Below 1.89
 
 </td>
 <td valign="top">
 
-jQuery upgrade from 1.x to 2.2.3, manifest descriptor introduction
+IE11 polyfill removal, jQuery upgrade to 3.6.0
 
 </td>
 <td valign="top">
 
-[Upgrading from a Version Below 1.38](upgrading-from-a-version-below-1-38-c1025c2.md)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Below 1.40
-
-</td>
-<td valign="top">
-
-Only one jQuery version bundled \(2.2.3\)
-
-</td>
-<td valign="top">
-
-[Upgrading from a Version Below 1.40](upgrading-from-a-version-below-1-40-278a8e5.md)
+[Upgrading from a Version Below 1.89](upgrading-from-a-version-below-1-89-89b14ce.md)
 
 </td>
 </tr>
@@ -2050,31 +2060,40 @@ jQuery upgrade from 2.x to 3.5.1 with compatibility layer
 <tr>
 <td valign="top">
 
-Below 1.89
+Below 1.40
 
 </td>
 <td valign="top">
 
-IE11 polyfill removal, jQuery upgrade to 3.6.0
+Only one jQuery version bundled \(2.2.3\)
 
 </td>
 <td valign="top">
 
-[Upgrading from a Version Below 1.89](upgrading-from-a-version-below-1-89-89b14ce.md)
+[Upgrading from a Version Below 1.40](upgrading-from-a-version-below-1-40-278a8e5.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Below 1.38
+
+</td>
+<td valign="top">
+
+jQuery upgrade from 1.x to 2.2.3, manifest descriptor introduction
+
+</td>
+<td valign="top">
+
+[Upgrading from a Version Below 1.38](upgrading-from-a-version-below-1-38-c1025c2.md)
 
 </td>
 </tr>
 </table>
 
 For general upgrade guidance, see [Upgrading](upgrading-9638e4f.md).
-
-
-
-<a name="loiodb492368adbe490fa5d4ec7ebd98b187__section_APF"/>
-
-## Analysis Path Framework \(APF\)
-
-The entire Analysis Path Framework \(`sap.apf`\) has been deprecated as of SAPUI5 version 1.140. There is no direct SAPUI5 replacement. For analytical applications, consider SAP Analytics Cloud or the analytical capabilities of SAP Fiori elements. For more information, see [Developing Apps with Analysis Path Framework \(APF\) \(deprecated\)](../07_APF/developing-apps-with-analysis-path-framework-apf-deprecated-1c457c5.md).
 
 
 

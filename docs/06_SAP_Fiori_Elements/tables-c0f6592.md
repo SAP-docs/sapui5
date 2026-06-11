@@ -856,7 +856,7 @@ You can disable freezing columns using the *Column Settings* dialog with the `di
 
 ## Showing or Hiding the *Copy to Clipboard* Button
 
-By default, the *Copy to Clipboard* button is displayed in the table toolbar. However, you can also configure the visibility of the *Copy to Clipboard* button by defining the `disableCopyToClipboard` settings in the `manifest.json` file as shown in the following sample code:
+By default, the *Copy to Clipboard* button is displayed in the table toolbar. However, you can also configure the visibility of the *Copy to Clipboard* button by defining the `disableCopyToClipboard` property in the `manifest.json` file. To hide the *Copy to Clipboard* button, set `disableCopytoClipboard` to `true` as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`

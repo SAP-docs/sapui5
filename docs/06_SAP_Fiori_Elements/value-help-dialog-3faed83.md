@@ -115,6 +115,49 @@ The text associated with the `ValueListParameterOut` parameters of the value hel
 
 For more information about the `Common.Text` or `Common.TextArrangement` annotations, see [Further Features of the Field](additional-features-of-the-field-f49a0f7.md).
 
+**Handling of GUID-Based Fields with Readable ID Fields**
+
+You can avoid showing GUID values inside the value help dialog by using the `Common.ExternalID` annotation on the GUID field of the value help entity. For more information and annotation samples, see the [Displaying Readable IDs Instead of Edm.Guid Values Using Common.ExternalID](additional-features-of-the-field-f49a0f7.md#loiof49a0f7eaafe444daf4cd62d48120ad0__section_fy3_gpy_gbc) section in [Additional Features of the Field](additional-features-of-the-field-f49a0f7.md).
+
+When users make a selection in the table inside the value help dialog, the GUID value from the value help entity is carried over to the GUID field of the main entity. Applications must ensure that the back end updates the right value to the path property pointed to by the ExternalID defined on the main entity’s GUID field. A side-effect is triggered to call this ExternalID and display any associated text instead of the GUID value in the GUID field of the main entity.
+
+The following sample code shows how to trigger a side effect and ensure a readable ID is displayed instead of GUID:
+
+> ### Sample Code:  
+> Main Entity ExternalID XML Annotation
+> 
+> ```
+> 
+> <Annotations Target="MainService.Entities/myGuidProperty">
+>     <Annotation Term="Common.ExternalID" Path="externalId"/>
+> </Annotations>
+> ```
+
+The following sample code shows how to ensure the users see a readable ID instead of GUID inside of the value help dialog:
+
+> ### Sample Code:  
+> Value Help ExternalID XML Annotation
+> 
+> ```
+> 
+> <Annotations Target="ValueHelpService.Entities/myVHGuidProperty">
+>     <Annotation Term="Common.ExternalID" Path="externalId_VH"/>
+> </Annotations>
+> ```
+
+When the back end doesn't support CDS annotations or you don’t want to introduce a local annotation for the value help entity, you can use an alternate approach to hide GUID in the value help dialog.
+
+On the main entity, use the `Common.ExternalID` annotation, either as CDS annotations or local XML annotation, but instead of using this annotation on the value help entity as well, use the following configuration:
+
+-   Hide the GUID inside the value help dialog with the `UI.Hidden` annotation.
+
+-   Configure an `OUT` mapping from the GUID of value help entity to the GUID of the main entity. This ensures that the GUID value is fetched and passed back to main entity even when the GUID of value help entity is marked as hidden.
+
+-   Bring the readable ID and any associated text as regular display-only fields into the value help dialog table. This allows the user to select the right records from the value help dialog.
+
+-   It's still required to update the right value to the path property pointed to by the ExternalID defined on the main entity’s GUID field after user completes the selection in the value help dialog.
+
+
 **Sorting the Table**
 
 By default, the value help table is sorted based on the first column. If the first column has the `TextArrangement` annotation set to `TextOnly`, sorting is instead applied to the column referenced by the `Common.Text` annotation.
@@ -347,6 +390,9 @@ For more information and live examples, see the following topics in the SAP Fior
 **Caching Table Contents**
 
 When the value help dialog is initially opened, the table data is loaded and cached by default. On subsequent accesses within the same session, the data is retrieved from the cache instead of initiating a new back end request. To ensure the data reflects the latest changes, you can enforce a refresh when needed. For example, if an action updates the contents of the value help entity, you can trigger a data refresh by defining a side effect that targets the entity. For more information on side effects, see [Side Effects](side-effects-18b17bd.md). For more information and live examples, see the SAP Fiori development portal at [Global Patterns - Side Effects](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/guidanceSideEffects).
+
+> ### Note:  
+> Caching of value help data is not supported in dropdown-based fields.
 
 > ### Restriction:  
 > The value help cache can be invalidated and refreshed only when the value help entity is defined within the same metadata as the main entity, as in CAP-based applications. This mechanism isn't supported in RESTful ABAP Programming \(RAP\)-based applications, where the value help entity is defined in a separate metadata file.

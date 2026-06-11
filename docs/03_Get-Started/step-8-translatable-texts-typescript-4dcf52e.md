@@ -23,7 +23,7 @@ This way, they are all in a central place and can be easily translated into othe
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 8: Translatable Texts](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/08) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-08.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 
 

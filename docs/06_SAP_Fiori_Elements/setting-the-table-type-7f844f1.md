@@ -84,7 +84,7 @@ The following logic is used to determine the table type on the list report page 
     
 
 > ### Tip:  
-> For more information about the guidelines and restrictions that apply to grid tables, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/grid-table/).
+> For more information about the guidelines and restrictions that apply to grid tables, see the [SAP Design System guidelines](https://www.sap.com/design-system/fiori-design-web/ui-elements/grid-table).
 
 In the `manifest.json` file, you can control which table type is rendered on the list report page and on the object page.
 
@@ -164,7 +164,7 @@ The following popin layouts are supported:
 -   `GridLarge`: Sets a grid layout for rendering the table popins. The width of the grid for each table popin is larger than `GridSmall`, so this layout renders less content in a single popin row.
 -   `GridSmall`: Sets a grid layout for rendering the table popins. The width of the grid for each table popin is small, so this layout allows more content to be rendered in a single popin row.
 
-For more information about the size of the popin layouts, see the [Fiori Design Guidelines](https://www.sap.com/design-system/fiori-design-web/ui-elements/responsive-table/#responsiveness).
+For more information about the size of the popin layouts, see the [SAP Design System guidelines](https://www.sap.com/design-system/fiori-design-web/ui-elements/responsive-table/#responsiveness).
 
 You can configure the popin layout for each responsive table using the `popinLayout` parameter in the `tableSettings` section. In the example below, the popin layout is set to `GridSmall`.
 
