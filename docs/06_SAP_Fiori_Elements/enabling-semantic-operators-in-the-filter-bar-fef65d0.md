@@ -45,7 +45,11 @@ You can set the `FilterRestrictions` to `SingleRange` as shown in the following 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @Consumption.filter.multipleSelections: false
+> @Consumption.filter.selectionType: #INTERVAL
+> myDate
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

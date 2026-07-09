@@ -30,7 +30,7 @@ The visual filter includes only the first measure and dimension from the first c
 > 
 >         Sorting by the annotation is ignored for line charts with time-based dimensions in the visual filter.
 > 
->     -   For line charts with non time-based dimensions, sorting is always based on the dimension, with ascending order as the default sort order. To modify the sort order, define the `SortOrder` property in the `PresentationVariant` annotation.
+>     -   For bar charts, sorting is always based on the dimension, with ascending order as the default sort order. To modify the sort order, define the `SortOrder` property in the `PresentationVariant` annotation.
 > 
 > -   Lazy loading is enabled by default and can't be switched off.
 

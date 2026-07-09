@@ -48,7 +48,7 @@ Depending on your use case please refer to the corresponding accessibility chapt
 **Related Information**  
 
 
-[Accessibility in SAP Fiori](https://experience.sap.com/fiori-design-web/accessibility-in-sap-fiori/ "Accessibility in SAP Fiori")
+[Accessibility in SAP Fiori](https://www.sap.com/design-system/fiori-design-web/discover/sap-design-system/product-standards/accessibility-in-sap-fiori "Accessibility in SAP Fiori")
 
 [Accessibility in the Developing Apps Section](../05_Developing_Apps/accessibility-03b914b.md "Accessibility in the Developing Apps Section")
 

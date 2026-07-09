@@ -41,7 +41,7 @@ For fields of type `Edm.Date`, a date picker is rendered when the field is used 
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > <EntityType Name="SalesOrderManage">
 >    <Property Name="SalesOrderDate" Type="Edm.Date"/>
 > </EntityType>
@@ -75,7 +75,7 @@ For fields of type `Edm.DateTimeOffset`, a date/time picker is rendered when the
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > 
 > <EntityType Name="SalesOrderManage">
 >     <Property Name="LastChangedDateTime" Type="Edm.DateTimeOffset"/>
@@ -113,7 +113,7 @@ You can specify a timezone for a field of type `Edm.DateTimeOffset`. If the time
     > ### Sample Code:  
     > XML Annotation
     > 
-    > ```
+    > ```xml
     > <EntityType Name="SalesOrderManage">
     >     ...
     >     <Property Name="testTimeFixed" Type="Edm.DateTimeOffset"/>
@@ -125,6 +125,15 @@ You can specify a timezone for a field of type `Edm.DateTimeOffset`. If the time
     >     <Annotation Term="Common.Label" String="Timestamp with fixed timezone"/>
     > </Annotations>
     > 
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > @EndUserText.label: 'Timestamp with fixed timezone'
+    > @Common.timezone: 'Asia/Riyadh'
+    > testTimeFixed : abap.utclong;
     > ```
 
     > ### Sample Code:  
@@ -142,7 +151,7 @@ You can specify a timezone for a field of type `Edm.DateTimeOffset`. If the time
     > ### Sample Code:  
     > XML Annotation
     > 
-    > ```
+    > ```xml
     > <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage/testTime">
     >    <Annotation Term="Common.Timezone" Path="testTimezone"/>
     >    <Annotation Term="Common.Label" String="Datetime Stamp with Timezone based on Property"/>
@@ -158,11 +167,12 @@ You can specify a timezone for a field of type `Edm.DateTimeOffset`. If the time
     > ABAP CDS Annotation
     > 
     > ```
-    > @Semantics.timeZoneReference: 'MySAPTimezone'
-    > MyDateTime,
-    >   
-    > @Semantics.timeZone
-    > MySAPTimezone,
+    > @EndUserText.label: 'Datetime Stamp with Timezone based on Property'
+    > @Common.timezone: 'testTimezone'
+    > testTime : abap.utclong;
+    > 
+    > @EndUserText.label: 'Timezone Property'
+    > testTimezone : abap.string(50);
     > ```
 
     > ### Sample Code:  

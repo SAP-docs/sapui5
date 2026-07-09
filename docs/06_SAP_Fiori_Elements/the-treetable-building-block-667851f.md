@@ -23,6 +23,7 @@ You can use the `TreeTable` building block to avoid exposing parameters that are
 > 				hierarchyQualifier="ProductsHierarchy"
 > 				readOnly="true"
 > 				id="treeTable"
+>                                 disableLeafSelection="true"
 > 			/>
 > 		</Panel>
 > 	</Page>

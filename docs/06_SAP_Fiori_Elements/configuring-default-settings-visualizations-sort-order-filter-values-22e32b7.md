@@ -827,7 +827,7 @@ For more information, see [Configuring Default Filter Values](configuring-defaul
 
 [Configuring Tables](configuring-tables-3695931.md "You can use the annotations and entries in manifest.json to control various aspects of tables.")
 
-[Configuring Charts](configuring-charts-8f64eb1.md "You can configure the measures and dimensions displayed in charts by setting the role property to the required value for a chart type. Additional definitions apply to all chart types.")
+[Configuring Charts on the Overview Page](configuring-charts-on-the-overview-page-c7c5a82.md "You can configure the measures and dimensions displayed in charts by setting the role property to the required value for a chart type. Additional configurations apply to all chart types.")
 
 [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-b736ab6.md "You can configure the loading behavior of SAP Fiori apps.")
 

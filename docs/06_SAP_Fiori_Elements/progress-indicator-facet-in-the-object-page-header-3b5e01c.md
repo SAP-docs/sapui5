@@ -94,29 +94,6 @@ To display the progress indicator in the object page header, add a record to the
 
 
 
-### CDS: `UI.DataPoint`
-
-In CDS, annotate the `EntityType` containing the properties required for the data point.
-
-```
-@UI: DataPoint #Progress              : {
-        Value         : Progress,
-        TargetValue   : 100,
-        Title         : 'Progress',
-        Visualization : #Progress
-    }
-
-```
-
-> ### Note:  
-> -   The data point annotation is for a `Property`, even if the UI vocabulary specifies an `EntityType` as the `Target`.
-> 
-> -   The property name is used as the `Qualifier` in the resulting \(generated\) annotation.
-
-The generated annotation will be similar to the example below:
-
-
-
 ### `UI.DataPoint`
 
 Annotate the `entityType` containing the properties required for the data point as shown below.
@@ -132,7 +109,7 @@ Annotate the `entityType` containing the properties required for the data point 
 >          <PropertyValue Property="Description" String="{@i18n>SubTitle}"/>
 >          <PropertyValue Property="Value" Path="Progress"/>
 >          <PropertyValue Property="TargetValue" Decimal="150"/>
->          <PropertyValue Property="Criticality" Path="Criticality "/>
+>          <PropertyValue Property="Criticality" Path="Criticality"/>
 >          <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
 >       </Record>
 >    </Annotation>

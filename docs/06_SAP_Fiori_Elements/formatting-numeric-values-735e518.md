@@ -2,16 +2,24 @@
 
 # Formatting Numeric Values
 
-In SAP Fiori elements for OData V4, you can configure the number of displayed decimal points by using information provided in the OData metadata file, or by using annotations.
+You can control how numbers are displayed in cards, specifically the number of decimal points, using either the OData metadata file or annotations.
 
 
 
 > ### Note:  
 > Numeric values in overview pages appear in their short format, using the SAPUI5 `sap.ui.core.format.NumberFormat` utility.
 
-In the following example, the `scale` attribute in the OData metadata is set to 3, indicating that the properties `Price`, `Width`, `Depth`, and `Height` will be displayed with three decimal points.
+
+
+## Formatting Numeric Values Using OData Metadata
+
+In the OData metadata, the `Scale` attribute defines the number of decimal digits for a numeric property. Cards use this value when displaying the property.
+
+In the following code sample, setting `Scale="3"` for the `Price`, `Width`, `Depth`, and `Height` properties results in three decimal places being displayed for all four properties.
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > <EntityType Name="Product" sap:content-version="1">
 >     ...
@@ -23,9 +31,57 @@ In the following example, the `scale` attribute in the OData metadata is set to 
 > </EntityType>
 > ```
 
-You can also provide number formatting information in the annotation document in the `com.sap.vocabularies.UI.v1.DataPoint` term, by using the `ValueFormat` property. The `NumberOfFractionalDigits` property can be used to determine the number of decimal points.
 
-In the following example, using the `com.sap.vocabularies.UI.v1.DataPoint ValueFormat` property, the number of decimal points displayed for the `Price` property is 1, as defined in the `NumberOfFractionalDigits` property.
+
+## Formatting Numeric Values Using Annotations
+
+You can also define formatting of numeric values using the `ValueFormat` property in the `com.sap.vocabularies.UI.v1.DataPoint` annotation.
+
+The `ValueFormat` is a `NumberFormat` property with the following properties:
+
+**Properties for Formatting Numbers**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Property
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`ScaleFactor` 
+
+</td>
+<td valign="top">
+
+A scale factor applied to large numbers \(for example, divide by 1000 to display values in thousands\).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NumberOfFractionalDigits` 
+
+</td>
+<td valign="top">
+
+Number of decimal digits to display.
+
+</td>
+</tr>
+</table>
+
+The following sample code shows the `Price` property formatted with one decimal digit and a scale factor of 1000:
 
 > ### Sample Code:  
 > XML Annotation
@@ -82,8 +138,8 @@ In the following example, using the `com.sap.vocabularies.UI.v1.DataPoint ValueF
 > 
 > ```
 
+**Related Information**  
 
 
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Formatting Numeric Values](formatting-numeric-values-355401b.md).
+[Configuring Card Properties](configuring-card-properties-53b0791.md "This section describes the configuration items relevant for all overview page cards. All cards inherit a set of generic capabilities such as a card header, content area, and navigation support.")
 

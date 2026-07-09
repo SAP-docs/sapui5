@@ -2,7 +2,7 @@
 
 # Overview Page Card
 
-Cards in SAP Fiori elements for OData V4 are components that use UI annotation to render their content. They contain a header area and a footer area.
+Cards in are components that use UI annotation to render their content. They contain a header area and a content area.
 
 
 
@@ -10,7 +10,7 @@ Each card is bound to a single entity set in a data source, and its configuratio
 
 The card ID is the property name, and the card configuration is provided as a value in the object. At runtime, the cards are displayed in the order that they appear in the application descriptor.
 
-For more information on cards and its areas, see SAP Design System guidelines.
+For more information on cards and its areas, see [SAP Design System guidelines](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/overview-page-ovp/overview-page-card).
 
 
 
@@ -61,6 +61,9 @@ The `title` property is mandatory. The `subTitle` is only mandatory if the card 
 > }
 > ```
 
+> ### Note:  
+> The type of filter bar is determined by the service \(entity\) bound to the filter configuration of the overview page application. If the service is an OData V4 service, a `FilterBar` building block is rendered; for OData V2, a smart filter bar is rendered.
+
 
 
 ### **KPI Headers**
@@ -106,6 +109,9 @@ These annotation terms can be configured in the `manifest.json` file, as shown i
 > }
 > ```
 
+> ### Note:  
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+
 
 
 <a name="loio74332d5d829b413f9d7c0950dc6a71d2__section_bd1_gyx_5wb"/>
@@ -133,7 +139,7 @@ To add a card to the *Insights* section, select the *More* option from the card 
 
 You can select a maximum of 10 cards to be displayed in the *Insights* section. If the maximum number of cards is already displayed on the entry page, the selected card is added to the *Edit Insights* dialog box. You can choose to select or deselect cards by editing the *Insights* section.
 
-For more information, see [**My Home** in SAP S/4HANA Cloud Public Edition](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html) for [**My Home** in SAP S/4HANA](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/8a60279e8d2041b5ad8d3455fab0f3ef.html) in SAP S/4HANA Cloud Private Edition and SAP S/4HANA.
+For more information, see [**My Home** in SAP S/4HANA Cloud Public Edition](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html) or [**My Home** in SAP S/4HANA](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/8a60279e8d2041b5ad8d3455fab0f3ef.html) in SAP S/4HANA Cloud Private Edition and SAP S/4HANA.
 
 
 
@@ -163,10 +169,14 @@ You can also restrict the generation of individual analytical, list, and table c
 > ```
 
 > ### Note:  
-> If custom navigation is enabled for a card, navigation from the *Insights* section of **My Home** for that card leads to the parent overview page application instead of the target maintained in the overview page card.
+> -   The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+> 
+> -   If custom navigation is enabled for a card, navigation from the *Insights* section of **My Home** for that card leads to the parent overview page application instead of the target maintained in the overview page card.
+
+**Related Information**  
 
 
+[Types of Cards](types-of-cards-8ed3f76.md "Overview pages can include several types of cards. Transactional cards show records that users can interact with such as table, list, stack, quick view cards. Analytical chart cards present data visually using chart formars such as line, bubble, donut, column, and bullet charts.")
 
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Overview Page Card](overview-page-card-07d1ca2.md).
+[Configuring Card Properties](configuring-card-properties-53b0791.md "This section describes the configuration items relevant for all overview page cards. All cards inherit a set of generic capabilities such as a card header, content area, and navigation support.")
 

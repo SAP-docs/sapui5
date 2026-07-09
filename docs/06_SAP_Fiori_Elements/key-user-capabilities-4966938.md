@@ -2,13 +2,13 @@
 
 # Key User Capabilities
 
-A key user can adapt the UI of the overview page application in SAP Fiori elements for OData V4.
+A key user can adapt the UI of the overview page application.
 
 
 
 ## Prerequisites
 
-Based on the deployment environment, ensure that the appropriate role is assigned.
+Based on the deployment environment, ensure that the appropriate role is assigned to the key user.
 
 
 <table>
@@ -80,7 +80,7 @@ Hide Card
 </td>
 <td valign="top">
 
-Hides cards during initial load. The hidden cards remain available in the *Manage Cards* section.
+Hides cards during the initial load. Hidden cards remain available in the *Manage Cards* section.
 
 </td>
 </tr>
@@ -192,7 +192,7 @@ Wrap Text
 </td>
 <td valign="top">
 
-Enables wrapping of text in the content area of table cards and list cards.
+Enables text wrapping in the content area of list cards.
 
 </td>
 </tr>
@@ -204,7 +204,7 @@ Enables wrapping of text in the content area of table cards and list cards.
 
 ## Best Practices
 
-To enhance readability in UI adaptation mode, maintain property labels for the following annotations:
+To improve readability in UI adaptation mode, maintain property labels for the following annotations:
 
 
 <table>
@@ -282,8 +282,8 @@ The label is determined by the priority defined in `DataFieldForIntentBasedNavig
 </tr>
 </table>
 
+**Related Information**  
 
 
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Key User Capabilities](key-user-capabilities-37b16cc.md).
+[Configuring Overview Pages Using Runtime Capabilities](configuring-overview-pages-using-runtime-capabilities-5b1dd11.md "Users can configure overview pages by rearranging cards, controlling card visibility, resizing cards, and applying filters that affect all relevant cards on the page.")
 

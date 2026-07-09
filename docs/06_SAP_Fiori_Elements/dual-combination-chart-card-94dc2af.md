@@ -2,10 +2,7 @@
 
 # Dual Combination Chart Card
 
-You can render the chart as a dual combination chart, which lets you view individual data points for a particular dimension.
-
-> ### Note:  
-> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Dual Combination Chart](dual-combination-chart-c406c18.md).
+You can render the chart as a dual combination chart, which lets users view individual data points for a particular dimension. It contains two axis values, with a line chart representing the multiple measures.
 
   
   
@@ -13,22 +10,33 @@ You can render the chart as a dual combination chart, which lets you view indivi
 
 ![](images/Dual_Combination_Chart_Card_6fbcb2e.png "Example of a Dual Combination Chart Card")
 
-The chart contains two axis values with a line chart representing the multiple measures.
+A dual combination chart has the following requirements:
 
-Chart area configuration:
+-   At least two measures.
 
--   The first measure is displayed as a column chart type and subsequent measures display as a line within the chart.
+-   At least one dimension with the `Category` role assigned to the category axis. `Category` is the default role.
 
--   We recommend using only one time-based dimension for the category axis.
 
--   Configure at least two measures. Assign the measures to the feed's UID value axis, irrespective of the roles.
+> ### Note:  
+> We recommend using only one time-based dimension for the category axis.
 
--   Assign at least one role to the category axis. All dimensions with the **Category** role are assigned to the category axis. The **Category** role is the default role.
+Measures are assigned to the feed's UID value axis, irrespective of their roles. They are visualized based on their position in the annotation:
 
+-   The first measure is displayed as a column chart.
+
+-   Each subsequent measure is displayed as a line within the chart.
+
+
+> ### Note:  
+> The `Role` property is ignored for measures in a dual combination chart. Measures are assigned to the value axis regardless of role.
+
+All dimensions with the **Category** role are assigned to the category axis. The **Category** role is the default role.
 
 The following sample code how to define a dual combination chart:
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > <Annotation Term="UI.Chart" Qualifier="Eval_by_CtryCurr_Dual_Combo">
 >                         <Record Type="UI.ChartDefinitionType">
@@ -74,5 +82,94 @@ The following sample code how to define a dual combination chart:
 >                         </PropertyValue>
 >                     </Record>
 >                 </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.chart: [{
+>     qualifier: 'Eval_by_CtryCurr_Dual_Combo',
+>     title: 'Dual Combination Chart',
+>     chartType: #COMBINATION_DUAL,
+> 
+>     measures: [
+>         'Sales',
+>         'SalesShare',
+>         'TotalSales'
+>     ],
+> 
+>     dimensions: [
+>         'Product',
+>         'Quarter'
+>     ],
+> 
+>     measureAttributes: [
+>         {
+>             measure: 'Sales',
+>             role: #AXIS_1
+>         },
+>         {
+>             measure: 'TotalSales',
+>             role: #AXIS_1
+>         },
+>         {
+>             measure: 'SalesShare',
+>             role: #AXIS_2
+>         }
+>     ],
+> 
+>     dimensionAttributes: [
+>         {
+>             dimension: 'Product',
+>             role: #CATEGORY
+>         }
+>     ]
+> }]
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate service.SalesEntity with @(
+>     UI.Chart #Eval_by_CtryCurr_Dual_Combo : {
+>         Title     : 'Dual Combination Chart',
+>         ChartType : #CombinationDual,
+> 
+>         Measures : [
+>             Sales,
+>             SalesShare,
+>             TotalSales
+>         ],
+> 
+>         Dimensions : [
+>             Product,
+>             Quarter
+>         ],
+> 
+>         MeasureAttributes : [
+>             {
+>                 Measure : Sales,
+>                 Role    : #Axis1
+>             },
+>             {
+>                 Measure : TotalSales,
+>                 Role    : #Axis1
+>             },
+>             {
+>                 Measure : SalesShare,
+>                 Role    : #Axis2
+>             }
+>         ],
+> 
+>         DimensionAttributes : [
+>             {
+>                 Dimension : Product,
+>                 Role      : #Category
+>             }
+>         ]
+>     }
+> );
 > ```
 

@@ -36,41 +36,41 @@ You define the side content in the manifest as follows:
 > ### Sample Code:  
 > `manifest.json`
 > 
-> ```
+> ```json
 > {
->    "sap.ui5": {
->       "routing": {
->          "targets": {
->             "SalesOrderManageObjectPage": {
->                "options": {
->                   "settings": {
->                      "content": {
->                         "body": {
->                            "sections": {
->                               "<section-key>": {
->                                  "sideContent": {
->                                     "template": "SalesOrder.ext.CustomSideContent"
->                                  }
->                               },
->                               "<section-key>": {
->                                  "subSections": {
->                                     "<subSection-key>": {
->                                        "sideContent": {
->                                           "template": "SalesOrder.ext.CustomSideContent",
->                                           "equalSplit": true
->                                        }
+>     "sap.ui5": {
+>         "routing": {
+>             "targets": {
+>                 "SalesOrderManageObjectPage": {
+>                     "options": {
+>                         "settings": {
+>                             "content": {
+>                                 "body": {
+>                                     "sections": {
+>                                         "<section-key>": {
+>                                             "sideContent": {
+>                                                 "template": "SalesOrder.ext.CustomSideContent"
+>                                             }
+>                                         },
+>                                         "<section-key>": {
+>                                             "subSections": {
+>                                                 "<subSection-key>": {
+>                                                     "sideContent": {
+>                                                         "template": "SalesOrder.ext.CustomSideContent",
+>                                                         "equalSplit": true
+>                                                     }
+>                                                 }
+>                                             }
+>                                         }
 >                                     }
->                                  }
->                               }
->                            }
+>                                 }
+>                             }
 >                         }
->                      }
->                   }
->                }
+>                     }
+>                 }
 >             }
->          }
->       }
->    }
+>         }
+>     }
 > }
 > ```
 
@@ -159,33 +159,34 @@ If no value for the parameter is provided, the API toggles the display.
 > ### Sample Code:  
 > `manifest.json`
 > 
-> ```
+> ```json
 > {
->    "sap.ui5": {
->       "routing": {
->          "targets": {
->             "SalesOrderManageObjectPage": {
->                "options": {
->                   "settings": {
->                      "content": {
->                         "controlConfiguration": {
->                            "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
->                               "actions": {
->                                  "CustomActionToggleSideContent": {
->                                  "press": "Namespace.ext.CustomSectionSideContent.toggleSideContent",
->                                  "text": "Show/Hide Side Content",
->                                  "enabled": true,
->                                  "visible": true 
->                               }
->                            }
+>     "sap.ui5": {
+>         "routing": {
+>             "targets": {
+>                 "SalesOrderManageObjectPage": {
+>                     "options": {
+>                         "settings": {
+>                             "content": {
+>                                 "controlConfiguration": {
+>                                     "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+>                                         "actions": {
+>                                             "CustomActionToggleSideContent": {
+>                                                 "press": "Namespace.ext.CustomSectionSideContent.toggleSideContent",
+>                                                 "text": "Show/Hide Side Content",
+>                                                 "enabled": true,
+>                                                 "visible": true 
+>                                             }
+>                                         }
+>                                     }
+>                                 }
+>                             }
 >                         }
->                      }
->                   }
->                }
+>                     }
+>                 }
 >             }
->          }
->       }
->    }
+>         }
+>     }
 > }
 > ```
 
@@ -196,13 +197,12 @@ For more information about defining an action, see [Adding Custom Actions Using 
 > 
 > ```
 > sap.ui.define([], function() {
->    "use strict";
-> 
->    return {
->       toggleSideContent: function(oBindingContext) {
->          this.showSideContent("<SideContent-key>");
->       }
->    };
+>     "use strict";
+>     return {
+>         toggleSideContent: function(oBindingContext) {
+>             this.showSideContent("<SideContent-key>");
+>         }
+>     };
 > });
 > ```
 

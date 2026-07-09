@@ -11,7 +11,7 @@ The following chapters showcase different aspects and offer tips how to test you
 **Related Information**  
 
 
-[Accessibility in SAP Fiori](https://experience.sap.com/fiori-design-web/accessibility-in-sap-fiori/ "Accessibility in SAP Fiori")
+[Accessibility in SAP Fiori](https://www.sap.com/design-system/fiori-design-web/discover/sap-design-system/product-standards/accessibility-in-sap-fiori/ "Accessibility in SAP Fiori")
 
-[Fiori Design Guidelines When to Use Which Floorplan](https://ux.wdf.sap.corp/fiori-design-web/when-to-use-which-floorplan/ "Fiori Design Guidelines When to Use Which Floorplan")
+[Fiori Design Guidelines When to Use Which Floorplan](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/when-to-use-which-floorplan "Fiori Design Guidelines When to Use Which Floorplan")
 

@@ -170,34 +170,6 @@ If you want to configure a text field for multi-line text, use the `UI.Multiline
 
 
 
-### CDS Annotations
-
-If desired, you can set this up using a CDS annotation as shown below:
-
-> ### Sample Code:  
-> CDS Annotation Definition
-> 
-> ```xml
-> 
-> //@Scope: #ELEMENT
-> 
-> multiLineText: Boolean default true;
-> 
-> ```
-
-> ### Sample Code:  
-> CDS Source
-> 
-> ```xml
-> 
-> @UI.multiLineText
-> 
-> Description: String;
-> 
-> ```
-
-
-
 > ### Note:  
 > For information about SAP Fiori elements for OData V2, see [Plain Text Facet](plain-text-facet-32ecf54.md).
 

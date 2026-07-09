@@ -2,24 +2,79 @@
 
 # Configuring Card Navigation
 
-In SAP Fiori elements for OData V4, you can configure internal and external navigation in cards.
+You can configure both internal and external navigation in overview page cards.
 
 
 
-All cards support navigation, both to a different SAP Fiori application using intent based navigation, and to external applications and websites through a direct URL which opens in a new browser tab. To trigger the navigation, users click or tap on a card header and in some cases, on an item within the card.
+All cards support two types of navigation. They're as follows:
 
-Navigation information is taken from the `com.sap.vocabularies.UI.v1.Identification`
+-   Intent-based navigation to another SAP Fiori application, which opens in the same tab.
 
--   `com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation`: Used to define intent-based navigation to SAP Fiori application.
-
--   `com.sap.vocabularies.UI.v1.DataFieldWithUrl term`: Used to configure navigation to external apps and websites.
+-   Direct URL navigation to external applications and websites, which opens in a new browser tab.
 
 
-The recommended way to configure intent-based navigation is to use `DataFieldForIntentBasedNavigation`. However, if navigation to a specific application is required and the route isn't configured as a target mapping, you can use `DataFieldWithUrl` to construct the specific application. The overview page identifies this as an intent-based navigation and open the target application in the relevant context in the same tab.
+Users can trigger the navigation by clicking or tapping the card header, and in some cases, on an item within the card.
 
-Note that information about the single record selected can only be passed to the navigation destination only from list or table cards. To enable this behavior, provide navigation configuration in the `com.sap.vocabularies.UI.v1.LineItem` term used by the specific card.
+Navigation information comes from the `com.sap.vocabularies.UI.v1.Identification` annotations, which contains the following types:
 
-If more than one navigation record is provided in the `com.sap.vocabularies.UI.v1.Identification` or `com.sap.vocabularies.UI.v1.LineItem` terms, the first record is used for each term. The navigation records are sorted according to their importance, set in the`com.sap.vocabularies.UI.v1.ImportanceType` annotation, and their order of entry. The `com.sap.vocabularies.UI.v1.Identification` term can be configured in the `manifest.json` file by setting the `identificationAnnotationPath` property with a qualifier, as shown in the following sample code:
+**Annotations For Defining Navigation**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Annotation Type
+
+</th>
+<th valign="top">
+
+User For
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation` 
+
+</td>
+<td valign="top">
+
+Intent-based navigation to SAP Fiori application.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`com.sap.vocabularies.UI.v1.DataFieldWithUrl term` 
+
+</td>
+<td valign="top">
+
+Configuring navigation to external apps and websites.
+
+</td>
+</tr>
+</table>
+
+> ### Tip:  
+> Use `DataFieldForIntentBasedNavigation` to configure intent-based navigation.
+> 
+> Use `DataFieldWithUrl` only when you need to navigate to a specific application route that isn't defined as a target mapping. The overview page identifies this as a intent-based navigation and opens the target application in the correct context within the same tab.
+
+> ### Note:  
+> Information about the selected record can only be passed to the navigation destination only from list cards or table cards. To enable this behavior, configure navigation in the `com.sap.vocabularies.UI.v1.LineItem` annotation used by the card.
+
+If `com.sap.vocabularies.UI.v1.Identification` or `com.sap.vocabularies.UI.v1.LineItem` annotation contains more than one navigation record, the first record is used. The navigation records are sorted in the following ways:
+
+-   The importance defined in the `com.sap.vocabularies.UI.v1.ImportanceType` annotation.
+
+-   Their order of entry in the annotation.
+
+
+In the `manifest.json` file, configure the `com.sap.vocabularies.UI.v1.Identification` annotation by setting the `identificationAnnotationPath` property with a qualifier, as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -47,21 +102,25 @@ If more than one navigation record is provided in the `com.sap.vocabularies.UI.v
 > }
 > ```
 
-If the `identificationAnnotationPath` property is not configured, the `com.sap.vocabularies.UI.v1.Identification` term, without a qualifier, is used.
+
+
+If `identificationAnnotationPath` is not configured, `com.sap.vocabularies.UI.v1.Identification` without a qualifier is used.
 
 
 
 <a name="loio530f9e6f66104d5888ade79b5cf417e0__section_h2m_v12_ldb"/>
 
-## Custom Navigation
+## Configuring Custom Card Navigation
 
 Overview pages support navigation breakouts \(extension points\) that let you configure multiple navigation targets from different areas of a card \(different targets from different line items\).
 
-To use navigation breakouts:
+To configure custom card navigation, proceed as follows:
 
-1.  Configure your `manifest.json` file for controller extension.
+1.  Register a controller extension in the `manifest.json` file.
 
     > ### Sample Code:  
+    > `manifest.json`
+    > 
     > ```
     > 
     > "extends": {
@@ -77,26 +136,194 @@ To use navigation breakouts:
     > ```
 
 2.  In the custom controller, define the `doCustomNavigation` function with following input parameters:
-    -   `Card ID`: Enter a string as defined in the `manifest.json` file.
 
-    -   `Context`: Enter the object that defines the context on click of a card.
-
-    -   `Navigation Entry`: Enter the object that has standard navigation defined by annotations.
+    **Card Parameters**
 
 
-3.  Ensure that the `doCustomNavigation` method returns an object that is similar to input `Navigation Entry` and can contain following attributes \(all of type String\):
-    -   `type`: \(Mandatory\) Possible values are `com.sap.vocabularies.UI.v1.DataFieldWithUrl` and `com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation`.
+    <table>
+    <tr>
+    <th valign="top">
 
-    -   `semanticObject`: Required when type is `DataFieldForIntentBasedNavigation`
+    Parameter
+    
+    </th>
+    <th valign="top">
 
-    -   `action`: Required when type is `DataFieldForIntentBasedNavigation`
+    Type
+    
+    </th>
+    <th valign="top">
 
-    -   `url`: Required when type is `DataFieldWithUrl`
+    Description
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `Card ID` 
+    
+    </td>
+    <td valign="top">
+    
+    String
+    
+    </td>
+    <td valign="top">
+    
+    The card ID is defined in the `manifest.json` file.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `Context` 
+    
+    </td>
+    <td valign="top">
+    
+    Object
+    
+    </td>
+    <td valign="top">
+    
+    The context bound to the clicked area of the card.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `Navigation Entry` 
+    
+    </td>
+    <td valign="top">
+    
+    Object
+    
+    </td>
+    <td valign="top">
+    
+    The standard navigation defined by annotations.
+    
+    </td>
+    </tr>
+    </table>
+    
+    The `doCustomNavigation` method must return an object that is similar to `Navigation Entry`. The returned object can contain following attributes, all of type `string`:
 
-    -   `label`: Optional
+    **Navigation Properties**
 
 
-4.  If custom targets are required for a particular set of input parameters, return an object from the `doCustomNavigation` method.
+    <table>
+    <tr>
+    <th valign="top">
+
+    Property
+    
+    </th>
+    <th valign="top">
+
+    Requirement
+    
+    </th>
+    <th valign="top">
+
+    Description
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `type` 
+    
+    </td>
+    <td valign="top">
+    
+    Mandatory
+    
+    </td>
+    <td valign="top">
+    
+    Navigation type.
+
+    Possible values are `com.sap.vocabularies.UI.v1.DataFieldWithUrl` and `com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation`.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `semanticObject` 
+    
+    </td>
+    <td valign="top">
+    
+    Required when type is `DataFieldForIntentBasedNavigation`.
+    
+    </td>
+    <td valign="top">
+    
+    The target semantic object.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `action` 
+    
+    </td>
+    <td valign="top">
+    
+    Required when type is `DataFieldForIntentBasedNavigation`.
+    
+    </td>
+    <td valign="top">
+    
+    The intent action.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `url` 
+    
+    </td>
+    <td valign="top">
+    
+    Required when type is `DataFieldWithUrl`.
+    
+    </td>
+    <td valign="top">
+    
+    The target URL.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `label` 
+    
+    </td>
+    <td valign="top">
+    
+    Optional
+    
+    </td>
+    <td valign="top">
+    
+    A label for navigation.
+    
+    </td>
+    </tr>
+    </table>
+    
+    If custom targets are required for a particular set of input parameters, return an object from the `doCustomNavigation` method.
 
     > ### Sample Code:  
     > ```
@@ -123,21 +350,29 @@ To use navigation breakouts:
 
 ## Adding Static Parameters
 
-Static parameters are objects containing key value pairs. They provide navigation parameters during `IntentBasedNavigation` from overview page to an application. To add navigation parameters, define the card settings `staticParameters` in the `manifest.json` file.
+Static parameters are objects containing key-value pairs passed as navigation parameters during intent-based navigation from the overview page to a target application. To add static parameters, define `staticParameters` in the `manifest.json` file.
 
 > ### Sample Code:  
 > `manifest.json`
 > 
 > ```
-> "staticParameters": {
->               "parameter1": "parameterValue1",
->               "parameter2": "parameterValue2",
->             },
+> card04: {
+>     ...
+>     settings: {
+>         ....
+>         identificationAnnotationPath: "com.sap.vocabularies.UI.v1.Identification#identify1",
+>         staticParameters: {
+>             "parameter1": "parameterValue1",
+>             "parameter2": "parameterValue2"
+>         }
+>     }
+> },
+> 
 > 
 > ```
 
+**Related Information**  
 
 
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Configuring Card Navigation](configuring-card-navigation-11b7540.md).
+[Configuring Card Properties](configuring-card-properties-53b0791.md "This section describes the configuration items relevant for all overview page cards. All cards inherit a set of generic capabilities such as a card header, content area, and navigation support.")
 

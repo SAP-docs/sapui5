@@ -2,17 +2,21 @@
 
 # Configuring the Dynamic Link List Card
 
-In SAP Fiori elements for OData V4, configuring dynamic link list card allows you to display data such as links, images, and icons in the form of list items.
+You can configure dynamic link list card to display data such as links, images, and icons in the form of list items.
 
 
 
-To display information in the link list card as either standard or carousel type, configure the `listFlavor` property in the card settings.
+To display information in the link list card as either a standard list or carousel, configure the `listFlavor` property in the card settings.
 
-The dynamic link list card also supports the contact annotation as the default annotation without a qualifier, enabling quick view information.
+The dynamic link list card also supports the `Contact` annotation as the default annotation without a qualifier, which enables quick view information.
 
 
+
+To configure a dynamic link list card, proceed as follows:
 
 1.  Configure the manifest settings.
+
+    The following sample shows the manifest settings for a dynamic link list card, including the title, list flavor, sort order, and reference to the `HeaderInfo` annotation:
 
     > ### Sample Code:  
     > `manifest.json`
@@ -38,7 +42,10 @@ The dynamic link list card also supports the contact annotation as the default a
     >         },
     > ```
 
-2.  Configure the list information in the `UI.HeaderInfo` annotation.
+    > ### Note:  
+    > The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+
+2.  Configure list information using the `UI.HeaderInfo` annotation.
 
     -   List title: Set the `Title` property.
 
@@ -120,9 +127,9 @@ The dynamic link list card also supports the contact annotation as the default a
     > },
     > ```
 
-3.  Configure the contact annotation.
+3.  Configure contact information using the `Communication.Contact` annotation.
 
-    A contact card is displayed as a popover. The data displayed on the contact card is taken from the communication contact annotation of the card. The following elements of the contact annotation are evaluated:
+    When a user clicks a list item, a contact card appears as a popover. The popover content comes from the `Communication.Contact` annotation.
 
     -   `fn`: Full name - Used as the headline of the contact card header.
 
@@ -237,12 +244,59 @@ The dynamic link list card also supports the contact annotation as the default a
 
     The link list card supports the following navigation types:
 
-    -   Intent-based navigation: Define the `SemanticObject` and `Action` properties in the `UI.Identification` annotation to set the navigation target.
 
-    -   Function import \(`DataFieldForAction`\): Define the `Action` property in the `LineItem` annotation to trigger a function import that performs an OData action for an entity.
+    <table>
+    <tr>
+    <th valign="top">
 
-    -   External navigation: Define the `UI.LineItem` of type `WITH_URL`. The URL for this navigation is taken from the entity type field that is named in the line item's `url` property.
+    Navigation type
+    
+    </th>
+    <th valign="top">
 
+    How to configure
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Intent-based navigation
+    
+    </td>
+    <td valign="top">
+    
+    Define the `SemanticObject` and `Action` properties in the `UI.Identification` annotation to set the navigation target.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Function import \(`DataFieldForAction`\)
+    
+    </td>
+    <td valign="top">
+    
+    Define the `Action` property in the `LineItem` annotation to trigger a function import that performs an OData action on the entity.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    External navigation
+    
+    </td>
+    <td valign="top">
+    
+    Define a `UI.LineItem` of type `WITH_URL`. The URL is taken from the entity-type field named in the line item's `url` property.
+    
+    </td>
+    </tr>
+    </table>
+    
+    The combination of annotations defined determines what users can do with each list item:
 
     **Navigation Behavior**
 
@@ -329,8 +383,10 @@ The dynamic link list card also supports the contact annotation as the default a
     </table>
     
 
+**Related Information**  
 
 
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Configuring the Dynamic Link List Card](configuring-the-dynamic-link-list-card-d7be5c6.md).
+[Configuring the Static Link List Card](configuring-the-static-link-list-card-4e81b77.md "You can configure a static link list card to display static data, such as links, images, and icons, as list items.")
+
+[Link List Cards](link-list-cards-0326f91.md "You can use link list cards to display a list of links with a title, picture, icon, or subtitle. Link list cards support quick views to display contact annotation information.")
 

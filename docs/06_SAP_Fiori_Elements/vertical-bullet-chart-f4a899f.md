@@ -17,5 +17,5 @@ All dimensions, regardless of their role, are assigned to the **axis** category.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Vertical Bullet Chart Card](vertical-bullet-chart-card-d68df5a.md).
+> For information about vertical bullet chart cards on the overview page, see [Vertical Bullet Chart Card](vertical-bullet-chart-card-d68df5a.md).
 

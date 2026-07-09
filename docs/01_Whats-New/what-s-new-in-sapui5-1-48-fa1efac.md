@@ -1814,7 +1814,7 @@ Overview pages have been enhanced with the following features:
 
 -   Support of an extension for cards that lets you develop custom card types
 
-    For more information, see [Creating Custom Cards](../06_SAP_Fiori_Elements/creating-custom-cards-6d260f7.md).
+    For more information, see [Creating Custom Cards on the Overview Page](../06_SAP_Fiori_Elements/creating-custom-cards-on-the-overview-page-6d260f7.md).
 
 -   Spline interpolation in Line Charts to view the line smoothly
 
@@ -1960,6 +1960,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 
 [What's New in SAPUI5 1.147](what-s-new-in-sapui5-1-147-88df9d3.md "With this release SAPUI5 is upgraded from version 1.146 to 1.147.")
 

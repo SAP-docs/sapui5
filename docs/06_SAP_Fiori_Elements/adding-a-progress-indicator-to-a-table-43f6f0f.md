@@ -106,19 +106,57 @@ To do so, assign a value to the `criticality` property.
 
 The path references the property \(in this case, `Path="StockAvailability`"\) that defines the color.
 
-```
-<Annotation Term="UI.DataPoint" Qualifier="Quantity">
-               <Record>
-                       <PropertyValue Property="Value" Path="Quantity"/>
-                       <PropertyValue Property="Title" String="{@i18n&gt;@Availability}"/>
-                       <PropertyValue Property="Description" String="Progress Indicator"/>
-                       <PropertyValue Property="TargetValue" Decimal="150"/>
-                       <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
-                       <PropertyValue Property="Criticality" Path="StockAvailability"/>
-               </Record>
-        </Annotation>
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="UI.DataPoint" Qualifier="Quantity">
+>     <Record>
+>         <PropertyValue Property="Value" Path="Quantity"/>
+>         <PropertyValue Property="Title" String="{@i18n>@Availability}"/>
+>         <PropertyValue Property="Description" String="Progress Indicator"/>
+>         <PropertyValue Property="TargetValue" Decimal="150"/>
+>         <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
+>         <PropertyValue Property="Criticality" Path="StockAvailability"/>
+>     </Record>
+> </Annotation>
+> 
+> ```
 
-```
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.dataPoint: {
+>     qualifier: 'Quantity',
+>     title: 'Availability',
+>     description: 'Progress Indicator',
+>     value: Quantity,
+>     targetValue: 150,
+>     visualization: #PROGRESS,
+>     criticality: StockAvailability
+> }
+> Quantity;
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> annotate service.YourEntity with {
+>     Quantity @UI.DataPoint: {
+>         $Type: 'UI.DataPointType',
+>         Title: 'Availability',
+>         Description: 'Progress Indicator',
+>         Value: Quantity,
+>         TargetValue: 150,
+>         Visualization: #Progress,
+>         Criticality: StockAvailability
+>     };
+> };
+> 
+> ```
 
 
 

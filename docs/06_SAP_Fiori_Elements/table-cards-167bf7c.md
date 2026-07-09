@@ -2,7 +2,7 @@
 
 # Table Cards
 
-In SAP Fiori elements for OData V4, you can use a table card to display a list of records in a 3-column table layout.
+You can use a table card to display a list of records in a three-column table layout.
 
 
 
@@ -527,7 +527,7 @@ Description: Configuring this annotation displays the table header title \(`Labe
 >                         "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line",
 >                         "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
 >                         "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
->                         "value": "{{dropdown_value2}}"
+>                         
 >                     },
 >                     {
 >                         "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
@@ -673,8 +673,6 @@ Description: Configuring this annotation displays the table header title \(`Labe
 > }
 > ```
 
-
-
 The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the `manifest.json` file by setting the `annotationPath` property with a qualifier, as shown in the following sample code:
 
 > ### Sample Code:  
@@ -702,6 +700,9 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the `manifes
 >     ...
 > }
 > ```
+
+> ### Note:  
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
 
 If the `annotationPath` property is not configured, the `com.sap.vocabularies.UI.v1.LineItem` term, without a qualifier, is used.
 
@@ -896,8 +897,6 @@ In this example, the first column in the table displays **Product Name**, the se
 
 
 
-<a name="loio167bf7ccbb084afab7d846e1fa30b49c__section_f3m_ftv_kcb"/>
-
 ## Text Arrangement
 
 The text arrangement annotation lets you to define the format of texts.
@@ -990,8 +989,6 @@ Customer
 
 
 
-<a name="loio167bf7ccbb084afab7d846e1fa30b49c__section_fwt_qbr_w3b"/>
-
 ## Text Alignment
 
 The `DataPoint` or `DataField` is aligned as shown in the following table:
@@ -1050,6 +1047,190 @@ Center Aligned
 
 
 
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Table Cards](table-cards-4f36240.md).
+## Additional Features in SAP Fiori Elements for OData V2
+
+
+
+### Smart Links
+
+You can define a semantic object for the entity set and its property using the annotation target to enable smart links in a table card, as shown in the following sample code:
+
+![](images/Table_Cards_200eb7f.png)
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="GWSAMPLE_BASIC.SalesOrder/SalesOrderID">
+>     <Annotation Term="com.sap.vocabularies.Common.v1.SemanticObject" String="OVP"/>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> annotate view SALESORDER with {
+>     @Consumption.semanticObject: 'OVP'
+>     salesorderid;
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate GWSAMPLE_BASIC.SalesOrder with {
+>     @Common.SemanticObject: 'OVP'
+>     SalesOrderID;
+> }
+> ```
+
+Table cards also let you view contact information if you have defined the `com.sap.vocabularies.Communication.v1.Contact` annotation.
+
+Table cards let you display a list of fields in a table using the `com.sap.vocabularies.UI.v1.LineItem` annotation.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="com.sap.vocabularies.UI.v1.LineItem" Qualifier="NewSalesOrders">
+>     <Collection>
+>         <Record Type="com.sap.vocabularies.UI.v1.DataField">
+>             <PropertyValue Property="Label" String="Order ID (Company)"/>
+>             <PropertyValue Property="Value" Path="SalesOrderID"/>
+>         </Record>
+>         <Record Type="com.sap.vocabularies.UI.v1.DataFieldForAnnotation">
+>             <PropertyValue Property="Label" String="Created by (Role)" />
+>             <PropertyValue Property="Target" AnnotationPath="ToBusinessPartner/@com.sap.vocabularies.Communication.v1.Contact" />
+>         </Record>
+>     </Collection>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.lineItem: [
+>     {
+>         label: "Order ID (Company)",
+>         position: 10,
+>         qualifier: "NewSalesOrders"
+>     }
+> ] SALESORDERID;
+> 
+> @UI.lineItem: [
+>     {
+>         label: "Created by (Role)",
+>         value: "_BUSINESSPARTNER",
+>         type: "#AS_CONTACT",
+>         position: 20,
+>         qualifier: "NewSalesOrders"
+>     }
+> ] PROPERT_NAME;
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> UI.LineItem #NewSalesOrders: [
+>     {
+>         $Type: "UI.DataField",
+>         Label: "Order ID (Company)",
+>         Value: "SalesOrderID"
+>     },
+>     {
+>         $Type: "UI.DataFieldForAnnotation",
+>         Label: "Created by (Role)",
+>         Target: "ToBusinessPartner/@Communication.Contact"
+>     }
+> ]
+> ```
+
+Table cards also let you view contact information if you've defined the `com.sap.vocabularies.Communication.v1.Contact` annotation.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="com.sap.vocabularies.Communication.v1.Contact">
+>     <Record>
+>         <PropertyValue Property="tel">
+>             <Collection>
+>                 <Record>
+>                     <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.PhoneType/fax"/>
+>                     <PropertyValue Property="uri" Path="FaxNumber"/>
+>                 </Record>
+>                 <Record>
+>                     <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.PhoneType/work com.sap.vocabularies.Communication.v1.PhoneType/preferred"/>
+>                     <PropertyValue Property="uri" Path="PhoneNumber"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="email">
+>             <Collection>
+>                 <Record>
+>                     <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.ContactInformationType/preferred com.sap.vocabularies.Communication.v1.ContactInformationType/work"/>
+>                     <PropertyValue Property="address" Path="EmailAddress"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> define view VIEWNAME {
+>     @Semantics.name.fullName: true 
+>     CompanyName,
+> 
+>     @Semantics.eMail.address: true 
+>     @Semantics.eMail.type: [#WORK] 
+>     EmailAddress,
+> 
+>     @Semantics.telephone.type: [#FAX] 
+>     FaxNumber,
+> 
+>     @Semantics.telephone.type: [#WORK] 
+>     PhoneNumber
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> Communication.Contact: {
+>     tel: [
+>         {
+>             type: "#fax",
+>             uri: "FaxNumber"
+>         },
+>         {
+>             type: ["#work", "#pref"],
+>             uri: "PhoneNumber"
+>         }
+>     ],
+>     email: [
+>         {
+>             type: ["#pref", "#work"],
+>             address: "EmailAddress"
+>         }
+>     ]
+> }
+> ```
+
+**Related Information**  
+
+
+[Configuring the Table Area](configuring-the-table-area-b408bfb.md "You can configure the columns of a table card, their header and valies, by using the com.sap.vocabularies.UI.v1.LineItem annotation.")
+
+[Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-05887bd.md "You can optionally configure the header area including the title, subtitle, KPI value, view switch, and navigation of a table card using the annotations and manifest.json file.")
+
+[Configuring the Table Card](configuring-the-table-card-9bc298e.md "You can configure the content on the table area with text alignment, filtering or grouping information.")
 

@@ -90,5 +90,5 @@ The line chart supports a color palette for semantic coloring.
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Line Chart Card](line-chart-card-97b86c4.md).
+> For information about line chart cards on the overview page, see [Line Chart Card](line-chart-card-97b86c4.md).
 

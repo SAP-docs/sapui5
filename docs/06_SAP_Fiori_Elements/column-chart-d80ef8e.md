@@ -78,5 +78,5 @@ Column charts need to have at least one measure and one dimension. Irrespective 
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Column Chart Card](column-chart-card-6c0637c.md).
+> For information about column chart cards on the overview page, see [Column Chart Card](column-chart-card-6c0637c.md).
 

@@ -1,25 +1,26 @@
-<!-- loio31073cac3f5743408272b695f282a93c -->
+<!-- loio4739893805f74a409e241698858ee424 -->
 
-# Adding Custom Filters
+# Adding Custom Filters to the Overview Page
 
 You can add custom filters to your overview page application. This allows users to filter the data displayed in one or more cards.
 
-> ### Note:  
-> This topic is relevant to SAP Fiori elements for OData V2.
+
+
+This topic applies to SAP Fiori elements for OData V2.
 
 
 
-<a name="loio31073cac3f5743408272b695f282a93c__section_uhm_ptp_zy"/>
+<a name="loio4739893805f74a409e241698858ee424__section_uhm_ptp_zy"/>
 
-## Steps
+## Procedure
 
 To add custom filters, proceed as follows:
 
-1.  Create a view extension fragment.
-
-    The following sample code extends the smart filter bar by adding custom filters:
+1.  Create a view extension fragment `customFilter.fragment.xml`, for example. The view extenstion fragment extends the smart filter bar by adding custom filter controls.
 
     > ### Sample Code:  
+    > `customFilter.fragment.xml`
+    > 
     > ```
     > <core:FragmentDefinition xmlns="sap.m" 
     >                          xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" 
@@ -63,7 +64,7 @@ To add custom filters, proceed as follows:
     </td>
     <td valign="top">
     
-    Associates the custom controller to a group. If the group ID does not exist, the filter is added to the default group.
+    Associates the custom control to a filter group. If the group ID doesn't exist, the filter is added to the default group.
     
     </td>
     </tr>
@@ -87,7 +88,7 @@ To add custom filters, proceed as follows:
     </td>
     <td valign="top">
     
-    Enable this property to view custom filters on the filter bar.
+    Enable this property to display custom filters on the filter bar.
     
     </td>
     </tr>
@@ -99,14 +100,14 @@ To add custom filters, proceed as follows:
     </td>
     <td valign="top">
     
-    A property of an entity type to define the input criteria.
+    A property of the entity type to define the input criteria.
     
     </td>
     </tr>
     </table>
     
-2.  Create a controller extension. For example, create a `customFilter.controller.js` file and define the following functions:
-    -   `getCustomFilters()` - To return a filter object.
+2.  Create a controller extension. For example, create a `customFilter.controller.js` file to define the following functions:
+    -   `getCustomFilters()` - Returns a filter object built from the current values of the custom controls.
 
         > ### Sample Code:  
         > ```
@@ -141,7 +142,7 @@ To add custom filters, proceed as follows:
         > }
         > ```
 
-    -   `getCustomAppStateDataExtension(oCustomData)` - To store the application state.
+    -   `getCustomAppStateDataExtension(oCustomData)` - Stores the custom filter values in the application state so they can be restored later after back navigation, for example.
 
         > ### Sample Code:  
         > ```
@@ -164,7 +165,7 @@ To add custom filters, proceed as follows:
         > }
         > ```
 
-    -   `restoreCustomAppStateDataExtension(oCustomData)` - To restore the application state.
+    -   `restoreCustomAppStateDataExtension(oCustomData)` - Restores the custom filter values from the application state when the user navigates back to the overview page, for example.
 
         > ### Sample Code:  
         > ```
@@ -189,10 +190,10 @@ To add custom filters, proceed as follows:
         > ```
 
 
-3.  In the `manifest.json` file, add the controller and view extension settings.
+3.  Add the controller and view extension settings to the `extends` section of the `manifest.json` file.
 
     > ### Note:  
-    > Ensure that you use the same entity type in both the `viewExtensions` and `globalFilterEntitySet` settings.
+    > Use the same entity type in both the `viewExtensions` and `globalFilterEntitySet` settings.
 
     > ### Sample Code:  
     > `manifest.json`

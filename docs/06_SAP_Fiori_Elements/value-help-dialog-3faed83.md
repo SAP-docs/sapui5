@@ -119,43 +119,136 @@ For more information about the `Common.Text` or `Common.TextArrangement` annotat
 
 You can avoid showing GUID values inside the value help dialog by using the `Common.ExternalID` annotation on the GUID field of the value help entity. For more information and annotation samples, see the [Displaying Readable IDs Instead of Edm.Guid Values Using Common.ExternalID](additional-features-of-the-field-f49a0f7.md#loiof49a0f7eaafe444daf4cd62d48120ad0__section_fy3_gpy_gbc) section in [Additional Features of the Field](additional-features-of-the-field-f49a0f7.md).
 
-When users make a selection in the table inside the value help dialog, the GUID value from the value help entity is carried over to the GUID field of the main entity. Applications must ensure that the back end updates the right value to the path property pointed to by the ExternalID defined on the main entity’s GUID field. A side-effect is triggered to call this ExternalID and display any associated text instead of the GUID value in the GUID field of the main entity.
+When users make a selection in the table inside the value help dialog, the GUID value from the value help entity is carried over to the GUID field of the main entity. Applications must ensure that the back end updates the right value to the path property pointed to by the `Common.ExternalID` defined on the main entity’s GUID field. A side-effect is triggered to call this `Common.ExternalID` and display any associated text instead of the GUID value in the GUID field of the main entity.
 
-The following sample code shows how to trigger a side effect and ensure a readable ID is displayed instead of GUID:
+The following sample code shows how to trigger a side effect and ensure a readable ID is displayed instead of GUID by using the `Common.ExternalID` in the main entity:
 
 > ### Sample Code:  
-> Main Entity ExternalID XML Annotation
+> XML Annotation
 > 
-> ```
+> ```xml
 > 
 > <Annotations Target="MainService.Entities/myGuidProperty">
 >     <Annotation Term="Common.ExternalID" Path="externalId"/>
 > </Annotations>
 > ```
 
-The following sample code shows how to ensure the users see a readable ID instead of GUID inside of the value help dialog:
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ABAP CDS doesn't support `Common.ExternalID`. Please use the local XML annotation.
 
 > ### Sample Code:  
-> Value Help ExternalID XML Annotation
+> CAP CDS Annotation
 > 
 > ```
+> annotate MainService.Entities with {
+>     myGuidProperty @Common.ExternalID : externalId;
+> };
+> ```
+
+The following sample code shows how to use the `Common.ExternalID` to ensure the users see a readable ID instead of GUID inside of the value help dialog:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
 > 
 > <Annotations Target="ValueHelpService.Entities/myVHGuidProperty">
 >     <Annotation Term="Common.ExternalID" Path="externalId_VH"/>
 > </Annotations>
 > ```
 
-When the back end doesn't support CDS annotations or you don’t want to introduce a local annotation for the value help entity, you can use an alternate approach to hide GUID in the value help dialog.
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ABAP CDS doesn't support `Common.ExternalID`. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate ValueHelpService.Entities with {
+>     myVHGuidProperty @Common.ExternalID : externalId_VH;
+> };
+> ```
+
+If the back end doesn't support CDS annotations or you don’t want to introduce a local annotation for the value help entity, you can use an alternate approach to hide GUID in the value help dialog.
 
 On the main entity, use the `Common.ExternalID` annotation, either as CDS annotations or local XML annotation, but instead of using this annotation on the value help entity as well, use the following configuration:
 
--   Hide the GUID inside the value help dialog with the `UI.Hidden` annotation.
+1.  Hide the GUID inside the value help dialog with the `UI.Hidden` annotation:
 
--   Configure an `OUT` mapping from the GUID of value help entity to the GUID of the main entity. This ensures that the GUID value is fetched and passed back to main entity even when the GUID of value help entity is marked as hidden.
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```
+    > 
+    > <Annotations Target="SAP__self.Order/Supplier_GUID">
+    >     <Annotation Term="SAP__UI.Hidden" Bool="true"/>
+    > </Annotations>
+    > ```
 
--   Bring the readable ID and any associated text as regular display-only fields into the value help dialog table. This allows the user to select the right records from the value help dialog.
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > 
+    > @UI.hidden: true
+    > Supplier_GUID;
+    > ```
 
--   It's still required to update the right value to the path property pointed to by the ExternalID defined on the main entity’s GUID field after user completes the selection in the value help dialog.
+2.  Configure an `OUT` mapping from the GUID of value help entity to the GUID of the main entity. This ensures that the GUID value is fetched and passed back to main entity even when the GUID of value help entity is marked as hidden.
+
+3.  Bring the readable ID and any associated text as regular display-only fields into the value help dialog table. This allows the user to select the right records from the value help dialog.
+
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```
+    > 
+    > <Annotations Target="MyService.Order/Supplier_GUID">
+    >     <Annotation Term="Common.ValueListMapping">
+    >         <Record>
+    >             <PropertyValue Property="CollectionPath" String="SupplierVH" />
+    >             <PropertyValue Property="Label" String="Supplier" />
+    >             ...
+    >             <PropertyValue Property="Parameters">
+    >                 <Collection>
+    >                     <Record Type="Common.ValueListParameterOut">
+    >                         <PropertyValue Property="LocalDataProperty" PropertyPath="Supplier_GUID" />
+    >                         <PropertyValue Property="ValueListProperty" String="Supplier_GUID" />
+    >                     </Record>
+    >                     <Record Type="Common.ValueListParameterDisplayOnly">
+    >                         <PropertyValue Property="ValueListProperty" String="Supplier_ID" />
+    >                     </Record>
+    >                     ...
+    >                 </Collection>
+    >             </PropertyValue>
+    >         </Record>
+    >     </Annotation>
+    > </Annotations>
+    > ```
+    > 
+    > > ### Sample Code:  
+    > > ABAP CDS Annotation
+    > > 
+    > > ```
+    > > 
+    > > @Consumption.valueHelpDefinition: [{
+    > >     entity: { name: 'ZI_SupplierVH', element: 'Supplier_GUID' },
+    > >     label: 'Supplier',
+    > >     additionalBinding: [{
+    > >         localElement: 'Supplier_ID',
+    > >         element: 'Supplier_ID',
+    > >         usage: #FILTER_AND_DISPLAY
+    > >     }]
+    > > }]
+    > > Supplier_GUID
+    > > 
+    > > ```
+
+4.  It's still required to update the right value to the path property pointed to by the `Common.ExternalID` defined on the main entity’s GUID field after user completes the selection in the value help dialog.
 
 
 **Sorting the Table**
@@ -395,7 +488,9 @@ When the value help dialog is initially opened, the table data is loaded and cac
 > Caching of value help data is not supported in dropdown-based fields.
 
 > ### Restriction:  
-> The value help cache can be invalidated and refreshed only when the value help entity is defined within the same metadata as the main entity, as in CAP-based applications. This mechanism isn't supported in RESTful ABAP Programming \(RAP\)-based applications, where the value help entity is defined in a separate metadata file.
+> The value help cache can be invalidated and refreshed only when the value help entity is defined within the same metadata as the main entity, as in CAP-based applications. This mechanism isn't supported in RESTful ABAP Programming \(RAP\)-based applications, where the value help entity is defined in a separate metadata file. However, you can walk around the restriction by defining the value help entity in the same container as the field the value help belongs to. The existing references to the value help can then point to the new value help entity. You must then remove the old value help definition from the RAP back end.
+> 
+> Modelling value help in this way results in value help metadata and main entity metadata loading simultaneously, which can negatively impact the initial load time. Only use this workaround after a careful performance consideration.
 
 
 
@@ -531,11 +626,11 @@ Values in value help dialogs are displayed as plain text by default. We don't re
 > ```
 >   "sap.fe": {
 >     "macros": {
->       "valueHelp": {
->         "enableLinksInDialogTable": true
->       }
+>         "valueHelp": {
+>             "enableLinksInDialogTable": true
+>         }
 >     }
->   }
+> }
 > ```
 
 

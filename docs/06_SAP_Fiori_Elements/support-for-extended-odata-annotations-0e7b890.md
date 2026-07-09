@@ -19,10 +19,12 @@ The following annotations are supported:
 -   `SAP__capabilities.DeleteRestriction`
 
 
+The following sample code shows how to use `FieldControl`:
+
 > ### Sample Code:  
-> Example on `FieldControl` 
+> XML Annotation
 > 
-> ```
+> ```xml
 > <Annotations Target="sap.fe.core.FieldEdit.RootEntity/FieldControlDynamicIf"> 
 >     <Annotation Term="com.sap.vocabularies.Common.v1.FieldControl"> 
 >         <If> 
@@ -38,9 +40,32 @@ The following annotations are supported:
 > ```
 
 > ### Sample Code:  
-> Example on `UpdateRestrictions` 
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
 > 
 > ```
+> annotate sap.fe.core.FieldEdit.RootEntity with {
+>     FieldControlDynamicIf @Common.FieldControl :
+>         {
+>             $If: [
+>                 { $Eq: [ FieldControlDynamicIfValue, 5 ] },
+>                 #ReadOnly,
+>                 #Optional
+>             ]
+>         };
+> };
+> ```
+
+The following sample code shows how to use `UpdateRestrictions`:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
 > <Annotation Term="Capabilities.NavigationRestrictions"> 
 >     <Record Type="Capabilities.NavigationRestrictionsType"> 
 >         <PropertyValue Property="RestrictedProperties"> 
@@ -79,16 +104,53 @@ The following annotations are supported:
 > </Annotation> 
 > ```
 
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate YourService.RootEntity with @Capabilities.NavigationRestrictions : {
+>     RestrictedProperties : [
+>         {
+>             NavigationProperty : '_Item',
+>             InsertRestrictions : {
+>                 Insertable : owner.isVerified
+>             },
+>             UpdateRestrictions : {
+>                 Updatable : {
+>                     $If: [
+>                         {
+>                             $Or: [
+>                                 { $Eq: [ owner.isVerified, null ] },
+>                                 { $Eq: [ owner.isVerified, '' ] }
+>                             ]
+>                         },
+>                         false,
+>                         true
+>                     ]
+>                 }
+>             }
+>         }
+>     ]
+> };
+> ```
+
 
 
 <a name="loio0e7b890677c240b8ba65f8e8d417c048__section_i2h_pzv_wpb"/>
 
 ## Support of `odata.concat` function
 
-The `odata.concat` function is supported on the title of the object page header. You can use it to set the title as a concatenation of a text and value from the database.
+The `odata.concat` function is supported on the title of the object page header. You can use it to set the title as a concatenation of a text and value from the database, as shown in the following sample code:
 
 > ### Sample Code:  
-> ```
+> XML Annotation
+> 
+> ```xml
 > <Annotations Target="SAP__self.BusinessPartner"> 
 >     <Annotation Term="com.sap.vocabularies.UI.v1.HeaderInfo"> 
 >         <Record Type="com.sap.vocabularies.UI.v1.HeaderInfoType"> 
@@ -109,5 +171,34 @@ The `odata.concat` function is supported on the title of the object page header.
 >         </Record> 
 >     </Annotation> 
 > </Annotation> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate SAP__self.BusinessPartner with @UI.HeaderInfo: {
+>     TypeName: 'Business Partner',
+>     TypeNamePlural: 'Business Partners',
+>     Title: {
+>         $Type: 'UI.DataField',
+>         Label: 'Name',
+>         Value: {
+>             $Apply: {
+>                 $Function: 'odata.concat',
+>                 $Parameters: [
+>                     CompanyName,
+>                     '',
+>                     LegalForm
+>                 ]
+>             }
+>         }
+>     }
+> };
 > ```
 

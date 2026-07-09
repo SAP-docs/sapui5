@@ -2,17 +2,19 @@
 
 # Configuring View Switch
 
-In SAP Fiori elements for OData V4, you can configure view switch to define a dropdown list to filter or view data at the card level.
+You can configure view switch on a card to give users a dropdown list that allows them to filter or view data within the same card. Each view can use its own annotations and entity set.
 
 
 
 > ### Note:  
-> You can extend this feature to react based on filter conditions or custom configuration. For more information, see [Extending Custom View Switch](extending-custom-view-switch-ecd9f10.md).
+> You can extend this feature to react dynamically to filter conditions or custom configuration. For more information, see [Extending Custom View Switch](extending-custom-view-switch-ecd9f10.md).
 
-You can define view switch with a single entity set or with multiple entity sets.
+You can configure a view switch with either a single entity set or multiple entity sets.
+
+When all tabs share the same entity set, define the `entitySet` once at the `settings` level. This allows each tab to inherit the entity set automatically, as shown in the following sample code:
 
 > ### Sample Code:  
-> View Switch Definition with Single Entity Set
+> `manifest.json` 
 > 
 > ```
 > "settings": {
@@ -28,8 +30,10 @@ You can define view switch with a single entity set or with multiple entity sets
 > }
 > ```
 
+When tabs use different entity sets, define the `entitySet` inside each tab, as shown in the following sample code:
+
 > ### Sample Code:  
-> View Switch Definition with Multiple Entity Sets
+> `manifest.json` 
 > 
 > ```
 > "settings": {
@@ -46,8 +50,13 @@ You can define view switch with a single entity set or with multiple entity sets
 > }
 > ```
 
+> ### Note:  
+> When `entitySet` is defined at both the settings level and tab level, the tab-level `entitySet` takes precedence. If no `entitySet` is defined at the tab level, the settings-level `entitySet` is used.
+
+The following sample code shows two tabs share the same entity set `SalesOrderSet`, while another tab uses the `ProductSet` entity set:
+
 > ### Sample Code:  
-> View Switch Sample
+> `manifest.json` 
 > 
 > ```
 > "card009": {
@@ -91,8 +100,11 @@ You can define view switch with a single entity set or with multiple entity sets
 > }
 > ```
 
-
-
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Configuring View Switch](configuring-view-switch-9e1d1fc.md).
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+
+**Related Information**  
+
+
+[Configuring Card Properties](configuring-card-properties-53b0791.md "This section describes the configuration items relevant for all overview page cards. All cards inherit a set of generic capabilities such as a card header, content area, and navigation support.")
 

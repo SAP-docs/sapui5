@@ -84,7 +84,7 @@ The new event handler `onNavToEmployees` calls `navTo("employeeList")` on the ro
 
 ```js
 {
-	"_version": "2.8.0",
+	"_version": "2.10.0",
 	"sap.app": {
 		...
 	},

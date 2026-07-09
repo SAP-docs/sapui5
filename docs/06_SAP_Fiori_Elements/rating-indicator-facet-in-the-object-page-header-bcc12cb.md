@@ -132,17 +132,25 @@ To render a subtitle for a non-aggregated rating, the `Description` property nee
 > 
 > ```
 > 
-> @UI.headerInfo: {
->   typeName: 'Sales Order',
->   typeNamePlural: 'Sales Orders',
->   title: {
->     value: 'SO_ID',
->     type: #STANDARD
->   }
-> }
-> annotate view STTA_C_MP_PRODUCT with {
+> @UI.facet: [
+>     {
+>         id: 'ProductRating',
+>         type: #DATAPOINT_REFERENCE,
+>         targetElement: '_ProductRating',  
+>         targetQualifier: 'Aggregated'
+>     }
+> ]
 > 
+> @UI.dataPoint: {
+>     qualifier: 'Aggregated',
+>     title: 'Product Average Rating',
+>     value: AverageRating,
+>     targetValue: 3,
+>     visualization: #RATING,
+>     sampleSize: ReviewCount
 > }
+> 
+> AverageRating;
 > 
 > ```
 
@@ -233,21 +241,6 @@ To render a subtitle for a non-aggregated rating, the `Description` property nee
 > }
 > 
 > ```
-
-
-
-ABAP CDS Annotation
-
-```
-
-@UI: DataPoint #Rating               : {
-        Value         : Rating,
-        TargetValue   : 5.0,
-        Title         : 'Rating',
-        Visualization : #Rating
-    }
-
-```
 
 
 

@@ -33,20 +33,18 @@ You can override the texts that come from annotations. To do so, the annotation 
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > <Annotation Term="UI.LineItem">
->    <Collection>
->       <Record Type="UI.DataFieldForAction">
->          <PropertyValue Property="Label" String="Add random item"/>
->          <PropertyValue Property="Action"
->             String="com.c_salesordermanage_sd.AddRandomItem"/>
->       </Record>
->       <Record Type="UI.DataFieldForAction">
->          <PropertyValue Property="Label" String="{@i18n>CopyActionText}"/>
->          <PropertyValue Property="Action"
->             String="com.c_salesordermanage_sd.CopyItem"/>
->       </Record>
->    </Collection>
+>     <Collection>
+>         <Record Type="UI.DataFieldForAction">
+>             <PropertyValue Property="Label" String="Add random item"/>
+>             <PropertyValue Property="Action" String="com.c_salesordermanage_sd.AddRandomItem"/>
+>         </Record>
+>         <Record Type="UI.DataFieldForAction">
+>             <PropertyValue Property="Label" String="{@i18n>CopyActionText}"/>
+>             <PropertyValue Property="Action" String="com.c_salesordermanage_sd.CopyItem"/>
+>         </Record>
+>     </Collection>
 > </Annotation>
 > 
 > ```
@@ -56,18 +54,18 @@ You can override the texts that come from annotations. To do so, the annotation 
 > 
 > ```
 > @UI.lineItem: [
->   {
->     label: 'Add random item',
->     dataAction: 'PUSHDOWN:com.c_salesordermanage_sd.AddRandomItem',
->     type: #FOR_ACTION,
->     position: 1 
->   },
->   {
->     label: '{@i18n>CopyActionText}',
->     dataAction: 'PUSHDOWN:com.c_salesordermanage_sd.CopyItem',
->     type: #FOR_ACTION,
->     position: 2 
->   }
+>     {
+>         label: 'Add random item',
+>         dataAction: 'PUSHDOWN:com.c_salesordermanage_sd.AddRandomItem',
+>         type: #FOR_ACTION,
+>         position: 1
+>     },
+>     {
+>         label: '{@i18n>CopyActionText}',
+>         dataAction: 'PUSHDOWN:com.c_salesordermanage_sd.CopyItem',
+>         type: #FOR_ACTION,
+>         position: 2
+>     }
 > ];
 > 
 > ```
@@ -76,20 +74,18 @@ You can override the texts that come from annotations. To do so, the annotation 
 > CAP CDS Annotation
 > 
 > ```
-> LineItem                               : [
+> LineItem : [
 >     {
->         $Type  : 'UI.DataFieldForAction',
->         Label  : 'Add random item',
+>         $Type : 'UI.DataFieldForAction',
+>         Label : 'Add random item',
 >         Action : 'com.c_salesordermanage_sd.AddRandomItem'
 >     },
 >     {
->         $Type  : 'UI.DataFieldForAction',
->         Label  : '{@i18n>CopyActionText}',       //i18n key referred here
+>         $Type : 'UI.DataFieldForAction',
+>         Label : '{@i18n>CopyActionText}', //i18n key referred here
 >         Action : 'com.c_salesordermanage_sd.CopyItem'
 >     },
->     .
->     .
->     .
+>     ...
 > ]
 > ```
 
@@ -100,14 +96,12 @@ For the annotation example above, the application's i18n properties file must ha
 > 
 > ```
 >  "models": {
->                …
->                …
->                "@i18n": {
->                               "type": "sap.ui.model.resource.ResourceModel",
->               "uri": "i18n/i18n.properties"
->                },
->                …
->                …
+>     ...
+>     "@i18n": {
+>         "type": "sap.ui.model.resource.ResourceModel",
+>         "uri": "i18n/i18n.properties"
+>     },
+>     ...
 > }
 > 
 > ```

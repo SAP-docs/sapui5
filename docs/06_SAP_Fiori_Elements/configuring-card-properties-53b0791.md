@@ -2,19 +2,18 @@
 
 # Configuring Card Properties
 
-This section provides the configuration items relevant for all overview page cards in SAP Fiori elements for OData V4.
+This section describes the configuration items relevant for all overview page cards. All cards inherit a set of generic capabilities such as a card header, content area, and navigation support.
 
 
 
-All cards inherit the generic capabilities that are shared across all cards, such as a card header, card footer, navigation support, and more. The following card properties are mandatory for all cards:
+Every card defined in the `manifest.json` file must include the following properties:
 
--   `model`: Name of the model to provide to the card instance
--   `template`: Card type \(card component package\) to instantiate
--   `settings`: Internal card configuration passed to the card instance
--   `entitySet`: Entity set to use in the card
+-   `model`: Name of the model to provide to the card instance.
 
+-   `template`: Card type or card component package to instantiate.
 
+-   `settings`: Internal card configuration passed to the card instance.
 
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Configuring Card Properties](configuring-card-properties-ab78a77.md).
+-   `entitySet`: Entity set to use in the card.
+
 

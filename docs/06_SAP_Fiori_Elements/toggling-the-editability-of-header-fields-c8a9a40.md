@@ -17,33 +17,34 @@ The editability of header fields can be controlled by the manifest property `edi
 > The header is editable by default. You can switch this off, if required, by setting `editableHeaderContent` to `false`.
 
 > ### Sample Code:  
-> ```
+> `manifest.json`
+> 
+> ```json
 > "sap.ui5": {
+>     ...
+>     "routing": {
 >         ...
->         "routing": {
->                 ...
->                 {
->                     "pattern": "SalesOrderManage({key})/_Item({key2}):?query:",
->                     "name": "SalesOrderItemObjectPage",
->                     "target": "SalesOrderItemObjectPage"
->                 }
->             ],
->             "targets": {
->                 "SalesOrderItemObjectPage": {
->                     "type": "Component",
->                     "id": "SalesOrderItemObjectPage",
->                     "name": "sap.fe.templates.ObjectPage",
->                     "options": {
->                         "settings": {
->                             "contextPath": "/SalesOrderItem",
->                             "editableHeaderContent": true,
->                             ...
->                         }
->                     }
+>         {
+>             "pattern": "SalesOrderManage({key})/_Item({key2}):?query:",
+>             "name": "SalesOrderItemObjectPage",
+>             "target": "SalesOrderItemObjectPage"
+>         }
+>     ],
+>     "targets": {
+>         "SalesOrderItemObjectPage": {
+>             "type": "Component",
+>             "id": "SalesOrderItemObjectPage",
+>             "name": "sap.fe.templates.ObjectPage",
+>             "options": {
+>                 "settings": {
+>                     "contextPath": "/SalesOrderItem",
+>                     "editableHeaderContent": true,
+>                     ...
 >                 }
 >             }
 >         }
 >     }
+> }
 > 
 > ```
 

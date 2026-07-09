@@ -12,7 +12,7 @@ A time series chart contains a time axis instead of a categorical axis.
 
 ![](images/Time_Series_Chart_Card_2ae1caf.png "Example of a Time Series Chart")
 
-This chart type represents a time-based dimension that is more responsive to a change in card size.
+This chart type represents a time-based dimension that is more responsive to available space for the dimension axis.
 
 The time axis is automatically enabled for a chart when its dimension is `Edm.Date`.
 
@@ -29,18 +29,6 @@ Additionally, the time axis is enabled when the dimension is of type `String` an
 -   `@Common.IsCalendarYearWeek`
 
 -   `@Common.IsCalendarDate`
-
-
-Analytical cards use the time axis automatically if these conditions apply:
-
--   The chart type must be either vertical bullet, stacked column, scatter, line, bubble, column, waterfall, combination, or dual combination.
-
--   The chart is configured with only one dimension for bubble, column, waterfall, and combination charts. However, you can use two dimensions for line charts. The second dimension can be the color dimension. The dimension with the `uid` color has to have the **Series** role assigned to it.
-
--   The data type of the dimension is either `edm.datetime` or `edm.string`. If the data type is `edm.string`, then it needs to have the additional annotation in the OData metadata annotation: `sap:semantics:"year (YYYY) or yearweek (YYYYWW) or yearmonth (YYYYMM) or yearquarter (YYYYQ)"`.
--   If it is a bubble chart, it needs to have two measures. If the chart is a combination chart, it needs to have at least two measures.
-
--   Vertical bullet, stacked column, and scatter charts need at least one measure and one dimension. Extra color and shape dimensions are supported only in scatter charts.
 
 
 > ### Sample Code:  
@@ -154,72 +142,8 @@ Analytical cards use the time axis automatically if these conditions apply:
 > 
 > ```
 
-You can also configure the granularity of time displayed on the chart using the `chartProperties.timeAxis.levels` property. This property can be defined at the chart-level settings. You can also define it at the tab-level to customize the time-based drill down for individual tabs.
-
-The following sample code shows the `chartProperties.timeAxis.levels` property added at the chart-level settings:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> {
->       "sap.ovp": {
->             "cards": {
->                   "cardchartsline": {
->                         "model": "sales",
->                         "template": "sap.ovp.cards.charts.analytical",
->                         "settings": {
->                               "entitySet": “salesSet",
->                               "chartProperties": {
->                                     "timeAxis": {
->                                           "levels": ["year", "month", "day", "hour", "minute"]
->                                     }
->                               }
->                         }
->                   }
->             }
->       }
-> },
-> 
-> ```
-
-The following sample code shows the `chartProperties.timeAxis.levels` property added at the tab-level setting:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "card_11_v4": {
->       "model": "sales",
->       "template": "sap.ovp.cards.v4.charts.analytical",
->       "settings": {
->             "title": "{{TIME_SERIES_ANALYTICAL_CARD}}",
->             "subTitle": "{{COMMON_ANALYTICAL_CARD_SUBTITLE_V4}}",
->             "entitySet": "salesSet",
->             "tabs": [
->             {
->                   "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#year",
->                   "value": "With CalenderYear"
->             },
->             {
->                   "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#year",
->                   "value": "With TimeAxis",
->                   "chartProperties": {
->                         "timeAxis": {
->                               "levels": ["year", "month", "day", "hour"]
->                         }
->                   }
->             }
->         ]
->     }
-> }
-> 
-> ```
-
-The levels can include any combination of the time units, such as `year`, `month`, `day`, `hour`, or `minute`, depending on the required granularity of your dataset. To display the data correctly on the chart, it is recommended to increase the granularity of the dataset until there are no repeating values.
-
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Time Series Chart Card](time-series-chart-card-a7de883.md).
+> For information about time series chart cards on the overview page, see [Time Series Chart Card](time-series-chart-card-a7de883.md).
 

@@ -14,7 +14,7 @@
 
 ## Transition to OData V4.01
 
-OData Version 4.01 comes with many new features; for details, see [What's New in OData Version 4.01](https://docs.oasis-open.org/odata/new-in-odata/v4.01/new-in-odata-v4.01.html). Once 4.01 will be supported by SAPUI5's `v4.ODataModel`, you'll need to consider various aspects. You can already start preparing your application for this transition.
+OData Version 4.01 comes with many new features; for details, see [What's New in OData Version 4.01](https://docs.oasis-open.org/odata/new-in-odata/v4.01/new-in-odata-v4.01.html). When you transition your data service to OData V4.01, you need to consider several aspects. You can start preparing your application for this transition now, even while you're using an OData V4.0 service.
 
 While [2.7 Improved: Case-Insensitive System Query Options without $ prefix](https://docs.oasis-open.org/odata/new-in-odata/v4.01/cn04/new-in-odata-v4.01-cn04.html#sec_ImprovedCaseInsensitiveSystemQueryOp) may offer convenience for handwritten requests, it's a challenge for `v4.ODataModel`'s handling of system query options. Features like auto-$expand/$select need to take an application's $expand and $select parameters into account. Paging takes care of $top and $skip while data aggregation computes its own $apply. Thus the only supported syntax for system query options will continue to be lowercase with a leading dollar sign.
 

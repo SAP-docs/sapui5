@@ -213,14 +213,18 @@ You can get answers to the most frequently asked questions we receive from our u
     > Wrong Sample Code
     > 
     > ```
-    > <Annotations Target="TestService.CategoryType/CatergoryId"><Annotation Term="Common.Text" Path="CategoryId"/></Annotations>
+    > <Annotations Target="TestService.CategoryType/CategoryId">
+    >     <Annotation Term="Common.Text" Path="CategoryId"/>
+    > </Annotations>
     > ```
 
     > ### Sample Code:  
     > Correct Sample Code
     > 
     > ```
-    > <Annotations Target="TestService.CategoryType/CatergoryId"><Annotation Term="Common.Text" Path="CategoryDescription"/></Annotations>
+    > <Annotations Target="TestService.CategoryType/CategoryId">
+    >     <Annotation Term="Common.Text" Path="CategoryDescription"/>
+    > </Annotations>
     > ```
 
 -   **The values entered in a field with a value help aren't validated. Why?**

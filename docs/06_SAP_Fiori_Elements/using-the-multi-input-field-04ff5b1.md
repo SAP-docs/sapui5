@@ -11,6 +11,18 @@ You must define a 1:n association in the data model.
 In the following example, `"_supportedMaterial"` is a one-to-many `navigationProperty` pointing to the `SupportedMaterial` entity:
 
 > ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <EntityType Name="SalesOrderManage">
+>     <NavigationProperty Name="_SupportedMaterials" Type="Collection(com.c_salesordermanage_sd.SupportedMaterial)">
+>         <OnDelete Action="Cascade"/>
+>     </NavigationProperty>
+> </EntityType>
+> 
+> ```
+
+> ### Sample Code:  
 > ABAP CDS Annotation
 > 
 > ```

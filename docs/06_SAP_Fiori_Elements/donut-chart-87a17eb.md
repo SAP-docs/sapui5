@@ -12,7 +12,7 @@ A donut chart displays data as differently colored sections of a donut.
 
 ![](images/Donut_Chart_0750575.png "Example of a Donut Chart")
 
-The value of the measure determines the size of each section. Donut charts help the viewer to quickly determine the key area that needs attention. For example, you can view numbers and percentages. You can also disable navigation in the graph \(optional\).
+The value of the measure determines the size of each section. Donut charts help the viewer to quickly determine the key area that needs attention. For example, you can view numbers and percentages.
 
 
 
@@ -20,47 +20,6 @@ Donut charts require exactly one measure. You can provide more than one dimensio
 
 
 
-### Example for displaying percentages
-
-> ### Sample Code:  
-> ```
-> "ChartProperties" : {
-> 			"plotArea" : {
-> 				dataLabel: {
-> 					"type" : "percentage"
-> 					}
-> 				}
-> 			}
-> 
-> ```
-
-
-
-<a name="loio87a17ebef87c4b769783c57e50cc04c5__section_nby_lkz_y4b"/>
-
-## Stable Coloring
-
-You can now assign specific colors to the sections in the donut chart. Each color can be assigned to a particular dimension value. To enable this feature:
-
--   Configure a color map object that maps the key-value pairs between dimension and color values in the `colorPalette` property of the descriptor configuration.
-
--   Enable stable coloring by setting the `bEnableStableColors` property to **true** in card settings.
-
--   The chart dimension property \(`Role`\) in the chart annotation has to be a `Category`.
-
--   Define the `com.sap.vocabularies.Common.v1.Text` annotation for a dimension property within the entity type. This is considered to be a label for any individual dimensions value and also for rendering appropriate texts in the chart's legend.
-
-
-
-
-<a name="loio87a17ebef87c4b769783c57e50cc04c5__section_ec4_nkz_y4b"/>
-
-## Others Sector
-
-You can pass filter conditions to target applications other than the dimensions shown on the donut chart. This feature is only available in overview page floorplans.
-
-
-
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Donut Chart Card](donut-chart-card-ee36513.md).
+> For information about donut chart cards on the overview page, see [Donut Chart Card](donut-chart-card-ee36513.md).
 

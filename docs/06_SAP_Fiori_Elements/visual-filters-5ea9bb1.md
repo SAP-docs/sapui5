@@ -851,7 +851,7 @@ Semantic coloring is based on the criticality defined in the `ValueCriticality` 
 > 
 > -   Chart measure semantic coloring takes precedence over dimension semantic coloring.
 
-For a sample annotation, please see [Configuring Charts](configuring-charts-8f64eb1.md).
+For a sample annotation, please see [Configuring Charts on the Overview Page](configuring-charts-on-the-overview-page-c7c5a82.md).
 
 
 

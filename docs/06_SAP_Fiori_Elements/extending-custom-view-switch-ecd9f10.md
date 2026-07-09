@@ -2,7 +2,7 @@
 
 # Extending Custom View Switch
 
-In SAP Fiori elements for OData V4, you can extend view switch so it responds dynamically based on filter conditions or custom configuration settings.
+You can extend the view switch to respond dynamically based on filter conditions or custom configuration settings such as automatically switching a card to a different tab when a user selects a specific supplier in the filter bar.
 
 
 
@@ -10,7 +10,7 @@ In SAP Fiori elements for OData V4, you can extend view switch so it responds dy
 
 To define the custom view switch, proceed as follows:
 
-1.  Create a controller extension file, `customViewswitch.controller.js`, for example, and define the `onBeforeRebindPageExtension` function with the following input parameters:
+1.  Create a controller extension file, `customViewswitch.controller.js`, for example, and define the `onBeforeRebindPageExtension` function. This function is called before the cards are rebound and lets you choose which view \(tab\) each card should display. The function receives the following input parameters:
 
 
     <table>
@@ -18,6 +18,11 @@ To define the custom view switch, proceed as follows:
     <th valign="top">
 
     Input Parameters
+    
+    </th>
+    <th valign="top">
+
+    Type
     
     </th>
     <th valign="top">
@@ -34,7 +39,12 @@ To define the custom view switch, proceed as follows:
     </td>
     <td valign="top">
     
-    Contains a list of all visible cards in an array.
+    Array
+    
+    </td>
+    <td valign="top">
+    
+    Contains a list of all visible cards.
     
     </td>
     </tr>
@@ -46,18 +56,22 @@ To define the custom view switch, proceed as follows:
     </td>
     <td valign="top">
     
-    \[Type: Object\]: Object containing filter values
+    Object
+    
+    </td>
+    <td valign="top">
+    
+    Object containing filter values
     
     </td>
     </tr>
     </table>
     
-2.  Define `setTabIndex()` method to pass `Cardid` and `TabIndex` as parameters. For example, var`oTabIndexList = {"card1" : 2, "card2": 1};`
+2.  Build a tab-index map and call `setTabIndex()`.
 
-    > ### Note:  
-    > The value for `TabIndex` starts with `1` and must not be greater than the length of tabs.
+    Inside `onBeforeRebindPageExtension`, build a map that pairs each card ID with the tab index you want to display. The value for `TabIndex` starts with `1` and must not exceed the number of tabs defined for the card. An example of the map is `oTabIndexList = {"card1" : 2, "card2": 1};`.
 
-    Configure the key value according to your filter values and pass the `oTabIndexList` object to `this.setTabIndex(oTabIndexList)`, as shown in the following sample code:
+    The following example switches `card012` to a specific tab depending on the value of the `SupplierName` filter:
 
     > ### Sample Code:  
     > Breakout function
@@ -89,6 +103,8 @@ To define the custom view switch, proceed as follows:
     > 
     > ```
 
+    The supporting helper function extracts filter values from a `SelectionVariant` object by iterating through its `Parameters` and `SelectOptions` arrays, returning only equality filters with non-empty values as a key-value object, as shown in the following sample code:
+
     > ### Sample Code:  
     > Supporting function
     > 
@@ -116,7 +132,7 @@ To define the custom view switch, proceed as follows:
     > 
     > ```
 
-3.  Define the controller extension in the `manifest.json` file.
+3.  Define the controller extension in the `manifest.json` file, under the `extends` section, as shown in the following sample code:
 
     > ### Sample Code:  
     > `manifest.json`
@@ -134,9 +150,4 @@ To define the custom view switch, proceed as follows:
     > 
     > ```
 
-
-
-
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Extending Custom View Switch](extending-custom-view-switch-be7a236.md).
 

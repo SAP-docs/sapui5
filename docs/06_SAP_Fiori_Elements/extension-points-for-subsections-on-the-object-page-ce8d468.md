@@ -37,6 +37,8 @@ To define a subsection on UI level - you do this if you want to add a custom loo
 
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```json
 > {
 >     "sap.ui5": {

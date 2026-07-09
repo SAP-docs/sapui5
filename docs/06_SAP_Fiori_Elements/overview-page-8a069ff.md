@@ -4,9 +4,6 @@
 
 An overview page is a data-driven SAP Fiori application built using SAPUI5 technology, OData services, and annotations for organizing large amounts of information.
 
-> ### Note:  
-> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Overview Page](overview-page-c64ef8c.md).
-
 Overview pages provide quick access to vital business information at a glance, in the form of visual, actionable cards. The user-friendly experience makes viewing, filtering, and acting upon data quick and simple. Business users can see the big picture at a glance, and also focus on the most important tasks, enabling faster decision making as well as immediate action.
 
 The application lets you create several cards for different types of content that helps in visualizing information in an attractive and efficient way. You can create overview pages using the SAP Fiori generator. To add any further cards, you can use the guides available within the Guided Development tool. For more information, see [Use Feature Guides](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/0c9e518ecf704b2f80a2bed0eaca60ae.html).
@@ -17,9 +14,14 @@ The overview page application contains the following main components:
 
 -   Application header: Provides a description of the area for which this application provides an overview \(for example, procurement or sales\). From the header area, users can change user account settings and manage cards.
 
--   Smart filter: Provides application-level filters for changing the level of data displayed in the cards. For example, you could use the filter to display only transactions larger than $10,000, only items lighter than 50kg, and so on. .
+-   Filter bar: Provides application-level filters for changing the level of data displayed in the cards. For example, you could use the filter to display only transactions larger than $10,000, only items lighter than 50kg, and so on.
 
--   Cards: A card is a smart component that uses UI annotation to render its content. Each card is bound to a single entity set in a data source. A card may display a donut or bar chart, or a table. Stack cards contain a set of quick view cards, which can be viewed in an object stream. Cards are displayed on the overview page in up to five responsive columns and can be rearranged by dragging and dropping.
+    -   In SAP Fiori elements for OData V4, the filter bar is rendered using the `FilterBar` building block. For more information about the `FilterBar` building block, see [The FilterBar Building Block](the-filterbar-building-block-7838611.md).
+
+    -   In SAP Fiori elements for OData V2, the filter bar is rendered using the smart filter bar. .
+
+
+-   Cards: A card is a smart component that uses UI annotation to render its content. Each card is bound to a single entity set in a data source. A card may display a donut or bar chart, or a table. Stack cards contain a set of quick view cards, which can be viewed in an object stream. Cards are displayed on the overview page in up to five responsive columns and can be rearranged by dragging and dropping. For more information, see [Overview Page Card](overview-page-card-74332d5.md).
 
 
 
@@ -31,4 +33,9 @@ Overview page application instances consist of a UI component that extends the o
 
 > ### Note:  
 > When you are using more than one overview page application with the `sap-keep-alive` mode, it is recommended to upgrade the SAPUI5 version to 1.96 or above.
+
+**Related Information**  
+
+
+[Overview Page](overview-page-c64ef8c.md "Overview page (OVP) is a SAP Fiori floorplan that provides a role-based overview of key business information through cards. It helps users monitor KPIs, track tasks, and access important insights from multiple applications in a single place.")
 

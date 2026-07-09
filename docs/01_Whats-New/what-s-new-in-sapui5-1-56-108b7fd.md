@@ -1508,7 +1508,7 @@ Analytical list page supports:
 
 Global filter now lets you configure:
 
--   Custom actions. For more information, see [Defining Custom Actions on the Overview Page](../06_SAP_Fiori_Elements/defining-custom-actions-on-the-overview-page-02fb273.md).
+-   Custom actions. For more information, see [Defining Custom Actions for Quick View Cards on the Overview Page](../06_SAP_Fiori_Elements/defining-custom-actions-for-quick-view-cards-on-the-overview-page-02fb273.md).
 
 -   Search function. For more information, see [Configuring the Global Filter on the Overview Page](../06_SAP_Fiori_Elements/configuring-the-global-filter-on-the-overview-page-73d9693.md).
 
@@ -1679,6 +1679,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 
 [What's New in SAPUI5 1.147](what-s-new-in-sapui5-1-147-88df9d3.md "With this release SAPUI5 is upgraded from version 1.146 to 1.147.")
 

@@ -2,10 +2,7 @@
 
 # Time Series Chart Card
 
-You can render the chart as a time series chart, which contains a time axis instead of a categorical axis.
-
-> ### Note:  
-> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Time Series Chart](time-series-chart-784d317.md).
+You can render the chart as a time series chart, which contains a time axis instead of a categorical axis. This chart type represents a time-based dimension that is more responsive to a change in card size.
 
   
   
@@ -13,17 +10,31 @@ You can render the chart as a time series chart, which contains a time axis inst
 
 ![](images/Time_Series_Chart_Card_2ae1caf.png "Example of a Time Series Chart Card")
 
-This chart type represents a time-based dimension that is more responsive to a change in card size. Analytical cards use the time axis automatically if these conditions apply:
+Analytical cards use the time axis automatically when all the following conditions are met:
 
--   The chart type must be either vertical bullet, stacked column, scatter, line, bubble, column, waterfall, combination, or dual combination.
+-   The chart type is one of vertical bullet, stacked column, scatter, line, bubble, column, waterfall, combination, or dual combination.
 
--   The chart is configured with only one dimension for bubble, column, waterfall, and combination charts. However, you can use two dimensions for line charts. The second dimension can be the color dimension. The dimension with the `uid` color has to have the **Series** role assigned to it.
+-   Data type of the dimension is either `edm.datetime` or `edm.string`. If the data type is `edm.string`, then it must have the additional annotation in the OData metadata annotation: `sap:semantics:"year (YYYY) or yearweek (YYYYWW) or yearmonth (YYYYMM) or yearquarter (YYYYQ)"`.
 
--   The data type of the dimension is either `edm.datetime` or `edm.string`. If the data type is `edm.string`, then it needs to have the additional annotation in the OData metadata annotation: `sap:semantics:"year (YYYY) or yearweek (YYYYWW) or yearmonth (YYYYMM) or yearquarter (YYYYQ)"`.
--   If it is a bubble chart, it needs to have two measures. If the chart is a combination chart, it needs to have at least two measures.
+-   Number of dimensions are based on the following chart types:
 
--   Vertical bullet, stacked column, and scatter charts need at least one measure and one dimension. Extra color and shape dimensions are supported only in scatter charts.
+    -   Bubble, column, waterfall, and combination charts: These charts must only one dimension.
 
+    -   Line charts: This chart must have up to two dimensions. The second dimension can be a color dimension. The dimension with the `uid` color has to have the **Series** role assigned to it.
+
+
+-   Number of measures are based on the following chart types:
+
+    -   Bubble charts: This chart must have exactly two measures.
+
+    -   Combination charts: This chart must have at least two measures.
+
+    -   Vertical bullet, stacked column, and scatter charts: These charts must be have at least one measure and one dimension.
+
+
+
+> ### Note:  
+> Extra color and shape dimensions are supported only in scatter charts.
 
 > ### Sample Code:  
 > Metadata Sample
@@ -31,8 +42,6 @@ This chart type represents a time-based dimension that is more responsive to a c
 > ```
 > <Property Name="Date" Type="Edm.DateTime" sap:display-format="Date" sap:label="Date" sap:aggregation-role="dimension"/>
 > ```
-
-
 
 > ### Sample Code:  
 > XML Annotation
@@ -136,7 +145,24 @@ This chart type represents a time-based dimension that is more responsive to a c
 > 
 > ```
 
-You can also configure the granularity of time displayed on the chart using the `chartProperties.timeAxis.levels` property. This property can be defined at the chart-level settings. You can also define it at the tab-level to customize the time-based drill down for individual tabs.
+
+
+<a name="loioa7de88354fa649b5bdfa979b5e8691ed__section_swr_4lw_2hc"/>
+
+## Configuring Time Granularity
+
+You can also configure the granularity of time displayed on the chart using the `chartProperties.timeAxis.levels` property. The levels can include any combination of `year`, `month`, `day`, `hour`, or `minute` time units.
+
+This property can be defined at the following levels:
+
+-   Chart-level settings: Applies to the entire chart.
+
+-   Tab-level settings. Defines the time-based drill down for individual tabs.
+
+
+
+
+### Chart-Level Configuration
 
 The following sample code shows the `chartProperties.timeAxis.levels` property added at the chart-level settings:
 
@@ -149,7 +175,7 @@ The following sample code shows the `chartProperties.timeAxis.levels` property a
 >             "cards": {
 >                   "cardchartsline": {
 >                         "model": "sales",
->                         "template": "sap.ovp.cards.charts.analytical",
+>                         "template": "sap.ovp.cards.v4.charts.analytical",
 >                         "settings": {
 >                               "entitySet": “salesSet",
 >                               "chartProperties": {
@@ -164,6 +190,10 @@ The following sample code shows the `chartProperties.timeAxis.levels` property a
 > },
 > 
 > ```
+
+
+
+### Tab-Level Configuration
 
 The following sample code shows the `chartProperties.timeAxis.levels` property added at the tab-level setting:
 
@@ -198,5 +228,28 @@ The following sample code shows the `chartProperties.timeAxis.levels` property a
 > 
 > ```
 
+> ### Note:  
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+
 The levels can include any combination of the time units, such as `year`, `month`, `day`, `hour`, or `minute`, depending on the required granularity of your dataset. To display the data correctly on the chart, it is recommended to increase the granularity of the dataset until there are no repeating values.
+
+
+
+<a name="loioa7de88354fa649b5bdfa979b5e8691ed__v4-time-series-chart"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
+
+The time axis is also automatically enabled in the following two additional cases:
+
+-   When the chart dimension's data type is `Edm.Date`.
+
+-   When the chart dimension is of type `Edm.String` and is annotated with one of the following annotations:
+
+    -   `@Common.IsFiscalYear`
+    -   `@Common.IsFiscalYearPeriod`
+    -   `@Common.IsCalendarYearMonth`
+    -   `@Common.IsCalendarYearQuarter`
+    -   `@Common.IsCalendarYearWeek`
+    -   `@Common.IsCalendarDate`
+
 

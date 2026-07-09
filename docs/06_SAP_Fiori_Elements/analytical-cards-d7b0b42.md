@@ -2,7 +2,7 @@
 
 # Analytical Cards
 
-In SAP Fiori elements for OData V4, you can use the analytical cards to view data in a variety of chart formats.
+You can use the analytical cards to view data in a variety of chart formats.
 
 
 
@@ -12,7 +12,7 @@ In SAP Fiori elements for OData V4, you can use the analytical cards to view dat
 The card is divided into the header and chart areas .In the header area, you can view the aggregated value of a key performance indicator \(KPI\), the trend, and percentage of change. In the chart area, you can view a graphical representation of the data.
 
 > ### Note:  
-> If you configure the chart title, chart descriptions \(x- and y-axis\) are not displayed in the card \(except for bubble charts\).
+> If you configure the chart title, chart descriptions \(x- axis and y-axis\) are not displayed in the card \(except for bubble charts\).
 
 
 
@@ -302,14 +302,12 @@ The following sample code is a snippet of a sample `manifest.json` file:
 > }
 > ```
 
+> ### Note:  
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+
 
 
 ## Related Information
 
 For more information about configuring charts, see [Configuring Charts on the Overview Page](configuring-charts-on-the-overview-page-c7c5a82.md).
-
-
-
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Analytical Cards](analytical-cards-030cb5f.md).
 

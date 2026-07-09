@@ -2,11 +2,22 @@
 
 # Configuring Card Filters
 
-In SAP Fiori elements for OData V4, you can add filters to all card types, by using the `com.sap.vocabularies.UI.v1.SelectionVariant` annotation term or by passing filter parameter in the URL.
+You can add filters to any card type to limit the data it displays. Filters can be defined using the `com.sap.vocabularies.UI.v1.SelectionVariant` annotation or by passing filter parameter in the URL.
 
 
 
-The following example shows a filter configuration in the `com.sap.vocabularies.UI.v1.SelectionVariant` annotation. The record set is filtered by the `TotalSum` property and returns values between 0 and 8000. You can provide multiple filters in the `SelectOptions` collection.
+> ### Note:  
+> Filters are not passed to custom cards in SAP Fiori elements for OData V4.
+
+
+
+<a name="loioecde99ffaf2d4c5d8e95552415588b74__section_h2m_v12_ldb"/>
+
+## Filtering Cards Using the `SelectionVariant` Annotation
+
+The `com.sap.vocabularies.UI.v1.SelectionVariant` annotation defines a filter that's applied to the card's data. Each filter is added to the `SelectOptions` collection. You can define multiple filters in a single `com.sap.vocabularies.UI.v1.SelectionVariant`.
+
+The following code sample filters the data using the `TotalSum` property and returns values between 0 and 8000.
 
 > ### Sample Code:  
 > XML Annotation
@@ -64,17 +75,23 @@ The following example shows a filter configuration in the `com.sap.vocabularies.
 > }
 > ```
 
+The currency type displayed in cards is taken from the SAP Fiori launchpad user settings in the `DisplayCurrency` field.
 
 
-The preference for displaying the currency type is taken from the SAP Fiori Launchpad user settings in the `DisplayCurrency` field of an application. You can also set filters for SAP Fiori overview page by passing a filter parameter in the URL. Applicable when you launch SAP Fiori overview pages from SAP Fiori launchpad or from any other application with a filter parameter.
+
+## Filtering Cards Using the URL Parameter
+
+You can also set filters by passing a filter parameter in the URL. This applies when you launch the overview page from SAP Fiori launchpad or from any other application with a filter parameter.
+
+The filter is applied automatically if the filter property exists in the entity set of the card.
+
+For example:`http://abc#Equipment-overviewPage?EquipmentNumber=123456`
 
 > ### Note:  
-> You can only pass strings or integers as filter parameters. The filter applies automatically if the filter property exists in the entityset.
+> You can only pass strings or integers as filter parameters.
 
-For example: http://abc\#Equipment-overviewPage?EquipmentNumber=123456
+**Related Information**  
 
 
-
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Configuring Card Filters](configuring-card-filters-005970c.md).
+[Configuring Card Properties](configuring-card-properties-53b0791.md "This section describes the configuration items relevant for all overview page cards. All cards inherit a set of generic capabilities such as a card header, content area, and navigation support.")
 

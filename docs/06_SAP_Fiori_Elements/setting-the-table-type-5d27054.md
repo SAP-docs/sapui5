@@ -20,14 +20,9 @@ The following logic is used to determine the table type of an analytical list pa
 
 -   If the table type is **not** specified in the `manifest.json` file, the default table type is determined as follows:
 
-    -   For smartphone and tablet devices, a responsive table is used.
+    -   For an aggregate-based service, an analytical table is used.
 
-    -   For desktop devices, the default table type depends on the kind of service:
-
-        -   For an aggregate-based service, an analytical table is used.
-
-        -   For a non-aggregate-based service, a responsive table is used.
-
+    -   For a non-aggregate-based service, a responsive table is used.
 
 
 

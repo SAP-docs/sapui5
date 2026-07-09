@@ -52,8 +52,6 @@ To generate an example with the expected format for pasting your data, export th
 > ### Note:  
 > -   The user has to maintain the placeholder for inline actions in the spreadsheet application. The column fields can also be empty.
 > 
-> -   Properties annotated with `textArrangement` set to `TextOnly` cannot be pasted.
-> 
 > -   When a user pastes data into a table, SAP Fiori elements for OData V4 verifies that the pasted content aligns with the designated data field type. However, additional checks such as field editability and validation of values against fixed value lists are not performed by the front end. Therefore, you must ensure strict validation by the back end.
 
 Application developers can disable the paste option by configuring the `enablePaste` parameter.

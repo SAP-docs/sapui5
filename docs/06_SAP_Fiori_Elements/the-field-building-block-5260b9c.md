@@ -77,6 +77,7 @@ The following settings are available:
     -   `textMaxCharactersDisplay`
     -   `textExpandBehaviorDisplay`
     -   `textMaxLength`
+    -   `disableIntegerGrouping`
 
     For more information about using the `formatOptions` settings, see [Multi-Line Text Fields](multi-line-text-fields-b502146.md).
 
@@ -116,6 +117,8 @@ See the following sample code of using the `readOnly` setting:
 >     }
 > }
 > ```
+
+With the `Field` building block, you can remove the thousands separator from integer fields using `disableIntegerGrouping`. For more information, see [Removing the Thousands Separator from Fields](removing-the-thousands-separator-from-fields-40713d5.md).
 
 
 

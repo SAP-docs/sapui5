@@ -424,33 +424,123 @@ You can open the context menu in the tree table by right-clicking on any node wi
 You can disable drag and drop as well as cut and paste to restrict changes in the hierarchy. To do that, use the `UpdateRestrictions` and `NonUpdatableNavigationProperties` annotations on the navigation property to the hierarchy parent.
 
 > ### Sample Code:  
-> `manifest.json`
+> XML Annotation
 > 
-> ```json
+> ```xml
+> <Annotations Target="YourService.TreeTableSubEntityWithUpdateRestriction">
+>     <!-- Draft enabled -->
+>     <Annotation Term="Common.DraftRoot">
+>         <Record Type="Common.DraftRootType">
+>             <PropertyValue Property="ActivationAction" String="YourService.draftActivate"/>
+>             <PropertyValue Property="EditAction" String="YourService.draftEdit"/>
+>             <PropertyValue Property="PreparationAction" String="YourService.draftPrepare"/>
+>         </Record>
+>     </Annotation>
+> 
+>     <!-- Update restrictions on navigation properties -->
+>     <Annotation Term="Capabilities.UpdateRestrictions">
+>         <Record Type="Capabilities.UpdateRestrictionsType">
+>             <PropertyValue Property="NonUpdatableNavigationProperties">
+>                 <Collection>
+>                     <NavigationPropertyPath>Superordinate</NavigationPropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> 
+> <!-- Property-level annotations -->
+> <Annotations Target="YourService.TreeTableSubEntityWithUpdateRestriction/ID">
+>     <Annotation Term="Core.Immutable" Bool="true"/>
+>     <Annotation Term="Common.Label" String="ID"/>
+> </Annotations>
+> 
+> <Annotations Target="YourService.TreeTableSubEntityWithUpdateRestriction/name">
+>     <Annotation Term="Common.Label" String="Org level name"/>
+> </Annotations>
+> 
+> <Annotations Target="YourService.TreeTableSubEntityWithUpdateRestriction/orgID">
+>     <Annotation Term="UI.Hidden" Bool="true"/>
+> </Annotations>
+> 
+> <Annotations Target="YourService.TreeTableSubEntityWithUpdateRestriction/DistanceFromRoot">
+>     <Annotation Term="Core.Computed" Bool="true"/>
+>     <Annotation Term="UI.Hidden" Bool="true"/>
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> define behavior for ZI_TreeTableSubEntityWithUR alias TreeSubEntity
+>     persistent table ztree_sub_entity
+>     draft table ztree_sub_d
+>     lock master 
+>     total etag LastChangedAt
+>     authorization master ( instance )
+>     etag master LocalLastChangedAt
+> {
+>     field ( readonly ) ID;
+>     field ( readonly : update ) ID;
+>     field ( readonly ) DistanceFromRoot;
+>     
+>     association _Superordinate { with draft; }
+>     association _Organization; 
+>     
+>     // Update restriction on navigation to disable the hierarchy opertations
+>     association _Superordinate { update ( features : instance ) restricted; }
+>     
+>     create;
+>     update;
+>     delete;
+>     
+>     draft action Edit;
+>     draft action Activate;
+>     draft action Discard;
+>     draft action Resume;
+>     draft determine action Prepare;
+>     
+>     mapping for ztree_sub_entity
+>     {
+>         ID = id;
+>         Parent = parent;
+>         Name = name;
+>         OrgID = org_id;
+>         DistanceFromRoot = distance_from_root;
+>     } 
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
 > @odata.draft.enabled
->   entity TreeTableSubEntityWithUpdateRestriction {
->         @Core.Immutable: true
->         @Common.Label  : 'ID'
+> entity TreeTableSubEntityWithUpdateRestriction {
+>     @Core.Immutable: true
+>     @Common.Label  : 'ID'
 >     key ID               : String;
 >         parent           : String;
->  
->         @Common.Label  : 'Org level name'
+> 
+>     @Common.Label  : 'Org level name'
 >         name             : String;
->  
->         @UI.Hidden     : true
+> 
+>     @UI.Hidden     : true
 >         orgID            : String;
->  
->         @Core.Computed : true
->         @UI.Hidden     : true
+> 
+>     @Core.Computed : true
+>     @UI.Hidden     : true
 >         DistanceFromRoot : Integer64;
->  
+> 
 >         Superordinate    : Association to TreeTableSubEntityWithUpdateRestriction
 >                              on Superordinate.ID = parent;
 >         Organization     : Association to TreeTableEntity
 >                              on Organization.ID = orgID;
->   }
->  
->   annotate TreeTableSubEntityWithUpdateRestriction with @(Capabilities: {UpdateRestrictions: {NonUpdatableNavigationProperties: [Superordinate]}});
+> }
+> 
+> annotate TreeTableSubEntityWithUpdateRestriction with @(Capabilities: {UpdateRestrictions: {NonUpdatableNavigationProperties: [Superordinate]}});
 > ```
 
 
@@ -499,6 +589,69 @@ If `ChangeSiblingForRootsSupported` is not defined, it is considered as set to `
 >   </Annotation>
 > </Annotations>
 > ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate SAP__self.HierarchyEntityType with @(
+>     hierarchy.RecursiveHierarchyActions #HierarchyNode : {
+>         $Type: 'hierarchy.RecursiveHierarchyActionsType',
+>         ChangeNextSiblingAction: 'SAP__self.changeNextSibling',
+>         CopyAction: 'SAP__self.copy',
+>         ChangeSiblingForRootsSupported: false
+>     }
+> );
+> ```
+
+
+
+## Disabling the Selection of Leaf Nodes
+
+You can prevent users from selecting leaf nodes when selecting header nodes with the `disableLeafSelection` using the manifest settings or the `TreeTable` building block.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "controlConfiguration": {
+>     "_Nodes/@com.sap.vocabularies.UI.v1.LineItem": {
+>         "tableSettings": {
+>             "type": "TreeTable",
+>             "hierarchyQualifier": "NodesHierarchy",
+>             "disableLeafSelection": true
+>         }
+>     }
+> }
+> ```
+
+> ### Sample Code:  
+> `disableLeafSelection` in `TreeTable` Building Block
+> 
+> ```
+> <macros:TreeTable
+>     metaPath="/Products/@com.sap.vocabularies.UI.v1.LineItem"
+>     hierarchyQualifier="ProductsHierarchy"
+>     id="treeTable"
+>     disableLeafSelection="true"/>
+> ```
+
+When `disableLeafSelection` is set to `true`, the selection checkbox is disabled at leaf level, as shown on the following screenshot:
+
+  
+  
+**Node Selection with disableLeafSelection="true"**
+
+![](images/LeafSelection1_71e8304.png "Node Selection with disableLeafSelection="true"")
+
+Additionally, all options in the context menu are disabled, except *Open in New Tab or Window* if navigation from a leaf is enabled:
+
+  
+  
+**Context Menu with disableLeafSelection="true"**
+
+![](images/LeafSelection-ContextMenu_d5d8938.png "Context Menu with disableLeafSelection="true"")
 
 
 

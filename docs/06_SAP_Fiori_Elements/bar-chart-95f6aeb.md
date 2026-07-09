@@ -72,16 +72,16 @@ The number of columns is equal to the number of measures in the annotation file.
 
 ## Semantic Coloring
 
-The semantic coloring of a bar chart card is based on the target and threshold values.
+The semantic coloring of a bar chart is based on the target and threshold values.
 
 The target values are taken from the properties such as `ToleranceRangeLowValue`, `ToleranceRangeHighValue`, `DeviationRangeLowValue`, and `DeviationRangeHighValue` of the data point annotations that are associated with the measure and `ImprovementDirection` property.
 
-The threshold values are taken from that data point annotations that are associated with the measures used in the analytical card.
+The threshold values are taken from the data point annotations that are associated with the measures.
 
 > ### Recommendation:  
 > We recommend you to use only one measure in the chart if you intend to use semantic coloring.
 
-When you semantically color the bar chart card, the threshold values which influence the semantic color would also be displayed in the legend. However, if you use more than one measure in the chart, the legends would only show the values *Good*, *Bad*, and *Neutral*.
+When you semantically color the bar chart, the threshold values which influence the semantic color are also displayed in the legend. However, if you use more than one measure in the chart, the legends only show the values *Good*, *Bad*, and *Neutral*.
 
 The data point should have a Measure Value based on which the direction for improvement is measured. Based on this value, you define if the measure is a:
 
@@ -142,7 +142,7 @@ The measures can be maximizing, minimizing, or target, based on a threhold value
     ![](images/Example_of_a_Target_Measure_7626b9d.png "Example of a Target Measure")
 
 
-The following sample code how to define a bar chart:
+The following sample code shows how to define a bar chart:
 
 > ### Sample Code:  
 > ```
@@ -189,5 +189,5 @@ The following sample code how to define a bar chart:
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Bar Chart Card](bar-chart-card-ee990ca.md).
+> For information about bar chart cards on the overview page, see [Bar Chart Card](bar-chart-card-ee990ca.md).
 

@@ -2,11 +2,7 @@
 
 # Link List Cards
 
-In SAP Fiori elements for OData V4, you can use a link list card to display a list of links with a title, picture, icon, or subtitle.
-
-
-
-A link list card supports quick view to display contact annotation information.
+You can use link list cards to display a list of links with a title, picture, icon, or subtitle. Link list cards support quick views to display contact annotation information.
 
 
 
@@ -26,7 +22,7 @@ Description: Configuring this property places the card title on top of the link 
 > ```
 > "sap.ovp": {
 >     "globalFilterModel": "salesOrder",
->     "globalFilterEntitySet": "GlobalFilters",
+>     "globalFilterEntitySet": "GlobalFilters", 
 >     ...
 >     "cards": {
 >         "card005_RecentContacts": {
@@ -159,7 +155,8 @@ Property: `staticContent`
 > }
 > ```
 
-
+> ### Note:  
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
 
 Link list card supports the following types of navigation:
 
@@ -175,14 +172,12 @@ Link list card supports the following types of navigation:
 
 The following types of link list cards are available:
 
--   Static link list card: This card type displays static data, such as links, images, and icons, in the form of a list. Application developers can specify this data directly in the `manifest.json` file. For more information about configuring static link list cards, see [Configuring the Static Link List Card](configuring-the-static-link-list-card-4e81b77.md).
+-   Static link list card: This card type displays static data, such as links, images, and icons, in the form of a list. You can specify this data directly in the `manifest.json` file. For more information about configuring static link list cards, see [Configuring the Static Link List Card](configuring-the-static-link-list-card-4e81b77.md).
 
 -   Dynamic link list card: This card type reads data including links, images, and icons from the back end and displays them as list items. For more information about configuring dynamic link list cards, see [Configuring the Dynamic Link List Card](configuring-the-dynamic-link-list-card-675c514.md).
 
 
 
-
-<a name="loio0326f910c6af4fb1b86f2810ee10419e__section_r1m_mkw_rdc"/>
 
 ## Different Layouts of Link List Card
 
@@ -200,7 +195,7 @@ The standard link list card displays a list of ordered items. Optionally, you ca
 -   A picture and/or subtitle to the list item.
 -   Multiple columns if the dashboard layout includes multiple columns by modifying the card size.
 
-![](images/StandardLLC_f27c6ec.jpg)
+![Standard Link List Card showing Recent Contacts sorted by importance of interaction.](images/StandardLLC_f27c6ec.jpg)
 
 The following sample code shows how to configure a link list card with a standard view:
 
@@ -230,7 +225,7 @@ The following sample code shows how to configure a link list card with a standar
 
 This type of card provides a carousel-based view, where the title and subtitle appear at the top of the card, allowing more space for the image. Additionally, this list type can be configured to support multiple columns.
 
-![](images/CarouselLLC_4a16a45.jpg)
+![Carousel card displaying team member, their designation, with navigation controls.](images/CarouselLLC_4a16a45.jpg)
 
 You can customize the link list information to appear in the following formats:
 
@@ -249,6 +244,8 @@ You can customize the link list information to appear in the following formats:
 The following sample code shows how to configure a link list card with a carousel view:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "card_20": {
 >     "model": "HEPM_OVP_TECH_VAL",
@@ -262,8 +259,6 @@ The following sample code shows how to configure a link list card with a carouse
 >     }
 > ```
 
-
-
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Link List Cards](link-list-cards-132d863.md).
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
 

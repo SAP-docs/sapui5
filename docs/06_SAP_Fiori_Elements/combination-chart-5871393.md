@@ -12,7 +12,7 @@ A combination chart lets you combine and view two or more chart types in a singl
   
 **Example of a Combination Chart**
 
-![](../01_Whats-New/images/Whats_New_140_OVP_Combination_Chart_55139a9.png "Example of a Combination Chart")
+![Chart showing revenue line increasing from 330K to 540K and cost bars rising from 195K to 370K across 2016 seasons.](../01_Whats-New/images/Whats_New_140_OVP_Combination_Chart_55139a9.png "Example of a Combination Chart")
 
 For example, combining a column and line chart in the same visualization lets you compare values of different categories. This provides a clear view and helps you compare categories.
 
@@ -22,10 +22,9 @@ For combination charts:
 
 -   We recommend only using one time-based dimension for the **category** axis.
 
--   All measures, irrespective of their roles, are assigned to the feed's UID value axis. You need to have at least two measures for combination chart cards.
+-   All measures, irrespective of their roles, are assigned to the feed's UID value axis. You need to have at least two measures for combination charts.
 
 -   For all dimensions with a role:
-
     -   A **Category** is assigned to the category axis with the default role. You need to have at least one role assigned to the category axis.
 
     -   A **Series** is assigned to the feed UID's color and is displayed within the chart area with a differently colored column and line combinations for each of its members.
@@ -131,5 +130,5 @@ For combination charts:
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Combination Chart Card](combination-chart-card-b463340.md).
+> For information about combination chart cards on the overview page, see [Combination Chart Card](combination-chart-card-b463340.md).
 

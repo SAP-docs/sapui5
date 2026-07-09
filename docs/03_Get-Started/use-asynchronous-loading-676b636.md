@@ -80,7 +80,7 @@ Starting with SAPUI5 1.136, Manifest Version 2 \(`"_version": "2.x.y"`\) enforce
 
 ```json
 {
-    "_version": "2.8.0",
+    "_version": "2.10.0",
     "sap.app": {
         "id": "my.app",
         "type": "application",

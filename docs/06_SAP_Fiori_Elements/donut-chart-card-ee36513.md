@@ -4,24 +4,28 @@
 
 You can render the chart as a donut chart, which displays data as the differently colored sections of a donut.
 
-> ### Note:  
-> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Donut Chart](donut-chart-87a17eb.md).
-
   
   
 **Example of a Donut Chart Card**
 
 ![](images/Donut_Chart_0750575.png "Example of a Donut Chart Card")
 
-The value of the measure determines the size of each section. Donut charts help the viewer to quickly determine the key area that needs attention. For example, you can view numbers and percentages. You can also disable navigation in the graph \(optional\).
+The size of each section is determined by the value of the measure, helping users quickly identify the key area that needs attention. Donut charts can display numbers and percentages, and you can optionally disable navigation from the chart.
+
+Donut charts have the following requirements:
+
+-   Exactly one measure
+
+-   More than one dimension. If multiple dimensions are defined, they are stacked. The sections of the chart then represent the combination of all dimensions.
+
+
+For example, if you define `Sales` as your measure, and provide two dimensions: `Year` and `Country`, the chart displays the sales data of each combination of year and country as a separate colored section.
 
 
 
-Donut charts require exactly one measure. You can provide more than one dimension. If this is the case, the dimensions are stacked so that the sections of the chart represent the combination of all dimensions. For example, if you define **Sales** as your measure, and provide two dimensions: **Year** and **Country**, the chart displays the sales data of each combination of year and country as a separate colored section.
+## Displaying Percentages
 
-
-
-### Example for displaying percentages
+To display values as percentages, configure the `ChartProperties` setting with `dataLabel.type` set to `percentage`, as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
@@ -41,15 +45,15 @@ Donut charts require exactly one measure. You can provide more than one dimensio
 
 ## Stable Coloring
 
-You can now assign specific colors to the sections in the donut chart. Each color can be assigned to a particular dimension value. To enable this feature:
+You can assign specific colors to sections of the donut chart. Each color can be assigned to a particular dimension value. To enable this feature, perform the following configurations:
 
--   Configure a color map object that maps the key-value pairs between dimension and color values in the `colorPalette` property of the descriptor configuration.
+-   Define a color map object in the `colorPalette` property of the `manifest.json` file. This object associates key-value pairs between dimension and color values.
 
--   Enable stable coloring by setting the `bEnableStableColors` property to **true** in card settings.
+-   Enable stable coloring by setting the `bEnableStableColors` property to `true` in card settings.
 
--   The chart dimension property \(`Role`\) in the chart annotation has to be a `Category`.
+-   Set the `Role`, chart dimension property in the chart annotation has to be a `Category`.
 
--   Define the `com.sap.vocabularies.Common.v1.Text` annotation for a dimension property within the entity type. This is considered to be a label for any individual dimensions value and also for rendering appropriate texts in the chart's legend.
+-   Define the `com.sap.vocabularies.Common.v1.Text` annotation for a dimension property within the entity type. This text is used as the label for individual dimensions value and also for rendering appropriate texts in the chart's legend.
 
 
 
@@ -58,5 +62,7 @@ You can now assign specific colors to the sections in the donut chart. Each colo
 
 ## Others Sector
 
-You can pass filter conditions to target applications other than the dimensions shown on the donut chart. For example, in a donut chart with the sections A, B, C, and Others, navigation from Others section leads to a filter condition that excludes A, B, and C.
+A donut chart can group remaining data into an *Others* sector. You can pass filter conditions to target applications for sectors other than those explicitly shown on the chart.
+
+For example, in a donut chart with the sections A, B, C, and Others, navigation from Others section leads to a filter condition that excludes A, B, and C.
 

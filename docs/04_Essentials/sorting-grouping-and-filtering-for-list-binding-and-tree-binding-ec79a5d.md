@@ -127,6 +127,8 @@ const oList = new List({
 
 You can also provide sorters and filters in the [aggregation binding info](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject.AggregationBindingInfo%23overview) passed as a parameter when binding an aggregation of a control, for example [`sap.m.List#bindItems`](https://ui5.sap.com/#/api/sap.m.List%23methods/bindItems).
 
+The OData V4 model evaluates the optional `groupPaths` parameter of `sap.ui.model.Sorter`. For more information, see OData V4 Model \> [Sorting](sorting-d2ce3f5.md).
+
 
 
 <a name="loioec79a5d5918f4f7f9cbc2150e66778cc__section_N100CF_N10013_N10001"/>

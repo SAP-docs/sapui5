@@ -93,9 +93,11 @@ C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTINFO\_AND\_FE
 
 ## Manifest Changes
 
-Changes must be made in the manifest file of the application. Add `enhanceI18n` to the `settings`  of the corresponding section as shown below:
+Changes must be made in the `manifest.json` file of the application. Add `enhanceI18n` to the `settings`  of the corresponding section as shown below:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "targets":{
 >     "SalesOrderManageList":{

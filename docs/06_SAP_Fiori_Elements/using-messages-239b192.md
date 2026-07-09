@@ -211,6 +211,28 @@ When the back end is not available, the gateway typically throws an error type 5
 
 
 
+## Handling Messages in Custom Views
+
+This section explains how applications that use a custom view can handle back-end messages using the extensions provided by SAP Fiori elements.
+
+
+
+### Adding Bound Messages using a Message Popover
+
+You can use the `MessageButton` building block to handle bound messages and display them using a message popover. For more information, see [The MessageButton Building Block](the-messagebutton-building-block-b365f2a.md).
+
+Follow the message handling guidelines to make sure that message handling in the custom view is consistent with message handling in standard floorplans.
+
+
+
+### Adding Transition Messages Through the Message Dialog
+
+You can use a custom view to ensure that transition messages \(both bound and unbound\) from the back end are displayed in a message dialog. To do so, use the "`showMessageDialog`" extension method in the `MessageHandler` class.
+
+For more information, see [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.MessageHandler%23methods/showMessageDialog).
+
+
+
 ## Using Status Messages on the Object Page
 
 Based on information received from the back end, we show a message strip on the object page with a status message for the object whenever it's relevant to the entire object \(and not to a child entity or a specific field, for example\). The color of the message strip is derived from the criticality of the message. You can hide the message strip or display a specific message using the `ExtensionAPI`. For more information about the `ObjectPage.ExtensionAPI`, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ObjectPage.ExtensionAPI/methods/showMessages).

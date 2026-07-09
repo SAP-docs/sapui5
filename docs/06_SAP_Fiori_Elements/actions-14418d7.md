@@ -406,7 +406,7 @@ context dependent
 
 Overview page
 
-[Quick View Cards](quick-view-cards-f65817a.md)
+[Quick View Cards](quick-view-cards-c4bd35e.md)
 
 </td>
 </tr>
@@ -429,7 +429,7 @@ Object page
 </table>
 
 > ### Note:  
-> The overview page only supports micro actions, for example, actions in the quick view cards that open when you click the right-hand side of the stack card. For more information, see [Quick View Cards](quick-view-cards-f65817a.md) and [Defining Custom Actions](defining-custom-actions-c3de5c0.md).
+> The overview page only supports micro actions, for example, actions in the quick view cards that open when you click the right-hand side of the stack card. For more information, see [Quick View Cards](quick-view-cards-c4bd35e.md) and [Defining Custom Actions](defining-custom-actions-c3de5c0.md).
 
 
 

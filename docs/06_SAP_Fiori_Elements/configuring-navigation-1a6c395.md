@@ -38,5 +38,5 @@ With SAP Fiori elements, the following navigation options are available and can 
     For more information, see [Configuring External Navigation](configuring-external-navigation-df91695.md).
 
 
-For information about navigation options for the overview page, see [Configuring Card Navigation](configuring-card-navigation-11b7540.md).
+For information about navigation options for the overview page, see [Configuring Card Navigation](configuring-card-navigation-530f9e6.md).
 

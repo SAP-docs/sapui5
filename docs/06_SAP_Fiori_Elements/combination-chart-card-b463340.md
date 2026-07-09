@@ -6,34 +6,40 @@ You can render the chart as a combination chart, which lets you combine and view
 
 
 
-> ### Note:  
-> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Combination Chart](combination-chart-5871393.md).
-
-
-
   
   
 **Example of a Combination Chart Card**
 
 ![](../01_Whats-New/images/Whats_New_140_OVP_Combination_Chart_55139a9.png "Example of a Combination Chart Card")
 
-For example, combining a column and line chart in the same visualization lets you compare values of different categories. This provides a clear view and helps you compare categories.
+A combination chart has the following requirements:
 
-For combination charts:
+-   At least two measures. The first measure is displayed as columns, and each subsequent measure is displayed as a line.
 
--   The first measure is used for the column format and the subsequent measure is displayed as a line within the chart.
-
--   We recommend only using one time-based dimension for the **category** axis.
-
--   All measures, irrespective of their roles, are assigned to the feed's UID value axis. You need to have at least two measures for combination chart cards.
-
--   For all dimensions with a role:
-
-    -   A **Category** is assigned to the category axis with the default role. You need to have at least one role assigned to the category axis.
-
-    -   A **Series** is assigned to the feed UID's color and is displayed within the chart area with a differently colored column and line combinations for each of its members.
+-   At least one dimension with the `Category` role assigned to the category axis.
 
 
+> ### Note:  
+> We recommend using one time-based dimension for the **category** axis.
+
+Measures are visualized based on their position in the annotation:
+
+-   The first measure is displayed as columns.
+
+-   Each subsequent measure is displayed as a line within the chart.
+
+
+> ### Note:  
+> The `Role` property is ignored for measures in a combination chart. Use `Axis1` as a convention, but the visualization is determined by measure order.
+
+Dimensions are visualized based on their role:
+
+-   `Category` \(default\): Forms the category axis \(x-axis\).
+
+-   `Series`: Splits the data into differently colored column and line combinations, one per dimension value.
+
+
+The following code samples show how to configure a combination chart with two measures \(`sales` and `totalsales`\) and one dimension \(`quarter_1`\):
 
 > ### Sample Code:  
 > XML Annotation

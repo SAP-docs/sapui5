@@ -430,6 +430,30 @@ SAPUI5 Version
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+2.9.0 *or* 1.87.0
+
+</td>
+<td valign="top">
+
+\>=1.149
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.10.0 *or* 1.88.0
+
+</td>
+<td valign="top">
+
+\>=1.150
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version and implications when upgrading, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md).
@@ -1203,7 +1227,7 @@ Mandatory; contains objects with device types on which the app is running, such 
 </td>
 <td valign="top">
 
-Indicates whether SAP Fiori launchpad shall render the target application utilizing the full width of the viewport \(`true`\) or not \(`false`\). For more information, see [Letterboxing](https://experience.sap.com/fiori-design-web/letter-boxing/).
+Indicates whether SAP Fiori launchpad shall render the target application utilizing the full width of the viewport \(`true`\) or not \(`false`\). For more information, see [Letterboxing](https://www.sap.com/design-system/fiori-design-web/page-types/page-layouts/letter-boxing).
 
 > ### Note:  
 > This parameter is currently subject to SAP Fiori launchpad only and has no effect on standalone or SAP Fiori elements applications. Standalone applications can use `sap.m.Shell` to restrict the application width.
@@ -1827,7 +1851,7 @@ Current version of the `manifest.json`
 ```
 
 {
-"_version": "1.86.0",
+"_version": "1.88.0",
  
     "start_url": "index.html",
  
@@ -2061,7 +2085,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.148.0",
+            "minUI5Version": "1.150.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

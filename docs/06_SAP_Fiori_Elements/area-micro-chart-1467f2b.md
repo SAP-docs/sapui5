@@ -60,26 +60,25 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > ABAP CDS Annotation
 > 
 > ```
-> 
 > @UI.Chart: [
->   {
->     title: 'Sales Price',
->     description: 'Area Micro Chart',
->     chartType: #AREA,
->     dimensions: [
->       'PRICEDAY'
->     ],
->     measures: [
->       'AREACHARTPRICE'
->     ],
->     measureAttributes: [
->       {
->         measure: 'AreaChartPrice',
->         role: #AXIS_1,
->         asDataPoint: true
->       }
->     ]
->   }
+>     {
+>         title: 'Sales Price',
+>         description: 'Area Micro Chart',
+>         chartType: #AREA,
+>         dimensions: [
+>             'PRICEDAY'
+>         ],
+>         measures: [
+>             'AREACHARTPRICE'
+>         ],
+>         measureAttributes: [
+>             {
+>                 measure: 'AreaChartPrice',
+>                 role: #AXIS_1,
+>                 asDataPoint: true
+>             }
+>         ]
+>     }
 > ]
 > annotate view STTA_C_MP_PRODUCT with {
 > 
@@ -149,14 +148,14 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > ```
 > 
 > @UI.dataPoint: {
->   targetValueElement: 'TargetPrice',
->   criticalityCalculation: {
->     improvementDirection: #TARGET,
->     deviationRangeHighValueElement: 'DeviationUpperBoundPrice',
->     deviationRangeLowValueElement: 'DeviationLowerBoundPrice',
->     toleranceRangeHighValueElement: 'ToleranceUpperBoundPrice',
->     toleranceRangeLowValueElement: 'ToleranceLowerBoundPrice'
->   }
+>     targetValueElement: 'TargetPrice',
+>     criticalityCalculation: {
+>         improvementDirection: #TARGET,
+>         deviationRangeHighValueElement: 'DeviationUpperBoundPrice',
+>         deviationRangeLowValueElement: 'DeviationLowerBoundPrice',
+>         toleranceRangeHighValueElement: 'ToleranceUpperBoundPrice',
+>         toleranceRangeLowValueElement: 'ToleranceLowerBoundPrice'
+>     }
 > }
 > AreaChartPrice;
 > 

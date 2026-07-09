@@ -44,22 +44,22 @@ In the following sample code, the currency code is implemented as a dropdown lis
 > 
 > ```
 > annotate view PRODUCTS with {
-> 	@Consumption.valueHelpDefinition:
-> 	[{
-> 	  entity :{
-> 		 name    : 'Currencies',
-> 		 element : 'code'
-> 		},
-> 	    label  : 'Currency'
-> 	}]
+>     @Consumption.valueHelpDefinition:
+>     [{
+>         entity :{
+>             name    : 'Currencies',
+>             element : 'code'
+>         },
+>         label  : 'Currency'
+>     }]
 > 
-> 	@ObjectModel: {
-> 		text: {
-> 			element: [ 'name' ]
-> 		 }
-> 	}
-> 	@UI.textArrangement: #TEXT_ONLY
->    currency_code;
+>     @ObjectModel: {
+>         text: {
+>             element: [ 'name' ]
+>         }
+>     }
+>     @UI.textArrangement: #TEXT_ONLY
+>     currency_code;
 > }
 > ```
 
@@ -193,24 +193,24 @@ The data element `FieldWithRadioButtons` is displayed as a radio button group us
 > 
 > ```
 > <Annotations Target="sap.fe.core.ValueHelpRadioButtons.RootElement/PropWithValueList">
->   <Annotation Term="Common.Label" String="Radio button field via annotation"/>
->   <Annotation Term="Common.ValueListWithFixedValues" Bool="true">
->     <Annotation Term="Common.ValueListShowValuesImmediately" Bool="true"/>
->   </Annotation>
->   <Annotation Term="Common.ValueList">
->     <Record Type="Common.ValueListType">
->       <PropertyValue Property="Label" String="Value list with fixed values"/>
->       <PropertyValue Property="CollectionPath" String="FixedValueListEntity"/>
->       <PropertyValue Property="Parameters">
->         <Collection>
->           <Record Type="Common.ValueListParameterInOut">
->             <PropertyValue Property="LocalDataProperty" PropertyPath="PropWithValueList"/>
->             <PropertyValue Property="ValueListProperty" String="KeyProp"/>
->           </Record>
->         </Collection>
->       </PropertyValue>
->     </Record>
->   </Annotation>
+>     <Annotation Term="Common.Label" String="Radio button field via annotation"/>
+>     <Annotation Term="Common.ValueListWithFixedValues" Bool="true">
+>         <Annotation Term="Common.ValueListShowValuesImmediately" Bool="true"/>
+>     </Annotation>
+>     <Annotation Term="Common.ValueList">
+>         <Record Type="Common.ValueListType">
+>             <PropertyValue Property="Label" String="Value list with fixed values"/>
+>             <PropertyValue Property="CollectionPath" String="FixedValueListEntity"/>
+>             <PropertyValue Property="Parameters">
+>                 <Collection>
+>                     <Record Type="Common.ValueListParameterInOut">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="FieldWithRadioButtons"/>
+>                         <PropertyValue Property="ValueListProperty" String="KeyProp"/>
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
 > </Annotations>
 > ```
 
@@ -224,24 +224,24 @@ The data element `FieldWithRadioButtons` is displayed as a radio button group us
 > 
 > ```
 > FieldWithRadioButtons  : String @(Common: {
-> 		ValueListWithFixedValues                                       : true,
-> 		ValueListWithFixedValues.@Common.ValueListShowValuesImmediately: true,
-> 		ValueList                                                      : {
-> 			CollectionPath: 'FixedValueListEntity',
-> 			Parameters    : [
-> 				{
-> 					$Type            : 'Common.ValueListParameterInOut',
-> 					LocalDataProperty: FieldWithRadioButtons,
-> 					ValueListProperty: 'KeyProp'
-> 				}
-> 			]
-> 		}
+>     ValueListWithFixedValues                                       : true,
+>     ValueListWithFixedValues.@Common.ValueListShowValuesImmediately: true,
+>     ValueList                                                      : {
+>         CollectionPath: 'FixedValueListEntity',
+>         Parameters    : [
+>             {
+>                 $Type            : 'Common.ValueListParameterInOut',
+>                 LocalDataProperty: FieldWithRadioButtons,
+>                 ValueListProperty: 'KeyProp'
+>             }
+>         ]
+>     }
 > });
->  
+> 
 > @cds.autoexpose
 > entity FixedValueListEntity {
-> 		key KeyProp     : Integer @Common.Text : Description;
-> 			Description : String
+>     key KeyProp     : Integer @Common.Text : Description;
+>         Description : String
 > }
 > ```
 
@@ -258,23 +258,23 @@ The data element `FieldWithFixedValueList` is rendered as a radio button group i
 > 
 > ```
 > <Annotations Target="sap.fe.core.ValueHelpRadioButtons.RootElement/PropWithValueList">
->   <Annotation Term="Common.Label" String="Radio button field via annotation"/>
->   <Annotation Term="Common.ValueListWithFixedValues" Bool="true">
->   </Annotation>
->   <Annotation Term="Common.ValueList">
->     <Record Type="Common.ValueListType">
->       <PropertyValue Property="Label" String="Value list with fixed values"/>
->       <PropertyValue Property="CollectionPath" String="FixedValueListEntity"/>
->       <PropertyValue Property="Parameters">
->         <Collection>
->           <Record Type="Common.ValueListParameterInOut">
->             <PropertyValue Property="LocalDataProperty" PropertyPath="PropWithValueList"/>
->             <PropertyValue Property="ValueListProperty" String="KeyProp"/>
->           </Record>
->         </Collection>
->       </PropertyValue>
->     </Record>
->   </Annotation>
+>     <Annotation Term="Common.Label" String="Radio button field via annotation"/>
+>     <Annotation Term="Common.ValueListWithFixedValues" Bool="true">
+>     </Annotation>
+>     <Annotation Term="Common.ValueList">
+>         <Record Type="Common.ValueListType">
+>             <PropertyValue Property="Label" String="Value list with fixed values"/>
+>             <PropertyValue Property="CollectionPath" String="FixedValueListEntity"/>
+>             <PropertyValue Property="Parameters">
+>                 <Collection>
+>                     <Record Type="Common.ValueListParameterInOut">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="FieldWithRadioButtonsViaManifest"/>
+>                         <PropertyValue Property="ValueListProperty" String="KeyProp"/>
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
 > </Annotations>
 > ```
 
@@ -288,38 +288,36 @@ The data element `FieldWithFixedValueList` is rendered as a radio button group i
 > 
 > ```
 > FieldWithRadioButtonsViaManifest  : String @(Common: {
-> 		ValueListWithFixedValues    : true,
-> 		ValueList                   : {
-> 			CollectionPath: 'FixedValueListEntity',
-> 			Parameters    : [
-> 				{
-> 					$Type            : 'Common.ValueListParameterInOut',
-> 					LocalDataProperty: FieldWithRadioButtonsViaManifest,
-> 					ValueListProperty: 'KeyProp'
-> 				}
-> 			]
-> 		}
+>     ValueListWithFixedValues    : true,
+>     ValueList                   : {
+>         CollectionPath: 'FixedValueListEntity',
+>         Parameters    : [
+>             {
+>                 $Type            : 'Common.ValueListParameterInOut',
+>                 LocalDataProperty: FieldWithRadioButtonsViaManifest,
+>                 ValueListProperty: 'KeyProp'
+>             }
+>         ]
+>     }
 > });
->  
+> 
 > @cds.autoexpose
 > entity FixedValueListEntity {
-> key KeyProp     : Integer @Common.Text : Description;
->     Description : String
+>     key KeyProp     : Integer @Common.Text : Description;
+>         Description : String
 > }
->  
+> 
 > UI.FieldGroup #MyFieldGroup : {
 >     Label: 'Line item data',
 >     Data : [
->       {Value: FieldWithRadioButtonsViaManifest}
-> 	]
+>         {Value: FieldWithRadioButtonsViaManifest}
+>     ]
 > }
->  
-> 
 > 
 > ```
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > ...

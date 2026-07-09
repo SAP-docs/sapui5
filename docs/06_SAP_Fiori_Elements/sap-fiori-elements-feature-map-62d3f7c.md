@@ -1514,7 +1514,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Creating Custom Cards](creating-custom-cards-6d260f7.md)
+[Creating Custom Cards on the Overview Page](creating-custom-cards-on-the-overview-page-6d260f7.md)
 
 </td>
 <td valign="top">
@@ -2253,6 +2253,45 @@ Edit
 Direct Edit
 
 Navigation
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Disabling the selection of leaf nodes
+
+</td>
+<td valign="top">
+
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Tree Tables](tree-tables-7cf7a31.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Disabled Leaf Node Selection**
+
+![](images/LeafSelection1_71e8304.png "Disabled Leaf Node Selection")
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -3156,7 +3195,7 @@ Header toolbar
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
 
-[Defining Custom Actions on the Overview Page](defining-custom-actions-on-the-overview-page-02fb273.md)
+[Defining Custom Actions for Quick View Cards on the Overview Page](defining-custom-actions-for-quick-view-cards-on-the-overview-page-02fb273.md)
 
 </td>
 <td valign="top">

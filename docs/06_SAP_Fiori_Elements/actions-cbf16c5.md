@@ -80,7 +80,7 @@ Object page
 
 Overview page
 
-[Defining Custom Actions on the Overview Page](defining-custom-actions-on-the-overview-page-02fb273.md)
+[Defining Custom Actions for Quick View Cards on the Overview Page](defining-custom-actions-for-quick-view-cards-on-the-overview-page-02fb273.md)
 
 </td>
 </tr>

@@ -33,25 +33,25 @@ To define visual filters, you must define value list annotations for the filter 
 You must ensure that there's a manifest property for each visual filter that is to be rendered:
 
 > ### Sample Code:  
-> `manifest.json` setting for visual filters
+> The `manifest.json` Setting for Visual Filters
 > 
 > ```json
-> "settings" : {  
->    "contextPath" : "/SalesOrderManage",
->    "controlConfiguration" : {
->       "@com.sap.vocabularies.UI.v1.SelectionFields" : {
->          "layout": "CompactVisual" , // Possible Values: "Compact" (if only compact filter is present) and "CompactVisual" if both compact and visual filters are present
->          "initialLayout": "Visual" , // Specifies the default filter mode on initial load. Possible values: "Visual" and "Compact"
->          "filterFields": {
->             "ItemRating": { // Below this are all the settings for "ItemRating" filter field
->                "availability": "Default", // see below for possible values
->                "visualFilter": { // Only available if there is a visual filter configured for this filter field and holds all information specific to visual filter configuration
->                   "valueList": "<pathToValueList>" // Should point to the valuelist annotation corresponding to the visual filter representation
->                }
+> "settings" : {
+>     "contextPath" : "/SalesOrderManage",
+>     "controlConfiguration" : {
+>         "@com.sap.vocabularies.UI.v1.SelectionFields" : {
+>             "layout": "CompactVisual", // Possible Values: "Compact" (if only compact filter is present) and "CompactVisual" if both compact and visual filters are present
+>             "initialLayout": "Visual", // Specifies the default filter mode on initial load. Possible values: "Visual" and "Compact"
+>             "filterFields": {
+>                 "ItemRating": { // Below this are all the settings for "ItemRating" filter field
+>                     "availability": "Default", // see below for possible values
+>                     "visualFilter": { // Only available if there is a visual filter configured for this filter field and holds all information specific to visual filter configuration
+>                         "valueList": "<pathToValueList>" // Should point to the valuelist annotation corresponding to the visual filter representation
+>                     }
+>                 }
 >             }
->          }
->       }
->    }
+>         }
+>     }
 > }
 > ```
 

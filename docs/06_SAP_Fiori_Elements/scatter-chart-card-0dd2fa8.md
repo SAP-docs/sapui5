@@ -2,12 +2,7 @@
 
 # Scatter Chart Card
 
-You can render the chart as a a scatter chart, which allows you visualize the distribution of data points over two measures.
-
-
-
-> ### Note:  
-> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Scatter Chart](scatter-chart-7471c1f.md).
+You can render the chart as a scatter chart, which allows you visualize the distribution of data points over two measures.
 
 
 
@@ -15,16 +10,32 @@ You can render the chart as a a scatter chart, which allows you visualize the di
   
 **Example of a Scatter Chart Card**
 
-![](../01_Whats-New/images/Whats_New_140_OVP_Scatter_Chart_f264ec1.png "Example of a Scatter Chart Card")
+![Scatter plot showing an upward trend with values ranging from 0 to 1.2M on the y-axis and 0 to 7M on the x-axis.](../01_Whats-New/images/Whats_New_140_OVP_Scatter_Chart_f264ec1.png "Example of a Scatter Chart Card")
 
-For the first measure, the role is set to an axis is assigned to the `valueAxis` feed UID makes up the x-axis.
+A scatter chart has the following requirements:
 
-> ### Note:  
-> The role is set to `axis1`, `axis2` \(if there's no `axis1`\), or `axis3` \(if there's no `axis2`\).
+-   Two measures. One for the x-axis and one for the y-axis.
 
-The other measure is plotted on the y-axis.
+-   Up to two dimensions.
 
-A scatter chart card supports a maximum of two dimensions. If the dimension is not marked with a role, then all members of the dimension are plotted as equal-sized bubbles of the same color in the chart. You can assign only one dimension to the `Series` role and all members of this dimension get a different color. A maximum of only one dimension can be assigned to the `Category` role and all members of such a dimension get a different shape.
+
+Each measure is assigned to an axis based on its `Role`:
+
+-   X-axis \(`valueAxis` feed\): The first measure with an axis role is assigned to the x-axis. The role is set to `Axis1`, or `Axis2` \(if there's no `Axis1`\), or `Axis3` \(if there's no `Axis2`\).
+
+-   Y-axis: The other measure is plotted on the y-axis.
+
+
+Dimensions are visualized based on their role:
+
+-   No role: All members of the dimension are plotted as equal-sized bubbles of the same color.
+
+-   `Series` role: All members of the dimension get a different color. Only one dimension can be assigned the `Series` role.
+
+-   `Category` role: All members of the dimension get a different shape. Only one dimension can be assigned the `Category` role.
+
+
+The following code samples show how to configure a scatter chart with two measures \(`salesshare` and `totalsales`\) and one dimension \(`suppliercompany`\) with no role:
 
 > ### Sample Code:  
 > XML Annotation

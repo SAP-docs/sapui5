@@ -2,28 +2,21 @@
 
 # Sharing Overview Pages
 
-In In SAP Fiori elements for OData V4, users can share their application as a tile on SAP Fiori launchpad or by sending an email link.
+Users can share an overview page as a tile on SAP Fiori launchpad or by sending an email link. Use this feature to ensure recipients view the same filtered data state as the sender.
 
 
 
-## SAP Fiori Launchpad
+## Sharing As a Tile on SAP Fiori Launchpad
 
-The current state of the filter bar in the application is stored as a tile on SAP Fiori launchpad.
+When users save an overview page as a tile, the current state of the filter bar is stored on SAP Fiori launchpad.
 
 To save the application, on the filter bar, click *Share* \> *Save As Tile* \> *Fill required fields* \> *OK*.
 
 
 
-<a name="loiof9d88b50f1d5448cb26cec01fd9b5a5e__section_evy_slj_bbb"/>
+## Sharing by Email
 
-## Email
-
-Users can also share the current state of an overview page by email, which contains a link to their application.
+Users can also share the current state of an overview page by email, which contains a link that opens the application in the same filter state.
 
 To send an email link, on the filter bar, click *Share* \> *Send Email*.
-
-
-
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Sharing Overview Pages](sharing-overview-pages-a2dec2b.md).
 

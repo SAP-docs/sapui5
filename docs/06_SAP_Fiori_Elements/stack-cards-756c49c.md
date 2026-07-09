@@ -2,20 +2,365 @@
 
 # Stack Cards
 
-In SAP Fiori elements for OData V4, you can use stack cards to group multiple cards of the same type that are related to a common topic or action. When clicked, the object stream can display up to 20 stacked cards.
+You can use stack cards to group multiple cards of the same type that are related to a common topic or action. When clicked, the object stream can display up to 20 stacked cards.
 
 
+
+![](images/SC_c7a8701.png)
+
+
+
+### 
+
+Hover over each action for a description. Click the action for more information.
+
+
+
+### Manifest Settings: Title
+
+Property: `title`
+
+Description: Configuring this property displays the card title on top of the stack card.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntitySet": "GlobalFilters",
+>     ...
+>     "cards": {
+>         "card001_cardchartsTabbed": {
+>             "model": "salesOrder",
+>             "template": "sap.ovp.cards.v4.stack",
+>             "settings": {
+>                 "title": "Products Out of Stock",
+>                 "entitySet": "salesOrder",
+>                 ...
+>             }
+>         }
+>     }
+> }
+> ```
+
+
+
+### Manifest Settings: Subtitle
+
+Property: `subTitle`
+
+Description: Configuring this property displays the card subtitle below the title of the stack card.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntitySet": "GlobalFilters",
+>     ...
+>     "cards": {
+>         "card001_cardchartsTabbed": {
+>             "model": "salesShare",
+>             "template": "sap.ovp.cards.v4.stack",
+>             "settings": {
+>                 "title": "Sales Forecast",
+>                 "subTitle": "SalesOrderSet Stack Card",
+>                 "entitySet": "SalesShare",
+>                 ...
+>             }
+>         }
+>     }
+> }
+> ```
+
+
+
+### Configuring the Object Stream
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntitySet": "GlobalFilters",
+>     "showDateInRelativeFormat": false,
+>     "disableTableCardFlexibility": false,
+>     "useDateRangeType": false,
+>     "card007_ProductsOutOfStock": {
+>         "model": "salesOrder",
+>         "template": "sap.ovp.cards.v4.stack",
+>         "settings": {
+>             "itemText": "{{stackCard_itemText}}",
+>             "title": "Products Out of Stock",
+>             "subTitle": "SalesOrderSet Stack Card",
+>             "requireAppAuthorization": "#Action-toappnavsample",
+>             "entitySet": "SalesOrderSet",
+>             "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+>             "objectStreamCardsSettings": {
+>                 "showFirstActionInFooter": false,
+>                 "customActions": [
+>                     {
+>                         ...
+>                     }
+>                 ]
+>             }
+>         }
+>     }
+> }
+> ```
+
+**Annotation Sample for `Identification`**
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="com.sap.vocabularies.UI.v1.Identification">
+>     <Collection>
+>         <Record Type="com.sap.vocabularies.UI.v1.DataFieldWithUrl">
+>             <PropertyValue Property="Label" String="Link to url"/>
+>             <PropertyValue Property="Value" String="Google Maps"/>
+>             <PropertyValue Property="Url" String="https://www.google.com"/>
+>             <Annotation Term="com.sap.vocabularies.UI.v1.Importance" EnumMember="com.sap.vocabularies.UI.v1.ImportanceType/Medium"/>
+>         </Record>
+>         <Record Type="com.sap.vocabularies.UI.v1.DataFieldWithUrl">
+>             <PropertyValue Property="Label" String="Link to"/>
+>             <PropertyValue Property="Value" String="Some Intent"/>
+>             <PropertyValue Property="Url" String="#Action-toappnavsample2&amp;/ShowView2/"/>
+>             <Annotation Term="com.sap.vocabularies.UI.v1.Importance" EnumMember="com.sap.vocabularies.UI.v1.ImportanceType/High"/>
+>         </Record>
+>         <Record Type="com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation">
+>             <PropertyValue Property="SemanticObject" String="Action"/>
+>             <PropertyValue Property="Action" String="toappnavsample"/>
+>             <PropertyValue Property="Label" String="SO Navigation (M)"/>
+>             <Annotation Term="com.sap.vocabularies.UI.v1.Importance" EnumMember="com.sap.vocabularies.UI.v1.ImportanceType/Medium"/>
+>         </Record>
+>     </Collection>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.identification: [
+>   {
+>     importance: #MEDIUM,
+>     label: 'Link to url',
+>     type: #WITH_URL,
+>     position: 10
+>   },
+>   {
+>     importance: #HIGH,
+>     label: 'Link to',
+>     type: #WITH_URL,
+>     position: 20
+>   },
+>   {
+>     importance: #MEDIUM,
+>     semanticObjectAction: 'toappnavsample',
+>     label: 'SO Navigation (M)',
+>     type: #FOR_INTENT_BASED_NAVIGATION,
+>     position: 30
+>   }
+> ]
+> PROPERT_NAME;
+> 
+> @Consumption.semanticObject: 'Action'
+> annotate view VIEWNAME with { }
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> UI.Identification : [
+>     {
+>         $Type : 'UI.DataFieldWithUrl',
+>         Label : 'Link to url',
+>         Value : 'Google Maps',
+>         Url : 'https://www.google.com',
+>         ![@UI.Importance] : #Medium
+>     },
+>     {
+>         $Type : 'UI.DataFieldWithUrl',
+>         Label : 'Link to',
+>         Value : 'Some Intent',
+>         Url : '#Action-toappnavsample2&amp;/ShowView2/',
+>         ![@UI.Importance] : #High
+>     },
+>     {
+>         $Type : 'UI.DataFieldForIntentBasedNavigation',
+>         SemanticObject : 'Action',
+>         Action : 'toappnavsample',
+>         Label : 'SO Navigation (M)',
+>         ![@UI.Importance] : #Medium
+>     }
+> ]
+> 
+> ```
+
+
+
+### Configuring the Navigation Area
+
+> ### Sample Code:  
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntitySet": "GlobalFilters",
+>     "showDateInRelativeFormat": false,
+>     "disableTableCardFlexibility": false,
+>     "useDateRangeType": false,
+>     "card007_ProductsOutOfStock": {
+>         "model": "salesOrder",
+>         "template": "sap.ovp.cards.v4.stack",
+>         "settings": {
+>             "itemText": "{{stackCard_itemText}}",
+>             "title": "Products Out of Stock",
+>             "subTitle": "SalesOrderSet Stack Card",
+>             "requireAppAuthorization": "#Action-toappnavsample",
+>             "entitySet": "SalesOrderSet",
+>             "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification,com.sap.vocabularies.UI.v1.Identification#item2",
+>             "objectStreamCardsSettings": {
+>                 "showFirstActionInFooter": false,
+>                 "customActions": [
+>                     {
+>                         ...
+>                     }
+>                 ]
+>             }
+>         }
+>     }
+> }
+> ```
+
+**Annotation Sample for `Identification#item2`**
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+>                 <Annotation Term="com.sap.vocabularies.UI.v1.Identification" Qualifier="item2">
+>                     <Collection>
+>                         <Record Type="com.sap.vocabularies.UI.v1.DataFieldWithUrl">
+>                             <PropertyValue Property="Label" String="Link to url"/>
+>                             <PropertyValue Property="Value" String="Google Maps"/>
+>                             <PropertyValue Property="Url" String="https://www.google.com"/>
+>                             <Annotation Term="com.sap.vocabularies.UI.v1.Importance" EnumMember="com.sap.vocabularies.UI.v1.ImportanceType/Medium"/>
+>                         </Record>
+>                         <Record Type="com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation">
+>                             <PropertyValue Property="SemanticObject" String="Action"/>
+>                             <PropertyValue Property="Action" String="toappnavsample"/>
+>                             <PropertyValue Property="Label" String="SO Navigation (M)"/>
+>                             <Annotation Term="com.sap.vocabularies.UI.v1.Importance" EnumMember="com.sap.vocabularies.UI.v1.ImportanceType/High"/>
+>                         </Record>
+>                     </Collection>
+>                 </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @UI.identification: [
+>   {
+>     importance: #MEDIUM,
+>     label: 'Link to url',
+>     type: #WITH_URL,
+>     position: 10
+>   },
+>   {
+>     importance: #HIGH,
+>     semanticObjectAction: 'toappnavsample',
+>     label: 'SO Navigation (M)',
+>     type: #FOR_INTENT_BASED_NAVIGATION,
+>     position: 20
+>   }
+> ]
+> PROPERT_NAME;
+> 
+> @Consumption.semanticObject: 'Action'
+> annotate view VIEWNAME with { 
+> 
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> UI.Identification #item2 : [
+>     {
+>         $Type : 'UI.DataFieldWithUrl',
+>         Label : 'Link to url',
+>         Value : 'Google Maps',
+>         Url : 'https://www.google.com',
+>         ![@UI.Importance] : #Medium
+>     },
+>     {
+>         $Type : 'UI.DataFieldForIntentBasedNavigation',
+>         SemanticObject : 'Action',
+>         Action : 'toappnavsample',
+>         Label : 'SO Navigation (M)',
+>         ![@UI.Importance] : #High
+>     }
+> ]
+> ```
+
+
+
+### Example
+
+In the following example, the stack card displays information about business partners in a quick view card, using the information configured in `com.sap.vocabularies.UI.v1.Identification` with a qualifier.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "sap.ovp": {
+>   ...
+>   "cards": {
+>     "card00": {
+>       "model": "salesOrder",
+>       "template": "sap.ovp.cards.v4.stack",
+>       "settings": {
+>         "title": "Stack Card Title",
+>         "subTitle": "Stack Card",
+>         "requireAppAuthorization": "#Action-toappnavsample",
+>         "itemText": "items awaiting approval",
+>         "entitySet": "SalesOrderSet",
+>         "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification,com.sap.vocabularies.UI.v1.Identification#item2",
+>         "objectStreamCardsSettings": {
+>           "showFirstActionInFooter": false
+>         }
+>       }
+>     },
+>     ...
+>   }
+> }
+> ```
+
+> ### Note:  
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
 
 The left-hand side of the card contains the application title \(which is also the title of the object stream\) and stack description \(optional\). Click this section of the card or *View All* to open the application.
-
-
-
-### Object Stream
 
 On the right-hand side of the card you can view the number of items in the stack. Click this section to view the object stream \(up to 20 quick view cards\) excluding the placeholder card that appears as the last card in the object stream\).
 
 > ### Note:  
 > The placeholder card provides additional information and appears only when the object stream has 20 quick view cards.
+
+
+
+### Object Stream
 
 You can configure the quick view cards to provide actions \(such as confirm or reject\) and a navigation link. The object stream's header is also navigable and navigates to the same destination as the navigation from the header of the stack card.
 
@@ -39,11 +384,12 @@ Because of the relationship between the stack card and its object stream, some o
 
 ## Example
 
-In the following example, the stack card displays information about business partners in a quick view card, using the information configured in `com.sap.vocabularies.UI.v1.Identification` with a qualifier.
+The following sample code configures a stack card displaying sales order items awaiting approval, using the `SalesOrderSet` entity and `Identification` annotations:
 
 > ### Sample Code:  
-> ```
+> `manifest.json`
 > 
+> ```
 > "sap.ovp": {
 >     ...
 >     "cards": {
@@ -67,7 +413,10 @@ In the following example, the stack card displays information about business par
 > }
 > ```
 
-Continuing the example above, the following metadata demonstrates the relationship between the `BusinessPartner` and `SalesOrder` entity sets. The `BusinessPartner` entity type contains the configured navigation `ToSalesOrders` property to the `SalesOrder` using the `Assoc_BusinessPartner_SalesOrders` association and the `Assoc_BusinessPartner_SalesOrders_AssocS` association set.
+> ### Note:  
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+
+Continuing the code sample above, the following metadata demonstrates the relationship between the `BusinessPartner` and `SalesOrder` entity sets. The `BusinessPartner` entity type contains the configured navigation `ToSalesOrders` property to the `SalesOrder` using the `Assoc_BusinessPartner_SalesOrders` association and the `Assoc_BusinessPartner_SalesOrders_AssocS` association set.
 
 > ### Sample Code:  
 > ```
@@ -140,8 +489,8 @@ Continuing the example above, the following metadata demonstrates the relationsh
 > 
 > ```
 
+**Related Information**  
 
 
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Stack Cards](stack-cards-5922ffb.md).
+[Quick View Cards](quick-view-cards-c4bd35e.md "You can configure quick view cards to display detailed information about a single record—more than a table or list card can show. You can also assign actions to a quick view card; these actions appear as buttons in the card footer.")
 

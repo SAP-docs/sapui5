@@ -33,7 +33,7 @@ On the object page in anchor bar mode, the size of the illustrated message is re
 
 In icon tab bar mode, if the section contains only a table, the size of the illustrated message adapts to the available space for the table similarly to the list report page.
 
-You can override standard illustrated message texts by adding specific keys to the `i18n` file of the list report page, analytical list report page, and object page. For a list of the keys, see [Localization of UI Texts](localization-of-ui-texts-91b525b.md).
+You can override standard illustrated message texts by adding specific keys to the `i18n` file of the list report page, analytical list page, and object page. For a list of the keys, see [Localization of UI Texts](localization-of-ui-texts-91b525b.md).
 
 For more information about the illustrated message, see the [SAP Design System](https://www.sap.com/design-system/fiori-design-web/v1-136/ui-elements/illustrated-message/) guidelines.
 

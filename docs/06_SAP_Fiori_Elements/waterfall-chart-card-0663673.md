@@ -4,16 +4,15 @@
 
 You can render the chart as a waterfall chart to analyze a cumulative value.
 
-> ### Note:  
-> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Waterfall Chart](waterfall-chart-e8106e5.md).
-
   
   
 **Example of a Waterfall Chart Card**
 
 ![](images/Waterfall_Chart_Card_0e381e6.png "Example of a Waterfall Chart Card")
 
-Waterfall charts allow you to see the change in cumulative values from the initial state to the final state by representing the accumulation of successive values. These are the available waterfall charts:
+Waterfall charts allow you to see the change in cumulative values from the initial state to the final state by representing the accumulation of successive values.
+
+The following waterfall chart types are available:
 
 -   Waterfall charts without a time dimension
 
@@ -25,25 +24,32 @@ Waterfall charts allow you to see the change in cumulative values from the initi
 > ### Note:  
 > By default, the legend shows the name of the measure mapped to the chart and two groups `<0` and `>0`. If there is more than one measure, all measures are displayed instead of the measure names.
 
-> ### Remember:  
-> -   Waterfall charts need at least one measure and one dimension
-> 
-> -   Dimensions for which a role is set \(for example, category\) make up the x-axis \(category axis\). If no dimension is specified with a role, the first dimension is used as the x-axis.
-> 
-> -   Dimensions for which a role is set \(for example, series\) make up the cumulative data points in the chart. A waterfall chart can have only one dimension per role.
-> 
-> -   Dimensions with the role mapped to the `waterfallType` UID. You use this to show the intermediate totals and subtotals in the waterfall chart. Valid values:
-> 
->     -   `null`
-> 
->     -   `subtotal:2` \(combines the previous two data points and shows a new column in the chart as a subtotal\)
-> 
->     -   `total` \(combines all the data points and shows a new column as the total\)
-> 
-> 
-> -   Measures make up the y-axis \(value axis\)
+A waterfall chart has the following requirements:
+
+-   At least one measure.
+
+-   At least one dimension.
 
 
+Measures make up the y-axis \(value axis\)
+
+Dimensions are visualized based on the following roles:
+
+-   `Category` role: Forms the x-axis \(category axis\). If no dimension is specified with a role, the first dimension is used as the x-axis.
+
+-   `Series` role: Forms the cumulative data points in the chart. A waterfall chart can have only one dimension per role.
+
+-   Role mapped to `waterfallType`: Shows intermediate totals and subtotals. The following values are supported:
+
+    -   `null`: no aggregation
+
+    -   `subtotal:2`: combines the previous two data points and shows a new column in the chart as a subtotal.
+
+    -   `total`: combines all the data points and shows a new column as the total.
+
+
+
+The following code samples show how to configure a waterfall chart with one measure \(`Finances`\) and two dimensions \(`SpendType` as `Category`, `Type` as `Series`\):
 
 > ### Sample Code:  
 > XML Annotation

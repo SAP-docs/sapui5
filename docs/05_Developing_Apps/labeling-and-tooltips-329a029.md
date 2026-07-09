@@ -16,7 +16,7 @@ Top 5 things to do for better screen reader support for labels
 
 -   Provide text alternatives for visual labels
 
-    Use tooltips only in rare cases. They should not be used as a replacement for a label. For more information, see [Using Tooltips](https://experience.sap.com/fiori-design-web/using-tooltips/) in the Fiori Guidelines.
+    Use tooltips only in rare cases. They should not be used as a replacement for a label. For more information, see [Using Tooltips](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/using-tooltips) in the SAP Design System.
 
 -   Use the `alt` attribute for images
 
@@ -65,7 +65,7 @@ Top 5 things to do for better screen reader support for labels
     > <Button text="Default" press="onPress" />
     > ```
 
--   Labels should **not** have a tooltip, as it could lead to ambiguity. For more information, see [Firoi Guidelines for Using Tooltips](https://experience.sap.com/fiori-design-web/using-tooltips/).
+-   Labels should **not** have a tooltip, as it could lead to ambiguity. For more information, see [SAP Design System Guidelines for Using Tooltips](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/using-tooltips).
 
 -   Input elements should have labels. Every input needs a label for its purpose. Even if the app doesn't include one, you can set one in `sap.ui.core.InvisibleText`. The placeholder text should not be used as a label.
 

@@ -2,11 +2,11 @@
 
 # Scatter Chart
 
-You can render the chart as a a scatter chart in SAP Fiori elements for OData V4.
+You can render the chart as a scatter chart in SAP Fiori elements for OData V4.
+
+
 
 A scatter chart allows you to visualize the distribution of data points over two measures.
-
-
 
   
   
@@ -22,6 +22,8 @@ For the first measure, the role is set to an axis is assigned to the `valueAxis`
 The other measure is plotted on the y-axis.
 
 A scatter chart card supports a maximum of two dimensions. If the dimension is not marked with a role, then all members of the dimension are plotted as equal-sized bubbles of the same color in the chart. You can assign only one dimension to the `Series` role and all members of this dimension get a different color. A maximum of only one dimension can be assigned to the `Category` role and all members of such a dimension get a different shape.
+
+The following code samples show how to configure a scatter chart with two measures \(`salesshare` and `totalsales`\) and one dimension \(`suppliercompany`\) with no role:
 
 > ### Sample Code:  
 > XML Annotation
@@ -116,8 +118,6 @@ A scatter chart card supports a maximum of two dimensions. If the dimension is n
 > 
 > ```
 
-
-
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Scatter Chart Card](scatter-chart-card-0dd2fa8.md).
+> For information about scatter chart cards on the overview page, see [Scatter Chart](scatter-chart-7471c1f.md).
 

@@ -17,7 +17,7 @@ The goal of these controls is to ensure consistency of the user interfaces in th
 > 
 > Do not use these controls in regular SAP Fiori applications. This highly specialized set of controls targets the specific needs of the tools user group \(typically developers and administrators\).
 
-For more information, check out the concept guidelines at [https://experience.sap.com/fiori-design-web/overview/](https://experience.sap.com/fiori-design-web/overview/).
+For more information, check out the [SAP Design System](https://www.sap.com/design-system/).
 
 **Related Information**  
 

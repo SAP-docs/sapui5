@@ -6,7 +6,7 @@ You can specify a value help entity for a field and maintain the value help conf
 
 
 
-These annotations can be used to control the rendering of the value help, such as the fields shown inside the value help, or the filters that act upon the value help. For more information, see[In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-4de40b3.md).
+These annotations can be used to control the rendering of the value help, such as the fields shown inside the value help, or the filters that act upon the value help. For more information, see [In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-4de40b3.md).
 
 You must enhance the value list annotation corresponding to a filter field with `"PresentationVariantQualifier"` as shown in the sample code below to ensure that the value list annotation \(and therefore the filter field\) is considered for the visual filter rendering. The value for this term must point to a `UI.PresentationVariant` that contains the `UI.Chart` annotation required to render the visual filter.
 
@@ -45,22 +45,33 @@ You must enhance the value list annotation corresponding to a filter field with 
 > ABAP CDS Annotation
 > 
 > ```
-> @Consumption.valueHelpDefinition:
->         [{
->           entity :{
->             name    : 'Z0022', //(collectionPath)
->             element : 'CountryIdentifier'   // (valuelistproperty in parameterInOut)
->           },
->           label  : 'Country',   // valuelist label
->           qualifier: '0020_Country',  //(valuelist qualifier)
->            presentationVariantQualifier: 'Country_Chart'  // value list presentvariantqualifier
->           }]
-> CountryID
+> @Consumption.valueHelpDefinition: [
+>     {
+>         entity: {
+>             name    : 'Z0022',
+>             element : 'CountryIdentifier'
+>         },
+>         label : 'Country',
+>         qualifier : '0020_Country',
+>         presentationVariantQualifier : 'Country_Chart',
+>         searchSupported : false,
+>         additionalBinding: [
+>             {
+>                 localElement : 'CountryID',
+>                 element      : 'CountryIdentifier',
+>                 usage        : #RESULT
+>             },
+>             {
+>                 localElement : 'RegionID',
+>                 element      : 'RegionIdentifier',
+>                 usage        : #FILTER
+>             }
+>         ]
+>     }
+> ]
+> CountryID;
 > 
 > ```
-
-> ### Note:  
-> In ABAP CDS, `Common.ValueListParameterIn` and `Common.ValueListParameterOut` parameters cannot be modeled separately and only the `Common.ValueListParameterInOut` equivalent is supported.
 
 > ### Sample Code:  
 > CAP CDS Annotation

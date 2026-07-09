@@ -339,7 +339,7 @@ Describes the actions that can be applied to the element.
 <tr>
 <td valign="top" rowspan="10">
 
-`"settings": <object>|<function>`
+`"settings": <object>`
 
 </td>
 <td valign="top">
@@ -371,7 +371,7 @@ For multiple actions, return them in a map object. Entries are shown in this ord
 </td>
 <td valign="top">
 
-`"<key>": <object>`
+`"<key>": <object>|<function>`
 
 </td>
 <td valign="top">
@@ -381,7 +381,7 @@ For multiple actions, return them in a map object. Entries are shown in this ord
 </td>
 <td valign="top">
 
-Describes the settings action called `<key>`
+Describes the settings action called `<key>`. You can also define a function that returns the object with the action properties.
 
 </td>
 </tr>

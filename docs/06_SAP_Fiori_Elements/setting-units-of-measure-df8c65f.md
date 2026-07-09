@@ -2,18 +2,40 @@
 
 # Setting Units of Measure
 
-You can display the unit of measure next to numeric values by providing the `sap:unit` attribute in the OData metadata file or by annotating the unit in the annotation document.
-
-
+You can display the unit of measure next to numeric values by in cards. You can define it in the OData metadata file using the `sap:unit` attribute or the annotation document using the `Org.OData.Measures.V1.Unit`or `Org.OData.Measures.V1.ISOCurrency`.
 
 > ### Note:  
-> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Setting Units of Measure](setting-units-of-measure-0d6c1d5.md).
+> Overview pages support both `sap:unit` and `Org.OData.Measures.V1.*` annotations to ensure seamless compatibility with OData V2 and OData v4 services. When both annotations are defined, the OData V4 annotations take precedence over OData V2 ones. The recommended annotation depends on the OData version used:
+> 
+> -   OData V2: Use `sap:unit` for both units and currencies.
+> 
+> -   OData V4: Use `Org.OData.Measures.V1.Unit` for units and `Org.OData.Measures.V1.ISOCurrency` for currencies.
 
 
 
-In the following example of the `Product` entity type definition in the OData metadata file, the `Price` property has the `CurrencyCode` property as its unit of measure; `Width`, `Depth`, and `Height` have the `DimUnit` property as their unit of measure; and the `WeightMeasure` property has the `WeightUnit` property as its unit of measure.
+## Defining Units of Measure in the OData Metadata
+
+In the OData metadata, define the unit by linking the numeric property to a separate property that contains the unit value. Use the following properties:
+
+-   `sap:unit` on the numeric property to point to its unit property.
+
+-   `sap:semantics="unit-of-measure"` on the unit property itself.
+
+-   `sap:semantics="currency-code"` on a property that holds an ISO currency code.
+
+
+In the following sample code of the `Product` entity type uses these annotations:.
+
+-   The `Price` property uses the `CurrencyCode` property as its unit of measure.
+
+-   `Width`, `Depth`, and `Height` properties have the `DimUnit` property as their unit of measure.
+
+-   `WeightMeasure` property has the `WeightUnit` property as its unit of measure.
+
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > <EntityType Name="Product" sap:content-version="1">
 >     <Key>
@@ -45,7 +67,76 @@ In the following example of the `Product` entity type definition in the OData me
 > </EntityType>
 > ```
 
-In the following example, the `Price` property is annotated in the annotation document with `Org.OData.Measures.V1.ISOCurrency` to indicate that the currency is displayed using the `CurrencyCode` property; the `Width`, `Depth`, and `Height` properties are annotated with `Org.OData.Measures.V1.Unit` to indicate that the unit is displayed using the `DimUnit` property; and `WeightMeasure` is annotated with `Org.OData.Measures.V1.Unit` to indicate that the unit is displayed using the `WeightUnit` property.
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> 
+> 
+> ```
+
+
+
+## Defining Units of Measure in the Annotation File
+
+You can define units of measure using the following OData annotations:
+
+**Annotations for Units of Measure**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Annotation
+
+</th>
+<th valign="top">
+
+Used For
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`Org.OData.Measures.V1.Unit` 
+
+</td>
+<td valign="top">
+
+A standard unit of measure. For example, kg, cm.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Org.OData.Measures.V1.ISOCurrency` 
+
+</td>
+<td valign="top">
+
+An ISO currency code. For example, EUR, USD.
+
+</td>
+</tr>
+</table>
+
+The following sample code use these annotations:
+
+-   `WeightMeasure` is annotated with `Org.OData.Measures.V1.Unit` and refers to the `WeightUnit` property.
+
+-   `Depth`, and `Height` properties are annotated with `Org.OData.Measures.V1.Unit` and refers to the `DimUnit` property.
+
+-   the `Price` property is annotated in the annotation document with `Org.OData.Measures.V1.ISOCurrency` and refers to the `CurrencyCode` property.
+
 
 > ### Sample Code:  
 > XML Annotation
@@ -104,4 +195,9 @@ In the following example, the `Price` property is annotated in the annotation do
 > };
 > 
 > ```
+
+**Related Information**  
+
+
+[Configuring Card Properties](configuring-card-properties-53b0791.md "This section describes the configuration items relevant for all overview page cards. All cards inherit a set of generic capabilities such as a card header, content area, and navigation support.")
 

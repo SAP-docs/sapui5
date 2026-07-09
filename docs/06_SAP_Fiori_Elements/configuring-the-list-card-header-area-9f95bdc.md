@@ -2,11 +2,9 @@
 
 # Configuring the List Card Header Area
 
-In SAP Fiori elements for OData V4, you can configure various properties of a list card header.
+You can configure several properties of a list card header, including the title, subtitle, KPI value, view switch, and navigation.
 
 
-
-<a name="loio9f95bdc13b6f410db22069ad8bb946c8__section_y32_pmc_mfc"/>
 
 ## Card Title and Subtitle
 
@@ -41,14 +39,52 @@ You can configure the title and subtitle of a list card in the `manifest.json` f
 
 
 
-<a name="loio9f95bdc13b6f410db22069ad8bb946c8__section_ftl_tmc_mfc"/>
+## View Switch
 
-## KPI Values
-
-You can configure the KPI values on the list card header, as shown in the following sample code:
+You can configure the view switch using the ***tabs*** property in the manifest settings to filter and view data at the card level, as shown in the following sample code:
 
 > ### Sample Code:  
-> Manifest settings
+> ```
+> "cards": {
+>       "card00": {
+>         "model": "salesOrder",
+>         "template": "sap.ovp.cards.list",
+>         "settings": {
+>           "category" : "Sales Orders With Analytical Header",
+>           "listFlavor": "bar",
+>           "listType": "extended",
+>           "entitySet": "SalesOrderSet",
+>           "enableTextWrapping": true //The default value is false
+>           "tabs": [
+>                 {
+>                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
+>                     "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#line1",
+>                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line",
+>                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+>                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
+>                     "value": "{{dropdown_value1}}"
+>                 },
+>                 {
+>                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View2",
+>                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#customer",
+>                     "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SP2",
+>                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#item2",
+>                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
+>                     "value": "{{dropdown_value2}}"
+>                 },
+> ```
+
+> ### Note:  
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+
+
+
+## Configuring KPI Values
+
+You configure a KPI tag in the list card header by setting the `kpiAnnotationPath` property in the`manifest.json` file, then defining a `KPI` annotation that references a `DataPoint`, a `SelectionVariant`, and a `PresentationVariant`.
+
+> ### Sample Code:  
+> `manifest.json`
 > 
 > ```
 > "sap.ovp": {
@@ -308,40 +344,234 @@ You can configure the KPI values on the list card header, as shown in the follow
 > },
 > ```
 
-Define the `DataPoint` annotation to complete configuring KPI information on the card header area. The following are the annotation properties:
-
--   Add `Title` property to display as a title on the KPI header
-
--   Add `Value` property to display KPI measure
-
--   Add `ValueFormat` to define number format
-
--   Add criticality to highlight the KPI measure value. You can define criticality as a path or enum value. The supported enum values are:
-
-    -   `com.sap.vocabularies.UI.v1.CriticalityType/Neutral` - default neutral color is considered
-
-    -   `com.sap.vocabularies.UI.v1.CriticalityType/Negative` - Red is considered
-
-    -   `com.sap.vocabularies.UI.v1.CriticalityType/Critical` - Orange is considered
-
-    -   `com.sap.vocabularies.UI.v1.CriticalityType/Positive` - Green is considered
-
-
-
-You can also define criticality using a path property that returns value:
-
--   0 for Neutral- default neutral colour is considered
-
--   1 for Negative – Red is considered
-
--   2 for Critical – Orange is considered
-
--   3 for Positive – Green is considered
-
-
 
 
 ### Associated Data Point Annotation
+
+The `DataPoint` annotation completes configuring KPI information on the card header area. It supports the following properties:
+
+
+<table>
+<tr>
+<th valign="top">
+
+Property
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`Title`
+
+</td>
+<td valign="top">
+
+Title shown on the KPI header.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Value`
+
+</td>
+<td valign="top">
+
+Property that supplies the KPI measure.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`ValueFormat`
+
+</td>
+<td valign="top">
+
+Number format settings \(scale factor, fractional digits\).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Criticality` or `CriticalityCalculation`
+
+</td>
+<td valign="top">
+
+Color highlighting based on the value.
+
+</td>
+</tr>
+</table>
+
+You can specify criticality either as an `enum` value or as a path that returns a numeric criticality code.
+
+**Static Enum Values**
+
+
+<table>
+<tr>
+<th valign="top">
+
+`Enum` value
+
+</th>
+<th valign="top">
+
+Color
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`com.sap.vocabularies.UI.v1.CriticalityType/Neutral`
+
+</td>
+<td valign="top">
+
+Default neutral color
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`com.sap.vocabularies.UI.v1.CriticalityType/Negative`
+
+</td>
+<td valign="top">
+
+Red
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`com.sap.vocabularies.UI.v1.CriticalityType/Critical`
+
+</td>
+<td valign="top">
+
+Orange
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`com.sap.vocabularies.UI.v1.CriticalityType/Positive`
+
+</td>
+<td valign="top">
+
+Green
+
+</td>
+</tr>
+</table>
+
+**Path-Based Numeric Values**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Return value
+
+</th>
+<th valign="top">
+
+Criticality
+
+</th>
+<th valign="top">
+
+Color
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`0`
+
+</td>
+<td valign="top">
+
+Neutral
+
+</td>
+<td valign="top">
+
+Default neutral color
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`1`
+
+</td>
+<td valign="top">
+
+Negative
+
+</td>
+<td valign="top">
+
+Red
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`2`
+
+</td>
+<td valign="top">
+
+Critical
+
+</td>
+<td valign="top">
+
+Orange
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`3`
+
+</td>
+<td valign="top">
+
+Positive
+
+</td>
+<td valign="top">
+
+Green
+
+</td>
+</tr>
+</table>
 
 > ### Sample Code:  
 > XML Annotation
@@ -420,63 +650,40 @@ You can also define criticality using a path property that returns value:
 
 
 
-<a name="loio9f95bdc13b6f410db22069ad8bb946c8__section_ztn_p4c_mfc"/>
-
-## View Switch
-
-You can configure the view switch using the ***tabs*** property in the manifest settings to filter and view data at the card level, as shown in the following sample code:
-
-> ### Sample Code:  
-> ```
-> "cards": {
->       "card00": {
->         "model": "salesOrder",
->         "template": "sap.ovp.cards.v4.list",
->         "settings": {
->           "category" : "Sales Orders With Analytical Header",
->           "listFlavor": "bar",
->           "listType": "extended",
->           "entitySet": "SalesOrderSet",
->           "enableTextWrapping": true //The default value is false
->           "tabs": [
->                 {
->                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
->                     "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#line1",
->                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line",
->                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
->                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
->                     "value": "{{dropdown_value1}}"
->                 },
->                 {
->                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View2",
->                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#customer",
->                     "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SP2",
->                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#item2",
->                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
->                     "value": "{{dropdown_value2}}"
->                 },
-> ```
-
-
-
 <a name="loio9f95bdc13b6f410db22069ad8bb946c8__section_zqb_w4c_mfc"/>
 
-## List Header Navigation
+## Configuring List Header Navigation
 
-You can configure the navigation \(from the header and content area\) within an application using the identification annotation.
-
-> ### Note:  
-> In case of list area navigation, the navigation settings configured using the ***LineItem*** annotation takes precedence over the navigation settings configured using the identification annotation.
-
-
+You can configure the navigation from the card header and content area using the `Identification` annotation. annotation.
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Configuring the List Card Header Area](configuring-the-list-card-header-area-72b5323.md).
+> For navigation from the list area, the navigation settings configured using the `LineItem` annotation takes precedence over those configured using the `Identification` annotation.
+
+
+
+## Additional Features in SAP Fiori Elements for OData V2
+
+
+
+### Configuring the Header Counter
+
+You can configure a counter on the card header using the `defaultCountMode` property in `manifest.json` file.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "Card_Model_Name": {
+>                 "settings": {
+>                     "defaultCountMode": "None"
+>                 }
+>             }
+> ```
 
 **Related Information**  
 
 
-[Configuring the List Card](configuring-the-list-card-7f65716.md "You can add and configure various attributes of the list card in SAP Fiori elements for OData V4.")
+[Configuring the List Card](configuring-the-list-card-7f65716.md "You can configure several attributes of a list card, including text formatting, filtering, sorting.")
 
-[Configuring the List Area](configuring-the-list-area-f57373d.md "You can add values and navigation properties to the list area in SAP Fiori elements for OData V4.")
+[Configuring the List Area](configuring-the-list-area-f57373d.md "You can configure the list area by defining values, navigation properties, and numeric data points and contact information.")
 

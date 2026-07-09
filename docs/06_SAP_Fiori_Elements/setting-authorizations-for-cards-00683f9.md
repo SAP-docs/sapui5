@@ -2,20 +2,22 @@
 
 # Setting Authorizations for Cards
 
-In SAP Fiori elements for OData V4, you can set authorization on cards to ensure that users only see cards or content previews for applications for which they have the required authorization.
+You can set authorization on overview page cards to ensure that users only see cards or content previews for applications they're authorized access.
 
-An overview page provides users a comprehensive view of the business data in a specific domain, allowing them to interact with it directly. Users can perform key actions, such as clicking a card to navigate to another application. However, if a user attempts an intent-based navigation to another application without the necessary authorization, they may encounter an access error.
+An overview page provides users a comprehensive view of the business data in a specific domain. Users can interact with the page by performing key actions such as clicking a card to navigate to another application However, if a user attempts an intent-based navigation to another application they aren't authorized, they may encounter an access error.
 
-To improve this user experience, during card configuration, you can add the property `requireAppAuthorization` in the `manifest.json` file. When the user accesses an app, this property is checked against `isIntentSupported` to verify whether the user has the required authorization. If authorized, the card is displayed. This approach allows you to explicitly control the intent as required.
-
-To enhance this user experience, you can add the **requireAppAuthorization** property in the `manifest.json` file during card configuration. When a user accesses an app, this property is checked using **isIntentSupported** to verify whether the user has the required authorization. If authorized, the card is displayed. This approach allows you to explicitly control the intent as needed.
+To control card visibility based on user authorization, define the `requireAppAuthorization` property in the `manifest.json` file. This property is checked against `isIntentSupported` to verify whether the user is authorized to access the application. The card is displayed only if the user is authorized. This approach allows you to explicitly control the intent as required.
 
 Also, `isIntentSupported` is standard functionality in the Cross Application Navigation Service.
 
 > ### Note:  
-> The `requireAppAuthorization` check does not work in design time for the overview page cards. Consequently, it is also not effective when creating adaptation project or extending using UI adaptation scenario, for example, when creating extension project from SAP Business Application Studio or Visual Studio Code.
+> The `requireAppAuthorization` check does not work in design time for the overview page cards. Consequently, it is not effective when creating adaptation projects or extending using UI adaptation scenario, for example, when creating extension project from SAP Business Application Studio or Visual Studio Code.
+
+The following sample code shows how to define the `requireAppAuthorization` property to the navigation intent the card:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > 
 > {
@@ -39,8 +41,11 @@ Also, `isIntentSupported` is standard functionality in the Cross Application Nav
 > }
 > ```
 
-
-
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Setting Authorizations for Cards](setting-authorizations-for-cards-f34ecef.md).
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+
+**Related Information**  
+
+
+[Configuring Card Properties](configuring-card-properties-53b0791.md "This section describes the configuration items relevant for all overview page cards. All cards inherit a set of generic capabilities such as a card header, content area, and navigation support.")
 

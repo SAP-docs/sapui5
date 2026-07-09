@@ -127,7 +127,7 @@ The labeling on the empty option will be read by the screen reader and the end u
 > ### Tip:  
 > The empty label *\(None\)* should always be the first item in the drop-down.
 
-For more information, see [Fiori Guidelines for Empty states](https://experience.sap.com/fiori-design-web/designing-for-empty-states/).
+For more information, see [Empty States](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/designing-for-empty-states) in the SAP Design System.
 
 
 

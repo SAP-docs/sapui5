@@ -2,10 +2,7 @@
 
 # Bar Chart Card
 
-You can render the chart as a bar chart to display data, such as total product sales over a period of years in columns.
-
-> ### Note:  
-> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Bar Chart](bar-chart-95f6aeb.md).
+You can render the chart as a bar chart to display data, such as total product sales over a period of years as horizontal bars.
 
 The number of columns is equal to the number of measures in the annotation file.
 
@@ -21,14 +18,14 @@ The number of columns is equal to the number of measures in the annotation file.
 
 ## Semantic Coloring
 
-The semantic coloring of a bar chart card is based on the target and threshold values.
+A bar chart can be semantically colored based on target and threshold values:
 
 The target values are taken from the properties such as `ToleranceRangeLowValue`, `ToleranceRangeHighValue`, `DeviationRangeLowValue`, and `DeviationRangeHighValue` of the data point annotations that are associated with the measure and `ImprovementDirection` property.
 
 The threshold values are taken from that data point annotations that are associated with the measures used in the analytical card.
 
 > ### Recommendation:  
-> We recommend you to use only one measure in the chart if you intend to use semantic coloring.
+> Use only one measure in the chart if you intend to use semantic coloring.
 
   
   
@@ -36,9 +33,9 @@ The threshold values are taken from that data point annotations that are associa
 
 ![](images/Example_of_a_Bar_Chart_Card_with_Semantic_Coloring_e9cc5d1.png "Example of a Bar Chart Card with Semantic Coloring")
 
-When you semantically color the bar chart card, the threshold values which influence the semantic color would also be displayed in the legend. However, if you use more than one measure in the chart, the legends would only show the values *Good*, *Bad*, and *Neutral*.
+When you apply semantic coloring, the threshold values that influence the colors are also displayed in the legend. However, if you use more than one measure, the legend shows only the values *Good*, *Bad*, and *Neutral*.
 
-The data point should have a Measure Value based on which the direction for improvement is measured. Based on this value, you define if the measure is a:
+The `DataPoint` annotation must define a Measure Value based on which the direction for improvement is measured. The measure can be one of three types:
 
 -   Maximizing measure where a higher value of measure is better.
 
@@ -55,9 +52,9 @@ The measures can be maximizing, minimizing, or target, based on a threshold valu
 
 -   Maximizing measure, for example, sales: The direction of improvement is as follows:
 
-    -   Negative to Critical: Here, the measure value should be greater than or equal to `ThresholdValues.DeviationRangeLowValue` 
+    -   Negative to Critical: The measure value is greater than or equal to `ThresholdValues.DeviationRangeLowValue` 
 
-    -   Critical to Positive: Here, the measure value should be greater than or equal to `ThresholdValues.ToleranceRangeLowValue` 
+    -   Critical to Positive: The measure value is greater than or equal to `ThresholdValues.ToleranceRangeLowValue` 
 
 
       
@@ -68,9 +65,9 @@ The measures can be maximizing, minimizing, or target, based on a threshold valu
 
 -   Minimizing measure, for example, cost: The direction of improvement is as follows:
 
-    -   Positive to Critical: Here, the measure value should be greater than `ThresholdValues.ToleranceRangeHighValue` 
+    -   Positive to Critical: The measure value is greater than `ThresholdValues.ToleranceRangeHighValue` 
 
-    -   Critical to Negative: Here, the measure value should be greater than `ThresholdValues.DeviationRangeHighValue` 
+    -   Critical to Negative: The measure value is greater than `ThresholdValues.DeviationRangeHighValue` 
 
 
       
@@ -81,13 +78,13 @@ The measures can be maximizing, minimizing, or target, based on a threshold valu
 
 -   Target measure, for example, temperature: The direction of improvement is as follows:
 
-    -   Negative to Critical: Here, the measure value should be greater than or equal to `ThresholdValues.DeviationRangeLowValue` 
+    -   Negative to Critical: The measure value is greater than or equal to `ThresholdValues.DeviationRangeLowValue`.
 
-    -   Critical to Positive: Here, the measure value should be greater than or equal to `ThresholdValues.ToleranceRangeLowValue` 
+    -   Critical to Positive: The measure value is greater than or equal to `ThresholdValues.ToleranceRangeLowValue`.
 
-    -   Positive to Critical: Here, the measure value should be greater than `ThresholdValues.ToleranceRangeHighValue` 
+    -   Positive to Critical: The measure value is greater than `ThresholdValues.ToleranceRangeHighValue`.
 
-    -   Critical to Negative: Here, the measure value should be greater than `ThresholdValues.DeviationRangeHighValue` 
+    -   Critical to Negative: The measure value is greater than `ThresholdValues.DeviationRangeHighValue`.
 
 
       
@@ -139,5 +136,59 @@ The following sample code how to define a bar chart:
 >       </PropertyValue>
 >    </Record>
 > </Annotation>
+> ```
+
+
+
+The following sample code shows the minimum required configuration for a bar chart:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="UI.Chart" Qualifier="BarChartSoldToParty">
+>     <Record Type="UI.ChartDefinitionType">
+>         <PropertyValue Property="Title" String="Bar Chart"/>
+>         <PropertyValue Property="Description" String="Testing Bar Chart"/>
+>         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
+>         <PropertyValue Property="Measures">
+>             <Collection>
+>                 <PropertyPath>totalPricing</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="Dimensions">
+>             <Collection>
+>                 <PropertyPath>SoldToParty</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="MeasureAttributes">
+>             <Collection/>
+>         </PropertyValue>
+>         <PropertyValue Property="DimensionAttributes">
+>             <Collection/>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> Chart #BarChartSoldToParty                              : {
+>     $Type              : 'UI.ChartDefinitionType',
+>     Title              : 'Bar Chart',
+>     Description        : 'Testing Bar Chart',
+>     ChartType          : #Bar,
+>     Measures           : [totalPricing],
+>     Dimensions         : [SoldToParty],
+>     MeasureAttributes  : [],
+>     DimensionAttributes: []
+> },
 > ```
 

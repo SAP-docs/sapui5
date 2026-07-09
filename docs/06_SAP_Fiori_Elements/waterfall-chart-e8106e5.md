@@ -143,5 +143,5 @@ Waterfall charts allow you to see the change in cumulative values from the initi
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Waterfall Chart Card](waterfall-chart-card-0663673.md).
+> For information about waterfall charts on the overview page, see [Waterfall Chart Card](waterfall-chart-card-0663673.md).
 

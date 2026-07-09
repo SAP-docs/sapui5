@@ -26,7 +26,10 @@ You can control the editability of all fields in one go using `UpdateRestriction
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @Capabilities.UpdateRestrictions: { Updatable: true }
+> 
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

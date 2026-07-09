@@ -92,7 +92,7 @@ You can view and download all files at [Walkthrough - Step 1](https://ui5.sap.co
 
     ```
     {
-      "_version": "2.8.0",
+      "_version": "2.10.0",
       "sap.app": {
         "id": "ui5.walkthrough"
       }

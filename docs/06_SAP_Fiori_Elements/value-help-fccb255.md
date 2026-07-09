@@ -6,6 +6,8 @@ You can configure value help to assist users in selecting the correct values in 
 
 > ### Note:  
 > Value help for draft-enabled entities only shows active documents.
+> 
+> In case of a parameterized value help entity, ensure that the value help entity is enabled for parameter support. For more information, see the [Supporting Parameterized Entities](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection) section in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 
 Value help allows users to either select a value from a value help entity associated with the field or define a condition to retrieve a suitable value for the field from the main entity.
 
@@ -26,7 +28,7 @@ Use the `Common.ValueList` annotation when the value help entity is defined with
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > 
 > <Annotations Target="MyService.Travel/AgencyId">
 >     <Annotation Term="Common.ValueList">
@@ -42,10 +44,16 @@ Use the `Common.ValueList` annotation when the value help entity is defined with
 >                         <PropertyValue Property="ValueListProperty" String="Agency_Id" />
 >                         <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
 >                     </Record>
+>                     <!-- Handling 1:n mapping from local entity -->
 >                     <Record Type="Common.ValueListParameterInOut">
 >                         <PropertyValue Property="LocalDataProperty" PropertyPath="_TourOperator/RegionId" />
 >                         <PropertyValue Property="ValueListProperty" String="Region_Id" />
 >                         <PropertyValue Property="InitialValueIsSignificant" Bool="true" />
+>                     </Record>
+>                     <!-- Handling 1:n mapping from valuelist entity -->
+>                     <Record Type="Common.ValueListParameterIn">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="CityID" />
+>                         <PropertyValue Property="ValueListProperty" String="_Regions/CityCode" />
 >                     </Record>
 >                     <Record Type="Common.ValueListParameterDisplayOnly">
 >                         <PropertyValue Property="ValueListProperty" String="AgencyName" />
@@ -86,10 +94,17 @@ Use the `Common.ValueList` annotation when the value help entity is defined with
 >                 ![@UI.Importance] : #High,
 >             },
 >             {
->                 $Type                    : 'Common.ValueListParameterInOut',
->                 LocalDataProperty        : to_TourOperator.RegionId,
->                 ValueListProperty        : 'Region_Id',
->                 InitialValueIsSignificant
+>                 // Handling 1:n mapping from local entity
+>                 $Type                     : 'Common.ValueListParameterInOut',
+>                 LocalDataProperty         : to_TourOperator.RegionId,
+>                 ValueListProperty         : 'Region_Id',
+>                 InitialValueIsSignificant : true,
+>             },
+>             {
+>                 // Handling 1:n mapping from valuelist entity
+>                 $Type             : 'Common.ValueListParameterIn',
+>                 LocalDataProperty : CityID,
+>                 ValueListProperty : '_Regions/CityCode',
 >             },
 >             {
 >                 $Type             : 'Common.ValueListParameterDisplayOnly',
@@ -99,17 +114,45 @@ Use the `Common.ValueList` annotation when the value help entity is defined with
 >             {
 >                 $Type             : 'Common.ValueListParameterOut',
 >                 LocalDataProperty : CountryIndicator,
->                 ValueListProperty : 'Country_Flag'
->             }
+>                 ValueListProperty : 'Country_Flag',
+>             },
 >             {
->                 $Type            : 'Common.ValueListParameterConstant',
->                 Constant: '001',
->                 ValueListProperty: 'PredefinedField'
->             }
->         ]
->     };
-> };
+>                 $Type             : 'Common.ValueListParameterConstant',
+>                 Constant          : '001',
+>                 ValueListProperty : 'PredefinedField',
+>             },
+>         ],
+>     },
+> }
 > 
+> ```
+
+Only the first-level navigation properties from a 1:n entity are allowed for filtering on the value help entity’s navigation entity. If you need to filter on a navigation property, you must ensure that the property is added to the `UI.SelectionFields` annotation in the value help entity:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <!-- SelectionFields with property from navigation entity -->
+> <Annotations Target="TravelAgency">
+>     <Annotation Term="UI.SelectionFields">
+>         <Collection>
+>             <PropertyPath>Region_Id</PropertyPath>
+>             <PropertyPath>_Regions/CityCode</PropertyPath>
+>         </Collection>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> annotate TravelAgency with @UI.SelectionFields: [
+>     Region_Id,
+>     _Regions.CityCode
+> ];
 > ```
 
 
@@ -121,7 +164,7 @@ Use the `Common.ValueListMapping` annotation when the value help entity’s meta
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > 
 > <Annotations Target="MyService.Travel/AgencyId">
 >     <Annotation Term="Common.ValueListMapping">
@@ -137,10 +180,16 @@ Use the `Common.ValueListMapping` annotation when the value help entity’s meta
 >                         <PropertyValue Property="ValueListProperty" String="Agency_Id" />
 >                         <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
 >                     </Record>
+>                     <!-- Handling 1:n mapping from local entity -->
 >                     <Record Type="Common.ValueListParameterInOut">
 >                         <PropertyValue Property="LocalDataProperty" PropertyPath="_TourOperator/RegionId" />
 >                         <PropertyValue Property="ValueListProperty" String="Region_Id" />
 >                         <PropertyValue Property="InitialValueIsSignificant" Bool="true" />
+>                     </Record>
+>                     <!-- Handling 1:n mapping from valuelist entity -->
+>                     <Record Type="Common.ValueListParameterIn">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="CityID" />
+>                         <PropertyValue Property="ValueListProperty" String="_Regions/CityCode" />
 >                     </Record>
 >                     <Record Type="Common.ValueListParameterDisplayOnly">
 >                         <PropertyValue Property="ValueListProperty" String="AgencyName" />
@@ -165,25 +214,110 @@ Use the `Common.ValueListMapping` annotation when the value help entity’s meta
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> 
+> @Consumption.valueHelpDefinition: [
+>     {
+>         entity: {
+>             name: 'TravelAgency',
+>             element: 'Agency_Id',
+>         },
+>         label: 'Travel Agency',
+>         additionalBinding: [
+>             {
+>                 localElement: 'AgencyId',
+>                 element: 'Agency_Id',
+>                 usage: #FILTER_AND_RESULT,
+>             },
+>             {
+>                 localElement: 'RegionId',
+>                 element: 'Region_Id',
+>                 usage: #FILTER_AND_RESULT,
+>             },
+>             {
+>                 element: 'AgencyName',
+>                 usage: #RESULT,
+>             },
+>             {
+>                 localElement: 'CountryIndicator',
+>                 element: 'Country_Flag',
+>                 usage: #RESULT,
+>             },
+>         ],
+>     },
+> ]
+> AgencyId;
+> 
+> ```
 
-**`ValueListReference` Annotation**
+> ### Note:  
+> ABAP CDS annotations don't support the following:
+> 
+> -   `FetchValues`
+> 
+> -   `SearchSupported` \(functionality is handled by making the value help entity searchable using `@Search.searchable`\)
+> 
+> -   `InitialValueIsSignificant`
+> 
+> -   Navigation path for `localElement` and `ValueListProperty`
+> 
+> -   `ValueListParameterConstant`
+> 
+> 
+> If required, please use the local XML annotation.
+
+Only the first-level navigation properties from a 1:n entity are allowed for filtering on the value help entity’s navigation entity. If you need to filter on a navigation property, you must ensure that the property is added to the `UI.SelectionFields` annotation in the value help entity:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> 
+> <!-- SelectionFields with property from navigation entity -->
+> <Annotations Target="TravelAgency ">
+>     <Annotation Term="UI.SelectionFields">
+>         <Collection>
+>             <PropertyPath>Region_Id</PropertyPath>
+>             <PropertyPath>_Regions/CityCode</PropertyPath>
+>         </Collection>
+>     </Annotation>
+> </Annotations>
+>  
+> ```
+> 
+> > ### Sample Code:  
+> > ABAP CDS Annotation
+> > 
+> > ```
+> > 
+> > @UI.selectionFields: [
+> >     'Region_Id',
+> >     '_Regions.CityCode'
+> > ]
+> > ```
+
+
+
+### `ValueListReference` Annotation
 
 When the `Common.ValueListMapping` annotation is used, the value help entity must be referenced using the `Common.ValueListReference` annotation.
 
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > <Annotations Target="Self.TravelType/AgencyId">
->   <Annotation Term="Common.ValueListReferences">
->     <Collection>
->       <String>../../../../srvd_f4/sap/myentityname/0001;ps='srvd-sadl_gw_apptravel_definition-0001';va='com.sap.gateway.srvd.sadl_gw_apptravel_definition.v0001.et-c_mdbu_v4_travel.agencyid'/$metadata</String>
->     </Collection>
->   </Annotation>
+>     <Annotation Term="Common.ValueListReferences">
+>         <Collection>
+>             <String>../../../../srvd_f4/sap/myentityname/0001;ps='srvd-sadl_gw_apptravel_definition-0001';va='com.sap.gateway.srvd.sadl_gw_apptravel_definition.v0001.et-c_mdbu_v4_travel.agencyid'/$metadata</String>
+>         </Collection>
+>     </Annotation>
 > </Annotations>
 > 
 > ```
+
+> ### Note:  
+> When the `ValueListMapping` is defined in the RAP back end as shown in the previous subsection, the RAP back end automatically generates the XML annotation for `Common.ValueListReference`.
 
 The string in this XML annotation represents the path relative to the main metadata file that contains the  `Common.ValueListReference`  annotation.
 
@@ -231,9 +365,9 @@ You can validate user input against the default value list \(unqualified\) by se
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > <Annotations Target="serviceNamespace.BookingType/FlightDate">
->     …….
+>     ...
 >     <Annotation Term="Common.ValueListForValidation" String=""/>
 >     <Annotation Term="Common.ValueList">
 >         ...Definition of ValueList...
@@ -248,12 +382,12 @@ You can validate user input against the default value list \(unqualified\) by se
 > ```
 > 
 > annotate schema.Booking {
->   @Common.ValueListForValidation : ''
->   @Common.ValueList : {
->       $Type : 'Common.ValueListType',
->       CollectionPath : 'Flight',
->   }
->   FlightDate;
+>     @Common.ValueListForValidation : ''
+>     @Common.ValueList : {
+>         $Type : 'Common.ValueListType',
+>         CollectionPath : 'Flight',
+>     }
+>     FlightDate;
 > }
 > 
 > ```
@@ -263,12 +397,12 @@ You can validate user input against the default value list \(unqualified\) by se
 > 
 > ```
 > annotate schema.Booking {
->   @Common.ValueListForValidation : ''
->   @Common.ValueList : {
->       $Type : 'Common.ValueListType',
->       CollectionPath : 'Flight',
->   }
->   FlightDate;
+>     @Common.ValueListForValidation : ''
+>     @Common.ValueList : {
+>         $Type : 'Common.ValueListType',
+>         CollectionPath : 'Flight',
+>     }
+>     FlightDate;
 > }
 > 
 > ```
@@ -282,7 +416,7 @@ You can specify a conditional expression to validate the user input using the `C
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > <Annotations Target="com.c_salesordermanage_sd.HeaderPartner/BusinessPartner">
 >     <Annotation Term="com.sap.vocabularies.Common.v1.ValueListForValidation">
 >         <If>
@@ -308,23 +442,23 @@ You can specify a conditional expression to validate the user input using the `C
 > 
 > ```
 > annotate schema.HeaderPartner { 
->   @Common.ValueListForValidation: {$edmJson: {$If: [ 
->     {$Eq: [ 
->       {$Path: 'PartnerFunction'}, 
->       'WE' 
->     ]}, 
->     'BusinessPartnerQualifier', 
->     '' 
->   ]}} 
->   BusinessPartner; 
-> } 
+>     @Common.ValueListForValidation: {$edmJson: {$If: [ 
+>         {$Eq: [ 
+>             {$Path: 'PartnerFunction'}, 
+>             'WE' 
+>         ]}, 
+>         'BusinessPartnerQualifier', 
+>         '' 
+>     ]}} 
+>     BusinessPartner; 
+> }
 > 
 > OR 
 > 
 > annotate schema.HeaderPartner with { 
->   @Common.ValueListForValidation :  
->    (PartnerFunction = 'WE' ? 'BusinessPartnerQualifier' : '') 
->   BusinessPartner; 
+>     @Common.ValueListForValidation :  
+>         (PartnerFunction = 'WE' ? 'BusinessPartnerQualifier' : '') 
+>     BusinessPartner; 
 > };
 > 
 > ```
@@ -343,7 +477,7 @@ In some scenarios, different value help dialogs are required based on the contex
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > <Annotations Target="com.c_salesordermanage_sd.HeaderPartner/BusinessPartner">
 >     <Annotation Term="com.sap.vocabularies.Common.v1.ValueListRelevantQualifiers">
 >         <Collection>
@@ -378,17 +512,17 @@ In some scenarios, different value help dialogs are required based on the contex
 > 
 > ```
 > annotate schema.HeaderPartner with {
->   @Common.ValueListRelevantQualifiers:
->     (PartnerFunction = 'WE' ? 'BusinessPartnerQualifier' : '')
->   @Common.ValueList: {
->     $Type: 'Common.ValueListType',
->     . . .
->   }
->   @Common.ValueList#BusinessPartnerQualifier: {
->     $Type: 'Common.ValueListType',
->     . . .
->   }
->   BusinessPartner;
+>     @Common.ValueListRelevantQualifiers:
+>         (PartnerFunction = 'WE' ? 'BusinessPartnerQualifier' : '')
+>     @Common.ValueList: {
+>         $Type: 'Common.ValueListType',
+>         . . .
+>     }
+>     @Common.ValueList#BusinessPartnerQualifier: {
+>         $Type: 'Common.ValueListType',
+>         . . .
+>     }
+>     BusinessPartner;
 > };
 > 
 > ```
@@ -403,6 +537,7 @@ The `InitialValueIsSignificant` property allows you to identify an initial value
 
 > ### Restriction:  
 > -   The `InitialValueIsSignificant` annotation is only supported for object page.
+> 
 > -   The `InitialValueIsSignificant` annotation is only supported for parameters of the `Edm.String` data type.
 
 In the following sample code, `InitialValueIsSignificant` is used to consider an empty value for the local property `SoldToParty` \(indicated by an `<empty>` tag\) as a valid filter value. As a result, when the value help for the `ShippingCondition` field is opened, it lists only those records where the `SoldToParty` field in the value help entity is either `""` or `null` \(if the field is nullable\).
@@ -410,7 +545,7 @@ In the following sample code, `InitialValueIsSignificant` is used to consider an
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage/ShippingCondition"> 
 >     <Annotation Term="Common.ValueList">
 >         <Record Type="Common.ValueListType">
@@ -451,10 +586,10 @@ In the following sample code, `InitialValueIsSignificant` is used to consider an
 > 
 > Context-dependent value help doesn't support individual In/Out parameters for the different ShippingCondition            
 > 
->     ValueList       : {
->         Label          : 'Shipping Condition',
->         CollectionPath : 'ShippingCondition',
->         Parameters     : [
+> ValueList       : {
+>     Label          : 'Shipping Condition',
+>     CollectionPath : 'ShippingCondition',
+>     Parameters     : [
 >         {
 >             $Type             : 'Common.ValueListParameterInOut',
 >             LocalDataProperty : ShippingCondition,
@@ -470,9 +605,8 @@ In the following sample code, `InitialValueIsSignificant` is used to consider an
 >             $Type             : 'Common.ValueListParameterDisplayOnly',
 >             ValueListProperty : 'ShippingCondition_Text'
 >         }
->         ]
->     }
-> }); 
+>     ]
+> }
 > 
 > 
 > ```
@@ -561,7 +695,7 @@ The `city` definition in the `Country` entity has an association to many to the 
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > 
 > <EntitySet Name="Country" EntityType="sap.fe.core.ValueHelpBasic.Country"> 
 >     <NavigationPropertyBinding Path="city" Target="City"/> 

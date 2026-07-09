@@ -53,21 +53,21 @@ The `UI.Chart Title` property is used to define the title, while the `UI.Chart D
 > ```
 > 
 > @UI.Chart: [
->   {
->     title: 'Sales Revenue',
->     description: 'Bullet Micro Chart',
->     chartType: #BULLET,
->     measures: [
->       'BULLETCHARTREVENUE'
->     ],
->     measureAttributes: [
->       {
->         measure: 'BulletChartRevenue',
->         role: #AXIS_1,
->         asDataPoint: true
->       }
->     ]
->   }
+>     {
+>         title: 'Sales Revenue',
+>         description: 'Bullet Micro Chart',
+>         chartType: #BULLET,
+>         measures: [
+>             'BULLETCHARTREVENUE'
+>         ],
+>         measureAttributes: [
+>             {
+>                 measure: 'BulletChartRevenue',
+>                 role: #AXIS_1,
+>                 asDataPoint: true
+>             }
+>         ]
+>     }
 > ]
 > annotate view STTA_C_MP_PRODUCT with {
 > 
@@ -128,11 +128,11 @@ The `UI.Chart Title` property is used to define the title, while the `UI.Chart D
 > ```
 > 
 > @UI.dataPoint: {
->   targetValueElement: 'TargetRevenue',
->   forecastValue: 'ForecastRevenue',
->   minimumValue: 100,
->   maximumValue: 300,
->   criticality: 'Criticality'
+>     targetValueElement: 'TargetRevenue',
+>     forecastValue: 'ForecastRevenue',
+>     minimumValue: 100,
+>     maximumValue: 300,
+>     criticality: 'Criticality'
 > }
 > BulletChartRevenue;
 > ```

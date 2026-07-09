@@ -2,62 +2,68 @@
 
 # Configuring the Manifest for the Overview Page
 
-You can use the `manifest.json` file for initializing an overview page application in SAP Fiori elements for OData V4.
+You can use the `manifest.json` file to initialize an overview page application.
 
+
+
+The `manifest.json` file defines static information about the application and contains configuration parameters that control the application's behavior, layout, and data handling.
+
+The overview page settings are defined in the `sap.ovp` section of the `manifest.json` file. The `sap.ovp` section contains two kinds of settings as follows:
+
+-   Application-level properties: They control the overall behavior of the overview page.
+
+-   Card-level properties: They're defined within the `cards` object that configure each individual card.
 
 
 Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
-
-The `manifest.json` file defines static information about the application such as its name and the location of various files, and contains configuration parameters that control the application’s behavior, layout, and data handling.
 
 > ### Sample Code:  
 > `manifest.json`
 > 
 > ```
-> "sap.ovp" : { //section for ovp-specific app manifest settings
->     "globalFilterModel": "ZModelName", //OData model that contains entity definitions relevant for global filters
->     "globalFilterEntitySet": "ZFilterEntitySet", //Represents the entity set to use as a global filter in the filter bar control. 
->     "containerLayout": "resizable", //Represents the layout of the card container.
->     "smartVariantRequired": true, //Represents a switch to activate smart variant management in the global filters. The default value is true.
->     "showDateInRelativeFormat": false, //Represents a switch to enable or disable relative/normal date formatting in OVP applications.
->     "enableLiveFilter": false, //Represents the switch to activate live update in the global filters, otherwise a manual update is required by clicking the Go button.
+> "sap.ovp": {
+>     "globalFilterModel": "ZModelName",
+>     "globalFilterEntitySet": "ZFilterEntitySet",
+>     "containerLayout": "resizable",
+>     "smartVariantRequired": true,
+>     "showDateInRelativeFormat": false,
+>     "enableLiveFilter": false,
 >     "dataLoadSettings": {
->         "loadDataOnAppLaunch": "ifAnyFilterExist" //Defines the data load behaviour on app launch. Values: 'ifAnyFilterExist'/'always' to auto load data and 'never' to stop the auto data load during application launch.
+>         "loadDataOnAppLaunch": "ifAnyFilterExist"
 >     },
->     "imageSupported": true, //Allows the condensed list card to show images or icons.
->     "refreshIntervalInMinutes": 2, //Time interval in minutes to auto refresh the card models.
->     "useDateRangeType": true, //Flag to enable or disable the semantic date range control for the filter bar. The default value is false.
->     "enableLazyRendering": true, //Cards in the visible view port get rendered. Additional cards are rendered when scrolling. Default value is false.
->     
->     "cards": { //An object of cards 
->         "card01": { //each card contains the following 
->             "model": "ZCard1Model", //Model for the card
->             "template": "sap.ovp.cards.v4.list", //Card component path to use for this card.
+>     "imageSupported": true,
+>     "refreshIntervalInMinutes": 2,
+>     "useDateRangeType": true,
+>     "enableLazyRendering": true,
+>     "cards": {
+>         "card01": {
+>             "model": "ZCard1Model",
+>             "template": "sap.ovp.cards.v4.list",
 >             "settings": {
->                 "title": "card title", //Language-dependent title of the card - used in the card header.
->                 "subTitle": "sub title", //Language-dependent subtitle of the card - used in the card header.
->                 "entitySet": "zCard1EntitySet", //Entity set displayed in this card.
->                 "valueSelectionInfo": "text for KPI Header", //Additional information relevant for the KPI Header.
->                 "listFlavor": "Standard", //Represents the flavor of the list to use in this card. The flavor can be bar or standard.
->                 "listType": "Extended", //Represents the type of list to use for this card. The list can be extended to display more information or condensed to take up less space on the card.
->                 "sortBy": "zPropertyForSort", //Property name to sort by this entity set.
->                 "sortOrder": "Ascending", //Sort order - ascending or descending.
->                 "showRefresh": false, // Show or hide the Refresh option under More Actions. The default value is true.
->                 "staticContent": {}, //Applicable for static link list cards.
->                 "annotationPath": "", // Represents the annotation path.
->                 "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#AllActualCosts", // Represents the KPI annotation path "selectionAnnotationPath": "", // Represents the selection annotation path.
->                 "chartAnnotationPath": "", //Represents the chart annotation path.
->                 "presentationAnnotationPath": "", //Represents the presentation annotation path.
->                 "dataPointAnnotationPath": "", //Represents the data point annotation path.
->                 "identificationAnnotationPath": "", //Represents the identification annotation path.
->                 "dynamicSubtitleAnnotationPath": "dynamicSubtitle", //Represents the dynamic subtitle annotation path.
->                 "requireAppAuthorization": "", //Represents the cards for which authorization is required.
+>                 "title": "card title",
+>                 "subTitle": "sub title",
+>                 "entitySet": "zCard1EntitySet",
+>                 "valueSelectionInfo": "text for KPI Header",
+>                 "listFlavor": "Standard",
+>                 "listType": "Extended",
+>                 "sortBy": "zPropertyForSort",
+>                 "sortOrder": "Ascending",
+>                 "showRefresh": false,
+>                 "staticContent": {},
+>                 "annotationPath": "",
+>                 "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#AllActualCosts",
+>                 "chartAnnotationPath": "",
+>                 "presentationAnnotationPath": "",
+>                 "dataPointAnnotationPath": "",
+>                 "identificationAnnotationPath": "",
+>                 "dynamicSubtitleAnnotationPath": "dynamicSubtitle",
+>                 "requireAppAuthorization": "",
 >                 "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#SalesShareBubble",
 >                 "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SalesShareBubble",
 >                 "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Eval_by_Currency_Scatter",
 >                 "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Currency_ColumnStacked",
->                 "navigation": "noHeaderNav", //Allows you to disable navigation from the analytical list card header area.
->                 "enableTextWrapping": true   //The default value is false
+>                 "navigation": "noHeaderNav",
+>                 "enableTextWrapping": true
 >             }
 >         }
 >     }
@@ -65,33 +71,562 @@ The `manifest.json` file defines static information about the application such a
 > ```
 
 > ### Note:  
-> To improve the performance of overview page applications, you can enable lazy loading of cards by setting the URL parameter `sap-fe-xx-lazyloadingtest=true`. This parameter mimics the behavior of setting `"enableLazyRendering": true` in the manifest configuration.
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+
+SAP Fiori elements for OData V2 supports the `considerAnalyticalParameters` flag, which enables analytical parameter support for the smart filter bar.
 
 
 
-### Configuring the Overview Page Layout
+### Application-Level Properties
 
-The following layouts are available for the overview pages:
+The following properties configure the overall behavior of the overview page app:
 
--   Fixed card layout - Set the `containerLayout` parameter to `fixed` to enable this layout. In this layout, the cards have a fixed width. You can configure them to load with specific size requirements by defining a default size within each card definition. The grid supports up to four columns, determining how many cards can be displayed side by side.
+**Overview Page Manifest Properties**
 
-    > ### Note:  
-    > The fixed card layout has been deprecated as of SAPUI5 1.142.
 
--   Resizable card layout - Set the `containerLayout` parameter to `resizable` to enable this layout. End users can adjust the size of cards by expanding or contracting them both horizontally and vertically within the grid-based layout.
+<table>
+<tr>
+<th valign="top">
 
+Property
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`globalFilterModel` 
+
+</td>
+<td valign="top">
+
+OData model that contains entity definitions used by the global filter.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`globalFilterEntitySet` 
+
+</td>
+<td valign="top">
+
+Entity set used by the filter bar control as the global filter.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`containerLayout` 
+
+</td>
+<td valign="top">
+
+Layout of the card container. The supported values are `fixed` and `resizable`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`smartVariantRequired` 
+
+</td>
+<td valign="top">
+
+Activates smart variant management in the global filters. Default: `true`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`showDateInRelativeFormat` 
+
+</td>
+<td valign="top">
+
+Enables or disables relative date formatting.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`enableLiveFilter` 
+
+</td>
+<td valign="top">
+
+Enables live update in the global filters. When `false`, users must click *Go* to apply filters.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`dataLoadSettings.loadDataOnAppLaunch` 
+
+</td>
+<td valign="top">
+
+Defines loading behavior of data on app launch. The acceptable values are `ifAnyFilterExist`, `always`, `never`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`imageSupported` 
+
+</td>
+<td valign="top">
+
+Allows the condensed list card to show images or icons.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`refreshIntervalInMinutes` 
+
+</td>
+<td valign="top">
+
+Interval \(in minutes\) for automatic refresh of card models.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`useDateRangeType` 
+
+</td>
+<td valign="top">
+
+Enables or disables the semantic date range control for the filter bar. The default value is `false`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`enableLazyRendering` 
+
+</td>
+<td valign="top">
+
+When `true`, only cards in the visible viewport are rendered initially; additional cards render on scroll. The default value is `false`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`considerAnalyticalParameters` 
+
+</td>
+<td valign="top">
+
+Enables analytical parameter support for the smart filter bar. This setting applies to SAP Fiori elements for OData V2.
+
+</td>
+</tr>
+</table>
+
+> ### Tip:  
+> To improve performance, you can also enable lazy loading by setting the URL parameter `sap-fe-xx-lazyloadingtest=true`. This mimics the behavior of `"enableLazyRendering": true`.
+
+
+
+### Card- Level Properties
+
+Each card is defined as an entry inside the `cards` object. The card key for example, `card01` is the unique ID used to reference the card.
+
+**Card Properties**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Property
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`model` 
+
+</td>
+<td valign="top">
+
+Model used by the card.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`template` 
+
+</td>
+<td valign="top">
+
+Card component path.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.title` 
+
+</td>
+<td valign="top">
+
+Language-dependent title shown in the card header.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.subTitle` 
+
+</td>
+<td valign="top">
+
+Language-dependent subtitle shown in the card header.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.entitySet` 
+
+</td>
+<td valign="top">
+
+Entity set displayed in this card.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.valueSelectionInfo` 
+
+</td>
+<td valign="top">
+
+Additional information shown in the KPI header.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.listFlavor` 
+
+</td>
+<td valign="top">
+
+List flavor: `bar` or `Standard`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.listType` 
+
+</td>
+<td valign="top">
+
+List type: `Extended` \(more information\) or `Condensed` \(less space\).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.sortBy` 
+
+</td>
+<td valign="top">
+
+Property name used to sort the entity set.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.sortOrder` 
+
+</td>
+<td valign="top">
+
+Sort order: `Ascending` or `Descending`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.showRefresh` 
+
+</td>
+<td valign="top">
+
+Shows or hides the *Refresh* option under *More Actions*. Default: `true`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.staticContent` 
+
+</td>
+<td valign="top">
+
+Applicable to static link list cards.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.annotationPath` 
+
+</td>
+<td valign="top">
+
+Generic annotation path.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.kpiAnnotationPath` 
+
+</td>
+<td valign="top">
+
+Path to a `UI.KPI` annotation.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.selectionAnnotationPath` 
+
+</td>
+<td valign="top">
+
+Path to a `UI.SelectionVariant` annotation.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.chartAnnotationPath` 
+
+</td>
+<td valign="top">
+
+Path to a `UI.Chart` annotation.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.presentationAnnotationPath` 
+
+</td>
+<td valign="top">
+
+Path to a `UI.PresentationVariant` annotation.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.dataPointAnnotationPath` 
+
+</td>
+<td valign="top">
+
+Path to a `UI.DataPoint` annotation.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.identificationAnnotationPath` 
+
+</td>
+<td valign="top">
+
+Path to a `UI.Identification` annotation.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.dynamicSubtitleAnnotationPath` 
+
+</td>
+<td valign="top">
+
+Path to a dynamic subtitle annotation.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.requireAppAuthorization` 
+
+</td>
+<td valign="top">
+
+Indicates that authorization is required for this card.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.navigation` 
+
+</td>
+<td valign="top">
+
+Set to `noHeaderNav` to disable navigation from the analytical list card header.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`settings.enableTextWrapping` 
+
+</td>
+<td valign="top">
+
+Enables text wrapping in the card. Default: `false`.
+
+</td>
+</tr>
+</table>
+
+
+
+## Configuring the Overview Page Layout
+
+The following card layouts are available for overview pages:
+
+
+<table>
+<tr>
+<th valign="top">
+
+Layout
+
+</th>
+<th valign="top">
+
+Behavior
+
+</th>
+<th valign="top">
+
+How to enable
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Fixed card layout
+
+</td>
+<td valign="top">
+
+Cards have a fixed width. You can configure each card with specific size requirements by defining a default size in its definition. The grid supports up to four columns.
+
+</td>
+<td valign="top">
+
+Set `"containerLayout": "fixed"`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Resizable card layout
+
+</td>
+<td valign="top">
+
+Users can resize cards horizontally and vertically within the grid.
+
+</td>
+<td valign="top">
+
+Set `"containerLayout": "resizable"`
+
+</td>
+</tr>
+</table>
+
+> ### Note:  
+> The fixed card layout has been deprecated as of SAPUI5 1.142. So, the resizable card layout becomes the default layout.
 
 When switching from fixed card layout to resizable card layout in an application, the following changes made in the fixed card layout are not retained:
 
--   Card arrangements modified by end users using drag and drop.
+-   Card arrangements modified by users using drag and drop.
 
 -   Card order changes made by key users using cut and paste.
 
 
+**Related Information**  
 
 
+[Configuring Dependencies to SAPUI5 Libraries](configuring-dependencies-to-sapui5-libraries-ef5f16b.md "You can define dependencies to SAPUI5 libraries required by your app. Defining dependencies allow the framework to preload libraries efficiently, which can improve the loading time of the app.")
 
+[Configuring the Global Filter on the Overview Page](configuring-the-global-filter-on-the-overview-page-73d9693.md "You can configure the global filter to allow users to filter the data displayed on one or more cards.")
 
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-8431b54.md).
+[Refresh Entity Sets in sap-keep-alive Mode in the Overview Pages](refresh-entity-sets-in-sap-keep-alive-mode-in-the-overview-pages-0c35c87.md "You can use the sap-keep-alive feature in SAP Fiori launchpad to preserve the view state of an overview page when users navigate away from it.")
+
+[The FilterBar Building Block](the-filterbar-building-block-7838611.md "You can user the FilterBar building block to add a filter bar to your application in SAP Fiori elements for OData V4.")
+
+[Smart Filter Bar](../10_More_About_Controls/smart-filter-bar-7bcdffc.md "The sap.ui.comp.smartfilterbar.SmartFilterBar control analyzes the $metadata document of an OData service and renders a FilterBar control that can be used to filter, for example, a table or a chart.")
 

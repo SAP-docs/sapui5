@@ -118,7 +118,7 @@ Open a terminal and install UI5 CLI globally on your machine by executing the fo
 
     ```
     {
-      "_version": "2.8.0",
+      "_version": "2.10.0",
       "sap.app": {
     	"id": "sap.ui.demo.smartControls",
     	"type": "application",
@@ -148,7 +148,7 @@ Open a terminal and install UI5 CLI globally on your machine by executing the fo
     		"async": true
     	},
     	"dependencies": {
-    	  "minUI5Version": "1.149.0",
+    	  "minUI5Version": "1.150.0",
     	  "libs": {
     	    "sap.m": {},
     	    "sap.ui.comp": {},

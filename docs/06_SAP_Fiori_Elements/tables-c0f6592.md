@@ -172,7 +172,7 @@ For columns with `Low`, `None`, and `Medium` settings, the *Show More per Row* /
 > -   Columns with a `Low` importance setting are hidden first on smaller screens, followed by columns with the settings `None` \(default\) and `Medium`.
 
 > ### Sample Code:  
-> XML annotation
+> XML Annotation
 > 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProductSalesPriceType">
@@ -194,6 +194,60 @@ For columns with `Low`, `None`, and `Medium` settings, the *Show More per Row* /
 >     </Annotation>
 > </Annotations>
 > 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.lineItem: [
+>     {
+>         position: 10,
+>         importance: #HIGH
+>     }
+> ]
+> PriceDay;
+> 
+> @UI.lineItem: [
+>     {
+>         position: 20
+>         // Default importance is #MEDIUM
+>     }
+> ]
+> TargetPrice;
+> 
+> @UI.lineItem: [
+>     {
+>         position: 30,
+>         importance: #LOW
+>     }
+> ]
+> DiscountPriceTarget;
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate STTA_PROD_MAN.STTA_C_MP_ProductSalesPriceType with @(
+>     UI.LineItem: [
+>         {
+>             $Type: 'UI.DataField',
+>             Value: PriceDay,
+>             ![@UI.Importance]: #High
+>         },
+>         {
+>             $Type: 'UI.DataField',
+>             Value: TargetPrice
+>             // Default importance is Medium (same as None)
+>         },
+>         {
+>             $Type: 'UI.DataField',
+>             Value: DiscountPriceTarget,
+>             ![@UI.Importance]: #Low
+>         }
+>     ]
+> );
 > ```
 
 > ### Note:  
@@ -394,7 +448,15 @@ The search field is displayed in the toolbar of a responsive table or grid table
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Use the local XML annotation.
+    > ```
+    > @Search.searchable: true
+    > define view entity SalesOrderItem
+    >     as select from ztsalesorderitem
+    > {
+    >     ...
+    > }
+    > 
+    > ```
 
     > ### Sample Code:  
     > CAP CDS Annotation \(non-containment scenario\)

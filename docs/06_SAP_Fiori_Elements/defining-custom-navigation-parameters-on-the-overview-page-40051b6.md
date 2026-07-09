@@ -1,8 +1,8 @@
 <!-- loio40051b67edaf457cad37d552c37b497d -->
 
-# Defining Custom Navigation Parameters
+# Defining Custom Navigation Parameters on the Overview Page
 
-You can define custom parameters for intent-based navigation to the target application in SAP Fiori elements for OData V4.
+You can define custom parameters for intent-based navigation to pass filter values, modify select options, or remove filters when navigating to the target application.
 
 
 
@@ -10,7 +10,9 @@ You can define custom parameters for intent-based navigation to the target appli
 
 To define custom parameters for intent-based navigation, proceed as follows:
 
-1.  Define the `onCustomParams` function in the controller file extension, as shown in the following sample code:
+1.  Implement the custom parameter functions in a controller extension.
+
+    In your controller extension file, define the `onCustomParams` function, as shown in the following sample code:
 
     > ### Sample Code:  
     > ```
@@ -23,7 +25,7 @@ To define custom parameters for intent-based navigation, proceed as follows:
     > },
     > ```
 
-    The custom parameter function inserts URL parameters when navigating to the target application. Configure the following properties:
+    The custom parameter function inserts URL parameters when navigating to the target application. Each parameter is represented as a selection variant entry with the following properties:
 
     **Configuration Properties**
 
@@ -49,7 +51,7 @@ To define custom parameters for intent-based navigation, proceed as follows:
     </td>
     <td valign="top">
     
-    Defines the property name
+    Defines the property name.
     
     </td>
     </tr>
@@ -85,7 +87,7 @@ To define custom parameters for intent-based navigation, proceed as follows:
     </td>
     <td valign="top">
     
-    Defines the second value for the operator. This is used only for range-based operators such as `BT`. The value is set to `null` if not used.
+    Defines the second value for the operator. This is used only for range-based operators such as `BT`. If not used, set the value to `null`.
     
     </td>
     </tr>
@@ -103,7 +105,11 @@ To define custom parameters for intent-based navigation, proceed as follows:
     </tr>
     </table>
     
+    The following sample code shows two parameter functions. The `getParameters` function adds a selection variant and `param2` adds a property to the navigation parameters object.
+
     > ### Sample Code:  
+    > `getParameters` function
+    > 
     > ```
     > getParameters: function(oNavigateParams) {
     >     var aCustomSelectionVariant = [];
@@ -123,6 +129,8 @@ To define custom parameters for intent-based navigation, proceed as follows:
     >     return oNavigateParams;
     > }
     > ```
+
+    The following sample code shows how to read existing select options, remove filters, and add new filters before navigation:
 
     > ### Sample Code:  
     > Adding parameters during navigation
@@ -182,22 +190,27 @@ To define custom parameters for intent-based navigation, proceed as follows:
 
 2.  Add a controller extension in the `manifest.json` file, and specify the path to the custom controller, as shown in the following sample code:
 
-    ```
-    "extends": {
-        "extensions": {
-            "sap.ui.controllerExtensions": {
-                "sap.ovp.app.Main": {
-                    "controllerName": "my_app.ext.controller.OverViewPageExt"
-                }
-            }
-        }
-    }
-    ```
+    > ### Sample Code:  
+    > `manifest.json`
+    > 
+    > ```
+    > "extends": {
+    >     "extensions": {
+    >         "sap.ui.controllerExtensions": {
+    >             "sap.ovp.app.Main": {
+    >                 "controllerName": "my_app.ext.controller.OverViewPageExt"
+    >             }
+    >         }
+    >     }
+    > }
+    > ```
 
     > ### Note:  
-    > Add the new extension code in the same file if a controller file already exists.
+    > If a custom controller file already exists, add the new extension code in the same file.
 
-3.  To return the custom parameters during navigation, configure the `customParams` setting in the card definition. Include the name of the custom parameter function defined in your custom controller file.
+3.  Refer the custom parameter function from a card.
+
+    In the card definition, set the `customParams` property to the name of the custom parameter function defined in Step 1.
 
     > ### Sample Code:  
     > ```
@@ -215,9 +228,4 @@ To define custom parameters for intent-based navigation, proceed as follows:
     > }
     > ```
 
-
-
-
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Defining Custom Navigation Parameters](defining-custom-navigation-parameters-ee9ac2c.md).
 

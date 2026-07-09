@@ -2,15 +2,17 @@
 
 # Dual Combination Chart
 
-You can render the chart as a dual combination chart, which lets you view individual data points for a particular dimension.
+You can render the chart as a dual combination chart in SAP Fiori elements for OData V4.
+
+A dual combination chart lets you view individual data points for a particular dimension.
 
   
   
 **Example of a Dual Combination Chart**
 
-![](images/Dual_Combination_Chart_Card_6fbcb2e.png "Example of a Dual Combination Chart ")
+![A chart that combines a Maximum Net Price column chart, a Total Net Price line chart, and a Minimum Price line chart for a number of items.](images/Dual_Combination_Chart_dcc0020.png "Example of a Dual Combination Chart ")
 
-The chart contains two axis values with a line chart representing the multiple measures.
+The chart contains two axis values with line charts representing the multiple measures.
 
 Chart area configuration:
 

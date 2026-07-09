@@ -2,20 +2,13 @@
 
 # Configuring Charts on the Overview Page
 
-In SAP Fiori elements for OData V4, you can configure the measures and dimensions displayed in charts by setting the `role` property to the required value for a chart type. Additional definitions apply to all chart types.
+You can configure the measures and dimensions displayed in charts by setting the `role` property to the required value for a chart type. Additional configurations apply to all chart types.
 
 
 
-> ### Note:  
-> This topic describes how to use charts within SAP Fiori elements overview pages. If you use the building block, you can try achieving the functionality through other means, such as the following:
-> 
-> -   Properties or methods exposed by the building block
-> 
-> -   Custom code using extensions
+## Chart Annotations
 
-
-
-You can use the same annotation file with different qualifiers to present charts with different chart views. To do this, specify different qualifiers in the annotation file for each card. The following sections of the annotation file apply to all chart types:
+You can use the same annotation file with different qualifiers to display different chart views for different cards. The following sections of the annotation file apply to all chart types:
 
 
 <table>
@@ -39,7 +32,7 @@ What it Does
 </td>
 <td valign="top">
 
-Specify the navigation targets that are activated when the user clicks the card, and list the parameters to pass to the target application. This definition is mandatory. For more information, see [Configuring Card Navigation](configuring-card-navigation-530f9e6.md).
+Specifies the navigation targets that are activated when the user clicks the card, and list the parameters to pass to the target application. This definition is mandatory. For more information, see [Configuring Card Navigation](configuring-card-navigation-530f9e6.md).
 
 </td>
 </tr>
@@ -51,7 +44,7 @@ Specify the navigation targets that are activated when the user clicks the card,
 </td>
 <td valign="top">
 
-Specify the filter values that are applied to the card when retrieving its data.
+Specify the filter values applied to the card when retrieving its data.
 
 </td>
 </tr>
@@ -63,7 +56,7 @@ Specify the filter values that are applied to the card when retrieving its data.
 </td>
 <td valign="top">
 
-Specify the sort order.
+Specifies the sort order.
 
 </td>
 </tr>
@@ -75,7 +68,7 @@ Specify the sort order.
 </td>
 <td valign="top">
 
-Limit the maximum number of records fetched from the back end. If this option isn't used, then all records from the back end are displayed in the chart.
+Limits the maximum number of records fetched from the back end. If this option isn't used, then all records from the back end are displayed in the chart.
 
 > ### Tip:  
 > Don't use this for charts that rely on complete datasets, for example, the donut chart card, otherwise the results won't be meaningful.
@@ -92,7 +85,7 @@ Limit the maximum number of records fetched from the back end. If this option is
 </td>
 <td valign="top">
 
-Specify the dimensions and measures that define the chart, the chart type, and the how these measures or dimensions are used. This definition is mandatory.
+Specifies the dimensions, measures, chart type, and the how these measures or dimensions are used. This definition is mandatory.
 
 </td>
 </tr>
@@ -128,7 +121,7 @@ Specifies how a measure is used in the chart. The configuration varies depending
 </td>
 <td valign="top">
 
-The dimensions used in the chart.
+Defines the dimensions used in the chart.
 
 </td>
 </tr>
@@ -140,7 +133,7 @@ The dimensions used in the chart.
 </td>
 <td valign="top">
 
-Specifies how a dimension is used in the chart. The configuration varies depending on the chart type, as described below.
+Specifies how a dimension is used in the chart. The configuration varies depending on the chart type.
 
 </td>
 </tr>
@@ -148,9 +141,44 @@ Specifies how a dimension is used in the chart. The configuration varies dependi
 
 
 
+## Chart Types
+
+Overview pages support analytical chart cards such as line, donut, bubble, column, stacked column, vertical bullet, combination, bar, waterfall, dual combination, and scatter.
+
+The value assigned to the `role` property in the annotation determines the visualization of the chart.
+
+The actual interpretation of the `role` value depends on the chart type.
+
+For dimensions, you can set the `role` to `category` or `series`. If no value is specified, the default is `category`.
+
+For measures, you can set the `role` to the values: `axis1`, `axis2` , or `axis3`. If no value is specified, the default is `axis1`. The actual interpretation of the value specified for `role` in the annotation file varies according to the chart type used.
+
+
+
+### Time Series Charts
+
+Time series chart cards use time as the category axis instead of a categorical axis. A time-based axis provides a clean representation of time-based dimension and adapts more responsively to changes in card size. The time axis displays values in the visual chart’s default format, for example, day/month/year as 10/Jan/2026.
+
+Analytic cards automatically use the time axis only if the following conditions are met:
+
+-   The chart type is line, bubble, column, or combination.
+
+-   The chart has only one dimension.
+
+-   The data type of the dimension is either `edm.datetime` or `edm.string`.
+
+    If the data type is `edm.string`, then it must have the additional OData metadata annotation `sap:semantics` of `yearmonthday`.
+
+-   For a bubble chart, there must be exactly two measures.
+
+-   For a combination chart card, then there must be at least two measures.
+
+
+
+
 ## Formatting Numeric Values in Charts
 
-In overview pages, analytical chart cards can have format measure values based on the `NumberOfFractionalDigits` property of the `DataPoint` term in the annotation file, as shown in the following sample code:
+You can format measure values in analytical chart cards by setting the `NumberOfFractionalDigits` property of the `DataPoint` annotation, as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -250,19 +278,23 @@ In overview pages, analytical chart cards can have format measure values based o
 
 ### Semantic Pattern
 
-With the semantic pattern feature, analytical cards allow users to compare between actual and forecast values. The line, column, and vertical bullet chart cards support this feature. The forecast value is derived from the datapoint annotation that is associated with the measure used in the selected analytical card. To enable the semantic pattern feature:
+The semantic pattern feature lets users compare actual and forecast values in line, column, and vertical bullet chart cards. The forecast value comes from the `DataPoint` annotation associated with the chart's measure.
 
--   The datapoint annotation should contain the `ForecastValue` property with value as a measure.
--   The chart annotation must consist of:
-    -   1 dimension and 1 measure for line and column chart cards
-    -   1 dimension and 1-2 measures for vertical bullet chart cards
+To enable the semantic pattern feature, the following conditions must be satisfied:
+
+-   The `DataPoint` annotation must contain the `ForecastValue` property, with the value set to a measure.
+-   The chart annotation must satisfy the following criteria:
+    -   For line and column chart cards: 1 dimension and 1 measure.
+
+    -   For vertical bullet chart cards: 1 dimension and 1-2 measures.
 
 
-If the above conditions are not met, the chart don't inherit the semantic pattern feature. In such cases:
+
+If the above conditions aren't met, the chart doesn't render the semantic pattern feature. In such cases:
 
 -   The actual measure is displayed in a solid color.
 
--   The forecast measure is shown as a dashed pattern for column and vertical bullet charts, or as a dotted pattern for line charts.
+-   The forecast measure is displayed as a dashed pattern for column and vertical bullet charts, or as a dotted pattern for line charts.
 
 
 The following image illustrates this behavior:
@@ -392,37 +424,11 @@ The following sample code shows how it's used:
 
 
 
-## Chart Types
-
-Overview pages can use line, donut, bubble, column, stacked column, vertical bullet, combination, and scatter analytic chart cards.
-
-The value assigned to the `role` property for dimensions and measures in the annotation file determines the visualization of the chart. For dimensions, you can set the `role` to `category` or `series`. If no value is specified, the default is `category`.
-
-For measures, you can set the `role` to the values: `axis1`, `axis2` , or `axis3`. If no value is specified, the default is `axis1`. The actual interpretation of the value specified for `role` in the annotation file varies according to the chart type used.
-
-
-
-### Time Series Charts
-
-Time series chart cards are similar to regular chart cards but use time as the category axis instead of a categorical axis. Using a time-based axis provides a clean representation of time-based dimension and makes the chart more responsive to changes in card size. The time axis displays values in the visual chart’s default format, for example, day/month/year as 10/Jan/2016.
-
-Analytic cards automatically use the time axis only if the following conditions are met:
-
--   The chart type is either line, bubble, column, or combination.
--   The chart is configured with only one dimension.
--   The data type of the dimension is either `edm.datetime` or `edm.string`. If the data type is `edm.string`, then it must have the additional OData metadata annotation `sap:semantics` of `yearmonthday`. If it's a bubble chart, there must be exactly two measures.
--   If it's a combination chart card, then there must be at least two measures.
-
-> ### Note:  
-> Only line, bubble, column, and combination chart cards support the time axis.
-
-
-
 <a name="loioc7c5a828fe69411da7d63e2e63086b59__section_oh1_smk_sfb"/>
 
-## Color Palette
+## Applying Semantic Coloring with a Color Palette
 
-A few chart types \(line, bubble, combination, and stacked column\) support color palette for semantic coloring. To enable this feature, configure the required chart type and define the `colorPalette` property in the `manifest.json` file. The `colorPalette` property is a map of four objects. Each object indicates the semantic representations:
+Line, bubble, combination, and stacked column charts support a color palette for semantic coloring. To enable this feature, define the `colorPalette` property in `manifest.json` for the relevant card. The `colorPalette` property is a map of four objects. Each object indicates the semantic representations:
 
 -   First object: criticality state 0
 
@@ -433,7 +439,53 @@ A few chart types \(line, bubble, combination, and stacked column\) support colo
 -   Fourth object: criticality state 3
 
 
+Each object has the following two properties:
+
+**Criticality State Properties**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Property
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`color` 
+
+</td>
+<td valign="top">
+
+Color used for the criticality state. Use only colors from the semantic palette defined by SAP Fiori guidelines.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`legendText` 
+
+</td>
+<td valign="top">
+
+Legend text shown for the criticality state.
+
+</td>
+</tr>
+</table>
+
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > 
 > "colorPalette": {
@@ -457,46 +509,57 @@ A few chart types \(line, bubble, combination, and stacked column\) support colo
 > 
 > ```
 
-Every object in the `colorPalette` map has two properties: `color`, which defines a specific state, and `legendText`, which provides the corresponding legend text.
-
 > ### Note:  
 > -   Use only the colors listed in the semantic palette that are defined by SAP Fiori guidelines for configuring the column stack card.
 > 
-> -   All four objects in the color `colorPalette` map are mandatory.
-
-**Stable Coloring with Dimension Values \(Column Stack Chart\)**
-
-You can configure an analytical card with column stack chart to map the dimension values to specific colors. You can use the configuration mentioned below:
-
-1.  In the card manifest setting, set `bEnableStableColors` to `true`.
-
-2.  Define the color palette for the dimension, as shown in the following code sample:
-
-    > ### Sample Code:  
-    > ```
-    > "colorPalette": {
-    >         "dimensionSettings": {
-    >             "StatusCriticality": {
-    >                 "rule1": {
-    >                     "color": "<colorValue1>",
-    >                     "dimensionValue": "<dimensionValue1>"
-    >                 },
-    >                 "rule2": {
-    >                     "color": "<colorValue2>",
-    >                     "dimensionValue": "<dimensionValue2>"
-    >                 }
-    >             }
-    >         }
-    >     }
-    > 
-    > ```
+> -   All four objects in the `colorPalette` map are mandatory.
 
 
-You must define the `dimensionSettings` configuration under `colorPalette`. To color each dimension value, you must configure the color and `dimensionValue` to be colored, as per the defined rule, under the dimension property path configuration. You can define any name for the object property key. In the above example, they are mentioned as `rule1` and `rule2`
 
-Additionally, you can add an index card with the rules configuration. The legends get positioned in the order of the maintained index property. The index value is 0-index based. This configuration is placed under card settings. The following sample code shows the card setting:
+### Stable Coloring with Dimension Values
+
+You can map specific dimension values to specific colors in a column stack chart. To enable stable coloring, configure the following settings:
+
+1.  In the `manifest.json` file, set `bEnableStableColors` to `true`.
+
+2.  Define a `dimensionSettings` configuration under `colorPalette`.
+
+
+The following sample code shows how to color each dimension value:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "colorPalette": {
+>         "dimensionSettings": {
+>             "StatusCriticality": {
+>                 "rule1": {
+>                     "color": "<colorValue1>",
+>                     "dimensionValue": "<dimensionValue1>"
+>                 },
+>                 "rule2": {
+>                     "color": "<colorValue2>",
+>                     "dimensionValue": "<dimensionValue2>"
+>                 }
+>             }
+>         }
+>     }
+> 
+> ```
+
+For each value, configure `color` and `dimensionValue` under the dimension property path.
+
+You can order the legends as per the dimension configuration.
+
+> ### Note:  
+> If the `dimensionValue` and `index` are defined under `dimensionSettings` but `color` isn't, then only the legends get ordered and default colors are rendered. To order just the legends without overriding the colors, don't define `color` property for any of the `dimensionSettings` value.
+
+Additionally, you can add an index card with the rules configuration. The legends are positioned in the order of the index property. The index value is 0-index based. This configuration is placed under card settings. The following code sample shows the card setting:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "sap.ovp": {
 >   ...
@@ -538,18 +601,16 @@ Additionally, you can add an index card with the rules configuration. The legend
 > 
 > ```
 
-You can order the legends as per the dimension configuration.
-
 > ### Note:  
-> If the `dimensionValue` and index is defined under `dimensionSettings` and not the color, then only the legends get ordered and default colors are rendered. To order just the legends, do not define color property for any of the `dimensionSettings` value.
+> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
 
 
 
 <a name="loioc7c5a828fe69411da7d63e2e63086b59__section_jwl_cb3_hmb"/>
 
-## Data Label in Analytical Chart
+## Showing Data Label in Analytical Charts
 
-You can make data labels visible in analytical cards. To do this, set the `showDataLabel` property to `true` in `sap.ovp` of the `manifest.json` file. The default value is `false`.
+You can show data labels visible in analytical cards by setting the `"showDataLabel": true` in `sap.ovp` of the `manifest.json` file. The default value is `false`.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -564,10 +625,15 @@ You can make data labels visible in analytical cards. To do this, set the `showD
 >       },
 > ```
 
+> ### Note:  
+> The type of filter bar is determined by the service \(entity\) bound to the filter configuration of the overview page application. If the service is an OData V4 service, a `FilterBar` building block is rendered; for OData V2, a smart filter bar is rendered.
+
 ![](images/OVP_analytical_card_showdatalabel-true_bbf0cc3.png)
 
+**Related Information**  
 
 
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Configuring Charts](configuring-charts-8f64eb1.md).
+[Chart Cards Used in Overview Pages](chart-cards-used-in-overview-pages-68e62ad.md "This section describes the analytical chart cards you can use in overview pages.")
+
+[Analytical Cards](analytical-cards-d7b0b42.md "You can use the analytical cards to view data in a variety of chart formats.")
 

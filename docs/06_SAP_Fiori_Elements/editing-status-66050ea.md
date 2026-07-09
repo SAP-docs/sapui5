@@ -15,7 +15,7 @@ For example, it can give the user information about whether the item can be acce
 
 ## Editing Status for Table Items
 
-Users can view the editing status of the objects displayed on the list report page. On a list report page with a responsive table, the editing status is shown in the key column \(the first column displayed with a semantic key\). On a list report page with a grid table, a tree table, or an analytical table, the editing status is shown in a separate column which is placed in the second position and doesn't have a label. The editing status is calculated from the draft administrative data that is provided by the back end.
+Users can view the editing status of the objects displayed on the list report page. On a list report page with a responsive table, the editing status is shown in the key column \(the first column displayed with a semantic key\). On a list report page with a grid table, the editing status is shown in a separate column which is placed in the second position and doesn't have a label. The editing status is calculated from the draft administrative data that is provided by the back end.
 
 **Editing Status Visualization on a List Report Page with a Responsive Table**
 

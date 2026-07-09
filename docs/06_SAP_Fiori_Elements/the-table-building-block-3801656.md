@@ -165,6 +165,8 @@ With the `Table` building block, you can also define mass-edit configuration usi
 > </macros:Table>
 > ```
 
+With the `Table` building block, you can remove the thousands separator from integer fields using `disableIntegerGrouping`. For more information, see [Removing the Thousands Separator from Fields](removing-the-thousands-separator-from-fields-40713d5.md).
+
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Mass Edit](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableMassEdit).
 
 
@@ -357,6 +359,7 @@ The following `formatOptions` are supported:
 -   `textMaxLength`
 -   `imageFitType`
 -   `enableEnlargeImage`
+-   `disableIntegerGrouping`
 
 For more information about `formatOptions`, see [Using Images and Icons](using-images-and-icons-5760b63.md) and the [Configuring Multi-Line Text Fields](multi-line-text-fields-b502146.md#loiob5021469ca58446ea4e6cf73635dd5d3__configuring-multi-line-text-fields) section in [Multi-Line Text Fields](multi-line-text-fields-b502146.md).
 

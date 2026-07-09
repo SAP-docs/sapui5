@@ -2,16 +2,16 @@
 
 # Highlighting Numeric Values
 
-You can highlight a numeric value \(for example, with a color\) in SAP Fiori elements for OData V4.
+You can highlight a numeric value by displaying it in a specific color, for example.
 
 
 
-To highlight a numeric value, provide `Criticality` or `CriticalityCalculation` information in the `com.sap.vocabularies.UI.v1.DataPoint` annotation.
+To highlight a numeric value, define `Criticality` or `CriticalityCalculation` information in the `com.sap.vocabularies.UI.v1.DataPoint` annotation.
 
 For more information, see `com.sap.vocabularies.UI.v1.DataPoint` in [Annotations Used in Overview Pages](annotations-used-in-overview-pages-65731e6.md).
 
+**Related Information**  
 
 
-> ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Highlighting Numeric Values](highlighting-numeric-values-01f457d.md).
+[Configuring Card Properties](configuring-card-properties-53b0791.md "This section describes the configuration items relevant for all overview page cards. All cards inherit a set of generic capabilities such as a card header, content area, and navigation support.")
 

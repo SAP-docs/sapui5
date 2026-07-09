@@ -21,7 +21,7 @@ The modification \(add/remove/change\) is achieved by using the `adaptNavigation
 
 `oSelectionVariant` consists of all the properties that have been passed to the target application ‒ this already excludes the sensitive information and considers any defined object mapping.
 
-`oTargetInfo` consists of the `semanticObject` and action that has been configured.
+`oNavigationInfo` consists of the `semanticObject` , `action` that has been configured, and `sourceControl`, the `sap.fe.macros.Field` that triggered the navigation. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.IntentBasedNavigation).
 
 
 
@@ -51,11 +51,23 @@ The modification \(add/remove/change\) is achieved by using the `adaptNavigation
 
     > ### Sample Code:  
     > ```
+    > 
+    > javascript
     > override: {
     >     intentBasedNavigation: {
-    >         adaptNavigationContext: function(oSelectionVariant, oTargetInfo) {
-    >             Log.info("adaptNavigationContext extension called with semantic object: " + oTargetInfo .semanticObject + " and action: " + oTargetInfo .action);
+    >         adaptNavigationContext: function(oSelectionVariant, _oNavigationInfo) {
+    >             Log.info("adaptNavigationContext extension called with semantic object: "                + _oNavigationInfo.semanticObject + " and action: " + _oNavigationInfo.action);
     >             oSelectionVariant.removeSelectOption("HasDraftEntity");
+    >             // Use getMainPropertyAbsolutePath to retrieve the property path
+    >             var sPropertyPath = _oNavigationInfo.sourceControl?.getMainPropertyAbsolutePath();
+    >             switch (sPropertyPath) {
+    >                 case "Travel/TravelID":
+    >                     oSelectionVariant.addSelectOption("Source", "I", "EQ", "TravelID");
+    >                     break;
+    >                 case "Travel/Description":
+    >                     oSelectionVariant.addSelectOption("Source", "I", "EQ", "Description");
+    >                     break;
+    >             }
     >         }
     >     }
     > }
@@ -69,7 +81,13 @@ The modification \(add/remove/change\) is achieved by using the `adaptNavigation
 ## 
 
 > ### Restriction:  
-> When you click a field that is displayed as a link, the call to the `adaptNavigationContext` extension method is invoked only once even if the link opens more than one navigation link. You cannot invoke this method by clicking the navigation links at the second level.
+> -   `sourceControl` returns `undefined` if the navigation isn't triggered from a field such as a programmatic `navigateOutbound` call or a plain `sap.m.Button`.
+> 
+> -   `sourceControl.getMainPropertyAbsolutePath()` returns `undefined` for fields with annotation type without a value property path such as `DataFieldForAction,` `DataFieldForIntentBasedNavigation`, or a field bound to an annotation such as a `DataPoint`.
+> 
+> -   When you click a field that is displayed as a link, the call to the `adaptNavigationContext` extension method is invoked only once even if the link opens more than one navigation link. You cannot invoke this method by clicking the navigation links at the second level.
+> 
+>     Always check for null values before using `sourceControl` or `sourceControl.getMainPropertyAbsolutePath()`.
 
 > ### Note:  
 > For information about SAP Fiori elements for OData V2, see [Creating an Extension to Modify Properties in the Navigation Context](creating-an-extension-to-modify-properties-in-the-navigation-context-cd430a4.md).

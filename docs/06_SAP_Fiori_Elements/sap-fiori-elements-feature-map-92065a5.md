@@ -82,7 +82,7 @@ Analytical card
 
 [Creating Key Performance Indicator Tags](creating-key-performance-indicator-tags-101b199.md)
 
-[Analytical Cards](analytical-cards-030cb5f.md)
+[Analytical Cards](analytical-cards-d7b0b42.md)
 
 </td>
 <td valign="top">
@@ -133,7 +133,7 @@ Add column to a table
 
 [Defining Line Items](defining-line-items-c007f4a.md)
 
-[Table Cards](table-cards-4f36240.md)
+ <?sap-ot O2O class="- topic/xref " href="4f36240dfbc84ffe9692a1b18a292201.xml" text="" desc="" xtrc="xref:10" xtrf="file:/home/builder/src/dita-all/uck1780669073151/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/92065a5a4aea4bd98e65e5ba1c823e73.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
 
 [Grouping of Fields](grouping-of-fields-2f84455.md)
 
@@ -757,7 +757,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Configuring Card Filters](configuring-card-filters-005970c.md)
+[Configuring Card Filters](configuring-card-filters-ecde99f.md)
 
 </td>
 <td valign="top">
@@ -885,7 +885,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Coloring Cards Based on Threshold Values](coloring-cards-based-on-threshold-values-4069609.md)
+[Coloring Cards Based on Threshold Values](coloring-cards-based-on-threshold-values-02c53f4.md)
 
 </td>
 <td valign="top">
@@ -1041,7 +1041,7 @@ Combo box
 
 [Value Help as a Dropdown List](value-help-as-a-dropdown-list-fa974ff.md)
 
-[Configuring View Switch](configuring-view-switch-9e1d1fc.md)
+[Configuring View Switch](configuring-view-switch-931f92d.md)
 
 </td>
 <td valign="top">
@@ -1372,7 +1372,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Creating Custom Cards](creating-custom-cards-95e80e2.md)
+[Creating Custom Cards on the Overview Page](creating-custom-cards-on-the-overview-page-6d260f7.md)
 
 </td>
 <td valign="top">
@@ -2190,7 +2190,7 @@ Dynamic page layout
 </td>
 <td valign="top">
 
-[Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-8431b54.md)
+[Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md)
 
 </td>
 <td valign="top">
@@ -2362,9 +2362,9 @@ Filter bar
 
 [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-b56bc11.md)
 
-[Configuring the Global Filter](configuring-the-global-filter-da583d1.md)
+[Configuring the Global Filter on the Overview Page](configuring-the-global-filter-on-the-overview-page-73d9693.md)
 
-[Adding Custom Filters](adding-custom-filters-31073ca.md)
+[Adding Custom Filters to the Overview Page](adding-custom-filters-to-the-overview-page-4739893.md)
 
 [Configuring Filter Bars](configuring-filter-bars-76066e5.md)
 
@@ -2595,7 +2595,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Formatting Numeric Values](formatting-numeric-values-355401b.md)
+[Formatting Numeric Values](formatting-numeric-values-735e518.md)
 
 </td>
 <td valign="top">
@@ -2803,7 +2803,7 @@ Header toolbar
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-3530e6b.md)
 
-[Defining Custom Actions](defining-custom-actions-7b84664.md)
+[Defining Custom Actions for Quick View Cards on the Overview Page](defining-custom-actions-for-quick-view-cards-on-the-overview-page-02fb273.md)
 
 [Defining Custom Actions](defining-custom-actions-c3de5c0.md)
 
@@ -3427,7 +3427,7 @@ Link
 
 [Adding a Contact Quick View to a Table](adding-a-contact-quick-view-to-a-table-31020b7.md)
 
-[Configuring the List Area](configuring-the-list-area-4e71809.md)
+[Configuring the List Area](configuring-the-list-area-f57373d.md)
 
 </td>
 <td valign="top">
@@ -3463,7 +3463,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Link List Cards](link-list-cards-132d863.md) 
+[Link List Cards](link-list-cards-0326f91.md) 
 
 </td>
 <td valign="top">
@@ -3623,7 +3623,7 @@ Overview page
 </td>
 <td valign="top">
 
-[List Cards](list-cards-1a3c28c.md)
+[List Cards](list-cards-56f39e0.md)
 
 </td>
 <td valign="top">
@@ -3659,7 +3659,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Configuring Overview Pages Using Runtime Capabilities](configuring-overview-pages-using-runtime-capabilities-f70023c.md)
+[Configuring Overview Pages Using Runtime Capabilities](configuring-overview-pages-using-runtime-capabilities-5b1dd11.md)
 
 </td>
 <td valign="top">
@@ -4438,7 +4438,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Quick View Cards](quick-view-cards-f65817a.md)
+[Quick View Cards](quick-view-cards-c4bd35e.md)
 
 </td>
 <td valign="top">
@@ -4645,7 +4645,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Configuring Overview Pages Using Runtime Capabilities](configuring-overview-pages-using-runtime-capabilities-f70023c.md)
+[Configuring Overview Pages Using Runtime Capabilities](configuring-overview-pages-using-runtime-capabilities-5b1dd11.md)
 
 </td>
 <td valign="top">
@@ -4686,7 +4686,7 @@ Responsive table
 
 [Setting the Table Type](setting-the-table-type-5d27054.md)
 
-[Table Cards](table-cards-4f36240.md)
+[Table Cards](table-cards-167bf7c.md)
 
 </td>
 <td valign="top">
@@ -5161,7 +5161,7 @@ Smart table
 
 [Setting the Table Type](setting-the-table-type-5d27054.md)
 
-[Table Cards](table-cards-4f36240.md)
+[Table Cards](table-cards-167bf7c.md)
 
 </td>
 <td valign="top">
@@ -5197,7 +5197,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Configuring Sort Properties](configuring-sort-properties-ad8aa01.md)
+[Configuring Sort Properties](configuring-sort-properties-41af842.md)
 
 </td>
 <td valign="top">
@@ -5229,7 +5229,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Stack Cards](stack-cards-5922ffb.md)
+[Stack Cards](stack-cards-756c49c.md)
 
 </td>
 <td valign="top">
@@ -5402,7 +5402,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Table Cards](table-cards-4f36240.md)
+[Table Cards](table-cards-167bf7c.md)
 
 </td>
 <td valign="top">
@@ -5498,7 +5498,7 @@ Tables
 
 [Setting the Table Type](setting-the-table-type-5d27054.md)
 
-[Table Cards](table-cards-4f36240.md)
+[Table Cards](table-cards-167bf7c.md)
 
 </td>
 <td valign="top">
@@ -5688,7 +5688,7 @@ Title
 
 [Changing Default Titles of New and Unnamed Objects](changing-default-titles-of-new-and-unnamed-objects-03bf617.md)
 
-[Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-132c9ad.md)
+[Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-05887bd.md)
 
 </td>
 <td valign="top">
@@ -5917,11 +5917,11 @@ Variant management
 
 [Managing Variants](managing-variants-b82d987.md)
 
-[Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-c4ebbae.md)
+[Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md)
 
 [Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-e3b12f4.md)
 
-[Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-8431b54.md)
+ <?sap-ot O2O class="- topic/xref " href="8431b54e0b58432daf30ff5e150ca0d6.xml" text="" desc="" xtrc="xref:318" xtrf="file:/home/builder/src/dita-all/uck1780669073151/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/92065a5a4aea4bd98e65e5ba1c823e73.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
 
 </td>
 <td valign="top">

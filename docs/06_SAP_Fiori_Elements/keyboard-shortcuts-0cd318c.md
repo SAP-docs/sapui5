@@ -362,12 +362,12 @@ Open error list
 </td>
 <td valign="top">
 
-[Ctrl\] + [Shift\] + [M\]  
+[Shift\] + [Ctrl\] + [M\]  
 
 </td>
 <td valign="top">
 
-[CMD\] + [Shift\] + [M\]  
+[Shift\] + [CMD\] + [M\]  
 
 </td>
 <td valign="top">

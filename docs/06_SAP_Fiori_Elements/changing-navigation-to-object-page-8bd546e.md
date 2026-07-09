@@ -20,7 +20,9 @@ You can use the `manifest.json` file to remove the navigation option to an objec
 
 ## Enable External Navigation
 
-You can define an external navigation using intent-based navigation in the `manifest.json` file. This allows users to navigate to an external FLP-based application instead of the normal internal navigation to an object page or subobject page, to remove the navigation option to an object page or a subobject page. The `manifest.json` snippet below shows an example change that would be needed to navigate to an intent-based external navigation instead of the regular subobject page navigation. The same can also be done at any subobject level or at the object page level..
+You can define an external navigation using intent-based navigation in the `manifest.json` file. This allows users to navigate to an external FLP-based application instead of the normal internal navigation to an object page or subobject page, to remove the navigation option to an object page or a subobject page. You can also define navigation to a specific section or subsection of an object page. For more information, see [Navigation to an Object Page Section or Subsection](navigation-to-an-object-page-section-or-subsection-93e74b4.md).
+
+The following `manifest.json` sample code shows how to set up an intent-based external navigation instead of the regular subobject page navigation:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -98,6 +100,8 @@ You can define an external navigation using intent-based navigation in the `mani
 > }
 > ```
 
+You can do this at any subobject level or at the object page level as well.
+
 You can also use a `display` section within the `navigation` section instead of the `detail` section shown in the sample above. The `display` section looks as follows:
 
 > ### Sample Code:  
@@ -115,6 +119,8 @@ You can also use a `display` section within the `navigation` section instead of 
 > ```
 
 > ### Note:  
+> For new apps, `detail` is the recommended standard property.
+> 
 > If both `display` and `detail` are given in the manifest, then `display` has priority for the outbound navigation.
 
 

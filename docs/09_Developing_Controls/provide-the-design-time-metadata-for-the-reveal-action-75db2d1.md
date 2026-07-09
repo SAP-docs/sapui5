@@ -153,7 +153,7 @@ Needs to be set to `true` if the change handler for the action is implemented on
 
 Specify or calculate a meaningful name for the control, which is understandable to key users. This is needed for the *reveal* action to show the names in the context menu: *Add <name in singular\>* and *Available <name in plural\>*.
 
-Name your control based on the general UI concept and follow the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design/). Example: Key users don't care about the difference between a smart, mobile, or responsive version of a form - they just call it "form".
+Name your control based on the general UI concept and follow the [SAP Design System](https://www.sap.com/design-system) guidelines. Example: Key users don't care about the difference between a smart, mobile, or responsive version of a form - they just call it "form".
 
 </td>
 </tr>

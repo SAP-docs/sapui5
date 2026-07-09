@@ -32,7 +32,7 @@ If the field is associated with a semantic object, it is rendered as a link, pro
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > <Annotations Target="clouds.products.CatalogService.Products/SoldToParty">
 >     <Annotation Term="Common.SemanticObject" String="supplier"/>
 > </Annotations>
@@ -43,8 +43,8 @@ If the field is associated with a semantic object, it is rendered as a link, pro
 > 
 > ```
 > annotate view PRODUCTS.CATALOGSERVICE.PRODUCTS with {
-> @Consumption.semanticObject: 'supplier'
-> soldtoparty;
+>     @Consumption.semanticObject: 'supplier'
+>     soldtoparty;
 > }
 > 
 > ```
@@ -53,8 +53,8 @@ If the field is associated with a semantic object, it is rendered as a link, pro
 > CAP CDS Annotation
 > 
 > ```
-> SoldToParty                   : String(10)                            @(Common : {
-> SemanticObject                  : 'supplier'
+> SoldToParty : String(10) @(Common : {
+>     SemanticObject : 'supplier'
 > });
 > 
 > ```
@@ -76,19 +76,75 @@ You can specify links for phone numbers or email addresses by using the followin
 
 When users click the link, the browser redirects to the operating system, for example, Android, iOS, or Windows, and directly performs the corresponding action, such as opening an email app.
 
-```xml
-<Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/phoneNumber">
-    <Annotation Term="Common.Label" String="Mobile"/>
-    <Annotation Term="Communication.IsPhoneNumber" Bool="true"/>
-</Annotations>
-```
+The following sample code shows the annotations for specifying a link for a phone number:
 
-```xml
-XML<Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/emailAddress">
-    <Annotation Term="Common.Label" String="Email"/>
-    <Annotation Term="Communication.IsEmailAddress" Bool="true"/>
-</Annotations>
-```
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/phoneNumber">
+>     <Annotation Term="Common.Label" String="Mobile"/>
+>     <Annotation Term="Communication.IsPhoneNumber" Bool="true"/>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @EndUserText.label: 'Mobile'
+> @Communication.isPhoneNumber: true
+> phoneNumber;
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate sap.fe.manageitems.TechnicalTestingService.LineItems {
+>     phoneNumber @(
+>         Common.Label: 'Mobile',
+>         Communication.IsPhoneNumber: true
+>     );
+> };
+> 
+> ```
+
+The following sample code shows the annotations for specifying a link for an email address:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> XML<Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/emailAddress">
+>     <Annotation Term="Common.Label" String="Email"/>
+>     <Annotation Term="Communication.IsEmailAddress" Bool="true"/>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @EndUserText.label: 'Email'
+> @Communication.isEmailAddress: true
+> emailAddress;
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate sap.fe.manageitems.TechnicalTestingService.LineItems {
+>     emailAddress @(
+>         Common.Label: 'Email',
+>         Communication.IsEmailAddress: true
+>     );
+> };
+> 
+> ```
 
 
 
@@ -101,7 +157,7 @@ You can display a basic link with an optional icon or image. To do so, use `Data
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > <Annotation Term="UI.FieldGroup" Qualifier="DataFieldUrl">
 >     <Record Type="UI.FieldGroupType">
 >         <PropertyValue Property="Data">

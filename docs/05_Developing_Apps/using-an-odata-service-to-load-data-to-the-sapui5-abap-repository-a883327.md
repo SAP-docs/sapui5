@@ -92,8 +92,36 @@ You get this message if you use the SAP Cloud Connector to call `/UI5/ABAP_REPOS
 
 For more information, see SAP Note [2875647](https://me.sap.com/notes/2875647).
 
+
+
+## Communication Scenario for Deployment
+
+
+
+### Context
+
+The communication scenario `SAP_COM_0B28` provides an OData V2 API for deploying SAPUI5 applications into ABAP cloud systems. Technical users can authenticate using either a certificate or basic authentication for use in CI/CD pipelines. To deploy these applications, use the npm package [ux-ui5-tooling](https://www.npmjs.com/package/@sap/ux-ui5-tooling) for the communication with the ABAP cloud system. This communication scenario allows only updates to existing SAPUI5 applications in the SAPUI5 ABAP Repository. The initial creation must be done by a business user with development authorization. This ensures that the repository responsibility is set to natural version. To deploy an application, see [Deploying an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/1b7a3be8d99c45aead90528ef472af37.html).
+
+Get an overview about how to develop an SAP Fiori Application UI, see [Develop an SAP Fiori Application UI](https://help.sap.com/docs/SAP_S4HANA_CLOUD/6aa39f1ac05441e5a23f484f31e477e7/2a4ae231df8843379df7a36fa3462d4c.html?version=2602.VAL).
+
+
+
+
+
+### Setup Deploy Configuration
+
+The deployment can be triggered using the npm package [ux-ui5-tooling](https://www.npmjs.com/package/@sap/ux-ui5-tooling). To connect to the ABAP Platform Cloud System, maintain the basic authentication credentials from the communication user.
+
+For further guidance on setting up deployment configurations and starting deployments, see the documentation from the [ux-ui5-tooling](https://www.npmjs.com/package/@sap/ux-ui5-tooling).
+
+For further assistance to Develop an SAP Fiori Application UI and Deploy it to ABAP Using Visual Studio Code, see [Develop an SAP Fiori Application UI and Deploy it to ABAP Using Visual Studio Code](https://help.sap.com/docs/btp/sap-business-technology-platform/develop-sap-fiori-application-ui-and-deploy-it-to-abap-using-visual-studio-code?version=Cloud).
+
 **Related Information**  
 
+
+[Deployment to ABAP](https://www.npmjs.com/package/@sap/ux-ui5-tooling#deployment-to-abap)
+
+[Create a Communication Arrangement](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/a0771f6765f54e1c8193ad8582a32edb.html?version=2602.VAL)
 
 [Activate and Maintain Services](https://help.sap.com/viewer/68bf513362174d54b58cddec28794093/latest/en-US/bb2bfe50645c741ae10000000a423f68.html)
 

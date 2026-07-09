@@ -13,13 +13,13 @@ The UI annotations for `LineItem`, `Identification` and `FieldGroup` have an att
 > 
 > ```xml
 > <Annotation Term="UI.LineItem">
->    <Collection>
->       <Record Type="UI.DataField">
->          <PropertyValue Property="Criticality" Path="to_ProductStock/StockCriticality"/>
->          <PropertyValue Property="Value" Path="to_ProductStock/StockEmergencyLevel"/>
->          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->       </Record>
->    </Collection>
+>     <Collection>
+>         <Record Type="UI.DataField">
+>             <PropertyValue Property="Criticality" Path="to_ProductStock/StockCriticality"/>
+>             <PropertyValue Property="Value" Path="to_ProductStock/StockEmergencyLevel"/>
+>             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>         </Record>
+>     </Collection>
 > </Annotation>
 > ```
 
@@ -28,11 +28,11 @@ The UI annotations for `LineItem`, `Identification` and `FieldGroup` have an att
 > 
 > ```
 > @UI.lineItem: [
->   {
->     criticality: '_ProductStock.StockCriticality',
->     value: '_ProductStock.StockEmergencyLevel',
->     importance: #HIGH
->   }
+>     {
+>         criticality: '_ProductStock.StockCriticality',
+>         value: '_ProductStock.StockEmergencyLevel',
+>         importance: #HIGH
+>     }
 > ]
 > ```
 
@@ -47,7 +47,7 @@ The UI annotations for `LineItem`, `Identification` and `FieldGroup` have an att
 >         Value : to_ProductStock.StockEmergencyLevel,
 >         ![@UI.Importance] : #High
 >     }
-> ]]
+> ]
 > ```
 
 
@@ -70,7 +70,7 @@ The property containing the criticality can have the following values \(derived 
     > -   If the field is marked with "CriticalityRepresentationType/WithoutIcon", then the `ObjectStatus` is rendered without the icon.
 
 
-The texts are not static, so you can change them to suit your needs by defining them in the criticality path. The following image shows examples of using these values in stock availability of products both on the list report oage and the object page:
+The texts are not static, so you can change them to suit your needs by defining them in the criticality path. The following image shows examples of using these values in stock availability of products both on the list report page and the object page:
 
 ![](images/LROP_Status_Colors_and_Icons_75aa307.png)
 

@@ -133,9 +133,6 @@ The table containing additional custom columns can look like this:
     > ### Note:  
     > In case the fragment needs to be re-used for multiple tabs, the `id` property must be set to make the ids unique.
 
-    > ### Note:  
-    > To reuse a fragment for multiple tabs, set the `id` property to ensure unique ids.
-
     > ### Sample Code:  
     > ```
     > "extensions":{
