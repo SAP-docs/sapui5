@@ -2,7 +2,7 @@
 
 # Setting the Table Header
 
-You can set the header of the table with `com.sap.vocabularies.UI.v1.HeaderInfo TypeNamePlural` in SAP Fiori elements for OData V4.
+Table header configuration allows you to define custom header text and control its visibility through manifest settings in SAP Fiori elements for OData V4. Use this to provide clear context for tables or hide headers when redundant.
 
   
   

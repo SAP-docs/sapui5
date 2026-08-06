@@ -65,7 +65,37 @@ The following sample code show the annotation-based emphasized action `HeaderAct
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @UI.identification: [
+>   {
+>     type:       #FOR_ACTION,
+>     dataAction: 'com.c_travel.HeaderAction1',
+>     label:      'HeaderAction1'
+>   },
+>   {
+>     type:       #FOR_ACTION,
+>     dataAction: 'com.c_travel.HeaderAction2',
+>     label:      'HeaderAction2'
+>   },
+>   {
+>     type:       #FOR_ACTION,
+>     dataAction: 'com.c_travel.HeaderAction3',
+>     label:      'HeaderAction3',
+>     emphasized: true
+>   },
+>   {
+>     type:       #FOR_ACTION,
+>     dataAction: 'com.c_travel.MenuAction1',
+>     label:      'MenuAction1'
+>   },
+>   {
+>     type:       #FOR_ACTION,
+>     dataAction: 'com.c_travel.MenuAction2',
+>     label:      'MenuAction2'
+>   }
+> ]
+> 
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

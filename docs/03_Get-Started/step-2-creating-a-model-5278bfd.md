@@ -56,7 +56,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 2](h
     ...
     	"sap.ui5": {
     		"dependencies": {
-    			"minUI5Version": "1.150.0",
+    			"minUI5Version": "1.151.0",
     			"libs": {
     				"sap.m": {},
     				"sap.ui.core": {},
@@ -73,7 +73,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 2](h
     ```
 
 
-Generally speaking, a model object holding business data should be bound to the app's `Component.js` or to the view that displays the data. For an example, see the Walkthrough tutorial, [Step 7: JSON Model](step-7-json-model-70ef981.md) \(binding to the View\) or [Step 9: Component Configuration](step-9-component-configuration-4cfa608.md) \(binding to the Component\).
+Generally speaking, a model object holding business data should be bound to the app's `Component.js` or to the view that displays the data. For an example, see the Walkthrough tutorial, [Step 7: JSON Model](https://ui5.github.io/tutorials/walkthrough/steps/07/index.html) \(binding to the View\) or [Step 9: Component Configuration](https://ui5.github.io/tutorials/walkthrough/steps/09/index.html) \(binding to the Component\).
 
 The text that is displayed on the UI is still hard-coded and not taken from the model. We'll bind the property `greetingText` to our UI control in the next step.
 

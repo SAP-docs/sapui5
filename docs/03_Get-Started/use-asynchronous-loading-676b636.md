@@ -66,7 +66,7 @@ If you listen to the `init` event as part of your `index.html` page, make sure t
 **Additional Information:**
 
 -   For more information about bootstrap attributes, see [Bootstrapping: Loading and Initializing](../04_Essentials/bootstrapping-loading-and-initializing-a04b0d1.md)
--   Walkthrough tutorial, [Step 2: Bootstrap](step-2-bootstrap-fe12df2.md)
+-   Walkthrough tutorial, [Step 2: Bootstrap](https://ui5.github.io/tutorials/walkthrough/steps/02/index.html/?lang=js)
 -   [Standard Variant for Bootstrapping](../04_Essentials/standard-variant-for-bootstrapping-91f1f45.md)
 -   [Best Practices for Asynchronous Loading in UI5](https://blogs.sap.com/2018/12/18/ui5ers-buzz-41-best-practices-for-async-loading-in-ui5/)
 
@@ -80,7 +80,7 @@ Starting with SAPUI5 1.136, Manifest Version 2 \(`"_version": "2.x.y"`\) enforce
 
 ```json
 {
-    "_version": "2.10.0",
+    "_version": "2.11.0",
     "sap.app": {
         "id": "my.app",
         "type": "application",
@@ -141,7 +141,7 @@ For more information on how `sap.ui.core.IAsyncContentCreation` affects the comp
 
 **Additional Information:**
 
--   Walkthrough tutorial, [Step 10: Descriptor for Applications](step-10-descriptor-for-applications-8f93bf2.md)
+-   Walkthrough tutorial, [Step 10: Descriptor](https://ui5.github.io/tutorials/walkthrough/steps/10/index.html/?lang=js)
 
 
 

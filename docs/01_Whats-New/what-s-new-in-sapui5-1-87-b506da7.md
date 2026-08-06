@@ -925,7 +925,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   If `UI.Importance` is not defined, the default value is set as `None`, except for semantic key fields. Before this release, the default value was set as `High`. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   If `UI.Importance` is not defined, the default value is set as `None`, except for semantic key fields. Before this release, the default value was set as `High`. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   In a draft application with a flexible column layout, the subobject page closes and returns to the main object if you click the *Apply* button. For more information, see [Object Page](../06_SAP_Fiori_Elements/object-page-645e27a.md).
 
@@ -1055,6 +1055,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

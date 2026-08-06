@@ -32,80 +32,6 @@ When the rating indicator shows an aggregated rating, it contains the following 
 -   Footer text, displaying the calculated average of all ratings
 
 
-> ### Note:  
-> If you wish to use an aggregated rating, you must use local annotations \(as opposed to CDS annotations\). For information, see the code sample below.
-
-
-
-## Non-Aggregated Rating
-
-This rating shows a single rating, such the user's own rating for the object. In the examples below, the non-aggregated rating is used to display the user's own rating. This rating type is displayed as shown below:
-
-  
-  
-**Non-Aggregated Rating Indicator**
-
-![](images/NonAggregatedRating_e8f6dd1.png "Non-Aggregated Rating Indicator")
-
-When the rating indicator shows a non-aggregated rating, it contains the following elements:
-
--   Title
-
--   Subtitle
-
--   `Rating` control, displaying the visual representation of the rating \(stars\)
-
-
-> ### Note:  
-> There is no footer for this rating type.
-> 
-> If you wish to use a non-aggregated rating, you can use either local annotations or CDS annotations. See the code samples below.
-
-
-
-## Rating Indicator in Edit Mode
-
-When the object page is in *Edit* mode, the rating indicator moves into the header facet and appears as shown below with the title only. For an aggregated rating, the number of ratings is shown in parentheses after the stars. Note that the rating indicator is still read-only in this mode.
-
-  
-  
-**Rating Indicator in Edit Mode**
-
-![](images/RatingIndicator_EditMode_b9fe8ad.png "Rating Indicator in Edit Mode")
-
-
-
-## Code Samples
-
-To add a rating indicator facet to the object page header, use a `UI.ReferenceFacet` that points to a `UI.DataPoint` with `Rating` as the `UI.VisualizationType` as shown in the code sample below.
-
-The rating indicator uses the values of the `UI.DataPoint`, which contains the path to the field in the back-end system that provides the rating value.
-
-
-
-### Set the Maximum Number of Stars
-
-The maximum number of stars \(`TargetValue`\) can be set in one of the following ways:
-
--   Specified in the annotation, as shown in the sample code for the aggregated rating
-
--   Determined by a path to a specific field in the back-end system, as shown in the sample code for the non-aggregated rating
-
-
-
-
-### Change the Subtitle
-
-The subtitle is set differently for the aggregated and non-aggregated ratings.
-
-To render a subtitle for an aggregated rating, set the `SampleSize` property for the term `UI.DataPoint`. The `SampleSize` property value \(for example, *139*\) is then concatenated with a text \(for example, *user reviews*\). You can change this text by annotating the `SampleSize` with `Common.Label`, as shown in the sample code for the aggregated rating. Otherwise, the default text \(*ratings*\) is used.
-
-To render a subtitle for a non-aggregated rating, the `Description` property needs to be set for the term `UI.DataPoint`, as shown in the sample code for the non-aggregated rating.
-
-
-
-### Aggregated Rating
-
 > ### Sample Code:  
 > XML Annotation
 > 
@@ -174,7 +100,27 @@ To render a subtitle for a non-aggregated rating, the `Description` property nee
 
 
 
-### Non-Aggregated Rating
+## Non-Aggregated Rating
+
+This rating shows a single rating, such the user's own rating for the object. In the examples below, the non-aggregated rating is used to display the user's own rating. This rating type is displayed as shown below:
+
+  
+  
+**Non-Aggregated Rating Indicator**
+
+![](images/NonAggregatedRating_e8f6dd1.png "Non-Aggregated Rating Indicator")
+
+When the rating indicator shows a non-aggregated rating, it contains the following elements:
+
+-   Title
+
+-   Subtitle
+
+-   `Rating` control, displaying the visual representation of the rating \(stars\)
+
+
+> ### Note:  
+> There is no footer for this rating type.
 
 > ### Sample Code:  
 > XML Annotation
@@ -241,6 +187,39 @@ To render a subtitle for a non-aggregated rating, the `Description` property nee
 > }
 > 
 > ```
+
+
+
+## Rating Indicator in Edit Mode
+
+When the object page is in *Edit* mode, the rating indicator moves into the header facet and appears as shown below with the title only. For an aggregated rating, the number of ratings is shown in parentheses after the stars. Note that the rating indicator is still read-only in this mode.
+
+  
+  
+**Rating Indicator in Edit Mode**
+
+![](images/RatingIndicator_EditMode_b9fe8ad.png "Rating Indicator in Edit Mode")
+
+
+
+## Set the Maximum Number of Stars
+
+The maximum number of stars \(`TargetValue`\) can be set in one of the following ways:
+
+-   Specified in the annotation, as shown in the sample code for the aggregated rating
+
+-   Determined by a path to a specific field in the back-end system, as shown in the sample code for the non-aggregated rating
+
+
+
+
+## Change the Subtitle
+
+The subtitle is set differently for the aggregated and non-aggregated ratings.
+
+To render a subtitle for an aggregated rating, set the `SampleSize` property for the term `UI.DataPoint`. The `SampleSize` property value \(for example, *139*\) is then concatenated with a text \(for example, *user reviews*\). You can change this text by annotating the `SampleSize` with `Common.Label`, as shown in the sample code for the aggregated rating. Otherwise, the default text \(*ratings*\) is used.
+
+To render a subtitle for a non-aggregated rating, the `Description` property needs to be set for the term `UI.DataPoint`, as shown in the sample code for the non-aggregated rating.
 
 
 

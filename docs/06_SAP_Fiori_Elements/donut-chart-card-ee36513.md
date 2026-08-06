@@ -8,7 +8,7 @@ You can render the chart as a donut chart, which displays data as the differentl
   
 **Example of a Donut Chart Card**
 
-![](images/Donut_Chart_0750575.png "Example of a Donut Chart Card")
+![](images/Donut_chart_card_8248175.png "Example of a Donut Chart Card")
 
 The size of each section is determined by the value of the measure, helping users quickly identify the key area that needs attention. Donut charts can display numbers and percentages, and you can optionally disable navigation from the chart.
 
@@ -20,6 +20,100 @@ Donut charts have the following requirements:
 
 
 For example, if you define `Sales` as your measure, and provide two dimensions: `Year` and `Country`, the chart displays the sales data of each combination of year and country as a separate colored section.
+
+The following sample code how to define a donut chart:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotation Term="UI.Chart" Qualifier="DonutChartSales">
+>   <Record Type="UI.ChartDefinitionType">
+>     <PropertyValue Property="Title" String="Sales Distribution"/>
+>     <PropertyValue Property="Description" String="Sales by Region"/>
+>     <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+>     <PropertyValue Property="Measures">
+>       <Collection>
+>         <PropertyPath>NetSales</PropertyPath>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="Dimensions">
+>       <Collection>
+>         <PropertyPath>Region</PropertyPath>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="MeasureAttributes">
+>       <Collection>
+>         <Record Type="UI.ChartMeasureAttributeType">
+>           <PropertyValue Property="Measure" PropertyPath="NetSales"/>
+>           <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+>         </Record>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="DimensionAttributes">
+>       <Collection>
+>         <Record Type="UI.ChartDimensionAttributeType">
+>           <PropertyValue Property="Dimension" PropertyPath="Region"/>
+>           <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+>         </Record>
+>       </Collection>
+>     </PropertyValue>
+>   </Record>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.chart: [
+>   {
+>     qualifier: 'DonutChartSales',
+>     title: 'Sales Distribution',
+>     description: 'Sales by Region',
+>     chartType: #DONUT,
+>     measures: [ 'NetSales' ],
+>     dimensions: [ 'Region' ],
+>     measureAttributes: [
+>       {
+>         measure: 'NetSales',
+>         role: #AXIS_1
+>       }
+>     ],
+>     dimensionAttributes: [
+>       {
+>         dimension: 'Region',
+>         role: #CATEGORY
+>       }
+>     ]
+>   }
+> ]
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> @UI.Chart #DonutChartSales: {
+>   Title: 'Sales Distribution',
+>   Description: 'Sales by Region',
+>   ChartType: #Donut,
+>   Measures: [ NetSales ],
+>   Dimensions: [ Region ],
+>   MeasureAttributes: [
+>     {
+>       Measure: NetSales,
+>       Role: #Axis1
+>     }
+>   ],
+>   DimensionAttributes: [
+>     {
+>       Dimension: Region,
+>       Role: #Category
+>     }
+>   ]
+> }
+> ```
 
 
 

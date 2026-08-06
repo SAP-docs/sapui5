@@ -114,6 +114,30 @@ You can control the filter field configuration using the `FilterRestrictions` as
 If you want to make a filter field required, proceed as shown in the following sample code:
 
 > ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="YourService.SalesOrderManage">
+>   <Annotation Term="com.sap.vocabularies.Common.v1.Label" String="Manage Sales Order"/>
+>   <Annotation Term="Org.OData.Capabilities.V1.FilterRestrictions">
+>     <Record Type="Org.OData.Capabilities.V1.FilterRestrictionsType">
+>       <PropertyValue Property="RequiredProperties">
+>         <Collection>
+>           <PropertyPath>SalesOrderDate</PropertyPath>
+>         </Collection>
+>       </PropertyValue>
+>     </Record>
+>   </Annotation>
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```

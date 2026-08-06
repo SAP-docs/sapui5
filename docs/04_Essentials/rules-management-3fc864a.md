@@ -112,8 +112,6 @@ Selecting the *Create Rule* button allows you to create a new rule. You can crea
 
 Additionally you need to provide or modify the JavaScript check function that implements the rule in the *Check function* tab. You can directly test the newly added or modified rule on the already loaded page.
 
-The newly created rule remains *temporary* until you submit and assign it to a library.
-
 > ### Remember:  
 > Don't forget to copy and paste the resulting new rule and submit it separately in the IDE of your choice. You can select all the code from the *Code* tab.
 
@@ -124,9 +122,6 @@ The newly created rule remains *temporary* until you submit and assign it to a l
 ## Executing Rules
 
 Once you load your rulesets or select a rule preset, you can run an analysis with them. To do this, select *Analyze*. For more information about the execution scope, you can refer to [Execution Scope](execution-scope-e15067d.md)
-
-> ### Note:  
-> If you have enforced a strict Content Security Policy \(CSP\), your temporary rules would not be executed. For more information about CSP, check [Content Security Policy](../05_Developing_Apps/content-security-policy-fe1a6db.md).
 
 **Related Information**  
 

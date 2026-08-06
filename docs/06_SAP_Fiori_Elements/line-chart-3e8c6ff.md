@@ -60,7 +60,28 @@ Line charts are often used to visualize a trend in data over time. Line charts n
 > ABAP CDS Annotation
 > 
 > ```
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> @UI.chart: [
+>   {
+>     qualifier:'LineMaxPath',
+>     title:'Items Line Chart',
+>     description:'Testing Line Chart',
+>     chartType:#LINE,
+>     measures:['NetAmount','TargetAmount'],
+>     dimensions:['SalesOrderItem'],
+>     measureAttributes:[
+>       {
+>         measure:'NetAmount',
+>         role:#AXIS_1,
+>         dataPoint:'@UI.dataPoint#LineValueCriticality'
+>       },
+>       {
+>         measure:'TargetAmount',
+>         role:#AXIS_1,
+>         dataPoint:'@UI.dataPoint#LineTargetCriticality'
+>       }
+>     ]
+>   }
+> ]
 > ```
 
 > ### Sample Code:  

@@ -127,17 +127,7 @@ You can hide and display sections based on properties.
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> ```
-> @UI.facet: [
->  {
->   label: '{@i18n>@SalesData}',
->   type:         #DATAPOINT_REFERENCE,
->   targetElement: '_PRODUCTSALESDATA',
->   purpose: #STANDARD
->  }
-> ]
-> product;
-> ```
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -214,6 +204,39 @@ To render a table in a section, follow these steps:
     >             </Record>
     >           </Collection>
     >         </Annotation>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > @UI.facet: [
+    >   {
+    >     id:    'FacetIdentifier1',
+    >     type:  #COLLECTION,
+    >     label: 'Section 1',
+    >     facets: [
+    >       {
+    >         id:            'FacetIdentifier2',
+    >         type:          #REFERENCE,
+    >         targetElement: '_Child'
+    >       }
+    >     ]
+    >   },
+    >   {
+    >     id:    'FacetIdentifier2',
+    >     type:  #COLLECTION,
+    >     label: 'Section 2',
+    >     facets: [
+    >       {
+    >         id:              'FacetIdentifier2',
+    >         type:            #REFERENCE,
+    >         targetElement:   '_Child',
+    >         targetQualifier: 'mySPV'
+    >       }
+    >     ]
+    >   }
+    > ]
     > ```
 
     > ### Sample Code:  

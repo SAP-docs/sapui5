@@ -107,5 +107,5 @@ To enable filtering, we extend the controller with a method that applies the sea
 **Related Information**  
 
 
-[Step 42 of Walkthrough: Filtering](step-23-filtering-5295470.md "In this step, we add a search field for our product list and define a filter that represents the search term. When searching, the list is automatically updated to show only the items that match the search term.")
+[Walkthrough Tutorial — Step 23: Filtering](https://ui5.github.io/tutorials/walkthrough/steps/23/index.html?lang=js)
 

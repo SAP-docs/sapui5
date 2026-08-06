@@ -52,7 +52,23 @@ Column charts need to have at least one measure and one dimension. Irrespective 
 > ABAP CDS Annotation
 > 
 > ```
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> @UI.chart: [
+>   {
+>     qualifier:'ColumnMaxPath',
+>     title:'Items Column Chart',
+>     description:'Testing Column Chart',
+>     chartType:#COLUMN,
+>     measures:[ 'NetAmount' ],
+>     dimensions:[ 'SalesOrderItem' ],
+>     measureAttributes:[
+>       {
+>         measure:'NetAmount',
+>         role: #AXIS_1,
+>         dataPoint:'@UI.dataPoint#ColumnMaxPath'
+>       }
+>     ]
+>   }
+> ]
 > ```
 
 > ### Sample Code:  

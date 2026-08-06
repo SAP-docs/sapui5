@@ -10,7 +10,7 @@ The three measures are reflected in the x-axis and y-axis, and the size of the b
   
 **Example of a Bubble Chart Card**
 
-![](images/Bubble_Chart_e131bed.png "Example of a Bubble Chart Card")
+![](images/Bubble_chart_card_-_OVP_091e842.png "Example of a Bubble Chart Card")
 
 Each measure is assigned to a chart axis or to the bubble size based on its `Role`. Each feed has a unique identifier \(UID\) that the chart framework uses internally to map the measure to a chart element \(x-axis, y-axis, or bubble size\).
 

@@ -5,7 +5,7 @@
 You can configure the appearance, interactivity, and loading behavior of tables.
 
 > ### Note:  
-> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Tables](tables-c0f6592.md).
+> This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Table Types](table-types-c0f6592.md).
 
 The following table types are available:
 

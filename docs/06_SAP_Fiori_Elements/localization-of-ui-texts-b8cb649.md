@@ -6,7 +6,7 @@
 
 You can replace standard UI texts for apps that you have created with SAP Fiori elements for OData V4.
 
-Standard texts are available in the generic framework \(for example, the button texts for draft concepts\) and belong to the template components \(for example, the list report page and the object page\). The following sections describe how you can replace the texts in your generated apps.
+Standard texts, for example, the button texts for draft concepts, are available in the generic framework and belong to the template components, for example the list report page and the object page. The following sections describe how you can replace the texts in your generated apps.
 
 Standard texts can be overwritten by application-specific texts.
 
@@ -22,7 +22,9 @@ Perform the following steps to replace the standard UI texts:
 
 
 > ### Note:  
-> To save translation costs, don't copy and redefine more texts than needed.
+> -   To save translation costs, don't copy and redefine more texts than needed.
+> 
+> -   If you need to change the default settings for the UI texts, for example the fallback language or supported locales, you must create your own resource model and define all custom texts in a single i18n properties file. This is the only scenario where the choice between a single file and multiple files is significant.
 
 
 

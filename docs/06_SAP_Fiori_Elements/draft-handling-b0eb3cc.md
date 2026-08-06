@@ -70,9 +70,9 @@ When a user edits an object, the system behavior of the *Apply* button is as fol
 
 ### Triggering Immediate Navigation with the *Apply* Button
 
-When the users select the *Apply* button, the application waits for any draft-related processes to complete before navigating to the detail page.
+When the user selects the *Apply* button, the application waits for any draft-related processes to complete before navigating to the detail page.
 
-You can override this behavior by configuring `applyButtonNavigatesImmediately` in the `manifest.json` file as shown in the following sample code:
+You can override this behavior with `applyButtonNavigatesImmediately` in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`

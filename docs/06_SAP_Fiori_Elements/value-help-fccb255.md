@@ -17,7 +17,7 @@ Value help allows users to either select a value from a value help entity associ
 
 ## Annotations
 
-A value help or value help dialog is configured using the  `Common.ValueList` or  `Common.ValueListMapping`  annotation. The following annotation samples show the settings you can use to configure the value help.
+A value help or value help dialog is configured using the  `Common.ValueList` or  `Common.ValueListMapping`  annotation. The following sample codes show the settings you can use to configure the value help.
 
 
 
@@ -55,6 +55,11 @@ Use the `Common.ValueList` annotation when the value help entity is defined with
 >                         <PropertyValue Property="LocalDataProperty" PropertyPath="CityID" />
 >                         <PropertyValue Property="ValueListProperty" String="_Regions/CityCode" />
 >                     </Record>
+>                     <!-- IN mapping to parameter field within the valuelist entity -->
+>                     <Record Type="Common.ValueListParameterIn">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="_TourOperator/ID"/>
+>                         <PropertyValue Property="ValueListProperty" String="Parameters/operatorID"/>
+>                     </Record>
 >                     <Record Type="Common.ValueListParameterDisplayOnly">
 >                         <PropertyValue Property="ValueListProperty" String="AgencyName" />
 >                         <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
@@ -79,7 +84,8 @@ Use the `Common.ValueList` annotation when the value help entity is defined with
 > CAP CDS Annotation
 > 
 > ```
-> annotate MyService.Travel with 
+> 
+> annotate MyService.Travel with
 > {
 >     AgencyId @Common.ValueList: {
 >         CollectionPath : 'TravelAgency',
@@ -105,6 +111,12 @@ Use the `Common.ValueList` annotation when the value help entity is defined with
 >                 $Type             : 'Common.ValueListParameterIn',
 >                 LocalDataProperty : CityID,
 >                 ValueListProperty : '_Regions/CityCode',
+>             },
+>             {
+>                 // IN mapping to parameter field within the valuelist entity
+>                 $Type            : 'Common.ValueListParameterIn',
+>                 LocalDataProperty: TourOperator.ID,
+>                 ValueListProperty: 'Parameters/operatorID'
 >             },
 >             {
 >                 $Type             : 'Common.ValueListParameterDisplayOnly',
@@ -191,6 +203,11 @@ Use the `Common.ValueListMapping` annotation when the value help entity’s meta
 >                         <PropertyValue Property="LocalDataProperty" PropertyPath="CityID" />
 >                         <PropertyValue Property="ValueListProperty" String="_Regions/CityCode" />
 >                     </Record>
+>                     <!-- IN mapping to parameter field within the valuelist entity -->
+>                     <Record Type="Common.ValueListParameterIn">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="_TourOperator/ID"/>
+>                         <PropertyValue Property="ValueListProperty" String="Parameters/operatorID"/>
+>                     </Record>
 >                     <Record Type="Common.ValueListParameterDisplayOnly">
 >                         <PropertyValue Property="ValueListProperty" String="AgencyName" />
 >                         <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
@@ -247,6 +264,67 @@ Use the `Common.ValueListMapping` annotation when the value help entity’s meta
 >     },
 > ]
 > AgencyId;
+> 
+> ```
+
+The following sample codes show how to define a parameterized value help with ABAP CDS annotations:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> 
+> <Annotations Target="SAP__ParentService.RootType/Region">
+>     <Annotation Term="SAP__common.ValueListMapping">
+>         <Record>
+>             <PropertyValue Property="CollectionPath" String="region_prm_vh/Set" />
+>             <PropertyValue Property="Label" String="region view with parameter" />
+>             <PropertyValue Property="Parameters">
+>                 <Collection>
+>                     <Record Type="SAP__common.ValueListParameterInOut">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="Region" />
+>                         <PropertyValue Property="ValueListProperty" String="Region" />
+>                     </Record>
+>                     <Record Type="SAP__common.ValueListParameterIn">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="Country" />
+>                         <PropertyValue Property="ValueListProperty" String="Parameters/CountryP" />
+>                     </Record>
+>                     <Record Type="SAP__common.ValueListParameterDisplayOnly">
+>                         <PropertyValue Property="ValueListProperty" String="Country" />
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @AbapCatalog.viewEnhancementCategory: [#NONE]
+> @AccessControl.authorizationCheck: #NOT_REQUIRED
+> @EndUserText.label: 'region view with parameter'
+> @Metadata.ignorePropagatedAnnotations: true
+> @ObjectModel.usageType:{
+>     serviceQuality: #X,
+>     sizeCategory: #S,
+>     dataClass: #MIXED
+> }
+> define view entity region_prm_vh
+>     with parameters CountryP : land1
+>     as select from I_RegionVH
+> {
+>     key Country,
+>     key Region,
+>         /* Associations */
+>         _Country,
+>         _RegionText
+> } 
+> where Country = $parameters.CountryP
 > 
 > ```
 
@@ -526,6 +604,9 @@ In some scenarios, different value help dialogs are required based on the contex
 > };
 > 
 > ```
+
+> ### Note:  
+> When used for filter bar fields on the list report page, this annotation is ignored and the value help dialog or dropdown is always initialized with the default value help definition. For value help fields, all the other value help definitions are seen in the value help dialog.
 
 
 

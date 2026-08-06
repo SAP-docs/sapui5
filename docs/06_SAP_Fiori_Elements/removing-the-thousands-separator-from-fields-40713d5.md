@@ -2,9 +2,9 @@
 
 # Removing the Thousands Separator from Fields
 
-Remove the thousands separator from integer fields.
+You can remove the thousands separator from integer fields in SAP Fiori elements for OData V4.
 
-By default, integer fields are displayed with thousands separators. You can set `disableIntegerGrouping` to `true` to remove the thousands separator from integer fields in filter bars, forms, and table columns in `manifest.json` file or in building blocks.
+By default, integer fields are displayed with thousands separators. You can set `disableIntegerGrouping` to `true` to remove the thousands separator from integer fields in filter bars, forms, and table columns in the `manifest.json` file or in building blocks.
 
 **Integer Field Value Formatting**
 
@@ -36,11 +36,13 @@ Without Thousands Separator
 </tr>
 </table>
 
+Removing the thousands separator doesn't affect the text alignment.
+
 
 
 ## Removing the Thousands Separator Using the `manifest.json` File
 
-The following sample code show how to use `disableIntegerGrouping` to remove the thousands separators from integer fields in filter bars, forms, and table columns:
+The following sample codes show how to use `disableIntegerGrouping` to remove the thousands separators from integer fields in filter bars, forms, and table columns:
 
 > ### Sample Code:  
 > `manifest.json`: Filter Bar
@@ -100,10 +102,10 @@ The following sample code show how to use `disableIntegerGrouping` to remove the
 
 ## Removing the Thousands Separator in Building Blocks
 
-The following sample codes show how to use `disableIntegerGrouping` to remove the thousands separator in `Field` and `Table` building blocks:
+The following sample codes show how to use `disableIntegerGrouping` to remove the thousands separator in the `Field` and `Table` building blocks:
 
 > ### Sample Code:  
-> `Field` Building Block
+> The `Field` Building Block
 > 
 > ```
 > 
@@ -116,7 +118,7 @@ The following sample codes show how to use `disableIntegerGrouping` to remove th
 > ```
 
 > ### Sample Code:  
-> `Table` Building Block
+> The `Table` Building Block
 > 
 > ```
 > 
@@ -132,4 +134,8 @@ The following sample codes show how to use `disableIntegerGrouping` to remove th
 >        </macros:Table>
 > </core:FragmentDefinition>
 > ```
+
+For more information about the `Field` building block, see [The Field Building Block](the-field-building-block-5260b9c.md).
+
+For more information about the `Table` building block, see [The Table Building Block](the-table-building-block-3801656.md).
 

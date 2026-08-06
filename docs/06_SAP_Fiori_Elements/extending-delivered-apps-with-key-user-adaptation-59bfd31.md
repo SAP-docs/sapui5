@@ -421,7 +421,7 @@ Configure the count of columns that are always visible when scrolling horizontal
 </td>
 <td valign="top">
 
-[Tables](tables-c0f6592.md)
+[Freezing Table Columns](freezing-table-columns-ec28cdd.md)
 
 </td>
 <td valign="top">
@@ -488,7 +488,7 @@ Configure the number of rows to be displayed in the table.
 </td>
 <td valign="top">
 
- 
+[Defining the Number of Visible Rows](defining-the-number-of-visible-rows-459326f.md)
 
 </td>
 <td valign="top">
@@ -534,7 +534,7 @@ Configure if the *Column Header* label is considered when calculating the column
 </td>
 <td valign="top">
 
-[Setting the Default Column Width](setting-the-default-column-width-a765253.md)
+[Defining the Column Width Calculation with the Header](defining-the-column-width-calculation-with-the-header-2e206a0.md)
 
 </td>
 <td valign="top">
@@ -600,7 +600,7 @@ Configures the number of additional records that must be dynamically loaded when
 </td>
 <td valign="top">
 
-[Optimizing Data Loading Using the `ScrollThreshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_ygl_t1s_kdc) section in [Tables](tables-c0f6592.md)
+[Optimizing Data Loading Using the scrollThreshold Property](optimizing-data-loading-using-the-scrollthreshold-property-14f407c.md)
 
 </td>
 <td valign="top">
@@ -622,7 +622,7 @@ Configures the number of records that must be loaded during the initial load of 
 </td>
 <td valign="top">
 
-[Initial Data Loading Using the `Threshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_xkq_dhx_rfc) in [Tables](tables-c0f6592.md)
+[Initial Data Loading Using the threshold Property](initial-data-loading-using-the-threshold-property-9bcec5b.md)
 
 </td>
 <td valign="top">

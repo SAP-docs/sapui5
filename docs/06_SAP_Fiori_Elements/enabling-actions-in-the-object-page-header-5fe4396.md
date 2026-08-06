@@ -112,6 +112,9 @@ This *Copy* button is placed after the *Delete* button.
 > ```
 
 > ### Sample Code:  
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
@@ -175,11 +178,21 @@ The *Delete* button allows users to delete the instance of the object page.
 >     > ABAP CDS Annotation
 >     > 
 >     > ```
->     > @UI.updateHidden:true 
+>     > annotate entity SalesOrderManage with {
+>     >   @UI.updateHidden: true
+>     > };
 >     > 
->     > OR
+>     > ```
+> 
+>     OR
+> 
+>     > ### Sample Code:  
+>     > ABAP CDS Annotation
 >     > 
->     > @UI.updateHidden: #('isUpdateHidden')
+>     > ```
+>     > annotate entity SalesOrderManage with {
+>     >   @UI.updateHidden: { path: 'isUpdateHidden' }
+>     > };
 >     > 
 >     > ```
 > 

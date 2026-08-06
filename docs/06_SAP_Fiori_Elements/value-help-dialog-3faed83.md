@@ -37,7 +37,7 @@ If a field contains more than one `Common.ValueList` or `Common.ValueListMapping
 
 ### Filter Fields
 
-Use the `SelectionFields` annotation on the value help entity to specify which filter fields appear in the filter panel. Ensure that all relevant fields are part of `SelectionFields`. If no `SelectionFields` are defined on the value help entity, all filterable properties of the entity are added as filter fields
+Use the `SelectionFields` annotation on the value help entity to specify which filter fields appear in the filter panel. Ensure that all relevant fields are part of `SelectionFields`. If no `SelectionFields` are defined on the value help entity, all filterable properties of the entity are added as filter fields.
 
 The filter bar is collapsed by default. However, you can modify this behavior so that it expands automatically if any of the following conditions are met:
 
@@ -56,6 +56,9 @@ The `ValueListParameterConstant` annotation supports the following properties:
 
 -   `Constant`: A string representing the constant value used to filter the value list with an `eq` comparison, using the same representation as property default values.
 
+
+> ### Note:  
+> If you don't want a filter or a parameter field to be displayed in the filter bar of the value help dialog, annotate them with `UI.HiddenFilter`. For more information, see [Hiding of Filterable Properties](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__section_qmm_vjx_1kc) section in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 
 
 

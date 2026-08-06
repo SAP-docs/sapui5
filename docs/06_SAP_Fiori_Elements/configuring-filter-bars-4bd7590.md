@@ -10,11 +10,7 @@ By default, only the fields included in `UI.SelectionFields`, along with all man
 
 The filter bar is available only if the service configured for the application supports filtering using `Capabilities.Filterable=true`.
 
-
-
-<a name="loio4bd7590569c74c61a0124c6e370030f6__section_rym_zkz_jqb"/>
-
-## Annotation for `UI.SelectionFields`
+The following sample codes show the annotation for `UI.SelectionFields`:
 
 > ### Sample Code:  
 > XML Annotation
@@ -22,13 +18,13 @@ The filter bar is available only if the service configured for the application s
 > ```xml
 > 
 > <Annotation Term="UI.SelectionFields">
->    <Collection>
->      <PropertyPath>SalesOrder</PropertyPath>
->      <PropertyPath>SoldToParty</PropertyPath>
->      <PropertyPath>OverallSDProcessStatus</PropertyPath>
->      <PropertyPath>SalesOrderDate</PropertyPath>
->      <PropertyPath>_Item/Material</PropertyPath>
->    </Collection>
+>     <Collection>
+>         <PropertyPath>SalesOrder</PropertyPath>
+>         <PropertyPath>SoldToParty</PropertyPath>
+>         <PropertyPath>OverallSDProcessStatus</PropertyPath>
+>         <PropertyPath>SalesOrderDate</PropertyPath>
+>         <PropertyPath>_Item/Material</PropertyPath>
+>     </Collection>
 > </Annotation>
 > ```
 
@@ -58,13 +54,13 @@ The filter bar is available only if the service configured for the application s
 > ```
 > 
 > annotate service.SalesOrderManage with @(
->   UI.SelectionFields  : [
->      SalesOrder,
->      SoldToParty,
->      OverallSDProcessStatus,
->      SalesOrderDate,
->      Item.Material
-> ]
+>     UI.SelectionFields  : [
+>         SalesOrder,
+>         SoldToParty,
+>         OverallSDProcessStatus,
+>         SalesOrderDate,
+>         Item.Material
+>     ]
 > );
 > ```
 
@@ -249,6 +245,351 @@ You can configure the filter fields as mandatory using the `Capabilities.Require
 
 
 
+## Combining Two Date-Based Filter Fields into a Single Date-Range Filter Field
+
+You can filter on two individual date-based filter fields contained in an entity using a single, date-based range filter field. Filtering using this date-based range field shows all records where the existing dates between the individual date-based fields overlap with the date range defined in the combined date-based range filter field.
+
+For example, you want to define a single date-range filter called *Work Period*. A user can then use the *Work Period* filter to identify those users who have taken at least one leave day during the specified time period.
+
+1.  Assume the following records exist in the table before the user applies any filters:
+
+    **Date-Range Filter Field: Employee Entries**
+
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    Employee
+    
+    </th>
+    <th valign="top">
+
+    Vacation Start Date
+    
+    </th>
+    <th valign="top">
+
+    Vacation End Date
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Emp\_1
+    
+    </td>
+    <td valign="top">
+    
+    2026-06-10
+    
+    </td>
+    <td valign="top">
+    
+    2026-06-14
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Emp\_2
+    
+    </td>
+    <td valign="top">
+    
+    2026-06-18
+    
+    </td>
+    <td valign="top">
+    
+    2026-06-23
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Emp\_3
+    
+    </td>
+    <td valign="top">
+    
+    2026-07-09
+    
+    </td>
+    <td valign="top">
+    
+    2026-07-16
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Emp\_4
+    
+    </td>
+    <td valign="top">
+    
+    2026-06-22
+    
+    </td>
+    <td valign="top">
+    
+    2026-07-16
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Emp\_5
+    
+    </td>
+    <td valign="top">
+    
+    2026-07-28
+    
+    </td>
+    <td valign="top">
+    
+    2026-08-02
+    
+    </td>
+    </tr>
+    </table>
+    
+2.  A user enters *2026-6-16* to *2026-7-24* values in the *Work Period* filter field.
+
+3.  These values are automatically mapped, and the following filter query is applied: \(2026-6-16 <= *Vacation End Date*\) AND \(2026-7-24 \>= *Vacation Start Date*\) AND < Rest of filters from the filter bar\>.
+
+4.  Every table record that fits this filter query is filtered:
+
+5.  **Date-Range Filter Field: Filtered Entries**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Employee
+
+</th>
+<th valign="top">
+
+Vacation Start Date
+
+</th>
+<th valign="top">
+
+Vacation End Date
+
+</th>
+<th valign="top">
+
+Filtered?
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Emp\_1
+
+</td>
+<td valign="top">
+
+2026-06-10
+
+</td>
+<td valign="top">
+
+2026-06-14
+
+</td>
+<td valign="top">
+
+No \(None of the vacation days fall within the work period\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Emp\_2
+
+</td>
+<td valign="top">
+
+2026-06-18
+
+</td>
+<td valign="top">
+
+2026-06-23
+
+</td>
+<td valign="top">
+
+Yes
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Emp\_3
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+<td valign="top">
+
+2026-07-16
+
+</td>
+<td valign="top">
+
+Yes
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Emp\_4
+
+</td>
+<td valign="top">
+
+2026-06-22
+
+</td>
+<td valign="top">
+
+2026-07-16
+
+</td>
+<td valign="top">
+
+Yes
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Emp\_5
+
+</td>
+<td valign="top">
+
+2026-07-28
+
+</td>
+<td valign="top">
+
+2026-08-02
+
+</td>
+<td valign="top">
+
+No \(None of the vacation days fall within the work period\)
+
+</td>
+</tr>
+</table>
+
+
+To configure such a date-range filter field, create an interval annotation that creates a “virtual” filter field and defines a mapping of its values to the individual filter fields as shown in the following sample codes:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> 
+> <Annotations Target="IntervalFiltersService.Bookings">
+>     <Annotation Term="Common.Interval">
+>         <Record Type="Common.IntervalType">
+>             <PropertyValue Property="LowerBoundary" PropertyPath="VacationStartDate"/>
+>             <PropertyValue Property="UpperBoundary" PropertyPath="VacationEndDate"/>
+>             <PropertyValue Property="Label" String="Work period"/>
+>             <PropertyValue Property="LowerBoundaryIncluded" Bool="true"/>
+>             <PropertyValue Property="UpperBoundaryIncluded" Bool="true"/>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> annotate IntervalFiltersService.Bookings with @Common.Interval: {
+>     $Type                    : 'Common.IntervalType',
+>     LowerBoundary            : VacationStartDate,
+>     UpperBoundary            : VacationEndDate,
+>     Label                    : 'Work Period',
+>     LowerBoundaryIncluded    : true,
+>     UpperBoundaryIncluded    : true
+> };
+> ```
+
+> ### Note:  
+> Ensure that the individual filter fields, `VacationStartDate` and `VacationEndDate` in the example above, are annotated with `MultiRange` capabilities. For more information, see [Configuring Filter Fields](configuring-filter-fields-f5dcb29.md).
+
+You can also configure a date-range filter fields in the `manifest.json` file. The following sample code shows the configuration when using a custom page:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "targets": {
+>     "sample": {
+>         "type": "Component",
+>         "id": "Default",
+>         "name": "sap.fe.core.fpm",
+>         "viewLevel": 1,
+>         "options": {
+>             "settings": {
+>                 "viewName": "sap.fe.core.fpmExplorer.filterBarInterval.FilterBarIntervalManifest",
+>                 "contextPath": "/VacationRequestsManifest",
+>                 "controlConfiguration": {
+>                     "@com.sap.vocabularies.UI.v1.SelectionFields": {
+>                         "filterFields": {
+>                             "WorkPeriod": {
+>                                 "label": "Work Period",
+>                                 "availability": "Default",
+>                                 "intervalFilterField": {
+>                                     "lowerBoundary": "VacationStartDate",
+>                                     "upperBoundary": "VacationEndDate",
+>                                     "lowerBoundaryIncluded": true,
+>                                     "upperBoundaryIncluded": true
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> ```
+
+
+
 ## Adding Tooltips to Filter Fields
 
 To add a tooltip to a filter field, use the `@Common.QuickInfo` annotation as shown in the following sample code:
@@ -283,9 +624,9 @@ To add a tooltip to a filter field, use the `@Common.QuickInfo` annotation as sh
 
 
 
-## Configuring Fields to Remain Hidden in the Filter Bar and the *Adapt Filters* Dialog
+## Handling of Non-Filterable Properties
 
-Applications can ensure that a field within the entity to which the filter bar is bound remains hidden in both the filter bar and the *Adapt Filters* dialog. You can use the `Capabilities.NonFilterableProperties` annotation to achieve this behavior.
+Properties that are annotated as non-filterable using `FilterRestrictions` aren't displayed in the filter bar or in the *Adapt Filters* dialog.
 
 > ### Sample Code:  
 > XML Annotation
@@ -328,8 +669,47 @@ Applications can ensure that a field within the entity to which the filter bar i
 > };
 > ```
 
-> ### Note:  
-> Properties annotated with `UI.Hidden` or `UI.HiddenFilter` are not displayed in either the filter bar or the *Adapt Filters* dialog.
+
+
+<a name="loio4bd7590569c74c61a0124c6e370030f6__section_qmm_vjx_1kc"/>
+
+## Hiding of Filterable Properties
+
+You can use `UI.HiddenFilter` to ensure that a filterable property can't be seen or used as a filter by users. Parameters from a parameterized entity can also be annotated in this manner to the same effect.
+
+`UI.HiddenFilter` ensures that the property isn't seen in the filter context, such as in the filter bar and in the *Adapt Filters* dialog, but can still be seen in other UI elements like forms, tables or charts and can participate in a filter query if associated with a value.
+
+The following sample codes show the use of `UI.HiddenFilter`:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> 
+> <Annotations Target="MyService.Projects/ProjectOrgUnit">
+>     <Annotation Term="UI.HiddenFilter" Bool="true"/>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @Consumption.filter.hidden: true
+> ProjectOrgUnit;
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotaiton
+> 
+> ```
+> annotate MyService.Project with {
+>     ProjectOrgUnit @(
+>         UI.HiddenFilter : true
+>     );
+> };
+> ```
 
 
 
@@ -339,10 +719,10 @@ Applications can ensure that a field within the entity to which the filter bar i
 
 When linked to a parameterized entity, the filter bar automatically includes fields for all required parameters. To access the data of a parameterized service, the parameter fields need to be supplied with parameter values when making the data call. These parameter values are then used to load the data for the view \(including the data in the object page or subobject page\). Furthermore, the invocation of any action that needs context to be passed, is also passed using these parameter values.
 
-For example, the `"CustomerType"` in the following sample code represents the main entity set from which further data needs to be fetched. This has a `"Parameters"` navigation entity set defined as well:
+For example, the `CustomerType` in the following sample code represents the main entity set from which further data needs to be fetched. This has a `Parameters` navigation entity set defined as well:
 
 > ### Sample Code:  
-> Metadata of parameterized main entity type
+> XML Annotation: Metadata of parameterized main entity type
 > 
 > ```
 > 
@@ -361,10 +741,58 @@ For example, the `"CustomerType"` in the following sample code represents the ma
 > </EntityType>
 > ```
 
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> define view entity Z_I_Customer
+>   as select from some_source
+> 
+>   association [1..1] to Z_I_CustomerParameters as _Parameters
+>     on $projection.Customer    = _Parameters.Customer
+>    and $projection.CompanyCode = _Parameters.CompanyCode
+> 
+> {
+>   //---------------------------------------------------------------
+>   // Key fields
+>   //---------------------------------------------------------------
+>   key Customer          : abap.char(10),
+>   key CompanyCode       : abap.char(4),
+> 
+>   //---------------------------------------------------------------
+>   // Other properties
+>   //---------------------------------------------------------------
+>   SalesOrganization     : abap.char(4),
+>   // ... additional fields
+> 
+>   //---------------------------------------------------------------
+>   // Navigation (association exposure)
+>   //---------------------------------------------------------------
+>   _Parameters
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> entity CustomerType {
+>   key Customer          : String(10);
+>   key CompanyCode       : String(4);
+> 
+>   SalesOrganization     : String(4);
+>   // ... additional properties
+> 
+>   Parameters            : Association to one CustomerParameters;
+> }
+> 
+> ```
+
 Furthermore, the `"CustomerParameters"` entity type is annotated with the `"ResultContext"` annotation, indicating that the parent entity set \(in our example `"CustomerType"`\) is a parameterized entity set:
 
 > ### Sample Code:  
-> `"ResultContext"` annotation
+> XML Annotation:`"ResultContext"` 
 > 
 > ```
 > <Annotations Target="SAP__self.CustomerParameters">
@@ -373,10 +801,20 @@ Furthermore, the `"CustomerParameters"` entity type is annotated with the `"Resu
 > </Annotations>
 > ```
 
+> ### Sample Code:  
+> ABAP annotation
+> 
+> The ABAP CDS annotation defined for the `CustomerType` parameter entity type automatically generate the correct metadata.
+
+> ### Sample Code:  
+> CAP annotation
+> 
+> The CAP CDS annotation defined for the `CustomerType` parameter entity type automatically generate the correct metadata.
+
 In the `"CustomerParameters"` entity type, you can now find the parameters that need to be supplied with values to access the data from the main parameterized entity set:
 
 > ### Sample Code:  
-> Parameter entity type
+> XML Annotation: Parameter entity type
 > 
 > ```
 > <EntityType Name="CustomerParameters">
@@ -386,6 +824,41 @@ In the `"CustomerParameters"` entity type, you can now find the parameters that 
 >     <Property Name="P_DisplayCurrency" Type="Edm.String" Nullable="false" MaxLength="3"/>
 >     <NavigationProperty Name="Set" Type="Collection(com.sap.gateway.srvd.zrc_arcustomer_definition.v0001.CustomerType)" Partner="Parameters" ContainsTarget="true"/>
 > </EntityType>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> define view entity Z_I_CustomerParameters
+>   as select from some_source
+> 
+>   composition [1..*] of Z_I_Customer as _Set
+>     on $projection.P_DisplayCurrency = _Set.P_DisplayCurrency
+> 
+> {
+>   key P_DisplayCurrency : abap.char(3),
+> 
+>   //---------------------------------------------------------------
+>   // Composition (containment)
+>   //---------------------------------------------------------------
+>   _Set
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> @Common.ResultContext #$parameters
+> entity CustomerParameters {
+>   key P_DisplayCurrency : String(3);
+> 
+>   Set : Composition of many CustomerType
+>           on Set.Parameters = $self;
+> }
+> 
 > ```
 
 Note that the `"Partner"` term points to `"Parameters"` here, which was also the navigation entity set pointing to this `"CustomerParameter"` in the main entity type.
@@ -414,7 +887,7 @@ Ensure that you add the `/Set` suffix to the `contextPath` in the `manifest.json
 To access the data residing in the main entity set, that is, the entity set corresponding to the `"CustomerType"` entity type, we need to access it through the entity set corresponding to the navigation entity set, which is marked with the `"ResultContext"` annotation – so in this case through the entity set corresponding to the `"CustomerParameters"` entity type. `"Customer"` is the entity set that corresponds to the `"CustomerParameters"` entity type:
 
 > ### Sample Code:  
-> Entity set corresponding to `CustomerParameters`
+> XML Annotation: Entity set corresponding to `CustomerParameters`
 > 
 > ```
 > 
@@ -426,6 +899,16 @@ To access the data residing in the main entity set, that is, the entity set corr
 >     ...
 > </EntityContainer>
 > ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> The ABAP CDS annotation defined for the `CustomerParameters` parameter entity type automatically generate the correct metadata.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> The CAP CDS annotation defined for the `CustomerParameters` parameter entity type automatically generate the correct metadata.
 
 Here's an example of how the call to fetch results from the main entity set in the above sample would look:
 
@@ -476,7 +959,10 @@ You can use one of the following two approaches:
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+    > ```
+    > @Consumption.filter.multipleSelections: true
+    > SalesOrganization
+    > ```
 
     > ### Sample Code:  
     > CAP CDS Annotation

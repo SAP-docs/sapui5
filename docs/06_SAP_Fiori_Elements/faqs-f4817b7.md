@@ -47,7 +47,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     To understand the most common annotations used when an app is loaded, see [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md). If you're interested to know about a specific annotation, check any of the following topics:
 
-    -   To configure a table, see [Configuring Tables](configuring-tables-f4eb70f.md).
+    -   To configure a table, see [The Table Building Block](the-table-building-block-3801656.md).
 
     -   To configure a chart, see [Configuring Charts](configuring-charts-653ed0f.md).
 
@@ -259,7 +259,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     SAP Fiori elements also supports several table types. You can show or hide columns of tables on the list report page and object page depending on the screen width. For example, if the browser window is small or the app is running on a device with a small screen, or if you're using the flexible column layout.
 
-    The value of the `UI.Importance` annotation for the field determines which columns are hidden or moved when the screen size is reduced. For more information, see the [Showing or Hiding Columns Based on Importance and Available Screen Size in Responsive Tables](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_kgk_phh_wpb) section in [Tables](tables-c0f6592.md).
+    The value of the `UI.Importance` annotation for the field determines which columns are hidden or moved when the screen size is reduced. For more information, see [Showing or Hiding Columns Based on Importance and Available Screen Size in Responsive Tables](showing-or-hiding-columns-based-on-importance-and-available-screen-size-in-responsive-tab-5447155.md).
 
 -   **Can I allow users to edit multiple records in one go \(mass edit or bulk edit\)?**
 

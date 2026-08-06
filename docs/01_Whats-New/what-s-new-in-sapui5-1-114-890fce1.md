@@ -259,7 +259,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   You can now freeze the first columns in grid and analytical tables so that they remain fixed when scrolling horizontally. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   You can now freeze the first columns in grid and analytical tables so that they remain fixed when scrolling horizontally. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   Empty rows in object page tables can now contain disabled fields. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
@@ -523,6 +523,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

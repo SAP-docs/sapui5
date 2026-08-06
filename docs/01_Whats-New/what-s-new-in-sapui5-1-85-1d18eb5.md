@@ -508,7 +508,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   In object pages, if the subsection has only one type of content \(table or chart\), and the subsection title is the same as the control title, then only the control title is displayed in the subsection. For more information, see [Adding Titles to Object Page Tables](../06_SAP_Fiori_Elements/adding-titles-to-object-page-tables-d9a4539.md).
+-   In object pages, if the subsection has only one type of content \(table or chart\), and the subsection title is the same as the control title, then only the control title is displayed in the subsection. For more information, see [Setting the Table Header](../06_SAP_Fiori_Elements/setting-the-table-header-f996207.md).
 
 -   Analytical list pages now enable visual filter charts to convey information in an intuitive manner. This is done using semantic colors for filter values that are compared against predefined colors for dimension values. For more information, see [Enabling Semantic Operators in the Filter Bar](../06_SAP_Fiori_Elements/enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 
@@ -564,7 +564,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now define context-dependent value help via the `Common.ValueListRelevantQualifiers` annotation term. For more information, see [Configuring Fields](../06_SAP_Fiori_Elements/configuring-fields-4b50f21.md).
 
--   You can now exclude specific fields from the table personalization dialog in the list report and object page. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   You can now exclude specific fields from the table personalization dialog in the list report and object page. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   You can now add custom fields and facets on the object page header. For more information, see [Extension Points for Object Page Header Facets](../06_SAP_Fiori_Elements/extension-points-for-object-page-header-facets-61cf0ee.md).
 
@@ -609,6 +609,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

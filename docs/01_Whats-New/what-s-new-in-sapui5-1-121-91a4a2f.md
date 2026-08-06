@@ -639,7 +639,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   Table types are now displayed on mobile devices. This means that there's no need to automatically switch to responsive tables when the app is launched on mobile devices. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   Table types are now displayed on mobile devices. This means that there's no need to automatically switch to responsive tables when the app is launched on mobile devices. For more information, see [Tables](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   List report applications now support the creation of insights cards from responsive tables in multiview scenarios. For more information, see [Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-cloud-public-edit-9b13559.md)
 
@@ -1936,6 +1936,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

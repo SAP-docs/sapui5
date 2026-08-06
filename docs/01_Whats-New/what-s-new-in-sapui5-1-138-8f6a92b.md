@@ -651,7 +651,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now configure the threshold for the number of rows initially loaded in a table. For more information, see [Adapting the UI](../06_SAP_Fiori_Elements/extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
 
--   You can now freeze columns in the *Column Settings* dialog and disable column freezing by using the `disableColumnFreeze` parameter. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   You can now freeze columns in the *Column Settings* dialog and disable column freezing by using the `disableColumnFreeze` parameter. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   You can now use the `getCount()` method to retrieve the number of rows loaded in a table and display the number in a tile or any data field. For more information, see [Influencing the Request Dynamically](../06_SAP_Fiori_Elements/influencing-the-request-dynamically-2cc6c03.md).
 
@@ -760,6 +760,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

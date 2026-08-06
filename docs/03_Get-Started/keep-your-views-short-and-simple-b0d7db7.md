@@ -91,7 +91,7 @@ Things may get a little messy as your app is growing with your requirements. The
 </App>
 ```
 
--   Learn how: Walkthrough tutorial [Step 15: Nested Views](step-15-nested-views-df8c9c3.md)
+-   Learn how: Walkthrough tutorial [Step 15: Nested Views](https://ui5.github.io/tutorials/walkthrough/steps/15/index.html/?lang=js)
 
 -   Find out more: [Reusing UI Parts: Fragments](../04_Essentials/reusing-ui-parts-fragments-36a5b13.md)
 

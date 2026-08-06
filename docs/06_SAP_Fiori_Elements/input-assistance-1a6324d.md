@@ -44,16 +44,10 @@ Applications must enable input assistance by modeling it in the back end. This e
 
 Input assistance can be modeled using the RESTful Application Programming Model \(RAP\) and the SAP Cloud Application Programming Model \(CAP\) back ends.
 
-
-
-### Input Assistance in RESTful Application Programming Model \(RAP\)
-
-The `UI.Recommendations` annotation is the most important annotation and is defined at entity level. For more information about enabling recommendations, see [Adding RAP Recommendations](https://help.sap.com/docs/abap-cloud/abap-rap/defining-and-implementing-rap-recommendations?state=DRAFT).
-
-The entity uses back-end recommendations and points to a complex property in the entity.
+The `UI.Recommendations` annotation is the most important annotation and is defined at entity level.
 
 > ### Sample Code:  
-> Usage of `UI.Recommendations`
+> XML Annotation
 > 
 > ```
 > 
@@ -63,7 +57,33 @@ The entity uses back-end recommendations and points to a complex property in the
 > 
 > ```
 
-The complex property points to another complex property, which holds the actual entity properties that can handle recommendations. The following sample code shows a main entity enhanced with a complex type to hold recommendations:
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> using { UI } from '@sap/cds/common';
+> 
+> annotate com.c_salesordermanage_sd.SalesOrderManage with @(
+>   UI: {
+>     Recommendations: {
+>       $Path: 'SAP_Nav_Recommendations'
+>     }
+>   }
+> );
+> ```
+
+
+
+### Input Assistance in RESTful Application Programming Model \(RAP\)
+
+For more information about enabling recommendations, see [Adding RAP Recommendations](https://help.sap.com/docs/abap-cloud/abap-rap/defining-and-implementing-rap-recommendations?state=DRAFT).
+
+The complex property, defined against the `UI.Recommendations` annotation, points to another complex property, which holds the actual entity properties that can handle recommendations. The following sample code shows a main entity enhanced with a complex type to hold recommendations:
 
 > ### Sample Code:  
 > ```
@@ -123,20 +143,7 @@ See below for recommendation-relevant properties and their descriptions:
 
 ### Input Assistance in SAP Cloud Application Programming Model \(CAP\)
 
-In the CAP back end, input assistance is enabled using a navigation property:
-
 > ### Sample Code:  
-> ```
-> 
-> <Annotations Target="com.c_salesordermanage_sd.SalesOrderItem">
->     <Annotation Term="UI.Recommendations" Path="SAP_Nav_Recommendations"/>
-> </Annotations>
-> 
-> ```
-
-> ### Sample Code:  
-> XML Annotation
-> 
 > ```
 > 
 > <EntitySet Name="SalesOrderItem" EntityType="com.c_salesordermanage_sd.SalesOrderItem">
@@ -162,8 +169,6 @@ In the CAP back end, input assistance is enabled using a navigation property:
 > ```
 
 > ### Sample Code:  
-> CAP CDS Annotation
-> 
 > ```
 > entity SalesOrderItem_SAP_Nav_Recommendations as projection on db.SalesOrderItem.SAP_Nav_Recommendations;
 > 

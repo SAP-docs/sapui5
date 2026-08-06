@@ -28,51 +28,88 @@ Chart area configuration:
 The following sample code how to define a dual combination chart:
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > <Annotation Term="UI.Chart" Qualifier="Eval_by_CtryCurr_Dual_Combo">
->                         <Record Type="UI.ChartDefinitionType">
->                         <PropertyValue Property="Title" String="Dual Combination Chart" />
->                         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/CombinationDual"/>
->                         <PropertyValue Property="Measures">
->                             <Collection>
->                                 <PropertyPath>Sales</PropertyPath>
->                                 <PropertyPath>SalesShare</PropertyPath>
->                                 <PropertyPath>TotalSales</PropertyPath>
->                             </Collection>
->                         </PropertyValue>
->                         <PropertyValue Property="Dimensions">
->                             <Collection>
->                                 <PropertyPath>Product</PropertyPath>
->                                 <PropertyPath>Quarter</PropertyPath>
->                             </Collection>
->                         </PropertyValue>
->                         <PropertyValue Property="MeasureAttributes">
->                             <Collection>
->                                 <Record Type="UI.ChartMeasureAttributeType">
->                                     <PropertyValue Property="Measure" PropertyPath="Sales"/>
->                                     <PropertyValue Property="Role"
->                                         EnumMember="UI.ChartMeasureRoleType/Axis1"/>
->                                 </Record>
->                                 <Record Type="UI.ChartMeasureAttributeType">
->                                     <PropertyValue Property="Measure" PropertyPath="TotalSales" />
->                                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
->                                 </Record>
->                                 <Record Type="UI.ChartMeasureAttributeType">
->                                     <PropertyValue Property="Measure" PropertyPath="SalesShare" />
->                                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis2"/>
->                                 </Record>
->                             </Collection>
->                         </PropertyValue>
->                         <PropertyValue Property="DimensionAttributes">
->                             <Collection>
->                                 <Record Type="UI.ChartDimensionAttributeType">
->                                     <PropertyValue Property="Dimension" PropertyPath="Product" />
->                                     <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
->                                 </Record>
->                             </Collection>
->                         </PropertyValue>
->                     </Record>
->                 </Annotation>
+>   <Record Type="UI.ChartDefinitionType">
+>     <PropertyValue Property="Title"     String="Dual Combination Chart"/>
+>     <PropertyValue Property="ChartType" EnumMember="UI.ChartType/CombinationDual"/>
+>     <PropertyValue Property="Measures">
+>       <Collection>
+>         <PropertyPath>Sales</PropertyPath>
+>         <PropertyPath>SalesShare</PropertyPath>
+>         <PropertyPath>TotalSales</PropertyPath>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="Dimensions">
+>       <Collection>
+>         <PropertyPath>Product</PropertyPath>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="MeasureAttributes">
+>       <Collection>
+>         <Record Type="UI.ChartMeasureAttributeType">
+>           <PropertyValue Property="Measure" PropertyPath="Sales"/>
+>           <PropertyValue Property="Role"    EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+>         </Record>
+>         <Record Type="UI.ChartMeasureAttributeType">
+>           <PropertyValue Property="Measure" PropertyPath="TotalSales"/>
+>           <PropertyValue Property="Role"    EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+>         </Record>
+>         <Record Type="UI.ChartMeasureAttributeType">
+>           <PropertyValue Property="Measure" PropertyPath="SalesShare"/>
+>           <PropertyValue Property="Role"    EnumMember="UI.ChartMeasureRoleType/Axis2"/>
+>         </Record>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="DimensionAttributes">
+>       <Collection>
+>         <Record Type="UI.ChartDimensionAttributeType">
+>           <PropertyValue Property="Dimension" PropertyPath="Product"/>
+>           <PropertyValue Property="Role"      EnumMember="UI.ChartDimensionRoleType/Category"/>
+>         </Record>
+>       </Collection>
+>     </PropertyValue>
+>   </Record>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> @UI.Chart #Eval_by_CtryCurr_Dual_Combo: {
+>   Title:      'Dual Combination Chart',
+>   ChartType:  #CombinationDual,
+>   Measures:   [ Sales, SalesShare, TotalSales ],
+>   Dimensions: [ Product ],
+>   MeasureAttributes: [
+>     {
+>       Measure: Sales,
+>       Role:    #Axis1
+>     },
+>     {
+>       Measure: TotalSales,
+>       Role:    #Axis1
+>     },
+>     {
+>       Measure: SalesShare,
+>       Role:    #Axis2
+>     }
+>   ],
+>   DimensionAttributes: [
+>     {
+>       Dimension: Product,
+>       Role:      #Category
+>     }
+>   ]
+> }
 > ```
 
 

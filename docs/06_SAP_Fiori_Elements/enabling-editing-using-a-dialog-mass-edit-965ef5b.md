@@ -131,7 +131,7 @@ The following prerequisites apply:
 
 
 > ### Note:  
-> You can enable the mass edit feature for back-end services based on CAP `Node.js` by setting a feature flag. For more information, see [https://cap.cloud.sap/docs/releases/dec23\#sapui5-mass-edit](https://cap.cloud.sap/docs/releases/dec23#sapui5-mass-edit).
+> You can enable the mass edit feature for back-end services based on CAP `Node.js` by setting a feature flag. For more information, see [SAPUI5 Mass Edit](https://cap.cloud.sap/docs/releases/2023/dec23#sapui5-mass-edit).
 
 When a user clicks the *Edit* button, a dialog opens showing all the editable fields that are visible in the table or configured using the `visibleFields` property or the `ignoreFields` property. The user can clear all values or set a value for every editable field of the selected records in one go or clear all values of the fields from the selected records.
 

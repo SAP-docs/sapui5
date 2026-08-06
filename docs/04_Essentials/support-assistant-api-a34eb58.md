@@ -52,26 +52,6 @@ This section illustrates how to use the Support Assistant programming API throug
 
 
 
-### Add a Temporary Rule
-
-After the Support Assistant has been started, if in silent mode, you can add a new temporary rule by using the `addRule` method. Then you can run an analysis with this rule.
-
-```
-sap.ui.require(["sap/ui/support/RuleAnalyzer"],
-      function (RuleAnalyzer) {
-         var oRule = {
-            id: "Temp rule id",
-            title: "Temp rule title",
-            ...
-         };
-         RuleAnalyzer.addRule(oRule);
-});
-```
-
-For more information about rule properties, see [Guidelines and Best Practices](guidelines-and-best-practices-eaeea19.md).
-
-
-
 ### Run the Analysis
 
 The Support Assistant API allows you to:

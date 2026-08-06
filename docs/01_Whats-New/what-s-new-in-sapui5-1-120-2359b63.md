@@ -456,7 +456,7 @@ SAP Fiori elements for OData V2
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   End users can now use the copy-to-clipboard feature for multiple rows and range selections in list report and object page tables. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   End users can now use the copy-to-clipboard feature for multiple rows and range selections in list report and object page tables. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   You can now hide the filters from navigation properties in the *Adapt Filters* dialog. For more information, see [Adapting the Filter Bar](../06_SAP_Fiori_Elements/adapting-the-filter-bar-609c39a.md).
 
@@ -1394,6 +1394,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

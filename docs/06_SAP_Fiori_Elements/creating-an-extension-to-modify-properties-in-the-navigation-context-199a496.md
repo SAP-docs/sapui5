@@ -81,11 +81,14 @@ The modification \(add/remove/change\) is achieved by using the `adaptNavigation
 ## 
 
 > ### Restriction:  
-> -   `sourceControl` returns `undefined` if the navigation isn't triggered from a field such as a programmatic `navigateOutbound` call or a plain `sap.m.Button`.
+> -   `sourceControl` returns `undefined` if the navigation isn't triggered from a field, such as a programmatic `navigateOutbound` call or a plain `sap.m.Button`.
 > 
-> -   `sourceControl.getMainPropertyAbsolutePath()` returns `undefined` for fields with annotation type without a value property path such as `DataFieldForAction,` `DataFieldForIntentBasedNavigation`, or a field bound to an annotation such as a `DataPoint`.
+> -   `sourceControl.getMainPropertyAbsolutePath()` returns `undefined` for:
 > 
-> -   When you click a field that is displayed as a link, the call to the `adaptNavigationContext` extension method is invoked only once even if the link opens more than one navigation link. You cannot invoke this method by clicking the navigation links at the second level.
+>     -   Fields with an annotation type without a value property path, such as `DataFieldForAction` or `DataFieldForIntentBasedNavigation`
+>     -   For fields bound to an annotation such as a `DataPoint`
+> 
+> -   When you click a field that is displayed as a link, the call to the `adaptNavigationContext` extension method is invoked only once even if the link opens multiple navigation links. You can't invoke this method by clicking the navigation links at the second level.
 > 
 >     Always check for null values before using `sourceControl` or `sourceControl.getMainPropertyAbsolutePath()`.
 

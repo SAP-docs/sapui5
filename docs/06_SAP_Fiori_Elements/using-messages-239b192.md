@@ -34,6 +34,8 @@ Applications must annotate side effects with the target to the message property 
 The following is an example of a side effects annotation:
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="CustomerChange">
 >     <Record>
@@ -51,11 +53,38 @@ The following is an example of a side effects annotation:
 > </Annotation>
 > ```
 
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @Common.sideEffects: [
+>   {
+>     qualifier: 'CustomerChange',
+>     sourceProperties: [ 'Customer' ],
+>     targetProperties: [ 'SAP__Messages' ]
+>   }
+> ]
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate MyService.SalesOrderManage with @Common.SideEffects #CustomerChange:{
+>   SourceProperties: ['Customer'],
+>   TargetProperties: ['SAP__Messages']
+> };
+> 
+> 
+> ```
+
 If an app needs to read the messages for all properties, you can add a side effect with the entity as a source entity, as shown in the following example:
 
 > ### Sample Code:  
 > ```
-> <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="AllwaysReadStateMessages">
+> <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="AlwaysReadStateMessages">
 >     <Record>
 >         <PropertyValue Property="SourceEntities">
 >             <Collection>
@@ -69,6 +98,30 @@ If an app needs to read the messages for all properties, you can add a side effe
 >         </PropertyValue>
 >     </Record>
 > </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @Common.sideEffects: [
+>   {
+>     qualifier:'AlwaysReadStateMessages',
+>     targetProperties: [ 'SAP__Messages' ]
+>   }
+> ]
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate MyService.SalesOrderManage with @Common.SideEffects #AlwaysReadStateMessages: {
+>   SourceEntities:['$self'],
+>   TargetProperties:['SAP__Messages']
+> };
+> 
 > ```
 
 Actions that return an entity with an annotated message property are likely to also change state messages. Therefore, if no side effect was annotated, we implicitly request the message property. If a side effect is annotated, the application must add the message property to the `TargetProperties` of this side effect's definition.

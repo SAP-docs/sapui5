@@ -141,7 +141,7 @@ The targets section of the router configuration is an object in which each key d
 
     Key of another target that is loaded and placed before this one. Useful when building up a nested UI hierarchy.
 
--   `clearAggregation`
+-   `clearControlAggregation`
 
     Whether to clear the aggregation before adding new content. The defaults are:
 

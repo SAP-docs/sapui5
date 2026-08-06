@@ -8,7 +8,7 @@ The `sap.ui.mdc` library contains composite, metadata-driven controls that assem
 > For SAPUI5 applications for OData V4, SAP Fiori elements provides the SAP Fiori development portal based on the `sap.ui.mdc` library. It offers building blocks that can be used without additional integration effort. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md) and [SAP Fiori Development Portal](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/introduction).
 
 > ### Note:  
-> The following sections only provide additional information for some of the controls. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
+> The following sections provide additional information for selected controls and features. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
 
 For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.mdc) and the [samples](https://ui5.sap.com/#/entity/sap.ui.mdc).
 

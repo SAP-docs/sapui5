@@ -19,27 +19,21 @@ The number of columns is equal to the number of measures in the annotation file.
 > 
 > ```xml
 > <Annotation Term="UI.Chart" Qualifier="BarChartSoldToParty">
->     <Record Type="UI.ChartDefinitionType">
->         <PropertyValue Property="Title" String="Bar Chart"/>
->         <PropertyValue Property="Description" String="Testing Bar Chart"/>
->         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
->         <PropertyValue Property="Measures">
->             <Collection>
->                 <PropertyPath>totalPricing</PropertyPath>
->             </Collection>
->         </PropertyValue>
->         <PropertyValue Property="Dimensions">
->             <Collection>
->                 <PropertyPath>SoldToParty</PropertyPath>
->             </Collection>
->         </PropertyValue>
->         <PropertyValue Property="MeasureAttributes">
->             <Collection/>
->         </PropertyValue>
->         <PropertyValue Property="DimensionAttributes">
->             <Collection/>
->         </PropertyValue>
->     </Record>
+>   <Record Type="UI.ChartDefinitionType">
+>     <PropertyValue Property="Title"       String="Bar Chart"/>
+>     <PropertyValue Property="Description" String="Testing Bar Chart"/>
+>     <PropertyValue Property="ChartType"   EnumMember="UI.ChartType/Bar"/>
+>     <PropertyValue Property="Measures">
+>       <Collection>
+>         <PropertyPath>Revenue</PropertyPath>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="Dimensions">
+>       <Collection>
+>         <PropertyPath>SoldToParty</PropertyPath>
+>       </Collection>
+>     </PropertyValue>
+>   </Record>
 > </Annotation>
 > ```
 
@@ -47,23 +41,29 @@ The number of columns is equal to the number of measures in the annotation file.
 > ABAP CDS Annotation
 > 
 > ```
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> @UI.chart: [
+>   {
+>     qualifier:'BarChartSoldToParty',
+>     title:'Bar Chart',
+>     description:'Testing Bar Chart',
+>     chartType:#BAR,
+>     measures:['Revenue'],
+>     dimensions:['SoldToParty']
+>   }
+> ]
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> Chart #BarChartSoldToParty                              : {
->     $Type              : 'UI.ChartDefinitionType',
->     Title              : 'Bar Chart',
->     Description        : 'Testing Bar Chart',
->     ChartType          : #Bar,
->     Measures           : [totalPricing],
->     Dimensions         : [SoldToParty],
->     MeasureAttributes  : [],
->     DimensionAttributes: []
-> },
+> @UI.Chart #BarChartSoldToParty: {
+>   Title:'Bar Chart',
+>   Description:'Testing Bar Chart',
+>   ChartType:#Bar,
+>   Measures:[ Revenue ],
+>   Dimensions:[ SoldToParty ]
+> }
 > ```
 
 

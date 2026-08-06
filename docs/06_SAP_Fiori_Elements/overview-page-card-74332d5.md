@@ -62,7 +62,7 @@ The `title` property is mandatory. The `subTitle` is only mandatory if the card 
 > ```
 
 > ### Note:  
-> The type of filter bar is determined by the service \(entity\) bound to the filter configuration of the overview page application. If the service is an OData V4 service, a `FilterBar` building block is rendered; for OData V2, a smart filter bar is rendered.
+> The type of filter bar is determined by the service \(entity\) bound to the filter configuration of the overview page application. The OData V4 service renders a `FilterBar` building block, whereas the OData V2 service renders a smart filter bar.
 
 
 
@@ -110,7 +110,7 @@ These annotation terms can be configured in the `manifest.json` file, as shown i
 > ```
 
 > ### Note:  
-> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+> Configure the template setting in the `manifest.json` file based on the OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 **and** `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
 
 
 
@@ -169,7 +169,7 @@ You can also restrict the generation of individual analytical, list, and table c
 > ```
 
 > ### Note:  
-> -   The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+> -   Configure the template setting in the `manifest.json` file based on the OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 **and** `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
 > 
 > -   If custom navigation is enabled for a card, navigation from the *Insights* section of **My Home** for that card leads to the parent overview page application instead of the target maintained in the overview page card.
 

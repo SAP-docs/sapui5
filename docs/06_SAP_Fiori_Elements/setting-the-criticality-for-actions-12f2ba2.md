@@ -30,14 +30,13 @@ Actions that are a part of table rows \(inline\), an object page header, and an 
 > ABAP CDS Annotation
 > 
 > ```
-> 
-> @UI.<lineItem/fieldGroup>: [  
->   {
->     label: 'Positive (Dummy)',
->     dataAction: 'PUSHDOWN:com.c_salesordermanage_sd_aggregate.DummyBoundAction',
->     type: #FOR_ACTION
->   }
-> ]  
+> {
+>   type:        #FOR_ACTION,
+>   dataAction:  'com.c_salesordermanage_sd_aggregate.DummyBoundAction',
+>   label:       'Positive (Dummy)',
+>   determining: true,
+>   criticality: #POSITIVE
+> }
 > ```
 
 > ### Sample Code:  

@@ -55,7 +55,7 @@ In this tutorial step, we will have a closer look at Support Assistant. You can 
     
     ```
 
-    For more information, see [Walkthrough Step 8: Translatable Texts](step-8-translatable-texts-df86bfb.md)
+    For more information, see the Walkthrough tutorial, [Step 8: Translatable Texts](https://ui5.github.io/tutorials/walkthrough/steps/08/index.html?lang=js)
 
 5.  Restart the app and start the analysis again. This issue should now be gone. We have intentionally hidden some more errors in the code - check and see if you can find and correct them.
 

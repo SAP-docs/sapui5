@@ -8,7 +8,7 @@ You can render the chart as a waterfall chart to analyze a cumulative value.
   
 **Example of a Waterfall Chart Card**
 
-![](images/Waterfall_Chart_Card_0e381e6.png "Example of a Waterfall Chart Card")
+![Waterfall chart showing revenue breakdown by spend in EUR.](images/Waterfall_chart_card_-_OVP_f1c5cce.png "Example of a Waterfall Chart Card")
 
 Waterfall charts allow you to see the change in cumulative values from the initial state to the final state by representing the accumulation of successive values.
 

@@ -28,7 +28,7 @@ Semantic key fields in tables are displayed with a special logic. You can add th
 > ```
 > 
 > @ObjectModel: {
->   semanticKey: [ 'ProductForEdit' ]
+>     semanticKey: [ 'ProductForEdit' ]
 > }
 > 
 > define view C_MP_PRODUCT {
@@ -42,7 +42,7 @@ Semantic key fields in tables are displayed with a special logic. You can add th
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ProductType @(
->   Common.SemanticKey : [ ProductForEdit ]
+>     Common.SemanticKey : [ ProductForEdit ]
 > );
 > ```
 

@@ -13,7 +13,7 @@ You can provide default values with `DefaultValuesFunction` when creating a new 
 If you want to set default values for the newly created entity, use a `DefaultValuesFunction`.
 
 > ### Sample Code:  
-> `DefaultValuesFunction` for create entity
+> XML Metadata:`DefaultValuesFunction` for create entity
 > 
 > ```
 > <FunctionImport Name="GetDefaultsForRoot" ReturnType="cds_zrc_dv_defaultvalues.ZRC_DV_A_Create" m:HttpMethod="GET"/> 
@@ -21,6 +21,57 @@ If you want to set default values for the newly created entity, use a `DefaultVa
 > <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="cds_zrc_dv_defaultvalues.cds_zrc_dv_defaultvalues_Entities/Root">
 > <Annotation Term="com.sap.vocabularies.Common.v1.DefaultValuesFunction" String="GetDefaultsForRoot"/>
 > </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Metadata
+> 
+> ```
+> @Common.defaultValuesFunction: 'GetDefaultsForRoot'
+> define view entity Z_I_Root
+>   as projection on Z_C_Root
+> {
+>   key field1,
+>       field2,
+>       ...
+> }
+> 
+> 
+> 
+> ```
+> 
+> The behavior definition:
+> 
+> ```
+> define behavior for Z_I_Root
+> {
+>   static function GetDefaultsForRoot result [1] ZRC_DV_A_Create;
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Metadata
+> 
+> ```
+> @Common.DefaultValuesFunction: 'GetDefaultsForRoot'
+> entity Root {
+>   key ID : UUID;
+>   ...
+> }
+> 
+> 
+> ```
+> 
+> The function definition:
+> 
+> ```
+> service MyService {
+>   entity Root as projection on db.Root;
+> 
+>   function GetDefaultsForRoot() returns ZRC_DV_A_Create;
+> }
 > 
 > ```
 

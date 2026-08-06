@@ -62,7 +62,7 @@ You can limit the number of decimals to the number of decimals defined for the u
 > 
 > "sap.fe": {
 >     "app": {
->        "showOnlyUnitDecimals": true
+>         "showOnlyUnitDecimals": true
 >     }
 > }
 > 

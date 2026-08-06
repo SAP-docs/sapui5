@@ -1567,7 +1567,7 @@ General Features:
 
 -   Navigation at row level
 
-    In grid and analytical tables, users can now navigate to the object page, at row level. The *Show Detail* button has been removed for these tables. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+    In grid and analytical tables, users can now navigate to the object page, at row level. The *Show Detail* button has been removed for these tables. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 
 Object Page View:
@@ -1602,7 +1602,7 @@ List Report View:
 
 -   Tree table
 
-    You can now use tree tables in the list report page. Note that you can use this table type only in apps for ready-only scenarios. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+    You can now use tree tables in the list report page. Note that you can use this table type only in apps for ready-only scenarios. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 
 **Overview Pages \(OVP\)**
@@ -1714,6 +1714,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

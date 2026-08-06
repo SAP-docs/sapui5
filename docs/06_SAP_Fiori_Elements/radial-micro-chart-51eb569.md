@@ -125,11 +125,14 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > 
 > ```
 > 
-> @UI.dataPoint: {
->   criticality: 'criticalityValue'
-> }
-> Width;
-> 
+> @UI.dataPoint: [
+>   {
+>     qualifier:'Width',
+>     value:'Width',
+>     targetValueElement:'Weight',
+>     criticality:'criticalityValue'
+>   }
+> ]
 > ```
 
 > ### Sample Code:  

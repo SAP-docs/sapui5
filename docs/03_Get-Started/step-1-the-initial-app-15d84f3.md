@@ -4,13 +4,32 @@
 
 We start by setting up a simple app that loads data from an OData service and displays it in a table. We use a mock server to simulate requests to and responses from the service.
 
-The structure and data model created in this step will be used throughout this tutorial to illustrate the OData V4 features in SAPUI5.
+OData is a standard protocol for creating and consuming data by using simple HTTP and REST APIs for create, read, update, delete \(CRUD\) operations.
+
+We start with an initial app that simply retrieves data from an OData V4 service and displays it as a plain list.
+
+
+
+<a name="loio15d84f36c0594cb2b3295aa1f55cb961__section_dsn_cwc_z1b"/>
+
+## Preview OData V4 Tutorial App
+
+![](images/Tutorial_OData_V4_Step_8_e518deb.png)
+
+> ### Tip:  
+> You don't have to do all tutorial steps sequentially, you can jump directly to any step you want. In each step, download the code from the previous step, copy it to your workspace, and make sure that the application runs by calling the `webapp/index.html` file.
+> 
+> You can view and download the samples for all steps in the Demo Kit at [OData V4](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.odatav4). Depending on your development environment you might have to adjust resource paths and configuration entries.
+> 
+> For more information check the [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download) section of the tutorials overview page [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
 
 
 
 <a name="loio15d84f36c0594cb2b3295aa1f55cb961__section_bt4_fxc_z1b"/>
 
-## Preview
+## Preview Step 1
+
+The structure and data model created in this step will be used throughout this tutorial to illustrate the OData V4 features in SAPUI5.
 
   
   

@@ -19,37 +19,37 @@ The following manifest settings are required for adding segmented buttons:
 > 
 > ```
 > "SalesOrderManageObjectPage": {
-> 	"type": "Component",
-> 	"id": "SalesOrderManageObjectPage",
-> 	"name": "sap.fe.templates.ObjectPage",
-> 	"options": {
-> 		"settings": {
-> 			"contextPath": "/SalesOrderManage",
-> 			"navigation": {
-> 	           ...
-> 			},
-> 			"controlConfiguration": {
-> 				"_Item/@com.sap.vocabularies.UI.v1.LineItem": {
-> 					"tableSettings": {
-> 						"type": "GridTable",
-> 						"quickVariantSelection": {
-> 							"paths": [
-> 								{
-> 									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SimpleFilter"
-> 								},
-> 								{
-> 									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ComplexFilter"
-> 								}
-> 							],
-> 							"showCounts": true,
-> 							"hideTableTitle": true
-> 						},
-> 	                  ...
-> 					}
-> 				}
-> 			}
-> 		}
-> 	}
+>     "type": "Component",
+>     "id": "SalesOrderManageObjectPage",
+>     "name": "sap.fe.templates.ObjectPage",
+>     "options": {
+>         "settings": {
+>             "contextPath": "/SalesOrderManage",
+>             "navigation": {
+>                 ...
+>             },
+>             "controlConfiguration": {
+>                 "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+>                     "tableSettings": {
+>                         "type": "GridTable",
+>                         "quickVariantSelection": {
+>                             "paths": [
+>                                 {
+>                                     "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SimpleFilter"
+>                                 },
+>                                 {
+>                                     "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ComplexFilter"
+>                                 }
+>                             ],
+>                             "showCounts": true,
+>                             "hideTableTitle": true
+>                         },
+>                         ...
+>                     }
+>                 }
+>             }
+>         }
+>     }
 > }
 > ```
 
@@ -62,60 +62,60 @@ The annotations defined in the variants are:
 > 
 > ```xml
 > <Annotation Term="UI.SelectionVariant" Qualifier="SimpleFilter">
->       <Record>
->          <PropertyValue Property="Text" String="Tax amount less than 10 USD" />
->          <PropertyValue Property="SelectOptions">
+>     <Record>
+>         <PropertyValue Property="Text" String="Tax amount less than 10 USD" />
+>         <PropertyValue Property="SelectOptions">
 >             <Collection>
->                <Record Type="UI.SelectOptionType">
->                   <PropertyValue Property="PropertyName" PropertyPath="tax_amount" />
->                   <PropertyValue Property="Ranges">
->                      <Collection>
->                         <Record Type="UI.SelectionRangeType">
->                            <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
->                            <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/LT" />
->                            <PropertyValue Property="Low" String="10" />
->                         </Record>
->                      </Collection>
->                   </PropertyValue>
->                </Record>
+>                 <Record Type="UI.SelectOptionType">
+>                     <PropertyValue Property="PropertyName" PropertyPath="tax_amount" />
+>                     <PropertyValue Property="Ranges">
+>                         <Collection>
+>                             <Record Type="UI.SelectionRangeType">
+>                                 <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+>                                 <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/LT" />
+>                                 <PropertyValue Property="Low" String="10" />
+>                             </Record>
+>                         </Collection>
+>                     </PropertyValue>
+>                 </Record>
 >             </Collection>
->          </PropertyValue>
->       </Record>
->    </Annotation>
->    <Annotation Term="UI.SelectionVariant" Qualifier="ComplexFilter">
->       <Record>
->          <PropertyValue Property="Text" String="Net Amount between 10 and 40 And Gross Amount Less than 100 USD" />
->          <PropertyValue Property="SelectOptions">
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> <Annotation Term="UI.SelectionVariant" Qualifier="ComplexFilter">
+>     <Record>
+>         <PropertyValue Property="Text" String="Net Amount between 10 and 40 And Gross Amount Less than 100 USD" />
+>         <PropertyValue Property="SelectOptions">
 >             <Collection>
->                <Record Type="UI.SelectOptionType">
->                   <PropertyValue Property="PropertyName" PropertyPath="net_amount" />
->                   <PropertyValue Property="Ranges">
->                      <Collection>
->                         <Record>
->                            <PropertyValue Property="Sign" EnumMember="com.sap.vocabularies.UI.v1.SelectionRangeSignType/I" />
->                            <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT" />
->                            <PropertyValue Property="Low" String="10" />
->                            <PropertyValue Property="High" String="40" />
->                         </Record>
->                      </Collection>
->                   </PropertyValue>
->                </Record>
->                <Record Type="UI.SelectOptionType">
->                   <PropertyValue Property="PropertyName" PropertyPath="gross_amount" />
->                   <PropertyValue Property="Ranges">
->                      <Collection>
->                         <Record Type="UI.SelectionRangeType">
->                            <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/LT" />
->                            <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
->                            <PropertyValue Property="Low" String="100" />
->                         </Record>
->                      </Collection>
->                   </PropertyValue>
->                </Record>
+>                 <Record Type="UI.SelectOptionType">
+>                     <PropertyValue Property="PropertyName" PropertyPath="net_amount" />
+>                     <PropertyValue Property="Ranges">
+>                         <Collection>
+>                             <Record>
+>                                 <PropertyValue Property="Sign" EnumMember="com.sap.vocabularies.UI.v1.SelectionRangeSignType/I" />
+>                                 <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT" />
+>                                 <PropertyValue Property="Low" String="10" />
+>                                 <PropertyValue Property="High" String="40" />
+>                             </Record>
+>                         </Collection>
+>                     </PropertyValue>
+>                 </Record>
+>                 <Record Type="UI.SelectOptionType">
+>                     <PropertyValue Property="PropertyName" PropertyPath="gross_amount" />
+>                     <PropertyValue Property="Ranges">
+>                         <Collection>
+>                             <Record Type="UI.SelectionRangeType">
+>                                 <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/LT" />
+>                                 <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+>                                 <PropertyValue Property="Low" String="100" />
+>                             </Record>
+>                         </Collection>
+>                     </PropertyValue>
+>                 </Record>
 >             </Collection>
->          </PropertyValue>
->       </Record>
->    </Annotation>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
 > 
 > ```
 
@@ -124,19 +124,19 @@ The annotations defined in the variants are:
 > 
 > ```
 > @UI.selectionVariant: [
->   {
->     text: 'Tax amount less than 10 USD',
->     qualifier: 'SimpleFilter',
->     filter: 'tax_amount LT 10'
->   }
+>     {
+>         text: 'Tax amount less than 10 USD',
+>         qualifier: 'SimpleFilter',
+>         filter: 'tax_amount LT 10'
+>     }
 > ]
 > 
 > @UI.selectionVariant: [
->   {
->     text: 'Net Amount between 10 and 40 And Gross Amount Less than 100 USD',
->     qualifier: 'ComplexFilter',
->     filter: 'net_amount GE 10 and net_amount LE 40 and gross_amount LT 100 '
->   }
+>     {
+>         text: 'Net Amount between 10 and 40 And Gross Amount Less than 100 USD',
+>         qualifier: 'ComplexFilter',
+>         filter: 'net_amount GE 10 and net_amount LE 40 and gross_amount LT 100 '
+>     }
 > ]
 > ```
 
@@ -144,7 +144,6 @@ The annotations defined in the variants are:
 > CAP CDS Annotation
 > 
 > ```
-> 
 > UI.SelectionVariant #SimpleFilter : {
 >     Text : 'Tax amount less than 10 USD',
 >     SelectOptions : [
@@ -191,7 +190,6 @@ The annotations defined in the variants are:
 >         }
 >     ]
 > }
-> 
 > 
 > ```
 

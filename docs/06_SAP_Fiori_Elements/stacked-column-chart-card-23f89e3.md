@@ -8,7 +8,7 @@ You can render the chart as a stacked column chart. Similar to a column chart, i
   
 **Example of a Stacked Column Chart**
 
-![](../01_Whats-New/images/WhatsNew_138_OVP_StackedColumn_751363a.png "Example of a Stacked Column Chart")
+![](images/Stacked_column_chart_-_OVP_7b9d5b7.png "Example of a Stacked Column Chart")
 
 Use a stacked column chart to compare the breakdown of multiple measures across one or more categories.
 
@@ -58,7 +58,30 @@ The following code samples show how to configure a stacked column chart chart:
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @UI.chart: [
+>   {
+>     qualifier: 'ColumnStackedPath',
+>     title: 'Items Stacked Column Chart',
+>     description: 'Testing Stacked Column Chart',
+>     chartType: #COLUMN_STACKED,
+>     dimensions: [ 'CalendarWeek' ],
+>     measures: [ 'DirectCost', 'IndirectCost' ],
+>     measureAttributes: [
+>       {
+>         measure: 'DirectCost',
+>         role: #AXIS_1,
+>         dataPoint: '@UI.dataPoint#DirectCostDP'
+>       },
+>       {
+>         measure: 'IndirectCost',
+>         role: #AXIS_1,
+>         dataPoint: '@UI.dataPoint#IndirectCostDP'
+>       }
+>     ]
+>   }
+> ]
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

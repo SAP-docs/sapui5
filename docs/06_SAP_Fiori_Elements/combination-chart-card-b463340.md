@@ -10,7 +10,7 @@ You can render the chart as a combination chart, which lets you combine and view
   
 **Example of a Combination Chart Card**
 
-![](../01_Whats-New/images/Whats_New_140_OVP_Combination_Chart_55139a9.png "Example of a Combination Chart Card")
+![](images/Dual_combination_chart_card_-_OVP_98d1b16.png "Example of a Combination Chart Card")
 
 A combination chart has the following requirements:
 

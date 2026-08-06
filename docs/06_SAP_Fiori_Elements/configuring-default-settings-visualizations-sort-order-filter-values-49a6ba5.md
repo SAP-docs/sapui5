@@ -788,8 +788,6 @@ For more information, see [Configuring Default Filter Values](configuring-defaul
 **Related Information**  
 
 
-[Configuring Tables](configuring-tables-f4eb70f.md "You can use the annotations and entries in the manifest.json file to control various aspects of tables in SAP Fiori elements for OData V4.")
-
 [Configuring Charts](configuring-charts-653ed0f.md "You can add a chart facet to a content section within the list report page and the object page in SAP Fiori elements for OData V4.")
 
 [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md "You can configure the loading behavior of apps using SAP Fiori elements for OData V4.")

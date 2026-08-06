@@ -53,6 +53,8 @@ For more information and live examples, see the SAP Fiori development portal at 
 
 Any personalization done by the user is automatically stored and restored using `iAppState`. For more information about the `iAppState` mechanism, see [Store/Restore the Application State](store-restore-the-application-state-46bf248.md).
 
+You can disable the storing and restoration of personalization done by the user using `ignorePersonalizationChanges`. For more information, see [Disabling Personalization Persistence in Building Blocks](disabling-personalization-persistence-in-building-blocks-32259bd.md).
+
 If a chart doesn't contain any data, users see an illustrated message. For more information, see[Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md) 
 
 

@@ -18,6 +18,8 @@ For more information about creation using cross-app navigation, see [Handling of
 Applications can define `NewAction` and its parameters to ensure that users can provide parameter values during creation \(`NewAction` is only supported for the list report page\). For `POST`-based creation, a dialog is still shown if there are any non-computed key fields or immutable fields. For more information, see [Actions](actions-cbf16c5.md).
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > <Annotation Term="Common.DraftRoot">
 >     <Record Type="Common.DraftRootType">
@@ -26,6 +28,24 @@ Applications can define `NewAction` and its parameters to ensure that users can 
 >         ...
 >     </Record>
 > </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation is available, and `NewAction` is not supported. However, the draft flow is handled through the behavior definition.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> @odata.draft.enabled
+> @Common.DraftRoot: {
+>   NewAction: 'com.sap.gateway.srvd.c_salesordermanage_sd.v0001.CreateWithSalesOrderType'
+> }
+> entity Root {
+>   key ID : UUID;
+> }
 > ```
 
 

@@ -68,9 +68,9 @@ You also need to annotate the property with the `UI.IsImageUrl` annotation to sp
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ProductType with {
->   @UI.IsImageUrl : true
->   @Common.Text : '{Product}'
->   ProductPictureURL
+>     @UI.IsImageUrl : true
+>     @Common.Text : '{Product}'
+>     ProductPictureURL
 > };
 > 
 > ```
@@ -84,9 +84,9 @@ A property containing media data of type **stream**, such as an image, is also s
 > 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProductType/ProductPictureURL">
->    <Annotation Term="Common.Text" String="{Product}" /> 
->    <Annotation Term="Core.IsURL" Bool="true"/>
->    <Annotation Term="Core.MediaType" String="image/jpg"/>
+>     <Annotation Term="Common.Text" String="{Product}" />
+>     <Annotation Term="Core.IsURL" Bool="true"/>
+>     <Annotation Term="Core.MediaType" String="image/jpg"/>
 > </Annotations>
 > 
 > ```
@@ -97,10 +97,10 @@ A property containing media data of type **stream**, such as an image, is also s
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ProductType with {
->   @Common.Text : '{Product}'
->   @Core.IsURL : true
->   @Core.MediaType : 'image/jpg'
->   ProductPictureURL
+>     @Common.Text : '{Product}'
+>     @Core.IsURL : true
+>     @Core.MediaType : 'image/jpg'
+>     ProductPictureURL
 > };
 > ```
 
@@ -113,8 +113,8 @@ You can also use media data of type **binary** instead of **stream**. The local 
 > 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProductType/ProductPictureURL">
->    <Annotation Term="Common.Text" String="{Product}" /> 
->    <Annotation Term="Core.MediaType" String="image/png"/>
+>     <Annotation Term="Common.Text" String="{Product}" />
+>     <Annotation Term="Core.MediaType" String="image/png"/>
 > </Annotations>
 > 
 > ```
@@ -125,9 +125,9 @@ You can also use media data of type **binary** instead of **stream**. The local 
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ProductType with {
->   @Common.Text : '{Product}'
->   @Core.MediaType : 'image/png'
->   ProductPictureURL
+>     @Common.Text : '{Product}'
+>     @Core.MediaType : 'image/png'
+>     ProductPictureURL
 > };
 > ```
 

@@ -670,7 +670,7 @@ Description
 <tr>
 <td valign="top">
 
-UI.OperationGroupingType/Isolated
+`UI.OperationGroupingType`/Isolated
 
 </td>
 <td valign="top">
@@ -684,7 +684,7 @@ Even if an error occurs for a selected instance, the requests for the other sele
 <tr>
 <td valign="top">
 
-UI.OperationGroupingType/ChangeSet
+`UI.OperationGroupingType`/ChangeSet
 
 </td>
 <td valign="top">
@@ -712,7 +712,7 @@ You can calculate default values for action parameters through a back-end functi
 To achieve this, you must annotate the action with `Common.DefaultValuesFunction`.
 
 > ### Sample Code:  
-> `DefaultValuesFunction` for Function Import Actions
+> XML Annotation: `DefaultValuesFunction` for Function Import Actions
 > 
 > ```
 > <FunctionImport 
@@ -746,6 +746,37 @@ To achieve this, you must annotate the action with `Common.DefaultValuesFunction
 >         Term="com.sap.vocabularies.Common.v1.DefaultValuesFunction" 
 >         String="GetDefaultsForSetText"/>
 > </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> annotate entity cds_zrc_dv_defaultvalues_Entities with {
+>   @Common.SideEffects #Action: {
+>     TargetProperties: [ 'Text' ]
+>   };
+> 
+>   @Common.DefaultValuesFunction: 'GetDefaultsForSetText';
+> }
+> 
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> using { Common } from '@sap/cds/common';
+> 
+> annotate cds_zrc_dv_defaultvalues_Entities with {
+>   @Common.SideEffects #Action: {
+>     TargetProperties: [ 'Text' ]
+>   };
+>   @Common.DefaultValuesFunction: 'GetDefaultsForSetText';
+> };
+> 
 > 
 > ```
 
@@ -998,7 +1029,7 @@ The visibility of the action is controlled using the `UI.Hidden` annotation and 
 You can use the `UI.CreateHidden`, `UI.DeleteHidden`, and `UI.UpdateHidden` annotations to point to a singleton property path. The following sample code shows how to do this:
 
 > ### Sample Code:  
-> Hide the Create, Delete, and Update \(Edit\) Functionality Based on Singleton Properties
+> XML Annotation: Hide the Create, Delete, and Update \(Edit\) Functionality Based on Singleton Properties
 > 
 > ```
 > <EntityContainer Name="EntityContainer">
@@ -1017,6 +1048,58 @@ You can use the `UI.CreateHidden`, `UI.DeleteHidden`, and `UI.UpdateHidden` anno
 >     <Annotation Term="UI.DeleteHidden" Path="/com.namespace.EntityContainer/SingletonOne/HiddenDelete" />
 >     <Annotation Term="UI.UpdateHidden" Path="/com.namespace.EntityContainer/SingletonOne/HiddenUpdate" />
 > </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @ObjectModel.singleton: true
+> define view entity SingletonOne
+>   as select from some_table
+> {
+>   key field1,
+>       HiddenCreate,
+>       HiddenDelete,
+>       HiddenUpdate
+> }
+> 
+> annotate entity TargetEntitySet with {
+>   @UI.createHidden: { path: '_SingletonOne.HiddenCreate' };
+>   @UI.deleteHidden: { path: '_SingletonOne.HiddenDelete' };
+>   @UI.updateHidden: { path: '_SingletonOne.HiddenUpdate' };
+> };
+> 
+> association [1..1] to SingletonOne as _SingletonOne
+>   on ...;
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> using { UI } from '@sap/cds/common';
+> 
+> service EntityContainer {
+> 
+>   @odata.singleton
+>   entity SingletonOne {
+>     key ID           : UUID;      // required key (ignored for singleton semantics)
+>         HiddenCreate : Boolean;
+>         HiddenDelete : Boolean;
+>         HiddenUpdate : Boolean;
+>   };
+> 
+>   entity TargetEntitySet {
+>     key ID : UUID;
+>   };
+> }
+> 
+> annotate EntityContainer.TargetEntitySet with {
+>   @UI.CreateHidden: '/EntityContainer/SingletonOne/HiddenCreate';
+>   @UI.DeleteHidden: '/EntityContainer/SingletonOne/HiddenDelete';
+>   @UI.UpdateHidden: '/EntityContainer/SingletonOne/HiddenUpdate';
+> };
 > ```
 
 Please note that the path pointing to the singleton property must be absolute and using the `EntityContainer`.
@@ -1359,6 +1442,9 @@ The following default values are available:
     > ```
 
     > ### Sample Code:  
+    > No ABAP CDS annotation sample is available. Please update the `fill_parameters` method in the ABAP back-end service of the behavior implementation.
+
+    > ### Sample Code:  
     > CAP CDS Annotation
     > 
     > ```
@@ -1423,6 +1509,8 @@ The following default values are available:
         For a custom action, annotate on the action level:
 
         > ### Sample Code:  
+        > XML Annotation
+        > 
         > ```
         > <Annotations Target="myService.CustomAction(myService.SalesOrderManage)">
         >          <Annotation Term="Common.DefaultValuesFunction" String=" myService.GetDefaultParamsForCustomAction " />
@@ -1430,9 +1518,16 @@ The following default values are available:
         > 
         > ```
 
+        > ### Sample Code:  
+        > ABAP CDS Annotation
+        > 
+        > No ABAP CDS annotation sample is available. Please update the `fill_parameters` method in the ABAP back-end service of the behavior implementation.
+
         For the standard create action, annotate at the entity level:
 
         > ### Sample Code:  
+        > XML Annotation
+        > 
         > ```
         > <Annotations Target=" myService.EntityContainer/SalesOrderManage">
         >          <Annotation Term="Common.DefaultValuesFunction" String="GetDefaultParamsForSalesOrderCreate" />
@@ -1440,15 +1535,27 @@ The following default values are available:
         > 
         > ```
 
+        > ### Sample Code:  
+        > ABAP CDS Annotation
+        > 
+        > No ABAP CDS annotation sample is available. Please update the `fill_parameters` method in the ABAP back-end service of the behavior implementation.
+
         You can also annotate a navigation property. When you create an item from a parent entity, the default values function of the navigation property is read at the parent entity level. If not present, the default value's function annotated on the table entity is read.
 
         > ### Sample Code:  
+        > XML Annotation
+        > 
         > ```
         > <Annotations Target=" myService.EntityContainer/SalesOrderManage/_Item">
         >          <Annotation Term="Common.DefaultValuesFunction" String="GetDefaultParamsForItemCreate" />
         > </Annotations>
         > 
         > ```
+
+        > ### Sample Code:  
+        > ABAP CDS Annotation
+        > 
+        > No ABAP CDS annotation sample is available. Please update the `fill_parameters` method in the ABAP back-end service of the behavior implementation.
 
     -   Declaration of the function
 
@@ -2284,7 +2391,29 @@ Actions in the subsection toolbar can be collected from multiple `UI.FieldGroups
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @UI.facet: [
+>   {
+>     type:  #COLLECTION,
+>     id:    'MainInfo',
+>     label: 'Main Info',
+>     facets: [
+>       {
+>         type:  #COLLECTION,
+>         id:    'GeneralInformation',
+>         label: 'General Information',
+>         facets: [
+>           {
+>             type:            #REFERENCE,
+>             label:           'General Information',
+>             targetQualifier: 'GeneralInformation'
+>           }
+>         ]
+>       }
+>     ]
+>   }
+> ]
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

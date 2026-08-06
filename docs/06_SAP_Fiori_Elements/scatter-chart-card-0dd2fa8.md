@@ -10,7 +10,7 @@ You can render the chart as a scatter chart, which allows you visualize the dist
   
 **Example of a Scatter Chart Card**
 
-![Scatter plot showing an upward trend with values ranging from 0 to 1.2M on the y-axis and 0 to 7M on the x-axis.](../01_Whats-New/images/Whats_New_140_OVP_Scatter_Chart_f264ec1.png "Example of a Scatter Chart Card")
+![Scatter chart showing sales share and total sales by supplier company in EUR.](images/Scatter_chart_card_-OVP_3e5a131.png "Example of a Scatter Chart Card")
 
 A scatter chart has the following requirements:
 

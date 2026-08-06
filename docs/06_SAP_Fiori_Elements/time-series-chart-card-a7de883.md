@@ -8,7 +8,7 @@ You can render the chart as a time series chart, which contains a time axis inst
   
 **Example of a Time Series Chart Card**
 
-![](images/Time_Series_Chart_Card_2ae1caf.png "Example of a Time Series Chart Card")
+![](images/TIme_series_chart_card_-_OVP_8066563.png "Example of a Time Series Chart Card")
 
 Analytical cards use the time axis automatically when all the following conditions are met:
 
@@ -37,10 +37,28 @@ Analytical cards use the time axis automatically when all the following conditio
 > Extra color and shape dimensions are supported only in scatter charts.
 
 > ### Sample Code:  
-> Metadata Sample
+> XML Metadata
 > 
 > ```
 > <Property Name="Date" Type="Edm.DateTime" sap:display-format="Date" sap:label="Date" sap:aggregation-role="dimension"/>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @EndUserText.label: 'Date'
+> @Semantics.date: true
+> Date
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> @title: 'Date'
+> @Common.Label: 'Date'
+> Date : Date;
 > ```
 
 > ### Sample Code:  
@@ -229,7 +247,7 @@ The following sample code shows the `chartProperties.timeAxis.levels` property a
 > ```
 
 > ### Note:  
-> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+> Configure the template setting in the `manifest.json` file based on the OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 **and** `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
 
 The levels can include any combination of the time units, such as `year`, `month`, `day`, `hour`, or `minute`, depending on the required granularity of your dataset. To display the data correctly on the chart, it is recommended to increase the granularity of the dataset until there are no repeating values.
 

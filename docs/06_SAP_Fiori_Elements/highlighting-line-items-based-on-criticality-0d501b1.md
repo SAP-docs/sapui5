@@ -4,9 +4,9 @@
 
 You can add semantic highlights to line items in tables, based on their criticality, in SAP Fiori elements for OData V4.
 
-The figure below shows an example of this:
+The following screenshot shows an example of this:
 
-![](images/Semantic_Highlighting_of_Rows_cb0f238.png)
+![Sales Orders table showing order numbers, customer details, credit limits, and net amounts. Some of the rows are highlighted with a vertical red, orange, or green line to indicate criticality.](images/Criticality_Highlighting_e4849e1.png)
 
 The property containing the criticality can have the following values \(derived from the complex type `CriticalityType` of the vocabulary `com.sap.vocabularies.UI.v1`\):
 
@@ -39,12 +39,12 @@ Add a `LineItem` criticality annotation for the line items of the entity type th
 > 
 > ```xml
 > <Annotation Term="UI.LineItem">
->   <Annotation Term="UI.Criticality" Path="Element_transporting_criticality_of_complete_LineItem" />         //LineItem Criticality annotation
->   <Collection>
->     <Record Type="UI.DataField">
->       ...
->     </Record>
->   </Collection>
+>     <Annotation Term="UI.Criticality" Path="Element_transporting_criticality_of_complete_LineItem" /> //LineItem Criticality annotation
+>     <Collection>
+>         <Record Type="UI.DataField">
+>             ...
+>         </Record>
+>     </Collection>
 > </Annotation>
 > ```
 

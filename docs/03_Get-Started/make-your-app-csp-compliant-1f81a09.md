@@ -26,7 +26,7 @@ Don't use directly executable code in your HTML files, because this makes them v
 </body>
 ```
 
--   Learn how: Walkthrough Tutorial [Step 9: Component Configuration](step-9-component-configuration-4cfa608.md)
+-   Learn how: Walkthrough Tutorial [Step 9: Component Configuration](https://ui5.github.io/tutorials/walkthrough/steps/09/index.html/?lang=js)
 -   Find our more: [Declarative API for Initial Components](../04_Essentials/declarative-api-for-initial-components-82a0fce.md)
 
 

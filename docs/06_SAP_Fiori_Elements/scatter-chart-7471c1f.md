@@ -6,7 +6,7 @@ You can render the chart as a scatter chart in SAP Fiori elements for OData V4.
 
 
 
-A scatter chart allows you to visualize the distribution of data points over two measures.
+A scatter chart allows you to visualize the distribution of data points across two measures and supports a maximum of two dimensions.
 
   
   
@@ -16,12 +16,7 @@ A scatter chart allows you to visualize the distribution of data points over two
 
 For the first measure, the role is set to an axis is assigned to the `valueAxis` feed UID makes up the x-axis.
 
-> ### Note:  
-> The role is set to `axis1`, `axis2` \(if there's no `axis1`\), or `axis3` \(if there's no `axis2`\).
-
-The other measure is plotted on the y-axis.
-
-A scatter chart card supports a maximum of two dimensions. If the dimension is not marked with a role, then all members of the dimension are plotted as equal-sized bubbles of the same color in the chart. You can assign only one dimension to the `Series` role and all members of this dimension get a different color. A maximum of only one dimension can be assigned to the `Category` role and all members of such a dimension get a different shape.
+The first measure is plotted on the x-axis and the second measure on the y-axis. Dimensions assigned with `Series` role get a different color for each of its members.
 
 The following code samples show how to configure a scatter chart with two measures \(`salesshare` and `totalsales`\) and one dimension \(`suppliercompany`\) with no role:
 
@@ -61,29 +56,25 @@ The following code samples show how to configure a scatter chart with two measur
 > 
 > ```
 > 
-> @UI.Chart: [
+> @UI.chart: [
 >   {
->     title: 'Scatter Chart no role',
->     chartType: #SCATTER,
->     measureAttributes: [
+>     qualifier         : 'Eval_by_Currency_Scatter',
+>     title             : 'Scatter Chart no role',
+>     chartType         : #SCATTER,
+>     dimensions        : [ 'suppliercompany' ],
+>     measures          : [ 'salesshare', 'totalsales' ],
+>     measureAttributes : [
 >       {
->         measure: 'salesshare',
->         role: #AXIS_1
+>         measure : 'salesshare',
+>         role    : #AXIS_1
 >       },
 >       {
->         measure: 'totalsales',
->         role: #AXIS_2
+>         measure : 'totalsales',
+>         role    : #AXIS_2
 >       }
->     ],
->     dimensionAttributes: [
->       {
->         dimension: 'suppliercompany'
->       }
->     ],
->     qualifier: 'Eval_by_Currency_Scatter'
+>     ]
 >   }
 > ]
-> annotate view VIEWNAME with { }
 > 
 > ```
 
@@ -92,29 +83,27 @@ The following code samples show how to configure a scatter chart with two measur
 > 
 > ```
 > 
-> UI.Chart #Eval_by_Currency_Scatter : {
->     $Type : 'UI.ChartDefinitionType',
->     Title : 'Scatter Chart no role',
->     ChartType : #Scatter,
->     MeasureAttributes : [
->         {
->             $Type : 'UI.ChartMeasureAttributeType',
->             Measure : salesshare,
->             Role : #Axis1
->         },
->         {
->             $Type : 'UI.ChartMeasureAttributeType',
->             Measure : totalsales,
->             Role : #Axis2
->         }
+> annotate MyService.MyEntity with @(
+>   UI.Chart #Eval_by_Currency_Scatter : {
+>     Title             : 'Scatter Chart no role',
+>     ChartType         : #Scatter,
+>     Dimensions        : [ suppliercompany ],
+>     Measures          : [
+>       salesshare,
+>       totalsales
 >     ],
->     DimensionAttributes : [
->         {
->             $Type : 'UI.ChartDimensionAttributeType',
->             Dimension : suppliercompany
->         }
+>     MeasureAttributes : [
+>       {
+>         Measure : salesshare,
+>         Role    : #Axis1
+>       },
+>       {
+>         Measure : totalsales,
+>         Role    : #Axis2
+>       }
 >     ]
-> },
+>   }
+> );
 > 
 > ```
 

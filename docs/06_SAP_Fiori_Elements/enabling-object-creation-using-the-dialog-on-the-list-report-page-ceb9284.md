@@ -47,7 +47,7 @@ If this feature is enabled, you cannot navigate to an object page in create mode
 > 
 > -   Mandatory parameters are marked with a red asterisk in the dialog.
 > 
-> -   For information about enabling a custom create dialog on a tree table, see the [Create Mode and Custom Create Mode with a Menu Button](tree-tables-7cf7a31.md#loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_osy_44d_gbc) section in [Tree Tables](tree-tables-7cf7a31.md).
+> -   For information about enabling a custom create dialog on a tree table, see [Creation Modes in Tree Tables](creation-modes-in-tree-tables-9d31f64.md).
 > 
 > -   If you have entered filter values to prefill fields with specific values, the user can also use a dialog to create objects. For more information, see [Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md).
 

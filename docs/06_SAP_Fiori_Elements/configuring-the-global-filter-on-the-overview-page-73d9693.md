@@ -191,3 +191,5 @@ Defaults to `true`, which excludes all values listed in `selectedValues` from th
 
 [Refresh Entity Sets in sap-keep-alive Mode in the Overview Pages](refresh-entity-sets-in-sap-keep-alive-mode-in-the-overview-pages-0c35c87.md "You can use the sap-keep-alive feature in SAP Fiori launchpad to preserve the view state of an overview page when users navigate away from it.")
 
+[Configuring Default Filter Values on the Overview Page](configuring-default-filter-values-on-the-overview-page-b1ba10c.md "You can set default filter values for the global filter bar in the overview page.")
+

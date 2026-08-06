@@ -10,7 +10,7 @@ The number of columns is equal to the number of measures in the annotation file.
   
 **Example of a Horizontal Bar Chart Card**
 
-![](images/Example_of_a_Horizontal_Bar_Chart_Card_51ba955.png "Example of a Horizontal Bar Chart Card")
+![Horizontal bar chart showing total sales in EUR for products over the past six months.](images/Bar_chart_card_-_OVP_9bbc358.png "Example of a Horizontal Bar Chart Card")
 
 
 
@@ -174,7 +174,18 @@ The following sample code shows the minimum required configuration for a bar cha
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @UI.chart: [
+>   {
+>     qualifier: 'BarChartSoldToParty',
+>     title: 'Bar Chart',
+>     description: 'Testing Bar Chart',
+>     chartType: #BAR,
+>     measures: [ 'totalPricing' ],
+>     dimensions: [ 'SoldToParty' ]
+>   }
+> ]
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

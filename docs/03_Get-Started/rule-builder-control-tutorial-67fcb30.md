@@ -18,9 +18,9 @@ The visualization provided by the `RuleBuilder` component contains text parts an
 > ### Tip:  
 > You do not have to do the tutorial steps sequentially; you can start the tutorial at any step you want. Just download the code, copy it to your workspace and make sure that the application runs by calling the `index.html` file.
 > 
-> You can view and download all the files required for steps 1 and 2 in decision table section at [Rule Builder - Guided Decision Table](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder/sample/sap.rules.ui.sample.GuidedDecisionTable). This is applicable only for decision table rules modeled using rule expression language.
+> You can view and download all the files required for steps 1 and 2 in decision table section at [Rule Builder - Guided Decision Table](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder/sample/sap.rules.ui.sample.GuidedDecisionTable). This is applicable only for decision table rules modeled using AstExpressionLanguage.
 > 
-> You can view and download all the files required for steps 1 and 2 in text rule section at [Rule Builder - Text Rule](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder/sample/sap.rules.ui.sample.TextRule).
+> You can view and download all the files required for steps 1 and 2 in text rule section at [Rule Builder - Text Rule](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder/sample/sap.rules.ui.sample.TextRuleAst).
 > 
 > For more information check the [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download) section of the tutorials overview page [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
 
@@ -37,7 +37,7 @@ You can model rules using an expression language. There are two expression langu
     `customer_name of the customer is equal to 'John`
 
     > ### Caution:  
-    > Deprecated as of version 1.120.2. Instead, use expression Language 2.0 \(DMN SFEEL\).
+    > Deprecated as of version 1.120.2. Instead, use Expression Language 2.0 \(DMN SFEEL\).
 
 -   **Expression Language 2.0 \(DMN SFEEL\)**: Expression language 2.0 or DMN SFEEL is a subset of the Friendly Enough Expression Language \(FEEL\), provides a standard syntax for rule conditions, and reduces ambiguities while modeling a rule. A typical rule condition in expression language 2.0 is as shown below:
 
@@ -140,7 +140,7 @@ For more information, see the documentation for the SAP HANA Rules Framework on 
 
 This tutorial uses the OData V2 mock server to provide the required data. Before proceeding with this tutorial, ensure that you are familiar with the concepts introduced in the following tutorials:
 
--   [Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md), specifically [Step 26: Mock Server Configuration](step-26-mock-server-configuration-bae9d90.md)
+-   [Walkthrough Tutorial](https://ui5.github.io/tutorials/walkthrough/?lang=js), specifically [Step 26: Mock Server Configuration](https://ui5.github.io/tutorials/walkthrough/steps/26/index.html?lang=js)
 -   [OData V2 Mock Server Tutorial](odata-v2-mock-server-tutorial-3a9728e.md)
 
 > ### Note:  

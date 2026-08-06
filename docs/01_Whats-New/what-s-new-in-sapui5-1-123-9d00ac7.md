@@ -129,7 +129,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We now ensure that the fields annotated with intent-based navigation support the `TextArrangement` annotation. For more information, see [Displaying Text and ID for Value Help Input Fields](../06_SAP_Fiori_Elements/displaying-text-and-id-for-value-help-input-fields-080886d.md).
 
--   The tables on list reports and object pages now support context menus. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   The tables on list reports and object pages now support context menus. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   End users can now paste data from the clipboard into a single cell or a range of cells within a grid table. For more information, see [Copying and Pasting from External Applications to Tables](../06_SAP_Fiori_Elements/copying-and-pasting-from-external-applications-to-tables-f6a8fd2.md).
 
@@ -590,6 +590,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

@@ -37,5 +37,5 @@ Overview page application instances consist of a UI component that extends the o
 **Related Information**  
 
 
-[Overview Page](overview-page-c64ef8c.md "Overview page (OVP) is a SAP Fiori floorplan that provides a role-based overview of key business information through cards. It helps users monitor KPIs, track tasks, and access important insights from multiple applications in a single place.")
+[Overview Page](overview-page-c64ef8c.md "The overview page (OVP) is an SAP Fiori elements floorplan that provides a role-based overview of business data through configurable cards. You can use it to display information such as KPIs, tasks, and records from multiple applications in a single layout.")
 

@@ -2,7 +2,7 @@
 
 # The `TreeTable` Building Block
 
-You can use the `TreeTable` building block to create tables with hierarchical data in SAP Fiori elements for OData V4.
+The `TreeTable` building block displays hierarchical data in tree table format without exposing tree-specific parameters in the main `Table` building block in SAP Fiori elements for OData V4. Use it to present data with parent-child relationships in an expandable table view.
 
 You can use the `TreeTable` building block to avoid exposing parameters that are specific to tree tables in the main `Table` building block.
 
@@ -33,7 +33,7 @@ You can use the `TreeTable` building block to avoid exposing parameters that are
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Tree Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/treeTable).
 
-For more information about tree tables, see [Tree Tables](tree-tables-7cf7a31.md).
+For more information about tree tables, see [Tree Tables](disabling-the-selection-of-leaf-nodes-in-tree-tables-7cf7a31.md).
 
 
 

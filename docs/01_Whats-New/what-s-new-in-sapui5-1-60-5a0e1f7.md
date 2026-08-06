@@ -445,7 +445,7 @@ Aggregation forwarding for composite controls now offers the following options:
     For example, a model that a composite control developer sets on an inner control is not propagated to the child controls of this inner control if they have been moved there by aggregation forwarding. Instead, the models available at the original location of these child controls will be propagated to them.
 
 
-For more information, see [Aggregation Forwarding](../09_Developing_Controls/aggregation-forwarding-64a5e17.md).
+For more information, see [Forwarding Aggregations](../09_Developing_Controls/forwarding-aggregations-64a5e17.md).
 
 <sub>Changed•Feature•Info Only•1.60</sub>
 
@@ -1583,6 +1583,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

@@ -27,25 +27,27 @@ You can make the table rows selectable or non-selectable based on specific setti
 When `selectionMode` is set to `Multi` in the `manifest.json` file of a list report table, the table switches from single selection to multiple selection.
 
 > ### Sample Code:  
-> ```
-> "SalesOrderManageList":{
->          "type":"Component",
->          "id":"SalesOrderManageList",
->          "name":"sap.fe.templates.ListReport",
->          "options":{
->             "settings":{
->                "contextPath":"/SalesOrderManage",
->                "controlConfiguration":{
->                   "@com.sap.vocabularies.UI.v1.LineItem":{
->                      "tableSettings":{
->                         "type":"ResponsiveTable",
->                         "selectionMode":"Multi"
->                      }
->                   }
->                }
+> `manifest.json`
+> 
+> ```json
+> "SalesOrderManageList": {
+>     "type": "Component",
+>     "id": "SalesOrderManageList",
+>     "name": "sap.fe.templates.ListReport",
+>     "options": {
+>         "settings": {
+>             "contextPath": "/SalesOrderManage",
+>             "controlConfiguration": {
+>                 "@com.sap.vocabularies.UI.v1.LineItem": {
+>                     "tableSettings": {
+>                         "type": "ResponsiveTable",
+>                         "selectionMode": "Multi"
+>                     }
+>                 }
 >             }
->          }
->       }
+>         }
+>     }
+> }
 > 
 > ```
 
@@ -56,26 +58,28 @@ When `selectionMode` is set to `Multi` in the `manifest.json` file of a list rep
 When you set `selectionMode` to `Multi` in the `manifest.json` file of an object page, you enable multiple selection at the table level, that is, individually for each table, as shown in the following sample code:
 
 > ### Sample Code:  
-> ```
-> "SalesOrderManageObjectPage":{
->       "type":"Component",
->       "id":"SalesOrderManageObjectPage",
->       "name":"sap.fe.templates.ObjectPage",
->       "options":{
->          "settings":{
->             "contextPath":"/SalesOrderManage",
->             "sectionLayout":"Tabs",
->             "controlConfiguration":{
->                "_Item/@com.sap.vocabularies.UI.v1.LineItem":{
->                   "tableSettings":{
->                      "type":"GridTable",
->                      "selectionMode":"Multi"
->                   }
->                }
+> `manifest.json`
+> 
+> ```json
+> "SalesOrderManageObjectPage": {
+>     "type": "Component",
+>     "id": "SalesOrderManageObjectPage",
+>     "name": "sap.fe.templates.ObjectPage",
+>     "options": {
+>         "settings": {
+>             "contextPath": "/SalesOrderManage",
+>             "sectionLayout": "Tabs",
+>             "controlConfiguration": {
+>                 "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+>                     "tableSettings": {
+>                         "type": "GridTable",
+>                         "selectionMode": "Multi"
+>                     }
+>                 }
 >             }
->          }
->       }
->    }
+>         }
+>     }
+> }
 > 
 > ```
 
@@ -104,12 +108,14 @@ On the object page, the *Select All* checkbox is enabled based on the page layou
 You can change the default *Select All* feature in both layouts by setting `selectAll` to `true` in the table configuration, as shown in the following code sample:
 
 > ### Sample Code:  
-> ```
-> "controlConfiguration":{
-> 	"_Item/@com.sap.vocabularies.UI.v1.LineItem":{
-> 		"tableSettings":{
->             "type":"GridTable",
->             "selectionMode":"Multi",
+> `manifest.json`
+> 
+> ```json
+> "controlConfiguration": {
+>     "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+>         "tableSettings": {
+>             "type": "GridTable",
+>             "selectionMode": "Multi",
 >             "selectAll": true
 >         }
 >     }
@@ -120,40 +126,6 @@ You can change the default *Select All* feature in both layouts by setting `sele
 > For grid tables, analytical tables, and tree tables, if you choose the *Select All* checkbox, the system loads all data from the back-end system in multiple sequential requests. For performance reasons, set `selectAll` to `true` only if the expected amount of data isn't too high.
 > 
 > In responsive tables, if you choose the *Select All* checkbox, only the loaded data is selected. A message toast showing the number of selected records is displayed.
-
-
-
-## Limiting the Number of Selected Rows in a Table
-
-You can configure the `selectionLimit` setting in the `manifest.json` file to limit the number of rows selected at once in the table. If `selectionLimit` isn't configured, then the default value is set to 200.
-
-This option is applicable only to grid tables, tree tables, and analytical tables.
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "SalesOrderManageObjectPage":{
->       "type":"Component",
->       "id":"SalesOrderManageObjectPage",
->       "name":"sap.fe.templates.ObjectPage",
->       "options":{
->          "settings":{
->             "contextPath":"/SalesOrderManage",
->             "sectionLayout":"Tabs",
->             "controlConfiguration":{
->                "_Item/@com.sap.vocabularies.UI.v1.LineItem":{
->                   "tableSettings":{
->                      "type":"GridTable",
->                      "selectionMode":"Multi",
->                      "selectionLimit": "50"
->                   }
->                }
->             }
->          }
->       }
->    }
-> ```
 
 
 

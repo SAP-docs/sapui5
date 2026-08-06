@@ -133,7 +133,7 @@ Add column to a table
 
 [Defining Line Items](defining-line-items-c007f4a.md)
 
- <?sap-ot O2O class="- topic/xref " href="4f36240dfbc84ffe9692a1b18a292201.xml" text="" desc="" xtrc="xref:10" xtrf="file:/home/builder/src/dita-all/uck1780669073151/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/92065a5a4aea4bd98e65e5ba1c823e73.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+[Table Cards](table-cards-167bf7c.md)
 
 [Grouping of Fields](grouping-of-fields-2f84455.md)
 
@@ -5921,7 +5921,7 @@ Variant management
 
 [Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-e3b12f4.md)
 
- <?sap-ot O2O class="- topic/xref " href="8431b54e0b58432daf30ff5e150ca0d6.xml" text="" desc="" xtrc="xref:318" xtrf="file:/home/builder/src/dita-all/uck1780669073151/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/92065a5a4aea4bd98e65e5ba1c823e73.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+[Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md)
 
 </td>
 <td valign="top">

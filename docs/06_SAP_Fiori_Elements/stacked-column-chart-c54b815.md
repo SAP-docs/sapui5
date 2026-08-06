@@ -21,26 +21,37 @@ There should be at least one dimension with the assigned **category** role and a
 > XML Annotation
 > 
 > ```xml
-> <Annotation Term="UI.Chart" Qualifier="BarStackedPath">
->     <Record Type="UI.ChartDefinitionType">
->         <PropertyValue Property="Title" String="Items Stacked Bar Chart"/>
->         <PropertyValue Property="Description" String="Testing Stacked Bar Chart"/>
->         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/BarStacked"/>
->         <PropertyValue Property="Measures">
->             <Collection>
->                 <PropertyPath>NetAmount</PropertyPath>
->             </Collection>
->         </PropertyValue>
->         <PropertyValue Property="MeasureAttributes">
->             <Collection>
->                 <Record Type="UI.ChartMeasureAttributeType">
->                     <PropertyValue Property="Measure" PropertyPath="NetAmount"/>
->                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
->                     <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#BarStackedPath"/>
->                 </Record>
->             </Collection>
->         </PropertyValue>
->     </Record>
+> <Annotation Term="UI.Chart" Qualifier="ColumnStackedPath">
+>   <Record Type="UI.ChartDefinitionType">
+>     <PropertyValue Property="Title"       String="Items Stacked Column Chart"/>
+>     <PropertyValue Property="Description" String="Testing Stacked Column Chart"/>
+>     <PropertyValue Property="ChartType"   EnumMember="UI.ChartType/ColumnStacked"/>
+>     <PropertyValue Property="Dimensions">
+>       <Collection>
+>         <PropertyPath>CalendarWeek</PropertyPath>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="Measures">
+>       <Collection>
+>         <PropertyPath>DirectCost</PropertyPath>
+>         <PropertyPath>IndirectCost</PropertyPath>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="MeasureAttributes">
+>       <Collection>
+>         <Record Type="UI.ChartMeasureAttributeType">
+>           <PropertyValue Property="Measure"   PropertyPath="DirectCost"/>
+>           <PropertyValue Property="Role"      EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+>           <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#DirectCostDP"/>
+>         </Record>
+>         <Record Type="UI.ChartMeasureAttributeType">
+>           <PropertyValue Property="Measure"   PropertyPath="IndirectCost"/>
+>           <PropertyValue Property="Role"      EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+>           <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#IndirectCostDP"/>
+>         </Record>
+>       </Collection>
+>     </PropertyValue>
+>   </Record>
 > </Annotation>
 > ```
 
@@ -53,19 +64,25 @@ There should be at least one dimension with the assigned **category** role and a
 > CAP CDS Annotation
 > 
 > ```
-> Chart #BarStackedPath                 : {
->     $Type            : 'UI.ChartDefinitionType',
->     Title            : 'Items Stacked Bar Chart',
->     Description      : 'Testing Stacked Bar Chart',
->     ChartType        : #BarStacked,
->     Measures         : [NetAmount],
->     MeasureAttributes: [{
->         $Type    : 'UI.ChartMeasureAttributeType',
->         Measure  : NetAmount,
->         Role     : #Axis1,
->         DataPoint: '@UI.DataPoint#BarStackedPath'
->     }]
-> },
+> @UI.Chart #ColumnStackedPath: {
+>   Title:       'Items Stacked Column Chart',
+>   Description: 'Testing Stacked Column Chart',
+>   ChartType:   #ColumnStacked,
+>   Dimensions:  [ CalendarWeek ],
+>   Measures:    [ DirectCost, IndirectCost ],
+>   MeasureAttributes: [
+>     {
+>       Measure:   DirectCost,
+>       Role:      #Axis1,
+>       DataPoint: '@UI.DataPoint#DirectCostDP'
+>     },
+>     {
+>       Measure:   IndirectCost,
+>       Role:      #Axis1,
+>       DataPoint: '@UI.DataPoint#IndirectCostDP'
+>     }
+>   ]
+> }
 > ```
 
 The stacked column chart supports a color palette for semantic coloring.

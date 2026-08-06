@@ -391,7 +391,7 @@ SAPUI5/OpenUI5
 </td>
 <td valign="top">
 
-[Standard Composite Controls](09_Developing_Controls/standard-composite-controls-c1512f6.md)
+[Composite Controls](09_Developing_Controls/composite-controls-d6bab27.md)
 
 </td>
 </tr>
@@ -989,7 +989,7 @@ SAP Fiori elements
 </td>
 <td valign="top">
 
-[Configuring Tables](06_SAP_Fiori_Elements/configuring-tables-f4eb70f.md) 
+[Defining Line Items](06_SAP_Fiori_Elements/defining-line-items-f0e1e17.md) 
 
 </td>
 </tr>

@@ -373,7 +373,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   The list report, object page, and analytical list page applications now support a context menu. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   The list report, object page, and analytical list page applications now support a context menu. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.124</sub>
@@ -429,11 +429,11 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now refresh the count and the view content in a list report while using it in multi-view mode. For more information, see [Multiple Views on the List Report Page](../06_SAP_Fiori_Elements/multiple-views-on-the-list-report-page-a37df40.md).
 
--   You can now perform edit operations such as cut and paste, drag and drop, and create on tree tables within a list report or an object page. For more information, see [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
+-   You can now perform edit operations such as cut and paste, drag and drop, and create on tree tables within a list report or an object page. For more information, see [Disabling the Selection of Leaf Nodes in Tree Tables](../06_SAP_Fiori_Elements/disabling-the-selection-of-leaf-nodes-in-tree-tables-7cf7a31.md).
 
 -   You can now perform certain configurations to define how columns are exported to a spreadsheet. For more information, see [Using the Export Button](../06_SAP_Fiori_Elements/using-the-export-button-4bab6f2.md).
 
--   We now support a new building block for the tree table. For more information, see [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
+-   We now support a new building block for the tree table. For more information, see [Disabling the Selection of Leaf Nodes in Tree Tables](../06_SAP_Fiori_Elements/disabling-the-selection-of-leaf-nodes-in-tree-tables-7cf7a31.md).
 
 -   You can now define a `Common.ExternalID` annotation that displays a readable identifier of an item on the UI instead of the `Edm.Guid` value. The `Common.ExternalID` annotation is supported for both the fields and filter fields. For more information, see [Further Features of the Field](../06_SAP_Fiori_Elements/additional-features-of-the-field-f49a0f7.md).
 
@@ -1026,6 +1026,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

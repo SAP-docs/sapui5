@@ -15,7 +15,7 @@ Always define the libraries you use in the manifest and remove all libraries tha
 ```json
 "sap.ui5": {
 	"dependencies": {
-		"minUI5Version": "1.150.0",
+		"minUI5Version": "1.151.0",
 		"libs": {
 			"sap.ui.core": {},
 			"sap.m": {},
@@ -26,7 +26,7 @@ Always define the libraries you use in the manifest and remove all libraries tha
 }
 ```
 
--   Learn how: Walkthrough Tutorial [Step 10: Descriptor for Applications](step-10-descriptor-for-applications-8f93bf2.md)
+-   Learn how: Walkthrough Tutorial [Step 10: Descriptor for Applications](https://ui5.github.io/tutorials/walkthrough/steps/10/index.html/?lang=js)
 -   Find out more: [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md)
 
 
@@ -48,7 +48,7 @@ sap.ui.define([
 	...
 ```
 
--   Learn how: Walkthrough Tutorial [Step 10: Descriptor for Applications](step-10-descriptor-for-applications-8f93bf2.md)
+-   Learn how: Walkthrough Tutorial [Step 10: Descriptor for Applications](https://ui5.github.io/tutorials/walkthrough/steps/10/index.html/?lang=js)
 -   Find out more:
     -   [Modules and Dependencies](../04_Essentials/modules-and-dependencies-91f23a7.md)
     -   [https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/Cloud/en-US/dfb26ef028624cf486a8bbb0bfd459ff.html](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/Cloud/en-US/dfb26ef028624cf486a8bbb0bfd459ff.html)

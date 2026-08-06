@@ -29,8 +29,12 @@ Example 1: `DataFieldWithURL` as path reference to a property:
 > ABAP CDS Annotation
 > 
 > ```
-> @UI.<lineItem/fieldGroup>: [{ type: #WITH_URL, url: 'URL' }]
-> URL;
+> {
+>   type:  #WITH_URL,
+>   label: 'Column label',
+>   value: URL,
+>   url:   URL
+> }
 > ```
 
 > ### Sample Code:  
@@ -62,14 +66,12 @@ Example 2: `DataFieldWithURL` with absolute URL:
 > ABAP CDS Annotation
 > 
 > ```
-> @UI.<lineItem/fieldGroup>: [
 > {
->     label: 'Company',
->     type: #WITH_URL,
->     url: 'Your URL' //For example: https://sap.com
+>   type:  #WITH_URL,
+>   label: 'Company',
+>   value: URL,
+>   url:   'Your URL'
 > }
-> ]
-> URL;
 > 
 > ```
 
@@ -105,9 +107,10 @@ You can use `DataFieldWithURL` with an absolute value for the `Value` property i
 > 
 > ```
 > {
->     label: 'Company',
->     type: #WITH_URL,
->     url: 'Your URL' //For example: https://sap.com
+>   type:  #WITH_URL,
+>   label: 'Company',
+>   value: 'SAP',
+>   url:   'Your URL'
 > }
 > ```
 
@@ -168,13 +171,13 @@ You can use the `LinkTarget` property to specify in which window, tab, or frame 
 > }
 > ```
 
-For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldDefault)
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldDefault).
 
 
 
 ## Navigation to a Semantic Object \(Intent-Based Navigation\)
 
-If you associate a semantic object annotation with any property, this establishes [Intent-Based Navigation](http://help.sap.com/saphelp_nw75/helpdata/en/bd/8ae3d327ab4541bcce8e7353c046fc/content.htm).
+Establish intent-based navigation by associating a semantic object annotation with any property. For more information, see [Configuring Navigation](https://help.sap.com/docs/SAP_NETWEAVER_750/cc1c7615ee2f4a699a9272453379006c/bd8ae3d327ab4541bcce8e7353c046fc.html?version=7.5.17).
 
 An intent is a mechanism that lets you perform actions on semantic objects \(such as navigating to a sales order or displaying a fact sheet\) without having to worry about the UI technology or technical implementation of the navigation target. Intent-based navigation is the standard navigation mechanism in FLP and can also be used for the following purposes:
 
@@ -523,24 +526,30 @@ To do this when using the semantic link-based navigation, use the `SemanticObjec
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @Common.semanticObject: 'Customer'
+> @Common.semanticObjectMapping: [
+>   {
+>     localProperty:'SoldToPartyID',
+>     semanticObjectProperty:'CustomerID'
+>   }
+> ]
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> SoldToParty : String(10) @(Common : { 
->     SemanticObject                : 'Customer',
->     SemanticObjectMapping         : 'SoldToPartyID'[
->         {
->         LocalProperty           : SoldToPartyID,
->         SemanticObjectProperty  : 'CustomerID'
->         }
->     ]
+> SoldToParty : String(10) @(Common: {
+>   SemanticObject:        'Customer',
+>   SemanticObjectMapping: [
+>     {
+>       LocalProperty:          SoldToPartyID,
+>       SemanticObjectProperty: 'CustomerID'
+>     }
+>   ]
 > });
 > ```
-
-You can use navigation properties within the annotation as mapping properties. To pass navigation properties, ensure that the `LocalProperty` refers to the navigation property as shown in the following example.
 
 For semantic object mapping when navigating using the `DataFieldForIntentBasedNavigation` button, use the `Mapping` property in the `DataFieldForIntentBasedNavigation` annotation. You can use a similar approach with the `DataFieldWithIntentBasedNavigation` annotation.
 
@@ -549,6 +558,8 @@ For semantic object mapping when navigating using the `DataFieldForIntentBasedNa
 **Mapping Semantic Objects**
 
 ![](images/Semantic_Object_Mapping_b0c1ab2.png "Mapping Semantic Objects")
+
+To pass navigation properties, ensure that `LocalProperty` refers to the path of the navigation property that uses the name of the navigation property \(and not the name of the navigation entity set\) as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -580,7 +591,28 @@ For semantic object mapping when navigating using the `DataFieldForIntentBasedNa
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @UI.fieldGroup: [
+>   {
+>     qualifier: 'IntentBasedNavigation',
+>     data: [
+>       {
+>         type:#FOR_INTENT_BASED_NAVIGATION,
+>         label:'Approve Travel',
+>         semanticObject: 'Description',
+>         action:'maintain'
+>       }
+>     ]
+>   }
+> ]
+> @Common.semanticObject:'Description'
+> @Common.semanticObjectMapping: [
+>   {
+>     localProperty:'AgencyID',
+>     semanticObjectProperty:'Agency_Identifier'
+>   }
+> ]
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -682,7 +714,12 @@ During external outbound navigation, the following data is removed from the navi
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > Path-based `FieldControl` isn't supported using ABAP CDS annotations.
+    > Path-based `FieldControl` isn't supported using ABAP CDS annotations. Instead, flatten the field so that it becomes directly accessible, and then apply the annotation.
+    > 
+    > ```
+    > @Common.fieldControl: AvailabilityCode_FC
+    > AvailabilityCode
+    > ```
 
     > ### Sample Code:  
     > CAP CDS Annotation
@@ -704,9 +741,12 @@ For more security-related information, see [Security Configuration](security-con
 
 ## Handling Information from the Navigation Entity Set
 
-When navigation is triggered from a control, the navigation may include more information than is available in the control context. For example, when navigating from a table on a list report page navigating after selecting a table row brings into the navigation context not just the selected row information but also the context present in the filter bar. Similarly, when navigation is triggered after selection of a table row in an object page, the navigation context also contains information from the page context, not just the selected row information.
+When navigation is triggered from a control, the navigation context also includes inherited context. For example:
 
-When the navigation context is prepared, the information from the specific control entity \(for example, the table entity\) is merged with the information that comes from the parent entity, for example, a filter bar on a list report page or the page context in an object or subobject page, in the following order:
+-   List report page: Navigation after selecting a table row includes not only the selected row context but also information from the filter bar.
+-   Object page: Navigation after selecting a table row also includes information from the page context.
+
+The inherited context is merged with the information from the control’s entity based on the following rules:
 
 1.  If there's no conflicting property, that is, if the property with a given technical name only comes from one entity set, then the property value is passed against the property name without any leading entity set name.
 

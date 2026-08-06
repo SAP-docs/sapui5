@@ -347,7 +347,7 @@ To enable the export to PDF, you must configure the following annotations at ser
 
 -   `@com.sap.vocabularies.PDF.v1.Feature`
 
-    For more information, see [https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/PDF.md](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/PDF.md).
+    For more information, see the [PDF Vocabulary](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/PDF.md).
 
 
 

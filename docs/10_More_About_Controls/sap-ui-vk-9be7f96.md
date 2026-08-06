@@ -5,7 +5,7 @@
 The `sap.ui.vk` library provides controls for the visualization and manipulation of 2D and 3D models in your application.
 
 > ### Note:  
-> The following sections only provide additional information for some of the controls. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
+> The following sections provide additional information for selected controls and features. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
 
 Applications use the `sap.ui.vk` namespace. All other namespaces \(`sap.ui.vk.dvl`, `sap.ui.vk`.`threejs`, `sap.ui.svg`\) are specific for particular implementations and should be treated as private APIs.
 

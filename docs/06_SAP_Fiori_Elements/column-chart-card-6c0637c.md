@@ -8,7 +8,7 @@ You can render the chart as a column chart to display data, such as total produc
   
 **Example of a Column Chart Card**
 
-![](../01_Whats-New/images/WhatsNew_138_OVP_ColumnChart_d3b0ca9.png "Example of a Column Chart Card")
+![](images/Column_Chart_card_-_OVP_41ab772.png "Example of a Column Chart Card")
 
 Column charts have the following requirements:
 
@@ -59,7 +59,23 @@ The following code samples show how to configure a column chart:
 > ABAP CDS Annotation
 > 
 > ```
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> @UI.chart: [
+>   {
+>     qualifier: 'ColumnMaxPath',
+>     title: 'Items Column Chart',
+>     description: 'Testing Column Chart',
+>     chartType: #COLUMN,
+>     measures: [ 'NetAmount' ],
+>     dimensions: [ 'SalesOrderItem' ],
+>     measureAttributes: [
+>       {
+>         measure: 'NetAmount',
+>         role: #AXIS_1,
+>         dataPoint: '@UI.dataPoint#ColumnMaxPath'
+>       }
+>     ]
+>   }
+> ]
 > ```
 
 > ### Sample Code:  

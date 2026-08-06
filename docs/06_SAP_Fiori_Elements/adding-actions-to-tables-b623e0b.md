@@ -61,20 +61,6 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 > No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
 
 > ### Sample Code:  
-> ```
-> 
-> define behavior for STTA_C_MP_Product
-> {
->   create;
->   delete;
->   update;
->  
->   association _ProductText
->   { create;  }
-> };
-> ```
-
-> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
@@ -158,7 +144,9 @@ The following sample code shows you how to hide or show the *Create* button, dep
 > ABAP CDS Annotation
 > 
 > ```
-> @UI.createHidden: #(_Root.isCreateHidden)
+> annotate entity HeaderPartner with {
+>  @UI.createHidden: { path: 'owner.isCreateHidden' }
+> };
 > ```
 
 > ### Sample Code:  
@@ -304,6 +292,8 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > 
 > <Annotations Target="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_Product">
@@ -327,6 +317,29 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 > 
 > ```
 
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate STTA_C_MP_Product with {
+>   @Capabilities.NavigationRestrictions: {
+>     RestrictedProperties: [
+>       {
+>         NavigationProperty: 'to_ProductText',
+>         DeleteRestrictions: {
+>           Deletable: false
+>         }
+>       }
+>     ]
+>   }
+> };
+> ```
+
 
 
 ### Showing or Hiding the *Delete* Button
@@ -348,7 +361,9 @@ The following sample code shows you how to hide or show the *Delete* button, dep
 > ABAP CDS Annotation
 > 
 > ```
-> @UI.deleteHidden: #(_Root.isDeleteHidden)
+> annotate entity HeaderPartner with {
+>   @UI.deleteHidden: { path: 'owner.isDeleteHidden' }
+> };
 > ```
 
 > ### Sample Code:  
@@ -754,126 +769,39 @@ In the list report page, the delete restrictions set on a table entity are evalu
 
 
 
-### Defining the Order of Standard Actions
-
-You can define the order of standard actions in the table toolbar. To do so, define the properties `anchor` and `position` for each action corresponding to the action key in the `manifest.json` file. The following table shows the keys and the corresponding standard actions:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Key
-
-</th>
-<th valign="top">
-
-Standard Action
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-`Create`
-
-</td>
-<td valign="top">
-
-`StandardAction::Create`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`Delete`
-
-</td>
-<td valign="top">
-
-`StandardAction::Delete`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`MassEdit`
-
-</td>
-<td valign="top">
-
-`StandardAction::MassEdit`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`Delete`
-
-</td>
-<td valign="top">
-
-`StandardAction::'Insights'`
-
-</td>
-</tr>
-</table>
-
-> ### Sample Code:  
-> ```
-> { "sap.ui5": {
->      "routing": { 
->         "targets": { 
->             "SalesOrderManageList": { 
->                 "options": { 
->                     "settings": { 
->                         "controlConfiguration": { 
->                             "@com.sap.vocabularies.UI.v1.LineItem": { 
->                                 "actions": { "StandardAction::Delete": { 
->                                     "position": { 
->                                         "anchor": "StandardAction::Create", 
->                                         "placement": "Before" 
->                                         } 
->                                     }, 
->                                     "CustomAction": { 
->                                         "press": "SalesOrder.custom.CustomActions.CustomAction1", 
->                                         "enabled": true, "text": "Custom Action", 
->                                         "command": "COMMON", "position": { 
->                                             "anchor": "StandardAction::Create", 
->                                             "placement": "After" 
->                                             } 
->                                         } 
->                                     } 
->                                 } 
->                             } 
->                         } 
->                     } 
->                 } 
->             } 
->         } 
->     } 
-> }
-> ```
-
-
-
 ### Enabling the `Update` Feature for the Table
 
 You can control the editability of table fields using `UpdateRestrictions`.
 
-```xml
-<Annotations Target="com.c_salesordermanage_sd.EntityContainer/Material">
-    <Annotation Term="Capabilities.UpdateRestrictions">
-        <Record Type="Capabilities.UpdateRestrictionsType">
-            <PropertyValue Property="Updatable" Path="owner.isUpdatable"/>
-        </Record>
-    </Annotation>
-</Annotations>
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="com.c_salesordermanage_sd.EntityContainer/Material">
+>     <Annotation Term="Capabilities.UpdateRestrictions">
+>         <Record Type="Capabilities.UpdateRestrictionsType">
+>             <PropertyValue Property="Updatable" Path="owner.isUpdatable"/>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
 
-```
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate Material with {
+>   @Capabilities.UpdateRestrictions: {
+>     Updatable: 'owner.isUpdatable'
+>   }
+> };
+> 
+> ```
 
 
 
@@ -1182,17 +1110,17 @@ The text for the inline `DataFieldForAction` and the `DataFieldForIntentBasedNav
 > ABAP CDS Annotation
 > 
 > ```
-> {
->     label: 'Navigate via Action',
->     dataAction: 'com.c_salesordermanage_sd.ActionNavigation',
->     iconUrl: 'sap-icon://arrow-right'
->     type: #FOR_ACTION
-> }
+> @UI.lineItem: [
+>   {
+>     type:       #FOR_ACTION,
+>     dataAction: 'ActionNavigation',
+>     label:      'Navigate via Action',
+>     inline:     true,
+>     iconUrl:    'sap-icon://arrow-right'
+>   }
+> ]
 > 
 > ```
-
-> ### Note:  
-> Inline is not supported in ABAP CDS.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -1230,22 +1158,17 @@ The text for the inline `DataFieldForAction` and the `DataFieldForIntentBasedNav
 > ```
 > @UI.lineItem: [
 >   {
->     semanticObjectAction: 'Inbound',
->     label: 'IBN Inline',
+>     type:            #FOR_INTENT_BASED_NAVIGATION,
+>     semanticObject:  'v4Freestyle',
+>     action:          'Inbound',
+>     label:           'IBN Inline',
 >     requiresContext: true,
->      iconUrl: 'sap-icon://arrow-left'
->     type: #FOR_INTENT_BASED_NAVIGATION
+>     inline:          true,
+>     iconUrl:         'sap-icon://arrow-left'
 >   }
 > ]
-> TEST;
-> 
-> @Consumption.semanticObject: 'v4Freestyle'
-> %ENTITY;
 > 
 > ```
-
-> ### Note:  
-> Inline is not supported in ABAP CDS.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -1313,6 +1236,26 @@ To pass the field value to an action parameter, use the annotation term `Paramet
 >     <Annotation Term="UI.ParameterDefaultValue" Path="_it/PurchaseOrderByCustomer"/>
 >     <Annotation Term="Common.Label" String="Customer Reference"/>
 > </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```xml
+> using { UI, Common } from '@sap/cds/common';
+> 
+> annotate service.ActionDataFieldWith with parameters {
+>   PurchaseOrderByCustomer @(
+>     UI.ParameterDefaultValue: '_it.PurchaseOrderByCustomer',
+>     Common.Label:             'Customer Reference'
+>   );
+> };
 > 
 > ```
 

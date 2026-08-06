@@ -163,7 +163,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now define a custom save functionality for the mass edit dialog. For more information, see [Replacing the Standard Save Functionality in the Mass Edit Dialog](../06_SAP_Fiori_Elements/replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md).
 
--   We now provide a dialog that enables users to directly create a new object in the list report or on the object page. For more information, see [Enabling Object Creation Using the Dialog in the List Report](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-on-the-list-report-page-ceb9284.md) and [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
+-   We now provide a dialog that enables users to directly create a new object in the list report or on the object page. For more information, see [Enabling Object Creation Using the Dialog in the List Report](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-on-the-list-report-page-ceb9284.md) and [Tree Tables](../06_SAP_Fiori_Elements/disabling-the-selection-of-leaf-nodes-in-tree-tables-7cf7a31.md).
 
 -   We now support `pattern` as a format option for date-and-time-based controls. For more information, see [Configuring Fields](../06_SAP_Fiori_Elements/configuring-fields-4b50f21.md).
 
@@ -932,6 +932,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

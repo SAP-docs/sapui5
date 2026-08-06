@@ -7,7 +7,7 @@ You can set the content density to `condensed` for `ui.table` on the list report
 To apply the condensed style to a table in a specific section, in the `manifest.json` file within the relevant section, set `"condensedTableLayout" : true` in the `manifest.json`. This setting ensures that the table in the specified section adapts to the condensed layout.
 
 > ### Note:  
-> -   Condensed mode is applicable only to grid tables `(sap.ui.table)` and not to responsive tables `(sap.m.table)`.
+> -   Condensed mode is applicable only to grid tables, tree tables, and analytical tables `(sap.ui.table)`, not to responsive tables `(sap.m.table)`.
 > 
 > -   The application must run in compact mode. If it runs in cozy mode, the class is not set, even if the manifest key is set to `true`.
 > 

@@ -10,6 +10,16 @@ To use these generative AI features in SAP S/4HANA Cloud Public Edition, an addi
 
 
 
+## AI-Assisted Easy Fill
+
+The AI-assisted easy fill allows users to fill multiple fields on the object page simultaneously using natural language.
+
+![Image shows the SAP Fiori launchpad with the highlighted Easy Fill button.](images/Easy_Fill_Button_a051e75.png)
+
+For more information, see [Working with the AI-Assisted Easy Fill](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/9596eb54bb084b18bd28b6c9ba0a5e04.html?ai=true&version=2608.500) .
+
+
+
 <a name="loio0ec03d463567494cb17d446e2e92c13a__section_dxz_wml_32c"/>
 
 ## AI-Assisted Easy Filter

@@ -529,7 +529,7 @@ Analytical list page displays chart titles in the following order:
 -   <Scale Factor\>: The scale specified using the `ScaleFactor` property of the `DataPoint` annotation associated with the measure displayed in the chart.
 
     > ### Sample Code:  
-    > Scale factor annotation
+    > XML Annotation: Scale factor
     > 
     > ```
     > <Annotation Term="UI.DataPoint" Qualifier="LineChartTimeDataPoint">
@@ -544,6 +544,39 @@ Analytical list page displays chart titles in the following order:
     >         </PropertyValue>
     >     </Record>
     > </Annotation>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > 
+    > @UI.dataPoint: [
+    >   {
+    >     qualifier:   'LineChartTimeDataPoint',
+    >     title:       'Total Pricing',
+    >     value:       'totalPricing',
+    >     criticality: #POSITIVE,
+    >     valueFormat: {
+    >       scaleFactor: 1000
+    >     }
+    >   }
+    > ]
+    > ```
+
+    > ### Sample Code:  
+    > CAP CDS Annotation
+    > 
+    > ```
+    > 
+    > @UI.DataPoint #LineChartTimeDataPoint: {
+    >   Value:       totalPricing,
+    >   Title:       'Total Pricing',
+    >   Criticality: #Positive,
+    >   ValueFormat: {
+    >     ScaleFactor: 1000
+    >   }
+    > }
     > ```
 
     If not specified, SAP Fiori elements uses a built-in logic to determine the optimal scale factor for the values displayed in the chart.

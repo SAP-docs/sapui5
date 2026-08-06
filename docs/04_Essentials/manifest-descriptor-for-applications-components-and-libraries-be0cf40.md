@@ -454,6 +454,18 @@ SAPUI5 Version
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+2.11.0 *or* 1.89.0
+
+</td>
+<td valign="top">
+
+\>=1.151
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version and implications when upgrading, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md).
@@ -734,7 +746,7 @@ If the manifest belongs to an app variant of an existing application \(the file 
 
 A mandatory attribute. The following values are possible:
 
--   `application`: use if your `manifest.json` describes a **UI5 application**.For an example how to use a `manifest.json` for UI5 applications, see [Step 10: Descriptor for Applications](../03_Get-Started/step-10-descriptor-for-applications-8f93bf2.md) in the Walkthrough Tutorial.
+-   `application`: use if your `manifest.json` describes a **UI5 application**.For an example how to use a `manifest.json` for UI5 applications, see the Walkthrough Tutorial, [Step 10: Descriptor for Applications](https://ui5.github.io/tutorials/walkthrough/steps/10/index.html?lang=js).
 
 -   `component`: use if your `manifest.json` describes a **reuse component** that is used in several apps. For further reuse component-specific configuration options, see [Manifest for Components \(Inside Libraries\)](manifest-for-components-inside-libraries-7701636.md).
 
@@ -1851,7 +1863,7 @@ Current version of the `manifest.json`
 ```
 
 {
-"_version": "1.88.0",
+"_version": "1.89.0",
  
     "start_url": "index.html",
  
@@ -2085,7 +2097,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.150.0",
+            "minUI5Version": "1.15.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

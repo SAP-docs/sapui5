@@ -157,7 +157,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   Menu buttons on the table toolbar that contain only one action now display that action directly in the context menu instead of as a sub-menu. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   Menu buttons on the table toolbar that contain only one action now display that action directly in the context menu instead of as a sub-menu. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   Key users can now modify threshold values that influence semantic coloring of column chart cards using the UI adaptation mode. For more information, see [Coloring Cards Based on Threshold Values](../06_SAP_Fiori_Elements/coloring-cards-based-on-threshold-values-02c53f4.md). 
 
@@ -614,6 +614,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

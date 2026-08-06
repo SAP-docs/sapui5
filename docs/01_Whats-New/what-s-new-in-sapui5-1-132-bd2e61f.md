@@ -249,7 +249,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now use the `VariantManagement` building block. For more information, see [The VariantManagement Building Block](../06_SAP_Fiori_Elements/the-variantmanagement-building-block-33640ff.md).
 
--   We no longer show the *Open in New Tab* option in the context menu if the object page is set to open in edit mode. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md) and [Navigation to an Object Page in Edit Mode](../06_SAP_Fiori_Elements/navigation-to-an-object-page-in-edit-mode-8665847.md).
+-   We no longer show the *Open in New Tab* option in the context menu if the object page is set to open in edit mode. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md) and [Navigation to an Object Page in Edit Mode](../06_SAP_Fiori_Elements/navigation-to-an-object-page-in-edit-mode-8665847.md).
 -   We now support displaying a hierarchy within a value help. For more information, see [Field Help](../06_SAP_Fiori_Elements/field-help-a5608ea.md).
 -   Key users can now split and combine actions in tables on the object page and in the list report. For more information, see [Enabling an App for Key User Adaptation](../06_SAP_Fiori_Elements/enabling-an-app-for-key-user-adaptation-ccd45ba.md).
 -   We've implemented the `DataFieldForActionGroup` annotation, which allows the grouping of actions and their rendering within menu buttons. For more information, see [Actions](../06_SAP_Fiori_Elements/actions-cbf16c5.md).
@@ -738,6 +738,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

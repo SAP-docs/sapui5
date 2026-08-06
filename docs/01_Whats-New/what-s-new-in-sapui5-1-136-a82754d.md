@@ -466,7 +466,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now use `aggregationOnLeafLevel` to display aggregation based solely on visible columns in an analytical table. For more information, see [Setting the Table Type](../06_SAP_Fiori_Elements/setting-the-table-type-7f844f1.md).
 
--   Tree tables now support the copy and paste functionality. For more information, see [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
+-   Tree tables now support the copy and paste functionality. For more information, see [Disabling the Selection of Leaf Nodes in Tree Tables](../06_SAP_Fiori_Elements/disabling-the-selection-of-leaf-nodes-in-tree-tables-7cf7a31.md).
 
 -   We now support inline edit in the list report and on the object page. For more information, see [Inline Edit](../06_SAP_Fiori_Elements/inline-edit-bb56175.md).
 
@@ -845,6 +845,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

@@ -56,7 +56,7 @@ Selecting *Rules* will show you the available rulesets. You can then select your
 
 ## Persisting Rules and Settings
 
-All scopes and temporary rules can be stored in the local storage of your browser. This will allow you to continue with your work even after you have closed the browser window. To enable this feature, choose *Settings* \(![](images/AS-Settings-Button_24b9cee.png)\) on the banner and select the checkbox *I agree to use local storage persistency for*.
+All scopes can be stored in the local storage of your browser. This will allow you to continue with your work even after you have closed the browser window. To enable this feature, choose *Settings* \(![](images/AS-Settings-Button_24b9cee.png)\) on the banner and select the checkbox *I agree to use local storage persistency for*.
 
 > ### Tip:  
 > You can delete your already persisted data by choosing *Delete Persisted Data*.

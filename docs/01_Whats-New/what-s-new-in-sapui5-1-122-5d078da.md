@@ -334,7 +334,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   We now support the `UI.Hidden` annotation for tables in the list report, object page, and analytical list page. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   We now support the `UI.Hidden` annotation for tables in the list report, object page, and analytical list page. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   You can now use the `setRelevantFilters` extension API to ensure that the filters are correctly applied on custom cards. For more information, see [Creating Custom Cards on the Overview Page](../06_SAP_Fiori_Elements/creating-custom-cards-on-the-overview-page-6d260f7.md).
 
@@ -823,6 +823,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

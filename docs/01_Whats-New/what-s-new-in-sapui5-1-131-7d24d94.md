@@ -246,7 +246,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4:
 
--   We now provide a `scrollThreshold` parameter that allows you to optimize data loading during scrolling in grid tables, analytical tables, and tree tables. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   We now provide a `scrollThreshold` parameter that allows you to optimize data loading during scrolling in grid tables, analytical tables, and tree tables. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.131</sub>
@@ -813,6 +813,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

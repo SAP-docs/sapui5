@@ -100,6 +100,11 @@ This *Copy* button is automatically placed after the *Create* button.
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
@@ -123,7 +128,7 @@ Applications can define a label for this button. If no custom label is provided,
 The *Create* button on a list report page is enabled based on the presence of `NewAction` in the metadata. This is the default behavior for draft-based applications:
 
 > ### Sample Code:  
-> XML Annotation
+> Enabling the *Create* Button in the Metadata
 > 
 > ```
 > 
@@ -139,11 +144,11 @@ The *Create* button on a list report page is enabled based on the presence of `N
 
 The `InsertRestrictions` on the table entity set is completely ignored when you enable *Create* on a list report page due to the presence of `NewAction`. The button is always enabled, if visible, and the visibility can be controlled with the `OperationAvailable` property through the following logic:
 
--   If `OperationAvailable=false`, then the *Create* button will not be displayed in the list report page table.
+-   If `OperationAvailable=false`, then the *Create* button is displayed in the list report page table.
 
--   If `OperationAvailable=true` or is not specified, then the *Create* button will be displayed.
+-   If `OperationAvailable=true` or when not specified, then the *Create* button is displayed.
 
--   If `OperationAvailable=null` is ignored and the *Create* button is displayed, this is equivalent to `OperationAvailable` not being specified.
+-   If `OperationAvailable=null`, then the *Create* button is displayed. This behavior is equivalent to `OperationAvailable` not being specified.
 
 
 For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).

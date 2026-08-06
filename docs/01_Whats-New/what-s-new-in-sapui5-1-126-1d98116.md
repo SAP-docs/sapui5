@@ -203,9 +203,9 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   In a tree table, you can now show newly created nodes at the position computed by the back end, for example by taking sorting into account. For more information, see [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
+-   In a tree table, you can now show newly created nodes at the position computed by the back end, for example by taking sorting into account. For more information, see [Disabling the Selection of Leaf Nodes in Tree Tables](../06_SAP_Fiori_Elements/disabling-the-selection-of-leaf-nodes-in-tree-tables-7cf7a31.md).
 
--   You can now use buttons in the tree table toolbar to move a selected node before its previous sibling or after its next sibling. For more information, see [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
+-   You can now use buttons in the tree table toolbar to move a selected node before its previous sibling or after its next sibling. For more information, see [Disabling the Selection of Leaf Nodes in Tree Tables](../06_SAP_Fiori_Elements/disabling-the-selection-of-leaf-nodes-in-tree-tables-7cf7a31.md).
 
 -   We now support specifying which fields can be included or excluded from the Mass Edit dialog. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\)](../06_SAP_Fiori_Elements/enabling-editing-using-a-dialog-mass-edit-965ef5b.md).
 
@@ -710,6 +710,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

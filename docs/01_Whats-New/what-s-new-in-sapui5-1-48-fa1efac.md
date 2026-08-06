@@ -1775,7 +1775,7 @@ SAP Fiori Elements
 
     -   In responsive, grid, and analytical tables, if the entity is searchable, a search field is displayed. Users can search on any of the table column values if they are search-enabled.
 
-        For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+        For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 
 
@@ -1960,6 +1960,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

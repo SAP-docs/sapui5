@@ -8,7 +8,7 @@ You can render the chart as a line chart to display information as a series of d
   
 **Example of a Line Chart Card**
 
-![](images/Line_Chart_aacfae2.png "Example of a Line Chart Card")
+![](images/Line_chart_card-_OVP_7d3955a.png "Example of a Line Chart Card")
 
 Line charts need at least one measure and one dimension. The role assigned to each measure and dimension determines how it's represented in the chart.
 
@@ -130,7 +130,28 @@ The following code samples show how to configure a line chart:
 > ABAP CDS Annotation
 > 
 > ```
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> @UI.chart: [
+>   {
+>     qualifier: 'LineMaxPath',
+>     title: 'Items Line Chart',
+>     description: 'Testing Line Chart',
+>     chartType: #LINE,
+>     measures: [ 'NetAmount', 'TargetAmount' ],
+>     dimensions: [ 'SalesOrderItem' ],
+>     measureAttributes: [
+>       {
+>         measure: 'NetAmount',
+>         role: #AXIS_1,
+>         dataPoint: '@UI.dataPoint#LineValueCriticality'
+>       },
+>       {
+>         measure: 'TargetAmount',
+>         role: #AXIS_1,
+>         dataPoint: '@UI.dataPoint#LineTargetCriticality'
+>       }
+>     ]
+>   }
+> ]
 > ```
 
 > ### Sample Code:  

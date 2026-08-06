@@ -5,7 +5,7 @@
 This library contains composite controls.
 
 > ### Note:  
-> The following sections only provide additional information for some of the controls. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
+> The following sections provide additional information for selected controls and features. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
 
 > ### Note:  
 > The controls in this library only support OData V2 and a default model \(named `undefined`\). To find out more about smart controls, see the tutorial: [Smart Controls Tutorial](../03_Get-Started/smart-controls-tutorial-64bde9a.md).

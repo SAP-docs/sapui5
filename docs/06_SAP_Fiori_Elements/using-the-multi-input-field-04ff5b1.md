@@ -161,5 +161,5 @@ When you set the `Common.fieldControl` annotation to `Mandatory`, a red asterisk
 **Related Information**  
 
 
-[Tables](tables-c0f6592.md "You can configure the appearance, interactivity, and loading behavior of tables in SAP Fiori elements for OData V4.")
+[Table Types](table-types-c0f6592.md "Table types define the visual presentation and data handling capabilities of tables. Choose from responsive, grid, tree, or analytical table types based on your data volume, device requirements, and feature needs in SAP Fiori elements for OData V4.")
 

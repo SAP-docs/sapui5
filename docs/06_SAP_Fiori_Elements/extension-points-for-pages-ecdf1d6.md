@@ -227,8 +227,6 @@ The name of the entity set.
 By default, the binding context is available in the XML view of the custom page and its controller. You can find a usage example in the following sample code:
 
 > ### Sample Code:  
-> XML Annotation
-> 
 > ```xml
 > <mvc:View
 >     id="application-product"
@@ -289,8 +287,6 @@ Building blocks make use of existing UI annotations, the standard routing mechan
 You can find a usage example in the following sample code:
 
 > ### Sample Code:  
-> XML Annotation
-> 
 > ```xml
 > <mvc:View
 >     id="application-product"

@@ -422,7 +422,7 @@ SAP Fiori Elements
 
 -   The SAP Fiori elements now provide an extension in the object page table to add user defined input filter fields to the table toolbar. For more information, see [Example: Adding Custom Filter Fields in Table Toolbar](../06_SAP_Fiori_Elements/example-adding-custom-filter-fields-in-table-toolbar-e34f78f.md).
 
--   The SAP Fiori elements list report and object page tables now provide *Show Detail* and *Hide Details* buttons to display or hide columns of low and medium importance in a popin. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   The SAP Fiori elements list report and object page tables now provide *Show Detail* and *Hide Details* buttons to display or hide columns of low and medium importance in a popin. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   The SAP Fiori elements object page now supports decimal formatter for data points. With annotation `NumberOfFractionalDigits`, you have the option to override the scale and precision defined in metadata to display the decimal formatted value on the UI. For more information, see [Data Points](../06_SAP_Fiori_Elements/data-points-c2a389a.md).
 
@@ -503,6 +503,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

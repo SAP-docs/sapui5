@@ -32,47 +32,69 @@ Additionally, the time axis is enabled when the dimension is of type `String` an
 
 
 > ### Sample Code:  
-> Metadata Sample
+> XML Metadata
 > 
 > ```
 > <Property Name="Date" Type="Edm.DateTime" sap:display-format="Date" sap:label="Date" sap:aggregation-role="dimension"/>
+> 
+> 
 > ```
 
+> ### Sample Code:  
+> ABAP CDS Metadata
+> 
+> ```
+> @EndUserText.label: 'Date'
+> @Semantics.date:    true
+> Date
+> ```
 
+> ### Sample Code:  
+> CAP CDS Metadata
+> 
+> ```
+> @title: 'Date'
+> @Common.Label: 'Date'
+> Date : Date;
+> 
+> ```
 
 > ### Sample Code:  
 > XML Annotation
 > 
 > ```xml
-> <Annotation Term="UI.Chart" Qualifier="Line-Time_-Currency">
->     <Record Type="UI.ChartDefinitionType">
->         <PropertyValue Property="Title" String="View1" />
->         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line"/>
->         <PropertyValue Property="MeasureAttributes">
->             <Collection>
->                 <Record Type="UI.ChartMeasureAttributeType">
->                     <PropertyValue Property="Measure" PropertyPath="SalesShare" />
->                     <PropertyValue Property="Role"
->                                    EnumMember="UI.ChartMeasureRoleType/Axis1" />
->                     <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#Eval_by_CtryCurr_-SalesShare"/>
->                 </Record>
->             </Collection>
->         </PropertyValue>
->         <PropertyValue Property="DimensionAttributes">
->             <Collection>
->                 <Record Type="UI.ChartDimensionAttributeType">
->                     <PropertyValue Property="Dimension" PropertyPath="Date" />
->                     <PropertyValue Property="Role"
->                                    EnumMember="UI.ChartDimensionRoleType/Category" />
->                 </Record>
->                 <Record Type="UI.ChartDimensionAttributeType">
->                     <PropertyValue Property="Dimension" PropertyPath="Sales_CURRENCY"/>
->                     <PropertyValue Property="Role"
->                                    EnumMember="UI.ChartDimensionRoleType/Series"/>
->                 </Record>
->             </Collection>
->         </PropertyValue>
->     </Record>
+> <Annotation Term="UI.Chart" Qualifier="TimeSeriesChart">
+>   <Record Type="UI.ChartDefinitionType">
+>     <PropertyValue Property="Title"     String="Quarterly Sales"/>
+>     <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line"/>
+>     <PropertyValue Property="Measures">
+>       <Collection>
+>         <PropertyPath>NetSales</PropertyPath>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="Dimensions">
+>       <Collection>
+>         <PropertyPath>Quarter</PropertyPath>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="MeasureAttributes">
+>       <Collection>
+>         <Record Type="UI.ChartMeasureAttributeType">
+>           <PropertyValue Property="Measure"   PropertyPath="NetSales"/>
+>           <PropertyValue Property="Role"      EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+>           <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#NetSalesDP"/>
+>         </Record>
+>       </Collection>
+>     </PropertyValue>
+>     <PropertyValue Property="DimensionAttributes">
+>       <Collection>
+>         <Record Type="UI.ChartDimensionAttributeType">
+>           <PropertyValue Property="Dimension" PropertyPath="Quarter"/>
+>           <PropertyValue Property="Role"      EnumMember="UI.ChartDimensionRoleType/Category"/>
+>         </Record>
+>       </Collection>
+>     </PropertyValue>
+>   </Record>
 > </Annotation>
 > ```
 
@@ -81,31 +103,28 @@ Additionally, the time axis is enabled when the dimension is of type `String` an
 > 
 > ```
 > 
-> @UI.Chart: [
+> @UI.chart: [
 >   {
->     title: 'View1',
->     chartType: #LINE,
+>     qualifier:  'TimeSeriesChart',
+>     title:      'Quarterly Sales',
+>     chartType:  #LINE,
+>     measures:   ['NetSales'],
+>     dimensions: ['Quarter'],
 >     measureAttributes: [
 >       {
->         measure: 'SalesShare',
->         role: #AXIS_1,
-> 		asDataPoint: true
+>         measure:   'NetSales',
+>         role:      #AXIS_1,
+>         dataPoint: '@UI.dataPoint#NetSalesDP'
 >       }
 >     ],
 >     dimensionAttributes: [
 >       {
->         dimension: 'Date',
->         role: #CATEGORY
->       },
->       {
->         dimension: 'Sales_CURRENCY',
->         role: #SERIES
+>         dimension: 'Quarter',
+>         role:      #CATEGORY
 >       }
->     ],
->     qualifier: 'Line-Time-Currency'
+>     ]
 >   }
 > ]
-> annotate view VIEWNAME with { }
 > 
 > ```
 
@@ -113,31 +132,24 @@ Additionally, the time axis is enabled when the dimension is of type `String` an
 > CAP CDS Annotation
 > 
 > ```
-> 
-> UI.Chart #Line-Time-Currency : {
->     $Type : 'UI.ChartDefinitionType',
->     Title : 'View1',
->     ChartType : #Line,
->     MeasureAttributes : [
->         {
->             $Type : 'UI.ChartMeasureAttributeType',
->             Measure : SalesShare,
->             Role : #Axis1,
->             DataPoint : '@UI.DataPoint#Eval_by_CtryCurr-SalesShare'
->         }
->     ],
->     DimensionAttributes : [
->         {
->             $Type : 'UI.ChartDimensionAttributeType',
->             Dimension : Date,
->             Role : #Category
->         },
->         {
->             $Type : 'UI.ChartDimensionAttributeType',
->             Dimension : Sales_CURRENCY,
->             Role : #Series
->         }
->     ]
+> @UI.Chart #TimeSeriesChart: {
+>   Title:      'Quarterly Sales',
+>   ChartType:  #Line,
+>   Measures:   [NetSales],
+>   Dimensions: [Quarter],
+>   MeasureAttributes: [
+>     {
+>       Measure:   NetSales,
+>       Role:      #Axis1,
+>       DataPoint: '@UI.DataPoint#NetSalesDP'
+>     }
+>   ],
+>   DimensionAttributes: [
+>     {
+>       Dimension: Quarter,
+>       Role:      #Category
+>     }
+>   ]
 > }
 > 
 > ```

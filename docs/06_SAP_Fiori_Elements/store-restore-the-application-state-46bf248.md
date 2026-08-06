@@ -22,7 +22,7 @@ The state of the application is preserved when users refresh or navigate away fr
 
 -   Data from custom UI elements. For more information, see [Custom State Handling for Extended Apps](custom-state-handling-for-extended-apps-89fa878.md).
 
--   Personalization in the `Table`, `Chart`, and `FilterBar` building blocks and filter values in the `FilterBar` building block.
+-   Personalization in the `Table`, `Chart`, and `FilterBar` building blocks and filter values in the `FilterBar` building block. For more information about disabling the storing/restoring of the personalization and filter values, see [Disabling Personalization Persistence in Building Blocks](disabling-personalization-persistence-in-building-blocks-32259bd.md).
 
 
 > ### Note:  

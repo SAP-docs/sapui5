@@ -8,7 +8,7 @@ You can render the chart as vertical bullet charts, which actual values against 
   
 **Example of a Vertical Bullet Chart Card**
 
-![](../01_Whats-New/images/WhatsNew_138_OVP_VerticalBullet_f2d9418.png "Example of a Vertical Bullet Chart Card")
+![](images/Vertical_bullet_chart_card-OVP_ca878df.png "Example of a Vertical Bullet Chart Card")
 
 A vertical bullet chart has the following requirements:
 

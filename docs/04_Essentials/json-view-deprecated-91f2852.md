@@ -5,7 +5,7 @@
 The JSON view type is defined in a file. The file name has to either end with `.view.json` or as a JSON string. The file name and the folder structure together specify the name of the view that equals the SAPUI5 module name within the modularization concept.
 
 > ### Caution:  
-> Deprecated as of UI5 version 1.120, replaced by [XML View](xml-view-91f2928.md).
+> Deprecated as of UI5 version 1.120, replaced by [Typed View](typed-view-e6bb33d.md) or alternatively [XML View](xml-view-91f2928.md) for a declarative use case.
 
 For the file `resources/sap/hcm/Address.view.json`, the view name is `sap.hcm.Address`. The application uses this view name for displaying an instance of this view.
 

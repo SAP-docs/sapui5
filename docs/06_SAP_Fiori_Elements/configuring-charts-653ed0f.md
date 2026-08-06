@@ -272,7 +272,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 
 
 
-### Specifying Chart Dimensions and Measures
+### Specifying Groupable and Aggregatable Properties
 
 You specify a dimension or a measure using the `"GroupableProperties"` and the `"AggregatableProperties"` at the entity set level. \(In the past, you did this by using the `"Aggregation.Groupable"` and `"Aggregation.Aggregatable"` annotation at the property level.\) You can find the corresponding annotations in the following sample code:
 
@@ -371,7 +371,9 @@ In the metadata, such entity sets have the `Aggregation.ApplySupported` set. The
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> No ABAP CDS annotation sample is available. Please use the local XML annotation or custom aggregation.
+> 
+> For more information, see the *Transformation Aggregate that Uses Custom Aggregation Methods* subsection in this topic.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -391,7 +393,7 @@ In the metadata, such entity sets have the `Aggregation.ApplySupported` set. The
 > });
 > ```
 
-In the preceding example, `"NetPricing"` is the property in the entity on which the standard aggregation methods `"min"` and `"max"` are defined. The call to the back end asks for the min or max aggregation to be applied on `NetPricing` and to be returned as `"minPrice"`/`"maximumPrice"` for the client-side binding of the aggregated value. For more information, see [Transformation Aggregation](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html#_Toc378326290).
+In the preceding example, `"NetPricing"` is the property in the entity on which the standard aggregation methods `"min"` and `"max"` are defined. The call to the back end asks for the min or max aggregation to be applied on `NetPricing` and to be returned as `"minPrice"`/`"maximumPrice"` for the client-side binding of the aggregated value. For more information, see [Transformation `aggregate`](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html#_Toc378326290).
 
 
 
@@ -449,7 +451,7 @@ If you need to define transformation aggregate-based measures as part of the cha
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> No ABAP CDS annotation sample is available. Please use the local XML annotation. This applies only when the transformation aggregation uses the standard aggregation method.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -512,6 +514,30 @@ To use custom aggregation in the back end, you must ensure that the metadata has
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @OData.applySupportedForAggregation: #FULL
+> 
+> define root view entity /DMO/C_BUSSINESS_PARTNER_ANA
+>   provider contract transactional_query
+>   as projection on /DMO/I_BUSINESS_PARTNER_ANA
+> {
+>   ...
+> 
+>   @Aggregation.default: #SUM
+>   @EndUserText.label:   'Requested Quantity (SUM)'
+>   RequestedQuanity,
+> 
+>   @Aggregation.default: #SUM
+>   @EndUserText.label:   'Requested Quantity in local unit (SUM)'
+>   RequestedQuantityLocalUnit,
+> 
+>   ...
+> }
+> ```
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
@@ -530,7 +556,7 @@ In this example, the properties `"RequestedQuantity"` and `"RequestedQuantityLoc
 > ### Note:  
 > As an exception, a unit property of a measure can be annotated as a custom aggregate. However, this unit property does not appear in the list of measures available for the chart.
 
-For more information, see [Custom Aggregation](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html#_Toc378326320).
+For more information, see [Custom Aggregates](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html#_Toc378326320).
 
 
 
@@ -539,7 +565,7 @@ For more information, see [Custom Aggregation](http://docs.oasis-open.org/odata/
 You can use the chart settings in the `manifest.json` file to configure the header text and its visibility:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > "BusinessPartnersList": {
@@ -578,25 +604,26 @@ You can use the `manifest.json` file to configure chart settings that allow user
 > `manifest.json`
 > 
 > ```
-> "BusinessPartnersList": {
->    "type": "Component",
->    "id": "BusinessPartnersList",
->    "name": "sap.fe.templates.ListReport",
->    "options": {
+> {
+>   "BusinessPartnersList": {
+>     "type": "Component",
+>     "id": "BusinessPartnersList",
+>     "name": "sap.fe.templates.ListReport",
+>     "options": {
 >       "settings": {
->          "controlConfiguration": {
->             "@com.sap.vocabularies.UI.v1.Chart": {
->                "chartSettings": {
->                   "selectionMode": "None" // None/Single/Multiple (default) are the possible values
->                }
+>         "controlConfiguration": {
+>           "@com.sap.vocabularies.UI.v1.Chart": {
+>             "chartSettings": {
+>               "selectionMode": "None" // None/Single/Multiple (default) are the possible values
 >             }
+>           }
+>           ...
 >         }
->       ......
->       .....
+>         ...
+>       }
 >     }
+>     ...
 >   }
->  ....
->  ....
 > }
 > ```
 
@@ -611,7 +638,7 @@ You can use the `manifest.json` file to configure chart settings that allow user
 > 
 >     -   The back end supports transformation filters.
 > 
->     -   The annotations must be added for the aggregate entities. For more information about annotation samples, see the [Setting Transformation Filters on Aggregate Controls](setting-the-table-type-7f844f1.md#loio7f844f1021cd4791b8f7408eac7c1cec__AggregateControls) section in [Setting the Table Type](setting-the-table-type-7f844f1.md).
+>     -   The annotations must be added for the aggregate entities. For more information about annotation samples, see [Setting Transformation Filters on Aggregate Controls](setting-transformation-filters-on-aggregate-controls-7c6a211.md).
 
 > ### Restriction:  
 > The following restrictions apply regarding the support of the chart control:

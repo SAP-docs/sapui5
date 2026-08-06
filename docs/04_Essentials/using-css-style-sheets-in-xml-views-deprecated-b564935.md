@@ -36,7 +36,7 @@ Here's how you would add a style definition and define a button that uses it in 
 ```
 
 > ### Note:  
-> To allow your view to be used in an environment with a Content Security Policy denying inline styles \(i.e. without the `unsafe-inline` source for the `style-src` directive\), you need to refer to an external style sheet instead of embedding the style sheet into your XML view. For more information, see the Walkthrough tutorial, [Step 14: Custom CSS and Theme Colors](../03_Get-Started/step-14-custom-css-and-theme-colors-723f4b2.md).
+> To allow your view to be used in an environment with a Content Security Policy denying inline styles \(i.e. without the `unsafe-inline` source for the `style-src` directive\), you need to refer to an external style sheet instead of embedding the style sheet into your XML view. For more information, see the Walkthrough tutorial, [Step 14: Custom CSS and Theme Colors](https://ui5.github.io/tutorials/walkthrough/steps/14/index.html/?lang=js).
 
 > ### Note:  
 > The XML view offers special handling for style classes. You can specify them via the `class` attribute on a control's XML node. Please be aware that this attribute is not a property of the respective control and thus is not supported by a control's constructor.

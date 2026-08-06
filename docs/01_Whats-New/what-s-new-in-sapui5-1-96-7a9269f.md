@@ -601,7 +601,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   The persistence mode is now default for List Report/Object Page applications with flexible column layout. For more information, see [Persistence Mode](../06_SAP_Fiori_Elements/persistence-mode-7c62084.md).
 
--   List Report and Object Page tables now have a full screen mode option, enabled by default, when launched on mobile phones. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   List Report and Object Page tables now have a full screen mode option, enabled by default, when launched on mobile phones. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   Enhanced support is now available for the manifest settings such as `filterSettings`, `editableHeaderContent`, `showRelatedApps`, `tableSettings`, `dataLoadSettings`, etc. using the adaptation project for application extensibility. For more information, see [Extending Delivered Apps Using Adaptation Projects](../06_SAP_Fiori_Elements/extending-delivered-apps-using-adaptation-projects-a2b24a6.md).
 
@@ -740,6 +740,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

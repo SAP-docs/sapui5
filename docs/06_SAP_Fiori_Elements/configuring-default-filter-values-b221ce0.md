@@ -7,7 +7,11 @@ You can set default filter values for filter bar fields, for example.
 > ### Note:  
 > This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Configuring Default Filter Values](configuring-default-filter-values-f27ad7b.md).
 
-For the *Standard Variant*, application developers can configure default filter field values by using the `UI.SelectionVariant` annotation or the `Common.FilterDefaultValue` annotation.
+In *Standard Variant*, you can provide default values for filter fields using `UI.SelectionVariant`, `Common.FilterDefaultValue`, or by retrieving user default parameters defined in SAP Fiori launchpad target mapping.
+
+In user defined variants, filter fields with value help can also use user default values from the SAP Fiori launchpad user settings. This requires an existing target mapping between the filter field and the corresponding user default field in SAP Fiori launchpad, and a maintained value for the mapped user default.
+
+When these conditions are met, the *Define Condition* tab of the value help dialog displays an additional *User Defaults* option. Selecting this option configures the filter field to dynamically retrieve its value from the corresponding SAP Fiori launchpad user default whenever the variant is applied.
 
 
 
@@ -198,7 +202,7 @@ User-defined default variant \(this variant is not equal to the standard variant
 </td>
 <td valign="top">
 
-Overrides everything, including the user default values from SAP Fiori launchpad.
+When the application is launched with a user-defined variant, filter fields configured with the *User Default* option retrieve their values dynamically from the corresponding SAP Fiori launchpad user defaults. All other filter fields use the values persisted in the variant.
 
 </td>
 </tr>
@@ -210,7 +214,7 @@ Standard variant as default \(there is no navigation context\) combined with opt
 </td>
 <td valign="top">
 
-User-defined default values are applied and combined with the values from the standard variant. The user default values from SAP Fiori launchpad are merged with the default values coming from the annotation with the following logic:
+The user default values from SAP Fiori launchpad are merged with the default values coming from the annotation with the following logic:
 
 1.  If the filter field has only values from SAP Fiori launchpad user default values, but nothing from the annotation, the user default values are retained.
 
@@ -234,4 +238,6 @@ User-defined default values are applied and combined with the values from the st
 [Adapting the Filter Bar](adapting-the-filter-bar-c7a7ac4.md "You can adapt the filter bar using additional annotations or configuring the manifest.json file.")
 
 [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-b44fe77.md "You can configure the visual filter bar on the analytical list page.")
+
+[Navigation to an App \(Inbound Navigation\)](navigation-to-an-app-inbound-navigation-496b2a5.md "You can configure navigation to an SAP Fiori elements floorplan (inbound navigation).")
 

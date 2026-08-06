@@ -71,7 +71,7 @@ Please note that, as opposed to other floorplans for SAP Fiori elements for ODat
 > ```
 
 > ### Note:  
-> The template setting in the `manifest.json` file depends on your OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 and `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+> Configure the template setting in the `manifest.json` file based on the OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 **and** `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
 
 SAP Fiori elements for OData V2 supports the `considerAnalyticalParameters` flag, which enables analytical parameter support for the smart filter bar.
 

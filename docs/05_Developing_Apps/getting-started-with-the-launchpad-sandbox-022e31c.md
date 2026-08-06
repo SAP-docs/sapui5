@@ -21,7 +21,7 @@ Learn how to quickly set up and use the SAP Fiori launchpad sandbox for local de
 
 1.  Create the sandbox HTML file
 
-    Create a file named `sandbox.html` \(or `flpSandbox.html`\) in your application's test folder:
+    Create a file named `sandbox.html` \(or `flpSandbox.html`\) in your application's test folder. Replace placeholders as for example "my.app" with your own values:
 
     ```
     <!DOCTYPE html>
@@ -32,7 +32,7 @@ Learn how to quickly set up and use the SAP Fiori launchpad sandbox for local de
           <script src="resources/sap/ushell/sandbox/SandboxBootTask.js"></script>
           <script
               id="sap-ui-bootstrap"
-              src="resources/sap-ui-core.js"
+              src="../resources/sap-ui-core.js"
               data-sap-ui-async="true"
               data-sap-ui-compat-version="edge"
               data-sap-ui-boot-manifest="sap/ushell/sandbox/sandboxManifest.json"
@@ -61,6 +61,19 @@ Learn how to quickly set up and use the SAP Fiori launchpad sandbox for local de
     ```
 
 3.  In your launchpad sandbox, check if you see an orange bar at the top saying "SAP Fiori Launchpad Sandbox - For Testing Purposes Only!". Your app appears as a tile on the page \(with semantic object "MyApp" and action "display" if no configuration file is provided\).
+4.  In the .yaml file, change the framework from `OpenUI5` to `SAPUI5` and add the "sap.ushell" library:
+
+    ```
+    framework:
+      name: SAPUI5
+    version: 1.150
+    libraries:
+        - name: sap.m
+        - name: sap.ushell
+        - name: sap.ui.core
+        - name: themelib_sap_horizon
+    ```
+
 
 
 
@@ -112,5 +125,5 @@ The sandbox automatically provides:
 
 [How to Configure the Launchpad Sandbox](how-to-configure-the-launchpad-sandbox-e6151c1.md "Here's a complete reference of all configuration options available in the launchpad sandbox.")
 
-[How to Migrate to the Legacy-Free Launchpad Sandbox](https://help.sap.com/viewer/c442e2a74263451f845549bdbcdebe7b/1.150_SAPUI5_Internal/en-US/9a1fe151094946098352abbc4b0e3fdc.html "Learn how to migrate from the legacy SAP Fiori launchpad sandbox to the new legacy-free sandbox. The migration is designed to be straightforward with minimal changes required.") :arrow_upper_right:
+[How to Migrate to the Legacy-Free Launchpad Sandbox](https://help.sap.com/viewer/c442e2a74263451f845549bdbcdebe7b/1.151_SAPUI5_Internal/en-US/9a1fe151094946098352abbc4b0e3fdc.html "Learn how to migrate from the legacy SAP Fiori launchpad sandbox to the new legacy-free sandbox. The migration is designed to be straightforward with minimal changes required.") :arrow_upper_right:
 

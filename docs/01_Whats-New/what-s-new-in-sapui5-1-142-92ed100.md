@@ -363,7 +363,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We've renamed the `group` property, which was introduced with SAPUI5 1.139, to `overflowGroup` property, to provide a more meaningful name.
 
--   We now determine the default table type based on the characteristics of the entity set. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   We now determine the default table type based on the characteristics of the entity set. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   You can now add semantically connected fields to a table. For more information, see [Adding ConnectedFields to a Table](../06_SAP_Fiori_Elements/adding-connectedfields-to-a-table-4a275ce.md).
 
@@ -722,6 +722,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

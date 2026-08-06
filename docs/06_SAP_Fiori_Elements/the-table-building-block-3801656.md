@@ -2,27 +2,79 @@
 
 # The `Table` Building Block
 
-You can use the `Table` building block to instantiate a table based on an `entitySet` or a specific navigation property in SAP Fiori elements for OData V4.
+The `Table` building block enables dynamic table creation based on an entity set or navigation property in SAP Fiori elements for OData V4, supporting features like filtering, personalization, custom actions, and mass editing. Use it to create flexible, feature-rich tables in custom sections, subsections, pages, or controllers without manual configuration.
 
-
-
-You can instantiate the building block by referencing the building block namespace within a fragment enabled for building block usage.
+You can use the `Table` building block to instantiate a table based on an `entitySet` or a specific navigation property in SAP Fiori elements for OData V4. To instantiate the building block, reference the building block namespace within a fragment enabled for building block usage. This instantiates the control tree that corresponds to this building block.
 
 > ### Sample Code:  
-> ```
+> Fragment Definition
+> 
+> ```xml
 > <macros:Table xmlns:macro="sap.fe.macros" metaPath="/MyEntitySet"/>
 > <macros:Table xmlns:macro="sap.fe.macros" metaPath="MyNavProperty"/>
 > <macros:Table xmlns:macro="sap.fe.macros" metaPath="MyNavProperty/@com.sap.vocabularies.UI.v1.LineItem"/>
 > ```
 
-This instantiates the actual control tree that corresponds to this building block.
-
 You can use the `Table` building block inside custom sections, custom subsections, and custom pages.
 
-You can use the `Table` building block to dynamically create tables at runtime. You can use this building block inside controllers for more flexibility and a wider variety of use cases. The following sample code shows an example of a table inside a dialog:
+
+
+## Key Capabilities
+
+The following table provides information of some key capabilities of the `Table` building block:
+
+**Key Capabilities of the Table Building Block**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Capability
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+<th valign="top">
+
+More Information
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Dynamic table creation
+
+</td>
+<td valign="top">
+
+You can use the `Table` building block to dynamically create tables at runtime.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Controller integration
+
+</td>
+<td valign="top">
+
+You can use this building block inside controllers for more flexibility and a wider variety of use cases. The following sample code shows an example of a table inside a dialog:
 
 > ### Sample Code:  
-> ```
+> Controller Extension
+> 
+> ```javascript
 > 
 > createTable: function() {
 >     const table = new Table({
@@ -54,109 +106,338 @@ You can use the `Table` building block to dynamically create tables at runtime. 
 > 
 > ```
 
-Any personalization done by the user is automatically stored and restored using `iAppState`. For more information about the `iAppState` mechanism, see [Store/Restore the Application State](store-restore-the-application-state-46bf248.md).
-
-If a table doesn't contain any data, users see an illustrated message. For more information, see [Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md) 
-
-You can use the `Table` building block to add bound and unbound actions, to group actions as menu buttons, to add custom columns, and to specify the create options for the table. For example, you have the following options:
-
--   Define the placement of the action relative to an anchor.
-
-    You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Custom Column](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customColumn) and [Building Blocks - Table - Extensions - Custom Action](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customTableAction).
-
--   Specify a bound action by using the `requiresSelection` property.
-
-    By default, the action is unbound.
-
--   Define menu actions and contained actions using the `ActionGroup` building block.
-
--   Specify the create options and the related parameters for the table using the `creationMode` parameter. For more information about `TableCreationOptions`, see the [API Reference](https://ui5.sap.com//#/api/sap.fe.macros.table.TableCreationOptions).
 
 
-> ### Sample Code:  
-> XML annotation
-> 
-> ```xml
-> <macros:Table metaPath="@com.sap.vocabularies.UI.v1.LineItem" readOnly="true" id="LineItemTablePageCustomActions"> <creationMode name="InlineCreationRows" inlineCreationRowsHiddenInEditMode="true" />  </macros:Table>
->      <macros:actions>
->           <macros:Action
->                key="customAction"
->                text="My Custom Action"
->                press=".onPressAction"
->                placement="After"
->                anchor="DataFieldForAction::Service.toggleBoolean"
->                requiresSelection="true"
->           />
->           <macros:ActionGroup text="Grouped Actions" placement="After" anchor="customAction">
->                <macros:Action text="Menu Action 1" press=".onPressMenuAction" />
->                <macros:Action text="Menu Action 2" press=".onPressMenuAction" />
->           </macros:ActionGroup>
->      </macros:actions>
-> </macros:Table>
-> ```
+</td>
+<td valign="top">
 
-For a complete list of the available properties and aggregations, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table).
+ 
 
-> ### Note:  
-> The properties or aggregations defined at the manifest level aren't supported with the `Table` building block. They must be defined at the building-block level.
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Configuring the table with different `metaPath` target annotations
+
+</td>
+<td valign="top">
+
+The `metaPath` of the `Table` building block can point to any of the following annotations:
+
+-   `LineItem`
+
+-   `PresentationVariant`
+
+-   `SelectionPresentationVariant`
+
+
+
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Linking to a filter bar
+
+</td>
+<td valign="top">
 
 You can link the `Table` building block to a `FilterBar` that is defined in the same view or to a different one by referencing the ID of the `FilterBar`. This ID can be a local or a global one.
 
-```
-<Panel headerText="Table in Display Mode with FilterBar">
-     <macros:FilterBar metaPath="@com.sap.vocabularies.UI.v1.SelectionFields#SF1" id="FilterBar" />
-     <macros:Table metaPath="@com.sap.vocabularies.UI.v1.LineItem" displayMode="true" id="LineItemTable" filterBar="FilterBar" />
-</Panel>
-```
+> ### Sample Code:  
+> Fragment Definition
+> 
+> ```xml
+> <Panel headerText="Table in Display Mode with FilterBar">
+>     <macros:FilterBar metaPath="@com.sap.vocabularies.UI.v1.SelectionFields#SF1" id="FilterBar" />
+>     <macros:Table metaPath="@com.sap.vocabularies.UI.v1.LineItem" displayMode="true" id="LineItemTable" filterBar="FilterBar" />
+> </Panel>
+> ```
+
+
+
+</td>
+<td valign="top">
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Usage with Filter Bar](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableFilterBar).
 
-You can use the `getPresentationVariant()` and `setPresentationVariant()` methods to programmatically get and set the presentation variants corresponding to the `Table` building block. Similarly, the `getSelectionVariant()` and `setSelectionVariant()` methods allows you to programmatically get and set the selection variants associated with the `Table` building block. The `getSelectionVariant()` method considers the variants that are applied directly to the table and excludes the variants that are applied to a bound model.
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
+Storing and restoring personalization
+
+</td>
+<td valign="top">
+
+Any personalization done by the user is automatically stored and restored using `iAppState`.
+
+</td>
+<td valign="top">
+
+[Store/Restore the Application State](store-restore-the-application-state-46bf248.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Not storing personalization
+
+</td>
+<td valign="top">
+
+You can disable the storing and restoration of personalization done by the user using `ignorePersonalizationChanges`.
+
+</td>
+<td valign="top">
+
+[Disabling Personalization Persistence in Building Blocks](disabling-personalization-persistence-in-building-blocks-32259bd.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Presentation variants and selection variants
+
+</td>
+<td valign="top">
+
+You can use the `getPresentationVariant()` and `setPresentationVariant()` methods to programmatically get and set the presentation variants corresponding to the `Table` building block. Similarly, the `getSelectionVariant()` and `setSelectionVariant()` methods allow you to programmatically get and set the selection variants associated with the `Table` building block. The `getSelectionVariant()` method considers the variants that are applied directly to the table and excludes the variants that are applied to a bound model.
 
 > ### Note:  
 > The `getSelectionVariant()` and `setSelectionVariant()` methods only work if table personalization is enabled. For more information, see [Enabling Table Personalization](enabling-table-personalization-3e2b4d2.md).
 
 You can use the `setCurrentVariantID` and `getCurrentVariantID` methods to programmatically set and get the current variant ID corresponding to the `Table` building block.
 
-You can send and remove messages related to the table by using the `sendMessage` and `removeMessage` methods.
+</td>
+<td valign="top">
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
 
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+An illustrated message when no data is found
+
+</td>
+<td valign="top">
+
+If a table doesn't contain any data, users see an illustrated message.
+
+</td>
+<td valign="top">
+
+[Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Bound and unbound actions
+
+</td>
+<td valign="top">
+
+Specify a bound action by using the `requiresSelection` property.
+
+By default, the action is unbound.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Relative action placement
+
+</td>
+<td valign="top">
+
+Define the placement of the action relative to an anchor.
+
+</td>
+<td valign="top">
+
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Custom Column](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customColumn) and [Building Blocks - Table - Extensions - Custom Action](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customTableAction).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Grouping actions as menu buttons
+
+</td>
+<td valign="top">
+
+Define menu actions and contained actions using the `ActionGroup` building block.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Search* field in the table toolbar
+
+</td>
+<td valign="top">
+
 If the entity linked to the table is searchable, the *Search* field is displayed in the toolbar of the table. You can disable the *Search* field using the `isSearchable` parameter.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Quick filters
+
+</td>
+<td valign="top">
 
 With the `Table` building block, you can define quick filters which are applied to the table content.
 
 > ### Sample Code:  
-> ```
-> <macros:Table
->     metaPath="@com.sap.vocabularies.UI.v1.LineItem"
->     id="LineItemTableQuickFilters"
-> >
+> Fragment Definition
+> 
+> ```xml
+> <macros:Table metaPath="@com.sap.vocabularies.UI.v1.LineItem" id="LineItemTableQuickFilters">
 >     <macros:quickVariantSelection>
->         <macrosTable:QuickVariantSelection
->             paths="com.sap.vocabularies.UI.v1.SelectionPresentationVariant#All,com.sap.vocabularies.UI.v1.SelectionPresentationVariant#Success"
->             showCounts="true"
->         />
+>         <macrosTable:QuickVariantSelection 
+>             paths="UI.SelectionVariant#All,UI.SelectionVariant#Approved" 
+>             showCounts="true" />
 >     </macros:quickVariantSelection>
 > </macros:Table>
 > ```
 
+
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Messages
+
+</td>
+<td valign="top">
+
+You can send and remove messages related to the table by using the `sendMessage` and `removeMessage` methods.
+
+</td>
+<td valign="top">
+
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Custom columns
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+[Adding Custom Columns to Tables](adding-custom-columns-to-tables-b0e65da.md)
+
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Custom Column](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customColumn).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Field display settings
+
+</td>
+<td valign="top">
+
+Various field display settings apply to tables as well.
+
+</td>
+<td valign="top">
+
+[The Field Building Block](the-field-building-block-5260b9c.md) 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Creation options
+
+</td>
+<td valign="top">
+
+Specify the creation options and the related parameters for the table using the `creationMode` parameter.
+
+</td>
+<td valign="top">
+
+[Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md)
+
+[API Reference](https://ui5.sap.com//#/api/sap.fe.macros.table.TableCreationOptions)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Mass edit
+
+</td>
+<td valign="top">
+
 With the `Table` building block, you can also define mass-edit configuration using the `massEdit` aggregation. The logic is identical to [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md).
 
 > ### Sample Code:  
-> ```
-> <macros:Table
->     metaPath="@com.sap.vocabularies.UI.v1.LineItem"
->     id="LineItemTablePageMassEdit"
-> >
+> Fragment Definition
+> 
+> ```xml
+> <macros:Table metaPath="@com.sap.vocabularies.UI.v1.LineItem" id="LineItemTablePageMassEdit">
 >     <massEdit>
 >         <macrosTable:MassEdit visibleFields="BooleanProperty,TagStatus">
 >             <f:FormContainer>
 >                 <f:formElements>
 >                     <f:FormElement label="Custom Element">
->                         <Text text="This is a custom fragment displayed in the Mass-edit dialog" />
+>                         <Text text="This is a custom fragment displayed in the Mass Edit dialog" />
 >                     </f:FormElement>
 >                 </f:formElements>
 >             </f:FormContainer>
@@ -165,9 +446,61 @@ With the `Table` building block, you can also define mass-edit configuration usi
 > </macros:Table>
 > ```
 
-With the `Table` building block, you can remove the thousands separator from integer fields using `disableIntegerGrouping`. For more information, see [Removing the Thousands Separator from Fields](removing-the-thousands-separator-from-fields-40713d5.md).
+
+
+</td>
+<td valign="top">
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Mass Edit](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableMassEdit).
+
+</td>
+</tr>
+</table>
+
+For a complete list of the available properties and aggregations, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table).
+
+> ### Note:  
+> The properties or aggregations defined at the manifest level aren't supported with the `Table` building block. They must be defined at the building-block level.
+
+The following sample code shows a combination of capabilities implemented:
+
+> ### Sample Code:  
+> Fragment Definition
+> 
+> ```xml
+> <macros:Table metaPath="@com.sap.vocabularies.UI.v1.LineItem" readOnly="true" id="LineItemTablePageCustomActions">
+>     <creationMode name="InlineCreationRows" inlineCreationRowsHiddenInEditMode="true" />
+>     <macros:actions>
+>         <macros:Action 
+>             key="customAction" 
+>             text="My Custom Action" 
+>             press=".onPressAction" 
+>             placement="After" 
+>             anchor="DataFieldForAction::Service.toggleBoolean" 
+>             requiresSelection="true" />
+>         <macros:ActionGroup text="Grouped Actions" placement="After" anchor="customAction">
+>             <macros:Action text="Menu Action 1" press=".onPressMenuAction" />
+>             <macros:Action text="Menu Action 2" press=".onPressMenuAction" />
+>         </macros:ActionGroup>
+>     </macros:actions>
+> </macros:Table>
+> ```
+
+This example shows the following configurations for the `Table` building block:
+
+-   The inline creation mode is enabled without including an empty row by default in edit mode.
+
+-   A bound custom action is added to the table toolbar.
+
+-   A *Grouped Actions* button is also added to the table toolbar. It opens a menu with two unbound custom actions.
+
+-   The sample code includes the following examples of relative action placement:
+
+    -   The standalone custom action is placed after another action named DataFieldForAction.
+
+    -   The grouped actions are placed after the standalone action.
+
+
 
 
 
@@ -177,192 +510,14 @@ For more information and live examples, see the SAP Fiori development portal at 
 
 You can interact and influence a `Table` building block using a set of properties and methods in the `Table` API. For example, you can use the `Table` API to select or deselect line items in a table.
 
-For more information about the `Table` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table). For more information, see the *API Reference* for `sap.fe.macros.Table` in the Demo Kit.
+For more information about the `Table` API, see the following resources:
 
-For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableDefault).
+-   [Interacting with a Table Using the API](interacting-with-a-table-using-the-api-fa9defb.md)
 
+-   The [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table)
 
+-   The SAP Fiori development portal at [Building Blocks - Table - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableDefault)
 
-<a name="loio3801656db27b4b7a9099b6ed5fa1d769__section_fg2_qjw_11c"/>
+-   The SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs)
 
-## Influencing the Table Request Dynamically
-
-Before a table rebind, you can retrieve the sorting and filters applied to the table as well as the complete binding information. You can also add sorting, filters, and additional properties using the methods on the [`CollectionBindingInfo`](https://ui5.sap.com/#/api/sap.fe.macros.CollectionBindingInfo%23overview) object.
-
-To do so, first add the `beforeRebindTable` key to the table definition.
-
-> ### Sample Code:  
-> ```
-> <macros:Table
->     metaPath="@com.sap.vocabularies.UI.v1.LineItem"
->     readOnly="true"
->     id="LineItemTablePageCustomActions"
->     isSearchable="false"
->     beforeRebindTable=".tableRefreshed"
-> >
-> 
-> ```
-
-Then, implement the `beforeRebindTable` extension point in the controller extension of the page.
-
-> ### Sample Code:  
-> ```
-> sap.ui.define(
->     ["sap/fe/core/PageController", "sap/m/MessageBox", "sap/ui/model/Filter", "sap/ui/model/FilterOperator", "sap/ui/model/Sorter"],
->     function (PageController, MessageBox, Filter, FilterOperator, Sorter) {
->         "use strict";
-> 
->         return PageController.extend("sap.fe.core.fpmExplorer.tableCustoms.Page", {
->             tableRefreshed(event) {
->                 var collectionBindingInfoAPI = event.getParameters("collectionBindingInfo");
-> 
->                 //Add a filter
->                 var filter = new Filter({
->                     path: "BooleanProperty",
->                     operator: FilterOperator.EQ,
->                     value1: false
->                 });
->                 collectionBindingInfoAPI.addFilter(filter);
-> 
->                 //Add a sorter
->                 var sorter = new Sorter("ID", true);
->                 collectionBindingInfoAPI.addSorter(sorter);
-> 
->                 //Request an additional property to the request
->                 collectionBindingInfoAPI.addSelect(["TagStatus"]);
->             }
->         });
->     }
-> );
-> 
-> ```
-
-For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Custom Action](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customTableAction).
-
-
-
-<a name="loio3801656db27b4b7a9099b6ed5fa1d769__section_qmg_vvy_bdc"/>
-
-## Triggering the Creation of a New Document Within a Table
-
-You can trigger the creation of a document within a table by calling the `createDocument` function with the table reference within the `editFlow` controller extension:
-
-> ### Sample Code:  
-> ```
-> //Get the table API
-> var table = this.getView().byId("fe::table::_Child::LineItem::Table");
-> 
-> //Create document 
-> this.base.editFlow
->     .createDocument(table, {
->         creationMode: coreLibrary.CreationMode.Inline,
->         createAtEnd: true,
->         data: {
->             ChildTitleProperty: "Child Object Custom Title",
->             ChildDescriptionProperty: "Child Custom Description"
->         }
->     })
->     .then(function () {
->         MessageToast.show("Custom create action successfully invoked");
->     });
-> ```
-
-For more information and live examples, see the SAP Fiori development portal at [Global Patterns - Draft Handling](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/editFlow).
-
-
-
-## Controlling the Table Initialization
-
-If the `Table` building block is linked to a filter bar which doesn't use live mode, the table loads the data after the filters are filled.
-
-You can control the data loading behavior using the `initialLoad` parameter as shown in the following sample code:
-
-> ### Sample Code:  
-> `initialLoad`
-> 
-> ```
-> 
-> <macros:FilterBar metaPath="@com.sap.vocabularies.UI.v1.SelectionFields" id="FilterBar" />
-> <macros:Table metaPath="@com.sap.vocabularies.UI.v1.LineItem" id="LineItemTable" filterBar="FilterBar" initialLoad="true"/>
-> ```
-
-See the following table for the supported values of the `initialLoad` parameter and their behavior:
-
-**Behavior of the InitialLoad Parameter**
-
-
-<table>
-<tr>
-<th valign="top">
-
-Value
-
-</th>
-<th valign="top">
-
-Behavior
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-`false` \(default\)
-
-</td>
-<td valign="top">
-
-The table loads the data only after the filter bar is filled.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`true`
-
-</td>
-<td valign="top">
-
-The table loads the data if the filter bar has no mandatory filters or if the mandatory filters are filled.
-
-</td>
-</tr>
-</table>
-
-
-
-## Defining `formatOptions` at the Column Level
-
-You can define `formatOptions` for all fields of an annotation-based column using a `ColumnOverride` in the `Table` building block as shown in the following sample code:
-
-> ### Sample Code:  
-> The `Table` Building Block
-> 
-> ```
-> <feT:ColumnOverride key="DataField::Description">
->     <feT:formatOptions>
->         <feF:FieldFormatOptions
->             displayMode="Description"
->             textMaxCharactersDisplay="200"
->             fieldEditStyle="RadioButtons" />
->     </feT:formatOptions>
-> </feT:ColumnOverride>
-> ```
-
-The following `formatOptions` are supported:
-
--   `textLinesEdit`
--   `textMaxCharactersDisplay`
--   `textExpandBehaviorDisplay`
--   `textMaxLines`
--   `textMaxLength`
--   `imageFitType`
--   `enableEnlargeImage`
--   `disableIntegerGrouping`
-
-For more information about `formatOptions`, see [Using Images and Icons](using-images-and-icons-5760b63.md) and the [Configuring Multi-Line Text Fields](multi-line-text-fields-b502146.md#loiob5021469ca58446ea4e6cf73635dd5d3__configuring-multi-line-text-fields) section in [Multi-Line Text Fields](multi-line-text-fields-b502146.md).
-
-> ### Note:  
-> Dynamic bindings aren't supported. Only static values are supported.
 

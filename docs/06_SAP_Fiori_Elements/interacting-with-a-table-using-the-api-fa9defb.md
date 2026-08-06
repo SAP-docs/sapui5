@@ -6,6 +6,17 @@ You can interact with and influence any table generated through annotations usin
 
 To interact with a table, you need to find the `id` of the `TableAPI` control.
 
+Open the browser's developer tools and search for the `"<ApplicationId>::<PageId>–fe::table::<Entity name or navigation property>::LineItem::Table"` string with the following contents:
+
+-   `ApplicationId` is the `id` of the application, which is found in the `manifest.json` file.
+
+-   `PageId` is the `id` of the page.
+
+-   Entity name is used for list report pages.
+
+-   Navigation property is used for object pages and custom pages.
+
+
 Open the browser's developer tools and search for the `"<ApplicationId>::<PageId>–fe::table::<Entity name or navigation property>::LineItem::Table"` string where:
 
 -   `ApplicationId` is the `id` of the application, which is found in the `manifest.json` file.
@@ -18,7 +29,7 @@ Open the browser's developer tools and search for the `"<ApplicationId>::<PageId
 
 Then, you can use any of the `Table` API properties and aggregations.
 
-For more information about the `Table` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table). 
+For more information about the `Table` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table).
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
 

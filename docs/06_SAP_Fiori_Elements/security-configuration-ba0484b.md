@@ -40,7 +40,7 @@ To protect potentially sensitive data, annotate properties as potentially sensit
 
     To prevent exposing sensitive data, you can disable copying to clipboard.
 
-    For more information, see [Tables](tables-c0f6592.md).
+    For more information, see [Showing or Hiding the Copy to Clipboard Button](showing-or-hiding-the-copy-to-clipboard-button-c95c327.md).
 
 -   **Enabling the History of Recently Entered Values**
 
@@ -84,6 +84,6 @@ To protect potentially sensitive data, annotate properties as potentially sensit
 
     Input fields can be masked using the `Common.Masked` annotation. This feature only hides the text on the UI and doesn't mask the data before it is sent to the back end.
 
-    For more information, see [Different Representations of a Field](different-representations-of-a-field-c18ada4.md).
+    For more information, see [Masking Fields To Hide Sensitive Data](masking-fields-to-hide-sensitive-data-6e46232.md).
 
 

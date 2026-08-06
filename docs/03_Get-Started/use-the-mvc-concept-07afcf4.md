@@ -22,7 +22,7 @@ This image is interactive. Hover over each area for a description. Click the hig
 
 The model holds the application data and provides methods to retrieve the data, usually from a server, and to set and update data. Depending on which data source you use \(local or remote\), you can choose between different model types to represent it. Among others, SAPUI5 supports OData V4, OData V2 \(both suitable for remote data services\), and JSON models. Make sure to define your model in the [`sap.ui5/models` ](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_ui5) section of your app’s `manifest.json`. If you create a new project involving a remote data source, use an OData V4 service with the [OData V4 Model](../04_Essentials/odata-v4-model-5de13cf.md).
 
--   Learn how: Walkthrough tutorial [Step 25: Remote OData Service](step-25-remote-odata-service-4406244.md)
+-   Learn how: Walkthrough tutorial [Step 25: Remote OData Service](https://ui5.github.io/tutorials/walkthrough/steps/25/index.html/?lang=js)
 -   Find out more: [Models](../04_Essentials/models-e1b6259.md)
 
 
@@ -35,7 +35,7 @@ The view is responsible for defining and rendering the UI. SAPUI5 supports vario
 
 Data binding defines how models and views communicate with each other. In a view, you bind data by specifying a binding path for your control. You can use data types and formatters to validate and format the data on the UI.
 
--   Learn how: Walkthrough Tutorial [Step 4: XML Views](step-4-xml-views-1409791.md)
+-   Learn how: Walkthrough Tutorial [Step 4: XML Views](https://ui5.github.io/tutorials/walkthrough/steps/04/index.html/?lang=js)
 -   Find out more: [XML View](../04_Essentials/xml-view-91f2928.md)
 
 
@@ -52,7 +52,7 @@ There is one special case: The so-called `BaseController` is not directly relate
 
 The controllers are written in JavaScript or TypeScript and should be placed in the `controller` folder. However, not all relevant code belongs in the `controller` folder. Consider formatter logic, for example, which has mainly the function to format data. If you cannot use [Expression Binding](../04_Essentials/expression-binding-daf6852.md) and need a separate formatter, you should rather place it in the `models` folder of your application.
 
--   Learn how: Walkthrough Tutorial [Step 5: Controllers](step-5-controllers-50579dd.md)
+-   Learn how: Walkthrough Tutorial [Step 5: Controllers](https://ui5.github.io/tutorials/walkthrough/steps/05/index.html/?lang=js)
 -   Find our more: [Controller](../04_Essentials/controller-121b8e6.md)
 
 **Related Information**  

@@ -4,7 +4,7 @@
 
 Users can use table personalization to modify the settings of a table in SAP Fiori elements for OData V4.
 
-You can control the table personalization options that users see.
+You can control the table personalization options that users see. To exclude specific fields from the table personalization dialog on the list report page and the object page, set the `availability` property of the column to `hidden`.
 
 
 

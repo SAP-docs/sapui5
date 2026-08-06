@@ -115,7 +115,7 @@ Announcement
 
 The following information concerns important upcoming changes. UI changes may have an impact on the user experience and may require test cases to be adapted.
 
-Tables with searchable content in object pages now have a search field in the toolbar. The search behavior is the same as in list report filter bars. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+Tables with searchable content in object pages now have a search field in the toolbar. The search behavior is the same as in list report filter bars. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 <sub>UI Changed•Announcement•Info Only•1.94</sub>
 
@@ -536,7 +536,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   The search field is now also available in the table toolbar on the object page. If the table is searchable \(that is, if an entity set is used for which `sap:searchable` is `true`\), the search field is displayed by default. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
+-   The search field is now also available in the table toolbar on the object page. If the table is searchable \(that is, if an entity set is used for which `sap:searchable` is `true`\), the search field is displayed by default. For more information, see [Table Types](../06_SAP_Fiori_Elements/table-types-c0f6592.md).
 
 -   When using multi-selection in tables, the *Select All* checkbox has been disabled by default in responsive tables in the list report, and on the object page in tab bar mode. End users can undo the selection using the *Clear All* checkbox. For more information, see [Configuring the Selection Mode for Tables](../06_SAP_Fiori_Elements/configuring-the-selection-mode-for-tables-116b5d8.md).
 
@@ -569,6 +569,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")
 

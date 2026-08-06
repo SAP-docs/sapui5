@@ -182,36 +182,7 @@ For more information and live examples, see the SAP Fiori development portal at 
 
 ## Not Persisting Personalization Changes
 
-Any personalization done by the user through *Adapt Filter* and values set for the filter fields are automatically stored and restored using `iAppState`. For more information about the `iAppState` mechanism, see [Store/Restore the Application State](store-restore-the-application-state-46bf248.md).
-
-You can choose to not persist personalization changes applied to the filter bar. This allows the user changes on this filter bar to be stored in a transient manner. When the filter bar is initialized with a different context in the same session, it doesn't retain the last used configuration, such as filter field values or positions.
-
-> ### Caution:  
-> This is an experimental feature. For more information about experimental features, see [Compatibility Rules](../02_Read-Me-First/compatibility-rules-91f0873.md).
-
-Set the attribute `ignorePersonalizationChanges` to `true`, as shown in the following sample code:
-
-> ### Sample Code:  
-> ```
-> 
-> <macros:FilterBar
->     metaPath="@com.sap.vocabularies.UI.v1.SelectionFields"
->     ignorePersonalizationChanges = "true"
->     id="FilterBar"
-> />
-> 
-> ```
-
-> ### Note:  
-> -   Don't use `ignorePersonalizationChanges` on a filter bar with an existing ID. Create a new ID for the control to use this feature.
-> 
-> -   When personalization changes are not persisted, variants and application states stored with `iAppState` are not applied to the filter. Therefore, we recommend only using this setting for filter bars in a transient context, such as within a custom dialog or within a value help dialog.
-> 
->     For more information about variants, see [Managing Variants](managing-variants-8ce658e.md).
-> 
->     For more information about `iAppState`, see [Store/Restore the Application State](store-restore-the-application-state-46bf248.md).
-
-For more information about personalization changes, see [How to Enable Personalization for SAPUI5 Controls](../09_Developing_Controls/how-to-enable-personalization-for-sapui5-controls-5f215c1.md).
+You can choose to not persist personalization changes applied to the filter bar. For more information, see [Disabling Personalization Persistence in Building Blocks](disabling-personalization-persistence-in-building-blocks-32259bd.md).
 
 
 

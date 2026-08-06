@@ -5,7 +5,7 @@
 This library contains controls to visualize charts and diagrams that are lightweight and easy to use.
 
 > ### Note:  
-> The following sections only provide additional information for some of the controls. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
+> The following sections provide additional information for selected controls and features. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
 
 `MicroCharts` give a quick overview of customer-defined key figures like KPIs as graphical items and display the current status of defined key figures or thresholds.
 

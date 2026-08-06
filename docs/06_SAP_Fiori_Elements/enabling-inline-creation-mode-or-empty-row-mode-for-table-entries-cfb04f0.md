@@ -24,28 +24,26 @@ To enable inline creation mode in an object page table, set `"creationMode"` to 
 > ### Sample Code:  
 > `manifest.json`
 > 
-> ```
-> "SalesOrderManageObjectPage":{                  
->     "type": "Component",                  
->     "id": "SalesOrderManageObjectPage",                  
->     "name": "sap.fe.templates.ObjectPage",                  
->     "options":{
->         "settings":{
->             ....
->             ....                                
->             "controlConfiguration":{                              
->                 "_Item/@com.sap.vocabularies.UI.v1.LineItem":{
+> ```json
+> "SalesOrderManageObjectPage": {
+>     "type": "Component",
+>     "id": "SalesOrderManageObjectPage",
+>     "name": "sap.fe.templates.ObjectPage",
+>     "options": {
+>         "settings": {
+>             ...
+>             "controlConfiguration": {
+>                 "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
 >                     "tableSettings": {
->                         ....
->                         ....           
->                         "creationMode":{                                          
->                             "name": "Inline",            // Results in Inline creation (default).                               
->                             ...                          
->                         }                                  
->                     }                              
->                 }                      
->             }      
->         } 
+>                         ...
+>                         "creationMode": {
+>                             "name": "Inline",            // Results in Inline creation (default).
+>                             ...
+>                         }
+>                     }
+>                 }
+>             }
+>         }
 >     }
 > }
 > ```
@@ -100,28 +98,26 @@ To change this behavior, you can use the parameter `inlineCreationRowsHiddenInEd
 > ### Sample Code:  
 > `manifest.json`
 > 
-> ```
-> "SalesOrderManageObjectPage":{                  
->     "type": "Component",                  
->     "id": "SalesOrderManageObjectPage",                  
->     "name": "sap.fe.templates.ObjectPage",                  
->     "options":{
->         "settings":{
->             ....
->             ....                                
->             "controlConfiguration":{                              
->                 "_Item/@com.sap.vocabularies.UI.v1.LineItem":{
+> ```json
+> "SalesOrderManageObjectPage": {
+>     "type": "Component",
+>     "id": "SalesOrderManageObjectPage",
+>     "name": "sap.fe.templates.ObjectPage",
+>     "options": {
+>         "settings": {
+>             ...
+>             "controlConfiguration": {
+>                 "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
 >                     "tableSettings": {
->                         ....
->                         ....           
->                         "creationMode":{                                          
->                             "name": "InlineCreationRows",            
+>                         ...
+>                         "creationMode": {
+>                             "name": "InlineCreationRows",
 >                             "inlineCreationRowsHiddenInEditMode": true
->                         }                                  
->                     }                              
->                 }                      
->             }      
->         } 
+>                         }
+>                     }
+>                 }
+>             }
+>         }
 >     }
 > }
 > ```
@@ -135,16 +131,16 @@ You can define the `InlineCreationRows` mode as the default creation mode that i
 > ### Sample Code:  
 > `manifest.json`
 > 
-> ```
+> ```json
 > "sap.fe": {
->         …
->         "macros": {
->             "table": {
->                 "defaultCreationMode": "InlineCreationRows"
->             }
+>     ...
+>     "macros": {
+>         "table": {
+>             "defaultCreationMode": "InlineCreationRows"
 >         }
->         …
 >     }
+>     ...
+> }
 > ```
 
 
@@ -183,6 +179,28 @@ The empty row mode also supports required fields. These fields are declared usin
 > 
 > ```
 
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate com.c_salesordermanage_sd.SalesOrderManage with {
+>     _Item @(Capabilities: {
+>         InsertRestrictions: {
+>             $Type: 'Capabilities.InsertRestrictionsType',
+>             RequiredProperties: [
+>                 'RequestedQuantity',
+>                 'Material'
+>             ]
+>         }
+>     });
+> };
+> ```
+
 
 
 ### Support of Default Values
@@ -195,8 +213,9 @@ If you want to set default values for an empty row, use a `DefaultValuesFunction
 > ```
 > <FunctionImport Name="GetDefaultsForRoot" ReturnType="cds_zrc_dv_defaultvalues.ZRC_DV_A_Create" m:HttpMethod="GET"/> 
 >  
-> <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="cds_zrc_dv_defaultvalues.cds_zrc_dv_defaultvalues_Entities/Root">
-> <Annotation Term="com.sap.vocabularies.Common.v1.DefaultValuesFunction" String="GetDefaultsForRoot"/>
+> <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" 
+> Target="cds_zrc_dv_defaultvalues.cds_zrc_dv_defaultvalues_Entities/Root">
+>     <Annotation Term="com.sap.vocabularies.Common.v1.DefaultValuesFunction" String="GetDefaultsForRoot"/>
 > </Annotations>
 > 
 > ```
@@ -208,11 +227,11 @@ For more information, see [Prefilling Fields When Creating a New Entity](prefill
 > 
 > ```
 > <FunctionImport Name="GetDefaultsForItem" ReturnType="cds_zrc_dv_defaultvalues.ZRC_DV_A_Create" m:HttpMethod="GET" sap:action-for="cds_zrc_dv_defaultvalues.RootType">
-> <Parameter Name="UUID" Type="Edm.Guid" Mode="In"/>
+>     <Parameter Name="UUID" Type="Edm.Guid" Mode="In"/>
 > </FunctionImport>
 >  
 > <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="cds_zrc_dv_defaultvalues.RootType/to_Item">
-> <Annotation Term="com.sap.vocabularies.Common.v1.DefaultValuesFunction" String="GetDefaultsForItem"/>
+>     <Annotation Term="com.sap.vocabularies.Common.v1.DefaultValuesFunction" String="GetDefaultsForItem"/>
 > </Annotations>
 > 
 > ```
@@ -224,31 +243,34 @@ For more information, see [Prefilling Fields When Creating a New Entity](prefill
 If you're using a property that influences the result of the `DefaultValuesFunction`, you must annotate a side effect for each table that uses the `DefaultValuesFunction`. Doing so ensures that the existing empty row always gets the new calculated value. In the side effects, use the navigation property that represents the table as the target entity.
 
 > ### Sample Code:  
-> ```
-> SideEffects #TableIsRefreshed: {
->       SourceProperties: [CustomerNumber],
->       TargetEntities  : [_Item]
->   }
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="Common.SideEffects" Qualifier="TableIsRefreshed">
+>     <Record Type="Common.SideEffectsType">
+>         <PropertyValue Property="SourceProperties">
+>             <Collection>
+>                 <PropertyPath>CustomerNumber</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="TargetEntities">
+>             <Collection>
+>                 <NavigationPropertyPath>_Item</NavigationPropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
 > 
 > ```
 
 > ### Sample Code:  
-> XML Annotation
+> CAP CDS Annotation
 > 
-> ```xml
-> <Annotation Term="Common.SideEffects" Qualifier=" TableIsRefreshed ">
->      <Record Type="Common.SideEffectsType">
->           <PropertyValue Property="SourceProperties">
->           <Collection>
->           <PropertyPath>CustomerNumber</PropertyPath>
->           </Collection>
->           </PropertyValue>
->           <PropertyValue Property="TargetEntities">
->           <Collection>
->           <NavigationPropertyPath>_Item</NavigationPropertyPath>
->           </Collection>
->      </Record>
-> </Annotation>
+> ```
+> SideEffects #TableIsRefreshed: {
+>     SourceProperties: [CustomerNumber],
+>     TargetEntities  : [_Item]
+> }
 > 
 > ```
 
@@ -276,7 +298,7 @@ When using the grid table, you can display newly created objects at the bottom o
 > ### Sample Code:  
 > `manifest.json`
 > 
-> ```
+> ```json
 > "controlConfiguration": {
 >     "@com.sap.vocabularies.UI.v1.LineItem": {
 >         "tableSettings": {
