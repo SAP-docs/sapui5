@@ -170,7 +170,7 @@ The `odata.concat` function is supported on the title of the object page header.
 >             </PropertyValue> 
 >         </Record> 
 >     </Annotation> 
-> </Annotation> 
+> </Annotations> 
 > ```
 
 > ### Sample Code:  

@@ -89,9 +89,7 @@ Analytical card
   
 **Donut Chart**
 
-
-
-![](images/Analytical_card_ee6aedf.jpg)
+![](images/Analytical_card_ee6aedf.jpg "Donut Chart")
 
 </td>
 <td valign="top">
@@ -140,9 +138,12 @@ Add column to a table
 
   
   
-**Add column to a table**
+**Add Column to a Table**
 
-![](images/Add_column_to_a_table_019b848.png "Add column to a table")
+![](images/Add_column_to_a_table_019b848.png "Add
+										Column
+										to a
+										Table")
 
 </td>
 <td valign="top">
@@ -474,10 +475,11 @@ Breadcrumb
 
   
   
-**Navigation Bar, Breadcrumbs and Actions in Header Title of Object Page**
+**Navigation Bar, Breadcrumbs, and Actions in Header Title of Object Page**
 
-![](images/Breadcrumb_5d56a97.jpg "Navigation Bar, Breadcrumbs and Actions in Header Title
-										of Object Page")
+![](images/Breadcrumb_5d56a97.jpg "Navigation Bar,
+										Breadcrumbs,
+										and Actions in Header Title of Object Page")
 
 </td>
 <td valign="top">
@@ -1345,7 +1347,7 @@ Context-dependent actions
 </td>
 <td valign="top">
 
-contect dependent actions
+context dependent actions
 
 </td>
 </tr>
@@ -2438,9 +2440,11 @@ Dynamic page layout
 
   
   
-**Dynamic page layout**
+**Dynamic Page Layout**
 
-![](images/Feature_map_Dynamic_page_layout_d0957c5.jpg "Dynamic page layout ")
+![](images/Feature_map_Dynamic_page_layout_d0957c5.jpg "Dynamic
+										Page
+										Layout ")
 
 </td>
 <td valign="top">
@@ -2482,9 +2486,10 @@ Editing status
 
   
   
-**Editing status**
+**Editing Status**
 
-![](images/Feature_map_Editing_status_886d379.png "Editing status")
+![](images/Feature_map_Editing_status_886d379.png "Editing
+										Status")
 
 </td>
 <td valign="top">
@@ -3067,9 +3072,11 @@ Formatting numeric values
 
   
   
-**Formatting numeric values**
+**Formatting Numeric Values**
 
-![](images/Feature_map_Formatting_numeric_values_db0cbcd.png "Formatting numeric values")
+![](images/Feature_map_Formatting_numeric_values_db0cbcd.png "Formatting
+										Numeric
+										Values")
 
 </td>
 <td valign="top">
@@ -4067,6 +4074,8 @@ Link
 
 [Configuring the List Area](configuring-the-list-area-f57373d.md)
 
+[Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md)
+
 </td>
 <td valign="top">
 
@@ -4079,12 +4088,24 @@ Link
   
 **Link**
 
-![](images/Link_Wrapping_and_Truncation_6f9d3bb.png "Link ")
+![](images/Smart_Link_6773928.png "Link ")
 
 </td>
 <td valign="top">
 
 URL
+
+semantic links
+
+navigation links
+
+link-based navigation
+
+contact card
+
+smart link
+
+communication contact
 
 </td>
 </tr>
@@ -4334,6 +4355,7 @@ Mass edit
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -4547,9 +4569,9 @@ success message
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
--   Analytical list page
 
 
 
@@ -4643,6 +4665,7 @@ Multi-combo box
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -4682,7 +4705,9 @@ Multi-input field
 </td>
 <td valign="top">
 
--   Overview page
+-   Analytical list page
+-   List report page
+-   Object page
 
 
 
@@ -4730,6 +4755,7 @@ Multiple selection of lines in tables
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -4750,9 +4776,10 @@ Multiple selection of lines in tables
 
   
   
-**Multiple selection of lines in tables**
+**Multiple Selection of Lines in Tables**
 
-![](images/Feature_map_Multiple_selection_of_lines_in_tables_5d8fb93.png "Multiple selection of lines in tables ")
+![](images/Feature_map_Multiple_selection_of_lines_in_tables_5d8fb93.png "Multiple
+										Selection of Lines in Tables")
 
 </td>
 <td valign="top">
@@ -4775,6 +4802,7 @@ Multiple views of list report page tables
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 
 
@@ -4794,9 +4822,11 @@ Multiple views of list report page tables
 
   
   
-**Multiple views of list report page tables**
+**Multiple Views of List Report Page Tables**
 
-![](images/Feature_map_Multiple_views_on_list_report_tables_891cf38.jpg "Multiple views of list report page tables ")
+![](images/Feature_map_Multiple_views_on_list_report_tables_891cf38.jpg "Multiple
+										Views of List Report Page Tables
+									")
 
 </td>
 <td valign="top">
@@ -4970,6 +5000,7 @@ P13n dialog
 -   Analytical list page
 -   List report page
 -   Object page
+-   Worklist page
 
 
 
@@ -5013,9 +5044,7 @@ View Settings dialog
 </td>
 <td valign="top">
 
--   List report page
 -   Object page
--   Analytical list page
 
 
 
@@ -5114,6 +5143,7 @@ Prefilling fields when creating a new entity
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -5195,6 +5225,7 @@ Quick views for link navigation
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -5402,6 +5433,7 @@ Responsive table
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 -   Overview page
@@ -5586,9 +5618,10 @@ Reuse components
 
   
   
-**Reuse components**
+**Reuse Components**
 
-![](images/Feature_Map_Reuse_components_c54fccc.jpg "Reuse components")
+![](images/Feature_Map_Reuse_components_c54fccc.jpg "Reuse
+										Components")
 
 </td>
 <td valign="top">
@@ -5702,10 +5735,6 @@ variant management
 
 </td>
 <td valign="top">
-
--   Analytical list page
--   List report page
--   Object page
 
 
 
@@ -6157,7 +6186,11 @@ Share to Microsoft Teams
 </td>
 <td valign="top">
 
-![](images/Microsoft_Teams_Share_Menu_As_Chat_and_As_Tab_f2cb0d3.png)
+  
+  
+**Share to Microsoft Menu**
+
+![](images/Microsoft_Teams_Share_Menu_As_Chat_and_As_Tab_f2cb0d3.png "Share to Microsoft Menu")
 
 </td>
 <td valign="top">
@@ -6175,24 +6208,17 @@ Sharing
 <tr>
 <td valign="top">
 
-Link
+
 
 </td>
 <td valign="top">
-
--   Analytical list page
--   List report page
--   Object page
--   Overview page
 
 
 
 </td>
 <td valign="top">
 
-[Adding a Contact Quick View to a Table](adding-a-contact-quick-view-to-a-table-677fbde.md)
 
-[Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md)
 
 </td>
 <td valign="top">
@@ -6202,26 +6228,12 @@ Link
 </td>
 <td valign="top">
 
-  
-  
-**Link**
 
-![](images/Smart_Link_6773928.png "Link")
 
 </td>
 <td valign="top">
 
-semantic links
 
-navigation links
-
-link-based navigation
-
-Contact card
-
-Communication.Contact
-
-smart link
 
 </td>
 </tr>
@@ -6367,6 +6379,7 @@ Status colors and icons
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -6601,6 +6614,7 @@ Tables
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 -   Overview page
@@ -6651,6 +6665,7 @@ Table toolbar
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -6850,6 +6865,7 @@ Token
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -6891,6 +6907,7 @@ Tree table
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -6930,6 +6947,7 @@ Tree table hierarchy
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -7216,7 +7234,11 @@ Worklist page
 </td>
 <td valign="top">
 
-![](images/Image_Map_Worklist_b057362.jpg)
+  
+  
+**Worklist Page**
+
+![](images/Image_Map_Worklist_b057362.jpg "Worklist Page")
 
 </td>
 <td valign="top">

@@ -48,5 +48,5 @@ For more information and live examples, see the SAP Fiori development portal at 
 
 ## Related Links
 
-For more information about the `loadFragment` method, see [EditFlow](https://ui5.sap.com/#/api/sap.fe.core.ExtensionAPI%23overview) in the Demo Kit.
+For more information about the `loadFragment` method, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.ExtensionAPI%23overview).
 

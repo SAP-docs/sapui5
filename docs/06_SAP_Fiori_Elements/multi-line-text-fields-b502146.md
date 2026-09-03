@@ -181,26 +181,26 @@ To define a custom text length in a `FieldGroup` or a `LineItem`, extend their `
 >                                             "textMaxCharactersDisplay": "Infinity"
 >                                         }
 >                                     }
->                                  }
->                              },
+>                                 }
+>                             },
 >                             "myEntity/@com.sap.vocabularies.UI.v1.LineItem": {
 >                                 "columns": {
 >                                     "DataField::myTableTextField": {
->                                         "formatOptions": {                                         
+>                                         "formatOptions": {
 >                                             "textLinesEdit": "3",
 >                                             "textMaxLines": "5",
 >                                             "textMaxCharactersDisplay": "400",
->                                             "textExpandBehaviorDisplay" : "Popover"
+>                                             "textExpandBehaviorDisplay": "Popover"
 >                                         }
 >                                     }
 >                                 }
 >                             }
->                          }
->                      }
->                  }
->              }
+>                         }
+>                     }
+>                 }
+>             }
 >         }
 >     }
->  }
+> }
 > ```
 

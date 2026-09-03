@@ -208,6 +208,8 @@ The following image shows a *More Links* popover. Users can select actions to be
 
 -   Users can personalize the actions shown in the footer by selecting actions in the *More Links* popover.
 
+-   You can modify the navigation targets. For more information, see [Creating an Extension to Modify Navigation Targets in Semantic Link Popovers](creating-an-extension-to-modify-navigation-targets-in-semantic-link-popovers-449d3b0.md).
+
 
 > ### Restriction:  
 > When the application is running within an i-frame, using the browser's *Open link in new tab* option to navigate from action links isn't supported. Additionally, any processing defined in the `IntentBasedNavigation` extension point isn't executed in this scenario. For more information about the `IntentBasedNavigation` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.IntentBasedNavigation%23methods/Summary).

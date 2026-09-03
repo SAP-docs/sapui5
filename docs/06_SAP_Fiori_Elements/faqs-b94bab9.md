@@ -79,7 +79,7 @@ The following sections contain the most frequently asked questions about the SAP
 
 -   **How can I share an SAP Fiori elements app with other users?**
 
-    Apps created with SAP Fiori elements provides a *Share* menu with options such as *Send E-Mail*, *Microsoft Teams*, and *Save as Tile*. For more information, see [The Share Functionality](the-share-functionality-2a20b31.md).
+    Apps created with SAP Fiori elements provides a *Share* menu with options such as *Send Email*, *Microsoft Teams*, and *Save as Tile*. For more information, see [The Share Functionality](the-share-functionality-2a20b31.md).
 
 -   **Can I override the standard texts or labels used in SAP Fiori elements?**
 

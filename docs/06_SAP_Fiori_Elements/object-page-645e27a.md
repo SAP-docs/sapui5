@@ -14,13 +14,13 @@ The object page allows users to create, edit, and display objects, as well as sa
 
 <a name="loio645e27ae85d54c8cbc3f6722184a24a1__section_mx4_xn1_rfc"/>
 
-## Main Elements
+## Main Features
 
-The object page is made up of the following elements:
+The object page is made up of the following features:
 
 -   Application title is set based on the object type, for example *Sales Order* or *Product*.
 
--   Object page header comprising of the following elements:
+-   Object page header comprising of the following features:
 
     -   Title and description
 
@@ -28,7 +28,7 @@ The object page is made up of the following elements:
 
     -   Action buttons in the header toolbar, containing generic actions \(in **Display** mode\)
 
-    -   Optional elements, such as the following:
+    -   Optional features, such as the following:
 
         -   Description
 
@@ -62,7 +62,7 @@ The object page is made up of the following elements:
 
         -   Label-field pairs to display details such as price or availability. We recommend using no more than five label-field pairs.
 
-        -   Graphical elements such as a chart for credit limits or a rating indicator.
+        -   Graphical features such as a chart for credit limits or a rating indicator.
 
 
     -   Anchor navigation area that allows users navigate to the individual content area sections.

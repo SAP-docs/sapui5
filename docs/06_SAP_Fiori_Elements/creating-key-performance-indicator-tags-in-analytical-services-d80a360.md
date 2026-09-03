@@ -616,6 +616,30 @@ The global and filterable KPIs in the ALP can now display KPI values with a **Un
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> annotate view CZ_PROJECTKPIS with
+> {
+>     @Semantics.amount.currencyCode: 'CompanyCodeCurrency'
+>     ActualCost;
+> 
+>     CompanyCodeCurrency;
+> 
+>     @Semantics.amount.currencyCode: 'EUR'
+>     TargetMargin;
+> 
+>     @Semantics.quantity.unitOfMeasure: '%'
+>     ActualMarginRelative;
+> 
+>     @Semantics.quantity.unitOfMeasure: 'WeightUnit'
+>     NetWeight;
+> 
+>     WeightUnit;
+> }
+> ```
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```

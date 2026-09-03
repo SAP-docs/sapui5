@@ -19,7 +19,7 @@ To render a Boolean property as a group of radio buttons, use the field `formatO
 > 
 > <macros:Field metaPath="BooleanProperty" >
 >     <macros:formatOptions>
->         <macrosF:FieldFormatOptions useRadioButtonsForBoolean="true"/>
+>         <macros:FieldFormatOptions useRadioButtonsForBoolean="true"/>
 >     </macros:formatOptions>
 > </macros:Field>
 > 

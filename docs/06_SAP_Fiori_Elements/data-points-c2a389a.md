@@ -55,30 +55,29 @@ If you add a `UI.ReferenceFacet` that points to `UI.DataPoint`, the title and va
 > ABAP CDS Annotation
 > 
 > ```
-> 
 > @UI.Facet: [
->   {
->     label: '{@i18n>@TechnicalData}',
->     targetQualifier: 'TechnicalData',
->     type: #FIELDGROUP_REFERENCE,
->     purpose: #HEADER
->   },
->   {
->     targetQualifier: 'Price',
->     type: #DATAPOINT_REFERENCE,
->     purpose: #HEADER
->   },
->   {
->     targetQualifier: 'ProductCategory',
->     type: #DATAPOINT_REFERENCE,
->     purpose: #HEADER
->   },
->   {
->     label: 'Employee',
->     targetElement: 'TO_SUPPLIER',
->     type: #CONTACT_REFERENCE,
->     purpose: #HEADER
->   }
+>     {
+>         label: '{@i18n>@TechnicalData}',
+>         targetQualifier: 'TechnicalData',
+>         type: #FIELDGROUP_REFERENCE,
+>         purpose: #HEADER
+>     },
+>     {
+>         targetQualifier: 'Price',
+>         type: #DATAPOINT_REFERENCE,
+>         purpose: #HEADER
+>     },
+>     {
+>         targetQualifier: 'ProductCategory',
+>         type: #DATAPOINT_REFERENCE,
+>         purpose: #HEADER
+>     },
+>     {
+>         label: 'Employee',
+>         targetElement: 'TO_SUPPLIER',
+>         type: #CONTACT_REFERENCE,
+>         purpose: #HEADER
+>     }
 > ]
 > product;
 > 
@@ -145,17 +144,15 @@ Each `UI.DataPoint` annotation term must point to a qualifier, as shown below:
 > ABAP CDS Annotation
 > 
 > ```
-> 
 > @UI.dataPoint: {
->   title: 'Price'
+>     title: 'Price'
 > }
 > Price;
 > 
 > @UI.dataPoint: {
->   title: 'Category'
+>     title: 'Category'
 > }
 > ProductCategory;
-> 
 > 
 > ```
 
@@ -345,12 +342,11 @@ You can define the property `NumberOfFractionalDigits` of annotation `NumberForm
 > ABAP CDS Annotation
 > 
 > ```
-> 
 > @UI.dataPoint: {
->   title: 'Weight',
->   valueFormat: {
->     numberOfFractionalDigits: 5
->   }
+>     title: 'Weight',
+>     valueFormat: {
+>         numberOfFractionalDigits: 5
+>     }
 > }
 > Weight;
 > 

@@ -123,7 +123,7 @@ The following code sample shows how to define a custom filter field for the meta
 The `template` property points to the custom fragment definition located at `<ProjectFolder>.ext.CustomRatingFilter`. The custom fragment can be defined as shown in the following sample code:
 
 > ### Sample Code:  
-> XML Annotation
+> Fragment Definition
 > 
 > ```
 > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
@@ -201,7 +201,7 @@ For example, consider a custom filter field with a rating indicator control, as 
 The following XML sample code shows how to handle filtering using the change event for the rating indicator control:
 
 > ### Sample Code:  
-> XML Annotation
+> Fragment Definition
 > 
 > ```
 > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
@@ -299,7 +299,7 @@ The following sample code defines a custom filter using a custom operator:
 The `template` property points to the custom fragment definition, located at `<ProjectFolder>.ext.CustomRatingFilter`. The custom fragment is defined as shown in the following sample code:
 
 > ### Sample Code:  
-> XML Annotation
+> Fragment Definition
 > 
 > ```
 > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
@@ -386,6 +386,8 @@ For more information and live examples, see the SAP Fiori development portal at 
 You can also define your custom filter as required by setting it to `required = true` in the `manifest.json`. As a result, the field is automatically marked with an asterisk. If you additionally want a dynamic indicator, such as a red frame around a field, you must implement this in your custom template yourself. The following sample code is an example of a handler that visualizes a red frame around a required input field that is missing a string value:
 
 > ### Sample Code:  
+> Fragment Definition
+> 
 > ```
 > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
 >     <Input

@@ -4,7 +4,7 @@
 
 You can use the `Share` building block to add the *Share* functionality to an app in SAP Fiori elements for OData V4.
 
-The *Share* functionality allows users to share the current application state using the options *Send Email*, *Share to Microsoft Teams*, *Save as Tile*, and *Share in SAP Jam* \(on platforms that are integrated with SAP Jam\). For more information, see [The Share Functionality](the-share-functionality-022bf0d.md).
+The *Share* functionality allows users to share the current application state using the options *Send Email*, *Share to Microsoft Teams*, *Save as Tile*, and *Share on SAP Build Work Zone* \(on platforms that are integrated with SAP Build Work Zone\). For more information, see [The Share Functionality](the-share-functionality-022bf0d.md).
 
 
 
@@ -12,7 +12,7 @@ The *Share* functionality allows users to share the current application state us
 
 ## Configuring the Visibility of the *Send Email* Option
 
-You can control the visibility of the *Send Email* and *Share: Collaboration Manager* options within the `Share` building block by configuring `showSendEmail` and `showCollaborationManager` under the `shareOptions`. By default, both options are set to `false`.
+You can control the visibility of the *Send Email* and *Share: SAP Collaboration Manager* options within the `Share` building block by configuring `showSendEmail` and `showCollaborationManager` under the `shareOptions`. By default, both options are set to `false`.
 
 > ### Sample Code:  
 > ```

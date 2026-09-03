@@ -78,6 +78,23 @@ The default SPV or PV is read as follows:
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @UI.presentationVariant: [
+>     {
+>         groupBy: ['Country'],
+>         total: ['SalesAmount'],
+>         visualizations: [
+>             {type: #AS_CHART},
+>             {type: #AS_LINEITEM}
+>         ]
+>     }
+> ]
+> ```
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```

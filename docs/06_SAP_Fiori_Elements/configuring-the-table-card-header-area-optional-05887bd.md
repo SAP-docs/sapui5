@@ -364,7 +364,7 @@ The identification annotation lets you configure navigation \(from header and ta
 
 [Table Cards](table-cards-167bf7c.md "You can use a table card to display a list of records in a three-column table layout.")
 
-[Configuring the Table Area](configuring-the-table-area-b408bfb.md "You can configure the columns of a table card, their header and valies, by using the com.sap.vocabularies.UI.v1.LineItem annotation.")
+[Configuring the Table Area](configuring-the-table-area-b408bfb.md "You can use the com.sap.vocabularies.UI.v1.LineItem annotation to configure the columns of a table card, including their header and values.")
 
 [Configuring the Table Card](configuring-the-table-card-9bc298e.md "You can configure the content on the table area with text alignment, filtering or grouping information.")
 

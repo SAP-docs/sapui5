@@ -228,7 +228,7 @@ You can use the UI model within the fragment to react to changes of the `editMod
 
 > ### Sample Code:  
 > ```json
-> "enabled="{= ${ui>/editMode} === 'Editable'}"
+> enabled="{= ${ui>/isEditable} === true}"
 > ```
 
 

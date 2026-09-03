@@ -146,21 +146,23 @@ The following sample code shows how to hide the filter bar by setting `hideFilte
 > 
 > ```
 > 
+> ```json
 > {
->      "sap.ui5": {
->           "routing": {
->                "targets": {
->                     "SalesOrderManageList": {
->                          "options": {
->                               "settings": {
->                                    "hideFilterBar": true
->                               }
->                          }
+>     "sap.ui5": {
+>         "routing": {
+>             "targets": {
+>                 "SalesOrderManageList": {
+>                     "options": {
+>                         "settings": {
+>                             "hideFilterBar": true
+>                         }
 >                     }
->                }
->           }
->      }
+>                 }
+>             }
+>         }
+>     }
 > }
+> ```
 > ```
 
 > ### Note:  
@@ -179,21 +181,23 @@ You can enable live mode by setting the `liveMode` to `true` in the `manifest.js
 > 
 > ```
 > 
+> ```json
 > "routing": {
-> 	"targets": {
-> 	    "MyEntitiesList": {
+>     "targets": {
+>         "MyEntitiesList": {
 >             "type": "Component",
 >             "name": "sap.fe.templates.ListReport",
 >             "id": "MyEntitiesList",
 >             "options": {
 >                 "settings": {
->                 "liveMode": true,
->                 ...
+>                     "liveMode": true,
+>                     ...
 >                 }
 >             }
 >         }
 >     }
 > }
+> ```
 > ```
 
 Enabling live mode may have some impact on performance. For more information, see the Note in the [Live Mode](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__live_mode) subsection of this topic.
@@ -249,7 +253,7 @@ You can configure the filter fields as mandatory using the `Capabilities.Require
 
 You can filter on two individual date-based filter fields contained in an entity using a single, date-based range filter field. Filtering using this date-based range field shows all records where the existing dates between the individual date-based fields overlap with the date range defined in the combined date-based range filter field.
 
-For example, you want to define a single date-range filter called *Work Period*. A user can then use the *Work Period* filter to identify those users who have taken at least one leave day during the specified time period.
+The following procedure shows the definition of a single date-range filter called *Work Period*. A user can then use the *Work Period* filter to identify those users who have taken at least one leave day during the specified time period.
 
 1.  Assume the following records exist in the table before the user applies any filters:
 
@@ -363,150 +367,154 @@ For example, you want to define a single date-range filter called *Work Period*.
     
 2.  A user enters *2026-6-16* to *2026-7-24* values in the *Work Period* filter field.
 
-3.  These values are automatically mapped, and the following filter query is applied: \(2026-6-16 <= *Vacation End Date*\) AND \(2026-7-24 \>= *Vacation Start Date*\) AND < Rest of filters from the filter bar\>.
+3.  These values are automatically mapped to the filter fields, and the following filter query is applied as follows:
+
+    > ### Example:  
+
+    \(2026-6-16 <= *Vacation End Date*\) AND \(2026-7-24 \>= *Vacation Start Date*\) AND < Rest of filters from the filter bar\>.
 
 4.  Every table record that fits this filter query is filtered:
 
-5.  **Date-Range Filter Field: Filtered Entries**
+    **Date-Range Filter Field: Filtered Entries**
 
 
-<table>
-<tr>
-<th valign="top">
+    <table>
+    <tr>
+    <th valign="top">
 
-Employee
+    Employee
+    
+    </th>
+    <th valign="top">
 
-</th>
-<th valign="top">
+    Vacation Start Date
+    
+    </th>
+    <th valign="top">
 
-Vacation Start Date
+    Vacation End Date
+    
+    </th>
+    <th valign="top">
 
-</th>
-<th valign="top">
+    Filtered?
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Emp\_1
+    
+    </td>
+    <td valign="top">
+    
+    2026-06-10
+    
+    </td>
+    <td valign="top">
+    
+    2026-06-14
+    
+    </td>
+    <td valign="top">
+    
+    No \(None of the vacation days fall within the work period\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Emp\_2
+    
+    </td>
+    <td valign="top">
+    
+    2026-06-18
+    
+    </td>
+    <td valign="top">
+    
+    2026-06-23
+    
+    </td>
+    <td valign="top">
+    
+    Yes
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Emp\_3
+    
+    </td>
+    <td valign="top">
+    
+    2026-07-09
+    
+    </td>
+    <td valign="top">
+    
+    2026-07-16
+    
+    </td>
+    <td valign="top">
+    
+    Yes
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Emp\_4
+    
+    </td>
+    <td valign="top">
+    
+    2026-06-22
+    
+    </td>
+    <td valign="top">
+    
+    2026-07-16
+    
+    </td>
+    <td valign="top">
+    
+    Yes
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Emp\_5
+    
+    </td>
+    <td valign="top">
+    
+    2026-07-28
+    
+    </td>
+    <td valign="top">
+    
+    2026-08-02
+    
+    </td>
+    <td valign="top">
+    
+    No \(None of the vacation days fall within the work period\)
+    
+    </td>
+    </tr>
+    </table>
+    
 
-Vacation End Date
-
-</th>
-<th valign="top">
-
-Filtered?
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-Emp\_1
-
-</td>
-<td valign="top">
-
-2026-06-10
-
-</td>
-<td valign="top">
-
-2026-06-14
-
-</td>
-<td valign="top">
-
-No \(None of the vacation days fall within the work period\)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Emp\_2
-
-</td>
-<td valign="top">
-
-2026-06-18
-
-</td>
-<td valign="top">
-
-2026-06-23
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Emp\_3
-
-</td>
-<td valign="top">
-
-2026-07-09
-
-</td>
-<td valign="top">
-
-2026-07-16
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Emp\_4
-
-</td>
-<td valign="top">
-
-2026-06-22
-
-</td>
-<td valign="top">
-
-2026-07-16
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Emp\_5
-
-</td>
-<td valign="top">
-
-2026-07-28
-
-</td>
-<td valign="top">
-
-2026-08-02
-
-</td>
-<td valign="top">
-
-No \(None of the vacation days fall within the work period\)
-
-</td>
-</tr>
-</table>
-
-
-To configure such a date-range filter field, create an interval annotation that creates a “virtual” filter field and defines a mapping of its values to the individual filter fields as shown in the following sample codes:
+To configure such a date-range filter field, create an interval annotation with a “virtual” filter field and defines a mapping of its values to the individual filter fields as shown in the following sample codes:
 
 > ### Sample Code:  
 > XML Annotation
@@ -549,7 +557,7 @@ To configure such a date-range filter field, create an interval annotation that 
 > ### Note:  
 > Ensure that the individual filter fields, `VacationStartDate` and `VacationEndDate` in the example above, are annotated with `MultiRange` capabilities. For more information, see [Configuring Filter Fields](configuring-filter-fields-f5dcb29.md).
 
-You can also configure a date-range filter fields in the `manifest.json` file. The following sample code shows the configuration when using a custom page:
+You can also configure a date-range filter field in the `manifest.json` file. The following sample code shows the configuration when using a custom page:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -677,7 +685,7 @@ Properties that are annotated as non-filterable using `FilterRestrictions` aren'
 
 You can use `UI.HiddenFilter` to ensure that a filterable property can't be seen or used as a filter by users. Parameters from a parameterized entity can also be annotated in this manner to the same effect.
 
-`UI.HiddenFilter` ensures that the property isn't seen in the filter context, such as in the filter bar and in the *Adapt Filters* dialog, but can still be seen in other UI elements like forms, tables or charts and can participate in a filter query if associated with a value.
+`UI.HiddenFilter` ensures that the property isn't seen in the filter context, such as in the filter bar and in the *Adapt Filters* dialog, but can still be seen on the UI, for example in forms, tables, or charts. The property can participate in a filter query if associated with a value.
 
 The following sample codes show the use of `UI.HiddenFilter`:
 

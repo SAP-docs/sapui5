@@ -134,6 +134,29 @@ You can set the column width using annotations. To do so, use the `com.sap.vocab
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.lineItem: [
+>     {
+>         type: #WITH_INTENT_BASED_NAVIGATION,
+>         semanticObject: 'EPMSalesOrder',
+>         action: 'display_sttabupa',
+>         position: 10,
+>         cssDefault.width: '10rem'
+>     }
+> ]
+> bp_id;
+> @UI.lineItem: [
+>     {
+>         position: 20,
+>         cssDefault.width: '15rem'
+>     }
+> ]
+> currency_code;
+> ```
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```

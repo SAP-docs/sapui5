@@ -484,7 +484,7 @@ You must set the following keys for each target:
 
 
 > ### Restriction:  
-> -   In edit mode on an object page, the subobject page closes automatically when you add or remove a column from a table.
+> -   The object or subobject page closes automatically when you add a column to the parent page table that the object or subobject page corresponds to.
 > 
 > -   If you have a list report page or an object page with multiple tables that are based on the same entity, only the first table is synchronized with its associated subobject page.
 > 

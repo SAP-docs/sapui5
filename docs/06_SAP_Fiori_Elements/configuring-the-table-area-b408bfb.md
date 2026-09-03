@@ -2,7 +2,7 @@
 
 # Configuring the Table Area
 
-You can configure the columns of a table card, their header and valies, by using the `com.sap.vocabularies.UI.v1.LineItem` annotation.
+You can use the `com.sap.vocabularies.UI.v1.LineItem` annotation to configure the columns of a table card, including their header and values.
 
 
 
@@ -262,7 +262,30 @@ You can display quick-view contact information in a table column using the `com.
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> annotate view YourEntityView with
+> @(
+>   Communication.Contact: {
+>     tel: [
+>       {
+>         type: #fax,
+>         uri: FaxNumber
+>       },
+>       {
+>         type: [ #work, #pref ],
+>         uri: PhoneNumber
+>       }
+>     ],
+>     email: [
+>       {
+>         type: [ #pref, #work ],
+>         address: EmailAddress
+>       }
+>     ]
+>   }
+> );
+> 
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -337,7 +360,7 @@ Navigation to an external app or website.
 </table>
 
 > ### Note:  
-> The recommended way to configure intent-based navigation is by using `DataFieldForIntentBasedNavigation` property. However, use `DataFieldWithUrl` only when it requires to navigate to a specific application route that isn't configured as a target mapping. The overview page recognizes these URL's as intent-based navigation and opens the target application in the same tab, with relevant context.
+> The recommended way to configure intent-based navigation is by using `DataFieldForIntentBasedNavigation` property. However, use `DataFieldWithUrl` only when it requires to navigate to a specific application route that isn't configured as a target mapping. The overview page recognizes these URLs as intent-based navigation and opens the target application in the same tab, with relevant context.
 
 **Related Information**  
 

@@ -2,7 +2,7 @@
 
 # Actions in Tables
 
-Configuration options for table actions in SAP Fiori elements for OData V4. Control selection modes, copy, paste, and export operations, context menus, and node movement in tree tables.
+Configuration options for table actions in SAP Fiori elements for OData V4 allow you to control selection modes, copy, paste, and export operations, context menus, and node movement in tree tables.
 
 For information about adding actions to tables, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 

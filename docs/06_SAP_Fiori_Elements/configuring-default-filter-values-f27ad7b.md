@@ -8,7 +8,7 @@ In *Standard Variant*, you can provide default values for filter fields using `U
 
 In user defined variants, filter fields with value help can also use user default values from the SAP Fiori launchpad user settings. This requires an existing target mapping between the filter field and the corresponding user default field in SAP Fiori launchpad, and a maintained value for the mapped user default.
 
-When these conditions are met, the *Define Condition* tab of the value help dialog displays an additional *User Defaults* option. Selecting this option configures the filter field to dynamically retrieve its value from the corresponding SAP Fiori launchpad user default whenever the variant is applied.
+When these conditions are met, the *Define Condition* tab of the value help dialog displays an additional *Default Values* option. Selecting this option configures the filter field to dynamically retrieve its value from the corresponding SAP Fiori launchpad user default whenever the variant is applied.
 
 
 
@@ -200,7 +200,7 @@ User-defined default variant \(this variant is not equal to the standard variant
 </td>
 <td valign="top">
 
-When the application is launched with a user-defined variant, filter fields configured with the *User Default* option retrieve their values dynamically from the corresponding SAP Fiori launchpad user defaults. All other filter fields use the values persisted in the variant.
+When the application is launched with a user-defined variant, filter fields configured with the *Default Values* option retrieve their values dynamically from the corresponding SAP Fiori launchpad user defaults. All other filter fields use the values persisted in the variant.
 
 </td>
 </tr>

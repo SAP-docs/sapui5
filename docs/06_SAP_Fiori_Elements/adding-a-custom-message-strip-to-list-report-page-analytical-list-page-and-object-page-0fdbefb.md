@@ -17,7 +17,7 @@ The `setCustomMessage` function can have the following optional parameters:
 
 -   A message object containing the following:
 
-    -   `message`: the message text,
+    -   `message`: the message text, or a `sap.m.messageStrip` control.
 
     -   `type`: the message type.
 

@@ -4,107 +4,78 @@
 
 You can render the chart as a waterfall chart in SAP Fiori elements for OData V4.
 
-A waterfall chart lets you analyze a cumulative value.
+A waterfall chart lets you analyze a cumulative value. This chart helps to understand how positive and negative contributions affect a total. You must configure at least one measure and one dimension.
 
   
   
 **Example of a Waterfall Chart**
 
-![](images/Waterfall_Chart_Card_0e381e6.png "Example of a Waterfall Chart")
-
-Waterfall charts allow you to see the change in cumulative values from the initial state to the final state by representing the accumulation of successive values. These are the available waterfall charts:
-
--   Waterfall charts without a time dimension
-
--   Waterfall charts with a time dimension represent the change of a cumulative value over time
-
--   Semantic waterfall charts \(semantic coloring based on `com.sap.vocabularies.UI.v1.CriticalityCalculation` or `com.sap.vocabularies.UI.v1.Criticality` in the datapoint annotation\)
-
-
-> ### Note:  
-> By default the legend shows the name of the measure mapped to the chart and two groups `<0` and `>0`. If there is more than one measure, all measures are displayed instead of the measure names.
-
-> ### Remember:  
-> -   Waterfall charts need at least one measure and one dimension
-> 
-> -   Dimensions for which a role is set \(for example, category\) make up the x-axis \(category axis\). If no dimension is specified with a role, the first dimension is used as the x-axis.
-> 
-> -   Dimensions for which a role is set \(for example, series\) make up the cumulative data points in the chart. A waterfall chart can have only one dimension per role.
-> 
-> -   Dimensions with the role mapped to the `waterfallType` UID. You use this to show the intermediate totals and subtotals in the waterfall chart. Valid values:
-> 
->     -   `null`
-> 
->     -   `subtotal:2` \(combines the previous two data points and shows a new column in the chart as a subtotal\)
-> 
->     -   `total` \(combines all the data points and shows a new column as the total\)
-> 
-> 
-> -   Measures make up the y-axis \(value axis\)
-
-
+![Waterfall chart displaying total net price across four order types with varying values.](images/Waterfall_Chart_Card_0e381e6.png "Example of a Waterfall Chart")
 
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```xml
-> <Annotation Term="UI.Chart" Qualifier="Waterfall_Eval_by_Country">
+> ```
+> <Annotation Term="UI.Chart" Qualifier="Waterfall_Revenue_by_OrderType">
 >     <Record Type="UI.ChartDefinitionType">
->         <PropertyValue Property="Title" String="Revenue Waterfall" />
+>         <PropertyValue Property="Title" String="Revenue Waterfall"/>
 >         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Waterfall"/>
+>         
+>         <PropertyValue Property="Measures">
+>             <Collection>
+>                 <PropertyPath>TotalPrice</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>         
 >         <PropertyValue Property="MeasureAttributes">
 >             <Collection>
 >                 <Record Type="UI.ChartMeasureAttributeType">
->                     <PropertyValue Property="Measure" PropertyPath="Finances" />
->                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis2" />
+>                     <PropertyValue Property="Measure" PropertyPath="TotalPrice"/>
+>                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis2"/>
 >                 </Record>
 >             </Collection>
 >         </PropertyValue>
+>         
+>         <PropertyValue Property="Dimensions">
+>             <Collection>
+>                 <PropertyPath>OrderType</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>         
 >         <PropertyValue Property="DimensionAttributes">
 >             <Collection>
 >                 <Record Type="UI.ChartDimensionAttributeType">
->                     <PropertyValue Property="Dimension" PropertyPath="SpendType" />
->                     <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category" />
->                 </Record>
->                 <Record Type="UI.ChartDimensionAttributeType">
->                     <PropertyValue Property="Dimension" PropertyPath="Type" />
->                     <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Series" />
+>                     <PropertyValue Property="Dimension" PropertyPath="OrderType"/>
+>                     <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
 >                 </Record>
 >             </Collection>
 >         </PropertyValue>
 >     </Record>
 > </Annotation>
+> 
 > ```
 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
 > ```
-> 
-> @UI.Chart: [
+> @UI.chart: [
 >   {
->     title: 'Revenue Waterfall',
-> 	chartType: #WATERFALL,
->     measureAttributes: [
->       {
->         measure: 'Finances',
->         role: #AXIS_2
->       }
->     ],
->     dimensionAttributes: [
->       {
->         dimension: 'SpendType',
->         role: #CATEGORY
->       },
->       {
->         dimension: 'Type',
->         role: #SERIES
->       }
->     ],
->     qualifier: 'Waterfall_Eval_by_Country'
+>     qualifier : 'Waterfall_Revenue_by_OrderType',
+>     title : 'Revenue Waterfall',
+>     chartType : #WATERFALL,
+>     dimensions : [ 'OrderType' ],
+>     measures : [ 'TotalPrice' ],
+>     dimensionAttributes : [{
+>       dimension : 'OrderType',
+>       role : #CATEGORY
+>     }],
+>     measureAttributes : [{
+>       measure : 'TotalPrice',
+>       role : #AXIS_2
+>     }]
 >   }
 > ]
-> annotate view VIEWNAME with { }
 > 
 > ```
 
@@ -112,31 +83,23 @@ Waterfall charts allow you to see the change in cumulative values from the initi
 > CAP CDS Annotation
 > 
 > ```
-> 
-> UI.Chart #Waterfall_Eval_by_Country : {
->     $Type : 'UI.ChartDefinitionType',
->     Title : 'Revenue Waterfall',
->     ChartType : #Waterfall,
->     MeasureAttributes : [
->         {
->             $Type : 'UI.ChartMeasureAttributeType',
->             Measure : Finances,
+> annotate service.YourEntity with @(
+>     UI.Chart #Waterfall_Revenue_by_OrderType : {
+>         Title : 'Revenue Waterfall',
+>         ChartType : #Waterfall,
+>         Measures : [ TotalPrice ],
+>         MeasureAttributes : [{
+>             Measure : TotalPrice,
 >             Role : #Axis2
->         },
->     ],
->     DimensionAttributes : [
->         {
->             $Type : 'UI.ChartDimensionAttributeType',
->             Dimension : SpendType,
+>         }],
+>         Dimensions : [ OrderType ],
+>         DimensionAttributes : [{
+>             Dimension : OrderType,
 >             Role : #Category
->         },
->         {
->             $Type : 'UI.ChartDimensionAttributeType',
->             Dimension : Type,
->             Role : #Series
->         }
->     ]
-> }
+>         }]
+>     }
+> );
+> ```
 > 
 > ```
 

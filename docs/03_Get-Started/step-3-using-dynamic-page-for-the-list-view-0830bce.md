@@ -48,7 +48,7 @@ You can view and download all files at [Flexible Column Layout App - Step 3](htt
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.151.0",
+			"minUI5Version": "1.152.0",
 			"libs": {
 				"sap.f": {},
 				"sap.m": {},

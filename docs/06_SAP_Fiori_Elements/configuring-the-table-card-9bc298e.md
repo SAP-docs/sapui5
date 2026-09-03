@@ -163,7 +163,7 @@ You can also enable smart links in the table area. Define a semantic object for 
 
 [Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-05887bd.md "You can optionally configure the header area including the title, subtitle, KPI value, view switch, and navigation of a table card using the annotations and manifest.json file.")
 
-[Configuring the Table Area](configuring-the-table-area-b408bfb.md "You can configure the columns of a table card, their header and valies, by using the com.sap.vocabularies.UI.v1.LineItem annotation.")
+[Configuring the Table Area](configuring-the-table-area-b408bfb.md "You can use the com.sap.vocabularies.UI.v1.LineItem annotation to configure the columns of a table card, including their header and values.")
 
 [Table Cards](table-cards-167bf7c.md "You can use a table card to display a list of records in a three-column table layout.")
 

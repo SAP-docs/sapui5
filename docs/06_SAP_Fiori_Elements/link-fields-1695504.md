@@ -117,7 +117,7 @@ The following sample code shows the annotations for specifying a link for an ema
 > XML Annotation
 > 
 > ```xml
-> XML<Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/emailAddress">
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/emailAddress">
 >     <Annotation Term="Common.Label" String="Email"/>
 >     <Annotation Term="Communication.IsEmailAddress" Bool="true"/>
 > </Annotations>
@@ -188,19 +188,19 @@ You can display a basic link with an optional icon or image. To do so, use `Data
 > 
 > ```
 > @UI.fieldGroup: [
->   {
->     iconUrl: 'sap-icon://arrow-right'
->     type: #WITH_URL,
->     position: 1 ,
->     qualifier: 'DataFieldUrl'
->   },
->   {
->     url: 'ONEURL',
->     value: 'ONEURL',
->     type: #WITH_URL,
->     position: 2 ,
->     qualifier: 'DataFieldUrl'
->   }
+>     {
+>         iconUrl: 'sap-icon://arrow-right'
+>         type: #WITH_URL,
+>         position: 1 ,
+>         qualifier: 'DataFieldUrl'
+>     },
+>     {
+>         url: 'ONEURL',
+>         value: 'ONEURL',
+>         type: #WITH_URL,
+>         position: 2 ,
+>         qualifier: 'DataFieldUrl'
+>     }
 > ]
 > 
 > ```
@@ -210,19 +210,19 @@ You can display a basic link with an optional icon or image. To do so, use `Data
 > 
 > ```
 > UI.FieldGroup #DataFieldUrl: {
-> Data : [{
->               $Type : 'UI.DataFieldWithUrl',
->               Url   : 'www.sap.com',
->               Value : 'This is an URL',
->               IconUrl: 'sap-icon://arrow-right',
->        },
->        {
->               $Type  : 'UI.DataFieldWithUrl',
->               Url    : oneDisplay,
->               Value  : oneUrl,
->               IconUrl: oneIcon
+>     Data : [{
+>         $Type : 'UI.DataFieldWithUrl',
+>         Url   : 'www.sap.com',
+>         Value : 'This is an URL',
+>         IconUrl: 'sap-icon://arrow-right',
+>     },
+>     {
+>         $Type  : 'UI.DataFieldWithUrl',
+>         Url    : oneDisplay,
+>         Value  : oneUrl,
+>         IconUrl: oneIcon
+>     }]
 > }
-> }]
 > 
 > ```
 

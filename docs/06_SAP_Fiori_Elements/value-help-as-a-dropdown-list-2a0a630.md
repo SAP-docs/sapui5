@@ -4,7 +4,12 @@
 
 You can configure value help as a dropdown list in SAP Fiori elements for OData V4.
 
-If the entity set of a value help has a fairly stable number of instances, you can render an input field with a value help and dropdown list box \(`sap.m.ComboBox` and in cases of multi selection a `sap.m.MultiComboBox`\) using the annotation `Common.ValueListWithFixedValues`.
+If the entity set of a value help has a fairly stable number of instances, you can render an input field with a value help and dropdown list box using the annotation `Common.ValueListWithFixedValues`.
+
+> ### Note:  
+> -   Every time you click the dropdown, a new call to the backend fetches the latest results. Values are not cached when value help is configured as a dropdown list.
+> 
+> -   Ensure that the value help entity does not require any parameters or mandatory filters that don't have a default value.
 
 In the following sample code, the currency code is implemented as a dropdown list box:
 
@@ -152,6 +157,8 @@ You can use `FilterRestrictions` annotations and set the `AllowedExpressions` pr
 > ```
 
 Text handling and sorting in dropdown-based fields follows the same logic as in the value help dialog. For more information, see [Value Help Dialog](value-help-dialog-3faed83.md).
+
+You can ensure distinct values in the dropdown list. For more information, see the [Ensuring Distinct Values](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__ensuring_distinct_values) section in [Value Help](value-help-fccb255.md).
 
 Value help based on fixed values doesn't show recently entered values. For more information, see the [History of Recently Entered Values](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__HistoryofRecentlyEnteredValues) section in [Field Help](field-help-a5608ea.md).
 

@@ -60,3 +60,5 @@ The following buttons are available in the dialog:
 
 [Enablement of Personalization \(With Variant Management\)](enablement-of-personalization-with-variant-management-f280251.md "The simple concept of personalization allows the user to personalize a control and to persist these settings using a VariantManagement control.")
 
+[How to migrate from sap.m.P13nDialog to sap.m.p13n](how-to-migrate-from-sap-m-p13ndialog-to-sap-m-p13n-22123cc.md "This documentation describes how to migrate from the deprecated components to the modern sap.m.p13n implementation. Use this documentation to update personalization dialogs to the current API, which provides improved state management, persistence integration, and TypeScript support.")
+

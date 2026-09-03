@@ -41,7 +41,7 @@ The *Search* field is enabled by default. If the underlying entity doesn't suppo
 > ### Note:  
 > The search string entered by the user is passed to the back end using the `$search` parameter in the OData request. The back end interprets this input and returns the relevant results. For more information, see [Providing Services | capire](https://cap.cloud.sap/docs/guides/providing-services#cds-search).
 
-For more information about how to enable and disable the *Search* field for analytical tables, see the corresponding section in [Setting the Table Type](setting-the-table-type-7f844f1.md).
+For more information about how to enable and disable the *Search* field for analytical tables and tree tables, see [Enabling and Disabling the Search Field in Analytical Tables and Tree Tables](enabling-and-disabling-the-search-field-in-analytical-tables-and-tree-tables-9b901ae.md).
 
 > ### Restriction:  
 > The following special characters are ignored as they cause an error in both RESTful Application Programming Model \(RAP\) and SAP Cloud Application Programming Model \(CAP\) back ends:

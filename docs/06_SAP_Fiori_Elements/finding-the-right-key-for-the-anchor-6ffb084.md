@@ -37,6 +37,8 @@ To position a custom column relative to the other columns, you need to specify t
 2.  To find the column type, open the browser's developer tools to investigate the metadata requests in the network log \(use `$metadata` to filter\). Once you have identified the metadata request, open the response XML and search for the string `<Annotation Term="UI.LineItem">` to find the line item annotations of your table. The line item annotation appears as shown in the following sample code:
 
     > ### Sample Code:  
+    > XML Annotation
+    > 
     > ```
     > <Annotation Term="UI.LineItem">
     >     <Collection>

@@ -41,7 +41,7 @@ The analytical list page \(ALP\) isn't a separate floorplan, but rather a 'flavo
 > }
 > ```
 
-The primary annotation path can be either `UI.Chart`, `UI.PresentationVariant`, or `UI.SelectionPresentationVariant`. If you specify a `UI.PresentationVariant` or `UI.SelectionPresentationVariant`, SAP Fiori elements picks the first chart visualization and renders it. If the primary annotation path leads to a `PresentationVariant` that has no chart visualization, SAP Fiori elements looks for the default chart \(`Ui.Chart` without a qualifier\) and renders it. If the default chart is not found, SAP Fiori elements renders a blank chart.
+The primary annotation path can be either `UI.Chart`, `UI.PresentationVariant`, or `UI.SelectionPresentationVariant`. If you specify a `UI.PresentationVariant` or `UI.SelectionPresentationVariant`, SAP Fiori elements picks the first chart visualization and renders it. If the primary annotation path leads to a `PresentationVariant` that has no chart visualization, SAP Fiori elements looks for the default chart \(`UI.Chart` without a qualifier\) and renders it. If the default chart is not found, SAP Fiori elements renders a blank chart.
 
 > ### Tip:  
 > If the specified primary or secondary `annotationPath` is not found, there is no fallback and the application will fail to load.

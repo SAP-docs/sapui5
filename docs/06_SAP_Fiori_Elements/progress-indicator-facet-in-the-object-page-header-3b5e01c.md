@@ -43,14 +43,14 @@ To display the progress indicator in the object page header, add a record to the
 > 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProjectType">
->    <Annotation Term="UI.HeaderFacets">
->       <Collection>
->          <Record Type="UI.ReferenceFacet">
->             <PropertyValue Property="Target"
->             AnnotationPath="to_ProgressType/@UI.DataPoint#Progress"/>
->          </Record>
->       </Collection>
->    </Annotation>
+>     <Annotation Term="UI.HeaderFacets">
+>         <Collection>
+>             <Record Type="UI.ReferenceFacet">
+>                 <PropertyValue Property="Target"
+>                     AnnotationPath="to_ProgressType/@UI.DataPoint#Progress"/>
+>             </Record>
+>         </Collection>
+>     </Annotation>
 > </Annotations>
 > ```
 
@@ -60,15 +60,15 @@ To display the progress indicator in the object page header, add a record to the
 > ```
 > 
 > annotate view STTA_C_MP_PROJECTTYPE with {
-> @UI.Facet: [
->   {
->     targetQualifier: 'Progress',
->     targetElement: 'TO_PROGRESSTYPE',
->     type: #DATAPOINT_REFERENCE,
->     purpose: #HEADER
->   }
-> ]
-> test;
+>     @UI.Facet: [
+>         {
+>             targetQualifier: 'Progress',
+>             targetElement: 'TO_PROGRESSTYPE',
+>             type: #DATAPOINT_REFERENCE,
+>             purpose: #HEADER
+>         }
+>     ]
+>     test;
 > }
 > 
 > ```
@@ -79,12 +79,12 @@ To display the progress indicator in the object page header, add a record to the
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ProjectType @(
->   UI.HeaderFacets : [
->     {
->         $Type : 'UI.ReferenceFacet',
->         Target : 'to_ProgressType/@UI.DataPoint#Progress',
->     }
->   ]
+>     UI.HeaderFacets : [
+>         {
+>             $Type : 'UI.ReferenceFacet',
+>             Target : 'to_ProgressType/@UI.DataPoint#Progress',
+>         }
+>     ]
 > );
 > 
 > ```
@@ -103,16 +103,16 @@ Annotate the `entityType` containing the properties required for the data point 
 > 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProgressType">
->    <Annotation Term="UI.DataPoint" Qualifier="Progress">
->       <Record>
->          <PropertyValue Property="Title" String="{@i18n>Title}"/>
->          <PropertyValue Property="Description" String="{@i18n>SubTitle}"/>
->          <PropertyValue Property="Value" Path="Progress"/>
->          <PropertyValue Property="TargetValue" Decimal="150"/>
->          <PropertyValue Property="Criticality" Path="Criticality"/>
->          <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
->       </Record>
->    </Annotation>
+>     <Annotation Term="UI.DataPoint" Qualifier="Progress">
+>         <Record>
+>             <PropertyValue Property="Title" String="{@i18n>Title}"/>
+>             <PropertyValue Property="Description" String="{@i18n>SubTitle}"/>
+>             <PropertyValue Property="Value" Path="Progress"/>
+>             <PropertyValue Property="TargetValue" Decimal="150"/>
+>             <PropertyValue Property="Criticality" Path="Criticality "/>
+>             <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
+>         </Record>
+>     </Annotation>
 > </Annotations>
 > 
 > ```
@@ -123,14 +123,14 @@ Annotate the `entityType` containing the properties required for the data point 
 > ```
 > 
 > annotate view STTA_C_MP_PROGRESSTYPE with {
-> @UI.dataPoint: {
->   title: '{@i18n>Title}',
->   description: '{@i18n>SubTitle}',
->   targetValue: 150,
->   criticality: 'Criticality ',
->   visualization: #PROGRESS
-> }
-> progress;
+>     @UI.dataPoint: {
+>         title: '{@i18n>Title}',
+>         description: '{@i18n>SubTitle}',
+>         targetValue: 150,
+>         criticality: 'Criticality ',
+>         visualization: #PROGRESS
+>     }
+>     progress;
 > }
 > ```
 
@@ -140,14 +140,14 @@ Annotate the `entityType` containing the properties required for the data point 
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ProgressType @(
-> UI.DataPoint #Progress : {
->     Title : '{@i18n>Title}',
->     Description : '{@i18n>SubTitle}',
->     Value : Progress,
->     TargetValue : 150,
->     Criticality : Criticality ,
->     Visualization : #Progress
->   }
+>     UI.DataPoint #Progress : {
+>         Title : '{@i18n>Title}',
+>         Description : '{@i18n>SubTitle}',
+>         Value : Progress,
+>         TargetValue : 150,
+>         Criticality : Criticality,
+>         Visualization : #Progress
+>     }
 > );
 > 
 > ```
@@ -169,8 +169,8 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProgressType/Value">
->    <Annotation Term="Measures.Unit" Path="UoM"/>
->    <Annotation Term="Common.Label" String="{@i18n>Footer}"/>
+>     <Annotation Term="Measures.Unit" Path="UoM"/>
+>     <Annotation Term="Common.Label" String="{@i18n>Footer}"/>
 > </Annotations>
 > ```
 
@@ -190,9 +190,9 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ ProgressType with {
->   @Measures.Unit : UoM
->   Common.Label : '{@i18n>Footer}'
->   Value
+>     @Measures.Unit : UoM
+>     Common.Label : '{@i18n>Footer}'
+>     Value
 > };
 > ```
 
@@ -205,8 +205,8 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ ProgressType/Value">
->    <Annotation Term="Measures.ISOCurrency" Path="UoM"/>
->    <Annotation Term="Common.Label" Path="Footer/">
+>     <Annotation Term="Measures.ISOCurrency" Path="UoM"/>
+>     <Annotation Term="Common.Label" Path="Footer/">
 > </Annotations>
 > ```
 

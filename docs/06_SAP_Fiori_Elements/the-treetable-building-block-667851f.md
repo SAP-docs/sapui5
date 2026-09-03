@@ -33,8 +33,6 @@ You can use the `TreeTable` building block to avoid exposing parameters that are
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Tree Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/treeTable).
 
-For more information about tree tables, see [Tree Tables](disabling-the-selection-of-leaf-nodes-in-tree-tables-7cf7a31.md).
-
 
 
 <a name="loio667851f2d0d746a387d7e2fc7766b743__section_ht5_nls_j5b"/>

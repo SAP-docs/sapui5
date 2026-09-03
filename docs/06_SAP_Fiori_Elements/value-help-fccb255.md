@@ -37,6 +37,7 @@ Use the `Common.ValueList` annotation when the value help entity is defined with
 >             <PropertyValue Property="Label" String="Travel Agency" />
 >             <PropertyValue Property="SearchSupported" Bool="true" />
 >             <PropertyValue Property="FetchValues" Int="2" />
+>             <PropertyValue Property="DistinctValuesSupported" Bool="true"/>
 >             <PropertyValue Property="Parameters">
 >                 <Collection>
 >                     <Record Type="Common.ValueListParameterInOut">
@@ -92,6 +93,7 @@ Use the `Common.ValueList` annotation when the value help entity is defined with
 >         Label          : 'Travel Agency',
 >         SearchSupported,
 >         FetchValues    : 2,
+>         DistinctValuesSupported : true,
 >         Parameters     : [
 >             {
 >                 $Type             : 'Common.ValueListParameterInOut',
@@ -267,7 +269,7 @@ Use the `Common.ValueListMapping` annotation when the value help entity’s meta
 > 
 > ```
 
-The following sample codes show how to define a parameterized value help with ABAP CDS annotations:
+The following sample codes show how to define a parameterized value help with XML and ABAP CDS annotations:
 
 > ### Sample Code:  
 > XML Annotation
@@ -340,6 +342,8 @@ The following sample codes show how to define a parameterized value help with AB
 > -   Navigation path for `localElement` and `ValueListProperty`
 > 
 > -   `ValueListParameterConstant`
+> 
+> -   `DistinctValuesSupported`
 > 
 > 
 > If required, please use the local XML annotation.
@@ -694,6 +698,28 @@ In the following sample code, `InitialValueIsSignificant` is used to consider an
 
 > ### Restriction:  
 > Parameterized value help service isn't supported.
+
+
+
+<a name="loiofccb255723d3489cae955648756411f6__ensuring_distinct_values"/>
+
+## Ensuring Distinct Values
+
+A value help table can show duplicate rows. This happens when a filter is applied to the table, but the filter field is not a visible column in the table. When the filter is active, it removes the duplicates, so only distinct rows are shown. When the filter is removed, the duplicates reappear.
+
+To eliminate the duplicate values, ensure that the backend supports `DistinctValuesSupported`. When this annotation is present, the framework always fetches only unique values, regardless of any active filters. This also applies to the type-ahead behavior of the field.
+
+> ### Note:  
+> If you are enabling this feature using local annotation, ensure that the backend supports `$apply` and `groupby`, otherwise the feature doesn't work.
+
+> ### Restriction:  
+> This feature is not supported in the following scenarios:
+> 
+> -   When value help uses tree tables inside of the value help dialog.
+> 
+> -   When value help table has one or more columns whose values are coming from an 1:n navigation.
+
+For annotations, see the code samples within the Annotations section of this page.
 
 
 

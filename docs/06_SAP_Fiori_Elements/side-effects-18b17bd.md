@@ -134,6 +134,8 @@ A side effect annotation includes the following elements:
     > The `EffectTypes` property is deprecated as of the SAPUI5 1.84 release.
 
 
+You can explore and work with the coding yourself. For more information about side effects and live examples, see the SAP Fiori development portal at [Global Patterns - Side Effects](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/guidanceSideEffects).
+
 
 
 ### Side Effect Annotation Properties
@@ -145,7 +147,7 @@ The following side effect annotations are supported:
     If you use a value help, combo box, checkbox, date picker, or date-time picker, the side effect is triggered as soon as the value is set. However, if you are typing the value, the side effect is triggered when the focus moves away from the field. If the aforementioned controls are used in combination with other input fields as a source for a side effect, then the side effect is triggered only when the focus moves away from the source field group.
 
     > ### Restriction:  
-    > You cannot use navigation properties as source properties.
+    > You can't use navigation properties as source properties.
 
 -   **Source entities**
 
@@ -155,9 +157,18 @@ The following side effect annotations are supported:
     -   The context of its parent entity when a relative side effect \(1:1 or 1:n\) is used.
 
     > ### Caution:  
-    > You cannot specify a 1:1 association or an empty target, such as `NavigationPropertyPath`, to ensure that the whole entity is considered as the source.
+    > You can't specify a 1:1 association or an empty target, such as `NavigationPropertyPath`, to ensure that the whole entity is considered as the source.
 
     The side effect is triggered by structural changes such as adding or deleting an item. It is also triggered when any property of an entity changes.
+
+    You can also specify the kind of changes that trigger the side effect by using the following properties:
+
+    -   `SourceEntitiesInserted`: The side effect is triggered when an entity is created in the navigation collection.
+
+    -   `SourceEntitiesUpdated`: The side effect is triggered when a property of an entity in the navigation collection changes.
+
+    -   `SourceEntitiesDeleted`: The side effect is triggered when an entity is deleted from the navigation collection.
+
 
 -   **Target properties**
 
@@ -193,9 +204,9 @@ Value lists are cached during runtime for better performance. You can define an 
 The following sample code shows you an example:
 
 > ### Sample Code:  
-> ValueListCollection
+> XML Annotation
 > 
-> ```
+> ```xml
 > <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeOfProperty">
 >      <Record>
 >           <PropertyValue Property="SourceProperties">
@@ -210,6 +221,24 @@ The following sample code shows you an example:
 >           </PropertyValue>
 >      </Record>
 > </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate YourEntity with @(
+>     Common.SideEffects #ChangeOfProperty : {
+>         $Type: 'Common.SideEffectsType',
+>         SourceProperties: ['PropertyName'],
+>         TargetEntities: ['/Namespace.EntityContainer/ValueListCollection']
+>     }
+> );
 > ```
 
 
@@ -400,8 +429,6 @@ For example, if a data field referencing the `ProductCategory` or `MainProductCa
 > ```
 
 
-
-You can explore and work with the coding yourself. For more information about side effects and live examples, see the SAP Fiori development portal at [Global Patterns - Side Effects](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/guidanceSideEffects).
 
 
 

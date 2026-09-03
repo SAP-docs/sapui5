@@ -98,6 +98,19 @@ The rendering result is as follows:
 
 ![](images/ListReport_LineItem_69a7c44.png "List Report Page: LineItem of Root EntitySet")
 
+You can define the labels in the column headers in the `UI.DataField`. If you don't define custom labels, the column header uses the property labels.
+
+The column header label isn't displayed if any of the following is true:
+
+-   The column contains an inline action with navigation configured using `DataFieldForIntentBasedNavigation`.
+
+    For more information, see the [App-Specific Actions](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__section_ifk_jqb_2nb) section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+
+-   The column contains a field group without a statically visible label value for `dataField` or `dataFieldForAnnotation`.
+
+    For more information, see the [Table Implementation](grouping-of-fields-2f84455.md#loio2f84455b793445e78485d6f4bf3d3561__section_fmx_nrt_n4b) section in [Grouping of Fields](grouping-of-fields-2f84455.md).
+
+
 
 
 ## Related Links

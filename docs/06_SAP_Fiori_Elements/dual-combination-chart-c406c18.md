@@ -115,5 +115,5 @@ The following sample code how to define a dual combination chart:
 
 
 > ### Note:  
-> For information about SAP Fiori elements for OData V2, see [Dual Combination Chart Card](dual-combination-chart-card-94dc2af.md).
+> For information about dual combination charts on the overview page, see [Dual Combination Chart Card](dual-combination-chart-card-94dc2af.md).
 

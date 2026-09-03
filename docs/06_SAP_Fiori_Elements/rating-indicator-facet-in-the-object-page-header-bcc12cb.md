@@ -62,7 +62,7 @@ When the rating indicator shows an aggregated rating, it contains the following 
 >     {
 >         id: 'ProductRating',
 >         type: #DATAPOINT_REFERENCE,
->         targetElement: '_ProductRating',  
+>         targetElement: '_ProductRating',
 >         targetQualifier: 'Aggregated'
 >     }
 > ]
@@ -128,18 +128,19 @@ When the rating indicator shows a non-aggregated rating, it contains the followi
 > ```xml
 > 
 > <Record Type="UI.ReferenceFacet">
->     <PropertyValue Property="Target" AnnotationPath="to_ProductRating/@UI.DataPoint#NonAggregated"/
+>     <PropertyValue Property="Target" AnnotationPath="to_ProductRating/@UI.DataPoint#NonAggregated"/>
 > </Record>
+> 
 > <!-- non aggregated rating -->
 > <Annotation Term="UI.DataPoint" Qualifier="NonAggregated">
->    <Record>
->       <PropertyValue Property="Title" String="{@i18n>@ProductUserRating}"/>
->       <PropertyValue Property="Description" String="@i18n>@MyRating}"/>
->       <PropertyValue Property="Value" Path="Rating"/>
->       <PropertyValue Property="TargetValue" Path="MaxRating"/>
->       <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Rating"/>
->    </Record>
-> </Annotation> 
+>     <Record>
+>         <PropertyValue Property="Title" String="{@i18n>@ProductUserRating}"/>
+>         <PropertyValue Property="Description" String="@i18n>@MyRating}"/>
+>         <PropertyValue Property="Value" Path="Rating"/>
+>         <PropertyValue Property="TargetValue" Path="MaxRating"/>
+>         <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Rating"/>
+>     </Record>
+> </Annotation>
 > 
 > ```
 
@@ -149,20 +150,20 @@ When the rating indicator shows a non-aggregated rating, it contains the followi
 > ```
 > 
 > @UI.facet: [
->  {
->   id:           'rating',
->   type:         #DATAPOINT_REFERENCE,
->   targetElement: '_ProductRating',
->   targetQualifier: 'NonAggregated'
->  }
+>     {
+>         id: 'rating',
+>         type: #DATAPOINT_REFERENCE,
+>         targetElement: '_ProductRating',
+>         targetQualifier: 'NonAggregated'
+>     }
 > ]
 > product;
 > 
 > @UI.dataPoint: {
->   title: '{@i18n>@ProductUserRating}',
->   description: '@i18n>@MyRating}',
->   targetValueElement: 'MaxRating',
->   visualization: #RATING
+>     title: '{@i18n>@ProductUserRating}',
+>     description: '@i18n>@MyRating}',
+>     targetValueElement: 'MaxRating',
+>     visualization: #RATING
 > }
 > Rating;
 > 

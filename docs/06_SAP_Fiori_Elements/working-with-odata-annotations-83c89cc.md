@@ -35,7 +35,7 @@ You can use OData annotations as shown in the following sample code:
 > 
 > ```xml
 > <Annotations Target="namespace.ServiceName.Products/Name">
->   <Annotation Term="Common.Label" String="Name"/>
+>     <Annotation Term="Common.Label" String="Name"/>
 > </Annotations>
 > ```
 

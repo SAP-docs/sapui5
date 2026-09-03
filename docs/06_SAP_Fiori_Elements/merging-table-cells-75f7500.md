@@ -63,7 +63,24 @@ To enable cell merging whenever the table is rendered, set the `@HTML5.RowSpanFo
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Use the local XML annotation.
+> ```
+> annotate view Products with
+> {
+>     @UI.lineItem: [
+>         {
+>             position: 10,
+>             cssDefault.rowSpanForDuplicateValues: true
+>         }
+>     ]
+>     Category;
+>     @UI.lineItem: [
+>         {
+>             position: 20
+>         }
+>     ]
+>     Status;
+> }
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

@@ -425,3 +425,5 @@ Persistence is provided by using the `VariantManagement` control. When using the
 
 [Personalization Dialog](personalization-dialog-a3c3c5e.md "The sap.m.p13n.Popup control in the sap.m.p13n namespace provides a dialog or popover for personalizing content, for example, of a table, such as selecting columns and adapting their order.")
 
+[How to migrate from sap.m.P13nDialog to sap.m.p13n](how-to-migrate-from-sap-m-p13ndialog-to-sap-m-p13n-22123cc.md "This documentation describes how to migrate from the deprecated components to the modern sap.m.p13n implementation. Use this documentation to update personalization dialogs to the current API, which provides improved state management, persistence integration, and TypeScript support.")
+

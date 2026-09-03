@@ -287,7 +287,7 @@ We initialize the router and bind to its `onBeforeRouteMatched` event, and we in
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.151.0",
+			"minUI5Version": "1.152.0",
 			"libs": {
 				"sap.f": {},
 				"sap.m": {},

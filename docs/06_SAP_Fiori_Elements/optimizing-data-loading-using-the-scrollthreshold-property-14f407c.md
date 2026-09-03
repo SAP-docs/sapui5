@@ -43,5 +43,5 @@ You can configure the `scrollThreshold` property in the `manifest.json` file as 
 > 
 > ```
 
-Key users can configure the `scrollThreshold` property using the UI adaptation mode. For more information, see [Extending Delivered Apps With Key User Adaptation](extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
+Key users can configure the `scrollThreshold` property using the UI adaptation mode. At runtime, the key user’s setting takes precedence over the manifest configuration. For more information about key user adaptation, see [Extending Delivered Apps With Key User Adaptation](extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
 

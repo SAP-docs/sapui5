@@ -24,7 +24,7 @@ When the manifest schema changes, a new version is published alongside the relea
 
 ## Manifest Version 2
 
-Starting with SAPUI5 1.136, the new major *version 2.x.x* is available. Using this new version ensures you follow best practices and are prepared for the future. As mentioned earlier, this new major version removes deprecated features. Check the [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md) to learn about the changes needed to migrate to this version.
+Starting with SAPUI5 1.136, the new major *version 2.x.x* is available. Using this new version ensures you follow best practices and are prepared for the future. As mentioned earlier, this new major version removes deprecated features. Check the [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md) to learn about the changes needed to migrate to this version. For more information about *Manifest Version 2* releases, refer to the documentation [Manifest Version 2 Changelog.](https://github.com/UI5/manifest/blob/v2/CHANGELOG.md)
 
 
 

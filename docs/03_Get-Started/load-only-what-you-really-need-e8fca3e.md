@@ -15,7 +15,7 @@ Always define the libraries you use in the manifest and remove all libraries tha
 ```json
 "sap.ui5": {
 	"dependencies": {
-		"minUI5Version": "1.151.0",
+		"minUI5Version": "1.152.0",
 		"libs": {
 			"sap.ui.core": {},
 			"sap.m": {},

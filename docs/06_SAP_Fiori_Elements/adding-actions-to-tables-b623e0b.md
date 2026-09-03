@@ -4,6 +4,8 @@
 
 You can add different buttons to tables in SAP Fiori elements for OData V4.
 
+For information about configuring actions related to table-specific UI features, see [Actions in Tables](actions-in-tables-77cc5c9.md).
+
 The table control offers the possibility to show generic actions, such as *Create* and *Delete*, as well as app-specific actions.
 
 

@@ -92,6 +92,19 @@ A property containing media data of type **stream**, such as an image, is also s
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> annotate view STTA_C_MP_Product with
+> {
+>     @Semantics.imageUrl: true
+>     @Semantics.mimeType: 'image/jpg'
+>     @ObjectModel.text.element: 'Product'
+>     ProductPictureURL;
+> }
+> ```
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
@@ -117,6 +130,18 @@ You can also use media data of type **binary** instead of **stream**. The local 
 >     <Annotation Term="Core.MediaType" String="image/png"/>
 > </Annotations>
 > 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> annotate view STTA_C_MP_Product with
+> {
+>     @Semantics.mimeType: 'image/png'
+>     @ObjectModel.text.element: ['Product']
+>     ProductPictureURL;
+> }
 > ```
 
 > ### Sample Code:  

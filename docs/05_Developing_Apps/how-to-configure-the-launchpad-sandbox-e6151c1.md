@@ -85,12 +85,12 @@ Default Value
 <tr>
 <td valign="top">
 
-`appStateMode`
+`transientAppState`
 
 </td>
 <td valign="top">
 
-`true` \(transient, not persisted\)
+`true` \(not persisted\)
 
 </td>
 </tr>
@@ -130,6 +130,42 @@ Not set
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`afterFlpStart`
+
+</td>
+<td valign="top">
+
+Not set
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sideNavigation`
+
+</td>
+<td valign="top">
+
+Popover
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`menu.enabled`
+
+</td>
+<td valign="top">
+
+`true`
+
+</td>
+</tr>
 </table>
 
 
@@ -142,7 +178,9 @@ Not set
 
 ### Defining tiles
 
-Defines the apps that should be available in the sandbox.
+Defines the apps that should be available in the sandbox. Apps and URL tiles are supported.
+
+**App tiles** start SAPUI applications.
 
 -   Type: `Object` or `Array<Object>`
 -   Default:
@@ -272,53 +310,173 @@ Defines the apps that should be available in the sandbox.
     </tr>
     </table>
     
--   **Examples**
 
-    Single app:
+**URL tiles** open an external URL directly.
 
-    ```
-    {
-        "tiles": {
+Properties
+
+
+<table>
+<tr>
+<th valign="top">
+
+Property
+
+</th>
+<th valign="top">
+
+Type
+
+</th>
+<th valign="top">
+
+Required
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`title`
+
+</td>
+<td valign="top">
+
+String
+
+</td>
+<td valign="top">
+
+Yes
+
+</td>
+<td valign="top">
+
+Title shown on the tile
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`subtitle`
+
+</td>
+<td valign="top">
+
+String
+
+</td>
+<td valign="top">
+
+No
+
+</td>
+<td valign="top">
+
+Subtitle shown on the tile
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`icon`
+
+</td>
+<td valign="top">
+
+String
+
+</td>
+<td valign="top">
+
+No
+
+</td>
+<td valign="top">
+
+Icon shown on the tile. sap-icon:// URI for the tile
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`url`
+
+</td>
+<td valign="top">
+
+String
+
+</td>
+<td valign="top">
+
+Yes
+
+</td>
+<td valign="top">
+
+URL the tile should navigate to.
+
+</td>
+</tr>
+</table>
+
+
+
+### Examples
+
+Single app:
+
+```
+{
+    "tiles": {
+        "semanticObject": "SalesOrder",
+        "action": "manage"
+    }
+}
+```
+
+Multiple apps:
+
+```
+{
+    "tiles": [
+        {
             "semanticObject": "SalesOrder",
-            "action": "manage"
-        }
-    }
-    ```
-
-    Multiple apps:
-
-    ```
-    {
-        "tiles": [
-            {
-                "semanticObject": "SalesOrder",
-                "action": "display",
-                "rootPath": "../"
-            },
-            {
-                "semanticObject": "Product",
-                "action": "manage",
-                "rootPath": "../../product-app/"
-            }
-        ]
-    }
-    ```
-
-    Adding startup parameters:
-
-    ```
-    {
-        "tiles": [{
-            "semanticObject": "Invoice",
             "action": "display",
-            "parameters": {
-                "company": "1000",
-                "fiscalYear": "2024"
-            }
-        }]
-    }
-    ```
+            "rootPath": "../"
+        },
+        {
+            "semanticObject": "Product",
+            "action": "manage",
+            "rootPath": "../../product-app/"
+        }
+    ]
+}
+```
 
+Adding startup parameters:
+
+```
+{
+    "tiles": [{
+        "semanticObject": "Invoice",
+        "action": "display",
+        "parameters": {
+            "company": "1000",
+            "fiscalYear": "2024"
+        }
+    }]
+}
+```
 
 
 
@@ -345,9 +503,9 @@ This will directly open the SalesOrder-display app instead of showing the home p
 
 
 
-### Configuring the appStateMode
+### Configuring the transientAppState
 
-Configures whether AppState should be transient \(not persisted\).
+Configures whether transientAppState should be transient \(not persisted\).
 
 -   **Type**: `Boolean`
 
@@ -357,7 +515,7 @@ Configures whether AppState should be transient \(not persisted\).
 
     ```
     {
-        "appStateMode": false
+        "transientAppState": false
     }
     ```
 
@@ -483,7 +641,7 @@ Specifies a module to execute before the launchpad starts.
         }
     ],
     "rootIntent": "SalesOrder-display",
-    "appStateMode": true,
+    "transientAppState": true,
     "rta": "localService/fakeLrep.json",
     "beforeFlpStart": "module:myapp/test/initMockServer",
     "plugins": {

@@ -1,16 +1,25 @@
 <!-- loio91e016c0335f4d3b81c647c34dcd30c3 -->
 
-# Searching for Rows in a Table on an Object Page
+# Searching for Rows in a Table
 
 Users can use the search bar to search for particular rows in the table in SAP Fiori elements for OData V4.
 
-A search field is displayed in the table toolbar if the used entity set is searchable.
+A search field is displayed in the table toolbar if the used entity set is searchable. If the table is linked to a filter bar, the search field is displayed in the filter bar.
+
+The table can be linked to a filter bar in cases such as the following:
+
+-   The table is used on the list report page.
+
+-   The `Table` building block is linked to the `FilterBar` building block.
+
 
 
 
 ## Handling of Search Restrictions
 
 The search field is displayed in the toolbar of a responsive table or grid table if the entity is searchable. To define an entity as searchable, use the annotation `Capabilities.SearchRestrictions`. The search restriction for a table is first looked up in the parent entity \(using `NavigationRestrictions` at the parent entity, with the `NavigationProperty` pointing to the association of the table entity\).
+
+In the following subsections, most titles of XML examples show partial paths. These are relative OData V4 binding paths resolved against the page’s binding context.
 
 
 
@@ -190,23 +199,5 @@ In a containment scenario \(for example, where the main entity set is from a par
 > 
 > ```
 
-The search field is displayed in the toolbar of an analytical table or tree table if the entity is searchable. To define an entity as searchable, use the search transformation in the `Transformations` of the `ApplySupported` annotation. If no `Transformations` are available, then the search field is enabled as well.
-
-> ### Sample Code:  
-> ```
-> 
-> <Annotation Term="SAP__aggregation.ApplySupported">
->     <Record>
->         <PropertyValue Property="Transformations">
->             <Collection>
->                 <String>filter</String>
->                 <String>orderby</String>
->                 <String>search</String>
->                 <String>descendants</String>
->             </Collection>
->         </PropertyValue>
->     </Record>
-> </Annotation>
-> 
-> ```
+The search field is displayed in the toolbar of an analytical table or tree table if the entity is searchable. For information about defining searchable entities in analytical tables and tree tables, see [Enabling and Disabling the Search Field in Analytical Tables and Tree Tables](enabling-and-disabling-the-search-field-in-analytical-tables-and-tree-tables-9b901ae.md).
 

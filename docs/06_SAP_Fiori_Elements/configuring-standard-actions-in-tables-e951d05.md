@@ -8,7 +8,7 @@ You can configure the various properties of standard actions in tables in SAP Fi
 
 ## Configuring the Visibility and State of Standard Actions
 
-You can configure the visibility and state of standard actions for individual table instances using the settings in the `manifest.json` file. Settings for a specific table instance are stored in the`controlConfiguration` section.
+You can configure the visibility and state of standard actions for individual table instances using the settings in the `manifest.json` file. Settings for a specific table instance are stored in the `controlConfiguration` section.
 
 **Standard Action Settings**
 
@@ -72,7 +72,7 @@ Controls if the standard action button is enabled or disabled.
 > ### Caution:  
 > Configure these actions with care. It's the application's responsibility to ensure compliance with SAP Fiori UX standards and guidelines.
 
-The following sample code shows how to hide the *Delete* button in a specific table, by adding the actions configuration inside the table's control configuration:
+The following sample code shows how to hide the *Delete* button in a specific table, by adding the `actions` configuration inside the table's control configuration:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -134,7 +134,7 @@ For applications with multiple tables, configure each table separately using its
 
 ## Configuring the Order of Standard Actions
 
-You can configure the order of standard actions in the table toolbar. To do so, define the properties `anchor` and `position` for each action corresponding to the action key in the `manifest.json` file. The following table shows the keys and the corresponding standard actions:
+You can configure the order of standard actions in the table toolbar. To do so, define the `anchor` and `position` properties for each action corresponding to the action key in the `manifest.json` file. The following table shows the keys and the corresponding standard actions:
 
 
 <table>

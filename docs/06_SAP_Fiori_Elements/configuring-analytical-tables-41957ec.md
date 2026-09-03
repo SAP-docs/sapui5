@@ -27,7 +27,7 @@ Before configuring an analytical table, ensure that your app meets the following
 **Related Information**  
 
 
-[Enabling and Disabling the Search Field](enabling-and-disabling-the-search-field-9b901ae.md "The search functionality filters large datasets in analytical tables by text input across multiple properties. The Search field is enabled by default or requires the search transformation in SAP Fiori elements for OData V4.")
+[Enabling and Disabling the Search Field in Analytical Tables and Tree Tables](enabling-and-disabling-the-search-field-in-analytical-tables-and-tree-tables-9b901ae.md "The search functionality filters large datasets in analytical tables and tree tables by text input across multiple properties. The Search field is enabled by default or requires the search transformation in SAP Fiori elements for OData V4.")
 
 [Aggregation Based on Visible Properties](aggregation-based-on-visible-properties-d230e37.md "Aggregation based on visible properties optimizes analytical table performance by limiting data aggregation to only displayed columns in SAP Fiori elements for OData V4. Use this feature with large datasets to reduce unnecessary back-end requests for key properties that aren't relevant to the current view.")
 

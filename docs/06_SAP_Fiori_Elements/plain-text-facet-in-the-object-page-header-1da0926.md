@@ -51,14 +51,14 @@ The following code samples show an example of how to create your annotations for
 > 
 > ```
 > 
->  @UI.facet: [
->   {
->    label:        '{@i18n>@ProductDescription}',
->    purpose:      #STANDARD,
->    type:         #FIELDGROUP_REFERENCE,
->    targetElement: '_ProductTextInCurrentLang',
->    targetQualifier: 'PlainText'
->   }
+> @UI.facet: [
+>     {
+>         label: '{@i18n>@ProductDescription}',
+>         purpose: #STANDARD,
+>         type: #FIELDGROUP_REFERENCE,
+>         targetElement: '_ProductTextInCurrentLang',
+>         targetQualifier: 'PlainText'
+>     }
 > }
 > 
 > ```
@@ -104,9 +104,9 @@ The following code samples show an example of how to create your annotations for
 > ```
 > 
 > @UI.fieldGroup: [
->   {
->     qualifier: 'PlainText'
->   }
+>     {
+>         qualifier: 'PlainText'
+>     }
 > ]
 > DESCRIPTION;
 > ```
@@ -138,10 +138,8 @@ If you want to configure a text field for multi-line text, use the `UI.Multiline
 > 
 > ```xml
 > 
-> <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProductTextType/Description">
-> 
->     <Annotation Term="UI.MultiLineText"/>
-> 
+> <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProductTextType/Description"> 
+>     <Annotation Term="UI.MultiLineText"/> 
 > </Annotations>
 > 
 > ```
@@ -152,8 +150,8 @@ If you want to configure a text field for multi-line text, use the `UI.Multiline
 > ```
 > 
 > annotate view STTA_C_MP_PRODUCTTEXTTYPE with {
->   @UI.multiLineText: true
->   description;
+>     @UI.multiLineText: true
+>     description;
 > }
 > ```
 
@@ -163,8 +161,8 @@ If you want to configure a text field for multi-line text, use the `UI.Multiline
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ProductTextType with {
-> 	@UI.MultiLineText
-> 	Description
+>     @UI.MultiLineText
+>     Description
 > };
 > ```
 

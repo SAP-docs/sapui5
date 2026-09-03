@@ -645,6 +645,9 @@ The property `ModifiedAt` is hidden in the `FieldGroup` with the qualifier `Admi
 > @UI.hidden: true
 > 
 > ```
+> 
+> > ### Note:  
+> > ABAP CDS does not allow a `UI.hidden` annotation pointing to a path. Please use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -664,9 +667,6 @@ The property `ModifiedAt` is hidden in the `FieldGroup` with the qualifier `Admi
 > }
 > 
 > ```
-
-> ### Note:  
-> ABAP CDS does not allow a `UI.hidden` annotation pointing to a path. Please use the local XML annotation.
 
 The property `ModifiedAt` is always hidden \(wherever the property appears\) if the property `HasDraftEntity` is set to `true` – in all other cases it's visible.
 
@@ -690,6 +690,9 @@ The property `ModifiedAt` is always hidden \(wherever the property appears\) if 
 > }
 > 
 > ```
+> 
+> > ### Note:  
+> > ABAP CDS does not allow a `UI.hidden` annotation pointing to a path. Use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -702,9 +705,6 @@ The property `ModifiedAt` is always hidden \(wherever the property appears\) if 
 > }
 > 
 > ```
-
-> ### Note:  
-> ABAP CDS does not allow a `UI.hidden` annotation pointing to a path. Use the local XML annotation.
 
 
 
@@ -775,6 +775,9 @@ In SAP Fiori elements for OData V4, you can use the `common.FieldControl` annota
 >   }
 > 
 > ```
+> 
+> > ### Note:  
+> > ABAP CDS only supports `@ObjectModel.mandatory` but **not** `@ObjectModel.readOnly`.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -787,9 +790,6 @@ In SAP Fiori elements for OData V4, you can use the `common.FieldControl` annota
 > }
 > 
 > ```
-
-> ### Note:  
-> ABAP CDS only supports `@ObjectModel.mandatory` but **not** `@ObjectModel.readOnly`.
 
 
 <table>

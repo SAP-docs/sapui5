@@ -14,9 +14,7 @@ A scatter chart allows you to visualize the distribution of data points across t
 
 ![](../01_Whats-New/images/Whats_New_140_OVP_Scatter_Chart_f264ec1.png "Example of a Scatter Chart")
 
-For the first measure, the role is set to an axis is assigned to the `valueAxis` feed UID makes up the x-axis.
-
-The first measure is plotted on the x-axis and the second measure on the y-axis. Dimensions assigned with `Series` role get a different color for each of its members.
+The first measure with `Role=Axis1` is plotted on the x-axis, and the second measure is plotted on the y-axis. Dimensions assigned with `Series` role get a different color for each of its members.
 
 The following code samples show how to configure a scatter chart with two measures \(`salesshare` and `totalsales`\) and one dimension \(`suppliercompany`\) with no role:
 

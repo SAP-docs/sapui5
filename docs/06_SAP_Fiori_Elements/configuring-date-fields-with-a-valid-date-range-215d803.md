@@ -23,6 +23,11 @@ Using the `Validation.Minimum` and `Validation.Maximum` annotations, you can dis
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
@@ -49,6 +54,11 @@ You can also use the path value to set a valid date range for the `Date` fields.
 > 	<Annotation Term="Validation.Maximum" Path="MaximumDate" />
 > </Annotations>
 > ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation

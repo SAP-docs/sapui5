@@ -2,7 +2,7 @@
 
 # Application Cache Buster
 
-The application cache buster \(short `AppCacheBuster`\) is similar to the cache buster but is used for application resources.
+The application cache buster \(short `AppCacheBuster`\) is similar to the [Cache Buster for SAPUI5](cache-buster-for-sapui5-91f0809.md) but is used for application resources.
 
 > ### Note:  
 > SAPUI5 supports the application cache buster on SAP NetWeaver AS for ABAP only.

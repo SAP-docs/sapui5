@@ -261,6 +261,18 @@ Type-Dependent Properties
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+<code><code>readOnly</code></code> \(`boolean`\)
+
+</td>
+</tr>
 </table>
 
 In this section, you can find out more about type-independent properties.
@@ -841,6 +853,32 @@ var exportConfiguration = {
 
 > ### Note:  
 > Relational hierarchy data is not supported.
+
+
+
+### Read-Only Columns
+
+The `sap.ui.export.Column` configuration object supports the `readOnly` Boolean property. Setting this property to `true` on one or more columns locks those columns in the exported xlsx file.
+
+The key behavior is as follows:
+
+-   If at least one column is marked `readOnly: true`, **sheet protection is automatically enabled** in the exported file.
+-   All other columns remain **fully editable**, even with sheet protection active.
+-   Read-only column headers receive a localized suffix — for example, *User ID \(read-only\)* — using the format string `{0} (read-only)`. The placeholder-based format ensures correct rendering in RTL languages.
+-   If no column is marked read-only, the output remains unchanged from the previous behavior — no sheet protection or additional attributes are added.
+
+Here is an example:
+
+```
+{
+  "label": "User ID",
+  "property": "userId",
+  "readOnly": true
+}
+
+```
+
+Existing exports are not affected unless `readOnly: true` is explicitly set.
 
 
 

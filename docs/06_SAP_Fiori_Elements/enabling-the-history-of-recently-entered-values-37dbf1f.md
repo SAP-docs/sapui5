@@ -12,6 +12,9 @@ SAP Fiori elements doesn't store any data of a field in the history if either th
 
 Users can delete the history of the recently entered values. For more information, see [Input History](../10_More_About_Controls/input-history-152f84f.md).
 
+> ### Note:  
+> Recently entered values are not shown for fields that are configured with parameterized entity-based value help, that is, fields that have their `ValueList` pointing to a parameterized entity.
+
 
 
 <a name="loio37dbf1f30127420d9c585bc1ad80086b__section_ic3_jhs_yqb"/>

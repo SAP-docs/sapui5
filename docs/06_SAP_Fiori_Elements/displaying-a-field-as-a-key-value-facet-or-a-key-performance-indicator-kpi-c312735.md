@@ -19,11 +19,11 @@ The underlying annotation for this is the `UI.DataPoint` annotation:
 > 
 > ```
 > <Annotation Term="UI.DataPoint" Qualifier="Availability">
->       <Record Type="UI.DataPointType">
->            <PropertyValue Property="Title" String="Availability" />
->            <PropertyValue Property="Value" Path="stock/availability" />
->            <PropertyValue Property="Criticality" Path="stock/availability"/>
->        </Record>
+>     <Record Type="UI.DataPointType">
+>         <PropertyValue Property="Title" String="Availability"/>
+>         <PropertyValue Property="Value" Path="stock/availability"/>
+>         <PropertyValue Property="Criticality" Path="stock/availability"/>
+>     </Record>
 > </Annotation>
 > ```
 
@@ -32,8 +32,8 @@ The underlying annotation for this is the `UI.DataPoint` annotation:
 > 
 > ```
 > @UI.dataPoint: {
->   title: 'Availability',
->   criticality: 'availability'
+>     title: 'Availability',
+>     criticality: 'availability'
 > }
 > availability;
 > 
@@ -43,10 +43,10 @@ The underlying annotation for this is the `UI.DataPoint` annotation:
 > CAP CDS Annotation
 > 
 > ```
-> UI.DataPoint #Availability                               : {
->         Value                : stock.availability,
->         Title                : 'Availability',
->        Criticality         :  stock.availability
+> UI.DataPoint #Availability : {
+>     Value : stock.availability,
+>     Title : 'Availability',
+>     Criticality : stock.availability
 > }
 > 
 > ```
@@ -73,8 +73,8 @@ Apart from its usage in the object page header, the KPI can also be a `DataField
 > 
 > ```
 > @UI.dataPoint: {
->   criticality: 'OvrlDeliveryStatusCriticality',
->   criticalityRepresentation: #WITHOUT_ICON
+>     criticality: 'OvrlDeliveryStatusCriticality',
+>     criticalityRepresentation: #WITHOUT_ICON
 > }
 > OverallDeliveryStatus;
 > 
@@ -85,10 +85,10 @@ Apart from its usage in the object page header, the KPI can also be a `DataField
 > 
 > ```
 > {
->         $Type : 'UI.DataField',
->         Value : OverallDeliveryStatus,
->        Criticality :  OvrlDeliveryStatusCriticality,
->              ![@UI.CriticalityRepresentation ]        :  #WithoutIcon 
+>     $Type : 'UI.DataField',
+>     Value : OverallDeliveryStatus,
+>     Criticality : OvrlDeliveryStatusCriticality,
+>     ![@UI.CriticalityRepresentation] : #WithoutIcon
 > }
 > 
 > ```

@@ -58,7 +58,7 @@ var oText = new Text(this.createId("myTextID"), {
 ```
 
 > ### Note:  
-> In constructor settings, string values containing curly braces are interpreted as binding expressions. To avoid unintentionally interpreting them thus, escape them using [`ManagedObject.escapeSettingsValue`](https://ui5.sap.com/#/api/sap.ui.base.managedObject%23methods/sap.ui.base.ManagedObject.escapeSettingsValue). For more information, see [Escaping Binding Syntax](binding-syntax-e2e6f41.md#loioe2e6f4127fe4450ab3cf1339c42ee832__section_EBS).
+> In constructor settings, string values containing curly braces are interpreted as binding expressions. To avoid unintentionally interpreting them thus, escape them using [`ManagedObject.escapeSettingsValue`](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject%23methods/sap.ui.base.ManagedObject.escapeSettingsValue). For more information, see [Escaping Binding Syntax](binding-syntax-e2e6f41.md#loioe2e6f4127fe4450ab3cf1339c42ee832__section_EBS).
 
 The above example is an abbreviated version of the following code snippet with a detailed list of statements, which is alternatively supported:
 

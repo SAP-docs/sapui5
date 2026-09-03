@@ -54,7 +54,7 @@ The following sample codes show how to use `ignorePersonalizationChanges` to mak
 > ```
 
 > ### Note:  
-> -   Don't use `ignorePersonalizationChanges` on a building blocks with an existing ID. Create a new ID for the control to use this feature.
+> -   Don't use `ignorePersonalizationChanges` on building blocks with an existing ID. Create a new ID for the control to use this feature.
 > 
 > -   When personalization changes are not persisted, variants and application states stored with `iAppState` are not applied to the building block. Therefore, we recommend only using this setting in a transient context, such as in a custom dialog or in a value help dialog.
 

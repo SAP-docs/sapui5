@@ -7,7 +7,7 @@ You can integrate Microsoft Teams in the *Share* functionality in SAP Fiori elem
 > ### Note:  
 > -   System administrators for SAP S/4HANA Cloud Public Edition can find the required information at [Integrating Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/257ec7408db6420682462cd1d000e744.html).
 > 
-> -   System administrators for SAP S/4HANA can find the required information at [Integration with Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8308e6d301d54584a33cd04a9861bc52/849465e69b7a490a88049fe0b24fb01e.html?version=2023.000).
+> -   System administrators for SAP S/4HANA can find the required information at [Integration with Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8308e6d301d54584a33cd04a9861bc52/849465e69b7a490a88049fe0b24fb01e.html).
 > 
 > -   This topic describes how to use the feature within SAP Fiori elements floorplans. The feature isn't available when you use the building block in custom pages or custom sections, but you can try achieving the functionality through other means, such as the following:
 > 
@@ -105,7 +105,7 @@ End users can share the header actions of an object page using the *Share: Micro
 > -   Application developers must note that for semantic actions, SAP Fiori Elements supports only the static values of the `Criticality` property for `DataFieldForAction` buttons in the card shared using Microsoft Teams.
 
 > ### Note:  
-> -   The *Share: Microsoft Teams* functionality uses application states to shorten long URLs. These application state records are cleaned up if they aren't accessed for a long time. For more information, see [Cleanup of Expired Application State](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/6107ee41f89a43c9af0aa279fe039cca.html).
+> -   The *Share: Microsoft Teams* functionality uses application states to shorten long URLs. These application state records are cleaned up if they aren't accessed for a long time. For more information, see [Cleanup of Expired Application State](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/ffb437e68f464478bbd723ca144a22d7.html).
 > 
 > -   End users who want to use the *Share: Microsoft Teams* feature in incognito mode will receive an error of type ***Authentication Information HTTP Status 401- Unauthorized***. To resolve this, application developers must inform end users that they must allow third-party cookies for the incognito session.
 

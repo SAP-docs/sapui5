@@ -12,7 +12,7 @@ The filter bar only shows filter fields defined using the `@com.sap.vocabularies
 
 ## Including Navigation Properties
 
-To include navigation properties as filters, you can directly define them within the same `UI.SelectionFields` annotation. For more information about the annotation, see the [Annotation for UI.SelectionFields](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__section_rym_zkz_jqb) section in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
+To include navigation properties as filters, you can directly define them within the same `UI.SelectionFields` annotation. For more information about the annotation, see [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 
 However, if you want to add the navigation properties only within the *Adapt Filters* dialog, use the `navigationProperties` setting in the `manifest.json` file.
 

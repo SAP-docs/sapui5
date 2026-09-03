@@ -2,7 +2,7 @@
 
 # Formatting Numeric Values
 
-You can control how numbers are displayed in cards, specifically the number of decimal points, using either the OData metadata file or annotations.
+You can use either the OData metadata file or annotations to control how numbers display in cards, including the number of decimal points.
 
 
 
@@ -22,12 +22,12 @@ In the following code sample, setting `Scale="3"` for the `Price`, `Width`, `Dep
 > 
 > ```
 > <EntityType Name="Product" sap:content-version="1">
->     ...
->     <Property Name="Price" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="CurrencyCode" sap:label="Unit Price"/>
->     <Property Name="Width" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="DimUnit" sap:label="Dimensions"/>
->     <Property Name="Depth" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="DimUnit" sap:label="Dimensions"/>
->     <Property Name="Height" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="DimUnit" sap:label="Dimensions"/>
->     ...
+>   ...
+>   <Property Name="Price" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="CurrencyCode" sap:label="Unit Price"/>
+>   <Property Name="Width" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="DimUnit" sap:label="Dimensions"/>
+>   <Property Name="Depth" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="DimUnit" sap:label="Dimensions"/>
+>   <Property Name="Height" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="DimUnit" sap:label="Dimensions"/>
+>   ...
 > </EntityType>
 > ```
 
@@ -88,17 +88,17 @@ The following sample code shows the `Price` property formatted with one decimal 
 > 
 > ```xml
 > <Annotation Term="com.sap.vocabularies.UI.v1.DataPoint" Qualifier="Price">
->     <Record Type="com.sap.vocabularies.UI.v1.DataPointType">
->         <PropertyValue Property="Title" String="Unit Price"/>
->         <PropertyValue Property="Description" Path="Name"/>
->         <PropertyValue Property="Value" Path="Price"/>
->         <PropertyValue Property="ValueFormat">
->             <Record Type="com.sap.vocabularies.UI.v1.NumberFormat">
->                 <PropertyValue Property="ScaleFactor" Decimal="1000"/>
->                 <PropertyValue Property="NumberOfFractionalDigits" Iint="1"/>
->             </Record>
->         </PropertyValue>
->     </Record>
+>   <Record Type="com.sap.vocabularies.UI.v1.DataPointType">
+>     <PropertyValue Property="Title" String="Unit Price"/>
+>     <PropertyValue Property="Description" Path="Name"/>
+>     <PropertyValue Property="Value" Path="Price"/>
+>     <PropertyValue Property="ValueFormat">
+>       <Record Type="com.sap.vocabularies.UI.v1.NumberFormat">
+>         <PropertyValue Property="ScaleFactor" Decimal="1000"/>
+>         <PropertyValue Property="NumberOfFractionalDigits" Int="1"/>
+>       </Record>
+>     </PropertyValue>
+>   </Record>
 > </Annotation>
 > ```
 
@@ -112,7 +112,7 @@ The following sample code shows the `Price` property formatted with one decimal 
 >   description: 'Name',
 >   valueFormat: {
 >     scaleFactor: 1000,
-> 	numberOfFractionalDigits: 1
+>     numberOfFractionalDigits: 1
 >   }
 > }
 > Price;
@@ -124,16 +124,16 @@ The following sample code shows the `Price` property formatted with one decimal 
 > 
 > ```
 > 
-> UI.DataPoint #Price : {
->     $Type : 'UI.DataPointType',
->     Title : 'Unit Price',
->     Description : Name,
->     Value : Price,
->     ValueFormat : {
->         $Type : 'UI.NumberFormat',
->         ScaleFactor : 1000,
->         NumberOfFractionalDigits : 1
->     }
+> UI.DataPoint #Price: {
+>   $Type: 'UI.DataPointType',
+>   Title: 'Unit Price',
+>   Description: Name,
+>   Value: Price,
+>   ValueFormat: {
+>     $Type: 'UI.NumberFormat',
+>     ScaleFactor: 1000,
+>     NumberOfFractionalDigits: 1
+>   }
 > }
 > 
 > ```

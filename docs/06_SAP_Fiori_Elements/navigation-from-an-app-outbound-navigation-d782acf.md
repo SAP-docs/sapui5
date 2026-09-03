@@ -198,13 +198,25 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
 
 -   Global association
 
-    To use a specific property that is always shown as a link in your application, you must annotate the property with a semantic object. Wherever the property is used as a `DataField`, it is always rendered as a link, also known as semantic link.
+    To use a specific property that is always shown as a link in your application, you must annotate the property with a semantic object. Wherever the property is used as a `DataField`, it is always rendered as a link, also known as semantic link, with the following features:
 
-    When a user chooses the semantic link and only one navigation target is found, direct navigation to the target is triggered. If more than one target is found, the system displays a popover containing some text and links to the targets for the user to choose from. You can hide unwanted semantic object actions from the popover using the `SemanticObjectUnavailableActions` annotation. You can also annotate a property with multiple semantic objects by using different qualifiers for the `SemanticObject` annotation.
+    -   You can annotate a property with multiple semantic objects by using different qualifiers for the `SemanticObject` annotation.
 
-    You can enhance the content of this popover and display a quick view containing more information about the navigation target. For more information, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md).
+    -   When a user chooses the semantic link and only one navigation target is found, direct navigation to the target is triggered.
 
-    If a quick view is defined for the semantic link popover, SAP Fiori elements displays the popover every time users choose the semantic link. The popover is also displayed if only one navigation target is found or even if no navigation target is found.
+    -   When a user chooses the link and more than one target is found, the system displays the semantic link popover containing short text and links to the targets for the user to choose from.
+
+        -   You can hide unwanted semantic object actions from the semantic link popover using the `SemanticObjectUnavailableActions` annotation.
+
+        -   You can enhance the content of the semantic link popover by displaying a quick view, which contains more information about the navigation target. For more information, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md).
+
+            If you define a quick view for the semantic link popover, the system displays the popover every time a user chooses the semantic link. The popover is also displayed if only one navigation target is found or if no navigation target is found.
+
+
+    -   You can modify navigation targets in semantic link popovers. For more information, see [Creating an Extension to Modify Navigation Targets in Semantic Link Popovers](creating-an-extension-to-modify-navigation-targets-in-semantic-link-popovers-449d3b0.md).
+
+
+    The following sample code shows the annotations for a semantic link:
 
     > ### Sample Code:  
     > XML Annotation
@@ -236,7 +248,7 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     > };
     > ```
 
-    Semantic links can also point to dynamically added semantic objects. To do so, make sure that you point to a path that returns a valid semantic object name as a string at runtime.
+    Semantic links can also point to dynamically added semantic objects. To add such a link, make sure that you point to a path that returns a valid semantic object name as a string at runtime.
 
     > ### Sample Code:  
     > XML Annotation

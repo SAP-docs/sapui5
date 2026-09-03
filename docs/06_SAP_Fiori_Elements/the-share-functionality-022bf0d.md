@@ -19,9 +19,9 @@ The following sharing options are available as part of the *Share* functionality
 
     When the user chooses this option, the link to the page opens in the default email client that is configured in the system. When they choose the link, the application page opens in the same state in which it was shared: filter settings, personalization options, and selections for charts and tables, as well app-specific button states such as the filter mode or view mode, are all transferred.
 
--   *Share in SAP Jam*
+-   *Share on SAP Build Work Zone*
 
-    Users can also share the current application state using *Share in SAP Jam*. A dialog appears that allows them to select an existing Jam group, comments can be added, and Jam users can be tagged. This option is only available on platforms that are integrated with SAP Jam.
+    Users can also share the current application state using *Share on SAP Build Work Zone*. This option is only available on platforms that are integrated with SAP Jam or with SAP Build Work Zone.
 
 -   *Save as Tile*
 
@@ -31,7 +31,7 @@ The following sharing options are available as part of the *Share* functionality
 
     Users can collaborate with their co-workers using the *Microsoft Teams* functionality. For more information, see [The Share: Microsoft Teams Functionality](the-share-microsoft-teams-functionality-ff89e4b.md).
 
--   *Collaboration Manager*
+-   *SAP Collaboration Manager*
 
     When the user chooses this option, the *SAP Collaboration Manager* dialog opens with the application URL, which includes the page title and the current `iAppState`.
 
@@ -240,7 +240,7 @@ Properties
 <tr>
 <td valign="top">
 
-*Send E-Mail*
+*Send Email*
 
 </td>
 <td valign="top">
@@ -252,7 +252,7 @@ Properties
 <tr>
 <td valign="top">
 
-*Share in SAP Jam*
+*Share on SAP Build Work Zone*
 
 </td>
 <td valign="top">
@@ -288,7 +288,7 @@ Properties
 <tr>
 <td valign="top">
 
-*Collaboration Manager*
+*SAP Collaboration Manager*
 
 </td>
 <td valign="top">
@@ -322,7 +322,7 @@ In the following sample code, the *Microsoft Teams* option is hidden by setting 
 
 The following sample code shows you how the share options' visibility setting is configured at page level:
 
-The *Send E-Mail*, *Share in SAP Jam*, and *Save as Tile* options are only hidden on the list report page. The *Microsoft Teams* option is displayed on the object page but is conditionally shown on the list report page.
+The *Send Email*, *Share on SAP Build Work Zone*, and *Save as Tile* options are only hidden on the list report page. The *Microsoft Teams* option is displayed on the object page but is conditionally shown on the list report page.
 
 > ### Sample Code:  
 > Page-level settings in the `manifest.json` file

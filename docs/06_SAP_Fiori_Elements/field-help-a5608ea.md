@@ -198,7 +198,7 @@ The following screenshot shows an input field where a timezone has been specifie
 
 Fields can display the history of recently entered values, which is especially helpful when users frequently select the same entries from a long list. When this feature is enabled, the field saves the values previously entered by the user. Upon focusing on the field, a list of recently entered values is shown. When the user starts typing, the list is filtered based on their input. If there are no previously entered values, the list is not displayed, even if the feature is enabled.
 
-To enable the history of recently entered values, use the `INPUTFIELD_HISTORY` parameter in SAP Fiori launchpad.
+To enable the history of recently entered values, use the `INPUTFIELD_HISTORY` parameter in SAP Fiori launchpad. For more information, see [Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-37dbf1f.md).
 
 > ### Note:  
 > History of recently entered values is not supported for field help based on fixed values.
@@ -214,5 +214,8 @@ Fields with value help provide type-ahead suggestions based on user's input. The
 You can control which columns appear in the type-ahead list using the  `UI.Importance` annotation property. The type-ahead list displays only those columns annotated as  `High`. If the annotation isn't defined, the type-ahead list shows the same columns as configured in the value help dialog. For more information about `UI.Importance`, see the [Annotations](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__Annotations) section in [Value Help](value-help-fccb255.md).
 
 > ### Note:  
-> Type-ahead functionality is not available if the value help entity is configured as non-searchable. For more information, see [Enabling the Search Function](enabling-the-search-function-3cdebee.md).
+> Type-ahead functionality is not available in the following scenarios:
+> 
+> -   The value help entity is configured as non-searchable. For more information, see [Enabling the Search Function](enabling-the-search-function-3cdebee.md).
+> -   The `ValueList` annotation has mandatory filters or parameters and there is no value for these yet.
 
