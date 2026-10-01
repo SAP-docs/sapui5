@@ -99,7 +99,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 1](h
 
     ```
     {
-    	"_version": "2.11.0",
+    	"_version": "2.12.0",
     	"sap.app": {
     		"id": "ui5.databinding",
     		"type": "application",
@@ -117,7 +117,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 1](h
     	},
     	"sap.ui5": {
     		"dependencies": {
-    			"minUI5Version": "1.152.0",
+    			"minUI5Version": "1.153.0",
     			"libs": {
     				"sap.m": {},
     				"sap.ui.core": {}

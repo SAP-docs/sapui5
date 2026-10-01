@@ -466,6 +466,18 @@ SAPUI5 Version
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+2.12.0 *or* 1.90.0
+
+</td>
+<td valign="top">
+
+\>=1.153
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version and implications when upgrading, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md).
@@ -1863,7 +1875,7 @@ Current version of the `manifest.json`
 ```
 
 {
-"_version": "1.89.0",
+"_version": "1.90.0",
  
     "start_url": "index.html",
  
@@ -2097,7 +2109,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.15.0",
+            "minUI5Version": "1.153.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

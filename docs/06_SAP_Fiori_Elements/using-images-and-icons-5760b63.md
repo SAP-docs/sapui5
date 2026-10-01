@@ -53,7 +53,19 @@ The avatar shape is a square by default. You can turn it into a circle by using 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ABAP doesn't support adding images through `Edm.Stream`. You can use `@Semantics.imageUrl` with `Edm.String` fields containing a URL.
+> 
+> ```
+> define root view entity MyImageService
+> as projection on I_MyImageService
+> {
+>     key ID,
+> 
+>     @Semantics.imageUrl: true
+>     @UI.textArrangement: #TEXT_ONLY
+>     stringImage
+> }
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

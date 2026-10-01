@@ -35,7 +35,7 @@ See some examples about annotating side effects in SAP Fiori elements for OData 
 
 The **Guidance** section in our live example shows the various uses of side effects along with examples in XML and ABAP CDS annotation. For more information and live examples, see the SAP Fiori development portal at [Global Patterns - Side Effects](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/guidanceSideEffects).
 
-Side effects are configured according to the modeling such as create, update, delete in RAP BDEF \(behavior definition\). You can see the ABAP CDS annotation examples in the RAP documentation. For more information, see [Side Effects](https://help.sap.com/docs/abap-cloud/abap-rap/side-effects).
+Side effects are configured according to the modeling such as create, update, delete in RAP BDEF \(behavior definition\). You can see the ABAP CDS annotation examples in the RAP documentation. For more information, see [RAP Side Effects](https://help.sap.com/docs/abap-cloud/abap-rap/side-effects).
 
 The following sample code shows you an example with actions, multiple targets, and messages:
 
@@ -54,6 +54,20 @@ The following sample code shows you an example with actions, multiple targets, a
 >     $self affects permissions ( update _Child );
 >     determine action updateTimes executed on entity _Child affects field TotalPieces;
 >   }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate MySalesOrderType with @(
+>     Common.SideEffects #CalculatePrice: {
+>         SourceProperties : [UnitPrice, ProductQuantity],
+>         TargetProperties : ['GrossPrice', 'NetPriceIncludingTax'],
+>         TriggerAction    : 'com.c_salesordermanage_sd.CalculatePriceIncludingRegionalTax'
+>     }
+> );
+> 
 > ```
 
 

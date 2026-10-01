@@ -53,6 +53,8 @@ For more information, see [Using Global Side Effects](using-global-side-effects-
 
 The footer bar of a subobject page contains an *Apply* button in create mode and edit mode. When users choose this button they can conclude their current create or edit activity, apply the changes or entries to the draft, and navigate one step up in the object hierarchy.
 
+In a draft application with flexible column layout, the subobject closes and returns to the main object if a user clicks the *Apply* button.
+
 When a user edits an object, the system behavior of the *Apply* button is as follows: ![](images/Apply_button_36204dc.png)
 
 1.  On an object page, the user chooses *Edit*.

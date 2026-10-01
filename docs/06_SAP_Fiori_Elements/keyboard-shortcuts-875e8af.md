@@ -24,7 +24,7 @@ Shortcut \(Microsoft Windows\)
 </th>
 <th valign="top">
 
-Shortcut \(Mac OS\)
+Shortcut \(macOS\)
 
 </th>
 <th valign="top">

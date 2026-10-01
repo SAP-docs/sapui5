@@ -484,11 +484,11 @@ You must set the following keys for each target:
 
 
 > ### Restriction:  
-> -   The object or subobject page closes automatically when you add a column to the parent page table that the object or subobject page corresponds to.
+> -   When you add a column to the parent page table in edit mode, the corresponding object or subobject page closes automatically.
 > 
 > -   If you have a list report page or an object page with multiple tables that are based on the same entity, only the first table is synchronized with its associated subobject page.
 > 
-> -   When you update a multi-input field on an object page, you need to first refresh the parent page \(either an object page or a list report page\) before the changes are visible.
+> -   Changes to a multi-input field on an object page are not reflected automatically. You must refresh the parent page manually for the changes to take effect.
 > 
 > -   In the flexible column layout, you can neither display a tree table nor an analytical table in the list report page with a draft-enabled service.
 

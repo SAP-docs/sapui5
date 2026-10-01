@@ -34,7 +34,29 @@ You can enable this feature for the list report page by configuring the `creatio
 >     },
 > ```
 
-The `CreationFields` parameter can point to a `FieldGroup` annotation or a comma-separated list of properties. Immutable properties are added to the `CreationFields` list automatically.
+The `CreationFields` parameter can point to a `FieldGroup` annotation or a comma-separated list of properties. For properties listed in this parameter, the `UI.Hidden` annotation is ignored. Immutable, mandatory, and key properties that aren't annotated as `@Core.Computed` or prefilled are added to the `CreationFields` list automatically and displayed at the top of the dialog.
+
+By default, new objects created using the `CreationDialog` mode are displayed at the top of the table. Sorting and filtering aren't applied to these new entries, ensuring they remain in the visible area of the table.
+
+For grid tables, you can display newly created objects at the bottom of the table by setting the `createAtEnd` parameter to `true`, as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "controlConfiguration": {
+>     "@com.sap.vocabularies.UI.v1.LineItem": {
+>         "tableSettings": {
+>             "type": "GridTable",
+>             "creationMode": {
+>                 "name": "CreationDialog",
+>                 "creationFields": "@com.sap.vocabularies.UI.v1.FieldGroup#CreationParameters"
+>                 "createAtEnd": true
+>             }
+>         }
+>     }
+> }
+> ```
 
 For the list report page in multi-view mode, provide the creation mode parameters in the `TableSettings` configuration for each line item configured in a view.
 

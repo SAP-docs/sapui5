@@ -208,6 +208,14 @@ oListBinding.filter(
 
 The resulting request is: **`https://host/service/People?$filter=not Trips/all(trip:trip/Name eq 'Walldorf')`**
 
+
+
+<a name="loio5338bd1f9afb45fb8b2af957c3530e8f__section_enumType"/>
+
+## EnumTypes
+
+To filter a property of an EnumType, construct an `sap.ui.model.Filter` with the enum member name or value in `value1` and `value2` of the `Filter`. The model formats the literal correctly for OData V4.0 syntax. For example, `new Filter("Gender", FilterOperator.EQ, "Female")` results in `$filter=Gender eq Trippin.PersonGender'Female'`.
+
 **Related Information**  
 
 

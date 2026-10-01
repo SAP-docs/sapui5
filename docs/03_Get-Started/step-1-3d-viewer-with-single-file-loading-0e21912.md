@@ -137,7 +137,7 @@ You can view and download all files at [3D Viewer - Step 1 - 3D Viewer With Sing
 
     ```js
     {
-      "_version": "2.11.0",
+      "_version": "2.12.0",
       "sap.app": {
         "id": "singleFile",
         "type": "application",
@@ -159,7 +159,7 @@ You can view and download all files at [3D Viewer - Step 1 - 3D Viewer With Sing
       "sap.ui5": {
         "rootView": "singleFile.view.App",
         "dependencies": {
-          "minUI5Version": "1.152.0",
+          "minUI5Version": "1.153.0",
           "libs": {
             "sap.m": {}
           }

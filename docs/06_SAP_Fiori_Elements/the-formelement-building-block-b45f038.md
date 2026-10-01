@@ -61,5 +61,5 @@ You can use the `FormElement` building block inside custom header facets, custom
 
 ## API
 
-For information about the `FormElement` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.form.FormElement).
+For information about the `FormElement` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.FormElement).
 

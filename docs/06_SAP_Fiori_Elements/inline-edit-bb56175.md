@@ -108,7 +108,9 @@ If the user triggers an action or navigation from a table when using inline edit
 
 ## Configuring Inline Edit
 
-You must enable inline edit at the page level using a manifest setting. To specify the list of fields enabled for inline edit, use the `enabledFields` parameter with either a property name or a `FieldGroup` annotation. To disable inline edit for certain fields, use the `disabledFields` parameter with either a property name or a `FieldGroup` annotation. If `disabledFields` is empty, inline edit is enabled for all fields.
+You must enable inline edit at the page level using a manifest setting. To specify the list of fields enabled for inline edit, use the `enabledFields` parameter with either a property name or a `FieldGroup` annotation. To disable inline edit for certain fields, use the `disabledFields` parameter with either a property name or a `FieldGroup` annotation. If `disabledFields` is empty and `enabledFields` is not specified, inline edit is enabled for all fields. If `enabledFields` is specified, only the fields defined in it are editable.
+
+
 
 You can also specify groups of connected fields which should be edited together. To do that, use the `connectedFields` parameter with either arrays of property names or `FieldGroup` annotations.
 

@@ -2062,6 +2062,8 @@ You can either use an already existing entry from the `"menu"` definition, or us
 
 
 
+<a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__Setting_Priority"/>
+
 ## Setting a Priority for Actions
 
 You can set a priority for action buttons. It determines the visual importance and overflow behavior of actions in toolbars and headers. The `priority` property is supported for all standard actions and all application-defined actions: header, footer, and form actions, as well as actions in the chart and table toolbars.
@@ -2177,6 +2179,8 @@ You can also set the priority for standard actions. The following code sample sh
 You can also set the priority for action menus in the same way as described for actions. If you do that, the priority of each action within the menu is ignored, and the entire action menu is moved into overflow at the same time.
 
 
+
+<a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__Grouping_For_Overflow"/>
 
 ## Grouping Actions for the Overflow
 

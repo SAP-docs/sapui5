@@ -24,7 +24,7 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
 
 ```
 {
-  "_version": "2.11.0",
+  "_version": "2.12.0",
   "sap.app": {
 	"id": "ui5.walkthrough",
 	"i18n": "i18n/i18n.properties",
@@ -45,7 +45,7 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
   },
   "sap.ui5": {
 	"dependencies": {
-	  "minUI5Version": "1.152.0",
+	  "minUI5Version": "1.153.0",
 	  "libs": {
 		"sap.ui.core": {},
 		"sap.m": {}

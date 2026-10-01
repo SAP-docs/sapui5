@@ -7,6 +7,8 @@ You can enable the icon to indicate an existing situation on the list report pag
 An icon for situation handling is automatically displayed on the list report page and the object page if your service contains the corresponding annotation. You must ensure that exactly one navigation property exists whose target entity type is annotated with the following:
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > <Annotation Term="com.sap.vocabularies.Common.v1.SAPObjectNodeType">
 >      <Record>
@@ -14,6 +16,11 @@ An icon for situation handling is automatically displayed on the list report pag
 >      </Record>
 > </Annotation>
 > ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> No CAP CDS annotation sample is available. Please use the local XML annotation.
 
 The following screenshot shows an example from a list report page:
 

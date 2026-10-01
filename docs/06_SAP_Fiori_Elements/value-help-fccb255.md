@@ -554,7 +554,7 @@ You can specify a conditional expression to validate the user input using the `C
 In some scenarios, different value help dialogs are required based on the context, which is determined by a property other than the one annotated. To support this, you can use the `Common.ValueListRelevantQualifiers` annotation to determine the valid qualifiers based on the value of another field.
 
 > ### Example:  
-> A sales order has different types of assigned partners. Depending on the partner function, you have to provide different details in the value help to which the partner can be added. If the partner function is `WE`, the value help with qualifier `BusinessPartner` must be used. In all other cases, the value help without a qualifier must be used.
+> A sales order has different types of assigned partners. Depending on the partner function, you have to provide different details in the value help to which the partner can be added. If the partner function is `WE`, the value help with qualifier `BusinessPartner` must be used. In all other cases, the value help is used without a qualifier.
 
 > ### Sample Code:  
 > XML Annotation
@@ -610,7 +610,7 @@ In some scenarios, different value help dialogs are required based on the contex
 > ```
 
 > ### Note:  
-> When used for filter bar fields on the list report page, this annotation is ignored and the value help dialog or dropdown is always initialized with the default value help definition. For value help fields, all the other value help definitions are seen in the value help dialog.
+> When used for filter bar fields on the list report page, this annotation is ignored and the value help dialog or dropdown is always initialized with the default value help definition. All the other value help definitions are available from within the value help dialog. For value help fields, all the other value help definitions are seen in the value help dialog.
 
 
 
@@ -705,21 +705,21 @@ In the following sample code, `InitialValueIsSignificant` is used to consider an
 
 ## Ensuring Distinct Values
 
-A value help table can show duplicate rows. This happens when a filter is applied to the table, but the filter field is not a visible column in the table. When the filter is active, it removes the duplicates, so only distinct rows are shown. When the filter is removed, the duplicates reappear.
+A value help table can show duplicate rows. This happens when a filter is applied to the table, but the filter field isn't a visible column in the table. When the filter is active, it removes the duplicates, so only distinct rows are shown. When the filter is removed, the duplicates reappear.
 
-To eliminate the duplicate values, ensure that the backend supports `DistinctValuesSupported`. When this annotation is present, the framework always fetches only unique values, regardless of any active filters. This also applies to the type-ahead behavior of the field.
+To eliminate the duplicate values, ensure that the back end supports `DistinctValuesSupported`. When this annotation is present, the framework always fetches only unique values, regardless of any active filters. This annotation also applies to the type-ahead functionality of the field.
 
 > ### Note:  
-> If you are enabling this feature using local annotation, ensure that the backend supports `$apply` and `groupby`, otherwise the feature doesn't work.
+> This feature requires back end support for aggregation. You must also define `Aggregation.ApplySupported` in the annotation.
 
 > ### Restriction:  
-> This feature is not supported in the following scenarios:
+> This feature isn't supported in the following scenarios:
 > 
-> -   When value help uses tree tables inside of the value help dialog.
+> -   When the value help uses tree tables inside the value help dialog.
 > 
-> -   When value help table has one or more columns whose values are coming from an 1:n navigation.
+> -   When the value help table has one or more columns whose values come from a 1:n navigation.
 
-For annotations, see the code samples within the Annotations section of this page.
+For annotations, see the sample code in the [Annotations](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__Annotations) section of this topic.
 
 
 

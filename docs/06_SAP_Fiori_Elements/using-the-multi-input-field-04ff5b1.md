@@ -152,6 +152,8 @@ When you set the `Common.fieldControl` annotation to `Mandatory`, a red asterisk
 
 > ### Restriction:  
 > You can't use the multi-input field if you need to display more than 100 selected values. In this case, we recommend that you use a table instead.
+> 
+> You can't use multi-input fields in analytical tables.
 
 
 

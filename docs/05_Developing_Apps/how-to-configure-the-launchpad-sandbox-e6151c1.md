@@ -145,7 +145,19 @@ Not set
 <tr>
 <td valign="top">
 
-`sideNavigation`
+`sideNavigation.enabled`
+
+</td>
+<td valign="top">
+
+`true`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sideNavigation.mode`
 
 </td>
 <td valign="top">
@@ -524,12 +536,243 @@ Configures whether transientAppState should be transient \(not persisted\).
 
 
 
+### Configuring the sideNavigation
+
+Configures the side navigation behavior.
+
+-   Type: Object
+-   Default: Not set -\> Then the side navigation is enabled and the mode is "Popover"
+-   Properties
+
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    Property
+    
+    </th>
+    <th valign="top">
+
+    Type
+    
+    </th>
+    <th valign="top">
+
+    Description
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    enabled
+    
+    </td>
+    <td valign="top">
+    
+    Boolean
+    
+    </td>
+    <td valign="top">
+    
+    Defines if the side navigation is shown.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    mode
+    
+    </td>
+    <td valign="top">
+    
+    String
+    
+    </td>
+    <td valign="top">
+    
+    Display mode of the side navigation. Supported values: "Popover" and "Docked".
+    
+    </td>
+    </tr>
+    </table>
+    
+-   Example:
+
+    ```
+    {
+    
+        "sideNavigation": {
+            "enabled": true,
+            "mode": "Docked"
+        }
+    }
+    ```
+
+
+
+
+### Configuring the menu
+
+Configures the horizontal navigation menu.
+
+-   Type: Object
+-   Default: Not set
+-   Properties:
+
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    Property
+    
+    </th>
+    <th valign="top">
+
+    Type
+    
+    </th>
+    <th valign="top">
+
+    Description
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    enabled
+    
+    </td>
+    <td valign="top">
+    
+    Boolean
+    
+    </td>
+    <td valign="top">
+    
+    Defines if the horizontal navigation menu is shown.
+    
+    </td>
+    </tr>
+    </table>
+    
+-   Example:
+
+    ```
+    {
+       menu": {
+        "enabled": true
+        }
+    }
+    ```
+
+
+
+
 ### Adding plugins
 
 Configures additional bootstrap plugins to load.
 
 -   **Type**: `Object`
 -   **Default**:`{}` \(only RuntimeAuthoringPlugin is loaded by default\)
+-   Properties:
+
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    Property
+    
+    </th>
+    <th valign="top">
+
+    Type
+    
+    </th>
+    <th valign="top">
+
+    Required
+    
+    </th>
+    <th valign="top">
+
+    Description
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `component`
+    
+    </td>
+    <td valign="top">
+    
+    String
+    
+    </td>
+    <td valign="top">
+    
+    Yes
+    
+    </td>
+    <td valign="top">
+    
+    Component name of the plugin.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `url`
+    
+    </td>
+    <td valign="top">
+    
+    String
+    
+    </td>
+    <td valign="top">
+    
+    No
+    
+    </td>
+    <td valign="top">
+    
+    URL to the plugin's resources. Use this when the plugin is not part of the application's resource roots.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `config`
+    
+    </td>
+    <td valign="top">
+    
+    Object
+    
+    </td>
+    <td valign="top">
+    
+    No
+    
+    </td>
+    <td valign="top">
+    
+    Configuration object passed to the plugin via component data.
+    
+    </td>
+    </tr>
+    </table>
+    
 -   **Example**:
 
     ```
@@ -537,8 +780,10 @@ Configures additional bootstrap plugins to load.
         "plugins": {
             "MyCustomPlugin": {
                 "component": "my.custom.Plugin",
+                "url": "../path/to/plugin/",
                 "config": {
-                    "enabled": true
+                    "settingA": true
+                    "settingB": false
                 }
             }
         }
@@ -548,7 +793,7 @@ Configures additional bootstrap plugins to load.
 
 
 
-### Configuring the rta
+### Configuring the Runtime Adaptation \(rta\)
 
 Configures Runtime Adaptation with predefined adaptation data that is applied to the app.
 
@@ -575,9 +820,9 @@ Configures Runtime Adaptation with predefined adaptation data that is applied to
 
 
 
-### beforeFlpStart
+### beforeFlpStart and afterFlpStart
 
-Specifies a module to execute before the launchpad starts.
+Specifies a module to execute before the launchpad starts or after the launchpad was started.
 
 -   **Type**: `String` \(module path with `module:` prefix\)
 -   **Default**: Not set
@@ -585,7 +830,8 @@ Specifies a module to execute before the launchpad starts.
 
     ```
     {
-        "beforeFlpStart": "module:myapp/test/mockServer"
+        "beforeFlpStart": "module:myapp/test/mockServer",
+        "afterFlpStart": "module:myapp/test/afterFlpStart"
     }
     ```
 
@@ -618,39 +864,58 @@ Specifies a module to execute before the launchpad starts.
 
 ## Complete Configuration Example
 
-```
-{
-    "tiles": [
-        {
-            "semanticObject": "SalesOrder",
-            "action": "display",
-            "rootPath": "../",
-            "parameters": {
-                "mode": "view"
-            }
-        },
-        {
-            "semanticObject": "SalesOrder",
-            "action": "create",
-            "rootPath": "../"
-        },
-        {
-            "semanticObject": "Customer",
-            "action": "manage",
-            "rootPath": "../../customer-app/"
-        }
-    ],
-    "rootIntent": "SalesOrder-display",
-    "transientAppState": true,
-    "rta": "localService/fakeLrep.json",
-    "beforeFlpStart": "module:myapp/test/initMockServer",
-    "plugins": {
-        "CustomPlugin": {
-            "component": "custom.plugins.customPlugin"
-        }
-    }
-}
-```
+> ### Sample Code:  
+> ```
+> {
+>     "tiles": [
+>         {
+>             "semanticObject": "SalesOrder",
+>             "action": "display",
+>             "rootPath": "../",
+>             "parameters": {
+>                 "mode": "view"
+>             }
+>         },
+>         {
+>             "semanticObject": "SalesOrder",
+>             "action": "create",
+>             "rootPath": "../"
+>         },
+>         {
+>             "semanticObject": "Customer",
+>             "action": "manage",
+>             "rootPath": "../../customer-app/"
+>         }
+>         {
+>             "url": "https://www.sap.com",
+>             "title": "SAP Homepage",
+>             "icon": "sap-icon://world"
+>         }
+>     ],
+>     "rootIntent": "SalesOrder-display",
+>     "transientAppState": true,
+>     "rta": "localService/fakeLrep.json",
+>     "beforeFlpStart": "module:myapp/test/initMockServer",
+>     "afterFlpStart": "module:myapp/test/afterFlpStart",
+>     "sideNavigation": {
+>         "enabled": true,
+>         "mode": "Docked"
+>     },
+>     "menu": {
+>         "enabled": true
+>     },
+>     "plugins": {
+>         "CustomPlugin": {
+>             "component": "custom.plugins.customPlugin",
+>             "url": "../path/to/plugin/",
+>             "config": {
+>             "settingA": true,
+>             "settingB": false
+>         }
+>     }
+> }
+> 
+> ```
 
 
 
@@ -840,7 +1105,7 @@ Source
 </th>
 <th valign="top">
 
-Fallback
+Default
 
 </th>
 </tr>
@@ -908,7 +1173,7 @@ Icon
 </td>
 <td valign="top">
 
-`sap-icon://Fiori2/F0018`
+None
 
 </td>
 </tr>
@@ -926,6 +1191,23 @@ Device Types
 <td valign="top">
 
 All devices enabled
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+RTA enabled
+
+</td>
+<td valign="top">
+
+`sap.ui5.flexEnabled`
+
+</td>
+<td valign="top">
+
+`false`
 
 </td>
 </tr>

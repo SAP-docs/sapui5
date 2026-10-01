@@ -238,7 +238,7 @@ For more information, see the API Reference for the following methods:
 
 -   [API Reference: `sap.ui.core.Element.getElementBinding`](https://ui5.sap.com/#/api/sap.ui.core.Element/methods/getElementBinding).
 
--   [API Reference: `sap.ui.core.Element.unbindObject`](https://ui5.sap.com/#/api/sap.ui.core.Element/methods/unbindElement).
+-   [API Reference: `sap.ui.core.Element.unbindElement`](https://ui5.sap.com/#/api/sap.ui.core.Element/methods/unbindElement).
 
 
 **Related Information**  

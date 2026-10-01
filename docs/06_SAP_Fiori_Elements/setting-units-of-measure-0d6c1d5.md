@@ -68,7 +68,24 @@ In the following example, the `Price` property is annotated in the annotation do
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> define root view entity GWSAMPLE_BASIC.Product as projection on I_Product {
+>     key ProductID,
+> 
+>     @Semantics.quantity.unitOfMeasure: 'WeightUnit'
+>     WeightMeasure,
+> 
+>     @Semantics.unitOfMeasure: true
+>     WeightUnit,
+> 
+>     @Semantics.amount.currencyCode: 'CurrencyCode'
+>     Price,
+> 
+>     @Semantics.currencyCode: true
+>     CurrencyCode
+> }
+> 
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

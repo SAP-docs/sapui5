@@ -564,7 +564,18 @@ The visibility of the field is affected by the `UI.Hidden` annotation, that can 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> ABAP CDS does not support `Measures.ISOCurrency`. Use the local XML annotation.
+> ```
+> @Metadata.layer: #CORE
+> annotate view SalesOrderManage with {
+>     @EndUserText.label: 'Net Amount'
+>     @Semantics.amount.currencyCode: 'TransactionCurrency'
+>     @UI.hidden: true
+>     TotalNetAmount;
+> 
+>     @Semantics.currencyCode: true
+>     TransactionCurrency;
+> }
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -892,8 +903,45 @@ SAP\_\_common.FieldControlType/Inapplicable
 </tr>
 </table>
 
+You can also configure a field as dynamically mandatory using the `FieldControl` annotation. There are two ways to do this:
+
+-   You can define a path to a property that determines whether the field is mandatory. When using this approach, you must also define a side effect for this property. For example, declare the property as a target of `Common.SideEffects` to ensure that the property is fetched whenever it changes Otherwise, the mandatory indicator doesn't update until the binding is refreshed. The path can also point to a property on a singleton entity.
+
+-   You can use extended OData annotations to change the mandatory behavior based on a property that is not a `FieldControl` property. For more information, see [Support for Extended OData Annotations](support-for-extended-odata-annotations-0e7b890.md).
+
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="SAP__self.ArtistsType/DisplayName">
+>     <Annotation
+>         Term="com.sap.vocabularies.Common.v1.FieldControl"
+>         Path="DisplayNameFieldControl"/>
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> DisplayName : String(100)
+>     @Common.FieldControl: DisplayNameFieldControl;
+> 
+> ```
+
 > ### Note:  
-> When using a path-based value for `FieldControl`, you must ensure that the path of `FieldControl` points to a property based on `Edm.Byte`.
+> -   When using a path-based value for `FieldControl`, you must ensure that the path of `FieldControl` points to a property based on `Edm.Byte`.
+> 
+> -   When a user saves the changes made to a field, you must ensure that the back end validates whether all mandatory fields contain a value. If any mandatory fields are empty, the back end must return an appropriate message.
+> 
+> -   When using dynamic mandatory for table columns, the mandatory setting applies to the entire column and not to individual rows. To configure dynamic mandatory for a table column, define a path-based `FieldControl` that points to a property on the parent entity of the table or to a singleton entity.
 
 > ### Tip:  
 > Fields that are part of `InsertRestrictions`/`RequiredProperties` or `UpdateRestrictions`/`RequiredProperties` are marked as mandatory only in the `create`/`update` flow. For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).

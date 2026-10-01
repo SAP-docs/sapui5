@@ -120,14 +120,52 @@ Application developers can add additional links under the "Related Apps" button 
 
 You can display multiple semantic objects under the *Related Apps* button in the `manifest.json` file.
 
-You can configure the `relatedAppsSettings` parameter in the `manifiest.json` file as shown in the example below:
+You can configure the `relatedAppsSettings` parameter in the `manifest.json` file as shown in the example below:
 
 > ### Sample Code:  
-> `manifiest.json`
+> `manifest.json`
 > 
 > ```
-> 
 > {
+>     "sap.ui.generic.app": {
+>         "pages": [
+>             {
+>                 "entitySet": "SEPMRA_C_PD_Product",
+>                 "component": {
+>                     "name": "sap.suite.ui.generic.template.ListReport",
+>                     "list": true
+>                 },
+>                 "pages": [
+>                     {
+>                         "entitySet": "SEPMRA_C_PD_Product",
+>                         "component": {
+>                             "name": "sap.suite.ui.generic.template.ObjectPage",
+>                             "settings": {
+>                                 "showRelatedApps": true,
+>                                 "relatedAppsSettings": {
+>                                     "0": {
+>                                         "semanticObject": "EPMProduct"
+>                                     }
+>                                 }
+>                             }
+>                         },
+>                         "pages": [
+>                             {
+>                                 "navigationProperty": "to_ProductText",
+>                                 "entitySet": "SEPMRA_C_PD_ProductText",
+>                                 "component": {
+>                                     "name": "sap.suite.ui.generic.template.ObjectPage"
+>                                 }
+>                             }
+>                         ]
+>                     }
+>                 ]
+>             }
+>         ]
+>     }
+> }
+> 
+> 
 > ```
 
 With this setting, all related apps from the app's URL and from the `manifest.json` file are displayed on the UI under the *Related Apps* button.

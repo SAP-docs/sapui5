@@ -882,9 +882,43 @@ Existing exports are not affected unless `readOnly: true` is explicitly set.
 
 
 
+### Right-to-Left \(RTL\) Support
+
+The spreadsheet export automatically applies the right-to-left \(RTL\) datasheet layout to the generated XLSX document when the SAPUI5 application runs in an RTL locale. This ensures that exported spreadsheets match the directionality of the source table in the application.
+
+By default, the `context.rtl` property in the export settings is derived from the current SAPUI5 RTL configuration \(`Localization#getRTL`\). You can override this behavior by explicitly setting `context.rtl` to `true` or `false` in the export settings.
+
+```
+sap.ui.require([
+    "sap/ui/export/Spreadsheet"
+], function(Spreadsheet) {
+
+    var oSpreadsheet = new Spreadsheet({
+        workbook: {
+            context: {
+                rtl: true // Explicitly enable RTL layout
+            },
+            columns: [
+                // Column definitions
+            ]
+        },
+        dataSource: oDataSource
+    });
+
+    oSpreadsheet.build();
+});
+
+
+```
+
+> ### Note:  
+> If `context.rtl` is not set, the export automatically uses the RTL configuration of the SAPUI5 framework. You only need to set this property explicitly if the export direction should differ from the application direction. The RTL layout is applied to both the data sheet and the metadata sheet of the exported XLSX document.
+
+
+
 ### Starting the Export Process
 
-After you have created a valid configuration, you will have to create a new `sap.ui.export.Spreadsheet` instance and initialize it with the previously created configuration. After the instance has been initialized, you can start the export process by calling the `build` method. Everything else will be handled by the export library. The result will be an Office Open XML spreadsheet which is automatically downloaded. The export library does not offer you any events to which you can register. If you need to perform additional steps after the export has been completed, you can use the `Promise` that is returned by the `build` method.
+After you have created a valid configuration, you will have to create a new `sap.ui.export.Spreadsheet` instance and initialize it with the previously created configuration. After the instance has been initialized, you can start the export process by calling the `build` method. Everything else will be handled by the export library. The result will be an Office Open XML spreadsheet, which is automatically downloaded. The export library does not offer you any events to which you can register. If you need to perform additional steps after the export has been completed, you can use the `Promise` that is returned by the `build` method.
 
 The following code sample shows the start of an export:
 

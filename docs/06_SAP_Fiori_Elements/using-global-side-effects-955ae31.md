@@ -9,7 +9,7 @@ You can configure global side effects in SAP Fiori elements for OData V4.
 
 Global side effects are those side effects that are defined without any source properties or source entities. Global side effects can be annotated under each entity separately. When you press [Enter\] on any input field, the global side effect defined under the corresponding entity is triggered.
 
-The following sample code shows the global side effect with target fields and the `TriggerAction`:
+The following sample codes show the global side effect with target fields and the `TriggerAction`:
 
 > ### Sample Code:  
 > XML Annotation
@@ -33,7 +33,18 @@ The following sample code shows the global side effect with target fields and th
 > 
 > ```
 
-The following CAP CDS sample code shows the global side effect with target fields and the `TriggerAction`:
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @Common.sideEffects: [{
+>     targetProperties : ['TaxAmount', 'NetAmount', 'GrossAmount'],
+>     triggerAction    : 'NAMESPACE.MyAction'
+> }]
+> annotate entity ENTITYTYPE with { ... }
+> 
+> 
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

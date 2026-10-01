@@ -21,7 +21,7 @@ Shortcut \(Microsoft Windows\)
 </th>
 <th valign="top">
 
-Shortcut \(Mac OS\)
+Shortcut \(macOS\)
 
 </th>
 <th valign="top">
@@ -43,7 +43,7 @@ Result
 <tr>
 <td valign="top">
 
-Cancel/Discard Draft
+Cancel/discard draft
 
 </td>
 <td valign="top">
@@ -109,7 +109,7 @@ The same as when a user chooses *Create*.
 <tr>
 <td valign="top">
 
-Create and Back
+Create and back
 
 > ### Note:  
 > Only available when configured. For more information, see [Save and Navigation Options on the Object Page](save-and-navigation-options-on-the-object-page-55d81bc.md).
@@ -254,12 +254,12 @@ Export as
 </td>
 <td valign="top">
 
-[Shift\] + [Ctrl\] + [E\]  
+[Ctrl\] + [Shift\] + [E\]  
 
 </td>
 <td valign="top">
 
-[Shift\] + [CMD\] + [E\]  
+[CMD\] + [Shift\] + [E\]  
 
 </td>
 <td valign="top">
@@ -357,17 +357,49 @@ Triggered when the focus is on any element in the visual filter panel or on the 
 <tr>
 <td valign="top">
 
+Next tab
+
+</td>
+<td valign="top">
+
+[Ctrl\] + [F9\]  
+
+</td>
+<td valign="top">
+
+[CMD\] + [F9\]  
+
+</td>
+<td valign="top">
+
+The object page contains multiple tabs.
+
+</td>
+<td valign="top">
+
+Object page
+
+</td>
+<td valign="top">
+
+The next tab is opened.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Open error list
 
 </td>
 <td valign="top">
 
-[Shift\] + [Ctrl\] + [M\]  
+[Ctrl\] + [Shift\] + [M\]  
 
 </td>
 <td valign="top">
 
-[Shift\] + [CMD\] + [M\]  
+[CMD\] + [Shift\] + [M\]  
 
 </td>
 <td valign="top">
@@ -383,6 +415,38 @@ Object page
 <td valign="top">
 
 The same as when a user chooses the *Error* button.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Previous tab
+
+</td>
+<td valign="top">
+
+[Ctrl\] + [Shift\] + [F9\]  
+
+</td>
+<td valign="top">
+
+[CMD\] + [Shift\] + [F9\]  
+
+</td>
+<td valign="top">
+
+The object page contains multiple tabs.
+
+</td>
+<td valign="top">
+
+Object page
+
+</td>
+<td valign="top">
+
+The previous tab is opened.
 
 </td>
 </tr>
@@ -421,7 +485,7 @@ The same as when a user chooses *Save* on the object page
 <tr>
 <td valign="top">
 
-Save and Back
+Save and back
 
 > ### Note:  
 > Only available when configured. For more information, see [Save and Navigation Options on the Object Page](save-and-navigation-options-on-the-object-page-55d81bc.md).
@@ -504,7 +568,7 @@ Table settings
 </td>
 <td valign="top">
 
-[Ctrl\] + [,\]  
+[CMD\] + [,\]  
 
 </td>
 <td valign="top">
@@ -537,7 +601,7 @@ You can use keyboard shortcuts for common actions.
 
 ## Triggering the Default Positive Action with a Standard Shortcut
 
-On a list report page, object page or subobject page, [Ctrl\][Enter\] \(Microsoft Windows\) or [Cmd\][Return\] \(Mac OS\) triggers the default positive action.
+On a list report page, object page or subobject page, [Ctrl\][Enter\] \(Microsoft Windows\) or [Cmd\][Return\] \(macOS\) triggers the default positive action.
 
 Note that this only happens if the focus isn't on a control that uses the same keys for a shortcut. For example, when the focus is on a table with a create button, the shortcut would trigger *Table Create*, not the default positive action.
 

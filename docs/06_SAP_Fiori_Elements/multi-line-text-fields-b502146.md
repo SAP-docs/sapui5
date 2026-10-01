@@ -6,14 +6,40 @@ You can use annotations to display a field as a multi-line text in SAP Fiori ele
 
 To display a field as a multi-line text, annotate the property associated to the field with `UI.MultiLineText`. The field is displayed as a text area in edit mode and as an expandable text in display mode.
 
-![A screenshot of a multi-line text field in edit mode with a scroll bar and in display mode. The display mode has two variations: collapsed with the text cut off and a link saying More and expanded with the full text and a link saying Less.](images/Representation_as_a_TextArea_1744ef6.png)
+![A screenshot of a multi-line text field in edit mode with a scroll bar and in display mode. The display mode has two variations: collapsed with the text cut off and a link saying Show More and expanded with the full text and a link saying Show Less.](images/Multi-Line_Text_Field_in_Edit_and_Display_Mode_4e9cdc1.png)
 
-```xml
-<Annotations Target="com.c_salesordermanage_sd.SalesOrderManage">
-    <Annotation Term="Common.Label" String="Customer Reference"/>
-    <Annotation Term="UI.MultiLineText" Bool="true"/>
-</Annotations>
-```
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="com.c_traveltp.C_TravelTP/TravelDetails">
+>     <Annotation Term="Common.Label" String="Travel Details"/>
+>     <Annotation Term="UI.MultiLineText" Bool="true"/>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @Metadata.layer: #CORE
+> annotate view C_TravelTP with {
+>     @EndUserText.label: 'Travel Details'
+>     @UI.multiLineText: true
+>     TravelDetails;
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> @UI.MultiLineText
+> @title: 'Travel Details'
+> TravelDetails : String(1024);
+> 
+> ```
 
 You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Multi-Line Text](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldMultiLineText).
 
@@ -146,7 +172,7 @@ String containing an integer value
 
 Defines the maximum number of characters that can be entered in the text area. If it isn't set, the number of characters isn't restricted.
 
-When a text exceeds the maximum number of characters, users see a notification**\(how does this make sense? Is it possible to exceed it?\)**. Users can't enter more characters than the defined length.
+When a text exceeds the maximum number of characters, users see a notification. Users can't enter more characters than the defined length.
 
 </td>
 </tr>

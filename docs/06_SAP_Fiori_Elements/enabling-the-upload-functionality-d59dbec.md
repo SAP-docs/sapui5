@@ -42,7 +42,7 @@ To enable upload functionality, ensure the following prerequisites are met:
 -   The entity type must have the `UI.MediaResource` annotation with the `Stream` property referencing the `Edm.Stream` type property that is used to store the uploaded file.
 
 
-Here is an example of how to define the entity type with the required annotations:
+The following sample code shows how to define the entity type with the required annotations:
 
 > ### Sample Code:  
 > XML Annotation
@@ -68,7 +68,14 @@ Here is an example of how to define the entity type with the required annotation
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```xml
+> @UI.mediaResource: { stream: 'file' }
+> annotate view EntityType with
+> {
+>   @UI.lineItem: [{ label: 'File' }]
+>   PropertyOfEdmStreamType;
+> }
+> ```
 
 > ### Sample Code:  
 > CAP CDS annotation

@@ -17,22 +17,33 @@ In edit mode, the input field masks each character with a dot \(•\), so end us
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > <Annotations Target="sap.fe.core.FieldDisplayStyles.RootEntity/MaskedField"> 
->         <Annotation Term="Common. Masked" Bool="true"/> 
+>     <Annotation Term="Common.Masked" Bool="true"/>
+>     <Annotation Term="Common.Label" String="Masked Field"/>
 > </Annotations>
 > ```
 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @Metadata.layer: #CORE
+> annotate view RootEntity with
+> {
+>     @UI.masked: true
+>     @EndUserText.label: 'Masked Field'
+>     MaskedField;
+> }
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> MaskedField  : String  @Common : {Masked: true};
+> @title: 'Masked Field'
+> MaskedField : String @Common: {Masked: true};
+> 
 > ```
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Masked Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldMasked).

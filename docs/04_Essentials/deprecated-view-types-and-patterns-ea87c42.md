@@ -203,7 +203,7 @@ Define view class in JavaScript using `sap.ui.core.mvc.View.extend()`
 </td>
 <td valign="top">
 
-[XML Composite Controls (deprecated)](https://help.sap.com/viewer/c442e2a74263451f845549bdbcdebe7b/1.152_SAPUI5_Internal/en-US/b83a4dcb7d0e46969027345b8d32fd44.html "An XML composite control allows you to define a composite control that clearly separates the behavior of the control from the visual part.") :arrow_upper_right:
+[Migrating from XMLComposite](../09_Developing_Controls/building-standard-composite-controls-c1512f6.md#loioc1512f6ce1454ff1913e3857bad56392__section_coming_from_xmlcomposite)
 
 </td>
 </tr>

@@ -65,7 +65,6 @@ Analytical card
 </td>
 <td valign="top">
 
--   Analytical list page
 -   Overview page
 
 
@@ -73,23 +72,24 @@ Analytical card
 </td>
 <td valign="top">
 
-[Creating Key Performance Indicator Tags in Analytical Services](creating-key-performance-indicator-tags-in-analytical-services-d80a360.md)
+-   [Creating Key Performance Indicator Tags in Analytical Services](creating-key-performance-indicator-tags-in-analytical-services-d80a360.md)
+-   [Analytical Cards](analytical-cards-d7b0b42.md)
 
-[Analytical Cards](analytical-cards-d7b0b42.md)
+
 
 </td>
 <td valign="top">
 
-[Analytical Card](https://www.sap.com/design-system/fiori-design-web/ui-elements/analytical-card)
+[Analytical Card](https://www.sap.com/design-system/fiori-design-web/ui-elements/analytical-card) 
 
 </td>
 <td valign="top">
 
   
   
-**Donut Chart**
+**Analytical Card**
 
-![](images/Analytical_card_ee6aedf.jpg "Donut Chart")
+![Analytical card showing actual cost of 2.0K EUR year to date with a 400% deviation from the 0.4K target, and a donut chart displaying costs by different expense type](images/Analytical_card_ee6aedf.jpg "Analytical Card")
 
 </td>
 <td valign="top">
@@ -122,16 +122,15 @@ Add column to a table
 </td>
 <td valign="top">
 
-[Defining Line Items](defining-line-items-f0e1e17.md)
+-   [Defining Line Items](defining-line-items-f0e1e17.md)
+-   [Grouping of Fields](grouping-of-fields-cb1748e.md)
 
-[Table Cards](table-cards-167bf7c.md)
 
-[Grouping of Fields](grouping-of-fields-cb1748e.md)
 
 </td>
 <td valign="top">
 
-[Table Overview](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/table-overview)
+[Table Overview](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/table-overview) 
 
 </td>
 <td valign="top">
@@ -140,7 +139,7 @@ Add column to a table
   
 **Add Column to a Table**
 
-![](images/Add_column_to_a_table_019b848.png "Add
+![List report showing a products table with 205 items and columns for preview image, product ID, name, supplier, category, star ratings, and additional content.](images/Add_column_to_a_table_019b848.png "Add
 										Column
 										to a
 										Table")
@@ -196,14 +195,14 @@ Add card to insights
   
 **Add Card to Insights Option in List Report Table Toolbar**
 
-![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in List Report Table
+![List report showing the Manage Purchase Contracts app with a filter bar and a purchase contracts table, with the Add Card to Insights button highlighted in the table toolbar.](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in List Report Table
 										Toolbar")
 
   
   
 **Add Card to Insights Option in Analytical List Page Chart Toolbar**
 
-![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in Analytical List Page Chart
+![Analytical list page showing the Monitor Purchase Contract Items app with a filter bar and a bar chart displaying material group data, with the Add Card to Insights button highlighted in the chart toolbar.](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in Analytical List Page Chart
 										Toolbar")
 
 </td>
@@ -245,7 +244,7 @@ Add custom column
 </td>
 <td valign="top">
 
-[Table Overview](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/table-overview)
+[Table Overview](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/table-overview) 
 
 </td>
 <td valign="top">
@@ -254,7 +253,7 @@ Add custom column
   
 **Custom Columns in a Table**
 
-![](images/Custom_Columns_00819cd.png "Custom Columns in a Table")
+![List report showing a sales orders table with the Custom Button column highlighted, demonstrating a custom column added to the table with columns for sales order, sold-to party, custom button, order type, overall status, and net amount.](images/Custom_Columns_00819cd.png "Custom Columns in a Table")
 
 </td>
 <td valign="top">
@@ -289,9 +288,10 @@ Adaptation
 </td>
 <td valign="top">
 
-[Adapting the UI: List Report Page and Object Page](adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md)
+-   [Adapting the UI: List Report Page and Object Page](adapting-the-ui-list-report-page-and-object-page-0d2f1a9.md)
+-   [Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md)
 
-[Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md)
+
 
 </td>
 <td valign="top">
@@ -332,7 +332,7 @@ Analytical table
 </td>
 <td valign="top">
 
-[Analytical Table \(ALV\)](https://www.sap.com/design-system/fiori-design-web/ui-elements/analytical-table-alv)
+[Analytical Table \(ALV\)](https://www.sap.com/design-system/fiori-design-web/ui-elements/analytical-table-alv) 
 
 </td>
 <td valign="top">
@@ -341,7 +341,7 @@ Analytical table
   
 **Analytical Table**
 
-![](images/Analytical_Table_in_Compact_Mode_4d427f5.png "Analytical Table")
+![Analytical table displaying product data with columns for year, month, product, item, product code, and product name.](images/Analytical_Table_in_Compact_Mode_4d427f5.png "Analytical Table")
 
 </td>
 <td valign="top">
@@ -367,16 +367,16 @@ Area micro chart
 </td>
 <td valign="top">
 
-[Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Area Micro Chart](area-micro-chart-1467f2b.md)
+-   [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
-[Area Micro Chart](area-micro-chart-1467f2b.md)
 
-[Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
 </td>
 <td valign="top">
 
-[Area Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/area-micro-chart)
+[Area Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/area-micro-chart) 
 
 </td>
 <td valign="top">
@@ -385,7 +385,7 @@ Area micro chart
   
 **Components of an Area Micro Chart**
 
-![](images/Area_Micro_Chart_8720cf8.png "Components of an Area Micro Chart")
+![Labeled diagram of an area micro chart showing components such as actual values, target values, thresholds, and date and value labels.](images/Area_Micro_Chart_8720cf8.png "Components of an Area Micro Chart")
 
 </td>
 <td valign="top">
@@ -421,12 +421,12 @@ Avatar
 </td>
 <td valign="top">
 
-[Using Images and Icons](using-images-and-icons-5760b63.md)
+[Using Images and Icons](using-images-and-icons-5760b63.md) 
 
 </td>
 <td valign="top">
 
-[Avatar](https://www.sap.com/design-system/fiori-design-web/ui-elements/avatar)
+[Avatar](https://www.sap.com/design-system/fiori-design-web/ui-elements/avatar) 
 
 </td>
 <td valign="top">
@@ -435,7 +435,7 @@ Avatar
   
 **Business Images**
 
-![](images/AvatarBusinessImages_8199863.png "Business Images")
+![Examples of avatar types showing a user image, user initials, and a standard user placeholder icon, alongside a potential product image and a product image placeholder.](images/AvatarBusinessImages_8199863.png "Business Images")
 
 </td>
 <td valign="top">
@@ -445,6 +445,48 @@ ImageUrl
 Image
 
 Images
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Bar chart
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Bar Chart](bar-chart-95f6aeb.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Bar Chart**
+
+![Horizontal bar chart comparing revenue for A&A, Alexei's Specialities, and 24-Seven.](images/Example_of_a_Horizontal_Bar_Chart_Card_51ba955.png "Bar Chart")
+
+</td>
+<td valign="top">
+
+bar chart
+
+chart
 
 </td>
 </tr>
@@ -463,12 +505,12 @@ Breadcrumb
 </td>
 <td valign="top">
 
-[Object Page Header](../10_More_About_Controls/object-page-header-6e340c1.md)
+[Object Page Header](../10_More_About_Controls/object-page-header-6e340c1.md) 
 
 </td>
 <td valign="top">
 
-[Breadcrumb](https://www.sap.com/design-system/fiori-design-web/ui-elements/breadcrumb)
+[Breadcrumb](https://www.sap.com/design-system/fiori-design-web/ui-elements/breadcrumb) 
 
 </td>
 <td valign="top">
@@ -480,6 +522,46 @@ Breadcrumb
 ![](images/Breadcrumb_5d56a97.jpg "Navigation Bar,
 										Breadcrumbs,
 										and Actions in Header Title of Object Page")
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Bubble chart
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Bubble Chart](bubble-chart-8412307.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Bubble Chart**
+
+![](images/Bubble_Chart_e131bed.png "Bubble Chart")
 
 </td>
 <td valign="top">
@@ -505,45 +587,28 @@ Building blocks
 </td>
 <td valign="top">
 
-[Building Blocks](building-blocks-24c1304.md)
+-   [Building Blocks](building-blocks-24c1304.md)
+-   [The Field Building Block](the-field-building-block-5260b9c.md)
+-   [The Form Building Block](the-form-building-block-391aad2.md)
+-   [The FormElement Building Block](the-formelement-building-block-b45f038.md)
+-   [The Table Building Block](the-table-building-block-3801656.md)
+-   [The FilterBar Building Block](the-filterbar-building-block-7838611.md)
+-   [The FilterField Building Block](the-filterfield-building-block-2df7837.md)
+-   [The MicroChart Building Block](the-microchart-building-block-74554b4.md)
+-   [The Chart Building Block](the-chart-building-block-52d065a.md)
+-   [The FlexibleColumnLayoutActions Building Block](the-flexiblecolumnlayoutactions-building-block-1ba680b.md)
+-   [The Share Building Block](the-share-building-block-41b02df.md)
+-   [The Paginator Building Block](the-paginator-building-block-997292b.md)
+-   [The TreeTable Building Block](the-treetable-building-block-667851f.md)
+-   [The VariantManagement Building Block](the-variantmanagement-building-block-33640ff.md)
+-   [The RichTextEditor Building Block](the-richtexteditor-building-block-7bd2767.md)
+-   [The Page Building Block](the-page-building-block-0258650.md)
+-   [The MessageButton Building Block](the-messagebutton-building-block-b365f2a.md)
+-   [The KPITag Building Block](the-kpitag-building-block-a256bff.md)
+-   [The AINotice Building Block](the-ainotice-building-block-8c6e98b.md)
+-   [The AlwaysEditableField Building Block](the-alwayseditablefield-building-block-67add6d.md)
 
-[The Field Building Block](the-field-building-block-5260b9c.md)
 
-[The Form Building Block](the-form-building-block-391aad2.md)
-
-[The FormElement Building Block](the-formelement-building-block-b45f038.md)
-
-[The Table Building Block](the-table-building-block-3801656.md)
-
-[The FilterBar Building Block](the-filterbar-building-block-7838611.md)
-
-[The FilterField Building Block](the-filterfield-building-block-2df7837.md)
-
-[The MicroChart Building Block](the-microchart-building-block-74554b4.md)
-
-[The Chart Building Block](the-chart-building-block-52d065a.md)
-
-[The FlexibleColumnLayoutActions Building Block](the-flexiblecolumnlayoutactions-building-block-1ba680b.md)
-
-[The Share Building Block](the-share-building-block-41b02df.md)
-
-[The Paginator Building Block](the-paginator-building-block-997292b.md)
-
-[The TreeTable Building Block](the-treetable-building-block-667851f.md)
-
-[The VariantManagement Building Block](the-variantmanagement-building-block-33640ff.md)
-
-[The RichTextEditor Building Block](the-richtexteditor-building-block-7bd2767.md)
-
-[The Page Building Block](the-page-building-block-0258650.md)
-
-[The MessageButton Building Block](the-messagebutton-building-block-b365f2a.md)
-
-[The KPITag Building Block](the-kpitag-building-block-a256bff.md)
-
-[The AINotice Building Block](the-ainotice-building-block-8c6e98b.md)
-
-[The AlwaysEditableField Building Block](the-alwayseditablefield-building-block-67add6d.md)
 
 </td>
 <td valign="top">
@@ -579,7 +644,7 @@ Flexible Programming Model
 <tr>
 <td valign="top">
 
-Bullet chart
+Vertical Bullet chart
 
 </td>
 <td valign="top">
@@ -593,12 +658,15 @@ Bullet chart
 </td>
 <td valign="top">
 
-[Configuring Charts](configuring-charts-653ed0f.md) 
+-   [Configuring Charts](configuring-charts-653ed0f.md)
+-   [Vertical Bullet Chart](vertical-bullet-chart-f4a899f.md)
+
+
 
 </td>
 <td valign="top">
 
-[Bullet Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/bullet-chart)
+
 
 </td>
 <td valign="top">
@@ -607,12 +675,16 @@ Bullet chart
   
 **Bullet Chart**
 
-![](images/Bullet_Chart_08e0f82.jpg "Bullet Chart")
+![](../01_Whats-New/images/WhatsNew_138_OVP_VerticalBullet_f2d9418.png "Bullet Chart")
 
 </td>
 <td valign="top">
 
 charts
+
+bullet chart
+
+vertical chart
 
 </td>
 </tr>
@@ -633,16 +705,16 @@ Bullet micro chart
 </td>
 <td valign="top">
 
-[Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Bullet Micro Chart](bullet-micro-chart-b915166.md)
+-   [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
-[Bullet Micro Chart](bullet-micro-chart-b915166.md)
 
-[Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
 </td>
 <td valign="top">
 
-[Bullet Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/bullet-micro-chart)
+[Bullet Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/bullet-micro-chart) 
 
 </td>
 <td valign="top">
@@ -691,7 +763,7 @@ Busy indicator
 </td>
 <td valign="top">
 
-[Busy Indicator](https://www.sap.com/design-system/fiori-design-web/ui-elements/busy-indicator)
+[Busy Indicator](https://www.sap.com/design-system/fiori-design-web/ui-elements/busy-indicator) 
 
 </td>
 <td valign="top">
@@ -727,14 +799,15 @@ Button/Action
 </td>
 <td valign="top">
 
-[Actions](actions-cbf16c5.md)
+-   [Actions](actions-cbf16c5.md)
+-   [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
 
-[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
+
 
 </td>
 <td valign="top">
 
-[Button](https://www.sap.com/design-system/fiori-design-web/ui-elements/button)
+[Button](https://www.sap.com/design-system/fiori-design-web/ui-elements/button) 
 
 </td>
 <td valign="top">
@@ -789,6 +862,49 @@ parameter dialog
 <tr>
 <td valign="top">
 
+Button/Navigation
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+-   Overview page
+
+
+
+</td>
+<td valign="top">
+
+[Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+navigation
+
+DataFieldForIntentBasedNavigation
+
+Intent-based Navigation
+
+navigation button
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `Chart` building block
 
 </td>
@@ -803,9 +919,9 @@ parameter dialog
 </td>
 <td valign="top">
 
-[The Chart Building Block](the-chart-building-block-52d065a.md)
+-   [The Chart Building Block](the-chart-building-block-52d065a.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -882,6 +998,45 @@ smart chart
 <tr>
 <td valign="top">
 
+Chart personalization
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+-   Overview page
+
+
+
+</td>
+<td valign="top">
+
+[Enabling Chart Personalization](enabling-chart-personalization-7d41330.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+personalisation
+
+personalization
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Checkbox
 
 </td>
@@ -902,7 +1057,7 @@ Checkbox
 </td>
 <td valign="top">
 
-[Checkbox](https://www.sap.com/design-system/fiori-design-web/ui-elements/checkbox)
+[Checkbox](https://www.sap.com/design-system/fiori-design-web/ui-elements/checkbox) 
 
 </td>
 <td valign="top">
@@ -943,7 +1098,7 @@ Checkbox group
 </td>
 <td valign="top">
 
-[Grouping of Fields](grouping-of-fields-cb1748e.md)
+[Grouping of Fields](grouping-of-fields-cb1748e.md) 
 
 </td>
 <td valign="top">
@@ -981,7 +1136,7 @@ Coloring cards based on threshold values
 </td>
 <td valign="top">
 
-[Coloring Cards Based on Threshold Values](coloring-cards-based-on-threshold-values-02c53f4.md)
+[Coloring Cards Based on Threshold Values](coloring-cards-based-on-threshold-values-02c53f4.md) 
 
 </td>
 <td valign="top">
@@ -1013,6 +1168,8 @@ Column chart
 <td valign="top">
 
 -   Analytical list page
+-   List report page
+-   Object page
 -   Overview page
 
 
@@ -1025,7 +1182,7 @@ Column chart
 </td>
 <td valign="top">
 
-[Column Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/column-chart)
+[Column Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/column-chart) 
 
 </td>
 <td valign="top">
@@ -1050,6 +1207,54 @@ columns
 <tr>
 <td valign="top">
 
+Column micro chart
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Column Micro Chart](column-micro-chart-1a4ecb8.md) 
+
+</td>
+<td valign="top">
+
+[Column Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/column-micro-chart) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Column Micro Chart**
+
+![](images/Column_Micro_Chart_f7b8bbc.png "Column Micro Chart")
+
+</td>
+<td valign="top">
+
+columns
+
+micro chart
+
+microchart
+
+micro-chart
+
+charts
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Column popin
 
 </td>
@@ -1065,7 +1270,7 @@ Column popin
 </td>
 <td valign="top">
 
-[Configuring the Popin Layout for Responsive Tables](configuring-the-popin-layout-for-responsive-tables-e6eddda.md)
+[Configuring the Popin Layout for Responsive Tables](configuring-the-popin-layout-for-responsive-tables-e6eddda.md) 
 
 </td>
 <td valign="top">
@@ -1087,6 +1292,48 @@ Column popin
 <tr>
 <td valign="top">
 
+Combination chart
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Combination Chart](combination-chart-5871393.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Combination Chart**
+
+![](../01_Whats-New/images/Whats_New_140_OVP_Combination_Chart_55139a9.png "Combination Chart")
+
+</td>
+<td valign="top">
+
+charts
+
+combination
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Combine buttons/actions in the toolbar
 
 </td>
@@ -1101,7 +1348,7 @@ Combine buttons/actions in the toolbar
 </td>
 <td valign="top">
 
-[Actions](actions-cbf16c5.md)
+[Actions](actions-cbf16c5.md) 
 
 </td>
 <td valign="top">
@@ -1121,6 +1368,12 @@ MenuAction
 menu action
 
 Menu button
+
+Grouping actions
+
+Action grouping
+
+Action group
 
 </td>
 </tr>
@@ -1142,14 +1395,15 @@ Combo box
 </td>
 <td valign="top">
 
-[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md)
+-   [Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md)
+-   [Configuring View Switch](configuring-view-switch-931f92d.md)
 
-[Configuring View Switch](configuring-view-switch-931f92d.md)
+
 
 </td>
 <td valign="top">
 
-[Combo Box](https://www.sap.com/design-system/fiori-design-web/ui-elements/combo-box)
+[Combo Box](https://www.sap.com/design-system/fiori-design-web/ui-elements/combo-box) 
 
 </td>
 <td valign="top">
@@ -1178,6 +1432,54 @@ pro-down
 <tr>
 <td valign="top">
 
+Comparison micro chart
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Comparison Micro Chart](comparison-micro-chart-9d126f1.md) 
+
+</td>
+<td valign="top">
+
+[Comparison Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/comparison-micro-chart) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Comparison Micro Chart**
+
+![](images/Comparison_Micro_Chart_0df709f.png "Comparison Micro Chart")
+
+</td>
+<td valign="top">
+
+charts
+
+comparison
+
+microchart
+
+micro chart
+
+micro-chart
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `ConditionalSwitch` building block
 
 </td>
@@ -1192,9 +1494,10 @@ pro-down
 </td>
 <td valign="top">
 
-[The ConditionalSwitch Building Block](the-conditionalswitch-building-block-ba06542.md)
+-   [The ConditionalSwitch Building Block](the-conditionalswitch-building-block-ba06542.md)
+-   [Building Blocks](building-blocks-24c1304.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -1250,7 +1553,7 @@ Contact quick view
 </td>
 <td valign="top">
 
-[Adding a Contact Quick View to a Table](adding-a-contact-quick-view-to-a-table-677fbde.md)
+[Adding a Contact Quick View to a Table](adding-a-contact-quick-view-to-a-table-677fbde.md) 
 
 </td>
 <td valign="top">
@@ -1294,12 +1597,12 @@ Context-dependent value help
 </td>
 <td valign="top">
 
-[Field Help](field-help-a5608ea.md)
+[Field Help](field-help-a5608ea.md) 
 
 </td>
 <td valign="top">
 
-[Value Help Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/value-help-dialog)
+[Value Help Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/value-help-dialog) 
 
 </td>
 <td valign="top">
@@ -1312,6 +1615,8 @@ Context-dependent value help
 context-dependent fields
 
 context-dependent values
+
+ValueListRelevantQualifier
 
 </td>
 </tr>
@@ -1332,7 +1637,7 @@ Context-dependent actions
 </td>
 <td valign="top">
 
-[Actions](actions-cbf16c5.md)
+[Actions](actions-cbf16c5.md) 
 
 </td>
 <td valign="top">
@@ -1348,6 +1653,8 @@ Context-dependent actions
 <td valign="top">
 
 context dependent actions
+
+Bound actions
 
 </td>
 </tr>
@@ -1368,7 +1675,7 @@ Context menu
 </td>
 <td valign="top">
 
-[Context Menu in Tables](context-menu-in-tables-5a27f03.md)
+[Context Menu in Tables](context-menu-in-tables-5a27f03.md) 
 
 </td>
 <td valign="top">
@@ -1406,7 +1713,7 @@ Copying and pasting from spreadsheet applications to tables
 </td>
 <td valign="top">
 
-[Copying and Pasting from External Applications to Tables](copying-and-pasting-from-external-applications-to-tables-f6a8fd2.md)
+[Copying and Pasting from External Applications to Tables](copying-and-pasting-from-external-applications-to-tables-f6a8fd2.md) 
 
 </td>
 <td valign="top">
@@ -1462,7 +1769,7 @@ Cumulation \(waterfall\) chart
 </td>
 <td valign="top">
 
-[Cumulation \(Waterfall Chart\)](https://www.sap.com/design-system/fiori-design-web/ui-elements/waterfall-chart)
+[Cumulation \(Waterfall Chart\)](https://www.sap.com/design-system/fiori-design-web/ui-elements/waterfall-chart) 
 
 </td>
 <td valign="top">
@@ -1476,14 +1783,18 @@ Cumulation \(waterfall\) chart
 </td>
 <td valign="top">
 
-defaultPath
+Bridge chart
+
+Cascade chart
+
+Floating columns
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Currency
+Unit of measure
 
 </td>
 <td valign="top">
@@ -1503,7 +1814,7 @@ Currency
 </td>
 <td valign="top">
 
-[Currency](https://www.sap.com/design-system/fiori-design-web/ui-elements/currency)
+[Currency](https://www.sap.com/design-system/fiori-design-web/ui-elements/currency) 
 
 </td>
 <td valign="top">
@@ -1525,6 +1836,8 @@ isCurrency
 
 currencies
 
+currency
+
 </td>
 </tr>
 <tr>
@@ -1542,7 +1855,7 @@ Custom card
 </td>
 <td valign="top">
 
-[Creating Custom Cards on the Overview Page](creating-custom-cards-on-the-overview-page-6d260f7.md)
+[Creating Custom Cards on the Overview Page](creating-custom-cards-on-the-overview-page-6d260f7.md) 
 
 </td>
 <td valign="top">
@@ -1580,7 +1893,7 @@ Custom code
 </td>
 <td valign="top">
 
-[Using Custom Code Before Standard Operations](using-custom-code-before-standard-operations-877e5ff.md)
+[Using Custom Code Before Standard Operations](using-custom-code-before-standard-operations-877e5ff.md) 
 
 </td>
 <td valign="top">
@@ -1607,6 +1920,84 @@ hook
 
 before save
 
+before create
+
+before edit
+
+before delete
+
+before discard
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Custom content in table toolbar
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Adding Custom Content to the Table Toolbar](adding-custom-content-to-the-table-toolbar-c452fa6.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+custom actions
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Custom content in header toolbar
+
+</td>
+<td valign="top">
+
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Adding Custom Content to the Header Toolbar of the Object Page](adding-custom-content-to-the-header-toolbar-of-the-object-page-3bde79d.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+custom actions
+
 </td>
 </tr>
 <tr>
@@ -1625,12 +2016,12 @@ Custom filter field
 </td>
 <td valign="top">
 
-[Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md)
+[Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md) 
 
 </td>
 <td valign="top">
 
-[Filter Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/filter-bar)
+[Filter Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/filter-bar) 
 
 </td>
 <td valign="top">
@@ -1675,12 +2066,12 @@ Custom action
 </td>
 <td valign="top">
 
-[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
+[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) 
 
 </td>
 <td valign="top">
 
-[Action Placement](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/action-placement)
+[Action Placement](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/action-placement) 
 
 </td>
 <td valign="top">
@@ -1789,12 +2180,12 @@ Custom form
 </td>
 <td valign="top">
 
-[Extension Points for Forms on the Object Page](extension-points-for-forms-on-the-object-page-4e49753.md)
+[Extension Points for Forms on the Object Page](extension-points-for-forms-on-the-object-page-4e49753.md) 
 
 </td>
 <td valign="top">
 
-[Form / Simple Form](https://www.sap.com/design-system/fiori-design-web/ui-elements/form)
+[Form / Simple Form](https://www.sap.com/design-system/fiori-design-web/ui-elements/form) 
 
 </td>
 <td valign="top">
@@ -1833,12 +2224,12 @@ Custom section
 </td>
 <td valign="top">
 
-[Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md)
+[Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md) 
 
 </td>
 <td valign="top">
 
-[Object Page Floorplan](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/object-page)
+[Object Page Floorplan](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/object-page) 
 
 </td>
 <td valign="top">
@@ -1877,12 +2268,12 @@ Custom subsection
 </td>
 <td valign="top">
 
-[Extension Points for Subsections on the Object Page](extension-points-for-subsections-on-the-object-page-ce8d468.md)
+[Extension Points for Subsections on the Object Page](extension-points-for-subsections-on-the-object-page-ce8d468.md) 
 
 </td>
 <td valign="top">
 
-[Object Page Floorplan](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/object-page)
+[Object Page Floorplan](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/object-page) 
 
 </td>
 <td valign="top">
@@ -1921,12 +2312,12 @@ Custom dynamic side content
 </td>
 <td valign="top">
 
-[Adding Dynamic Side Content to Object Page Sections](adding-dynamic-side-content-to-object-page-sections-8e01a46.md)
+[Adding Dynamic Side Content to Object Page Sections](adding-dynamic-side-content-to-object-page-sections-8e01a46.md) 
 
 </td>
 <td valign="top">
 
-[Dynamic Side Content](https://www.sap.com/design-system/fiori-design-web/ui-elements/dynamic-side-content)
+[Dynamic Side Content](https://www.sap.com/design-system/fiori-design-web/ui-elements/dynamic-side-content) 
 
 </td>
 <td valign="top">
@@ -1969,7 +2360,7 @@ Date/time picker
 </td>
 <td valign="top">
 
-[Date/Time Picker](https://www.sap.com/design-system/fiori-design-web/ui-elements/datetime-picker)
+[Date/Time Picker](https://www.sap.com/design-system/fiori-design-web/ui-elements/datetime-picker) 
 
 </td>
 <td valign="top">
@@ -2022,7 +2413,7 @@ Date picker
 </td>
 <td valign="top">
 
-[Date Picker](https://www.sap.com/design-system/fiori-design-web/ui-elements/date-picker)
+[Date Picker](https://www.sap.com/design-system/fiori-design-web/ui-elements/date-picker) 
 
 </td>
 <td valign="top">
@@ -2067,7 +2458,7 @@ Date range selection
 </td>
 <td valign="top">
 
-[Date Range Selection](https://www.sap.com/design-system/fiori-design-web/ui-elements/date-range-selection)
+[Date Range Selection](https://www.sap.com/design-system/fiori-design-web/ui-elements/date-range-selection) 
 
 </td>
 <td valign="top">
@@ -2116,7 +2507,7 @@ Default sort order in a table
 </td>
 <td valign="top">
 
-[Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md)
+[Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md) 
 
 </td>
 <td valign="top">
@@ -2158,14 +2549,15 @@ Default values for action parameter dialog
 </td>
 <td valign="top">
 
-[Default Values for Action Parameters](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__DefaultValuesActionParameters) section in [Actions](actions-cbf16c5.md)
+-   [Default Values for Action Parameters](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__DefaultValuesActionParameters)
+-   [Prefilling Fields Using the DefaultValuesFunction](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md)
 
-[Prefilling Fields Using the DefaultValuesFunction](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md)
+
 
 </td>
 <td valign="top">
 
-[Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/dialog)
+[Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/dialog) 
 
 </td>
 <td valign="top">
@@ -2202,22 +2594,26 @@ Defining the order of standard actions
 </td>
 <td valign="top">
 
-[Configuring Standard Actions in Tables](configuring-standard-actions-in-tables-e951d05.md)
+[Configuring Standard Actions in Tables](configuring-standard-actions-in-tables-e951d05.md) 
 
 </td>
 <td valign="top">
 
-[Action Placement](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/action-placement)
-
-</td>
-<td valign="top">
-
- 
+[Action Placement](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/action-placement) 
 
 </td>
 <td valign="top">
 
  
+
+</td>
+<td valign="top">
+
+Action ordering
+
+Ordering actions
+
+Order of actions
 
 </td>
 </tr>
@@ -2238,16 +2634,16 @@ Dialog box
 </td>
 <td valign="top">
 
-[Adapting Texts for Confirmation Dialog Box When Deleting Lines in a Table](adapting-texts-for-confirmation-dialog-box-when-deleting-lines-in-a-table-0d1fbf4.md)
+-   [Adapting Texts for Confirmation Dialog Box When Deleting Lines in a Table](adapting-texts-for-confirmation-dialog-box-when-deleting-lines-in-a-table-0d1fbf4.md)
+-   [Confirmation Popups](confirmation-popups-9a53662.md)
+-   [Enabling Object Creation Using the Dialog on the List Report Page](enabling-object-creation-using-the-dialog-on-the-list-report-page-ceb9284.md)
 
-[Confirmation Popups](confirmation-popups-9a53662.md)
 
-[Enabling Object Creation Using the Dialog on the List Report Page](enabling-object-creation-using-the-dialog-on-the-list-report-page-ceb9284.md)
 
 </td>
 <td valign="top">
 
-[Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/dialog)
+[Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/dialog) 
 
 </td>
 <td valign="top">
@@ -2338,7 +2734,7 @@ Disabling the selection of leaf nodes
 </td>
 <td valign="top">
 
-[Disabling the Selection of Leaf Nodes in Tree Tables](disabling-the-selection-of-leaf-nodes-in-tree-tables-7cf7a31.md)
+[Disabling the Selection of Leaf Nodes in Tree Tables](disabling-the-selection-of-leaf-nodes-in-tree-tables-7cf7a31.md) 
 
 </td>
 <td valign="top">
@@ -2364,6 +2760,48 @@ Disabling the selection of leaf nodes
 <tr>
 <td valign="top">
 
+Donut chart
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Donut Chart](donut-chart-87a17eb.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Donut Chart**
+
+![](images/Donut_Chart_0750575.png "Donut Chart")
+
+</td>
+<td valign="top">
+
+charts
+
+Donut
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Draft handling
 
 </td>
@@ -2378,12 +2816,12 @@ Draft handling
 </td>
 <td valign="top">
 
-[Draft Handling](draft-handling-ed9aa41.md)
+[Draft Handling](draft-handling-ed9aa41.md) 
 
 </td>
 <td valign="top">
 
-[Draft Handling](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/object-handling/draft-handling)
+[Draft Handling](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/object-handling/draft-handling) 
 
 </td>
 <td valign="top">
@@ -2414,6 +2852,50 @@ Simplified Draft
 <tr>
 <td valign="top">
 
+Dual combination chart
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Dual Combination Chart](dual-combination-chart-c406c18.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Dual Combination Chart**
+
+![](images/Dual_Combination_Chart_dcc0020.png "Dual Combination Chart")
+
+</td>
+<td valign="top">
+
+charts
+
+Dual
+
+Dual combination
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Dynamic page layout
 
 </td>
@@ -2428,12 +2910,12 @@ Dynamic page layout
 </td>
 <td valign="top">
 
-[Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md)
+[Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md) 
 
 </td>
 <td valign="top">
 
-[Dynamic Page Layout](https://www.sap.com/design-system/fiori-design-web/page-types/page-layouts/dynamic-page-layout)
+[Dynamic Page Layout](https://www.sap.com/design-system/fiori-design-web/page-types/page-layouts/dynamic-page-layout) 
 
 </td>
 <td valign="top">
@@ -2463,18 +2945,17 @@ Editing status
 
 -   Analytical list page
 -   List report page
--   Object page
 
 
 
 </td>
 <td valign="top">
 
-[Editing Status](editing-status-668ea18.md)
+-   [Editing Status](editing-status-668ea18.md)
+-   [Disabling the Editing Status Filter](disabling-the-editing-status-filter-8eb695a.md)
+-   [Settings for List Report Page Tables](settings-for-list-report-page-tables-4c2d17a.md)
 
-[Disabling the Editing Status Filter](disabling-the-editing-status-filter-8eb695a.md)
 
-[Settings for List Report Page Tables](settings-for-list-report-page-tables-4c2d17a.md)
 
 </td>
 <td valign="top">
@@ -2513,7 +2994,7 @@ Empty row mode for table entries
 </td>
 <td valign="top">
 
-[Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md)
+[Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md) 
 
 </td>
 <td valign="top">
@@ -2597,9 +3078,10 @@ excel
 </td>
 <td valign="top">
 
-[The Field Building Block](the-field-building-block-5260b9c.md)
+-   [The Field Building Block](the-field-building-block-5260b9c.md)
+-   [Building Blocks](building-blocks-24c1304.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -2628,6 +3110,30 @@ free-style application
 
 freestyle application
 
+Progress Indicator
+
+Rating Indicator
+
+Masked Field
+
+Radio Button
+
+Password field
+
+Links fields
+
+Multi-Input field
+
+Multi-line field
+
+Data point
+
+KPI
+
+Contact card
+
+Quick view card
+
 </td>
 </tr>
 <tr>
@@ -2647,36 +3153,26 @@ Filter bar
 </td>
 <td valign="top">
 
-[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md)
+-   [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md)
+-   [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md)
+-   [Disabling the Editing Status Filter](disabling-the-editing-status-filter-8eb695a.md)
+-   [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md)
+-   [Configuring the Global Filter on the Overview Page](configuring-the-global-filter-on-the-overview-page-73d9693.md)
+-   [Configuring Filter Bars](configuring-filter-bars-4bd7590.md)
+-   [Enabling the Search Function](enabling-the-search-function-3cdebee.md)
+-   [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md)
+-   [Configuring Default Filter Values](configuring-default-filter-values-f27ad7b.md)
+-   [Defining Filter Facets](defining-filter-facets-89f63ef.md)
+-   [Configuring Filter Fields](configuring-filter-fields-f5dcb29.md)
+-   [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md)
+-   [Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-37dbf1f.md)
 
-[Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md)
 
-[Disabling the Editing Status Filter](disabling-the-editing-status-filter-8eb695a.md)
-
-[Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md)
-
-[Configuring the Global Filter on the Overview Page](configuring-the-global-filter-on-the-overview-page-73d9693.md)
-
-[Configuring Filter Bars](configuring-filter-bars-4bd7590.md)
-
-[Enabling the Search Function](enabling-the-search-function-3cdebee.md)
-
-[Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md)
-
-[Configuring Default Filter Values](configuring-default-filter-values-f27ad7b.md)
-
-[Defining Filter Facets](defining-filter-facets-89f63ef.md)
-
-[Configuring Filter Fields](configuring-filter-fields-f5dcb29.md)
-
-[Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md)
-
-[Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-37dbf1f.md)
 
 </td>
 <td valign="top">
 
-[Filter Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/filter-bar)
+[Filter Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/filter-bar) 
 
 </td>
 <td valign="top">
@@ -2747,9 +3243,10 @@ interval filter
 </td>
 <td valign="top">
 
-[The FilterBar Building Block](the-filterbar-building-block-7838611.md)
+-   [The FilterBar Building Block](the-filterbar-building-block-7838611.md)
+-   [Building Blocks](building-blocks-24c1304.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -2809,12 +3306,12 @@ Flexible column layout
 </td>
 <td valign="top">
 
-[Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md)
+[Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md) 
 
 </td>
 <td valign="top">
 
-[Flexible Column Layout](https://www.sap.com/design-system/fiori-design-web/page-types/page-layouts/flexible-column-layout)
+[Flexible Column Layout](https://www.sap.com/design-system/fiori-design-web/page-types/page-layouts/flexible-column-layout) 
 
 </td>
 <td valign="top">
@@ -2849,9 +3346,7 @@ FCL
 </td>
 <td valign="top">
 
-[The FlexibleColumnLayoutActions Building Block](the-flexiblecolumnlayoutactions-building-block-1ba680b.md)
-
-[Building Blocks](building-blocks-24c1304.md)
+[The FlexibleColumnLayoutActions Building Block](the-flexiblecolumnlayoutactions-building-block-1ba680b.md) 
 
 </td>
 <td valign="top">
@@ -2907,11 +3402,11 @@ SAP Fiori development portal
 </td>
 <td valign="top">
 
-[Building Blocks](building-blocks-24c1304.md)
+-   [Building Blocks](building-blocks-24c1304.md)
+-   [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md)
+-   [Extension Points for Pages](extension-points-for-pages-ecdf1d6.md)
 
-[Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md)
 
-[Extension Points for Pages](extension-points-for-pages-ecdf1d6.md)
 
 </td>
 <td valign="top">
@@ -2954,14 +3449,15 @@ Footer toolbar
 </td>
 <td valign="top">
 
-[Defining Determining Actions](defining-determining-actions-1743323.md)
+-   [Defining Determining Actions](defining-determining-actions-1743323.md)
+-   [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
 
-[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
+
 
 </td>
 <td valign="top">
 
-[Footer Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/footer-toolbar)
+[Footer Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/footer-toolbar) 
 
 </td>
 <td valign="top">
@@ -3007,7 +3503,7 @@ Form
 </td>
 <td valign="top">
 
-[Form](https://www.sap.com/design-system/fiori-design-web/ui-elements/form)
+[Form](https://www.sap.com/design-system/fiori-design-web/ui-elements/form) 
 
 </td>
 <td valign="top">
@@ -3060,7 +3556,7 @@ Formatting numeric values
 </td>
 <td valign="top">
 
-[Formatting Numeric Values](formatting-numeric-values-735e518.md)
+[Formatting Numeric Values](formatting-numeric-values-735e518.md) 
 
 </td>
 <td valign="top">
@@ -3102,9 +3598,10 @@ Formatting numeric values
 </td>
 <td valign="top">
 
-[The FormElement Building Block](the-formelement-building-block-b45f038.md)
+-   [The FormElement Building Block](the-formelement-building-block-b45f038.md)
+-   [Building Blocks](building-blocks-24c1304.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -3150,12 +3647,12 @@ Freeze the first column in a table
 </td>
 <td valign="top">
 
-[Freezing Table Columns](freezing-table-columns-ec28cdd.md)
+[Freezing Table Columns](freezing-table-columns-ec28cdd.md) 
 
 </td>
 <td valign="top">
 
-[Table Overview](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/table-overview)
+[Table Overview](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/table-overview) 
 
 </td>
 <td valign="top">
@@ -3187,7 +3684,7 @@ Generative AI features
 </td>
 <td valign="top">
 
-[Generative AI Features](generative-ai-features-0ec03d4.md)
+[Generative AI Features](generative-ai-features-0ec03d4.md) 
 
 </td>
 <td valign="top">
@@ -3244,7 +3741,7 @@ Grid table
 </td>
 <td valign="top">
 
-[Grid Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/grid-table)
+[Grid Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/grid-table) 
 
 </td>
 <td valign="top">
@@ -3259,6 +3756,56 @@ Grid table
 <td valign="top">
 
  
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Harvey micro chart
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Harvey Micro Chart](harvey-micro-chart-de4f8bf.md) 
+
+</td>
+<td valign="top">
+
+[Harvey Ball Micro chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/harvey-ball-micro-chart) 
+
+</td>
+<td valign="top">
+
+  
+  
+**Harvey Ball Micro Chart**
+
+![](images/Harvey_Micro_Chart_5026048.png "Harvey Ball Micro Chart")
+
+</td>
+<td valign="top">
+
+charts
+
+harvey
+
+harvey ball chart
+
+microchart
+
+micro chart
+
+micro-chart
 
 </td>
 </tr>
@@ -3280,18 +3827,17 @@ Header toolbar
 </td>
 <td valign="top">
 
-[Actions](actions-cbf16c5.md)
+-   [Actions](actions-cbf16c5.md)
+-   [Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md)
+-   [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
+-   [Defining Custom Actions for Quick View Cards on the Overview Page](defining-custom-actions-for-quick-view-cards-on-the-overview-page-02fb273.md)
 
-[Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md)
 
-[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
-
-[Defining Custom Actions for Quick View Cards on the Overview Page](defining-custom-actions-for-quick-view-cards-on-the-overview-page-02fb273.md)
 
 </td>
 <td valign="top">
 
-[Header Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/header-toolbar)
+[Header Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/header-toolbar) 
 
 </td>
 <td valign="top">
@@ -3326,6 +3872,46 @@ manifest actions
 <tr>
 <td valign="top">
 
+Hide or show table columns
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Hiding or Showing Table Columns](hiding-or-showing-table-columns-fe45346.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+hide
+
+show
+
+table columns
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Highlighting line items based on criticality
 
 </td>
@@ -3340,7 +3926,7 @@ Highlighting line items based on criticality
 </td>
 <td valign="top">
 
-[Highlighting Line Items Based on Criticality](highlighting-line-items-based-on-criticality-0d501b1.md)
+[Highlighting Line Items Based on Criticality](highlighting-line-items-based-on-criticality-0d501b1.md) 
 
 </td>
 <td valign="top">
@@ -3380,7 +3966,7 @@ History of recently entered values
 </td>
 <td valign="top">
 
-[Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-37dbf1f.md)
+[Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-37dbf1f.md) 
 
 </td>
 <td valign="top">
@@ -3420,7 +4006,7 @@ Icon for AI buttons
 </td>
 <td valign="top">
 
-[Adding the AI Icon to Action Buttons](adding-the-ai-icon-to-action-buttons-3ad0452.md)
+[Adding the AI Icon to Action Buttons](adding-the-ai-icon-to-action-buttons-3ad0452.md) 
 
 </td>
 <td valign="top">
@@ -3460,16 +4046,16 @@ Icon tab bar
 </td>
 <td valign="top">
 
-[Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md)
+-   [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md)
+-   [Multiple Views on the List Report Page](multiple-views-on-the-list-report-page-a37df40.md)
+-   [Grouping of Fields](grouping-of-fields-cb1748e.md)
 
-[Multiple Views on the List Report Page](multiple-views-on-the-list-report-page-a37df40.md)
 
-[Grouping of Fields](grouping-of-fields-cb1748e.md)
 
 </td>
 <td valign="top">
 
-[Icon Tab Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/icontabbar)
+[Icon Tab Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/icontabbar) 
 
 </td>
 <td valign="top">
@@ -3504,12 +4090,15 @@ Illustrated message
 </td>
 <td valign="top">
 
-[Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md)[Localization of UI Texts](localization-of-ui-texts-91b525b.md)
+-   [Displaying An Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md)
+-   [Localization of UI Texts](localization-of-ui-texts-91b525b.md)
+
+
 
 </td>
 <td valign="top">
 
-[Illustrated Message](https://www.sap.com/design-system/fiori-design-web/ui-elements/illustrated-message)
+[Illustrated Message](https://www.sap.com/design-system/fiori-design-web/ui-elements/illustrated-message) 
 
 </td>
 <td valign="top">
@@ -3582,7 +4171,7 @@ Inline creation mode for table entries
 </td>
 <td valign="top">
 
-[Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md)
+[Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md) 
 
 </td>
 <td valign="top">
@@ -3620,7 +4209,7 @@ Input assistance
 </td>
 <td valign="top">
 
-[Input Assistance](input-assistance-1a6324d.md)
+[Input Assistance](input-assistance-1a6324d.md) 
 
 </td>
 <td valign="top">
@@ -3639,7 +4228,9 @@ Input assistance
 </td>
 <td valign="top">
 
- 
+Recommendations
+
+suggested value
 
 </td>
 </tr>
@@ -3663,13 +4254,14 @@ Input field
 -   [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md)
 -   [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md)
 -   [Grouping of Fields](grouping-of-fields-cb1748e.md)
+-   [The Field Building Block](the-field-building-block-5260b9c.md)
 
 
 
 </td>
 <td valign="top">
 
-[Input Field](https://www.sap.com/design-system/fiori-design-web/ui-elements/input-field)
+[Input Field](https://www.sap.com/design-system/fiori-design-web/ui-elements/input-field) 
 
 </td>
 <td valign="top">
@@ -3703,12 +4295,12 @@ Interactive chart
 </td>
 <td valign="top">
 
-[Visual Filters](visual-filters-1714720.md)
+[Visual Filters](visual-filters-1714720.md) 
 
 </td>
 <td valign="top">
 
-[Interactive Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/interactive-chart)
+[Interactive Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/interactive-chart) 
 
 </td>
 <td valign="top">
@@ -3724,7 +4316,11 @@ Interactive chart
 
 charts
 
-bars
+Charts as filters
+
+Visual filters
+
+Filtering using chart
 
 </td>
 </tr>
@@ -3745,7 +4341,7 @@ Internal navigation
 </td>
 <td valign="top">
 
-[Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md)
+[Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md) 
 
 </td>
 <td valign="top">
@@ -3760,45 +4356,15 @@ Internal navigation
 </td>
 <td valign="top">
 
- 
+navigate after action
 
-</td>
-</tr>
-<tr>
-<td valign="top">
+navigation after executing an action
 
-Keep alive
+in-page navigation
 
-</td>
-<td valign="top">
+chevron navigation
 
--   Analytical list page
--   List report page
--   Object page
-
-
-
-</td>
-<td valign="top">
-
-[Refresh Dataset for Back Navigation When sap-keep-alive Is Set to True](refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md) 
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-sap-keep-alive
-
-view cache
+navigation from table row
 
 </td>
 </tr>
@@ -3819,7 +4385,7 @@ Keyboard shortcuts
 </td>
 <td valign="top">
 
-[Keyboard Shortcuts](keyboard-shortcuts-0cd318c.md)
+[Keyboard Shortcuts](keyboard-shortcuts-0cd318c.md) 
 
 </td>
 <td valign="top">
@@ -3873,7 +4439,7 @@ Label
 </td>
 <td valign="top">
 
-[Label](https://www.sap.com/design-system/fiori-design-web/ui-elements/label)
+[Label](https://www.sap.com/design-system/fiori-design-web/ui-elements/label) 
 
 </td>
 <td valign="top">
@@ -3906,7 +4472,10 @@ Launch object page in edit mode
 </td>
 <td valign="top">
 
-[Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md)
+-   [Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md)
+-   [Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-8665847.md)
+
+
 
 </td>
 <td valign="top">
@@ -3942,7 +4511,7 @@ Lazy loading
 </td>
 <td valign="top">
 
-[Defining the Loading Behavior of Object Pages](defining-the-loading-behavior-of-object-pages-ac03570.md)
+[Defining the Loading Behavior of Object Pages](defining-the-loading-behavior-of-object-pages-ac03570.md) 
 
 </td>
 <td valign="top">
@@ -3957,7 +4526,7 @@ Lazy loading
 </td>
 <td valign="top">
 
- 
+delayed loading
 
 </td>
 </tr>
@@ -3970,6 +4539,7 @@ Line chart
 <td valign="top">
 
 -   Analytical list page
+-   List report page
 -   Object page
 
 
@@ -3977,14 +4547,15 @@ Line chart
 </td>
 <td valign="top">
 
-[Line Chart](line-chart-3e8c6ff.md)
+-   [Line Chart](line-chart-3e8c6ff.md)
+-   [Configuring Charts](configuring-charts-653ed0f.md)
 
-[Configuring Charts](configuring-charts-653ed0f.md)
+
 
 </td>
 <td valign="top">
 
-[Line Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/line-chart)
+[Line Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/line-chart) 
 
 </td>
 <td valign="top">
@@ -4019,16 +4590,16 @@ Line micro chart
 </td>
 <td valign="top">
 
-[Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Line Micro Chart](line-micro-chart-e5cb2af.md)
+-   [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
-[Line Micro Chart](line-micro-chart-e5cb2af.md)
 
-[Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
 </td>
 <td valign="top">
 
-[Line Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/line-micro-chart)
+[Line Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/line-micro-chart) 
 
 </td>
 <td valign="top">
@@ -4068,18 +4639,16 @@ Link
 </td>
 <td valign="top">
 
-[Link Fields](link-fields-1695504.md)
+-   [Link Fields](link-fields-1695504.md)
+-   [Adding a Contact Quick View to a Table](adding-a-contact-quick-view-to-a-table-677fbde.md)
+-   [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md)
 
-[Adding a Contact Quick View to a Table](adding-a-contact-quick-view-to-a-table-677fbde.md)
 
-[Configuring the List Area](configuring-the-list-area-f57373d.md)
-
-[Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md)
 
 </td>
 <td valign="top">
 
-[Link](https://www.sap.com/design-system/fiori-design-web/ui-elements/link)
+[Link](https://www.sap.com/design-system/fiori-design-web/ui-elements/link) 
 
 </td>
 <td valign="top">
@@ -4129,7 +4698,7 @@ Link list card
 </td>
 <td valign="top">
 
-[Link List Card](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/overview-page-ovp/cards/overview-page-list-cards#link-list-card)
+[Link List Card](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/overview-page-ovp/cards/overview-page-list-cards#link-list-card) 
 
 </td>
 <td valign="top">
@@ -4165,7 +4734,7 @@ Add multiple fields to one column
 </td>
 <td valign="top">
 
-[Adding Multiple Fields to One Column in Responsive Tables](adding-multiple-fields-to-one-column-in-responsive-tables-d318e42.md)
+[Adding Multiple Fields to One Column in Responsive Tables](adding-multiple-fields-to-one-column-in-responsive-tables-d318e42.md) 
 
 </td>
 <td valign="top">
@@ -4203,7 +4772,7 @@ Display text and ID for value help
 </td>
 <td valign="top">
 
-[Value Help](value-help-fccb255.md)
+[Value Help](value-help-fccb255.md) 
 
 </td>
 <td valign="top">
@@ -4246,7 +4815,7 @@ Semantic date range on filter bar
 </td>
 <td valign="top">
 
-[Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md)
+[Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md) 
 
 </td>
 <td valign="top">
@@ -4269,6 +4838,10 @@ semantic dates
 
 dynamic dates
 
+Today
+
+Yesterday
+
 </td>
 </tr>
 <tr>
@@ -4286,12 +4859,12 @@ List card
 </td>
 <td valign="top">
 
-[List Cards](list-cards-56f39e0.md)
+[List Cards](list-cards-56f39e0.md) 
 
 </td>
 <td valign="top">
 
-[List Cards](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/overview-page-ovp/cards/overview-page-list-cards)
+[List Cards](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/overview-page-ovp/cards/overview-page-list-cards) 
 
 </td>
 <td valign="top">
@@ -4324,7 +4897,7 @@ Manage cards
 </td>
 <td valign="top">
 
-[Configuring Overview Pages Using Runtime Capabilities](configuring-overview-pages-using-runtime-capabilities-5b1dd11.md)
+[Configuring Overview Pages Using Runtime Capabilities](configuring-overview-pages-using-runtime-capabilities-5b1dd11.md) 
 
 </td>
 <td valign="top">
@@ -4364,12 +4937,16 @@ Mass edit
 </td>
 <td valign="top">
 
-[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md) 
+-   [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md)
+-   [Adding Custom Input Fields to the Mass Edit Dialog](adding-custom-input-fields-to-the-mass-edit-dialog-fd26fee.md)
+-   [Replacing the Standard Save Functionality in the Mass Edit Dialog](replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md)
+
+
 
 </td>
 <td valign="top">
 
-[Object Handling – Mass Edit](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/object-handling/mass-editing)
+[Object Handling – Mass Edit](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/object-handling/mass-editing) 
 
 </td>
 <td valign="top">
@@ -4419,16 +4996,16 @@ Message box
 </td>
 <td valign="top">
 
-[Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md)
+-   [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md)
+-   [Confirmation Popups](confirmation-popups-9a53662.md)
+-   [Using Messages](using-messages-239b192.md)
 
-[Confirmation Popups](confirmation-popups-9a53662.md)
 
-[Using Messages](using-messages-239b192.md)
 
 </td>
 <td valign="top">
 
-[Message Box](https://www.sap.com/design-system/fiori-design-web/ui-elements/message-box)
+[Message Box](https://www.sap.com/design-system/fiori-design-web/ui-elements/message-box) 
 
 </td>
 <td valign="top">
@@ -4479,12 +5056,12 @@ Message popover
 </td>
 <td valign="top">
 
-[Using Messages](using-messages-239b192.md)
+[Using Messages](using-messages-239b192.md) 
 
 </td>
 <td valign="top">
 
-[Message Popover](https://www.sap.com/design-system/fiori-design-web/ui-elements/message-popover)
+[Message Popover](https://www.sap.com/design-system/fiori-design-web/ui-elements/message-popover) 
 
 </td>
 <td valign="top">
@@ -4538,12 +5115,12 @@ Message toast
 </td>
 <td valign="top">
 
-[Using Messages](using-messages-239b192.md)
+[Using Messages](using-messages-239b192.md) 
 
 </td>
 <td valign="top">
 
-[Message Toast](https://www.sap.com/design-system/fiori-design-web/ui-elements/message-toast)
+[Message Toast](https://www.sap.com/design-system/fiori-design-web/ui-elements/message-toast) 
 
 </td>
 <td valign="top">
@@ -4578,9 +5155,10 @@ success message
 </td>
 <td valign="top">
 
-[The MicroChart Building Block](the-microchart-building-block-74554b4.md)
+-   [The MicroChart Building Block](the-microchart-building-block-74554b4.md)
+-   [Building Blocks](building-blocks-24c1304.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -4628,14 +5206,15 @@ Micro chart
 </td>
 <td valign="top">
 
-[Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
-[Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
+
 
 </td>
 <td valign="top">
 
-[Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/micro-chart)
+[Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/micro-chart) 
 
 </td>
 <td valign="top">
@@ -4674,12 +5253,12 @@ Multi-combo box
 </td>
 <td valign="top">
 
-[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md)
+[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md) 
 
 </td>
 <td valign="top">
 
-[Multi-Combo Box](https://www.sap.com/design-system/fiori-design-web/ui-elements/multi-combobox)
+[Multi-Combo Box](https://www.sap.com/design-system/fiori-design-web/ui-elements/multi-combobox) 
 
 </td>
 <td valign="top">
@@ -4693,7 +5272,7 @@ Multi-combo box
 </td>
 <td valign="top">
 
- 
+Multi-select dropdown
 
 </td>
 </tr>
@@ -4714,7 +5293,7 @@ Multi-input field
 </td>
 <td valign="top">
 
-[Using the Multi-Input Field](using-the-multi-input-field-04ff5b1.md)
+[Using the Multi-Input Field](using-the-multi-input-field-04ff5b1.md) 
 
 </td>
 <td valign="top">
@@ -4810,7 +5389,10 @@ Multiple views of list report page tables
 </td>
 <td valign="top">
 
-[Multiple Views on the List Report Page](multiple-views-on-the-list-report-page-a37df40.md)
+-   [Multiple Views on the List Report Page](multiple-views-on-the-list-report-page-a37df40.md)
+-   [Analytical List Page](analytical-list-page-3d33684.md)
+
+
 
 </td>
 <td valign="top">
@@ -4855,16 +5437,16 @@ Navigation
 </td>
 <td valign="top">
 
-[Configuring Navigation](configuring-navigation-a424275.md)
+-   [Configuring Navigation](configuring-navigation-a424275.md)
+-   [Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md)
+-   [Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md)
 
-[Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md)
 
-[Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md)
 
 </td>
 <td valign="top">
 
-[Navigation](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/navigation/navigation)
+[Navigation](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/navigation/navigation) 
 
 </td>
 <td valign="top">
@@ -4888,6 +5470,46 @@ link
 
 URL
 
+navigate after action
+
+navigation after executing an action
+
+in-page navigation
+
+chevron navigation
+
+navigation from table row
+
+Navigation button
+
+DataFieldWithURL
+
+semantic link
+
+DataFieldWithIntentBasedNavigation
+
+DataFieldForIntentBasedNavigation
+
+semantic object mapping
+
+SemanticObjectMapping
+
+exclude from navigation context
+
+ExcludeFromNavigationContext
+
+SemanticObjectUnavailableActions
+
+secondary keys
+
+adaptNavigationContext
+
+navigation hook
+
+modify navigation target
+
+adaptNavigationTargets
+
 </td>
 </tr>
 <tr>
@@ -4907,13 +5529,13 @@ Navigation extension
 </td>
 <td valign="top">
 
-[Replacing Standard Navigation in a Table](replacing-standard-navigation-in-a-table-a12ad60.md)
+-   [Replacing Standard Navigation in a Table](replacing-standard-navigation-in-a-table-a12ad60.md)
+-   [Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md)
+-   [Creating an Extension to Modify Properties in the Navigation Context](creating-an-extension-to-modify-properties-in-the-navigation-context-199a496.md)
+-   [Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md)
+-   [Creating an Extension to Modify Navigation Targets in Semantic Link Popovers](creating-an-extension-to-modify-navigation-targets-in-semantic-link-popovers-449d3b0.md)
 
-[Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md)
 
-[Creating an Extension to Modify Properties in the Navigation Context](creating-an-extension-to-modify-properties-in-the-navigation-context-199a496.md)
-
-[Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md)
 
 </td>
 <td valign="top">
@@ -4936,6 +5558,10 @@ context modification
 
 modifying route
 
+modify navigation target
+
+adaptNavigationTargets
+
 </td>
 </tr>
 <tr>
@@ -4946,6 +5572,7 @@ Notice for AI-generated content
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -4954,9 +5581,10 @@ Notice for AI-generated content
 </td>
 <td valign="top">
 
-[Configuring the AI Notice in a Column Header](configuring-the-ai-notice-in-a-column-header-82856ce.md)
+-   [Configuring the AI Notice in a Column Header](configuring-the-ai-notice-in-a-column-header-82856ce.md)
+-   [AI Notice](ai-notice-10a6cda.md)
 
-[AI Notice](ai-notice-10a6cda.md)
+
 
 </td>
 <td valign="top">
@@ -4992,53 +5620,6 @@ ai icon
 <tr>
 <td valign="top">
 
-P13n dialog
-
-</td>
-<td valign="top">
-
--   Analytical list page
--   List report page
--   Object page
--   Worklist page
-
-
-
-</td>
-<td valign="top">
-
-[Enabling Table Personalization](enabling-table-personalization-3e2b4d2.md)
-
-[Enabling Chart Personalization](enabling-chart-personalization-7d41330.md)
-
-</td>
-<td valign="top">
-
-[P13n Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/p13n-dialog-popup)
-
-</td>
-<td valign="top">
-
-  
-  
-**P13n Dialog**
-
-![](images/P13n_Dialog_39cd18d.jpg "P13n Dialog")
-
-</td>
-<td valign="top">
-
-personalization
-
-personalisation
-
-View Settings dialog
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `Paginator` building block
 
 </td>
@@ -5051,9 +5632,10 @@ View Settings dialog
 </td>
 <td valign="top">
 
-[The Paginator Building Block](the-paginator-building-block-997292b.md)
+-   [The Paginator Building Block](the-paginator-building-block-997292b.md)
+-   [Building Blocks](building-blocks-24c1304.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -5091,53 +5673,6 @@ freestyle application
 <tr>
 <td valign="top">
 
-Popover
-
-</td>
-<td valign="top">
-
--   Analytical list page
--   List report page
--   Object page
--   Overview page
-
-
-
-</td>
-<td valign="top">
-
-[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md)
-
-</td>
-<td valign="top">
-
-[Popover](https://www.sap.com/design-system/fiori-design-web/ui-elements/popover)
-
-</td>
-<td valign="top">
-
-  
-  
-**Popover**
-
-![](images/Popover_74ceaac.png "Popover")
-
-</td>
-<td valign="top">
-
-Value help
-
-VH
-
-Dropdown List
-
-DDL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 Prefilling fields when creating a new entity
 
 </td>
@@ -5152,7 +5687,7 @@ Prefilling fields when creating a new entity
 </td>
 <td valign="top">
 
-[Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md)
+[Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md) 
 
 </td>
 <td valign="top">
@@ -5192,14 +5727,15 @@ Progress indicator
 </td>
 <td valign="top">
 
-[Adding a Progress Indicator to a Table](adding-a-progress-indicator-to-a-table-43f6f0f.md)
+-   [Adding a Progress Indicator to a Table](adding-a-progress-indicator-to-a-table-43f6f0f.md)
+-   [Progress Indicator Facet in the Object Page Header](progress-indicator-facet-in-the-object-page-header-3b5e01c.md)
 
-[Progress Indicator Facet in the Object Page Header](progress-indicator-facet-in-the-object-page-header-3b5e01c.md)
+
 
 </td>
 <td valign="top">
 
-[Progress Indicator](https://www.sap.com/design-system/fiori-design-web/ui-elements/progress-indicator)
+[Progress Indicator](https://www.sap.com/design-system/fiori-design-web/ui-elements/progress-indicator) 
 
 </td>
 <td valign="top">
@@ -5234,7 +5770,7 @@ Quick views for link navigation
 </td>
 <td valign="top">
 
-[Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md)
+[Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md) 
 
 </td>
 <td valign="top">
@@ -5278,16 +5814,16 @@ Radial micro chart
 </td>
 <td valign="top">
 
-[Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Radial Micro Chart](radial-micro-chart-51eb569.md)
+-   [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
-[Radial Micro Chart](radial-micro-chart-51eb569.md)
 
-[Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
 </td>
 <td valign="top">
 
-[Radial Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/radial-micro-chart)
+[Radial Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/radial-micro-chart) 
 
 </td>
 <td valign="top">
@@ -5324,14 +5860,15 @@ Rating indicator
 </td>
 <td valign="top">
 
-[Adding a Rating Indicator to a Table](adding-a-rating-indicator-to-a-table-a797173.md)
+-   [Adding a Rating Indicator to a Table](adding-a-rating-indicator-to-a-table-a797173.md)
+-   [Rating Indicator Facet in the Object Page Header](rating-indicator-facet-in-the-object-page-header-bcc12cb.md)
 
-[Rating Indicator Facet in the Object Page Header](rating-indicator-facet-in-the-object-page-header-bcc12cb.md)
+
 
 </td>
 <td valign="top">
 
-[Rating Indicator](https://www.sap.com/design-system/fiori-design-web/ui-elements/rating-indicator)
+[Rating Indicator](https://www.sap.com/design-system/fiori-design-web/ui-elements/rating-indicator) 
 
 </td>
 <td valign="top">
@@ -5364,7 +5901,7 @@ Related apps button
 </td>
 <td valign="top">
 
-[Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md)
+[Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md) 
 
 </td>
 <td valign="top">
@@ -5406,7 +5943,7 @@ Resizing cards
 </td>
 <td valign="top">
 
-[Configuring Overview Pages Using Runtime Capabilities](configuring-overview-pages-using-runtime-capabilities-5b1dd11.md)
+[Configuring Overview Pages Using Runtime Capabilities](configuring-overview-pages-using-runtime-capabilities-5b1dd11.md) 
 
 </td>
 <td valign="top">
@@ -5443,14 +5980,12 @@ Responsive table
 </td>
 <td valign="top">
 
-[Table Types](table-types-c0f6592.md)
-
-[Table Cards](table-cards-167bf7c.md)
+[Table Types](table-types-c0f6592.md) 
 
 </td>
 <td valign="top">
 
-[Responsive Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/responsive-table)
+[Responsive Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/responsive-table) 
 
 </td>
 <td valign="top">
@@ -5487,7 +6022,7 @@ Retrieve row count of a table
 </td>
 <td valign="top">
 
-[Retrieving the Row Count of Tables](retrieving-the-row-count-of-tables-3679370.md)
+[Retrieving the Row Count of Tables](retrieving-the-row-count-of-tables-3679370.md) 
 
 </td>
 <td valign="top">
@@ -5525,7 +6060,9 @@ Requesting additional properties
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   Custom page
+-   List report page
 -   Object page
 
 
@@ -5533,9 +6070,10 @@ Requesting additional properties
 </td>
 <td valign="top">
 
-[Requesting Additional Properties on the Object Page and Custom Page](requesting-additional-properties-on-the-object-page-and-custom-page-c5e38f9.md)
+-   [Requesting Additional Properties on the Object Page and Custom Page](requesting-additional-properties-on-the-object-page-and-custom-page-c5e38f9.md)
+-   [Requesting Additional Properties](requesting-additional-properties-82e27ff.md)
 
-[Requesting Additional Properties](requesting-additional-properties-82e27ff.md)
+
 
 </td>
 <td valign="top">
@@ -5572,7 +6110,10 @@ fetch properties
 </td>
 <td valign="top">
 
-[Refresh Entity Sets in sap-keep-alive Mode](refresh-entity-sets-in-sap-keep-alive-mode-3c65f2c.md)
+-   [Refresh Entity Sets in sap-keep-alive Mode](refresh-entity-sets-in-sap-keep-alive-mode-3c65f2c.md)
+-   [Refresh Dataset for Back Navigation When sap-keep-alive Is Set to True](refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md)
+
+
 
 </td>
 <td valign="top">
@@ -5587,7 +6128,9 @@ fetch properties
 </td>
 <td valign="top">
 
- 
+sap-keep-alive
+
+view cache
 
 </td>
 </tr>
@@ -5606,7 +6149,7 @@ Reuse components
 </td>
 <td valign="top">
 
-[Including Reuse Components on an Object Page](including-reuse-components-on-an-object-page-d869d7a.md)
+[Including Reuse Components on an Object Page](including-reuse-components-on-an-object-page-d869d7a.md) 
 
 </td>
 <td valign="top">
@@ -5645,9 +6188,7 @@ Reuse components
 </td>
 <td valign="top">
 
-[The RichTextEditor Building Block](the-richtexteditor-building-block-7bd2767.md)
-
-[Building Blocks](building-blocks-24c1304.md)
+[The RichTextEditor Building Block](the-richtexteditor-building-block-7bd2767.md) 
 
 </td>
 <td valign="top">
@@ -5693,9 +6234,10 @@ free-style application
 </td>
 <td valign="top">
 
-[The VariantManagement Building Block](the-variantmanagement-building-block-33640ff.md)
+-   [The VariantManagement Building Block](the-variantmanagement-building-block-33640ff.md)
+-   [Building Blocks](building-blocks-24c1304.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -5741,9 +6283,10 @@ variant management
 </td>
 <td valign="top">
 
-[The Page Building Block](the-page-building-block-0258650.md)
+-   [The Page Building Block](the-page-building-block-0258650.md)
+-   [Building Blocks](building-blocks-24c1304.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -5774,6 +6317,8 @@ freestyle application
 
 free-style application
 
+custom page
+
 </td>
 </tr>
 <tr>
@@ -5793,9 +6338,10 @@ free-style application
 </td>
 <td valign="top">
 
-[The MessageButton Building Block](the-messagebutton-building-block-b365f2a.md)
+-   [The MessageButton Building Block](the-messagebutton-building-block-b365f2a.md)
+-   [Building Blocks](building-blocks-24c1304.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -5847,9 +6393,10 @@ Save
 </td>
 <td valign="top">
 
-[Save and Navigation Options on the Object Page](save-and-navigation-options-on-the-object-page-55d81bc.md)
+-   [Save and Navigation Options on the Object Page](save-and-navigation-options-on-the-object-page-55d81bc.md)
+-   [Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-fd3950a.md)
 
-[Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-fd3950a.md)
+
 
 </td>
 <td valign="top">
@@ -5885,7 +6432,7 @@ Save and navigate to the list report page
 </td>
 <td valign="top">
 
-[Save and Navigation Options on the Object Page](save-and-navigation-options-on-the-object-page-55d81bc.md)
+[Save and Navigation Options on the Object Page](save-and-navigation-options-on-the-object-page-55d81bc.md) 
 
 </td>
 <td valign="top">
@@ -5911,6 +6458,48 @@ Save and navigate to the list report page
 <tr>
 <td valign="top">
 
+Scatter chart
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Scatter Chart](scatter-chart-7471c1f.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Scatter Chart**
+
+![](../01_Whats-New/images/Whats_New_140_OVP_Scatter_Chart_f264ec1.png "Scatter Chart")
+
+</td>
+<td valign="top">
+
+charts
+
+scatter
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Search
 
 </td>
@@ -5927,12 +6516,12 @@ Search
 </td>
 <td valign="top">
 
-[Enabling the Search Function](enabling-the-search-function-3cdebee.md)
+[Enabling the Search Function](enabling-the-search-function-3cdebee.md) 
 
 </td>
 <td valign="top">
 
-[Search](https://www.sap.com/design-system/fiori-design-web/ui-elements/search)
+[Search](https://www.sap.com/design-system/fiori-design-web/ui-elements/search) 
 
 </td>
 <td valign="top">
@@ -5958,6 +6547,8 @@ Segmented buttons
 </td>
 <td valign="top">
 
+-   Analytical list page
+-   List report page
 -   Object page
 
 
@@ -5965,12 +6556,12 @@ Segmented buttons
 </td>
 <td valign="top">
 
-[Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md)
+[Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md) 
 
 </td>
 <td valign="top">
 
-[Segmented Buttons](https://www.sap.com/design-system/fiori-design-web/ui-elements/button#segmented-button)
+[Segmented Buttons](https://www.sap.com/design-system/fiori-design-web/ui-elements/button#segmented-button) 
 
 </td>
 <td valign="top">
@@ -5991,11 +6582,12 @@ Segmented buttons
 <tr>
 <td valign="top">
 
-"Share" functionality
+*Share* functionality
 
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -6004,9 +6596,10 @@ Segmented buttons
 </td>
 <td valign="top">
 
-[The Share Functionality](the-share-functionality-022bf0d.md)
+-   [The Share Functionality](the-share-functionality-022bf0d.md)
+-   [Store/Restore the Application State](store-restore-the-application-state-46bf248.md)
 
-[Store/Restore the Application State](store-restore-the-application-state-46bf248.md)
+
 
 </td>
 <td valign="top">
@@ -6063,6 +6656,8 @@ flex change
 
 key user changes
 
+workzone
+
 </td>
 </tr>
 <tr>
@@ -6073,6 +6668,7 @@ Side effects
 </td>
 <td valign="top">
 
+-   Analytical list page
 -   List report page
 -   Object page
 
@@ -6081,9 +6677,10 @@ Side effects
 </td>
 <td valign="top">
 
-[Side Effects](side-effects-18b17bd.md)
+-   [Side Effects](side-effects-18b17bd.md)
+-   [Event-Driven Side Effects](event-driven-side-effects-27c9c3b.md)
 
-[Event-Driven Side Effects](event-driven-side-effects-27c9c3b.md)
+
 
 </td>
 <td valign="top">
@@ -6119,9 +6716,10 @@ Side effects
 </td>
 <td valign="top">
 
-[The Share Building Block](the-share-building-block-41b02df.md)
+-   [The Share Building Block](the-share-building-block-41b02df.md)
+-   [Building Blocks](building-blocks-24c1304.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -6158,6 +6756,8 @@ share to MS teams
 
 save as tile
 
+Share on SAP Build Work Zone
+
 </td>
 </tr>
 <tr>
@@ -6176,12 +6776,12 @@ Share to Microsoft Teams
 </td>
 <td valign="top">
 
-[The Share Functionality](the-share-functionality-022bf0d.md)
+[The Share Functionality](the-share-functionality-022bf0d.md) 
 
 </td>
 <td valign="top">
 
-[Header Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/header-toolbar)
+[Header Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/header-toolbar) 
 
 </td>
 <td valign="top">
@@ -6208,38 +6808,6 @@ Sharing
 <tr>
 <td valign="top">
 
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 Sorting on cards
 
 </td>
@@ -6252,7 +6820,7 @@ Sorting on cards
 </td>
 <td valign="top">
 
-[Configuring Sort Properties](configuring-sort-properties-41af842.md)
+[Configuring Sort Properties](configuring-sort-properties-41af842.md) 
 
 </td>
 <td valign="top">
@@ -6288,16 +6856,16 @@ Stacked bar micro chart
 </td>
 <td valign="top">
 
-[Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md)
+-   [Stacked Bar Micro Chart](stacked-bar-micro-chart-9c93837.md)
+-   [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
-[Stacked Bar Micro Chart](stacked-bar-micro-chart-9c93837.md)
 
-[Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md)
 
 </td>
 <td valign="top">
 
-[Stacked Bar Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/stacked-bar-micro-chart)
+[Stacked Bar Micro Chart](https://www.sap.com/design-system/fiori-design-web/ui-elements/stacked-bar-micro-chart) 
 
 </td>
 <td valign="top">
@@ -6320,6 +6888,48 @@ Stacked bar microchart
 <tr>
 <td valign="top">
 
+Stacked column chart
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Stacked Column Chart](stacked-column-chart-c54b815.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Stacked Column Chart**
+
+![](../01_Whats-New/images/WhatsNew_138_OVP_StackedColumn_751363a.png "Stacked Column Chart")
+
+</td>
+<td valign="top">
+
+charts
+
+stacked column
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `Status` building block
 
 </td>
@@ -6334,9 +6944,7 @@ Stacked bar microchart
 </td>
 <td valign="top">
 
-[The Status Building Block](the-status-building-block-8d8d810.md)
-
-[Building Blocks](building-blocks-24c1304.md)
+[The Status Building Block](the-status-building-block-8d8d810.md) 
 
 </td>
 <td valign="top">
@@ -6388,7 +6996,7 @@ Status colors and icons
 </td>
 <td valign="top">
 
-[Status Colors and Icons](status-colors-and-icons-1641180.md)
+[Status Colors and Icons](status-colors-and-icons-1641180.md) 
 
 </td>
 <td valign="top">
@@ -6421,6 +7029,8 @@ Stream support
 </td>
 <td valign="top">
 
+-   Analytical list page
+-   List report page
 -   Object page
 
 
@@ -6428,7 +7038,7 @@ Stream support
 </td>
 <td valign="top">
 
-[Enabling Stream Support](enabling-stream-support-b236d32.md)
+[Enabling Stream Support](enabling-stream-support-b236d32.md) 
 
 </td>
 <td valign="top">
@@ -6480,9 +7090,7 @@ Attachment
 </td>
 <td valign="top">
 
-[The Table Building Block](the-table-building-block-3801656.md)
-
-[Building Blocks](building-blocks-24c1304.md)
+[The Table Building Block](the-table-building-block-3801656.md) 
 
 </td>
 <td valign="top">
@@ -6534,7 +7142,7 @@ Table card
 </td>
 <td valign="top">
 
-[Table Cards](table-cards-167bf7c.md)
+[Table Cards](table-cards-167bf7c.md) 
 
 </td>
 <td valign="top">
@@ -6569,6 +7177,7 @@ Table personalization
 -   List report page
 -   Object page
 -   Overview page
+-   Worklist page
 
 
 
@@ -6580,7 +7189,10 @@ Table personalization
 </td>
 <td valign="top">
 
-[Table Personalization \(Overview\)](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/overview-table-personalization)
+-   [Table Personalization \(Overview\)](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/ui-elements/tables/overview-table-personalization)
+-   [P13n Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/p13n-dialog-popup)
+
+
 
 </td>
 <td valign="top">
@@ -6604,6 +7216,14 @@ Sorting
 
 Grouping
 
+P13n Dialog
+
+personalization
+
+personalisation
+
+View Settings dialog
+
 </td>
 </tr>
 <tr>
@@ -6624,22 +7244,20 @@ Tables
 </td>
 <td valign="top">
 
-[The Table Building Block](the-table-building-block-3801656.md)
+-   [The Table Building Block](the-table-building-block-3801656.md)
+-   [Table Types](table-types-c0f6592.md)
 
-[Table Types](table-types-c0f6592.md)
 
-[Table Cards](table-cards-167bf7c.md)
 
 </td>
 <td valign="top">
 
-[Tree Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/tree-table)
+-   [Tree Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/tree-table)
+-   [Responsive Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/responsive-table)
+-   [Grid Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/grid-table)
+-   [Analytical Table \(ALV\)](https://www.sap.com/design-system/fiori-design-web/ui-elements/analytical-table-alv)
 
-[Responsive Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/responsive-table)
 
-[Grid Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/grid-table)
-
-[Analytical Table \(ALV\)](https://www.sap.com/design-system/fiori-design-web/ui-elements/analytical-table-alv)
 
 </td>
 <td valign="top">
@@ -6679,7 +7297,7 @@ Table toolbar
 </td>
 <td valign="top">
 
-[Table Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/table-bar)
+[Table Toolbar](https://www.sap.com/design-system/fiori-design-web/ui-elements/table-bar) 
 
 </td>
 <td valign="top">
@@ -6719,7 +7337,7 @@ Text
 </td>
 <td valign="top">
 
-[Plain Text Facet in the Object Page Header](plain-text-facet-in-the-object-page-header-1da0926.md)
+[Plain Text Facet in the Object Page Header](plain-text-facet-in-the-object-page-header-1da0926.md) 
 
 </td>
 <td valign="top">
@@ -6763,12 +7381,12 @@ Text area
 </td>
 <td valign="top">
 
-[Multi-Line Text Fields](multi-line-text-fields-b502146.md)
+[Multi-Line Text Fields](multi-line-text-fields-b502146.md) 
 
 </td>
 <td valign="top">
 
-[Text Area](https://www.sap.com/design-system/fiori-design-web/ui-elements/text-area)
+[Text Area](https://www.sap.com/design-system/fiori-design-web/ui-elements/text-area) 
 
 </td>
 <td valign="top">
@@ -6795,6 +7413,48 @@ Expandable Text
 <tr>
 <td valign="top">
 
+Time series chart
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Time Series Chart](time-series-chart-784d317.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Time Series Chart**
+
+![](images/Time_Series_Chart_Card_2ae1caf.png "Time Series Chart")
+
+</td>
+<td valign="top">
+
+charts
+
+time series
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Title
 
 </td>
@@ -6810,16 +7470,16 @@ Title
 </td>
 <td valign="top">
 
-[Setting the Table Header](setting-the-table-header-f996207.md)
+-   [Setting the Table Header](setting-the-table-header-f996207.md)
+-   [Changing Default Titles of New and Unnamed Objects](changing-default-titles-of-new-and-unnamed-objects-63946c0.md)
+-   [Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-05887bd.md)
 
-[Changing Default Titles of New and Unnamed Objects](changing-default-titles-of-new-and-unnamed-objects-63946c0.md)
 
-[Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-05887bd.md)
 
 </td>
 <td valign="top">
 
-[Title](https://www.sap.com/design-system/fiori-design-web/ui-elements/title)
+[Title](https://www.sap.com/design-system/fiori-design-web/ui-elements/title) 
 
 </td>
 <td valign="top">
@@ -6874,14 +7534,15 @@ Token
 </td>
 <td valign="top">
 
-[Field Help](field-help-a5608ea.md)
+-   [Field Help](field-help-a5608ea.md)
+-   [Using the Multi-Input Field](using-the-multi-input-field-04ff5b1.md)
 
-[Using the Multi-Input Field](using-the-multi-input-field-04ff5b1.md)
+
 
 </td>
 <td valign="top">
 
-[Token](https://www.sap.com/design-system/fiori-design-web/ui-elements/token)
+[Token](https://www.sap.com/design-system/fiori-design-web/ui-elements/token) 
 
 </td>
 <td valign="top">
@@ -6902,46 +7563,6 @@ Token
 <tr>
 <td valign="top">
 
-Tree table
-
-</td>
-<td valign="top">
-
--   Analytical list page
--   List report page
--   Object page
-
-
-
-</td>
-<td valign="top">
-
-[Setting the Table Type](setting-the-table-type-7f844f1.md) 
-
-</td>
-<td valign="top">
-
-[Tree Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/tree-table)
-
-</td>
-<td valign="top">
-
-  
-  
-**Tree Table with Multiple Selection**
-
-![](images/Tree_Table_with_Multiple_Selection_cabf655.png "Tree Table with Multiple Selection")
-
-</td>
-<td valign="top">
-
-hierarchy
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 Tree table hierarchy
 
 </td>
@@ -6956,22 +7577,31 @@ Tree table hierarchy
 </td>
 <td valign="top">
 
-[Setting the Table Type](setting-the-table-type-7f844f1.md)
+-   [Setting the Table Type](setting-the-table-type-7f844f1.md)
+-   [The TreeTable Building Block](the-treetable-building-block-667851f.md)
+
+
 
 </td>
 <td valign="top">
 
-[Tree Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/tree-table)
+[Tree Table](https://www.sap.com/design-system/fiori-design-web/ui-elements/tree-table) 
 
 </td>
 <td valign="top">
 
- 
+  
+  
+**Tree Table with Multiple Selection**
+
+![](images/Tree_Table_with_Multiple_Selection_cabf655.png "Tree Table with Multiple Selection")
 
 </td>
 <td valign="top">
 
 TreeTable
+
+hierarchy
 
 </td>
 </tr>
@@ -6992,9 +7622,10 @@ TreeTable
 </td>
 <td valign="top">
 
-[The TreeTable Building Block](the-treetable-building-block-667851f.md)
+-   [The TreeTable Building Block](the-treetable-building-block-667851f.md)
+-   [Building Blocks](building-blocks-24c1304.md)
 
-[Building Blocks](building-blocks-24c1304.md)
+
 
 </td>
 <td valign="top">
@@ -7040,7 +7671,7 @@ Unit of measure on cards
 </td>
 <td valign="top">
 
-[Setting Units of Measure](setting-units-of-measure-df8c65f.md)
+[Setting Units of Measure](setting-units-of-measure-df8c65f.md) 
 
 </td>
 <td valign="top">
@@ -7079,14 +7710,16 @@ Value help
 </td>
 <td valign="top">
 
-[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md)
+-   [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md)
+-   [Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md)
+-   [Value Help](value-help-fccb255.md)
 
-[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md)
+
 
 </td>
 <td valign="top">
 
-[Value Help Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/value-help-dialog)
+[Value Help Dialog](https://www.sap.com/design-system/fiori-design-web/ui-elements/value-help-dialog) 
 
 </td>
 <td valign="top">
@@ -7110,6 +7743,44 @@ DDL
 
 PresentationVariantQualifier
 
+Distinct values
+
+Unique values
+
+Distinct rows
+
+remove duplicate
+
+remove duplicates
+
+DistinctValuesSupported
+
+ValueListForValidation
+
+Context-dependent value help
+
+context dependent value help
+
+valuehelp
+
+InitialValueIsSignificant
+
+ValueListParameterInOut
+
+ValueListParameterConstant
+
+ValueListParameterDisplayOnly
+
+ExternalID
+
+Cache
+
+Caching
+
+Define Conditions
+
+enableLinksInDialogTable
+
 </td>
 </tr>
 <tr>
@@ -7130,18 +7801,17 @@ Variant management
 </td>
 <td valign="top">
 
-[Managing Variants](managing-variants-8ce658e.md)
+-   [Managing Variants](managing-variants-8ce658e.md)
+-   [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md)
+-   [Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-094fe8c.md)
+-   [Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md)
 
-[Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md)
 
-[Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-094fe8c.md)
-
-[Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md)
 
 </td>
 <td valign="top">
 
-[Variant Management](https://www.sap.com/design-system/fiori-design-web/ui-elements/variant-management)
+[Variant Management](https://www.sap.com/design-system/fiori-design-web/ui-elements/variant-management) 
 
 </td>
 <td valign="top">
@@ -7178,14 +7848,15 @@ Visual filter bar
 </td>
 <td valign="top">
 
-[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md)
+-   [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md)
+-   [Visual Filters](visual-filters-1714720.md)
 
-[Visual Filters](visual-filters-1714720.md)
+
 
 </td>
 <td valign="top">
 
-[Visual Filter Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/visual-filter-bar)
+[Visual Filter Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/visual-filter-bar) 
 
 </td>
 <td valign="top">
@@ -7207,6 +7878,14 @@ measure-based filter
 
 filter on measure
 
+chart-based filter
+
+chart based filter
+
+chart as filter
+
+chart filter
+
 </td>
 </tr>
 <tr>
@@ -7224,12 +7903,12 @@ Worklist page
 </td>
 <td valign="top">
 
-[Worklist Page](worklist-page-d1d588f.md)
+[Worklist Page](worklist-page-d1d588f.md) 
 
 </td>
 <td valign="top">
 
-[Worklist Floorplan](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/work-list)
+[Worklist Floorplan](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/work-list) 
 
 </td>
 <td valign="top">
@@ -7244,6 +7923,48 @@ Worklist page
 <td valign="top">
 
  
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Hide or show filter fields
+
+</td>
+<td valign="top">
+
+-   List report page
+
+
+
+</td>
+<td valign="top">
+
+[Configuring Dynamic Visibility for Filter Fields](configuring-dynamic-visibility-for-filter-fields-fad707f.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+hide filter field
+
+show filter field
+
+show
+
+hide
+
+filter bar
 
 </td>
 </tr>

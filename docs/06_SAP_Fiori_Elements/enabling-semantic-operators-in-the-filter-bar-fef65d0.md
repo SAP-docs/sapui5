@@ -156,6 +156,8 @@ Semantic date fields supports both single date-based operators and date range-ba
 
     -   `"TODAY"`
 
+    -   `"DATE"`
+
     -   `"FIRSTDAYWEEK"`
 
     -   `"LASTDAYWEEK"`
@@ -175,23 +177,49 @@ Semantic date fields supports both single date-based operators and date range-ba
 
 -   Date range-based operators
 
+    -   `"FROM"`
+
+    -   `"TO"`
+
+    -   `"DATERANGE"`
+
+    -   `"TODAYFROMTO"`
+
+    -   `"LASTDAYS"`
+
+    -   `"NEXTDAYS"`
+
     -   `"THISWEEK"`
 
     -   `"LASTWEEK"`
 
+    -   `"LASTWEEKS"`
+
     -   `"NEXTWEEK"`
+
+    -   `"NEXTWEEKS"`
 
     -   `"THISMONTH"`
 
+    -   `"SPECIFICMONTH"`
+
     -   `"LASTMONTH"`
 
+    -   `"LASTMONTHS"`
+
     -   `"NEXTMONTH"`
+
+    -   `"NEXTMONTHS"`
 
     -   `"THISQUARTER"`
 
     -   `"LASTQUARTER"`
 
+    -   `"LASTQUARTERS"`
+
     -   `"NEXTQUARTER"`
+
+    -   `"NEXTQUARTERS"`
 
     -   `"QUARTER1"`
 
@@ -205,31 +233,35 @@ Semantic date fields supports both single date-based operators and date range-ba
 
     -   `"LASTYEAR"`
 
+    -   `"LASTYEARS"`
+
     -   `"NEXTYEAR"`
+
+    -   `"NEXTYEARS"`
 
     -   `"YEARTODATE"`
 
     -   `"DATETOYEAR"`
 
-    -   `"NEXTXDAYSINCLUDED"`
+    -   `"NEXTDAYSINCLUDED"`
 
-    -   `"LASTXDAYSINCLUDED"`
+    -   `"LASTDAYSINCLUDED"`
 
-    -   `"LASTXWEEKSINCLUDED"`
+    -   `"LASTWEEKSINCLUDED"`
 
-    -   `"NEXTXWEEKSINCLUDED"`
+    -   `"NEXTWEEKSINCLUDED"`
 
-    -   `"LASTXMONTHSINCLUDED"`
+    -   `"LASTMONTHSINCLUDED"`
 
-    -   `"NEXTXMONTHSINCLUDED"`
+    -   `"NEXTMONTHSINCLUDED"`
 
-    -   `"LASTXQUARTERSINCLUDED"`
+    -   `"LASTQUARTERSINCLUDED"`
 
-    -   `"NEXTXQUARTERSINCLUDED"`
+    -   `"NEXTQUARTERSINCLUDED"`
 
-    -   `"LASTXYEARSINCLUDED"`
+    -   `"LASTYEARSINCLUDED"`
 
-    -   `"NEXTXYEARSINCLUDED"`
+    -   `"NEXTYEARSINCLUDED"`
 
     -   `"Empty"`
 
@@ -247,7 +279,7 @@ Semantic date fields supports both single date-based operators and date range-ba
 
 ## Defining Default Values for Operators That Require Parameters
 
-For semantic date operators that require parameters for example, setting `NEXTXDAYS` as the default operator with a default value for `X`, you must specify both the operator and the corresponding parameter values in the `manifest.json` file. The following table shows the manifest settings for operators that require parameter values.
+For semantic date operators that require parameters for example, setting `NEXTDAYS` as the default operator with a default value, you must specify both the operator and the corresponding parameter values in the `manifest.json` file. The following table shows the manifest settings for operators that require parameter values.
 
 **Defining Default Values for Operators That Require Parameters**
 
@@ -425,7 +457,7 @@ Second value: Number of days after TODAY
 <tr>
 <td valign="top">
 
-`LastXDays` / `LastXWeeks` / `LastXMonths` / `LastXQuarters` / `LastXYears` 
+`LASTDAYS` / `LASTWEEKS` / `LASTMONTHS` / `LASTQUARTERS` / `LASTYEARS` 
 
 </td>
 <td valign="top">
@@ -447,14 +479,14 @@ Second value: Number of days after TODAY
 </td>
 <td valign="top">
 
- 
+The value defines the number of the last days, weeks, months, quarters, or years to filter. The current day isn't included.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`NextXDays` / `NextXWeeks` / `NextXMonths` / `NextXQuarters` / `NextXYears` 
+`NEXTDAYS` / `NEXTWEEKS` / `NEXTMONTHS` / `NEXTQUARTERS` / `NEXTYEARS` 
 
 </td>
 <td valign="top">
@@ -478,14 +510,14 @@ Second value: Number of days after TODAY
 </td>
 <td valign="top">
 
- 
+The value defines the number of the next days, weeks, months, quarters, or years to filter. The current day isn't included.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`LastXDaysIncluded` 
+`LASTDAYSINCLUDED` 
 
 </td>
 <td valign="top">
@@ -496,7 +528,7 @@ Second value: Number of days after TODAY
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
-            "defaultValues" : [ {"operator": "LASTXDAYSINCLUDED", "values":[6]}]
+            "defaultValues" : [ {"operator": "LASTDAYSINCLUDED", "values":[6]}]
          }
       }
    }
@@ -509,14 +541,14 @@ Second value: Number of days after TODAY
 </td>
 <td valign="top">
 
-The range contains the last X days, including the current day.
+The value defines the number of the last days to filter, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`NextXDaysIncluded` 
+`NEXTDAYSINCLUDED` 
 
 </td>
 <td valign="top">
@@ -527,7 +559,7 @@ The range contains the last X days, including the current day.
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
-            "defaultValues" : [ {"operator": "NEXTXDAYSINCLUDED", "values":[6]}]
+            "defaultValues" : [ {"operator": "NEXTDAYSINCLUDED", "values":[6]}]
          }
       }
    }
@@ -540,14 +572,14 @@ The range contains the last X days, including the current day.
 </td>
 <td valign="top">
 
-The range contains the next X days, including the current day.
+The value defines the number of the next days to filter, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`LastXWeeksIncluded` 
+`LASTWEEKSINCLUDED` 
 
 </td>
 <td valign="top">
@@ -558,7 +590,7 @@ The range contains the next X days, including the current day.
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
-            "defaultValues" : [ {"operator": "LASTXWEEKSINCLUDED", "values":[6]}]
+            "defaultValues" : [ {"operator": "LASTWEEKSINCLUDED", "values":[6]}]
          }
       }
    }
@@ -571,14 +603,14 @@ The range contains the next X days, including the current day.
 </td>
 <td valign="top">
 
-The range contains the last X weeks, including the current day.
+The value defines the number of the last weeks to filter, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`NextXWeeksIncluded` 
+`NEXTWEEKSINCLUDED` 
 
 </td>
 <td valign="top">
@@ -589,7 +621,7 @@ The range contains the last X weeks, including the current day.
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
-            "defaultValues" : [ {"operator": "NEXTXWEEKSINCLUDED", "values":[6]}]
+            "defaultValues" : [ {"operator": "NEXTWEEKSINCLUDED", "values":[6]}]
          }
       }
    }
@@ -602,14 +634,14 @@ The range contains the last X weeks, including the current day.
 </td>
 <td valign="top">
 
-The range contains the next X weeks, including the current days.
+The value defines the number of the next weeks to filter, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`LastXMonthsIncluded` 
+`LASTMONTHSINCLUDED` 
 
 </td>
 <td valign="top">
@@ -620,7 +652,7 @@ The range contains the next X weeks, including the current days.
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
-            "defaultValues" : [ {"operator": "LASTXMONTHSINCLUDED", "values":[6]}]
+            "defaultValues" : [ {"operator": "LASTMONTHSINCLUDED", "values":[6]}]
          }
       }
    }
@@ -633,14 +665,14 @@ The range contains the next X weeks, including the current days.
 </td>
 <td valign="top">
 
-The range contains the last X months, including the current day.
+The value defines the number of the last months to filter, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`NextXMonthsIncluded` 
+`NEXTMONTHSINCLUDED` 
 
 </td>
 <td valign="top">
@@ -651,7 +683,7 @@ The range contains the last X months, including the current day.
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
-            "defaultValues" : [ {"operator": "NEXTXMONTHSINCLUDED", "values":[6]}]
+            "defaultValues" : [ {"operator": "NEXTMONTHSINCLUDED", "values":[6]}]
          }
       }
    }
@@ -664,14 +696,14 @@ The range contains the last X months, including the current day.
 </td>
 <td valign="top">
 
-The range contains the next X months, including the current day.
+The value defines the number of the next months to filter, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`LastXQuartersIncluded` 
+`LASTQUARTERSINCLUDED` 
 
 </td>
 <td valign="top">
@@ -682,7 +714,7 @@ The range contains the next X months, including the current day.
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
-            "defaultValues" : [ {"operator": "LASTXQUARTERSINCLUDED", "values":[6]}]
+            "defaultValues" : [ {"operator": "LASTQUARTERSINCLUDED", "values":[6]}]
          }
       }
    }
@@ -695,14 +727,14 @@ The range contains the next X months, including the current day.
 </td>
 <td valign="top">
 
-The range contains the last X quarters, including the current day.
+The value defines the number of the last quarters to filter, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`NextXQuartersIncluded` 
+`NEXTQUARTERSINCLUDED` 
 
 </td>
 <td valign="top">
@@ -713,7 +745,7 @@ The range contains the last X quarters, including the current day.
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
-            "defaultValues" : [ {"operator": "NEXTXQUARTERSINCLUDED", "values":[6]}]
+            "defaultValues" : [ {"operator": "NEXTQUARTERSINCLUDED", "values":[6]}]
          }
       }
    }
@@ -726,14 +758,14 @@ The range contains the last X quarters, including the current day.
 </td>
 <td valign="top">
 
-The range contains the next X quarters, including the current day.
+The value defines the number of the next quarters to filter, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`LastXYearsIncluded` 
+`LASTYEARSINCLUDED` 
 
 </td>
 <td valign="top">
@@ -744,7 +776,7 @@ The range contains the next X quarters, including the current day.
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
-            "defaultValues" : [ {"operator": "LASTXYEARSINCLUDED", "values":[6]}]
+            "defaultValues" : [ {"operator": "LASTYEARSINCLUDED", "values":[6]}]
          }
       }
    }
@@ -757,14 +789,14 @@ The range contains the next X quarters, including the current day.
 </td>
 <td valign="top">
 
-The range contains the last X years, including the current day.
+The value defines the number of the last years to filter, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`NextXYearsIncluded` 
+`NEXTYEARSINCLUDED` 
 
 </td>
 <td valign="top">
@@ -775,7 +807,7 @@ The range contains the last X years, including the current day.
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
-            "defaultValues" : [ {"operator": "NEXTXYEARSINCLUDED", "values":[6]}]
+            "defaultValues" : [ {"operator": "NEXTYEARSINCLUDED", "values":[6]}]
          }
       }
    }
@@ -788,14 +820,14 @@ The range contains the last X years, including the current day.
 </td>
 <td valign="top">
 
-The range contains the next X years, including the current day.
+The value defines the number of the next years to filter, including the current day.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`SpecificMonth`
+`SPECIFICMONTH`
 
 ``
 
@@ -820,14 +852,14 @@ The range contains the next X years, including the current day.
 </td>
 <td valign="top">
 
-The numeric assignment is zero \(for example, January is 0\)
+The numeric assignment is zero \(for example, January is 0\).
 
 </td>
 </tr>
 </table>
 
 > ### Tip:  
-> If the semantic filter field originates from a navigation entity set, specify the name of the filter field in the `"<navigationProperty>::<filterField>"` format. In the following code sample, `"SalesOrderDate"` comes from a navigation entity set where `"_Item"` is the name of the associated navigation property:
+> If the semantic filter field originates from a navigation entity set, specify the name of the filter field in the `"<navigationProperty>::<filterField>"` format. In the following sample code, `"SalesOrderDate"` comes from a navigation entity set where `"_Item"` is the name of the associated navigation property:
 > 
 > > ### Sample Code:  
 > > `manifest.json`

@@ -76,6 +76,11 @@ This is an example of a code snippet for a value list annotation. You use it to 
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
@@ -191,6 +196,8 @@ The `PresentationVariant` qualifier provides chart definitions for visual filter
 
 
 ### Chart Annotation
+
+The `Chart` annotation determines the chart type, along with the dimension and measure to be displayed.
 
 > ### Sample Code:  
 > XML Annotation
@@ -360,6 +367,8 @@ Define the `SelectionFields` annotation for sorting the order of the fields disp
 
 
 ### Annotation: `SelectionVariant`
+
+`SelectionVariant` determines which records from the value help definition appear in the visual filter. For example, only the plants belonging to a specific region are displayed in the visual filter.
 
 > ### Sample Code:  
 > XML Annotation

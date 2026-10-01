@@ -60,6 +60,8 @@ The following sample code shows how to use `FieldControl`:
 > };
 > ```
 
+For more information, see [Additional Features of the Field](additional-features-of-the-field-f49a0f7.md).
+
 The following sample code shows how to use `UpdateRestrictions`:
 
 > ### Sample Code:  

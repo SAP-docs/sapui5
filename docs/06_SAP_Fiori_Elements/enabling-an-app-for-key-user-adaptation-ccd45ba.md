@@ -26,26 +26,52 @@ You can enable key users to make the following adaptations on the object page he
 You can prepare annotations for header facets. These facets can later be added by the key user to the object page header. Make the settings as shown in the following sample code:
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```xml
 > <Annotation Term="UI.HeaderFacets">
-> <Collection>
->   ...
->   <Record Type="UI.ReferenceFacet">
->     <PropertyValue Property="Label" String="Column MicroChart"/>
->     <PropertyValue Property="ID" String="ColumnMicroChart"/>
->     <PropertyValue Property="Target" AnnotationPath="_Item/@UI.Chart#ColumnMaxPath"/>
->     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->   </Record>
->   <Record Type="UI.ReferenceFacet">
->     <PropertyValue Property="Label" String="Progress Indicator"/>
->     <PropertyValue Property="ID" String="ProgressIndicator"/>
->     <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#Progress"/>
->     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->   </Record>
->   ...
-> </Collection>
+>     <Collection>
+>         ...
+>         <Record Type="UI.ReferenceFacet">
+>             <PropertyValue Property="Label" String="Column MicroChart"/>
+>             <PropertyValue Property="ID" String="ColumnMicroChart"/>
+>             <PropertyValue Property="Target" AnnotationPath="_Item/@UI.Chart#ColumnMaxPath"/>
+>             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>         </Record>
+>         <Record Type="UI.ReferenceFacet">
+>             <PropertyValue Property="Label" String="Progress Indicator"/>
+>             <PropertyValue Property="ID" String="ProgressIndicator"/>
+>             <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#Progress"/>
+>             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>         </Record>
+>         ...
+>     </Collection>
 > </Annotation>
 > 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> @(
+>     UI : {
+>         HeaderFacets : [
+>             {
+>                 $Type  : 'UI.ReferenceFacet',
+>                 Label  : 'Column MicroChart',
+>                 ID     : 'ColumnMicroChart',
+>                 Target : '_Item@UI.Chart#ColumnMaxPath'
+>             },
+>             {
+>                 $Type  : 'UI.ReferenceFacet',
+>                 Label  : 'Progress Indicator',
+>                 ID     : 'ProgressIndicator',
+>                 Target : '@UI.DataPoint#Progress'
+>             }
+>         ]
+>     }
+> )
 > ```
 
 You can remove header facets by stashing, as well as restrict the adaptability of the header facets. Make the settings in the `manifest.json` file as shown in the following sample code:

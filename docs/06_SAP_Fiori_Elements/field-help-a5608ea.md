@@ -214,8 +214,8 @@ Fields with value help provide type-ahead suggestions based on user's input. The
 You can control which columns appear in the type-ahead list using the  `UI.Importance` annotation property. The type-ahead list displays only those columns annotated as  `High`. If the annotation isn't defined, the type-ahead list shows the same columns as configured in the value help dialog. For more information about `UI.Importance`, see the [Annotations](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__Annotations) section in [Value Help](value-help-fccb255.md).
 
 > ### Note:  
-> Type-ahead functionality is not available in the following scenarios:
+> The type-ahead functionality isn't available in the following scenarios:
 > 
-> -   The value help entity is configured as non-searchable. For more information, see [Enabling the Search Function](enabling-the-search-function-3cdebee.md).
-> -   The `ValueList` annotation has mandatory filters or parameters and there is no value for these yet.
+> -   When the value help entity is configured as non-searchable. For more information, see [Enabling the Search Function](enabling-the-search-function-3cdebee.md).
+> -   When the `ValueList` annotation has mandatory filters or parameters and there's no value for them yet.
 

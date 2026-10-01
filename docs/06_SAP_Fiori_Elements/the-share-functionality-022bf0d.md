@@ -21,7 +21,7 @@ The following sharing options are available as part of the *Share* functionality
 
 -   *Share on SAP Build Work Zone*
 
-    Users can also share the current application state using *Share on SAP Build Work Zone*. This option is only available on platforms that are integrated with SAP Jam or with SAP Build Work Zone.
+    Users can also share the current application state using *Share on SAP Build Work Zone*. This option is only available on platforms that are integrated with SAP Build Work Zone or with SAP Jam.
 
 -   *Save as Tile*
 

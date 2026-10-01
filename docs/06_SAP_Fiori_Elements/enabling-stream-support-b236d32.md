@@ -44,7 +44,9 @@ To add the file upload elements, proceed as follows:
 1.  Provide a property of type `Edm.Stream`.
 
     > ### Sample Code:  
-    > ```
+    > XML Annotation
+    > 
+    > ```xml
     > <EntityType Name="MainEntities">
     >     ...
     >     <Property Name="myStreamProperty" Type="Edm.Stream" />
@@ -68,6 +70,26 @@ To add the file upload elements, proceed as follows:
     > </Annotations>
     > ```
 
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > define root view entity MainEntities {
+    >     @Semantics.largeObject: { mimeType: 'myStreamPropertyType' }
+    >     myStreamProperty,
+    > 
+    >     @Semantics.mimeType: true
+    >     myStreamPropertyType,
+    > 
+    >     @Semantics.largeObject: {
+    >         mimeType: 'text/plain',
+    >         acceptableMimeTypes: ['text/plain'],
+    >         contentDispositionPreference: #ATTACHMENT
+    >     }
+    >     myRestrictedStreamProperty
+    > }
+    > ```
+
     To restrict the file size, add the attribute `MaxLength` to the `Property`. `MaxLength` is the maximum file size in bytes. To define the allowed media types, use the annotation `Core.AcceptableMediaTypes`. Without these annotations, there is no restriction regarding file size and media types that can be uploaded. App developers must define these restrictions.
 
     > ### Note:  
@@ -78,7 +100,9 @@ To add the file upload elements, proceed as follows:
 2.  Maintain and annotate the UI field as a `DataField`.
 
     > ### Sample Code:  
-    > ```
+    > XML Annotation
+    > 
+    > ```xml
     > <Annotations Target="sap.fe.stream.StreamsService.MainEntities">
     >     <Annotation Term="UI.FieldGroup" Qualifier="streams">
     >         <Record Type="UI.FieldGroupType">
@@ -94,6 +118,40 @@ To add the file upload elements, proceed as follows:
     >         </Record>
     >     </Annotation>
     > </Annotations>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > @Metadata.layer: #CORE
+    > annotate view MainEntities with {
+    >     @UI.fieldGroup: [{
+    >         qualifier: 'streams',
+    >         groupLabel: 'Streams',
+    >         label: 'Stream',
+    >         position: 10
+    >     }]
+    >     myStreamProperty;
+    > }
+    > ```
+
+    > ### Sample Code:  
+    > CAP CDS Annotation
+    > 
+    > ```
+    > annotate MainEntities with @(
+    >     UI.FieldGroup #streams : {
+    >         Label : 'Streams',
+    >         Data  : [
+    >             {
+    >                 $Type : 'UI.DataField',
+    >                 Label : 'Stream',
+    >                 Value : myStreamProperty
+    >             }
+    >         ]
+    >     }
+    > );
     > ```
 
 
@@ -150,6 +208,26 @@ You can click on the document link to open the content of the stream property. S
 >      <Annotation Term="Common.Label" String="Stream, dynamic media type, with name"/>
 > </Annotations>
 > 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> define root view entity MainEntities
+> {
+>     @EndUserText.label: 'Stream with file name'
+>     @Semantics.largeObject: {
+>         mimeType : 'streamWithFilename_type',
+>         fileName : 'streamWithFilename_name'
+>     }
+>     streamWithFilename_content,
+> 
+>     @Semantics.mimeType: true
+>     streamWithFilename_type,
+> 
+>     streamWithFilename_name
+> }
 > ```
 
 > ### Sample Code:  

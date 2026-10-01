@@ -303,7 +303,7 @@ You can use your custom types in XML views or JavaScript in the same way as you 
 
 <a name="loio91f0652b6f4d1014b6dd926db0e91070__section_N100DE_N10013_N10001"/>
 
-## Changing the Binding Mode
+## Using the Binding Mode
 
 By default, all bindings of a model instance have the default binding mode of the model, but you can change this behavior if needed. When creating a `PropertyBinding`, you can specify a different binding mode, which is then used exclusively for this specific binding. Of course, a binding can only have a binding mode that is supported by the model in question.
 
@@ -319,13 +319,13 @@ oInputFirstName.setModel(oModel);
 
 // bind value property one way only
 // propertyname, formatter function, binding mode
-oInputFirstName.bindValue("/firstName", null, BindingMode.OneWay);
+oInputFirstName.bindValue("/Name", null, BindingMode.OneWay);
 oInputFirstName.placeAt("target1");
 
 const oInputLastName = new Input();
 oInputLastName.setModel(oModel);
 // bind value property two way (default)
-oInputLastName.bindValue("/lastName");
+oInputLastName.bindValue("/Name");
 oInputLastName.placeAt("target2");
 ```
 

@@ -4,14 +4,14 @@
 
 You can configure value help as a dropdown list in SAP Fiori elements for OData V4.
 
-If the entity set of a value help has a fairly stable number of instances, you can render an input field with a value help and dropdown list box using the annotation `Common.ValueListWithFixedValues`.
+If the entity set of a value help has a stable number of instances, you can render an input field with a value help and dropdown list using the `Common.ValueListWithFixedValues` annotation.
 
 > ### Note:  
-> -   Every time you click the dropdown, a new call to the backend fetches the latest results. Values are not cached when value help is configured as a dropdown list.
+> -   When value help is configured as a dropdown list, values aren't cached. A new call to the back end fetches the latest results every time the user clicks the dropdown.
 > 
-> -   Ensure that the value help entity does not require any parameters or mandatory filters that don't have a default value.
+> -   Ensure that the value help entity doesn't require any parameters or mandatory filters that don't have a default value.
 
-In the following sample code, the currency code is implemented as a dropdown list box:
+In the following sample code, the currency code is implemented as a dropdown list:
 
 > ### Sample Code:  
 > XML Annotation

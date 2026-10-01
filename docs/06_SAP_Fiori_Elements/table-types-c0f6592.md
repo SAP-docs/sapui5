@@ -139,11 +139,6 @@ Analytical table
 
 The analytical table offers a comprehensive set of features for working with analytical data, such as advanced grouping options and data aggregation.
 
-> ### Restriction:  
-> Analytical tables aren't supported on draft-enabled entities.
-
-
-
 </td>
 <td valign="top">
 
@@ -166,6 +161,8 @@ The analytical table offers a comprehensive set of features for working with ana
 
 > ### Note:  
 > Grid tables, tree tables, and analytical tables don't support columns with micro charts or multi-line content, such as those using the `FieldGroup` annotation, multi-line text fields, or progress indicators.
+> 
+> Analytical tables don't support multi-input fields.
 
 Each table type in SAPUI5 supports different features. For more information, see [Tables: Which One Should I Choose?](../10_More_About_Controls/tables-which-one-should-i-choose-148892f.md).
 

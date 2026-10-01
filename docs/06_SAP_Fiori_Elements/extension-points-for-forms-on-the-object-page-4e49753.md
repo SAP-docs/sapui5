@@ -117,24 +117,32 @@ Description
 <tr>
 <td valign="top">
 
-key
+`key`
 
 </td>
 <td valign="top">
 
-aA-zZ, 0-9, :, \_, -
+`aA-zZ`
+
+`0-9`
+
+`:`
+
+`_`
+
+`-`
 
 </td>
 <td valign="top">
 
-The key of the custom field is needed as an identifier, which can be used as reference for other fields.
+The key of the custom field is the identifier, which you can use as reference for other fields.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-label
+`label` 
 
 </td>
 <td valign="top">
@@ -144,14 +152,14 @@ any Unicode string
 </td>
 <td valign="top">
 
-The label is shown on the form as the label of the field.
+The value is displayed in the form as the field label.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-position
+`position` 
 
 </td>
 <td valign="top">
@@ -161,48 +169,50 @@ position
 </td>
 <td valign="top">
 
-Defines the position of the field relative to other fields.
+This setting defines the position of the field relative to other fields.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-position.placement
+`position.placement` 
 
 </td>
 <td valign="top">
 
-"**After**" | "Before"
+`"After"`
+
+`"Before"`
 
 </td>
 <td valign="top">
 
-Defines the placement: either "After" or "Before" the anchor field.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-position.anchor
-
-</td>
-<td valign="top">
-
-"<key\_of\_column\>"
-
-</td>
-<td valign="top">
-
-The key of another field to be used as the placement anchor.
+This setting defines the placement of the custom field either before or after the anchor field. By default, the custom field is placed after the anchor field.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-template
+`position.anchor` 
+
+</td>
+<td valign="top">
+
+`"<key_of_column>"`
+
+</td>
+<td valign="top">
+
+Enter the key of another field to use as the placement anchor.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`template` 
 
 </td>
 <td valign="top">
@@ -212,13 +222,32 @@ template
 </td>
 <td valign="top">
 
-Defining the target fragment follows the syntax of defining a fragment via `Fragment.load`.
+To define the target fragment, follow the syntax of defining a fragment with `Fragment.load`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`visible` 
+
+</td>
+<td valign="top">
+
+`"true"`
+
+`"false"`
+
+a binding string
+
+</td>
+<td valign="top">
+
+This setting overrides the visibility of the form element when explicitly provided.
 
 </td>
 </tr>
 </table>
-
-**bold** formatting: default/fallback behavior
 
 
 

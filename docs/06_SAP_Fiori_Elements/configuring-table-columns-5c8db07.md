@@ -60,7 +60,7 @@ Influencing column visibility
 
 [Showing or Hiding Columns Based on Importance and Available Screen Size in Responsive Tables](showing-or-hiding-columns-based-on-importance-and-available-screen-size-in-responsive-tab-5447155.md)
 
-[Hiding Table Columns Using the UI.Hidden Annotation](hiding-table-columns-using-the-ui-hidden-annotation-fe45346.md)
+[Hiding or Showing Table Columns](hiding-or-showing-table-columns-fe45346.md)
 
 </td>
 </tr>

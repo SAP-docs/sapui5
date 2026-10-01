@@ -151,7 +151,7 @@ These lines of code make sure that the targets are only loaded when they are nee
 
 ```js
 {
-	"_version": "2.11.0",
+	"_version": "2.12.0",
 	"sap.app": {
 		...
 	},

@@ -49,8 +49,8 @@ Before you begin, customize the `Page.controller.js` as per your requirements.
 -   Ensure that you have set the data before setting the vocabulary model for the expression language as shown:
 
     ```
-    oExpressionLanguage.setData(data);
-    oExpressionLanguage.setModel(that.oVocabularyModel);
+    oAstExpressionLanguage.setData(data);
+    oAstExpressionLanguage.setModel(that.oVocabularyModel);
     
     ```
 

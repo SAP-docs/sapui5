@@ -813,6 +813,8 @@ Recommended
 **Related Information**  
 
 
+[What's New in SAPUI5 1.151](what-s-new-in-sapui5-1-151-e824a0e.md "With this release SAPUI5 is upgraded from version 1.150 to 1.151.")
+
 [What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")
 
 [What's New in SAPUI5 1.148](what-s-new-in-sapui5-1-148-6b940b3.md "With this release SAPUI5 is upgraded from version 1.147 to 1.148.")

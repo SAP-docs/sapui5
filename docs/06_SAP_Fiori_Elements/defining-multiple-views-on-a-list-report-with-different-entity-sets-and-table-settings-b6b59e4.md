@@ -96,6 +96,11 @@ To define a `SelectionVariant` for `entityA` and a `SelectionPresentationVariant
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```

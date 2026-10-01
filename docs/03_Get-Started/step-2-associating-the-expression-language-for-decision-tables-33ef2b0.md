@@ -14,11 +14,7 @@ The expression language objects are an association of the `RuleBuilder` object, 
 
 ## Preview
 
-  
-  
-**Decision Table with Guided Input**
-
-![](images/decision_table1_40a97b4.png "Decision Table with Guided Input")
+![](images/decision_table1_40a97b4.png)
 
 
 
@@ -26,7 +22,7 @@ The expression language objects are an association of the `RuleBuilder` object, 
 
 ## Coding
 
-You can view and download all files at [Rule Builder - Guided Decision Table](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder/sample/sap.rules.ui.sample.GuidedDecisionTable). This is applicable only for rule expression language.
+You can view and download all files at [Rule Builder - Decision Table](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder/sample/sap.rules.ui.sample.DecisionTableAst). This is applicable only for rule expression language.
 
 
 
@@ -54,7 +50,7 @@ Before you begin, customize the `Page.controller.js` as per your requirements.
 
     ```
     oExpressionLanguage.setData(data);
-    oExpressionLanguage.setModel(that.oVocabularyModel);
+    oAstExpressionLanguage.setModel(that.oVocabularyModel);
     
     ```
 
@@ -64,40 +60,46 @@ Before you begin, customize the `Page.controller.js` as per your requirements.
 ```js
  
 sap.ui.define([
-	'jquery.sap.global',
 	'sap/ui/core/mvc/Controller',
 	'sap/ui/model/odata/v2/ODataModel',
-	'sap/rules/ui/services/ExpressionLanguage',   //For DMN SFEEL language, use 'AstExpressionLanguage'.
+	'sap/rules/ui/services/AstExpressionLanguage',
 	'sap/ui/core/util/MockServer',
-	'sap/m/MessageToast'
-], function (jQuery, Controller, ODataModel, ExpressionLanguage, MockServer, MessageToast) {    //For DMN SFEEL language, use 'AstExpressionLanguage' instead of 'ExpressionLanguage'.
+	'sap/m/MessageToast',
+	'sap/ui/Device',
+	'sap/ui/core/Theming'
+], function (Controller, ODataModel, AstExpressionLanguage, MockServer, MessageToast, Device, Theming) {
 	"use strict";
 
-	return Controller.extend("sap.rules.ui.sample.GuidedDecisionTable.Page", {
+	return Controller.extend("sap.rules.ui.sample.DecisionTableAst.Page", {
 
+		/**
+		 * This sample uses the sap.ui.core.uti.MockServer. The RuleBuilder control is meant to be used
+		 * with the Vocabulary OData service and the Rules OData service.
+		 * Hence, when using th eproper OData services the mockServer code should be removed.
+		 */
 		onInit: function () {
 
-			sap.ui.getCore().applyTheme("sap_horizon");
+			Theming.setTheme("sap_fiori_3");
 
 			// apply compact density for desktop, the cozy design otherwise
-			this.getView().addStyleClass(sap.ui.Device.system.desktop ? "sapUiSizeCompact" : "sapUiSizeCozy");
+			this.getView().addStyleClass(Device.system.desktop ? "sapUiSizeCompact" : "sapUiSizeCozy");
 
-			var mPath = sap.ui.require.toUrl("sap/rules/ui/sample/GuidedDecisionTable") + "/";
-			
-			// Initialize Expression Language services
-			this.oVocabularyMockServer = new MockServer({rootUri: "/sap/opu/odata/SAP/vocabulary_srv/"});
+			var mPath = sap.ui.require.toUrl('sap/rules/ui/sample/DecisionTableAst/');
+
+			// Initialiaze Expression Language services
+			this.oVocabularyMockServer = new MockServer({rootUri: "/rule-service/vocabulary_srv/"});
 			this.oVocabularyMockServer.simulate(
 				mPath + "localService/vocabulary/metadata.xml",
 				{'sMockdataBaseUrl': mPath + "localService/vocabulary/mockdata/"}
 			);
 			this.oVocabularyMockServer.start();
-			this.oVocabularyModel = new ODataModel("/sap/opu/odata/SAP/vocabulary_srv/");
-			this.oExpressionLanguage = new ExpressionLanguage();               //For DMN SFEEL, use 'new AstExpressionLanguage();'.
-			this.oExpressionLanguage.setModel(this.oVocabularyModel);
+			this.oVocabularyModel = new ODataModel("/rule-service/vocabulary_srv/");
+			this.oExpressionLanguage = new AstExpressionLanguage();
 			this.oExpressionLanguage.setBindingContextPath("/Vocabularies('FA163E38C6481EE785F409DCAD583D43')");
+			this.oExpressionLanguage.setModel(this.oVocabularyModel);
 
-			// Initialize the Rule Builder
-			this.oRuleMockServer = new MockServer({rootUri: "/sap/opu/odata/SAP/RULE_SRV/"});
+			// Initialiaze the Rule Builder
+			this.oRuleMockServer = new MockServer({rootUri: "/rule-service/rule_srv/"});
 			this.oRuleMockServer.simulate(
 				mPath + "localService/rule/metadata.xml",
 				{'sMockdataBaseUrl': mPath + "localService/rule/mockdata/"}
@@ -107,14 +109,14 @@ sap.ui.define([
 			this.oRuleMockServer.setRequests(aRequests);
 			this.oRuleMockServer.start();
 			this.oRuleModel = new ODataModel({
-				serviceUrl: "/sap/opu/odata/SAP/RULE_SRV/",
-				defaultBindingMode: sap.ui.model.BindingMode.TwoWay
+				serviceUrl: "/rule-service/rule_srv/",
+				defaultBindingMode: "TwoWay"
 			});
 
 			var oRuleBuilder = this.byId("ruleBuilder");
 			oRuleBuilder.setModel(this.oRuleModel);
-			oRuleBuilder.setExpressionLanguage(this.oExpressionLanguage);
-			oRuleBuilder.setBindingContextPath("/Rules(Id='FA163E38C6481EE785F409DCAD583D43',Version='000000000000000001')");
+			oRuleBuilder.setAstExpressionLanguage(this.oExpressionLanguage);
+			oRuleBuilder.setBindingContextPath("/Rules(Id='FA163E38C6481EE785F409DCAD583D43',Version='000001')");
 		},
 
 		handleEditButton: function () {
@@ -127,7 +129,15 @@ sap.ui.define([
 
 		onAfterRendering: function () {
 
-			// Line actions are not supported in this demo
+			/** 
+			 * Line actions are not supported in this demo as they require a functioning Rules oData service
+			 * This function overwites the line actions event handlers.
+			 * Please do not use this code when using proper OData services.
+			 */
+		    	var messageHandler =function(){
+                		var msg = 'Line action pressed';
+                		MessageToast.show(msg);
+            		};
 			var oRuleBuilder = this.byId("ruleBuilder");
 			var oDecisionTable = oRuleBuilder.getAggregation("_rule");
 			var oToolbar = oDecisionTable.getAggregation("_toolbar");
@@ -135,34 +145,37 @@ sap.ui.define([
 			for (var i = 0; i < arrContent.length; i++) {
 				if (arrContent[i].getMetadata().getName() === "sap.m.Button") {
 					arrContent[i].detachPress(arrContent[i].mEventRegistry.press[0].fFunction, arrContent[i].mEventRegistry.press[0].oListner);
-					arrContent[i].attachPress(function (oEvent) {
-							var msg = 'Line action pressed';
-							MessageToast.show(msg);
-						}
-					);
+					arrContent[i].attachPress(messageHandler);
 				} else if (arrContent[i].getMetadata().getName() === "sap.m.MenuButton") {
 					var oMenu = arrContent[i].getMenu();
-					oMenu.detachItemSelected(oMenu.mEventRegistry.itemSelected[1].fFunction, oMenu.mEventRegistry.itemSelected[1].oListner);
-					oMenu.attachItemSelected(function (oEvent) {
-							var msg = 'Line action pressed';
-							MessageToast.show(msg);
-						}
-					);
+					oMenu.detachItemSelected(oMenu.mEventRegistry.itemSelected[0].fFunction, oMenu.mEventRegistry.itemSelected[0].oListner);
+					oMenu.attachItemSelected(messageHandler);
 				}
 			}
 
 		},
+		
+		loadJSON: function(mPath, callback) {
+            		var xobj = new XMLHttpRequest();
+            		xobj.open('GET', mPath + "localService/rule/responses.json", true);
+            		xobj.onreadystatechange = function() {
+                	if (xobj.readyState == 4 && xobj.status == "200") {
+                    		callback(JSON.parse(xobj.responseText));
+                	}
+            		};
+            		xobj.send(null);
+        	},
 
 		loadRequests: function (mPath) {
 
-			// The mock server does not support 1 to 1 navigation.
-			// Hence we provide the responses directly by adding custom requests to the MockServer
-			var oRresponses = jQuery.sap.sjax({
-				type: "GET",
-				url: mPath + "localService/rule/responses.json",
-				dataType: "json"
-				}	
-			).data;
+		    	// The mock server does not support 1 to 1 navigation.
+            		// Hence we provide the responses directly by adding custom requests to the MockServer
+            		var oRresponses = {};
+            		var getData = function(json) {
+                	oRresponses = json;
+            		};
+
+            		this.loadJSON(mPath, getData);
 			
 			var aRequests = this.oRuleMockServer.getRequests();
 			var sMethod = "GET";
@@ -174,8 +187,7 @@ sap.ui.define([
 			};
 			aRequests.push({method: sMethod, path: sPath, response: fnResponse1});
 			
-			sPath = /Rules\(Id='FA163E38C6481EE785F409DCAD583D43',Version='000001'\)\/DecisionTable\/DecisionTableRows\?\$skip=0&\$top=\d+&\$orderby=Sequence%20asc&\$expand=Cells/;
-			var response_1 = this.response_1;
+			sPath = /Rules\(Id='FA163E38C6481EE785F409DCAD583D43',Version='000001'\)\/DecisionTable\/DecisionTableRows\?\$skip=0&\$top=\d+&\$orderby=Sequence%20asc&\$expand=Cells%2fDecisionTableRowCellASTs/;
 			var fnResponse2 = function (xhr) {
 				xhr.respondJSON(200, {
 					"Content-Type": "application/json;charset=utf-8"
@@ -188,25 +200,25 @@ sap.ui.define([
 				xhr.respond(200, {
 					"Content-Type": "text/plain;charset=utf-8"
 				}, "5");
-			}
+			};
 			aRequests.push({method: sMethod, path: sPath, response: fnResponse3});
 
-			sPath = /Rules\(Id='FA163E38C6481EE785F409DCAD583D43',Version='000001'\)\/DecisionTable\/DecisionTableColumns\?\$skip=0&\$top=\d+&\$expand=Condition%2cResult/;
-			var response_2 = this.response_2;
+			sPath = /Rules\(Id='FA163E38C6481EE785F409DCAD583D43',Version='000001'\)\/DecisionTable\/DecisionTableColumns\?\$skip=0&\$top=\d+&\$expand=Condition%2fDecisionTableColumnConditionASTs%2cResult%2fDecisionTableColumnResultASTs/;
 			var fnResponse4 = function (xhr) {
 				xhr.respondJSON(200, {
 					"Content-Type": "application/json;charset=utf-8"
 				}, oRresponses.response_2);
-			}
+			};
 			aRequests.push({method: sMethod, path: sPath, response: fnResponse4});
- 
+
 			return aRequests;
 		}
 	});
 });
+
 ```
 
-This code adds an expression language object to the view controller, and connects it to the `RuleBuilder` as an association. For the expression language service, this code sets the model and then does all the necessary data binding internally \(unlike other SAPUI5 controls where the developer defines the data binding\). The data for the expression language is loaded via the vocabulary OData service.
+This code adds an Ast Expression Language object to the view controller, and connects it to the `RuleBuilder` as an association. For the expression language service, this code sets the model and then does all the necessary data binding internally \(unlike other SAPUI5 controls where the developer defines the data binding\). The data for the expression language is loaded via the vocabulary OData service.
 
 The following are the code modifications that you can make to include additional functionalities:
 

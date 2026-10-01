@@ -18,9 +18,9 @@ The visualization provided by the `RuleBuilder` component contains text parts an
 > ### Tip:  
 > You do not have to do the tutorial steps sequentially; you can start the tutorial at any step you want. Just download the code, copy it to your workspace and make sure that the application runs by calling the `index.html` file.
 > 
-> You can view and download all the files required for steps 1 and 2 in decision table section at [Rule Builder - Guided Decision Table](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder/sample/sap.rules.ui.sample.GuidedDecisionTable). This is applicable only for decision table rules modeled using AstExpressionLanguage.
+> You can view and download all the files required for steps 1 and 2 in decision table section at [Rule Builder - Decision Table](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder/sample/sap.rules.ui.sample.DecisionTableAst) . This is applicable only for decision table rules modeled using AstExpressionLanguage.
 > 
-> You can view and download all the files required for steps 1 and 2 in text rule section at [Rule Builder - Text Rule](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder/sample/sap.rules.ui.sample.TextRuleAst).
+> You can view and download all the files required for steps 1 and 2 in text rule section at [Rule Builder - Text Rule](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder/sample/sap.rules.ui.sample.TextRuleAst) .
 > 
 > For more information check the [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download) section of the tutorials overview page [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
 

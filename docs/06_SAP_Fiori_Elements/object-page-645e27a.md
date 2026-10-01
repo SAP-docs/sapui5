@@ -2,13 +2,16 @@
 
 # Object Page
 
-Get to know the UI of the object page in SAP Fiori elements for OData V4.
+This floorplan displays the details of a business object, supporting creation, editing, and draft management in SAP Fiori elements for OData V4. Use it to work with both simple and complex objects through an optimized interface.
 
-The object page allows users to create, edit, and display objects, as well as save drafts. It is suitable for both simple objects and more complex, multi-faceted objects. The object page view gives you optimal support for multiple devices.
+The object page displays the details of a single business object. It also enables users to create new business objects, edit them, and save drafts. This floorplan is suitable for both simple objects and more complex, multi‑faceted objects, and provides an optimal experience across devices.
+
+The object page is often reached by navigating from a list report page. For more information about the list report page, see [List Report Page](list-report-page-1cf5c7f.md).
 
 
 
-![](images/Object_Page_-_new_3ca622e.png)
+![A typical object page showing the details of a sales order with key
+							information, charts, and customer data.](images/Object_Page_-_new_3ca622e.png)
 
 
 
@@ -16,77 +19,196 @@ The object page allows users to create, edit, and display objects, as well as sa
 
 ## Main Features
 
-The object page is made up of the following features:
+The object page view includes the following main features:
 
--   Application title is set based on the object type, for example *Sales Order* or *Product*.
+-   The **shell bar** displays the application title and the user menu icon.
 
--   Object page header comprising of the following features:
+    The application title is set based on the object type, such as *Sales Order* or *Product*.
 
-    -   Title and description
+    For more information, see [Configuring the Application Title](configuring-the-application-title-ac70343.md).
 
-    -   Editing status icon, if applicable
+-   The **object page header** includes the following features:
 
-    -   Action buttons in the header toolbar, containing generic actions \(in **Display** mode\)
+    -   Title and subtitle \(description\) of the business object.
 
-    -   Optional features, such as the following:
+        For more information, see [Setting Up the Object Page Header](setting-up-the-object-page-header-cce93e6.md).
 
-        -   Description
+    -   Editing status icon, if a draft version of the object page exists.
 
-        -   Image of the object instance
+        For more information, see [Draft Handling](draft-handling-ed9aa41.md) and [Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-fd3950a.md).
 
-            > ### Note:  
-            > If the instance does not provide an image, then the default image of the object type is used.
+    -   The header toolbar, containing the following buttons:
+
+        -   Buttons for global actions in display mode.
+
+            For more information, see [Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md).
+
+        -   The *Related Apps* button.
+
+            For more information, see [Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md).
+
+        -   A *Share* menu that allows users to share the content of the page using tools such as email or Microsoft Teams.
+
+            For more information, see [The Share Functionality](the-share-functionality-022bf0d.md).
+
+        -   Paging buttons that enable users to navigate to the previous or next business object without reopening the list. The paging buttons are visible if the following conditions are met:
+
+            -   The user is on a subobject page.
+
+            -   The user navigated to the current page from a list.
+
+            -   The list contains at least two entries.
 
 
-    -   The header toolbar includes:
-
-        -   Buttons for use case-specific actions, for example, *Edit*, *Delete*
-
-        -   Related Apps
-
-        -   A generic *Share* menu that includes the following actions:
-
-            -   *Send Email*
-
-            -   *Share in SAP Jam*
-
-            -   *Save as Tile*
-
-            -   *Share: Microsoft Teams*
-
-            -   *Share: Collaboration Manager*
+            Paging buttons can also be added using the `Paginator` building block. For more information, see [The Paginator Building Block](the-paginator-building-block-997292b.md).
 
 
-
-    -   Header facets highlighting key information related to the object such as:
+    -   Header facets that highlight key information about the object. You can include the following facets:
 
         -   Label-field pairs to display details such as price or availability. We recommend using no more than five label-field pairs.
 
-        -   Graphical features such as a chart for credit limits or a rating indicator.
+        -   Graphical features, such as a chart for credit limits or a rating indicator.
 
 
-    -   Anchor navigation area that allows users navigate to the individual content area sections.
-
-    -   Content area where data is organized into sections containing field groups or a table.
-
-    -   Paginator buttons in the layout action area enable users to navigate between subitems without returning to the original list.
-
-        > ### Note:  
-        > The paginator buttons are visible if the following conditions are fulfilled:
-        > 
-        > -   The user is on a subobject page.
-        > 
-        > -   The user navigates from a list to the current page.
-        > 
-        > -   This list contains at least two entries.
+        For more information, see [Header Facets](header-facets-17dbd5b.md).
 
 
--   Footer bar in which actions and the *Show Messages* button are available, if applicable.
+-   The **navigation bar** enables users to navigate to the individual content area sections.
 
-    In draft applications, the footer bar of subitem object pages can also include the *Apply* button in create and edit mode. This action concludes the current create or edit action, saves the draft, and navigates one step up in the object hierarchy. A message toast is displayed when an action is successful. For more information, see [Draft Handling](draft-handling-ed9aa41.md).
+    For more information, see the [Tab Representation vs. Anchor Representation](defining-and-configuring-sections-facfea0.md#loiofacfea09018d4376acaceddb7e3f03b6__section_wgv_fvx_4lb) section in [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md).
 
-    In a draft application with flexible column layout, the subobject closes and returns to the main object if a user clicks the *Apply* button.
+-   The **content area** organizes data into sections and subsections.
 
+    For more information, see [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md).
+
+-   The **footer toolbar** displays the closing and finalizing actions as well as the message popover button, if applicable.
+
+    For more information, see [Defining Determining Actions](defining-determining-actions-1743323.md) and [Draft Handling](draft-handling-ed9aa41.md).
+
+
+For more information about the object page, see the [SAP Design System guidelines](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/object-page).
+
+For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Object Page](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/floorplanObjectPage/simpleObjectPage).
+
+
+
+## Typical Use Cases
+
+Typical use cases of the object page include the following:
+
+**Example Use Cases of the Object Page**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Use Case
+
+</th>
+<th valign="top">
+
+Example
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Viewing and editing a single business object
+
+</td>
+<td valign="top">
+
+Maintaining a sales order and its items
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Creating and saving a draft
+
+</td>
+<td valign="top">
+
+Creating a purchase order and saving it as a draft for later completion
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Approving or releasing a business object
+
+</td>
+<td valign="top">
+
+Releasing a blocked invoice or approving a journal entry
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Working with subobjects
+
+</td>
+<td valign="top">
+
+Managing item schedules and partner functions for a purchase order
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Navigating between a list of business objects
+
+</td>
+<td valign="top">
+
+Using the paging buttons to move through customer records
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Comparing draft and saved values
+
+</td>
+<td valign="top">
+
+Reviewing changes made in a sales order by toggling between draft and saved versions
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Analyzing key metrics in context
+
+</td>
+<td valign="top">
+
+Inspecting credit exposure or inventory charts in header facets
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Accessing related content
+
+</td>
+<td valign="top">
+
+Opening attachments or adding notes
+
+</td>
+</tr>
+</table>
 
 
 
@@ -94,7 +216,14 @@ The object page is made up of the following features:
 
 ## Related Information
 
-For information about controls related to object pages, see [sap.uxap](../10_More_About_Controls/sap-uxap-de71337.md).
+-   For information about controls related to object pages, see [sap.uxap](../10_More_About_Controls/sap-uxap-de71337.md).
+
+-   For information about displaying an object page and a list report, or multiple object pages, side by side, see [Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md).
+
+-   For information about the create mode options, see [Creating New Business Objects](creating-new-business-objects-8c3819d.md).
+
+-   For information about resources you can use to preview the features, see [Feature Showcase Apps and Samples](feature-showcase-apps-and-samples-521405c.md).
+
 
 
 
