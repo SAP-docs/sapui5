@@ -16,7 +16,7 @@ The anchor bar is an automatically generated internal menu that shows the titles
   
 **Anchor Bar with Sections and Subsections**
 
-![](images/AnchorBar_7023c14.png "Anchor Bar with Sections and Subsections")
+![Object Page with the header area and the anchor bar highlighted. The anchor bar sits below the header and lists section and subsection titles, with a dropdown for additional sections.](images/AnchorBar_7023c14.png "Anchor Bar with Sections and Subsections")
 
 When the user scrolls the page content, the anchor bar remains at the top of the screen.
 

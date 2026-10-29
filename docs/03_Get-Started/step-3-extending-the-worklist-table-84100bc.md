@@ -12,7 +12,7 @@ In this step, we will edit the worklist table to include additional columns for 
   
 **The improved worklist table with new columns and formatting**
 
-![](images/Tutorial_Worklist_Step_03_Preview_2def9d9.png "The improved worklist table with new columns and formatting")
+![Worklist table with product name, supplier, price, units ordered, and units in stock columns.](images/Tutorial_Worklist_Step_03_Preview_2def9d9.png "The improved worklist table with new columns and formatting")
 
 
 

@@ -859,14 +859,14 @@ You can use the following patterns:
 
 Default value: `false`
 
-If set to `true`, the experimental debug tools are activated **without** loading the debug sources. After the page has loaded, a global `ui5` object is available in the browser's developer console that exposes commands for inspecting modules, controls, and framework internals.
+If set to `true`, the debug tools are activated **without** loading the debug sources. After the page has loaded, a global `ui5` object is available in the browser's developer console that exposes commands for inspecting modules, controls, and framework internals.
 
 In contrast to `sap-ui-debug=true`, this parameter does not switch the runtime to debug sources, which makes it useful when debugging against minified production code.
 
 For more information, see [Debugging](debugging-c9b0f8c.md#loioc9b0f8cca852443f9b8d3bf8ba5626ab).
 
 > ### Caution:  
-> The debug tools are **experimental**. They may change or be removed in future versions without notice and must not be used in productive scenarios.
+> The debug tools described here are only intended for debugging during development. They must not be used in productive scenarios.
 
 
 

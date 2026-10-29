@@ -127,7 +127,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Te
 
 -   Do not use the Text control if you need a Label. For more information, see the [API Reference: `sap.m.Label`](https://ui5.sap.com/#/api/sap.m.Label). 
 
--   If you need special text formatting, use Formatted Text or HTML. For more information, see the [API Reference: `sap.m.FormattedText`](https://ui5.sap.com/#/api/sap.m.FormattedText) and [API Reference: `sap.ui.core.HTML`](https://ui5.sap.com/#/api/sap.ui.core.HTML). 
+-   If you need special text formatting, prefer the `sap.html` library together with CSS style classes for the styling. For example, a regular `<span>` with a style class is preferred over `sap.m.FormattedText` or `sap.ui.core.HTML`. For more information, see the [API Reference: `sap.m.FormattedText`](https://ui5.sap.com/#/api/sap.m.FormattedText). 
 
 
 > ### Restriction:  

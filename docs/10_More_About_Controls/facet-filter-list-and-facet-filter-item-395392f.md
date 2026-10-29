@@ -154,7 +154,7 @@ If `key` is not set, `text` is used as the key value.
 
 The following example shows how you use the controls. To build the face filter in the figure, use the code below the figure:
 
-![](images/SAPUI5_Facet_Filter_Controls_Example_118e5d5.png)
+![FacetFilter with City and Restaurants facets. A facet list is open with Caribbean selected.](images/SAPUI5_Facet_Filter_Controls_Example_118e5d5.png)
 
 ```js
     

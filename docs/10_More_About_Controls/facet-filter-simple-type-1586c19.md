@@ -6,11 +6,11 @@ The simple type of the `FacetFilter` control is only available for desktop and t
 
 The active facets are displayed as individually selectable buttons on the toolbar as shown in the following figure.
 
-![](images/SAPUI5_Facet_Filter_Simple_Toolbar_0c7cf9f.png)
+![FacetFilter Simple type toolbar with two active facets: Category and SupplierName.](images/SAPUI5_Facet_Filter_Simple_Toolbar_0c7cf9f.png)
 
 If the user selects a facet in the toolbar, a popover list of the available filters for the selected facet is displayed.
 
-![](images/SAPUI5_Facet_Filter_Simple_Flow_5dd4728.png)
+![SupplierName facet popover open with Red Point Stores selected. The product table on the right shows filtered results.](images/SAPUI5_Facet_Filter_Simple_Flow_5dd4728.png)
 
 The simple type provides the following functions:
 
@@ -20,6 +20,6 @@ The simple type provides the following functions:
 
 -   With the `showSummaryBar` property you can display the active facets as a non-selectable summary bar. You use this property if you preset facet filters and the user is not allowed to change them.
 
-    ![](images/SAPUI5_Facet_Filter_Summary_Bar_53a401c.png)
+    ![FacetFilter summary bar showing active filters as a non-selectable bar: Category (Printers) and SupplierName (Red Point Stores).](images/SAPUI5_Facet_Filter_Summary_Bar_53a401c.png)
 
 

@@ -28,6 +28,9 @@ SAPUI5 reuses the HTML4 sanitizer by Google by adapting it for the use of HTML5 
 
 For adapting the sanitizer to support HTML5, the HTML attributes and elements have been reorganized according to the current HTML5 specification from W3C. All types and flags have been reviewed as accurately as possible and HTML4 elements that are no longer used in HTML5 have been removed. You can, however, still see them as comments. New or changed rules for HTML5 have been marked are "new" within the comments. The comments also state which attributes and elements are assigned to respective types and flags. All rules which were not 100% clear were analyzed in a way of similarity, so for example "audio" and "video" content behaves like images etc. URIEFFECTS state if a URL is loaded inplace within a tag where the actual document is in control of what type of content is loaded like "image" or if a new document is loaded like with "a href". LOADERTYPES state if content is loaded as sandboxed which means it is loaded within a specific surrounding player like with video content for example or if it is loaded freely without restrictions. Internally controls which accept arbitrary HTML content like the `sap.ui.richttexteditor.RichTextEditor` or the `sap.ui.core.HTML` use the HTML5 Sanitizer to sanitize the HTML code of their content and value to not infiltrate any dangerous coding. The option to sanitize the value can be enabled or disabled in the respective control properly via property: `RichTextEditor.sanitizeValue` or `HTML.sanitizeContent`. For the HTML control, it is disabled by default whereas for the RichTextEditor the sanitize option is enabled.
 
+> ### Note:  
+> `sap.ui.core.HTML` accepts an arbitrary HTML string and therefore relies on sanitization. For embedding native HTML in a view, prefer the `sap.html` library instead: it exposes typed HTML elements, is secure by design, and covers most use cases.
+
 **Related Information**  
 
 

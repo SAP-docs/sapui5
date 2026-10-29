@@ -16,7 +16,8 @@ The structure in this step will be used throughout the rest of this tutorial. Th
   
 **The basic SAPUI5 app**
 
-![](images/Basic_UI5_App_Fiori_2_0_Tutorial_613be5a.png "The basic SAPUI5 app")
+![Preview of the basic app showing an empty page with a toolbar at the top.](images/Basic_UI5_App_Fiori_2_0_Tutorial_613be5a.png "The basic SAPUI5
+					app")
 
 
 
@@ -36,5 +37,5 @@ You should have the same files as displayed in the following figure:
   
 **Folder structure with downloaded files**
 
-![](images/Initial_File_Structure_Fiori_2_0_Tutorial_bc4395b.png "Folder structure with downloaded files")
+![Project folder structure showing the downloaded files.](images/Initial_File_Structure_Fiori_2_0_Tutorial_bc4395b.png "Folder structure with downloaded files")
 

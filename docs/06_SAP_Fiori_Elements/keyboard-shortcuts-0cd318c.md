@@ -80,20 +80,24 @@ Create
 </td>
 <td valign="top">
 
-[Ctrl\] + [Enter\]  
+[Alt\] + [Ctrl\] + [N\]  
 
 </td>
 <td valign="top">
 
-[CMD\] + [Enter\]  
+[Ctrl\] + [Option\] + [N\]  
 
 </td>
 <td valign="top">
 
-The focus is set on the table.
+The focus is set anywhere in the list report page and analytical list page.
+
+The focus is set on the table in the object page.
 
 </td>
 <td valign="top">
+
+Analytical list page
 
 List report page
 
@@ -102,7 +106,7 @@ Object page
 </td>
 <td valign="top">
 
-The same as when a user chooses *Create*.
+The same as when a user clicks *Create*.
 
 </td>
 </tr>
@@ -302,7 +306,7 @@ Go
 </td>
 <td valign="top">
 
-The focus is set anywhere on the filter bar.
+The focus is set anywhere on the page.
 
 </td>
 <td valign="top">
@@ -316,41 +320,7 @@ Object page
 </td>
 <td valign="top">
 
-Triggered when the focus is in one of the filter bar's input fields.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Go
-
-</td>
-<td valign="top">
-
-[Enter\] or [Return\]
-
-[Ctrl\] + [Enter\] 
-
-</td>
-<td valign="top">
-
-[CMD\] + [Enter\]  
-
-</td>
-<td valign="top">
-
-The focus is on any element in the visual filter panel or on the entire visual filter.
-
-</td>
-<td valign="top">
-
-Analytical list page \(visual filter\)
-
-</td>
-<td valign="top">
-
-Triggered when the focus is on any element in the visual filter panel or on the entire visual filter.
+Triggered when the focus is anywhere on the page.
 
 </td>
 </tr>
@@ -603,7 +573,7 @@ You can use keyboard shortcuts for common actions.
 
 On a list report page, object page or subobject page, [Ctrl\][Enter\] \(Microsoft Windows\) or [Cmd\][Return\] \(macOS\) triggers the default positive action.
 
-Note that this only happens if the focus isn't on a control that uses the same keys for a shortcut. For example, when the focus is on a table with a create button, the shortcut would trigger *Table Create*, not the default positive action.
+Note that this only happens if the focus isn't on a control that uses the same keys for a shortcut.
 
 The default positive actions for each template are as follows:
 
@@ -613,8 +583,6 @@ The default positive actions for each template are as follows:
 
 -   Subobject page: Application defined positive semantic action. If not defined, the default action is the *Apply* button.
 
-
-Note that the standard shortcut doesn't trigger the inline primary action within tables even if the focus is on the table. Instead, it triggers the *Table Create* button \(if applicable\) or the primary action at the page level.
 
 
 

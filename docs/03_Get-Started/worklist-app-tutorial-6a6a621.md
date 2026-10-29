@@ -25,13 +25,13 @@ We will use the worklist template as a starting point for this tutorial and add 
   
 **Start page of the app with list of products and actions**
 
-![](images/Tutorial_Worklist_Step_5_Preview_016d473.png "Start page of the app with list of products and actions")
+![Worklist app start page showing a list of products and action buttons.](images/Tutorial_Worklist_Step_5_Preview_016d473.png "Start page of the app with list of products and actions")
 
   
   
 **Product detail page of the app**
 
-![](images/Tutorial_Worklist_Step_7_Preview_a517fe5.png "Product detail page of the app")
+![Product detail page displaying product information and comments section.](images/Tutorial_Worklist_Step_7_Preview_a517fe5.png "Product detail page of the app")
 
 
 

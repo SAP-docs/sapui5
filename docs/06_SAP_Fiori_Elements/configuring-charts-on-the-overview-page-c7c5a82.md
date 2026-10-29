@@ -602,7 +602,7 @@ Additionally, you can add an index card with the rules configuration. The legend
 > ```
 
 > ### Note:  
-> Configure the template setting in the `manifest.json` file based on the OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 **and** `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+> Configure the template setting in the `manifest.json` file based on the OData version:
 
 
 
@@ -626,7 +626,7 @@ You can show data labels visible in analytical cards by setting the `"showDataLa
 > ```
 
 > ### Note:  
-> The type of filter bar is determined by the service \(entity\) bound to the filter configuration of the overview page application. The OData V4 service renders a `FilterBar` building block, whereas the OData V2 service renders a smart filter bar.
+> The type of filter bar depends on the OData service and entity bound to the overview page. The OData V4 service renders a `FilterBar` building block, while the OData V2 service renders a smart filter bar.
 
 ![](images/OVP_analytical_card_showdatalabel-true_bbf0cc3.png)
 

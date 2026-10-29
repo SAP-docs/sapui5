@@ -14,7 +14,7 @@ In this step, we create a detail-detail page using `sap.f.DynamicPage`, which is
   
 **Detail-detail page displaying the name of the selected supplier**
 
-![](images/DetailDetail_Page_Fiori_2_0_Tutorial_3046679.gif "Detail-detail page displaying the name of the selected supplier")
+![Animation showing a three-column layout with the product list, the detail page with supplier information, and a detail-detail page displaying the name of the selected supplier.](images/DetailDetail_Page_Fiori_2_0_Tutorial_3046679.gif "Detail-detail page displaying the name of the selected supplier")
 
 
 

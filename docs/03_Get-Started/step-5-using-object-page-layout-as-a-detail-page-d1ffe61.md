@@ -20,7 +20,8 @@ Compared to `sap.f.DynamicPage`, the `sap.uxap.ObjectPageLayout` can provide a m
   
 **ObjectPageLayout with dynamic header for the detail page**
 
-![](images/ObjectPageLayout_with_Dynamic_Header_Fiori_2_0_Tutorial_da38488.gif "ObjectPageLayout with dynamic header for the detail page")
+![Animation showing the two-column layout with the product list on the left and a detail page on the right with two sections: General Information and Suppliers.](images/ObjectPageLayout_with_Dynamic_Header_Fiori_2_0_Tutorial_da38488.gif "ObjectPageLayout with dynamic header for the detail
+					page")
 
 
 
@@ -38,7 +39,7 @@ You can view and download all files at [Flexible Column Layout App - Step 5](htt
 
 ```json
 {
-	"_version": "2.12.0",
+	"_version": "2.13.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -54,7 +55,7 @@ You can view and download all files at [Flexible Column Layout App - Step 5](htt
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.153.0",
+			"minUI5Version": "1.154.0",
 			"libs": {
 				"sap.f": {},
 				"sap.m": {},

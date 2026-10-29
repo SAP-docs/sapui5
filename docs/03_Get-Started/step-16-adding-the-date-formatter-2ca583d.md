@@ -12,7 +12,7 @@ Our formatter does its job, but it is not yet used. In this step we will use it.
   
 **Date formatter in action**
 
-![](images/Tutorial_Testing_Step_16_9aa15b0.jpg "Date formatter in action")
+![Screenshot of the post page showing the formatted date in the Info tab.](images/Tutorial_Testing_Step_16_9aa15b0.jpg "Date formatter in action")
 
 
 

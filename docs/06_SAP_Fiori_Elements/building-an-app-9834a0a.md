@@ -2,7 +2,7 @@
 
 # Building an App
 
-You can use SAP Fiori Toolsas a fast and convenient way to create and maintain apps in SAP Fiori elements for OData V4.
+You can use SAP Fiori Tools as a fast and convenient way to create and maintain apps in SAP Fiori elements for OData V4.
 
 SAP Fiori Tools provides a set of extensions for SAP Business Application Studio and Visual Studio Code which simplifies the development of SAP Fiori elements applications.
 

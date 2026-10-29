@@ -14,7 +14,7 @@ In this step, we create the list view of the app using `sap.f.DynamicPage` contr
   
 **List page with sap.f.DynamicPage**
 
-![](images/DynamicPage_for_the_Master_View_Fiori_2_0_Tutorial_b31948b.gif "List page with sap.f.DynamicPage")
+![Preview of the list page, showing a table of products with name and price columns, a search field, and buttons in the toolbar.](images/DynamicPage_for_the_Master_View_Fiori_2_0_Tutorial_b31948b.gif "List page with sap.f.DynamicPage")
 
 
 
@@ -32,7 +32,7 @@ You can view and download all files at [Flexible Column Layout App - Step 3](htt
 
 ```json
 {
-	"_version": "2.12.0",
+	"_version": "2.13.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -48,7 +48,7 @@ You can view and download all files at [Flexible Column Layout App - Step 3](htt
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.153.0",
+			"minUI5Version": "1.154.0",
 			"libs": {
 				"sap.f": {},
 				"sap.m": {},

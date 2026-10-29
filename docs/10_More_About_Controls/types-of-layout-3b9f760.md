@@ -38,7 +38,7 @@ Use to show the first logical information level \(list page\) only.
 </td>
 <td valign="top">
 
-![](images/1_OneColumn_d791491.png)
+![FlexibleColumnLayout in OneColumn mode showing column A on desktop, tablet, and phone](images/1_OneColumn_d791491.png)
 
 </td>
 </tr>
@@ -52,7 +52,7 @@ Use this layout type to display two logical levels of information \(list and det
 </td>
 <td valign="top">
 
-![](images/2_TwoColumnsBeginExpanded_9a60387.png)
+![FlexibleColumnLayout in TwoColumnsBeginExpanded mode showing a wider column A and column B on desktop, tablet, and column B only on phone](images/2_TwoColumnsBeginExpanded_9a60387.png)
 
 </td>
 </tr>
@@ -66,7 +66,7 @@ Similar to `TwoColumnsBeginExpanded`, but this time the `Mid` column is the wide
 </td>
 <td valign="top">
 
-![](images/3_TwoColumnsMidExpanded_c0d6936.png)
+![FlexibleColumnLayout in TwoColumnsMidExpanded mode showing column A and a wider column B on desktop, tablet, and column B only on phone](images/3_TwoColumnsMidExpanded_c0d6936.png)
 
 </td>
 </tr>
@@ -85,7 +85,7 @@ Use this layout to display the second logical level of information \(detail page
 </td>
 <td valign="top">
 
-![](images/4_MidColumnFullScreen_a01d72d.png)
+![FlexibleColumnLayout in MidColumnFullScreen mode showing only column B across desktop, tablet, and phone](images/4_MidColumnFullScreen_a01d72d.png)
 
 </td>
 </tr>
@@ -99,7 +99,7 @@ Use this layout to display up to three logical levels of information side by sid
 </td>
 <td valign="top">
 
-![](images/5_ThreeColumnsMidExpanded_d1f89e8.png)
+![FlexibleColumnLayout in ThreeColumnsMidExpanded mode showing columns A, B, and C with B expanded on desktop, columns B and C on tablet, and column C only on phone](images/5_ThreeColumnsMidExpanded_d1f89e8.png)
 
 </td>
 </tr>
@@ -113,7 +113,7 @@ Similar to `ThreeColumnsMidExpanded`, but this time the `End` column is expanded
 </td>
 <td valign="top">
 
-![](images/6_ThreeColumnsEndExpanded_2cef71c.png)
+![FlexibleColumnLayout in ThreeColumnsEndExpanded mode showing columns A, B, and C with C expanded on desktop, columns B and C on tablet, and column C only on phone](images/6_ThreeColumnsEndExpanded_2cef71c.png)
 
 </td>
 </tr>
@@ -127,7 +127,7 @@ Use this layout to show the `Begin` and `Mid` columns only \(`Mid` being expande
 </td>
 <td valign="top">
 
-![](images/7_ThreeColumnsMidExpandedEndHidden_21a31d2.png)
+![FlexibleColumnLayout in ThreeColumnsMidExpandedEndHidden mode showing columns A and B on desktop and tablet, and column C only on phone](images/7_ThreeColumnsMidExpandedEndHidden_21a31d2.png)
 
 </td>
 </tr>
@@ -141,7 +141,7 @@ Similar to `ThreeColumnsMidExpandedEndHidden`, but this time the `Begin` column 
 </td>
 <td valign="top">
 
-![](images/8_ThreeColumnsBeginExpandedEndHidden_e98b27b.png)
+![FlexibleColumnLayout in ThreeColumnsBeginExpandedEndHidden mode showing a wider column A and column B on desktop and tablet, and column C only on phone](images/8_ThreeColumnsBeginExpandedEndHidden_e98b27b.png)
 
 </td>
 </tr>
@@ -160,7 +160,7 @@ Use this layout to display the third logical level of information \(detail-detai
 </td>
 <td valign="top">
 
-![](images/9_EndColumnFullScreen_1129d11.png)
+![FlexibleColumnLayout in EndColumnFullScreen mode showing only column C across desktop, tablet, and phone](images/9_EndColumnFullScreen_1129d11.png)
 
 </td>
 </tr>

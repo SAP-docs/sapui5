@@ -105,3 +105,6 @@ The content of the column is horizontally aligned to the left by default. You ca
 
 Adding a semantic key to connected fields does not affect the editing status. For more information, see [Editing Status](editing-status-668ea18.md) and [Handling Semantic Key Fields](handling-semantic-key-fields-aa2793c.md).
 
+> ### Restriction:  
+> Connected fields do not support key user adaptation.
+

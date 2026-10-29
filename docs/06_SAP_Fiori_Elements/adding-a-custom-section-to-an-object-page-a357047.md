@@ -172,9 +172,9 @@ The object page of the app shows the new section.
 
 
 
-### Merging Section Title with Control Title in Custom Sections
+### Merging Titles in Custom Sections
 
-If a custom section configured with the page layout mode contains only one control, and this control is one of the standard building blocks \(such as `Form`, `Chart`, or `Table`\), or of the reuse components, or if it's the `sap.m.Title` control, the section title is merged with the control title, hiding the section title. The merging of titles is automatic for custom sections that use standard building blocks without any layout.
+If a custom section configured with the page layout mode contains only one control, and this control is a `Chart`, or `Table` building block, or of the reuse components, the titles still merge, but the control title is hidden rather than the section title. The merging of titles is automatic for custom sections that use standard building blocks without any layout. For a `Form` control or the `sap.m.Title` control, the section title merges with the control title, and the control title is hidden.
 
 For sections that use standard building blocks within a layout, you can define a `onSectionLoaded` property in the `manifest.json` file. This method is called for all sections when the object page is loaded for the first time or when the page is refreshed. The value of the `onSectionLoaded` property must be the name of the method defined in the custom controller. This method must invoke the `setAsSectionTitleOwner` extension API within `sap.fe.templates/src/sap/fe/templates/ObjectPage/ExtensionAPI.ts`. You must ensure that the correct control is passed while invoking the extension API, as the section title is merged with the title of this control.
 
@@ -216,6 +216,29 @@ For sections that use standard building blocks within a layout, you can define a
 >    this.setAsSectionTitleOwner(control);
 > }
 > ```
+
+When you create a custom section with multiple subsections, titles merge automatically under specific conditions. If a subsection contains only one control, and this control is a `Chart` or `Table` building block or a reuse component, the system merges the subsection title with the control title. The system then hides the subsection title. For a `Form` control or the `sap.m.Title`, the system still merges the two titles but hides the control title instead of the subsection title. The system automatically merges titles for custom subsections that use standard building blocks without any layout.
+
+For subsections that use standard building blocks within a layout, use the same mechanism for merging the section title. To merge the subsection title, modify the method specified for the `onSectionLoaded` manifest property. This ensures that the correct control is passed to the `setAsSubSectionTitleOwner()` extension API:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> callShowSectionTitle(section){
+>     const subSections = oSection.getSubSections();
+>  
+>     const formInVBox = subSections[0].getBlocks()[0].getContent().getItems()[0];
+>     this.setAsSubSectionTitleOwner(formInVBox);
+>  
+>     const tableControl = subSections[1].getBlocks()[0].getContent().getItems()[0];
+>     this.setAsSubSectionTitleOwner(tableControl);
+> }
+> 
+> ```
+
+> ### Note:  
+> If any subsection within a custom section specifies a layout, you must apply title merging to all subsections in that custom section, including those that don't specify a layout.
 
 
 

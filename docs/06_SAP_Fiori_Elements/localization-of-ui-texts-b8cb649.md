@@ -979,7 +979,7 @@ Discard all changes?
 </td>
 <td valign="top">
 
-*Discard* button popover text on the object page when there are unsaved changes and the user clicks *Cancel*.
+The text displayed in the popover when the user chooses *Discard* on the object page and there are unsaved changes.
 
 </td>
 <td valign="top">
@@ -1001,7 +1001,7 @@ Discard
 </td>
 <td valign="top">
 
-*Discard* button text on the object page when there are unsaved changes and the user clicks *Cancel*.
+Text of the button displayed in the popover when the user chooses *Discard Draft* in edit mode on the object page.
 
 </td>
 <td valign="top">
@@ -1023,7 +1023,7 @@ Discard Draft
 </td>
 <td valign="top">
 
-*Discard* button text on the object page when there are unsaved changes.
+Text of the footer button that allows the user to discard unsaved changes in edit mode on the object page.
 
 </td>
 <td valign="top">
@@ -2306,7 +2306,7 @@ Text used in the recommendations menu. For more information, see [Input Assistan
 
 Applications can choose to overwrite the default text with a more specific one.
 
-Example: `RECOMMENDATIONS_DATA_INFO| SalesOrderItems=CustomText` 
+Example: `RECOMMENDATIONS_DATA_INFO| _Items=CustomText` 
 
 </td>
 </tr>

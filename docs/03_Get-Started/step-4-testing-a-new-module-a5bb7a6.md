@@ -18,7 +18,7 @@ A frequently used feature of a bulletin board is to flag interesting posts to ma
   
 **The unit test for the Flagged feature will fail until the feature is implemented**
 
-![](images/Tutorial_Testing_Step_04_ba4369b.png "The unit test for the Flagged feature will fail until the
+![Unit test results showing failed tests for the FlaggedType module.](images/Tutorial_Testing_Step_04_ba4369b.png "The unit test for the Flagged feature will fail until the
 					feature is implemented")
 
 

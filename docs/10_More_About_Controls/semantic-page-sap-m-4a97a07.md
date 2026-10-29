@@ -33,11 +33,11 @@ The available semantic content is different buttons and selects. Each one can co
   
 **Semantic content at its default positions on the page.**
 
-![](images/sap_m_SemanticPage_master-detail_1632fd5.png "Semantic content at its default positions on the page.")
+![Split-screen SemanticPage with semantic actions in the master page footer and detail page footer, and an open share menu.](images/sap_m_SemanticPage_master-detail_1632fd5.png "Semantic content at its default positions on the page.")
 
 Several different selects are supported for displaying a list of selectable items - `SortSelect`, `FilterSelect`, and `GroupSelect`.
 
-![](images/sap_m_SemanticPage_selects_d37b29b.png)
+![SortSelect dropdown open with two options with semantic action buttons.](images/sap_m_SemanticPage_selects_d37b29b.png)
 
 The following aggregations are available and enable the apps to add their own custom content to the different areas of the page:
 
@@ -67,7 +67,7 @@ The ordering logic of custom and semantic content is as follows from left to rig
 
 
 
-![](images/sap_m_SemanticPage_content_order_4c04af6.png)
+![Two footer variants: one with a messages indicator on the left and Positive, Negative, Forward, and icon actions on the right; another with a messages indicator, Draft updated label on the left, and Add, favorite, and flag actions on the right.](images/sap_m_SemanticPage_content_order_4c04af6.png)
 
 
 

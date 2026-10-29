@@ -1,6 +1,6 @@
 <!-- loiofad707f57a85455db566f493f9ee0741 -->
 
-# Configuring Dynamic Visibility for Filter Fields
+# Configuring the Dynamic Visibility of Filter Fields
 
 You can control the visibility of filter fields within the filter bar at runtime using either the `UI.HiddenFilter` annotation or the `FilterBar` building block.
 
@@ -28,10 +28,10 @@ The following sample code shows `usePropertyKeysMode` set to `true` in the `mani
 > }
 > ```
 
-The following sample code shows `usePropertyKeysMode` set to `true` directly in the `FilterBar` building block definition:
+The following sample code shows `usePropertyKeysMode` set to `true` directly in the defintion of the `FilterBar` building block:
 
 > ### Sample Code:  
-> XML Definition
+> `FilterBar` API
 > 
 > ```
 > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros" xmlns:f="sap.f">
@@ -68,9 +68,9 @@ The following sample code shows how to define the `UI.HiddenFilter` annotation a
 > ```
 > annotate entity Customers with
 > {
->   @UI.hiddenFilter: { $edmJson: { $Path: '/FilterVisibility/hideCountry' } }
->   @EndUserText.quickInfo: 'Country tooltip from annotation'
->   Country;
+>     @UI.hiddenFilter: { $edmJson: { $Path: '/FilterVisibility/hideCountry' } }
+>     @EndUserText.quickInfo: 'Country tooltip from annotation'
+>     Country;
 > }
 > ```
 
@@ -79,13 +79,13 @@ The following sample code shows how to define the `UI.HiddenFilter` annotation a
 > 
 > ```
 > annotate ordersService.Customers with {
->   Country @UI.HiddenFilter : {$edmJson: {$Path: '/FilterVisibility/hideCountry'}};
+>     Country @UI.HiddenFilter : {$edmJson: {$Path: '/FilterVisibility/hideCountry'}};
 > };
 > ```
 
 The `preloadConfigurationProperties` property in the `manifest.json` file defines the list of properties required by the dynamic expressions in the `UI.HiddenFilter` annotation. These properties are fetched when the list report page loads, allowing the filter bar to show or hide the corresponding fields.
 
-For example, in the following sample code, the `Country` property is shown if the singleton value `FilterVisibility/hideCountry` equals `false`.
+For example, in the following sample code, the `Country` property is shown if the singleton value `FilterVisibility/hideCountry` set to `false`:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -122,6 +122,8 @@ The API of the `FilterBar` building block lets you manage the visibility of filt
 The following sample code shows how to use the `FilterBar` building block to show and hide filter fields, and to update their label and tooltip at runtime:
 
 > ### Sample Code:  
+> `FilterBar` API
+> 
 > ```
 > {
 >     async onActivateFilters() {

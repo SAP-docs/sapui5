@@ -2,20 +2,18 @@
 
 # Configuring Default Filter Values on the Overview Page
 
-You can set default filter values for the global filter bar in the overview page.
+You can set default filter values for the global filter in the overview page.
 
 > ### Note:  
-> -   This topic is relevant to SAP Fiori elements for OData V2.
-> 
-> -   The global filter bar is rendered using the `ap.ui.comp.smartfilterbar.SmartFilterBar` control.
+> SAP Fiori elements for OData V4 renders the global filter using the `FilterBar` building block while SAP Fiori elements for OData V2 renders it using the `ap.ui.comp.smartfilterbar.SmartFilterBar` control.
 
 For the *Standard* variant, you can configure default filter field values by using the `UI.SelectionVariant` annotation, the `Common.FilterDefaultValue` annotation, or user default parameters defined in target mapping in SAP Fiori launchpad.
 
 For custom variants, filter fields with value help can additionally use user default values from the SAP Fiori launchpad. The filter fields must satisfy the following conditions:
 
--   A target mapping exists between the filter field and the corresponding user default field in the SAP Fiori launchpad.
+-   A target mapping exists between the filter field and the corresponding user default field in SAP Fiori launchpad.
 
--   A value has been maintained for the mapped user default value.
+-   You have maintained a value for the mapped user default value.
 
 
 When these conditions are met, the *Define Condition* tab of the value help dialog displays an additional *User Defaults* option. Selecting this option configures the filter field to dynamically retrieve its value from the corresponding user default values in SAP Fiori launchpad. All other filter fields use the values persisted in the variant.
@@ -77,7 +75,7 @@ You can either provide the `UI.SelectionVariant` annotation directly, or as part
 > ```
 
 > ### Note:  
-> `SelectionOption` is not supported in ABAP CDS annotation. Please use the local XML annotation.
+> `SelectionOption` isn't supported in ABAP CDS annotation. Please use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -158,7 +156,9 @@ If only single values need to be applied for the filter fields, you can use the 
 > 
 > -   When adding a date value, use the YYYY-MM-DD format.
 > 
-> -   Note the special handling for the `DisplayCurrency` field, for which default values can also come from SAP Fiori launchpad \(FLP\).
+> -   The `DisplayCurrency` field has special handling. Its default values can also come from SAP Fiori launchpad \(FLP\).
+> 
+> -   For the analytical list page, you must set the `filterDefaultsFromSelectionVariant` property to `true` in the `manifest.json` file to ensure the filter defaults from the `SelectionVariant` are considered.
 
 
 
@@ -221,11 +221,11 @@ Standard variant as default \(no navigation context\) combined with optional `UI
 
 The user default values from SAP Fiori launchpad are merged with the default values from the annotation, using the following logic:
 
-1.  If the filter field has only values from user defaults defined in theSAP Fiori launchpad, and none from the annotation, the user default values are retained.
+1.  If the filter field has only values from user defaults defined in the SAP Fiori launchpad, and none from the annotation, the user default values are retained.
 
 2.  If the filter field has only values from the annotation but none from the user default values defined in theSAP Fiori launchpad, then the values from the annotation are retained.
 
-3.  If the filter field has values from both sources, **only** the user default values defined in the SAP Fiori launchpad are considered.
+3.  If the filter field has values from both sources, only the user default values defined in the SAP Fiori launchpad are considered.
 
 
 
@@ -235,7 +235,7 @@ The user default values from SAP Fiori launchpad are merged with the default val
 </table>
 
 > ### Tip:  
-> Unlike the default values from annotations or the manifest, the user default values from SAP Fiori launchpad mark the standard variant dirty.
+> Unlike the default values from annotations or the `manifest.json` file, the user default values from SAP Fiori launchpad mark the standard variant dirty.
 
 **Related Information**  
 

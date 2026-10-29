@@ -12,7 +12,7 @@ In this step, we extend the product detail view by adding a feature allowing to 
   
 **Comments section added to the detail page**
 
-![](images/Tutorial_Worklist_Step_7_Preview_a517fe5.png "Comments section added to the detail page")
+![Screenshot of the detail page with product information, and a comment section at the bottom.](images/Tutorial_Worklist_Step_7_Preview_a517fe5.png "Comments section added to the detail page")
 
 
 

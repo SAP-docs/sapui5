@@ -10,7 +10,7 @@ The blocks are used to group the app content that is displayed in the sections a
   
 **Object Page content grouped in Blocks**
 
-![](images/Object_Page_Blocks_da91fe4.png "Object Page content grouped in Blocks")
+![Object Page showing the Personal section with three side-by-side blocks: Phone Numbers, Social Accounts, and Addresses.](images/Object_Page_Blocks_da91fe4.png "Object Page content grouped in Blocks")
 
 To add blocks, use the `blocks` aggregation of `sap.uxap.ObjectPageSubSection`:
 

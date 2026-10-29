@@ -469,7 +469,9 @@ Semantically connected fields are displayed side by side to reflect their data r
 > ```
 
 > ### Restriction:  
-> Connected fields can only be configured in sections that belong to a form, so connected fields cannot be configured in a header section.
+> -   Connected fields can only be configured in sections that belong to a form, so connected fields cannot be configured in a header section.
+> 
+> -   Connected fields do not support key user adaptation.
 
 > ### Example:  
 > You can maintain date and time as two properties in the back end and show this information in a single form. You can use a delimiter to separate the two values.

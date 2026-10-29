@@ -1745,6 +1745,58 @@ Paste to range
 <tr>
 <td valign="top">
 
+Creation using value help
+
+</td>
+<td valign="top">
+
+-   Analytical list page
+-   List report page
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Enabling Creation Using the Add Button and Value Help](enabling-creation-using-the-add-button-and-value-help-90e4e13.md) 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Value Help Dialog for Adding Rows to a Table**
+
+![The Add value help dialog listing items with ID, Name, and Category columns. The Add button is highlighted.](images/AddViaValueHelp_9be2d70.png "Value Help Dialog for Adding Rows to a Table")
+
+</td>
+<td valign="top">
+
+create via value help
+
+create via VH
+
+Add/Remove
+
+creationMode
+
+AddViaValueHelp
+
+adding via association
+
+adding via master list
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Cumulation \(waterfall\) chart
 
 </td>
@@ -7941,7 +7993,7 @@ Hide or show filter fields
 </td>
 <td valign="top">
 
-[Configuring Dynamic Visibility for Filter Fields](configuring-dynamic-visibility-for-filter-fields-fad707f.md)
+[Configuring the Dynamic Visibility of Filter Fields](configuring-the-dynamic-visibility-of-filter-fields-fad707f.md)
 
 </td>
 <td valign="top">

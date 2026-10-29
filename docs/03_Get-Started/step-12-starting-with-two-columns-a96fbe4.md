@@ -16,7 +16,7 @@ By default, the `FlexibleColumnLayout` starts off with one column. If your use c
   
 **Initial layout with two columns**
 
-![](images/Starting_with_Two_Columns_Fiori_2_0_Tutorial_18a03a8.png "Initial layout with two columns")
+![Screenshot of the two-column layout showing the product list on the left and the detail page on the right.](images/Starting_with_Two_Columns_Fiori_2_0_Tutorial_18a03a8.png "Initial layout with two columns")
 
 
 

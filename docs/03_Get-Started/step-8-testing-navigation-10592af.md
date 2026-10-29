@@ -12,7 +12,7 @@ So far, we have a list of posts on the home page of the app. But typically, a po
   
 **We add an OPA test that selects an item from the table and navigates to the post page**
 
-![](images/Tutorial_Testing_Step_08_cf3e0a6.jpg "We add an OPA test that selects an item from the table and navigates to the
+![Screenshot of the bulletin board application with table with selected item.](images/Tutorial_Testing_Step_08_cf3e0a6.jpg "We add an OPA test that selects an item from the table and navigates to the
 					post page")
 
 

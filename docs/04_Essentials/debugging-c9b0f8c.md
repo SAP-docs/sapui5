@@ -11,12 +11,12 @@ When developing apps, searching for bugs is an inevitable part of the process. T
 
 <!-- loio81526aa4f21944109eef190bc06767b1 -->
 
-## Experimental Debug Tools
+## Debug Tools
 
 SAPUI5 provides a set of built-in debug utilities that expose a global `ui5` object in the browser console. This object offers convenient access to modules, controls, and framework internals for interactive inspection and debugging.
 
 > ### Caution:  
-> The debug tools described here are **experimental**. They may be changed or removed in future versions without notice. Don't use these tools in productive scenarios.
+> The debug tools described here are only intended for debugging during development. They must not be used in productive scenarios.
 
 
 

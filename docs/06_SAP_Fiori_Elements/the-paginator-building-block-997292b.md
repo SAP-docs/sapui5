@@ -2,9 +2,9 @@
 
 # The `Paginator` Building Block
 
-You can use the `Paginator` building block to add paginator buttons to lists in SAP Fiori elements for OData V4.
+You can use the `Paginator` building block to add paginator buttons to an object page in SAP Fiori elements for OData V4.
 
-The paginator buttons are added to the header of the detail page and allow users to flip through the list items without having to return to the list.
+The paginator buttons allow the user to navigate between items from a parent list without leaving the object page.
 
 > ### Sample Code:  
 > `Paginator` Building Block

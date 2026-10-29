@@ -12,7 +12,7 @@ We now add a search field to our bulletin board and define a filter that represe
   
 **Search field**
 
-![](images/Tutorial_Testing_Step_12_b012fdf.jpg "Search field")
+![Screenshot showing a table with a list of items and a search field at the top.](images/Tutorial_Testing_Step_12_b012fdf.jpg "Search field")
 
 
 

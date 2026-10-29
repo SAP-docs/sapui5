@@ -10,7 +10,7 @@ The `FacetFilterList.getSelectedItems()` method returns a copy of each selected 
 
 An application can support the personalization of settings and allow the user to save the facet filter list selections as well as other properties by means of a variant. For example, you can use `getSelectedKeys` to retrieve an object containing all selected items and use JSON.stringify to marshall and JSON.parse to unmarshall. After unmarshalling, you can use `setSelectedKeys` to apply the selections to the list. The following figure and code snippet give an example.
 
-![](images/SAPUI5_Facet_Filter_Data_Binding_Example_ce923df.png)
+![FacetFilter with a Products facet list open. One item is selected.](images/SAPUI5_Facet_Filter_Data_Binding_Example_ce923df.png)
 
 ```js
 

@@ -63,31 +63,31 @@ You can turn off the confirmation popup for draft activation in the case of exte
 
 You can configure a confirmation popup for the following actions by sending an HTTP 412 response from the back end:
 
--   Standard SAP Fiori elements actions, such as *Save*, *Activate*, and *Create*.
+-   Standard actions, such as *Save*, *Activate*, and *Create*
 
 -   Application-specific actions
 
 
 The flow is as follows:
 
--   When an action is triggered, the application sends a request with the header `Prefer:handling=strict`.
+1.  When an action is triggered, the application sends a request with the header `Prefer:handling=strict`.
 
--   Depending on the back-end settings, there are two options:
+2.  Depending on the back-end settings, one of the following options applies:
 
     -   If the preference is unknown, it's ignored and the action is executed as usual.
 
     -   If the preference is known, you can configure the back end to send a 412 message \("Precondition Failed" message\).
 
 
--   For SAP Fiori elements, the 412 message indicates that there are warnings that block the processing of the action, but users can still trigger the action if they choose to ignore the warnings and continue.
+3.  The 412 message indicates that warnings prevent the action from being processed. Users can still trigger the action if they choose to ignore the warnings and continue.
 
--   The application displays a confirmation popup containing the message from the back end.
+4.  The application displays a confirmation popup containing the message from the back end.
 
--   If users choose *Confirm*, the application sends the request again, this time **without** `Prefer:handling=strict` in the header.
+5.  If users choose *Confirm*, the application sends the request again, this time without `Prefer:handling=strict` in the header.
 
--   The back end executes the action and responds with either a success or a failure message. If it sends the same message again, it is suppressed and not shown on the UI.
+6.  The back end executes the action and responds with either a success or a failure message. If the back end sends the same message again, the message is suppressed and not shown on the UI.
 
--   If users choose *Cancel*, the operation is terminated.
+7.  If users choose *Cancel*, the operation is terminated.
 
 
 The following image shows an example of such a popup:

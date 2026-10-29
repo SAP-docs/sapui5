@@ -12,7 +12,7 @@ In this step, we will extend the detail page of our app to show more information
   
 **Detail page with more product information**
 
-![](images/Tutorial_Worklist_Step_6_Preview_49780e4.png "Detail page with more product information")
+![Screenshot of the detail page with product information, price, stock status, and supplier details panel.](images/Tutorial_Worklist_Step_6_Preview_49780e4.png "Detail page with more product information")
 
 
 

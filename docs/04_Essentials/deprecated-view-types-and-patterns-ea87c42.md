@@ -100,7 +100,7 @@ Call the view factory function again
 <tr>
 <td valign="top">
 
-**Native HTML in XML Views**
+**Native HTML in XML Views** \(via XHTML namespace `xmlns:html="http://www.w3.org/1999/xhtml"`\)<sup>1</sup>
 
 </td>
 <td valign="top">
@@ -110,12 +110,12 @@ Call the view factory function again
 </td>
 <td valign="top">
 
-`sap.ui.core.HTML` control or custom control
+`sap.html` library
 
 </td>
 <td valign="top">
 
-[Using Native HTML in XML Views \(deprecated\)](using-native-html-in-xml-views-deprecated-be54950.md)
+[Using Native HTML in XML Views](using-native-html-in-xml-views-be54950.md)
 
 </td>
 </tr>
@@ -230,6 +230,8 @@ Include Handlebars template support
 </td>
 </tr>
 </table>
+
+1\) The `sap.html` library replaces the deprecated XHTML namespace. Instead of declaring `xmlns:html="http://www.w3.org/1999/xhtml"`, declare the `sap.html` namespace \(for example as the default namespace with `xmlns="sap.html"`\) and write tags with their native lowercase names. Add `sap.html` as a library dependency in your `manifest.json`. The `sap.html` library integrates with SAPUI5 data binding and event handling, validates URL-bearing attributes automatically, and is secure by design. For full migration details and code examples, see [Using Native HTML in XML Views](using-native-html-in-xml-views-be54950.md).
 
 **Related Information**  
 

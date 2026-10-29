@@ -16,7 +16,7 @@ Apps using the list-detail pattern operate with a layout divided into two separa
   
 **list-detail pattern with FlexibleColumnLayout**
 
-![](images/Master-detail_Pattern_Fiori_2_0_Tutorial_267d05f.gif "list-detail pattern with FlexibleColumnLayout")
+![Animation showing the app using the list-detail pattern with a maximum of two columns, where selecting a product from the list opens its details in the second column without a third column.](images/Master-detail_Pattern_Fiori_2_0_Tutorial_267d05f.gif "list-detail pattern with FlexibleColumnLayout")
 
 
 

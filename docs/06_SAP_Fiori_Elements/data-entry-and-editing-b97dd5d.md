@@ -36,6 +36,8 @@ Various creation modes
 
 [Creation Modes in Tree Tables](creation-modes-in-tree-tables-9d31f64.md)
 
+[Enabling Creation Using the Add Button and Value Help](enabling-creation-using-the-add-button-and-value-help-90e4e13.md)
+
 </td>
 </tr>
 <tr>

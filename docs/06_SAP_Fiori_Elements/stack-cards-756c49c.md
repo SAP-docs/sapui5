@@ -349,7 +349,7 @@ In the following example, the stack card displays information about business par
 > ```
 
 > ### Note:  
-> Configure the template setting in the `manifest.json` file based on the OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 **and** `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+> Configure the template setting in the `manifest.json` file based on the OData version:
 
 The left-hand side of the card contains the application title \(which is also the title of the object stream\) and stack description \(optional\). Click this section of the card or *View All* to open the application.
 
@@ -414,7 +414,7 @@ The following sample code configures a stack card displaying sales order items a
 > ```
 
 > ### Note:  
-> Configure the template setting in the `manifest.json` file based on the OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 **and** `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+> Configure the template setting in the `manifest.json` file based on the OData version:
 
 Continuing the code sample above, the following metadata demonstrates the relationship between the `BusinessPartner` and `SalesOrder` entity sets. The `BusinessPartner` entity type contains the configured navigation `ToSalesOrders` property to the `SalesOrder` using the `Assoc_BusinessPartner_SalesOrders` association and the `Assoc_BusinessPartner_SalesOrders_AssocS` association set.
 

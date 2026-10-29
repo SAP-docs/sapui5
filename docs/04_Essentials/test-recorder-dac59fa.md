@@ -18,12 +18,12 @@ There are two ways to open the Test Recorder:
 
 -   In an iFrame: Press [Ctrl\] + [Shift\] + [Alt\] /[Option\] + [P\]  to display the *Technical Information Dialog*, and then choose *Activate Test Recorder*
 
-    ![](images/Activate_Test_Recorder_SAPUI5_3f710a0.png)
+    ![Technical Information Dialog with the Activate Test Recorder option.](images/Activate_Test_Recorder_SAPUI5_3f710a0.png)
 
 
 The main sections of the tool are *Control Tree*, *Snippet*, and *Common Info*.
 
-![](images/Test_Recorder_Animation_6316f77.gif)
+![Animated image showing the app at the top and the test recorder with its 3 main sections at the bottom.](images/Test_Recorder_Animation_6316f77.gif)
 
 From the navigation actions at the top bar of the Test Recorder, you can minimize, resize, open it in a new window, or close the tool.
 

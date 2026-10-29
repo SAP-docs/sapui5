@@ -166,7 +166,7 @@ The `MessageStrip` is useful when you want to display short notices, for example
 
 ## Messages Related to Elements of a Page
 
-There is no dedicated UI control available in `sap.m` designed to show messages related to a particular element on a page. We recommend to use the `sap.ui.core.HTML` control to show these error messages 'somewhere close to the input' or use some kind of overlay. Consider that the user will have the on screen keyboard open which might hide messages. Putting the message above an input field could help.
+There is no dedicated UI control available in `sap.m` designed to show messages related to a particular element on a page. We recommend using the native HTML from the `sap.html` library to show these error messages 'somewhere close to the input' or use some kind of overlay. Consider that the user will have the on screen keyboard open which might hide messages. Putting the message above an input field could help.
 
 You can set the `ValueState` of the `sap.m.Input` control to `Error` to indicate that the content is not correct.
 

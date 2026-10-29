@@ -38,7 +38,8 @@ The app provides the following features:
   
 **list-detail-detail pattern with sap.f.FlexibleColumnLayout, sap.f.DynamicPage and sap.uxap.ObjectPageLayout**
 
-![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "list-detail-detail pattern with sap.f.FlexibleColumnLayout, sap.f.DynamicPage and
+![Animation showing a three-column app layout with a product list page, a detail page, and a detail-detail page, demonstrating navigation between the list-detail and list-detail-detail patterns.](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "list-detail-detail pattern with sap.f.FlexibleColumnLayout,
+						sap.f.DynamicPage and
 						sap.uxap.ObjectPageLayout")
 
 

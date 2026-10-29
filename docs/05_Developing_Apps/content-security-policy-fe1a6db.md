@@ -646,6 +646,8 @@ Certain controls display provided HTML text, for example `sap.m.FormattedText`. 
 
 It's recommended to use styling with the `class` attribute and external stylesheets.
 
+For embedding native HTML structure in a view, prefer the `sap.html` library over `sap.ui.core.HTML`. It integrates with SAPUI5-style class management \(the `class` attribute maps to style classes\) and is secure by design.
+
 </td>
 </tr>
 <tr>

@@ -8,7 +8,7 @@ With the facet filter, users can explore a data collection by applying multiple 
 
 The following figure shows the structure of the facet filter in default 'Simple' type.
 
-![](images/SAPUI5_Facet_Filter_Anatomy_f144853.png)
+![FacetFilter Simple type showing a facet list, search field, list items, and controls for adding, removing, and resetting facets.](images/SAPUI5_Facet_Filter_Anatomy_f144853.png)
 
 The facet filter supports the following two types that can be configured using the control's `type` property:
 
@@ -34,5 +34,5 @@ Your application displays a large list of products that can be grouped by catego
 -   SupplierName \(Alpha Printers\)
 
 
-![](images/SAPUI5_Facet_Filter_Example_f57566c.png)
+![Product table filtered by Category and SupplierName using FacetFilter.](images/SAPUI5_Facet_Filter_Example_f57566c.png)
 

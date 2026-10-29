@@ -176,7 +176,7 @@ Custom actions for quick view cards consist of the following steps:
     > ```
 
     > ### Note:  
-    > Configure the template setting in the `manifest.json` file based on the OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 **and** `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+    > Configure the template setting in the `manifest.json` file based on the OData version:
 
 
 
@@ -190,7 +190,7 @@ You can add custom global actions on the filter bar by configuring the `manifest
 Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
 
 > ### Note:  
-> The type of filter bar is determined by the service \(entity\) bound to the filter configuration of the overview page application. The OData V4 service renders a `FilterBar` building block, whereas the OData V2 service renders a smart filter bar.
+> The type of filter bar depends on the OData service and entity bound to the overview page. The OData V4 service renders a `FilterBar` building block, while the OData V2 service renders a smart filter bar.
 
 1.  Configure `manifest.json` file with controller and view extensions, as shown in the following sample code:
 

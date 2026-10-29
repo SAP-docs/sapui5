@@ -14,7 +14,7 @@ If the tests are passed, we can be sure that the formatter is formally correct b
   
 **The price is now formatted with a semantic color**
 
-![](images/Tutorial_Testing_Step_03_436054f.jpg "The price is now formatted with a semantic color")
+![Screenshot showing a price value displayed with semantic color formatting.](images/Tutorial_Testing_Step_03_436054f.jpg "The price is now formatted with a semantic color")
 
 
 

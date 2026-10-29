@@ -350,16 +350,18 @@ You can change the sorting of the table using `UI.PresentationVariant`.
 >       {
 >         $Type     : 'Common.SortOrderType',
 >         Property  : FlightDate,
->         Descending: true,
->       },
->     ],
+>         Descending: true
+>       }
+>     ]
 >   }
 > 
 > );
 > 
 > 
-> 
 > ```
+
+> ### Note:  
+> The sorting specified in the unqualified `UI.PresentationVariant` of the value help entity applies if no `UI.PresentationVariant` is linked to the `ValueList` annotation.
 
 **Hierarchical Display**
 

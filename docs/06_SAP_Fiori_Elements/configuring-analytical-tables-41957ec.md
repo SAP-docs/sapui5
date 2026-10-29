@@ -24,6 +24,17 @@ Before configuring an analytical table, ensure that your app meets the following
 -   Analytical tables require data that is groupable, aggregatable, or both. For more information, see [Defining Groupable Properties](defining-groupable-properties-9062f11.md) and [Defining Aggregatable Properties](defining-aggregatable-properties-564ac6e.md).
 
 
+> ### Restriction:  
+> Editable analytical tables are supported with an ABAP back end with the following restrictions:
+> 
+> -   You can't configure the initial expansion level for a grouped analytical table. The table always opens in a collapsed state.
+> 
+> -   After a refresh, the expansion state in a grouped analytical table is not preserved. The table returns to the top level. To restore your view, expand the rows again.
+> 
+> -   You can't use `FlexibleColumnLayout` with editable analytical tables.
+> 
+> -   Subtotals and totals are not automatically updated when you make changes in a grouped analytical table.
+
 **Related Information**  
 
 

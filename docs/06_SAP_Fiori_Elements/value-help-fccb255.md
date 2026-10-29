@@ -710,7 +710,7 @@ A value help table can show duplicate rows. This happens when a filter is applie
 To eliminate the duplicate values, ensure that the back end supports `DistinctValuesSupported`. When this annotation is present, the framework always fetches only unique values, regardless of any active filters. This annotation also applies to the type-ahead functionality of the field.
 
 > ### Note:  
-> This feature requires back end support for aggregation. You must also define `Aggregation.ApplySupported` in the annotation.
+> This feature requires back-end support for aggregations. You must define `Aggregation.ApplySupported` in the annotation. If `Transformations` are defined within `ApplySupported`, `groupby` must be included as one of the supported values.
 
 > ### Restriction:  
 > This feature isn't supported in the following scenarios:

@@ -23,6 +23,9 @@ The following sharing options are available as part of the *Share* functionality
 
     Users can also share the current application state using *Share on SAP Build Work Zone*. This option is only available on platforms that are integrated with SAP Build Work Zone or with SAP Jam.
 
+    > ### Note:  
+    > SAP Jam Collaboration is planned to be sunset in the beginning of 2027.
+
 -   *Save as Tile*
 
     When the user chooses this option, the corresponding *Save as Tile* dialog is displayed. When they choose the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.

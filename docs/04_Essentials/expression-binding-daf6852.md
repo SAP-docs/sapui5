@@ -158,6 +158,11 @@ Relational operator
 
 `>=`
 
+> ### Note:  
+> Some symbols need to be escaped in XML views, for example `<` needs to be escaped with `&lt;`
+
+
+
 </td>
 </tr>
 <tr>

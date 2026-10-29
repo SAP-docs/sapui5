@@ -587,7 +587,7 @@ Feature
 
 **Built-in Browser Console Debug Utilities**
 
-A global `ui5` object in the browser console now provides convenient access to modules, controls, and framework internals for interactive inspection and debugging. The provided utilities are experimental and may change or be removed in future versions. For more information, see [Experimental Debug Tools](../04_Essentials/debugging-c9b0f8c.md#loio81526aa4f21944109eef190bc06767b1).
+A global `ui5` object in the browser console now provides convenient access to modules, controls, and framework internals for interactive inspection and debugging. The provided utilities are experimental and may change or be removed in future versions. For more information, see [Debug Tools](../04_Essentials/debugging-c9b0f8c.md#loio81526aa4f21944109eef190bc06767b1).
 
 <sub>Changed•Feature•Info Only•1.149</sub>
 
@@ -703,6 +703,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.152](what-s-new-in-sapui5-1-152-e1592c8.md "With this release SAPUI5 is upgraded from version 1.151 to 1.152.")
 
 [What's New in SAPUI5 1.151](what-s-new-in-sapui5-1-151-e824a0e.md "With this release SAPUI5 is upgraded from version 1.150 to 1.151.")
 

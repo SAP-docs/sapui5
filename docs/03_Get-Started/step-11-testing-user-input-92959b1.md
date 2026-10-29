@@ -12,7 +12,7 @@ In this step, we will write a test that simulates a user search. We will enter t
   
 **Testing user input in a search field**
 
-![](images/Tutorial_Testing_Step_11_2d8ec1c.jpg "Testing user input in a search field")
+![Screenshot of the bulletin board application with table with selected item.](images/Tutorial_Testing_Step_11_2d8ec1c.jpg "Testing user input in a search field")
 
 
 

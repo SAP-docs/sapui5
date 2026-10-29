@@ -8,7 +8,7 @@ Cards in are components that use UI annotation to render their content. They con
 
 Each card is bound to a single entity set in a data source, and its configuration is provided in the `"sap.ovp"..."cards"` object. The cards object contains the list of cards to display in the application.
 
-The card ID is the property name, and the card configuration is provided as a value in the object. At runtime, the cards are displayed in the order that they appear in the application descriptor.
+The card ID is the property name, and the card configuration is provided as a value in the object. At runtime, the cards are displayed in the order of their card IDs.
 
 For more information on cards and its areas, see [SAP Design System guidelines](https://www.sap.com/design-system/fiori-design-web/page-types/floorplans/overview-page-ovp/overview-page-card).
 
@@ -62,7 +62,7 @@ The `title` property is mandatory. The `subTitle` is only mandatory if the card 
 > ```
 
 > ### Note:  
-> The type of filter bar is determined by the service \(entity\) bound to the filter configuration of the overview page application. The OData V4 service renders a `FilterBar` building block, whereas the OData V2 service renders a smart filter bar.
+> The type of filter bar depends on the OData service and entity bound to the overview page. The OData V4 service renders a `FilterBar` building block, while the OData V2 service renders a smart filter bar.
 
 
 
@@ -110,7 +110,7 @@ These annotation terms can be configured in the `manifest.json` file, as shown i
 > ```
 
 > ### Note:  
-> Configure the template setting in the `manifest.json` file based on the OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 **and** `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+> Configure the template setting in the `manifest.json` file based on the OData version:
 
 
 
@@ -169,7 +169,7 @@ You can also restrict the generation of individual analytical, list, and table c
 > ```
 
 > ### Note:  
-> -   Configure the template setting in the `manifest.json` file based on the OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 **and** `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+> -   Configure the template setting in the `manifest.json` file based on the OData version:
 > 
 > -   If custom navigation is enabled for a card, navigation from the *Insights* section of **My Home** for that card leads to the parent overview page application instead of the target maintained in the overview page card.
 

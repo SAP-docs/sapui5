@@ -89,7 +89,7 @@ For users to resize cards, application developers must enable this capability. T
 > ```
 
 > ### Note:  
-> Configure the template setting in the `manifest.json` file based on the OData version. Use `sap.ovp.cards.v4.<cardType>` for SAP Fiori elements for OData V4 **and** `sap.ovp.cards.<cardType>` for SAP Fiori elements for OData V2.
+> Configure the template setting in the `manifest.json` file based on the OData version:
 
 
 
@@ -100,7 +100,7 @@ Users can filter the information displayed in cards by defining specific values 
 The applied filter affects all cards that share the filtered property in entity type.
 
 > ### Note:  
-> The type of filter bar is determined by the service \(entity\) bound to the filter configuration of the overview page application. The OData V4 service renders a `FilterBar` building block, whereas the OData V2 service renders a smart filter bar.
+> The type of filter bar depends on the OData service and entity bound to the overview page. The OData V4 service renders a `FilterBar` building block, while the OData V2 service renders a smart filter bar.
 
 Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
 

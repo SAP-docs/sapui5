@@ -709,6 +709,8 @@ Info Only
 **Related Information**  
 
 
+[What's New in SAPUI5 1.152](what-s-new-in-sapui5-1-152-e1592c8.md "With this release SAPUI5 is upgraded from version 1.151 to 1.152.")
+
 [What's New in SAPUI5 1.150](what-s-new-in-sapui5-1-150-65d4973.md "With this release SAPUI5 is upgraded from version 1.149 to 1.150.")
 
 [What's New in SAPUI5 1.149](what-s-new-in-sapui5-1-149-8591ff4.md "With this release SAPUI5 is upgraded from version 1.148 to 1.149.")

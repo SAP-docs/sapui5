@@ -383,6 +383,9 @@ To restrict the file size and define the allowed media types, use the `MaxLength
 
 For more information about action parameters, see [Actions](actions-cbf16c5.md).
 
+> ### Restriction:  
+> If an error occurs in a stream property field, the message manager doesn't navigate to or highlight the associated control.
+
 
 
 > ### Note:  

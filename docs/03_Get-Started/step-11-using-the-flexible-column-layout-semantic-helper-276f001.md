@@ -21,7 +21,8 @@ For more information, see [Flexible Column Layout Semantic Helper](../10_More_Ab
   
 **List-detail-detail pattern using sap.f.FlexibleColumnLayoutSemanticHelper**
 
-![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "List-detail-detail pattern using sap.f.FlexibleColumnLayoutSemanticHelper")
+![Animation showing the three-column layout with navigation buttons for entering and exiting fullscreen and closing columns on the detail and detail-detail pages.](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "List-detail-detail pattern using
+						sap.f.FlexibleColumnLayoutSemanticHelper")
 
 
 

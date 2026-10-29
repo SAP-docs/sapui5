@@ -156,11 +156,117 @@ You can use `FilterRestrictions` annotations and set the `AllowedExpressions` pr
 > }
 > ```
 
-Text handling and sorting in dropdown-based fields follows the same logic as in the value help dialog. For more information, see [Value Help Dialog](value-help-dialog-3faed83.md).
+Text handling, dropdown-based fields follows the same logic as in the value help dialog. For more information, see [Value Help Dialog](value-help-dialog-3faed83.md).
 
 You can ensure distinct values in the dropdown list. For more information, see the [Ensuring Distinct Values](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__ensuring_distinct_values) section in [Value Help](value-help-fccb255.md).
 
 Value help based on fixed values doesn't show recently entered values. For more information, see the [History of Recently Entered Values](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__HistoryofRecentlyEnteredValues) section in [Field Help](field-help-a5608ea.md).
+
+
+
+## Sorting and Grouping within a Dropdown List
+
+You can sort and group entries in a dropdown list based on a property value by annotating `UI.PresentationVariant` and linking it to the `ValueList` annotation.
+
+The following sample code shows how to define sorting and grouping for a dropdown list using UI.`PresentationVariant` with a qualifier linked to the `ValueList` annotation:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="serviceNamespace.BookingType/FlightDate">
+>     <Annotation Term="common.ValueList">
+>         <Record>
+>             ……
+>             ……
+>             <PropertyValue Property="PresentationVariantQualifier" String="VH_Booking_to_Flight"/>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+>  
+> <Annotations Target="serviceNamespace.FlightType">
+>     <Annotation Term="UI.PresentationVariant" Qualifier="VH_Booking_to_Flight">
+>         <Record>
+>             <PropertyValue Property="SortOrder">
+>                 <Collection>
+>                     <Record Type="common.SortOrderType">
+>                         <PropertyValue Property="Property" PropertyPath="FlightDate"/>
+>                         <PropertyValue Property="Descending" Bool="true"/>
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="GroupBy">
+>                <Collection>
+>                    <PropertyPath>Category</PropertyPath>
+> </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> annotate view C_BOOKINGS with
+> {
+>   @Consumption.valueHelpDefinition: [
+>     {
+>       entity: { name: 'VH_Flight', element: 'FlightDate' },
+>       ...
+>       ...
+>       presentationVariantQualifier: 'VH_Booking_to_Flight'
+>     }
+>   ]
+>   FlightDate;
+>   ConnectionID;
+>   AirlineID;
+> }
+>  
+> @UI.presentationVariant: [{
+>   qualifier: 'VH_Booking_to_Flight',
+>   sortOrder: [{ by: 'FlightDate', direction: #DESC }],
+>   groupBy: ['Category']
+> }],
+> define view entity VH_Flight as select from Flight {
+>   FlightDate;
+>   Connection_ID;
+>   Airline_ID;
+>   Category;
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate TravelService.Booking {
+>   FlightDate @Common.ValueList: {
+>     CollectionPath : 'Flight',
+>       
+>       
+>     PresentationVariantQualifier : 'VH_Booking_to_Flight',
+>   };
+> }
+>  
+> annotate TravelService.Flight with @(
+>   UI.PresentationVariant #VH_Booking_to_Flight : {
+>     $Type : 'UI.PresentationVariantType',
+>     SortOrder : [
+>       {
+>         $Type     : 'Common.SortOrderType',
+>         Property  : FlightDate,
+>         Descending: true
+>       }
+>     ],
+>     GroupBy: [Category]
+>   }
+> );
+> ```
+
+> ### Note:  
+> The sorting and grouping specified in the unqualified ***UI.PresentationVariant*** of the value help entity applies if no ***UI.PresentationVariant*** is linked to the ***ValueList*** annotation.
 
 
 

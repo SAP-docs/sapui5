@@ -40,6 +40,70 @@ The AI-assisted smart summarization generates an efficient summary of business i
 
 ![](images/AI-Assisted_Smart_Summarization_e3ea9c8.png)
 
+
+
+### Hiding the Summarize Button
+
+You can hide the *Summarize* button for all object pages in an app in the `manifest.json` file as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+>   
+> "sap.fe": {
+>     "app": {
+>         "aiConfiguration": {
+>             "smartSummarization": {
+>                 "visibility": "HideOnAllPages"
+>             }
+>         }
+>     }
+> }
+> ```
+
+**Summarize Button Visibility Settings**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Manifest Setting
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`ShowOnAllPages` 
+
+</td>
+<td valign="top">
+
+Displays the *Summarize* button on all object pages in an app. Default setting.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`HideOnAllPages` 
+
+</td>
+<td valign="top">
+
+Hides the *Summarize* button on all object pages in an app.
+
+</td>
+</tr>
+</table>
+
 For more information, see [Working with the AI-Assisted Smart Summarization](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/6c1bc21f01c840cba336404fb249cf95.html).
 
 

@@ -14,7 +14,7 @@ In this step, we set up the initial app.
   
 **The worklist app**
 
-![](images/Tutorial_Worklist_Step_01_Preview_60e42c8.png "The worklist app")
+![Worklist app start page showing a list of products.](images/Tutorial_Worklist_Step_01_Preview_60e42c8.png "The worklist app")
 
 
 
@@ -43,7 +43,7 @@ With the downloaded code from the Demo Kit, you have an initial app structure wi
   
 **Folder structure of the initial project**
 
-![](images/Tutorial_Worklist_Step_01_Folders_7f6899e.png "Folder structure of the initial project")
+![Project folder structure.](images/Tutorial_Worklist_Step_01_Folders_7f6899e.png "Folder structure of the initial project")
 
 -   **Home Page** \(`webapp/view/Worklist.view.xml` file\)
 

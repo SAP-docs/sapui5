@@ -14,7 +14,7 @@ In this step, we create an additional page that is displayed in a separate fulls
   
 **Additional page displayed in a separate fullscreen column**
 
-![](images/More_Pages_Fiori_2_0_Tutorial_41f6ae1.gif "Additional page displayed in a separate fullscreen column")
+![Animation showing navigation from the three-column layout to an additional About Supplier page displayed in fullscreen.](images/More_Pages_Fiori_2_0_Tutorial_41f6ae1.gif "Additional page displayed in a separate fullscreen column")
 
 
 

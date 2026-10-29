@@ -149,16 +149,12 @@ You can define the `InlineCreationRows` mode as the default creation mode that i
 
 If a field is marked with the `Capabilities.InsertRestrictions.RequiredProperties` annotation, an asterisk \(\*\) is displayed in the column header.
 
-If the user doesn't enter a value to any of the required fields, an error message is shown. If the required fields aren't a part of the displayed table columns, an error message is displayed asking the user to add the required fields within the displayed table columns using the table settings.
+An error message appears if a user doesn't enter a value in the required fields and moves focus away from the empty row using a mouse or keyboard. If the required fields aren't a part of the displayed table columns, an error message is displayed asking the user to add the required fields within the displayed table columns using the table settings.
 
 > ### Note:  
 > As a general guideline for `RequiredProperties`, we recommend that you set the `UI.Importance` to `High` for required properties in a `LineItem` annotation. If you don't set it, the framework still evaluates the `UI.Importance` as `High` so that the columns don't overflow and are hidden on small-screen devices.
 
-
-
-### Support of Required Fields
-
-The empty row mode also supports required fields. These fields are declared using `Capabilities.InsertRestrictions.RequiredProperties`.
+The required fields are declared using `Capabilities.InsertRestrictions.RequiredProperties`.
 
 > ### Sample Code:  
 > XML Annotation

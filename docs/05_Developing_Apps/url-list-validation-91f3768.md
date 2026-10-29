@@ -6,6 +6,9 @@ The SAPUI5 framework provides a client-side API to manage allowed URLs using the
 
 Internal examples of controls that use this feature are controls which accept arbitrary HTML content, such as `sap.ui.richttexteditor.RichTextEditor` and `sap.ui.core.HTML`. These controls use the `URLListValidator` to perform a check \(sanitization\) on the content. URLs inside their content are then automatically removed, unless they are allowed by the `URLListValidator`. The option to sanitize content can be enabled or disabled for the respective control via the properties `RichTextEditor.sanitizeValue` or `HTML.sanitizeContent`. For the HTML control it is disabled by default, whereas for the RichTextEditor the sanitize option is enabled by default. When adding a path to the allowed URLs in the `URLListValidator`, make sure to add "/" as path prefix if necessary, for example "/index.epx" instead of "index.epx". The last example below shows this.
 
+> ### Note:  
+> The `sap.html` library validates URL-bearing attributes \(for example the `href` attribute of `<a>`\) against the `URLListValidator` automatically. Because it exposes typed HTML elements instead of accepting an arbitrary HTML string, it is secure by design and should be preferred over `sap.ui.core.HTML` for most use cases.
+
 
 
 <a name="loio91f3768f6f4d1014b6dd926db0e91070__section_16EB929B857E45C2B245F2E97E9E5E8D"/>

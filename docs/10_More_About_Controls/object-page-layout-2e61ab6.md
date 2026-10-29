@@ -16,7 +16,7 @@ The `ObjectPageLayout` layout is composed of a header \(title and content\), an 
   
 **ObjectPageLayout Main Structure**
 
-![](images/ObjectPageLayout_overview_6b01587.png "ObjectPageLayout Main Structure")
+![Screenshot of Object Page main structure with the header, anchor bar, sections, subsections, and blocks highlighted.](images/ObjectPageLayout_overview_6b01587.png "ObjectPageLayout Main Structure")
 
 
 
@@ -81,7 +81,7 @@ The content of the page that appears below the header is composed of blocks stru
   
 **Blocks Structured into Sections and Subsections**
 
-![](images/sections_subsections_blocks_69eeaf3.png "Blocks Structured into Sections and Subsections")
+![Screenshot of Object Page showing the anchor bar and two subsections, each containing a block .](images/sections_subsections_blocks_69eeaf3.png "Blocks Structured into Sections and Subsections")
 
 The blocks hold the actual app content, while the purpose of the sections and subsections is to define grouping.
 
@@ -135,7 +135,7 @@ The `subSectionLayout` property provides information on how all the underlying s
   
 **Blocks Content Arranged in Columns with Section and Subsection Titles Displayed on Top**
 
-![](images/layout_titleOnTop_80c1583.png "Blocks Content Arranged in Columns with Section and Subsection Titles
+![Screenshot of Object Page showing the subsection title above three side-by-side blocks.](images/layout_titleOnTop_80c1583.png "Blocks Content Arranged in Columns with Section and Subsection Titles
 					Displayed on Top")
 
 Additionally, a second layout named `titleOnLeft` arranges the blocks content from the second column, leaving the first one for section and subsection titles only.
@@ -144,7 +144,7 @@ Additionally, a second layout named `titleOnLeft` arranges the blocks content fr
   
 **Blocks Content Arranged in Columns with Section and Subsection Titles Displayed on the Left**
 
-![](images/layout_titleOnLeft_96bf1fa.png "Blocks Content Arranged in Columns with Section and Subsection Titles
+![Screenshot of Object Page showing section and subsection titles in the left column and blocks to the right.](images/layout_titleOnLeft_96bf1fa.png "Blocks Content Arranged in Columns with Section and Subsection Titles
 					Displayed on the Left")
 
 Here is how this property is set in the XML view:
@@ -169,7 +169,7 @@ Here is how this property is set in the XML view:
 
 The `moreBlocks` aggregation of `sap.uxap.ObjectPageSubSection` allows you to specify blocks to be displayed only after the user clicks the internally created *See more* button:
 
-![](images/seeMore_74c9728.png)
+![Screenshot of Object Page subsection with a Show More button.](images/seeMore_74c9728.png)
 
 The *See more* button is only displayed for subsections that contain one of the following:
 

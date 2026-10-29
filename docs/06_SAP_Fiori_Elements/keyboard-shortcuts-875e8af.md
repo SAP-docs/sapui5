@@ -83,17 +83,19 @@ Create
 </td>
 <td valign="top">
 
-[Ctrl\] + [Enter\]  
+[Alt\] + [Ctrl\] + [N\]  
 
 </td>
 <td valign="top">
 
-[CMD\] + [Enter\]  
+[Ctrl\] + [Option\] + [N\]  
 
 </td>
 <td valign="top">
 
-The focus is set on the table.
+List report page : The focus is anywhere on the page
+
+Object page: The focus is set on the table.
 
 </td>
 <td valign="top">
@@ -356,7 +358,7 @@ In the SmartFilterBar, the search is triggered when the focus is in one of the f
 <tr>
 <td valign="top">
 
-Go
+Go/Primary action
 
 </td>
 <td valign="top">
@@ -371,17 +373,65 @@ Go
 </td>
 <td valign="top">
 
-The focus is on any element in the visual filter panel or on the entire visual filter.
+The focus is anywhere on the page.
 
 </td>
 <td valign="top">
 
-Analytical list page \(visual filter\)
+Analytical list page
+
+List report page
+
+Object page
 
 </td>
 <td valign="top">
 
-*Go* is triggered when the focus is on any element in the visual filter panel or on the entire visual filter.
+Analytical list page and list report page: The same as when a user chooses *Go* or the primary action if *Go* isn't available.
+
+Object page and subobject page: in display mode: The same as when a user chooses *Edit*.
+
+Object page in edit mode: The same as when a user chooses *Save*.
+
+Subobject page in edit mode: The same as when a user chooses *Apply* in draft-enabled applications or *Save* in non-draft applications.
+
+However, if the application replaces the primary action with a custom action, then this custom action is triggered instead.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Open details
+
+</td>
+<td valign="top">
+
+[Alt\] + [Enter\]  
+
+</td>
+<td valign="top">
+
+[Option\] + [Enter\]  
+
+</td>
+<td valign="top">
+
+The focus is on a row or cell in a responsive table, grid table, tree table, or analytical table.
+
+</td>
+<td valign="top">
+
+Analytical list page
+
+List report page
+
+Object page
+
+</td>
+<td valign="top">
+
+The same as when the user chooses the focused row or cell to navigate to its target page. If the row is configured to navigate to another application, the user is navigated to the target application instead.
 
 </td>
 </tr>

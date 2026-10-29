@@ -14,7 +14,8 @@ With routing implemented, the model of the detail page is updated for each produ
   
 **Enhanced detail page displaying information specific to the selected product**
 
-![](images/Enhanced_Detail_Page_Fiori_2_0_Tutorial_b687506.gif "Enhanced detail page displaying information specific to the selected product")
+![Animation showing the two-column layout with the detail page displaying product-specific information.](images/Enhanced_Detail_Page_Fiori_2_0_Tutorial_b687506.gif "Enhanced detail page displaying information specific to the selected
+					product")
 
 
 

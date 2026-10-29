@@ -9,9 +9,7 @@ The `$$aggregation` binding parameter at [`sap.ui.model.odata.v4.ODataModel#bind
 Since 1.117.0, either a read-only recursive hierarchy \(see below\) or \(pure\) data aggregation is supported, but no mix; `hierarchyQualifier` is the leading property that decides between these two use cases. Since 1.125.0, maintenance of a recursive hierarchy is supported.
 
 > ### Note:  
-> -   Data aggregation or a recursive hierarchy cannot be combined with grouping via a list binding's first sorter.For more information, see the `vGroup` parameter of [`sap.ui.model.Sorter`](https://ui5.sap.com/#/api/sap.ui.model.Sorter).
-> 
-> -   Data aggregation does not support the [creation](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataListBinding/methods/create), [deletion](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/delete), or [refreshing](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/refresh) of data; only a recursive hierarchy does. Additional property requests for an entity that already has been requested \(see [Data Reuse](data-reuse-648e360.md)\) as well as [updating](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/setProperty) of data including [invocation](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke) of bound actions and [side effects](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/requestSideEffects) are only supported for a recursive hierarchy.
+> Data aggregation or a recursive hierarchy cannot be combined with grouping via a list binding's first sorter.For more information, see the `vGroup` parameter of [`sap.ui.model.Sorter`](https://ui5.sap.com/#/api/sap.ui.model.Sorter).
 
 
 
@@ -142,9 +140,7 @@ Use the `grandTotalAtBottomOnly` or `subtotalsAtBottomOnly` property with values
 
 
 
-<a name="loio7d914317c0b64c23824bf932cc8a4ae1__section_DAF"/>
-
-## Filtering
+### Filtering
 
 Filters are provided to the list binding as described in [Filtering](filtering-5338bd1.md). The `Filter` objects are analyzed automatically to perform the filtering before the aggregation where possible using the `filter()` transformation. The remaining filters, including the provided `$filter` parameter of the binding, are applied after the aggregation either via the system query option `$filter` or within the system query option `$apply`, using again the `filter()` transformation.
 
@@ -152,19 +148,36 @@ Note that `Filter` objects are only supported for aggregatable properties with a
 
 
 
-<a name="loio7d914317c0b64c23824bf932cc8a4ae1__section_SBDA"/>
-
-## Search Before Data Aggregation
+### Search Before Data Aggregation
 
 You can provide a search string to be applied before data aggregation via the `oAggregation.search` parameter of [ODataListBinding\#setAggregation](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/setAggregation). It works like the ["5.1.8 System Query Option $search"](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31361044), but is applied before data aggregation, not after it. Note that certain content will break the syntax of the `$apply` system query option when embedded into a `search()` transformation and thus result in an invalid request. If the OData service supports the [ODATA-1452](https://issues.oasis-open.org/browse/ODATA-1452) proposal, then the command system query option when embedded into a `ODataUtils.formatLiteral(sSearch, "Edm.String");` should be used to encapsulate the whole search string beforehand \(see [sap.ui.model.odata.v4.ODataUtils.formatLiteral](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataUtils/methods/sap.ui.model.odata.v4.ODataUtils.formatLiteral)\). Otherwise, it might be wise to restrict your search input accordingly.
 
 
 
-<a name="loio7d914317c0b64c23824bf932cc8a4ae1__section_xb2_51x_q4b"/>
-
-## Additional Properties
+### Additional Properties
 
 For each groupable property, you can define an optional list of strings that provides the paths to properties \(like texts or attributes\) related to this groupable property in a 1:1 relation. They are requested additionally via `groupby` and must not change the actual grouping; a `unit` for an aggregatable property must not be repeated there.
+
+
+
+### Editing
+
+Since SAPUI5 1.151.0, editing is supported for lists of unaggregated records with a grand total. Since SAPUI5 1.154.0, editing is supported as an experimental feature in combination with group levels. This is ensured by providing all key properties of the entity type for grouping in the `group` property of `$$aggregation`. The following operations are possible:
+
+-   [Creation](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataListBinding/methods/create) of new records
+-   [Updating](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/setProperty) of existing records
+-   [Deletion](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/delete) of existing records
+-   [Invocation](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke) of bound actions
+-   [Refreshing](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/refresh) of data
+-   Applying [side effects](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/requestSideEffects)
+-   Requesting additional properties for an entity that already has been requested \(for more information, see [Data Reuse](data-reuse-648e360.md)\)
+
+> ### Note:  
+> -   The application of side effects will in some cases fall back to the refresh, for example, when requesting to update a property for all records in a table.
+> -   Refreshing the analytical table as a side effect closes all previously expanded group levels.
+> -   The keep-alive mechanism described in [Data Reuse](data-reuse-648e360.md) is only supported without group levels.
+
+The header context and the contexts of grand total and group levels may be [outdated](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/isOutdated). The header context is set to outdated when a manual refresh by the user is required. For example, when the user has changed a property used for sorting, the changed record may appear in a different place after the refresh. The grand total context and the group level contexts are set to outdated when their aggregated data, the grand totals and the sub-totals, should not be shown to the user. This happens, for example, when the user changes a property used for filtering. In this case, the changed record is shown in the table until the user manually refreshes. Upon refresh, the changed record will no longer be part of the list if it does not match the filter. However, automatic updates of the totals values would apply the filter already. To ensure that shown information is consistent, the totals should not be shown in this case.
 
 
 

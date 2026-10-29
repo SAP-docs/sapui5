@@ -4,21 +4,23 @@
 
 You can control the visibility of table columns and specific fields within columns in SAP Fiori elements for OData V4.
 
-This feature is applicable to analytical list page, list report page, and object page tables. You can either hide columns using a static value, or dynamically show or hide them using the `UI.Hidden` annotation, or the API of the `Table` building block.
+This feature is applicable to tables in analytical list page, list report page, and object page. You can either hide columns using a static value, or dynamically show or hide them using the `UI.Hidden` annotation, or the API of the `Table` building block.
 
 
 
 ## Hiding Table Columns Using a Static Value
 
-You can hide the entire table column, by setting the `UI.Hidden` annotation value for any field as `static:true`. To hide a specific field within a table column, set the `UI.Hidden` annotation to a path-based value. Fields with `UI.Hidden` set to `true` are hidden in the table. For more information, see [Hiding Features Using the UI.Hidden Annotation](hiding-features-using-the-ui-hidden-annotation-ca00ee4.md).
+You can hide the entire table column by setting the `UI.Hidden` annotation value for any field to `static:true`. To hide a specific field within a table column, set the `UI.Hidden` annotation to a path-based value. For more information, see [Hiding Features Using the UI.Hidden Annotation](hiding-features-using-the-ui-hidden-annotation-ca00ee4.md).
 
 > ### Note:  
-> If the path-based value for `UI.Hidden` is set to `true` for all rows, then only the fields are hidden and not the entire column.
+> If the path-based value for `UI.Hidden` is set to `true` for all rows, then only the fields are hidden, not the entire column.
+
+The following sample code shows how to hide a specific field within a table column using a path-based value:
 
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```
+> ```xml
 > <Annotation Term="UI.LineItem">
 >     <Collection>
 >         <Record Type="UI.DataFieldForAnnotation">
@@ -66,13 +68,15 @@ You can hide the entire table column, by setting the `UI.Hidden` annotation valu
 
 ## Hiding or Showing Table Columns Dynamically
 
-You can dynamically show or hide table columns using either the `UI.Hidden` annotation with a dynamic expression or the API of the `Table` building block.
+You can dynamically hide or show table columns using either the `UI.Hidden` annotation with a dynamic expression or the API of the `Table` building block.
 
 
 
-### `UI.Hidden` Annotation with a Dynamic Expression
+### Using `UI.Hidden` Annotation with a Dynamic Expression
 
 The `UI.Hidden` annotation can point to a path or to a complex expression using an `$edmJson` definition. You can define the `UI.Hidden` annotation either at the property level or at the line item level.
+
+The following sample code shows how to define the `UI.Hidden` annotation with a dynamic expression at the line item level:
 
 > ### Sample Code:  
 > XML Annotation
@@ -184,20 +188,20 @@ The `UI.Hidden` annotation can point to a path or to a complex expression using 
 
 For example, the table column `Country (* Private data)` is shown if the singleton `/Role/Name` value is `FullAccess`.
 
-In the `manifest.json` file, you must specify the `preloadConfigurationProperties` key. This key defines the list of properties needed by the dynamic expressions used by the UI.Hidden annotation. These properties are requested at page loading, allowing the associated columns to be shown or hidden at display time.
+In the `manifest.json` file, you must specify the `preloadConfigurationProperties` key. This key defines the list of properties needed by the dynamic expressions used by the `UI.Hidden` annotation. These properties are requested when the page loads, allowing the associated columns to be hidden or shown.
 
 > ### Sample Code:  
 > `manifest.json`
 > 
 > ```json
 > "OrdersList": {
->   "type": "Component",
->   "id": "OrdersList",
->   "name": "sap.fe.templates.ListReport",
->   "options": {
->     "settings": {
->       "preloadConfigurationProperties": [
->         "/Role/Name"
+>     "type": "Component",
+>     "id": "OrdersList",
+>     "name": "sap.fe.templates.ListReport",
+>     "options": {
+>       "settings": {
+>         "preloadConfigurationProperties": [
+>          "/Role/Name"
 >       ],
 >       "contextPath": "/Orders"
 >     }
@@ -206,9 +210,9 @@ In the `manifest.json` file, you must specify the `preloadConfigurationPropertie
 > ```
 
 > ### Note:  
-> -   Using the `preloadConfigurationProperties` key can result in an additional request to retrieve the listed properties before the page is displayed.
+> -   Using the `preloadConfigurationProperties` property can result in an additional request to retrieve the listed properties before the page is displayed.
 > 
-> -   When used on a list report page, the properties listed in the `preloadConfigurationProperties` key must point to singleton entities.
+> -   When used on a list report page, the entries defined in the `preloadConfigurationProperties` property must point to singleton entities.
 > 
 > -   When used for a table on an object page, ensure that the values point to properties readable from the object page context, such as direct properties, 1:1 properties, or a singleton.
 
@@ -216,14 +220,16 @@ In the `manifest.json` file, you must specify the `preloadConfigurationPropertie
 
 ### Using the API of the `Table` Building Block
 
-You can show or hide columns using the API of the `Table` building block with extension coding. To use this API, you must activate the `PropertyKeysMode` within the table definition.
+You can hide or show columns using the API of the `Table` building block. To use this API, you must activate the `PropertyKeysMode` within the table definition.
+
+The following sample code shows how to activate `PropertyKeysMode` within the table definition:
 
 > ### Sample Code:  
 > `Table` API
 > 
 > ```json
 > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros">
-> 	<macros:Table metaPath="_items_/@com.sap.vocabularies.UI.v1.LineItem" usePropertyKeysMode="true"/>
+>          <macros:Table metaPath="_items_/@com.sap.vocabularies.UI.v1.LineItem" usePropertyKeysMode="true"/>
 > </core:FragmentDefinition>
 > ```
 
@@ -232,16 +238,16 @@ You can show or hide columns using the API of the `Table` building block with ex
 > 
 > ```json
 > "controlConfiguration": {
->   "_items/@com.sap.vocabularies.UI.v1.LineItem": {
->     "tableSettings": {
->       "type": "ResponsiveTable",
->       "usePropertyKeysMode": true
+>     "_items/@com.sap.vocabularies.UI.v1.LineItem": {
+>       "tableSettings": {
+>         "type": "ResponsiveTable",
+>           "usePropertyKeysMode": true
 >     }
 >   }
 > }
 > ```
 
-Within your extension file, you can show or hide columns using the `showColumns` and `hideColumns` methods. You can also change column labels and tooltips using the `changeColumnsLabel` methods.
+Within your extension file, you can hide or show columns using the `showColumns` and `hideColumns` methods. You can also change column labels and tooltips using the `changeColumnsLabel` method.
 
 > ### Note:  
 > The `showColumns`, `hideColumns` and `changeColumnsLabel` methods are experimental and subject to revisions.
@@ -309,5 +315,5 @@ For more information, see [API Reference](https://ui5.sap.com/#/api/sap.fe.macro
 
 ## Related Links
 
-You can also show or hide filter fields in the filter bar. For more information, see [Configuring Dynamic Visibility for Filter Fields](configuring-dynamic-visibility-for-filter-fields-fad707f.md).
+You can also hide or show filter fields in the filter bar. For more information, see [Configuring the Dynamic Visibility of Filter Fields](configuring-the-dynamic-visibility-of-filter-fields-fad707f.md).
 

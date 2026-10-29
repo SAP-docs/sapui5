@@ -14,7 +14,7 @@ In this step, we add an empty detail page.
   
 **List Page with Empty Detail Page**
 
-![](images/Master_Page_with_Empty_Detail_Page_Fiori_2_0_Tutorial_10dec0c.gif "List Page with Empty Detail Page")
+![Animation showing the list page and an empty detail page displayed side by side in a two-column layout after selecting a product from the list.](images/Master_Page_with_Empty_Detail_Page_Fiori_2_0_Tutorial_10dec0c.gif "List Page with Empty Detail Page")
 
 
 

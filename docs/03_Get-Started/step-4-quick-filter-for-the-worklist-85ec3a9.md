@@ -12,7 +12,7 @@ For easily detecting and managing product shortages in our app, we will add a qu
   
 **A quick filter allows filtering the product table**
 
-![](images/Tutorial_Worklist_Step_4_Preview_395f8ac.png "A quick filter allows filtering the product table")
+![Screenshot of the app with filter tabs showing all products, in stock, shortage, and out of stock options.](images/Tutorial_Worklist_Step_4_Preview_395f8ac.png "A quick filter allows filtering the product table")
 
 
 

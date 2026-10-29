@@ -14,7 +14,7 @@ In this step, we add a floating footer to the detail page.
   
 **ObjectPageLayout with a floating footer**
 
-![](images/Floating_Footer_Fiori_2_0_Tutorial_24122e0.png "ObjectPageLayout with a floating footer")
+![Screenshot of two-column layout showing the product list on the left and the detail page on the right, with Save and Cancel buttons at the bottom.](images/Floating_Footer_Fiori_2_0_Tutorial_24122e0.png "ObjectPageLayout with a floating footer")
 
 
 

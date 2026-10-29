@@ -37,7 +37,7 @@ In the `sap.ovp` section of `manifest.json` file, add a `refreshStrategyOnAppRes
 
 The entity set `self` is refreshed automatically when users return to the overview page.
 
-In SAP Fiori elements for OData V4, the global filter rendered using the `FilterBar` building block, while in SAP Fiori elements for OData V2, the global filter is rendered using the `ap.ui.comp.smartfilterbar.SmartFilterBar` control.
+In SAP Fiori elements for OData V4, the global filter is rendered using the `FilterBar` building block, while in SAP Fiori elements for OData V2, it is rendered using the `ap.ui.comp.smartfilterbar.SmartFilterBar` control.
 
 Please note that, as opposed to other floorplans for SAP Fiori elements for OData V4, the overview page uses smart controls.
 

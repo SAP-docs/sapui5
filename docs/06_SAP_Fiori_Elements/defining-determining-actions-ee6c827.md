@@ -7,7 +7,7 @@ You can add a determining action button to the footer of the object page.
 > ### Note:  
 > This topic is relevant to SAP Fiori elements for OData V2. For information about SAP Fiori elements for OData V4, see [Defining Determining Actions](defining-determining-actions-1743323.md).
 
-Determining actions are used to trigger actions directly using the context of the page in the object page. You can only add the determining action button in edit mode
+Determining actions are used to trigger actions directly using the context of the page in the object page.
 
 `DataFieldForAction` can be configured as a determining action.
 
@@ -101,8 +101,6 @@ The following code sample shows how to create your annotations for the determini
 In the CAP CDS example above, for the first record type the `DataFieldForAction` complex type does not contain the `Determining` property. That's why the action button will appear in the object page header.
 
 With the last record type, the `DataFieldForAction` complex type is used and contains the `Determining` property, which is set to `true`. This means the action button will appear in the footer. Note that if the `Determining` property is either not present or is set to `false`, the action will not appear in the footer.
-
-Footer actions must not be available in display mode, so ensure that you add the appropriate path-based value to the `UI.Hidden` property of the action button.
 
 **Related Information**  
 

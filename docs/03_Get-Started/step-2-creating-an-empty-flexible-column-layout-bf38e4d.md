@@ -14,7 +14,8 @@ In this step, we add an instance of the `sap.f.FlexibleColumnLayout` control in 
   
 **An empty instance of the sap.f.FlexibleColumnLayout control**
 
-![](images/Empty_FlexibleColumnLayout_Fiori_2_0_Tutorial_533d165.png "An empty instance of the sap.f.FlexibleColumnLayout control")
+![Preview of an empty FlexibleColumnLayout control displayed as a blank page with no content.](images/Empty_FlexibleColumnLayout_Fiori_2_0_Tutorial_533d165.png "An empty instance of the sap.f.FlexibleColumnLayout
+					control")
 
 
 
@@ -32,7 +33,7 @@ You can view and download all files at [Flexible Column Layout App - Step 2](htt
 
 ```json
 {
-	"_version": "2.12.0",
+	"_version": "2.13.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -48,7 +49,7 @@ You can view and download all files at [Flexible Column Layout App - Step 2](htt
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.153.0",
+			"minUI5Version": "1.154.0",
 			"libs": {
 				"sap.f": {},
 				"sap.ui.core": {}
@@ -89,7 +90,7 @@ We create a new **`App.view.xml`** that contains an instance of the `sap.f.Flexi
 
 ```json
 {
-	"_version": "2.12.0",
+	"_version": "2.13.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -105,7 +106,7 @@ We create a new **`App.view.xml`** that contains an instance of the `sap.f.Flexi
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.153.0",
+			"minUI5Version": "1.154.0",
 			"libs": {
 				"sap.f": {},
 				"sap.ui.core": {}
